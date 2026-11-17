@@ -1,0 +1,75 @@
+{
+  "case_id": "chain-0290-4960a85f9ce3",
+  "input_group_row": 290,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "BSD-3-Clause",
+    "资产许可证原文标题/标签": "ISC",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0290-4960a85f9ce3",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0290-4960a85f9ce3:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "ISC 条款摘录将许可使用与保留适用通知相联系；本案未提供通知实际保留情况，故仅列履行义务，不认定违规。",
+      "BSD-3-Clause 摘录涉及再分发及使用，但可信事实只确立对上游 ISC 资产的远程调用，未确立对下游 BSD 资产实施了受许可的 Use 或分发；因此不作该活动的许可结论。",
+      "对象图中的 LINK/REMOTE_CALL 不证明两许可约束同一对象；scope_shared 未知。所给条款摘录为首轮结构化抽取，未据此推断未摘录条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "保留适用的版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "subject": {
+          "artifact": "chain-0290-4960a85f9ce3:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "retain_applicable_notices"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0284-8cefb1a056ce.json",
+  "original_case_id": "chain-0284-8cefb1a056ce",
+  "original_request_sha256": "c629e0dfb878e6f2e6339d74acccaed85adc26f29139dbd1c6e92062ec7fd7c7",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0284-8cefb1a056ce": "chain-0290-4960a85f9ce3",
+    "license-text:upstream:29195450b88c6d5d": "license-text:upstream:29195450b88c6d5d",
+    "license-text:downstream:0fec3f7a4229cd57": "license-text:downstream:0fec3f7a4229cd57",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/283": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/289"
+  }
+}

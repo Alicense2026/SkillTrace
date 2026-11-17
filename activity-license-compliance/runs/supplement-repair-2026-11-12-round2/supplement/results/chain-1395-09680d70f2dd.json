@@ -1,0 +1,189 @@
+{
+  "case_id": "chain-1395-09680d70f2dd",
+  "source_csv_line": 1396,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ollama/ollama",
+    "artifact_url": "https://github.com/ollama/ollama",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: apps/screenpipe-app-tauri/app/onboarding/page.test.tsx:54 ｜ 调用原文: aiPresets: [{ id: \"local\", model: \"local-test\", provider: \"native-ollama\", defaultPreset: true }], ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 本地模型运行时，代码中真实调用",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-1395-09680d70f2dd",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8affa9a8a6e78b68"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-1395-09680d70f2dd:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:915485e9cb318a93"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "personal_noncommercial_use",
+                "nonprofit_educational_or_research_use",
+                "evaluation_development_or_testing_within_seven_days",
+                {
+                  "all": [
+                    "paid_screenpipe_enterprise_plan",
+                    "commercial_license_from_licensor_expressly_covers_use"
+                  ]
+                }
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-1395-09680d70f2dd:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "For use of the Screenpipe Licensed Work, satisfy at least one applicable path: personal non-commercial use; non-profit, educational, or research use; evaluation, development, or testing within seven days; or, for commercial use, a paid Screenpipe Enterprise plan and a commercial license expressly covering the use.",
+        "source_refs": [
+          "license-text:downstream:915485e9cb318a93"
+        ],
+        "subject": {
+          "artifact": "chain-1395-09680d70f2dd:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_free_use_category",
+          "commercial_use",
+          "paid_screenpipe_enterprise_plan",
+          "commercial_license_from_licensor_expressly_covers_use",
+          "evaluation_duration_within_seven_days"
+        ]
+      }
+    ],
+    "limitations": [
+      "MIT 原文的通知条件针对软件副本或实质部分；已知事实是远程调用，未表明复制了上游软件，因此不据此认定该通知条件已触发，也不将其列为当前义务。",
+      "下游许可摘录未确认此处实际使用的是官方预构建版本还是受该许可覆盖的其他版本；其具体适用范围及使用类别未明。",
+      "API 调用及链接关系不证明两份许可共同约束同一对象；未发现足以认定许可冲突或行为违规的事实。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23399,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1041,
+    "output_tokens_details": {
+      "reasoning_tokens": 308
+    },
+    "total_tokens": 24440,
+    "attribution": {
+      "items": {
+        "msg_0b997a5ef4f4e6a1016af586047edc87d08583db7d2c8c2ed3": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b997a5ef4f4e6a1016af586047edc87d0a7a3fae4fc5879ee": {
+          "input_tokens": 21329,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21329,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b997a5ef4f4e6a1016af5860b04e487d0a2eef19689d6e2cd": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 733,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 733
+            }
+          ]
+        },
+        "rs_0b997a5ef4f4e6a1016af5860aedc887d088603d3692db6b94": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 308
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 28.18
+}

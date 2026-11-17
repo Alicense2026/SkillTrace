@@ -1,0 +1,237 @@
+{
+  "case_id": "chain-3180-2ca2b0ddf93a",
+  "source_csv_line": 3181,
+  "row": {
+    "github_repo": "fim-one",
+    "github_url": "https://github.com/fim-ai/fim-one",
+    "github_license": "LicenseRef-FIM-One",
+    "artifact_name": "gemini-3.1-flash-image-preview",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/fim_one/core/image_gen/google.py:36 ｜ 调用原文: self._model = model or os.environ.get( ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/fim_one/core/image_gen/google.py 中作为图像生成模型标识实际调用",
+    "batch": "1001-1500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "fim-ai/fim-one",
+    "license_label": "LicenseRef-FIM-One",
+    "sha256": "529097c20018019e691dd5775dc90e2c41646d6acaee4ef8c67b3e4020588a99",
+    "filename": "FIM+One+Source+Available+License.txt",
+    "evidence_file": "FIM+One+Source+Available+License.txt",
+    "acquisition": "User-supplied local original; RNA repository spelling resolved against dataset",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-3180-2ca2b0ddf93a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e21eb592bca72c62"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_services_to_develop_models_that_compete_with_the_services"
+          },
+          "S": {
+            "artifact": "chain-3180-2ca2b0ddf93a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:767494ee5d9f9dc7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "internal_purposes_within_licensee_organization_or_affiliates"
+          },
+          "S": {
+            "artifact": "chain-3180-2ca2b0ddf93a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:767494ee5d9f9dc7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "application_does_not_constitute_competing_product",
+                "application_does_not_constitute_hosted_service_restricted_by_section_3"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-3180-2ca2b0ddf93a:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 L31-L34 摘录禁止将 Services 用于开发竞争模型，并另行禁止逆向工程、提取或复制 Services 组件；未提供关于竞争产品定义、实际模型开发或逆向工程行为的事实，因此不能判定违反。",
+      "下游许可的内部用途、Competing Product 与 Hosted Service 条款适用于 FIM One Software。已知集成事实是远程 Gemini API 调用；不能据此推定下游软件被提供为 Hosted Service，亦不能推定上下游条款共同约束同一对象。",
+      "下游使用条款的适用对象及实际使用目的仍需结合许可证定义和完整上下文判断；本分析依据提供的结构化摘录，不扩张其范围。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得将 Gemini Services 用于开发与 Services 竞争的模型；若用途并非开发竞争模型，该禁止条件不触发。",
+        "source_refs": [
+          "license-text:upstream:e21eb592bca72c62"
+        ],
+        "subject": {
+          "artifact": "chain-3180-2ca2b0ddf93a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_services_to_develop_models_that_compete_with_the_services"
+          ]
+        },
+        "unresolved_predicates": [
+          "use_services_to_develop_models_that_compete_with_the_services"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用 FIM One Software，须限于被许可方组织或其关联方内部目的。",
+        "source_refs": [
+          "license-text:downstream:767494ee5d9f9dc7"
+        ],
+        "subject": {
+          "artifact": "chain-3180-2ca2b0ddf93a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_software_use",
+          "internal_purpose"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如在应用中使用 FIM One Software，该应用不得构成竞争产品，且不得构成第3条所限制的 Hosted Service。",
+        "source_refs": [
+          "license-text:downstream:767494ee5d9f9dc7"
+        ],
+        "subject": {
+          "artifact": "chain-3180-2ca2b0ddf93a:downstream",
+          "kind": "CombinedProduct"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_combined_product_use",
+          "application_does_not_constitute_competing_product",
+          "application_does_not_constitute_hosted_service_restricted_by_section_3"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 27209,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1596,
+    "output_tokens_details": {
+      "reasoning_tokens": 422
+    },
+    "total_tokens": 28805,
+    "attribution": {
+      "items": {
+        "msg_047ee3ab56f511a8016af5862b0d5887d0980312fb56d81726": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_047ee3ab56f511a8016af5862b0d5887d09a14cb81d09b44ff": {
+          "input_tokens": 25139,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25139,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_047ee3ab56f511a8016af586337c2887d08336c035bb05b2be": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1174,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1174
+            }
+          ]
+        },
+        "rs_047ee3ab56f511a8016af58633605887d0b2db406ddba59773": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 422
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 37.81
+}

@@ -1,0 +1,192 @@
+{
+  "case_id": "chain-14460-035565deadac",
+  "source_csv_line": 14461,
+  "row": {
+    "github_repo": "yaswarm-agency",
+    "github_url": "https://github.com/YaRepo/yaswarm-agency",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "glm",
+    "artifact_url": "https://open.bigmodel.cn/dev/api",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: apps/agency-ui/server/routes/bots.ts:1358 ｜ 调用原文: { value: \"glm\", label: \"GLM Direct Backend\", type: \"provider\", installed: true },（引用处 第1358行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 作为模型后端 provider 在路由与配置中使用",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "yarepo/yaswarm-agency",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4",
+    "filename": "_licenseref_full/texts/2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:yaswarm-agency-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14460-035565deadac",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bde655bd29b379a1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14460-035565deadac:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:294fdf4d2b74baa5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "prior_written_authorization_from_copyright_holder"
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14460-035565deadac:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文摘录包含对平台/API使用方式的多项禁止，但本次远程调用事实不足以证明存在其中任一被禁止行为；相关结构化规则标记为 FIRST_PASS_REVIEW_REQUIRED，具体适用仍取决于完整条款上下文及行为事实。",
+      "下游条款适用于 YaSwarm 软件，并规定使用须事先取得著作权人书面授权。证据记载仓库中的 GLM provider 远程调用，但未明确证明下游软件的 Use 活动或授权状态；不能据此认定违规。",
+      "对象图确认 API 调用和链接关系，但 scope_shared 未知；这些关系本身不证明两份许可约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 YaSwarm 软件前取得著作权人事先书面授权。",
+        "source_refs": [
+          "license-text:downstream:294fdf4d2b74baa5"
+        ],
+        "subject": {
+          "artifact": "chain-14460-035565deadac:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use:chain-14460-035565deadac:downstream:OriginalArtifact",
+        "unresolved_predicates": [
+          "activity:Use:chain-14460-035565deadac:downstream:OriginalArtifact",
+          "prior_written_authorization_from_copyright_holder"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用智谱开放平台服务时避免实施上游协议摘录所列的禁止行为；如行为是否落入禁止范围尚未确定，不据此推定已违反。",
+        "source_refs": [
+          "license-text:upstream:bde655bd29b379a1"
+        ],
+        "subject": {
+          "artifact": "chain-14460-035565deadac:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use:chain-14460-035565deadac:upstream:OriginalArtifact",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 30834,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1163,
+    "output_tokens_details": {
+      "reasoning_tokens": 332
+    },
+    "total_tokens": 31997,
+    "attribution": {
+      "items": {
+        "msg_0ca3548b3717ea35016af53ddf242c87d188e2355d3c5474f9": {
+          "input_tokens": 28764,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 28764,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ca3548b3717ea35016af53ddf242c87d19db78dc3481244f1": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ca3548b3717ea35016af53de61f1c87d1a94e7b8f970e36aa": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 831,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 831
+            }
+          ]
+        },
+        "rs_0ca3548b3717ea35016af53de6037487d1b4408a65a6db68dc": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 332
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "8e4f31de88a59400eef4d34d108cdb412ba62c7aa0ae01bfe3da1ac3fc2389b0",
+  "elapsed_seconds": 27.82
+}

@@ -1,0 +1,296 @@
+{
+  "case_id": "skill-00046",
+  "csv_row": 47,
+  "source_excel_row": "79",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00046-1794590958620717000-3.json",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00046:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "使用落入 Apache-2.0 专利许可范围的上游作品时，须满足专利权利要求由贡献者授权且因其贡献单独或与提交作品结合而必然侵权这一范围条件；该许可还受第3节规定约束。",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00046:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若被许可人对作品或其中所含贡献提起符合 Apache-2.0 第3节描述的专利诉讼，则针对该作品的专利许可自起诉之日终止；不得在该许可已终止的范围内依赖该专利许可。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+        "patent_license_for_that_work_has_terminated"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00046:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "使用上游原始作品须符合 Apache-2.0 的适用条款；本义务不把下游独立产品或远程调用自动认定为该作品的复制或分发。",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00046:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若使用 Apache-2.0 许可方的商标、商号、服务标记或产品名称，仅可在合理且惯常地描述作品来源或重现 NOTICE 内容的范围内使用；否则须避免该等使用。",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "use_of_licensor_names_or_marks",
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00046:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "MIT 许可允许对下游 Software 的使用；如该使用同时制作 Software 的副本或实质部分，须在所有该等副本或实质部分中包含版权声明及 MIT 许可声明。",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ],
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ]
+    }
+  ],
+  "limitations": [
+    "已检查本地 Apache-2.0 与 MIT 原文及其相关结构化条款。事实确认的是对上游资产的远程调用、链接和使用；未确认复制、修改、分发、收费、再许可或提供源码。",
+    "对象图未确认两许可证共同约束同一对象；上游原始作品与下游产品不可仅凭 API 调用视作同一许可对象，故不据此判定许可证冲突。",
+    "专利许可条件、专利诉讼触发条件及商标使用情况没有任务事实；保留相应条件义务，不能据此认定违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条款是复制上游原作品的许可；已知事实仅为远程调用、链接和使用，未确认复制。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认制作上游作品的衍生作品。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认对上游作品或其衍生作品再许可。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认分发上游原作品。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用上游原作品；专利许可的具体权利范围受原文条件限制，已将该条件保留为未知义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认出售上游作品副本；专利条款中该项行为亦非已知事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已知使用上游原作品；专利许可终止条款以特定专利诉讼为触发条件，现保留条件义务。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认复制或分发上游作品；该条款的许可副本及修改文件通知要求尚无已发生活动触发。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认分发上游作品或衍生作品。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "已知使用上游原作品；原文要求相关使用符合 Apache-2.0，已将条件义务保留。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该规则针对衍生作品使用；未确认制作或使用上游衍生作品。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "使用上游作品时商标许可例外及范围可能相关；已将商标使用和例外条件合并保留。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "使用上游作品时须遵守商标使用限制；是否使用许可方名称或标记未知，条件义务已保留。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认在再分发时收费提供支持、保证、赔偿或其他责任义务；收费本身也未确认。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认分发上游衍生作品。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认分发修改过的上游文件。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认以源代码形式分发上游衍生作品。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认 NOTICE 文件触发条件及分发衍生作品。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "与 U010 同属已知上游使用的 Apache-2.0 合规条件，已合并至同一义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT 原文允许使用 Software，未给单独使用附加义务；副本通知条件由 D002 等具体规则覆盖。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 通知条件仅在制作副本或实质部分时触发；是否发生复制未知，条件义务已保留。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 修改许可的通知条件仅针对副本或实质部分，已与同一 Software 的通知义务合并；未确认修改。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 合并许可的通知条件仅针对 Software 副本或实质部分，已合并保留；未确认合并。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 发布许可的通知条件针对副本或实质部分，已合并保留；未确认发布。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 分发许可的通知条件针对副本或实质部分，已合并保留；未确认分发。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 再许可条款的通知条件针对纳入的副本或实质部分，已合并保留；未确认再许可。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "MIT 出售副本条款要求副本或实质部分包含两项声明，已合并保留；未确认出售。"
+    }
+  ]
+}

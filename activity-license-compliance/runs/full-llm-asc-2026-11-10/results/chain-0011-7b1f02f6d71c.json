@@ -1,0 +1,148 @@
+{
+  "case_id": "chain-0011-7b1f02f6d71c",
+  "status": "SUCCESS",
+  "request_sha256": "f94fc71557ee6ca7e302cf912f5f931883e057c386e22e16ab2e151b963b9386",
+  "analysis": {
+    "case_id": "chain-0011-7b1f02f6d71c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:4dfb33d0ce9ad8f4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": true,
+            "requires": "use_openai_services_in_accordance_with_the_agreement"
+          },
+          "S": {
+            "artifact": "chain-0011-7b1f02f6d71c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:4dfb33d0ce9ad8f4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": {
+              "any": [
+                "use_violates_applicable_law_or_openai_policies",
+                "use_violates_third_party_rights",
+                "use_output_to_develop_competing_ai_model_without_permitted_exception",
+                "reverse_engineer_services"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0011-7b1f02f6d71c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0011-7b1f02f6d71c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the Services in accordance with the Agreement and applicable OpenAI Policies; do not use Output to develop competing AI models unless a stated Permitted Exception applies, and do not reverse engineer the Services.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_policy_compliance",
+          "competing_model_development",
+          "permitted_exception",
+          "reverse_engineering"
+        ],
+        "source_refs": [
+          "license-text:upstream:4dfb33d0ce9ad8f4"
+        ]
+      }
+    ],
+    "limitations": [
+      "所给结构化ASC仅抽取了向OpenAI支付费用的义务，与已证实的Use/远程调用无关；未将其作为本案冲突依据。",
+      "本地OpenAI服务协议文本未标明适用于该模型调用的具体版本、订单或服务专用条款；以上使用条件据所提供协议文本列示。",
+      "下游仓库标记为BUSL-1.1，但未提供其许可原文或与上游服务条款共同约束同一对象的证据；不据此推定许可冲突。",
+      "已知发生Use及远程调用；未证明分发、修改、训练模型或商业用途。API调用不代表模型权重转移。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 25191,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1044,
+    "output_tokens_details": {
+      "reasoning_tokens": 282
+    },
+    "total_tokens": 26235,
+    "attribution": {
+      "items": {
+        "msg_0897ff59c12b5474016af2de8aa8b887d29eb7ceac4986901e": {
+          "input_tokens": 23243,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23243,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0897ff59c12b5474016af2de920b6887d2a1a6fd895fe6a64d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 762,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 762
+            }
+          ]
+        },
+        "rs_0897ff59c12b5474016af2de91efb487d28a75106479ed8f28": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 282
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 26.404,
+  "auto_applied": false,
+  "recovered_from_raw_response": true
+}

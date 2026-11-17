@@ -1,0 +1,77 @@
+{
+  "request_sha256": "ea4d2f5e82ad578011853cc32b4c934d41d9eb2f574f0110e69945c5016c3248",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 17,
+        "end_line": 17,
+        "clause_label": "gap/provider_service_restriction_for_ineligible_user",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_discovers_user_lacks_or_has_limited_civil_capacity_appropriate_to_their_conduct",
+          "requires": true
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider's response to an ineligible user's registration; OriginalArtifact is the Kimi 大模型（开放平台） service or user account. Upon discovery, the provider may immediately stop serving the user or cancel the account. The paragraph also states the agreement is void from the outset for such registration; that legal consequence is not a service action.",
+        "condition_explanation": "The provider's stated authority to stop service or cancel the account arises once it discovers that the user is a person without or with limited civil capacity who registered improperly.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "gap/provider_service_restriction_for_improper_accounts",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "provider_has_evidence_of_improper_registration_or_improper_use_of_multiple_platform_accounts",
+              "provider_judges_under_relevant_rules_that_user_improperly_registered_or_improperly_used_multiple_platform_accounts"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider measures for improper registration or improper use of multiple Kimi 大模型（开放平台） accounts; OriginalArtifact is the user's platform service or account. The provider may freeze or close accounts or refuse service.",
+        "condition_explanation": "Either evidence of the specified conduct or the provider's determination under relevant rules suffices. The account measures are alternatives; the text also states a compensation consequence for resulting losses, which is not represented as a service action.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The source states loss-allocation and compensation consequences for an ineligible user's conduct and improper account registration/use. These are not permissions or prohibitions expressible through the fixed activity vocabulary; no payment or damages activity is available. The agreement's voidness consequence is likewise not an available activity.",
+      "Registration and real-name authentication prerequisites in P0005 are already covered by immutable anchor split1/use_prerequisites_and_legal_capacity."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0005",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "split1/use_prerequisites_and_legal_capacity",
+          "gap/provider_service_restriction_for_ineligible_user"
+        ],
+        "reason": "The capacity prerequisite is covered by the immutable anchor, and the provider's expressly stated authority to stop service or cancel the account is modeled. The stated agreement-voidness consequence and user/guardian loss and compensation allocation do not fit an available activity; unmatched consequences are identified in coverage_notes."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "gap/provider_service_restriction_for_improper_accounts"
+        ],
+        "reason": "The account-registration definition is contextual; provider account freezing/closure and refusal of service for improper registration or improper multiple-account use are modeled. The separate compensation consequence for resulting losses does not fit an available activity and is identified in coverage_notes."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

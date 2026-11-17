@@ -1,0 +1,661 @@
+{
+  "case_id": "skill-04080",
+  "csv_row": 4081,
+  "source_excel_row": "5744",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-04080-1794594635060036000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "调用者遵守适用于平台服务的协议约定及服务要求。",
+      "source_refs": [
+        "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+      ],
+      "subject": {
+        "artifact": "skill-04080:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "agreement_compliance"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "调用者不得实施智谱用户协议列明的禁止行为；包括提取平台数据、参数或代码，未经允许修改智谱产品，以及将平台模型或导出数据用于协议禁止的其他模型开发、训练或竞争用途；以具体条款例外为限。",
+      "source_refs": [
+        "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+      ],
+      "subject": {
+        "artifact": "skill-04080:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "use_involves_any_enumerated_prohibited_method"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如本次调用属于商业使用，调用者须按适用规则支付并遵守付费功能规则，或取得智谱书面授权；非付费功能仅限非商业个人研究学习用途。",
+      "source_refs": [
+        "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+      ],
+      "subject": {
+        "artifact": "skill-04080:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          true,
+          "commercial_use"
+        ]
+      },
+      "unresolved_predicates": [
+        "commercial_use",
+        "paid_feature_and_paid_under_platform_rules",
+        "other_written_authorization"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若调用的glm-5.3-flash受模型商用许可协议约束，使用者须注明所用大模型来源，并附该模型许可协议或链接。",
+      "source_refs": [
+        "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+      ],
+      "subject": {
+        "artifact": "skill-04080:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "model_commercial_license_applies",
+        "model_source_identified_and_license_or_link_included"
+      ]
+    }
+  ],
+  "limitations": [
+    "上游原文含智谱开放平台用户协议及模型商用许可协议；后者是否适用于该API所调用的glm-5.3-flash，现有材料未能确定，故相关来源说明义务作为条件义务保留。",
+    "事实确认的是远程API调用及链接关系，不是模型权重或软件副本转移、分发、托管服务、商业使用或修改。Elastic-2.0的分发通知、修改标识和托管服务限制不因API调用自动触发。",
+    "未提供商业用途、API产品具体使用方式、平台注册/授权、来源说明履行情况及其他用途限制触发事实；未知不作为违反事实。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用平台服务的注册或实名认证前置要求已由协议合规义务覆盖；是否已完成未知。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "适用时的监护人同意等条件属于协议合规义务范围。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "未登录状态不得使用核心功能，纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "账户身份、授权及责任要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "账户第三方访问限制纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "信息更新及核验要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "平台服务受协议约定约束。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用平台须遵守行为规范。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "内容和法律合规要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "禁止用途及技术行为的条件义务已保留。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "向第三方提供服务时的责任要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "海外使用或出口限制纳入协议合规义务，当前触发未知。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "API产品、披露、内容管理及第三方提供服务等要求纳入协议合规义务，具体触发未知。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "品牌及宣传限制纳入禁止行为义务。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "涉及新增数据训练时的限制纳入相关条件义务。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上传数据的合法性要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "导出数据禁止用途纳入禁止行为义务。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "数据删除及留存事项纳入协议合规义务，相关事件未证实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上传数据违规时的处置纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条为平台提供者的服务义务，不转移给调用者。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "付费服务规则及未成年人限制纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "免费服务条件纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "标识不得擅自移除；申请移除时的条件纳入禁止行为义务。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条主要规定平台提供者的数据处理权限及条件。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "协议存续期间的适用义务纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "联系方式更新义务纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "商业使用许可路径作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "不得移除附随声明或链接纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "修改智谱产品须有明示许可或书面授权，已纳入禁止行为义务。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "责任承担要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "数据使用条件纳入协议合规义务；不在此推定其他个人信息政策内容。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "未成年人免费使用限制纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "制裁、出口管制及禁止用途要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "该条列明平台处理违约的权利，不构成调用者新增行为授权。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅标题，无独立行为规则。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "若模型商用许可协议适用，使用须接受并遵守该协议；其适用性作为条件保留。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "使用模型时的来源及许可链接要求已作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "生成内容的来源说明要求已作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "推理时的来源说明要求已作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "基于模型开发应用时的来源说明要求已作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "分发衍生模型时的来源说明要求已作为条件义务保留；本案未证实分发。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "分发生成内容时的来源说明要求已作为条件义务保留；本案未证实分发。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "宣传限制纳入禁止行为义务；未证实该行为发生。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "商业用途须满足授权及正当目的条件，已保留条件义务。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "复制模型限制纳入禁止行为义务；未证实复制。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "转让、出租、出借或出售模型限制纳入禁止行为义务；未证实相关行为。"
+    },
+    {
+      "rule_ref": "U047",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "模型分许可限制纳入禁止行为义务；未证实分许可。"
+    },
+    {
+      "rule_ref": "U048",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "竞争业务限制纳入禁止行为义务；未证实相关业务。"
+    },
+    {
+      "rule_ref": "U049",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "修改模型须遵守协议，已纳入条件限制义务。"
+    },
+    {
+      "rule_ref": "U050",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "衍生作品保留原许可及版权声明的条件纳入协议合规义务；未证实相关衍生作品。"
+    },
+    {
+      "rule_ref": "U051",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用开源模型时的法律、备案及禁止用途要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U052",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "模型生成内容的法律合规及禁止用途要求纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "U053",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "反向工程及提取限制纳入禁止行为义务。"
+    },
+    {
+      "rule_ref": "U054",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "新版本通知且不接受时须停止使用，纳入协议合规义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "下游事实是API远程调用，没有已证实的软件副本使用。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Elastic授权对象范围与已知上游API模型对象不同，未证实共同适用。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实复制Elastic许可软件。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发Elastic许可软件。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实创作Elastic许可软件的衍生作品。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实对Elastic许可软件进行分许可。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实转让Elastic许可。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅有API调用事实，不满足提供Elastic软件托管服务的已知触发条件。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改Elastic软件许可密钥功能。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改Elastic软件中的许可声明。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用Elastic商标。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实专利许可范围内的软件活动。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实专利许可范围内的软件活动。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实专利许可范围内的软件活动。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实出售Elastic许可软件。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实销售或提供Elastic软件付费访问。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实涉及Elastic软件的进口活动。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实作出专利侵权书面主张或相关专利许可使用。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "远程API调用不证明向他人提供Elastic软件副本。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改或分发Elastic软件副本。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条不产生超出明确授权范围的独立行为义务，且未证实使用Elastic软件。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条依赖其他Elastic许可条款的违反；本案无已触发的Elastic软件活动。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实收到违约通知或处于补救情形。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实许可证恢复后再次违约。"
+    }
+  ]
+}

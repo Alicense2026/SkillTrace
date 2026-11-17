@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-0053-a254718b8318",
+  "input_group_row": 53,
+  "aggregate_count": 40,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "40"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0053-a254718b8318",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0053-a254718b8318:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0053-a254718b8318:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer须按订单表及协议支付适用服务费用；具体费用、账单及支付状态未提供。",
+        "trigger": true,
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI Services Agreement 的已映射摘录仅涉及客户向服务提供方支付适用费用，不能据此推断客户向下游收费或其他使用限制。",
+      "记录确认远程服务调用及API链接，但下游GPL材料是否被复制、修改、合并、分发或提供源码均未知；GPL对应条款仅针对摘录所述的复制或传递场景，不能仅凭API调用触发。",
+      "对象图中的上下游许可共同适用范围为未知；本次未发现有依据的许可冲突或行为违规。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0046-2449ddc5ce7e.json",
+  "original_case_id": "chain-0046-2449ddc5ce7e",
+  "original_request_sha256": "a01a4396f9b7bdb40e777427a318364ac8f59bdc4af1c25e843fa84098097998",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0046-2449ddc5ce7e": "chain-0053-a254718b8318",
+    "license-text:upstream:c9e0443a56323634": "license-text:upstream:c9e0443a56323634",
+    "license-text:downstream:6e897f4a019743c1": "license-text:downstream:6e897f4a019743c1",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/45": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/52"
+  }
+}

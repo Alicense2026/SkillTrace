@@ -1,0 +1,135 @@
+{
+  "case_id": "chain-0073-edfae7a2ed75",
+  "status": "SUCCESS",
+  "request_sha256": "7fe8cbf72c68ae3dcfb1896e6e8a6b6e9c280182e40e841dbf637de20f066e2b",
+  "analysis": {
+    "case_id": "chain-0073-edfae7a2ed75",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0073-edfae7a2ed75:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "activity:Use",
+            "requires": "retain_applicable_notices"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:3da0b5e0389818be"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0073-edfae7a2ed75:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "when": "activity:Use",
+            "requires": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0073-edfae7a2ed75:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "retain_applicable_notices",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图确认的是下游对上游的 API 链接/远程调用；依赖、修改副本或组合产品关系未确认，因此两份许可是否共同约束同一对象未知。未据此认定许可冲突。",
+      "BSD 结构化摘录确认许可涉及使用，但所引摘录未列出具体通知保留条件；retain_applicable_notices 是结构化映射中的要求，完整适用范围仍需结合许可证上下文核验。",
+      "下游 Apache 许可的 Use 映射针对下游原始制品；任务事实未确认该制品发生 Use，故未生成对应行为义务。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18713,
+    "input_tokens_details": {
+      "cached_tokens": 18560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 873,
+    "output_tokens_details": {
+      "reasoning_tokens": 272
+    },
+    "total_tokens": 19586,
+    "attribution": {
+      "items": {
+        "msg_012224d787317c9e016af2fa4399f887d19daaf556879b44f9": {
+          "input_tokens": 16681,
+          "cached_tokens": 16530,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16681,
+              "cached_tokens": 16530,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_012224d787317c9e016af2fa4abdbc87d1b316e3392ede2a52": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 601,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 601
+            }
+          ]
+        },
+        "rs_012224d787317c9e016af2fa4aa6ec87d18c38400096523a44": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 272
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.403,
+  "auto_applied": false,
+  "aggregate_count": 16
+}

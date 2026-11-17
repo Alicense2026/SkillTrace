@@ -1,0 +1,58 @@
+{
+  "case_id": "chain-14338-76fce9ddeaa2",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 Anthropic Services 时遵守适用的服务条款。",
+      "source_refs": [
+        "license-text:upstream:c97d65c4d95e3a26"
+      ],
+      "subject": {
+        "artifact": "chain-14338-76fce9ddeaa2:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "进行远程交互时遵守适用的服务条款。",
+      "source_refs": [
+        "license-text:upstream:c97d65c4d95e3a26"
+      ],
+      "subject": {
+        "artifact": "chain-14338-76fce9ddeaa2:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如使用下游受约束内容，须限于 GitHub 公共仓库条款所允许的平台查看/分叉范围；否则，未经所有者事先书面许可不得使用该内容。",
+      "source_refs": [
+        "license-text:downstream:02a0213fad70a66f"
+      ],
+      "subject": {
+        "artifact": "chain-14338-76fce9ddeaa2:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "within_github_public_repository_terms",
+        "owner_prior_written_permission"
+      ]
+    }
+  ]
+}

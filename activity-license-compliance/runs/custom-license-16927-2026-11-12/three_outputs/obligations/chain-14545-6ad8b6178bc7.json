@@ -1,0 +1,45 @@
+{
+  "case_id": "chain-14545-6ad8b6178bc7",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-14545-6ad8b6178bc7:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "满足MIT许可使用条件；如该使用涉及复制软件或其实质部分，应随副本附上版权声明和许可声明。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "include_copyright_and_permission_notice"
+      ],
+      "source_refs": [
+        "license-text:upstream:4327692a061e260c"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "subject": {
+        "artifact": "chain-14545-6ad8b6178bc7:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若远程交互涉及该许可证所覆盖的下游仓库内容，且无Rasmus Thornberg的直接书面许可，则不得进行该交互。",
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "scope_shared"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "scope_shared",
+        "no_direct_written_permission_from_rasmus_thornberg"
+      ],
+      "source_refs": [
+        "license-text:downstream:545980b9a0f639d7"
+      ]
+    }
+  ]
+}

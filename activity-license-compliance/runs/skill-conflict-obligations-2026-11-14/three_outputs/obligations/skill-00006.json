@@ -1,0 +1,146 @@
+{
+  "case_id": "skill-00006",
+  "csv_row": 7,
+  "source_excel_row": "19",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00006-1794590239235989000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游被许可人制作或分发下游 Software 的副本或实质部分时，须在所有此类副本或实质部分中包含上游版权声明及MIT许可声明；若未制作或分发相关副本或实质部分，则该通知条件不触发。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00006:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "copy_or_substantial_portion_created",
+          "copy_or_substantial_portion_distributed",
+          "copy_or_substantial_portion_included_in_sublicense",
+          "copy_or_substantial_portion_sold"
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "copy_or_substantial_portion_distributed",
+        "copy_or_substantial_portion_included_in_sublicense",
+        "copy_or_substantial_portion_sold",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知事实仅证明下游通过API链接并远程调用上游，不能据此认定复制、分发、修改或包含上游材料。",
+    "MIT通知义务限于下游软件的副本或实质部分；是否发生相关复制或分发、以及通知是否已包含，事实未提供，故仅保留条件义务。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游软件的使用获无附加条件许可；当前远程调用属于已知使用。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供上游软件被复制的事实；该规则不含附加义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供上游软件被修改的事实；该规则不含附加义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供上游软件被合并的事实；该规则不含附加义务。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供上游软件被分发的事实；该规则不含附加义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供上游软件被再许可或转交的事实；该规则不含附加义务。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供上游软件副本被出售的事实；该规则不含附加义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "下游软件的使用获无附加条件许可；未抽取出该使用条款的附加义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制下游软件时可能产生副本或实质部分，相关通知条件已合并保留。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "修改下游软件时可能产生副本或实质部分，相关通知条件已合并保留。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "合并下游软件时可能产生副本或实质部分，相关通知条件已合并保留。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "发布下游软件时若分发副本或实质部分，相关通知条件已合并保留。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发下游软件时若分发副本或实质部分，相关通知条件已合并保留。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "再许可包含下游软件副本或实质部分时，相关通知条件已合并保留。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "出售下游软件副本时，相关通知条件已合并保留。"
+    }
+  ]
+}

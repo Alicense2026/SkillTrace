@@ -1,0 +1,15 @@
+# 核心依赖
+requests               # 访问 DeepSeek / GitHub / Hugging Face 的 HTTP 接口
+python-dotenv          # 从 .env 读取 DEEPSEEK_API_KEY
+
+# 表格输出（写出 result.xlsx 用；没有也不影响，report.py 内置了纯标准库的 xlsx 写出器）
+pandas
+openpyxl
+
+# 说明：
+#   * 调 DeepSeek 直接用 requests 发 REST 请求（OpenAI 兼容接口），不再依赖 openai SDK：
+#     SDK 默认超时很长，网络卡住时整个 demo 会挂住。
+#   * 拉取仓库优先用系统里的 git 命令；没有 git 或 git 失败时自动回退成下载
+#     GitHub 的 zip 源码包（只用 requests），所以不再强制依赖 GitPython。
+#   * 查询 Hugging Face 走官方 REST 接口（requests），不再依赖 huggingface_hub，
+#     避免它的本地缓存目录在受限环境下不可写。

@@ -1,0 +1,166 @@
+{
+  "case_id": "chain-0265-3b51d6d4df91",
+  "status": "SUCCESS",
+  "request_sha256": "75db3a3f9529e6df488faebce8ce080e8ccd28c2471ac6476d7ceb8d67f45a18",
+  "analysis": {
+    "case_id": "chain-0265-3b51d6d4df91",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0265-3b51d6d4df91:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:26919da2538c8e56"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "modified_AGPL_covered_program_supporting_remote_interaction"
+          },
+          "S": {
+            "artifact": "chain-0265-3b51d6d4df91:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:26919da2538c8e56"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_at_no_charge_via_network_server",
+            "when": "modified_AGPL_covered_program_supporting_remote_interaction"
+          },
+          "S": {
+            "artifact": "chain-0265-3b51d6d4df91:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "RemoteInteraction",
+        "figure_case_refs": [],
+        "reason": "A/S：下游 ModifiedArtifact 的远程交互；AGPL §13 要求仅在修改了受覆盖程序且该版本支持远程交互时提供源码机会。记录说明远程服务调用但代码修改不适用，且对象图为 API 调用/加载关系，不证明下游修改了 AGPL 程序；条款触发条件未满足，因此本项不适用，不构成源码披露违规。来源：可信链记录及 AGPL §13 原文摘录。",
+        "source_refs": [
+          "../aggregate_all_10200/许可证组合统计.csv#/rows/264",
+          "license-text:downstream:26919da2538c8e56"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图确认 API 调用/加载关系，但上游与下游许可的共同约束范围未知；远程调用本身不证明 AGPL 程序被修改，也不证明分发、组合或依赖关系。",
+      "Llama §1(a) 的摘录为使用许可并要求遵守协议，但未提供协议其余适用条款的完整映射；未据此推断 API 调用触发许可副本、归属标识或披露义务。",
+      "AGPL §13 的结构化条款适用于修改后的受覆盖程序；现有事实标明代码修改不适用，未发现将该条款适用于上游模型/API的依据。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守适用于 Llama Materials 使用的 Llama 协议条款。",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "subject": {
+          "artifact": "chain-0265-3b51d6d4df91:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "compliance_with_applicable_Llama_agreement_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21744,
+    "input_tokens_details": {
+      "cached_tokens": 21504,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1270,
+    "output_tokens_details": {
+      "reasoning_tokens": 298
+    },
+    "total_tokens": 23014,
+    "attribution": {
+      "items": {
+        "msg_05e26cd340a4e5e8016af3028d45b087d1b73d9c9d0542d2aa": {
+          "input_tokens": 19712,
+          "cached_tokens": 19474,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19712,
+              "cached_tokens": 19474,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05e26cd340a4e5e8016af302932e4487d1a9d4e86e70ba6ed4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 972,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 972
+            }
+          ]
+        },
+        "rs_05e26cd340a4e5e8016af3029312a087d1990204f23a756842": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 298
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.891,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

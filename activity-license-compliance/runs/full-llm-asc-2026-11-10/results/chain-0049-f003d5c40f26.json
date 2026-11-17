@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-0049-f003d5c40f26",
+  "status": "SUCCESS",
+  "request_sha256": "56d8f7a70ec06939ef8930f023f3ea91050b3b927855a05cba966913f8bfacc5",
+  "analysis": {
+    "case_id": "chain-0049-f003d5c40f26",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0049-f003d5c40f26:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0049-f003d5c40f26:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Anthropic 服务时遵守适用服务条款，包括 Usage Policy、Supported Regions Policy 和适用的 Service Specific Terms；不得为开发竞争服务（包括训练竞争 AI 模型）而访问服务，也不得反向工程或复制服务。",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "subject": {
+          "artifact": "chain-0049-f003d5c40f26:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "service_terms_fulfillment",
+          "use_restrictions_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "进行远程交互时遵守适用于该服务的条款及其中引用的政策。",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "subject": {
+          "artifact": "chain-0049-f003d5c40f26:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "service_terms_fulfillment"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的是对上游服务的 Use、RemoteInteraction 和 API/链接关系；没有证据表明下游复制、修改、分发、再许可或提供源码，也没有证据表明两项许可共同约束同一对象。因此不据此认定许可冲突或 Apache-2.0 分发条件已触发。",
+      "Anthropic 原文同时包含 Commercial Terms（2025-06-17）和 Consumer Terms（2025-10-08）；记录未确定具体服务产品及适用条款版本。依据调用方式可识别为远程服务使用，但具体适用条款仍需按服务范围判断。",
+      "Usage Policy、Supported Regions Policy 和 Service Specific Terms 通过引用纳入，但其文本未提供；相关具体限制不作扩写。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 35374,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1092,
+    "output_tokens_details": {
+      "reasoning_tokens": 265
+    },
+    "total_tokens": 36466,
+    "attribution": {
+      "items": {
+        "msg_0a536ad6ef625b31016af2e7c1168087d2a33ebf48c94acf4e": {
+          "input_tokens": 33426,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 33426,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a536ad6ef625b31016af2e7c6f6e487d2ac00faea8016fd44": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 827,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 827
+            }
+          ]
+        },
+        "rs_0a536ad6ef625b31016af2e7c6db3487d2bc1d6bfba34d48b6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 265
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.629,
+  "auto_applied": false
+}

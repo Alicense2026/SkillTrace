@@ -1,0 +1,116 @@
+{
+  "clauses": [
+    {
+      "start_line": 161,
+      "end_line": 161,
+      "clause_label": "third_party_content_optional_report",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "customer",
+      "scope_note": "Section 8 permits the customer to report Third-Party Content that the customer believes does not comply with the Terms, Acceptable Use Policy, or law. This is an optional reporting permission, not a duty.",
+      "condition_explanation": "No additional condition is stated beyond the customer's belief that the content may be noncompliant.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 166,
+      "end_line": 166,
+      "clause_label": "anthropic_software_updates",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "Anthropic",
+      "scope_note": "Section 9 says Anthropic may offer manual or automatic updates to Anthropic Software without advance notice. The object is the software being updated; this does not impose an update duty on the customer.",
+      "condition_explanation": "The clause gives Anthropic discretion to offer updates and specifies that advance notice is not required.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 176,
+      "end_line": 176,
+      "clause_label": "customer_indemnity_for_use_and_related_claims",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "customer",
+      "scope_note": "Section 11 requires the customer to indemnify and hold harmless the Anthropic Parties for the listed losses arising from or related to the customer's breach or alleged breach; access to, use of, or alleged use of the Services, Materials, or Actions; feedback; products or services developed, offered, or made available using or in connection with the Services; violations of law or third-party rights; and specified misconduct. This represents the indemnity as a duty attached to the relevant use, not as a general permission grant.",
+      "condition_explanation": "The duty is triggered when a listed loss arises out of or relates to one or more of the enumerated customer acts or circumstances. Anthropic may engage separate counsel and participate in or assume exclusive defense and control; if it does, the customer must cooperate as reasonably requested.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Indemnify and hold harmless the Anthropic Parties against liabilities, claims, damages, expenses (including reasonable attorneys’ fees and costs), and other losses within the clause's enumerated categories.",
+          "actor": "Customer",
+          "object": "Anthropic Parties and covered losses arising from or related to the enumerated acts or circumstances",
+          "trigger": "A covered liability, claim, damage, expense, or other loss arises out of or relates to the customer's breach or alleged breach of the Terms; access to, use of, or alleged use of the Services, Materials, or Actions; feedback; a product or service developed, offered, or otherwise made available using or in connection with the Services; violation of applicable law or a third-party right; or actual or alleged fraud, intentional misconduct, gross negligence, or criminal acts by the customer or its employees or agents."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Cooperate with Anthropic and its separate counsel as reasonably requested when Anthropic engages separate counsel or participates in or assumes exclusive defense and control of a matter subject to the indemnity.",
+          "actor": "Customer",
+          "object": "Defense of a matter subject to the indemnity",
+          "trigger": "Anthropic engages separate counsel and participates in or assumes exclusive defense and control of a matter otherwise subject to the customer's indemnity, and requests cooperation reasonably."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The incorporated Acceptable Use Policy, other incorporated terms, and T&S Support Center material are not supplied; no rules from them are inferred.",
+    "Section 8's Anthropic content-removal discretion and its stated moderation methods do not map faithfully to an allowed activity for the identified provider action; see unresolved audit entry.",
+    "Section 9's conflict rule establishes which terms control for conflicting software portions, but is a precedence rule rather than a behavioral activity constraint."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0023",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "third_party_content_optional_report"
+      ],
+      "reason": "The optional customer reporting permission is modeled. The paragraph also states that Anthropic has no obligation to host or serve Third-Party Content and reserves a right to remove content using algorithmic or human review; the provider-side removal action cannot be faithfully represented with the allowed activities."
+    },
+    {
+      "unit_id": "P0024",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "anthropic_software_updates"
+      ],
+      "reason": "Anthropic's discretionary offer of manual or automatic updates without advance notice is modeled. The paragraph's rule that other applicable software terms control to the extent of conflict is a precedence rule with no faithful activity representation."
+    },
+    {
+      "unit_id": "P0025",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "This paragraph states ownership and retention of rights and clarifies that no rights beyond expressly granted access and use are granted here. It does not itself grant an activity permission or impose a behavioral duty; no grant is inferred."
+    },
+    {
+      "unit_id": "P0026",
+      "status": "MODELED",
+      "clause_labels": [
+        "customer_indemnity_for_use_and_related_claims"
+      ],
+      "reason": "The operative indemnity and conditional cooperation duties in line 176 are modeled. Lines 172–175 are warranty and liability disclaimers or limitations, line 177 is a disclaimer applicability statement, and line 178 identifies intended third-party beneficiaries; these do not create activity constraints for this extraction."
+    }
+  ]
+}

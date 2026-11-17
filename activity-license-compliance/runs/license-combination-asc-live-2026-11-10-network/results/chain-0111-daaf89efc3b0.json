@@ -1,0 +1,145 @@
+{
+  "case_id": "chain-0111-daaf89efc3b0",
+  "status": "SUCCESS",
+  "request_sha256": "ab66cc693f607edfee2f097929c35e0e45fa83bb59f93527aac7800e144ae82e",
+  "analysis": {
+    "case_id": "chain-0111-daaf89efc3b0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:52d28b23f3b28aa4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0111-daaf89efc3b0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:12b91da01cdca9df"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0111-daaf89efc3b0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查的相关条款为MPL-2.0第2.1节许可授予及MIT许可授予/通知条款；结构化抽取标记为FIRST_PASS_REVIEW_REQUIRED。",
+      "对象图确认下游与上游存在API链接和远程调用，但是否共享受许可对象范围未知；远程调用本身不证明修改、复制、分发或权重转移。",
+      "当前记录明确的是对上游资产的Use。没有证据表明下游MIT资产也被Use、复制或分发；不得据此认定MIT通知条件已触发或已违反。",
+      "所提供的MPL摘录不足以判断是否存在适用于此远程服务调用的额外网络服务义务；不从常识补充条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用受MIT许可的下游资产，应包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:12b91da01cdca9df"
+        ],
+        "subject": {
+          "artifact": "chain-0111-daaf89efc3b0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Use",
+          "scope_shared",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19988,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 900,
+    "output_tokens_details": {
+      "reasoning_tokens": 231
+    },
+    "total_tokens": 20888,
+    "attribution": {
+      "items": {
+        "msg_042416d9ccef8be8016af2fbac6e0887d2874b266fb3611c98": {
+          "input_tokens": 17956,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17956,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_042416d9ccef8be8016af2fbb16d4087d28cdf491da955219d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 669,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 669
+            }
+          ]
+        },
+        "rs_042416d9ccef8be8016af2fbb1517c87d294518c399949b7f1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 231
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.394,
+  "auto_applied": false,
+  "aggregate_count": 9
+}

@@ -1,0 +1,514 @@
+{
+  "request_sha256": "4aea3cec174b865d956fd5ea6e7644b9babb3d55a29a8627c9718f988ccffe7e",
+  "data": {
+    "decisions": [
+      {
+        "candidate_id": "C001",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 5.1 (line 34) expressly requires OpenAI to comply with the Security Measures while providing the Services. No current rule covers that actor-specific duty; the Security Measures document is external, but the local express duty is captured.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C002",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section 5.1 (line 34) permits Customer to terminate the Agreement and associated Order Forms after a material security diminution, subject to written notice within five business days. This is a contract-termination option, not permission to use a service, so the candidate’s Use activity is out of scope."
+      },
+      {
+        "candidate_id": "C003",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section 5.3 (line 36) requires compliance with the incorporated DPA if Customer uses the Services to process Personal Data. The DPA is an external document not supplied, and the source gives no local expressible DPA duties to extract."
+      },
+      {
+        "candidate_id": "C004",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "gap-93d9cbd3fea5455b6b48965c"
+        ],
+        "reason": "Section 5.4 (line 37) prohibits Customer’s PHI processing without a signed Healthcare Addendum and separately prohibits storing, transmitting, or processing PHI with a Service not designed for PHI. R030 covers both prohibitions and preserves that the Addendum exception does not override the restriction for services not designed for PHI."
+      },
+      {
+        "candidate_id": "C005",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "gap-84d350de48098348c2455770"
+        ],
+        "reason": "Section 6.2 (line 41) requires invoice payment on the Order Form interval and complete, accurate billing and contact information. R031 covers both duties with the relevant payment and information conditions."
+      },
+      {
+        "candidate_id": "C006",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 6.2 (line 41) expressly permits OpenAI to suspend or terminate the Services if Fees are past due. No current rule covers this provider action; it is not a permission for Customer to use the Services.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C007",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [
+          "R034"
+        ],
+        "reason": "Section 6.3 (line 42) includes distinct duties: OpenAI or the reseller charges legally required taxes and uses the Account name and address as the place of supply; Customer pays Fees without deduction or withholding and grosses up legally required withholding. R034 covers Customer’s tax/fee payment duty, but not the provider’s place-of-supply duty. Correct the mixed-actor, multi-duty candidate to the uncovered provider duty.",
+        "corrected_clause": {
+          "start_line": 42,
+          "end_line": 42,
+          "clause_label": "provider_place_of_supply_for_tax_purposes",
+          "activities": [
+            "Use"
+          ],
+          "objects": [
+            "OriginalArtifact"
+          ],
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": true,
+            "requires": "use_account_name_and_address_as_place_of_supply_for_tax_purposes"
+          },
+          "actor_role": "OpenAI or Customer's reseller",
+          "scope_note": "Section 6.3 requires OpenAI or Customer’s reseller to use the name and address in the Account as the place of supply for tax purposes.",
+          "condition_explanation": "The Account name and address are the stated place of supply for tax purposes.",
+          "obligation_items": [
+            {
+              "duty_type": "PERFORM",
+              "content": "Use the name and address in the Account as the place of supply for tax purposes.",
+              "actor": "OpenAI or Customer's reseller",
+              "object": "Account name and address",
+              "trigger": "For tax purposes under the Agreement."
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "C008",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "gap-84d350de48098348c2455770"
+        ],
+        "reason": "Section 6.4 (line 43) requires contacting ar-enterprise@openai.com within 30 days of invoice issuance to dispute an invoice and paying all undisputed amounts. R031 captures both requirements and the dispute trigger."
+      },
+      {
+        "candidate_id": "C009",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 6.4 (line 43) says overdue undisputed amounts may be subject to a finance charge of 1.5% of the unpaid balance per month. This is a discretionary charge, not an obligation; no current rule covers OpenAI’s Charge activity.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C010",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 6.5 (line 44) says Customer may need to prepay for Services by purchasing Service Credits. The possibility of a prepayment requirement is locally expressible; the referenced Service Credit Terms are not supplied and are not treated as additional extracted duties.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C011",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section 6.6 (line 45) concerns the effective timing of Pricing Page changes and OpenAI’s right to correct pricing errors. It does not express an in-scope action concerning an allowed artifact; the candidate’s Use activity does not faithfully represent that clause."
+      },
+      {
+        "candidate_id": "C012",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 7.3 (line 50) permits disclosure to qualifying need-to-know Affiliates, employees, contractors, or agents and legally required disclosure with reasonable prior-notice efforts where permitted; it also assigns responsibility for certain breaches. R019 covers the general disclosure restriction and exceptions, but not this candidate’s specific permitted-disclosure conditions and ancillary duties.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C013",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 8.1 (line 54) permits OpenAI to request suspension or termination of a relevant End User account after the stated End User conduct, and permits OpenAI to act if Customer does not act promptly. R035 covers Customer’s response duty, not OpenAI’s request and direct-action permissions.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C014",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 8.2 (line 55) permits OpenAI to limit or suspend Customer’s access for the listed reasons and states notice, tailoring, and restoration-cooperation duties. No current rule covers this provider action and its associated conditions and duties.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C015",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section 9.1 (line 58) is a reservation of IP rights and limitation on ownership transfer, not an operative permission to use an allowed artifact. It is a scope boundary rather than a separate use clause."
+      },
+      {
+        "candidate_id": "C016",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-d3da5b8159274d6410f471b9"
+        ],
+        "reason": "Sections 9.1–9.2 (lines 58–59) provide OpenAI only the rights reasonably necessary to deliver the Services, with the permission extending to subcontractors or subprocessors. R021 captures the OpenAI actor, limited purpose, and extension; the candidate’s Customer actor is erroneous but does not create an uncovered duty."
+      },
+      {
+        "candidate_id": "C017",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-9c0735d4ca93f85b7a0b8e58"
+        ],
+        "reason": "Section 10 (line 62) restricts either Party from using the other Party’s name or logo in the stated materials or making the specified public statements absent express prior written permission for each instance. R023 captures the reciprocal actors, both objects and actions, and the per-instance exception."
+      }
+    ]
+  },
+  "additions": [
+    {
+      "rule_id": "gap-bc276960bebbd21b22c99fa0",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "ProvideNetworkService",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": "comply_with_security_measures"
+        }
+      },
+      "source_lines": [
+        34,
+        34
+      ],
+      "source_excerpt": "5.1. Security Measures. OpenAI will comply with the Security Measures. OpenAI may periodically update the Security Measures. If OpenAI updates the Security Measures in a manner that materially diminishes the administrative, technical, or physical security features of the Services taken as a whole, Customer may elect to terminate the Agreement and associated Order Forms by providing written notice to OpenAI within five business days of the update.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C001/security_measures_and_termination_option",
+      "actor_role": "OpenAI",
+      "scope_note": "Section 5.1 requires OpenAI to comply with the incorporated Security Measures for the Services. Customer may terminate the Agreement and associated Order Forms by written notice within five business days after an update materially diminishes the Services' administrative, technical, or physical security features taken as a whole.",
+      "condition_explanation": "security_measures refers to the incorporated Security Measures, whose contents are not supplied.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Comply with the Security Measures.",
+          "actor": "OpenAI",
+          "object": "Services",
+          "trigger": "While providing the Services under the Agreement."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-6c8f48774358cadc96e0d402",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "ProvideNetworkService",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "fees_past_due",
+          "requires": true
+        }
+      },
+      "source_lines": [
+        41,
+        41
+      ],
+      "source_excerpt": "6.2. Payment. Customer will pay OpenAI invoices on the payment interval set forth in the Order Form. OpenAI may suspend or terminate the Services if Fees are past due. Customer will provide complete and accurate billing and contact information to OpenAI.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C006/suspension_or_termination_for_past_due_fees",
+      "actor_role": "OpenAI",
+      "scope_note": "Section 6.2 permits OpenAI to suspend or terminate the Services when Fees are past due.",
+      "condition_explanation": "fees_past_due means Fees have not been paid when due.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-344868943a82dc9cb002db52",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_account_name_and_address_as_place_of_supply_for_tax_purposes"
+        }
+      },
+      "source_lines": [
+        42,
+        42
+      ],
+      "source_excerpt": "6.3. Taxes. Fees are exclusive of taxes, which OpenAI, or Customer’s reseller, will charge as required by applicable law in connection with the Services. OpenAI, or Customer’s reseller, will use the name and address in the Account as the place of supply for tax purposes. All Fees under this Agreement shall be paid in full, without any deduction or withholding for taxes, levies, duties, tariffs, or other charges of any nature imposed by any governmental authority. If any such deduction or withholding is required by law, Customer shall increase the payment to OpenAI, or to Customer's reseller, so that the net amount received equals the amount invoiced.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C007/provider_place_of_supply_for_tax_purposes",
+      "actor_role": "OpenAI or Customer's reseller",
+      "scope_note": "Section 6.3 requires OpenAI or Customer’s reseller to use the name and address in the Account as the place of supply for tax purposes.",
+      "condition_explanation": "The Account name and address are the stated place of supply for tax purposes.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Use the name and address in the Account as the place of supply for tax purposes.",
+          "actor": "OpenAI or Customer's reseller",
+          "object": "Account name and address",
+          "trigger": "For tax purposes under the Agreement."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-b17a3faacc5245aa7a349993",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "Charge",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "undisputed_amounts_overdue",
+          "requires": "finance_charge_not_exceeding_1_5_percent_of_unpaid_balance_per_month"
+        }
+      },
+      "source_lines": [
+        43,
+        43
+      ],
+      "source_excerpt": "6.4. Disputes. To dispute an invoice Customer must: (a) contact ar‑enterprise@openai.com within thirty days of the date the disputed invoice was issued; and (b) pay all undisputed amounts. Overdue undisputed amounts may be subject to a finance charge of 1.5% of the unpaid balance per month.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C009/overdue_undisputed_amount_finance_charge",
+      "actor_role": "OpenAI",
+      "scope_note": "Section 6.4 permits a finance charge on overdue undisputed amounts, at 1.5% of the unpaid balance per month. Charge here is a fee charged by OpenAI, not Customer charging third parties.",
+      "condition_explanation": "undisputed_amounts_overdue means undisputed invoice amounts remain unpaid after they are due. The finance charge may be imposed; the text does not make it mandatory.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-43bd5a1fe18a2145bd134e74",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "service_credits_required_for_services",
+          "requires": "prepay_by_purchasing_service_credits"
+        }
+      },
+      "source_lines": [
+        44,
+        44
+      ],
+      "source_excerpt": "6.5. Service Credits. Customer may need to prepay for Services by purchasing Service Credits. Service Credits are subject to the Service Credit Terms.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C010/service_credit_prepayment",
+      "actor_role": "Customer",
+      "scope_note": "Section 6.5 says Customer may need to prepay for Services by purchasing Service Credits; any Service Credits are subject to the incorporated Service Credit Terms.",
+      "condition_explanation": "service_credits_required_for_services captures the stated possibility that prepayment by credits may be needed. The Service Credit Terms are not supplied.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Prepay for Services by purchasing Service Credits.",
+          "actor": "Customer",
+          "object": "Service Credits for the Services",
+          "trigger": "If prepayment by Service Credits is required for the Services; the applicable Service Credit Terms also govern."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-2048710df688899f41fe739b",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "disclosure_to_need_to_know_affiliate_employee_contractor_or_agent",
+              "disclosure_required_by_law"
+            ]
+          },
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "recipient_in_category",
+                  "need_to_know",
+                  "bound_by_confidentiality_at_least_as_restrictive_as_agreement"
+                ]
+              },
+              {
+                "all": [
+                  "disclosure_required_by_law",
+                  "reasonable_efforts_to_notify_discloser_before_disclosure_to_extent_permitted"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "source_lines": [
+        50,
+        50
+      ],
+      "source_excerpt": "7.3. Permitted Disclosure. Recipient may disclose Confidential Information only to its Affiliates, employees, contractors, and agents who have a need to know and who are bound by confidentiality obligations at least as restrictive as those in this Agreement. Recipient will be responsible for any breach of this Section 7 by its employees, contractors, and agents. Recipient may disclose Confidential Information to the extent required by law, if Recipient uses reasonable efforts to notify Discloser, to the extent permitted, prior to doing so.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C012/limited_confidential_disclosure_and_notice_of_compulsion",
+      "actor_role": "Recipient",
+      "scope_note": "Section 7.3 permits disclosure to qualifying Affiliates, employees, contractors, or agents, and disclosure to the extent required by law subject to reasonable prior-notice efforts where permitted. Recipient is responsible for breaches of section 7 by its employees, contractors, and agents.",
+      "condition_explanation": "recipient_in_category means the recipient of disclosure is an Affiliate, employee, contractor, or agent of the Recipient. need_to_know and confidentiality obligations at least as restrictive as the Agreement apply to disclosures in that category. For legally required disclosure, reasonable efforts to notify Discloser are required only to the extent permitted.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Disclose Confidential Information only to Affiliates, employees, contractors, or agents who need to know it and are bound by confidentiality obligations at least as restrictive as those in the Agreement.",
+          "actor": "Recipient",
+          "object": "Confidential Information disclosed to its Affiliates, employees, contractors, or agents",
+          "trigger": "When making a disclosure under the need-to-know permission."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Use reasonable efforts to notify Discloser before a disclosure required by law, to the extent permitted.",
+          "actor": "Recipient",
+          "object": "Confidential Information subject to legally required disclosure",
+          "trigger": "Before disclosure required by law, insofar as prior notice is permitted."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Be responsible for any breach of section 7 by its employees, contractors, and agents.",
+          "actor": "Recipient",
+          "object": "Confidential Information handled by Recipient's employees, contractors, and agents",
+          "trigger": "If an employee, contractor, or agent breaches section 7."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-f0f0fe03737129b8de5006d6",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "ProvideNetworkService",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "end_user_violates_agreement",
+              "end_user_causes_or_will_cause_security_emergency"
+            ]
+          },
+          "requires": "openai_may_request_customer_suspend_or_terminate_relevant_account_and_may_act_if_customer_fails_to_do_so_promptly"
+        }
+      },
+      "source_lines": [
+        54,
+        54
+      ],
+      "source_excerpt": "8.1. Of End User Accounts. If an End User: (a) violates the Agreement; or (b) causes, or will cause, a Security Emergency, then OpenAI may request that Customer suspend or terminate the relevant End User account. If Customer fails to promptly suspend or terminate the End User account, then OpenAI may do so.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C013/end_user_account_suspension_request_and_openai_action",
+      "actor_role": "OpenAI; Customer",
+      "scope_note": "Section 8.1: OpenAI may request Customer suspend or terminate the relevant End User account if an End User violates the Agreement or causes, or will cause, a Security Emergency. If Customer fails to act promptly, OpenAI may suspend or terminate that account itself.",
+      "condition_explanation": "security_emergency refers to the defined Security Emergency, whose definition is not supplied. The prompt-action condition applies to OpenAI's direct action after Customer fails to act promptly.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    },
+    {
+      "rule_id": "gap-be2ec296bd295a123b798406",
+      "license_id": "OpenAI.txt",
+      "source_aliases": [
+        "OpenAI.txt"
+      ],
+      "source_sha256": "3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274",
+      "ASC": {
+        "A": "ProvideNetworkService",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "required_by_law",
+              "customer_violates_agreement_or_openai_policies",
+              "necessary_to_prevent_or_terminate_security_emergency"
+            ]
+          },
+          "requires": "limit_or_suspend_customer_access"
+        }
+      },
+      "source_lines": [
+        55,
+        55
+      ],
+      "source_excerpt": "8.2. Of the Services. OpenAI may limit or suspend Customer’s access to the Services if: (a) it is required to do so by law; (b) Customer violates the Agreement or OpenAI Policies; or (c) doing so is necessary to prevent or terminate a Security Emergency. OpenAI will use reasonable efforts to notify Customer before limiting to or suspending the Services pursuant to the preceding sentence but may do so without prior notice to the extent reasonably necessary. OpenAI will use reasonable efforts to: (i) narrowly tailor a limitation or suspension to prevent or terminate the Security Emergency; and (ii) cooperate with Customer to promptly restore access to the Services once it verifies Customer has resolved the condition requiring suspension.",
+      "clause_label": "historical/3ec0af60c259cb54-002/C014/service_access_limitation_or_suspension",
+      "actor_role": "OpenAI",
+      "scope_note": "Section 8.2 permits OpenAI to limit or suspend Customer's access for the stated reasons. OpenAI must use reasonable efforts to notify Customer beforehand, except where reasonably necessary to act without prior notice; narrowly tailor action to address a Security Emergency; and cooperate to promptly restore access after verifying resolution.",
+      "condition_explanation": "security_emergency refers to the defined Security Emergency, whose definition is not supplied. The notice exception applies only to the extent reasonably necessary. Narrow tailoring and restoration cooperation apply to limitations or suspensions under section 8.2.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Use reasonable efforts to notify Customer before limiting or suspending access; prior notice may be omitted to the extent reasonably necessary.",
+          "actor": "OpenAI",
+          "object": "Customer's access to the Services",
+          "trigger": "Before a limitation or suspension under section 8.2, except where reasonably necessary to act without prior notice."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Narrowly tailor a limitation or suspension to prevent or terminate the Security Emergency.",
+          "actor": "OpenAI",
+          "object": "limitation or suspension of access to the Services",
+          "trigger": "When limiting or suspending access to prevent or terminate a Security Emergency."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Cooperate with Customer to promptly restore access once OpenAI verifies Customer has resolved the condition requiring suspension.",
+          "actor": "OpenAI",
+          "object": "Customer's access to the Services",
+          "trigger": "After OpenAI verifies that Customer has resolved the condition requiring suspension."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "3ec0af60c259cb54-002"
+    }
+  ]
+}

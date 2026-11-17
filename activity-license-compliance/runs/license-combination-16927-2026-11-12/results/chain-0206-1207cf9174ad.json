@@ -1,0 +1,81 @@
+{
+  "case_id": "chain-0206-1207cf9174ad",
+  "input_group_row": 206,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "CC-BY-NC-4.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5bad8113e8fb51ff"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0206-1207cf9174ad:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的活动是对上游资产的Use及API远程调用；该调用不证明下游包含、修改或分发上游材料，也不证明两份许可适用于同一对象，因此未判定许可间冲突。",
+      "CC-BY-NC-4.0相关摘录仅支持许可权利范围内有条件授权，未提供非商业限制的具体条文；无法据此构造相应义务。结构化条款标记为FIRST_PASS_REVIEW_REQUIRED，结论限于所提供摘录。",
+      "MIT摘录针对下游软件的许可及通知条件；没有下游Use、复制或分发事实，且不能仅凭远程调用认定这些条款已触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如该使用属于CC许可范围内的Licensed Rights，须遵守CC许可条件。",
+        "source_refs": [
+          "license-text:upstream:5bad8113e8fb51ff"
+        ],
+        "subject": {
+          "artifact": "chain-0206-1207cf9174ad:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "within_license_scope"
+          ]
+        },
+        "unresolved_predicates": [
+          "within_license_scope",
+          "comply_with_CC_license_conditions"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0206-1207cf9174ad"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0199-1730dc0cc834.json",
+  "original_case_id": "chain-0199-1730dc0cc834",
+  "original_request_sha256": "0599b957fa21eb98254053d4cc069c21576ef9bdbdad3f28cbb07c9d445e89e0",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0199-1730dc0cc834": "chain-0206-1207cf9174ad",
+    "license-text:upstream:67ef900886615728": "license-text:upstream:5bad8113e8fb51ff",
+    "license-text:downstream:bbea498d15aad79b": "license-text:downstream:8058943cebfed43d",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/198": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/205"
+  }
+}

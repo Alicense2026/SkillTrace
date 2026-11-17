@@ -1,0 +1,314 @@
+{
+  "case_id": "chain-2249-7ed27c0fc620",
+  "source_csv_line": 2250,
+  "row": {
+    "github_repo": "5ire",
+    "github_url": "https://github.com/nanbingxyz/5ire",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-3.5-turbo-0613",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/token.ts:29 ｜ 调用原文: _model = 'gpt-3.5-turbo-0613';（引用处 第27行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 出现在 token.ts 中，可能用于 token 计数映射，但未确认是否真实调用",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "nanbingxyz/5ire",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "84f520494c227243304a7d22ffdbb16f516586252e40a56c641cc26e7bafcff4",
+    "filename": "_licenseref_full/texts/84f520494c227243304a7d22ffdbb16f516586252e40a56c641cc26e7bafcff4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:5ire-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "elapsed_seconds": 51.55,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/custom-license-16927-2026-11-12",
+  "relationship_weight": 1,
+  "original_error": "Invalid obligation values",
+  "analysis": {
+    "case_id": "chain-2249-7ed27c0fc620",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:17203006862c3616"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": "customer_receives_services",
+            "requires": "pay_applicable_fees_to_openai_or_reseller_under_order_form"
+          },
+          "S": {
+            "artifact": "chain-2249-7ed27c0fc620:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e9885d188bc56765"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "use_community_edition",
+            "requires": {
+              "all": [
+                "no_5ire_brand_used_in_modified_versions",
+                "prominent_required_statement_present"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-2249-7ed27c0fc620:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e9885d188bc56765"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "use_community_edition",
+            "requires": {
+              "any": [
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "serves_enterprise_clients_over_10_users"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "integrates_into_hardware_or_products_for_sale"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "government_or_education_procurement_involves_sensitive_data"
+                  ]
+                },
+                "uses_5ire_brand_in_product_service_or_promotion"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-2249-7ed27c0fc620:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 OpenAI 条款摘录规定客户按订单表向 OpenAI 或其转售方支付适用费用；没有提供下游对用户收费或转售服务的相关条款，且其范围不能据此认定与下游许可冲突。",
+      "下游 LicenseRef-Custom 的相关条件限于 Community Edition；现有事实未确认实际使用该版本，也未证明下游 Use 活动已发生。品牌、修改、分发/SaaS 分发及商业许可条件均未有事实认定，故保留为条件义务，不认定违规。",
+      "下游条款称列举情形下必须取得 5ire 商业许可，但未提供该商业许可的条款或其是否会改变限制；义务表述仅要求在触发情形下取得许可或避免相应行为，不推断许可内容。",
+      "可信记录支持远程调用及链接关系，不支持权重转移、模型修改或分发；不能将下游软件许可条款套用于上游模型。",
+      "结构化条款仍标记为首轮抽取；结论限于所提供的原文摘录及注明范围。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-2249-7ed27c0fc620:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "按订单表及适用付款条款向 OpenAI 或其转售方支付适用费用。",
+        "trigger": "customer_receives_services",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_paid"
+        ],
+        "source_refs": [
+          "license-text:upstream:17203006862c3616"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-2249-7ed27c0fc620:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用 Community Edition，修改版本不得使用 5ire Brand（包括名称、标志或营销材料），并须显著声明：“This product is based on 5ire Community Edition and is not affiliated with 5ire.”",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_community_edition"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "use_community_edition",
+          "no_5ire_brand_used_in_modified_versions",
+          "prominent_required_statement_present"
+        ],
+        "source_refs": [
+          "license-text:downstream:e9885d188bc56765"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-2249-7ed27c0fc620:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用 Community Edition，且发生任一列明情形（修改代码并直接或以 SaaS 方式分发且服务超过 10 人的企业客户、集成至待售硬件或产品、涉及敏感数据的政府/教育采购，或在产品、服务或推广中使用 5ire Brand），须取得 5ire 商业许可；否则不得实施触发该要求的行为。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_community_edition",
+            {
+              "any": [
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "serves_enterprise_clients_over_10_users"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "integrates_into_hardware_or_products_for_sale"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "government_or_education_procurement_involves_sensitive_data"
+                  ]
+                },
+                "uses_5ire_brand_in_product_service_or_promotion"
+              ]
+            }
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "use_community_edition",
+          "modified_code",
+          "distribution_directly_or_as_saas",
+          "serves_enterprise_clients_over_10_users",
+          "integrates_into_hardware_or_products_for_sale",
+          "government_or_education_procurement_involves_sensitive_data",
+          "uses_5ire_brand_in_product_service_or_promotion",
+          "commercial_license_obtained"
+        ],
+        "source_refs": [
+          "license-text:downstream:e9885d188bc56765"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22610,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2152,
+    "output_tokens_details": {
+      "reasoning_tokens": 453
+    },
+    "total_tokens": 24762,
+    "attribution": {
+      "items": {
+        "msg_06f65e4a9aaec1ed016af583d42e7887d08d3a53526bea2828": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06f65e4a9aaec1ed016af583d42e7887d0908cb2a09b8a8ab0": {
+          "input_tokens": 18170,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18170,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06f65e4a9aaec1ed016af583dd23a487d0815315dfa0f5afe0": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1699,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1699
+            }
+          ]
+        },
+        "rs_06f65e4a9aaec1ed016af583dc4af487d0a00036403542f5fc": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 412
+        },
+        "rs_06f65e4a9aaec1ed016af583dd0ca087d08554f3eee8a8eaff": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 41
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 4400,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

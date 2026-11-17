@@ -1,0 +1,165 @@
+{
+  "case_id": "chain-0362-115a0bb08a4b",
+  "input_group_row": 362,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "EPL-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0362-115a0bb08a4b",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:98624e29e258d762"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_source_and_license_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0362-115a0bb08a4b:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:98624e29e258d762"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_source_and_license_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0362-115a0bb08a4b:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:41e838a0bc5b884d"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0362-115a0bb08a4b:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:41e838a0bc5b884d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0362-115a0bb08a4b:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发EPL上游对象的修改版本，须提供源代码并保留许可通知。",
+        "source_refs": [
+          "license-text:upstream:98624e29e258d762"
+        ],
+        "subject": {
+          "artifact": "chain-0362-115a0bb08a4b:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "是否属于EPL条款所指的修改版本及源代码分发"
+        ]
+      },
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若适用EPL源代码分发条件，须提供源代码并保留许可通知。",
+        "source_refs": [
+          "license-text:upstream:98624e29e258d762"
+        ],
+        "subject": {
+          "artifact": "chain-0362-115a0bb08a4b:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "activity:ProvideSource",
+        "unresolved_predicates": [
+          "activity:ProvideSource",
+          "是否属于EPL条款所指的修改版本及源代码分发"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发MIT下游对象，须在副本或软件实质部分中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:41e838a0bc5b884d"
+        ],
+        "subject": {
+          "artifact": "chain-0362-115a0bb08a4b:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认的是对上游资产的远程服务调用及链接关系，且代码修改不适用；未证明分发、提供源代码、捆绑、修改副本或两许可约束同一对象。",
+      "EPL结构化摘录仅给出“3.2 When the Program is Distributed as Source Code:”及范围注释，未包含完整条文；相关义务仅按条件保留，不推断未提供的具体要求或触发范围。",
+      "MIT条款摘录覆盖通知条件，但现有事实未证明对MIT下游对象实施了分发；远程调用和链接本身不证明下游对象被传递或复制。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0359-163141d89048.json",
+  "original_case_id": "chain-0359-163141d89048",
+  "original_request_sha256": "ad7bea90e9d2b26f52599fcef0fa2a8015db2db4134c131ad3a8dc619a7f3fd8",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0359-163141d89048": "chain-0362-115a0bb08a4b",
+    "license-text:upstream:98624e29e258d762": "license-text:upstream:98624e29e258d762",
+    "license-text:downstream:41e838a0bc5b884d": "license-text:downstream:41e838a0bc5b884d",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/358": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/361"
+  }
+}

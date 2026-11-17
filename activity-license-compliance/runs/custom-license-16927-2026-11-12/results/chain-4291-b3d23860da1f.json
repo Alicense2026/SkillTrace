@@ -1,0 +1,244 @@
+{
+  "case_id": "chain-4291-b3d23860da1f",
+  "source_csv_line": 4292,
+  "row": {
+    "github_repo": "helix",
+    "github_url": "https://github.com/helixml/helix",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "madappa-sharath/drone-ci-mcp",
+    "artifact_url": "https://github.com/madappa-sharath/drone-ci-mcp",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: api/cmd/settings-sync-daemon/main_test.go:608 ｜ 调用原文: \"command\": \"drone-ci-mcp\", ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 配置信号中登记的 MCP 服务，属于真实引用的工具",
+    "batch": "1501-2000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "helixml/helix",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e",
+    "filename": "_licenseref_full/texts/051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:helix-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-4291-b3d23860da1f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04c894a643fadae7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4291-b3d23860da1f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d8b04587693bda58"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "within_subscription_term",
+                "subject_to_agreement_and_applicable_order_form",
+                "in_accordance_with_applicable_documentation",
+                "for_customer_internal_business_purposes"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4291-b3d23860da1f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d8b04587693bda58"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": {
+              "all": [
+                "pay_amounts_and_applicable_taxes_as_specified",
+                "pay_invoice_within_30_days_unless_order_form_specifies_otherwise",
+                "pay_late_interest_if_applicable",
+                "provide_tax_receipts_or_requested_evidence_if_applicable",
+                "provide_valid_vat_registration_number_if_applicable"
+              ]
+            },
+            "when": "payment_due"
+          },
+          "S": {
+            "artifact": "chain-4291-b3d23860da1f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Include the copyright notice and permission notice with copies or substantial portions of the upstream MIT Software.",
+        "source_refs": [
+          "license-text:upstream:04c894a643fadae7"
+        ],
+        "subject": {
+          "artifact": "chain-4291-b3d23860da1f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Use the Helix Platform within the applicable Subscription Term, subject to the Agreement and applicable Order Form, in accordance with applicable Documentation, and for Customer’s internal business purposes.",
+        "source_refs": [
+          "license-text:downstream:d8b04587693bda58"
+        ],
+        "subject": {
+          "artifact": "chain-4291-b3d23860da1f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "within_subscription_term",
+          "subject_to_agreement_and_applicable_order_form",
+          "in_accordance_with_applicable_documentation",
+          "for_customer_internal_business_purposes"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "When payment is due, pay amounts and applicable taxes as specified, pay invoices within 30 days unless the Order Form specifies otherwise, pay applicable late interest, and provide applicable tax receipts or requested evidence and a valid VAT registration number when applicable.",
+        "source_refs": [
+          "license-text:downstream:d8b04587693bda58"
+        ],
+        "subject": {
+          "artifact": "chain-4291-b3d23860da1f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "payment_due",
+        "unresolved_predicates": [
+          "payment_due",
+          "applicable_order_form",
+          "applicable_tax_or_receipt_requirements"
+        ]
+      }
+    ],
+    "limitations": [
+      "MIT 的相关摘录包含许可授予及副本/实质部分的通知条件；未提供副本、分发或通知履行事实，故仅列为履行未知的义务。",
+      "LicenseRef-Custom 原文是 Helix Platform 服务协议，相关条款限于该平台及适用的订购、文档和订阅期。远程调用事实已确认，但对象图未确认两份许可的共同约束范围；未据此认定许可冲突或擅自套用平台条款于上游资产。",
+      "未提供订单、订阅状态、文档、付款到期或相关履行证据；缺少履行证据不等于未履行。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 31570,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1512,
+    "output_tokens_details": {
+      "reasoning_tokens": 302
+    },
+    "total_tokens": 33082,
+    "attribution": {
+      "items": {
+        "msg_036025f9451a4947016af53ba69e7c87d29929eb4c675be453": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_036025f9451a4947016af53ba69e7c87d2bb9a4d0b1f36d592": {
+          "input_tokens": 29500,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29500,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_036025f9451a4947016af53bacc17c87d29f53d10b4706453e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1210,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1210
+            }
+          ]
+        },
+        "rs_036025f9451a4947016af53bacaa7c87d2b31773ef5402d0bb": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 302
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "435104e0ffc8eaea7722baf5817026e144811ab31b929e9aef3731aed24b97c2",
+  "elapsed_seconds": 34.55
+}

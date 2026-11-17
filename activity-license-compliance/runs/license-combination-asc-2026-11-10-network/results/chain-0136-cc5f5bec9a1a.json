@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0136-cc5f5bec9a1a",
+  "status": "SUCCESS",
+  "request_sha256": "8c111747ae84a4b798b070910977cbc6b2ecacc3f26b056a1211a6a94fa57055",
+  "analysis": {
+    "case_id": "chain-0136-cc5f5bec9a1a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0136-cc5f5bec9a1a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:51d793ba76870f87"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0136-cc5f5bec9a1a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0136-cc5f5bec9a1a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer must pay applicable fees to OpenAI or its reseller under the applicable Order Form and payment terms.",
+        "trigger": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Charge",
+          "applicable_fees_due"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0136-cc5f5bec9a1a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If exercising the CC-BY-4.0 licensed rights, comply with the applicable CC license conditions.",
+        "trigger": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use"
+        ],
+        "source_refs": [
+          "license-text:downstream:51d793ba76870f87"
+        ]
+      }
+    ],
+    "limitations": [
+      "记录确认对上游资产进行远程调用及链接，但未证明下游资产被使用、分发、修改或与上游构成同一受许可对象；对象图中的共享范围未知。",
+      "CC-BY-4.0摘录为许可授予条款，未提供其具体条件、例外或履行情况；不据此推断缺失条款。",
+      "OpenAI条款摘录规定客户向OpenAI或其经销商支付费用，不证明客户向下游收费；是否有费用到期及其履行情况未知。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17789,
+    "input_tokens_details": {
+      "cached_tokens": 17664,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1033,
+    "output_tokens_details": {
+      "reasoning_tokens": 295
+    },
+    "total_tokens": 18822,
+    "attribution": {
+      "items": {
+        "msg_06a72fc54e541fc6016af2fc9ff11c87d1b8af8573f3c9e057": {
+          "input_tokens": 15757,
+          "cached_tokens": 15634,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15757,
+              "cached_tokens": 15634,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06a72fc54e541fc6016af2fca6101c87d19e03ef58dfe2371d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 738,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 738
+            }
+          ]
+        },
+        "rs_06a72fc54e541fc6016af2fca5f91487d1afb2dabdf5e33ce6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 295
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.134,
+  "auto_applied": false,
+  "aggregate_count": 6
+}

@@ -1,0 +1,146 @@
+{
+  "case_id": "chain-0154-b7f857c2b5f7",
+  "input_group_row": 154,
+  "aggregate_count": 6,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "Anthropic Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "6"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0154-b7f857c2b5f7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0154-b7f857c2b5f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0154-b7f857c2b5f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:43c0428247497593"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0154-b7f857c2b5f7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0154-b7f857c2b5f7:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the applicable Anthropic service terms when using the Services.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0154-b7f857c2b5f7:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the applicable Anthropic service terms when remotely interacting with the Services.",
+        "trigger": "activity:RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0154-b7f857c2b5f7:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Retain applicable copyright and permission notices in copies, if the ISC-licensed software is used.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_use",
+          "retain_applicable_notices"
+        ],
+        "source_refs": [
+          "license-text:downstream:43c0428247497593"
+        ]
+      }
+    ],
+    "limitations": [
+      "The upstream excerpt grants permission to use Anthropic Services subject to the Terms; it does not establish a grant to copy, modify, or distribute provider software or model weights.",
+      "The ISC excerpt conditions specified permissions on retaining notices. The record establishes remote service use and an API/link relation, but does not establish use of the downstream ISC software or that both licenses govern the same object; no license-license conflict is supported.",
+      "The service-terms excerpt does not provide the full set of terms needed to assess whether the applicable conditions have been fulfilled."
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0195-1d2dee3798fe.json",
+  "original_case_id": "chain-0195-1d2dee3798fe",
+  "original_request_sha256": "d9ba2bf371b7b07219ab256e4e389e159f85ef743de62be9f37cc870609b0502",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0195-1d2dee3798fe": "chain-0154-b7f857c2b5f7",
+    "license-text:upstream:cb940de944c2c95c": "license-text:upstream:cb940de944c2c95c",
+    "license-text:downstream:43c0428247497593": "license-text:downstream:43c0428247497593",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/194": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/153"
+  }
+}

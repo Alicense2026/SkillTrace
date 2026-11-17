@@ -1,0 +1,145 @@
+{
+  "case_id": "chain-0213-877ead632df0",
+  "status": "SUCCESS",
+  "request_sha256": "e52c5e583c92e14f76a033db3425d3fb6c958c1e6d03047f2542d0e56e60859d",
+  "analysis": {
+    "case_id": "chain-0213-877ead632df0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0213-877ead632df0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cca90801cea53d0e"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0213-877ead632df0:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：对下游修改版提供对应源码；AGPL第13条的触发条件是修改了程序且该版本支持远程交互。可信事实明确代码修改不适用，因此该触发条件不成立；远程API调用本身不足以触发该义务。来源：AGPL第13条摘录及供应链记录。",
+        "source_refs": [
+          "license-text:downstream:cca90801cea53d0e",
+          "../aggregate_all_10200/许可证组合统计.csv#/rows/212"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "上游Llama条款摘录支持其授予材料使用权，但要求遵守协议；提供的摘录不足以完整映射该协议中与本次API调用相关的全部条件。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用Llama材料时遵守Llama 3.1 Community License Agreement。",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "subject": {
+          "artifact": "chain-0213-877ead632df0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "协议中与本次使用相关的其他适用条件及其履行情况"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21408,
+    "input_tokens_details": {
+      "cached_tokens": 21248,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 941,
+    "output_tokens_details": {
+      "reasoning_tokens": 275
+    },
+    "total_tokens": 22349,
+    "attribution": {
+      "items": {
+        "msg_040b89ef1f08522f016af2ffe333ec87d1ad5f4dbeb4ec1858": {
+          "input_tokens": 19376,
+          "cached_tokens": 19218,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19376,
+              "cached_tokens": 19218,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_040b89ef1f08522f016af2ffe8963487d188ba36b1b722e26b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 666,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 666
+            }
+          ]
+        },
+        "rs_040b89ef1f08522f016af2ffe87f0c87d1a8cfc91de847c33d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 275
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.952,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

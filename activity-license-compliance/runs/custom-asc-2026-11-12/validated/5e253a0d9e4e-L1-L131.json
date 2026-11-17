@@ -1,0 +1,223 @@
+{
+  "request_sha256": "d01703b2073d2f49b22f50bfb23b55ca1f6df724eb4d8239f10b36bc3ae5eade",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 7,
+        "end_line": 11,
+        "clause_label": "Acceptance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "agree_to_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Agreement to these terms is a condition to obtaining any license under them; it is also described as a strict obligation. The licensed object is the software made available under these terms.",
+        "condition_explanation": "agree_to_terms means the individual or entity must agree to these terms."
+      },
+      {
+        "start_line": 13,
+        "end_line": 22,
+        "clause_label": "Copyright License",
+        "activities": [
+          "Use",
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Copyright license for the software, limited to acts that would otherwise infringe the licensor’s copyright. Distribution and making changes or new works are governed by their respective license sections, not an unrestricted grant here.",
+        "condition_explanation": "permitted_purpose excludes providing to others a product that competes with the software, as defined in the Noncompete and Competition sections."
+      },
+      {
+        "start_line": 24,
+        "end_line": 30,
+        "clause_label": "Distribution License",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "changes_and_new_works_permitted_under_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Additional copyright license to distribute copies of the software, including copies with changes and new works only to the extent those changes and new works are permitted by the Changes and New Works License. Distribution is also subject to the Notices section.",
+        "condition_explanation": "changes_and_new_works_permitted_under_license means any included changes or new works must be permitted under the Changes and New Works License; copies remain subject to the notice requirement."
+      },
+      {
+        "start_line": 32,
+        "end_line": 40,
+        "clause_label": "Notices",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "distribution_occurs",
+          "requires": "provide_terms_or_url_and_licensor_required_notice_lines_to_each_recipient"
+        },
+        "actor_role": "licensee",
+        "scope_note": "When the licensee gives anyone a copy of any part of the software, the licensee must ensure that recipient also gets a copy of these terms or their stated URL, and copies of any plain-text lines beginning with “Required Notice:” that the licensor provided with the software.",
+        "condition_explanation": "distribution_occurs means the licensee gives someone a copy of any part of the software. The required materials are the terms or their URL, plus any licensor-provided Required Notice lines."
+      },
+      {
+        "start_line": 42,
+        "end_line": 46,
+        "clause_label": "Changes and New Works License",
+        "activities": [
+          "Modify",
+          "CreateDerivative"
+        ],
+        "objects": [
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Additional copyright license to make changes and new works based on the software. Distribution of those changes or works is separately governed by the Distribution License and Notices section.",
+        "condition_explanation": "permitted_purpose excludes providing to others a product that competes with the software, as defined in the Noncompete and Competition sections."
+      },
+      {
+        "start_line": 48,
+        "end_line": 52,
+        "clause_label": "Patent License",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "patent_claim_is_licensable_by_licensor_and_would_be_infringed_by_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Patent license for the software, covering only patent claims the licensor can license or becomes able to license and that the licensee would infringe by using the software. Subject to immediate termination under Patent Defense.",
+        "condition_explanation": "The grant applies only to claims both within the licensor’s ability to license and claims the licensee would infringe by using the software."
+      },
+      {
+        "start_line": 54,
+        "end_line": 68,
+        "clause_label": "Noncompete; Competition",
+        "activities": [
+          "ProvideNetworkService",
+          "Distribute",
+          "OfferPaidAccess"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "providing_to_others",
+          "requires": "product_competes_with_software"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any purpose is permitted except providing to others a product that competes with the software. A product competes if the software is used to market it as a substitute for the software’s functionality or value. The text says competition does not depend on design or deployment, and can include services, libraries, plug-ins, different platforms or languages, and free products. The clause concerns a product provided to others; it does not state a general prohibition on private use or modification.",
+        "condition_explanation": "providing_to_others means making a product available to others. product_competes_with_software means the software is used to market the product as a substitute for the software’s functionality or value; products may qualify regardless of implementation, delivery interface, platform, language, or price."
+      },
+      {
+        "start_line": 75,
+        "end_line": 80,
+        "clause_label": "No Other Rights",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "These terms do not allow the licensee to sublicense or transfer any license granted to the licensee under these terms. This does not restrict the licensor from granting licenses to others and does not imply other licenses.",
+        "condition_explanation": "No additional conditions are stated."
+      },
+      {
+        "start_line": 82,
+        "end_line": 88,
+        "clause_label": "Patent Defense",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "written_patent_infringement_claim_made",
+          "requires": "patent_license_ends_immediately"
+        },
+        "actor_role": "licensee",
+        "scope_note": "A written claim by the licensee that the software infringes or contributes to infringement of any patent immediately ends the licensee’s patent license for the software. If the licensee’s company makes such a claim, the patent license ends immediately for work on behalf of that company. This termination applies to the patent license, not expressly to the copyright licenses.",
+        "condition_explanation": "written_patent_infringement_claim_made means the licensee makes a written claim that the software infringes or contributes to infringement of any patent; a company claim has the stated effect for work on behalf of that company."
+      },
+      {
+        "start_line": 90,
+        "end_line": 98,
+        "clause_label": "Violations",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "CreateDerivative",
+          "Distribute",
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "first_written_notice_of_violation_or_unlicensed_activity",
+          "requires": {
+            "all": [
+              "full_compliance_with_terms_within_32_days_of_notice",
+              "practical_steps_taken_to_correct_past_violations_within_32_days_of_notice"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "After the first written notice of a violation or activity with the software not covered by the licenses, the licenses can continue if the licensee achieves full compliance and takes practical corrective steps within 32 days after receiving notice. Otherwise all licenses end immediately. This is a cure opportunity, not an unconditional continuation or a grant for otherwise unlicensed activity.",
+        "condition_explanation": "The stated continuation requires both full compliance and practical steps to correct past violations, each within 32 days of receiving the first written notice. Otherwise all licenses end immediately."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text identifies the licensed subject as software; OriginalArtifact denotes that software. ModifiedArtifact and DerivativeWork are included only where the text expressly addresses changes, new works, or copies containing them; CombinedProduct is not independently granted.",
+      "The license provides no separate express terms for charging, selling copies, commercial use as a distinct activity, combining, linking, training, source provision, or data/input/output rights. The broad copyright grant is limited by the permitted-purpose restriction and the specific distribution and changes sections; silence does not establish additional grants.",
+      "The competition clause defines a restricted purpose, including certain service and free-product substitutes; the listed delivery activities in that clause describe potential ways of providing a competing product, not independent grants for those activities.",
+      "Fair Use (lines 70–73) says legal fair-use rights may exist and are not limited by these terms; it does not itself grant a license. No Liability (lines 100–105) is unrelated to the requested activities. Definitions (lines 107–131) clarify terms but do not independently grant permissions.",
+      "The supplied text is a software license, not a service or platform schedule. No separately negotiated license, additional-use grant, incorporated policy, or transition term is supplied."
+    ]
+  }
+}

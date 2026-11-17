@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0358-616e4525ae19",
+  "status": "SUCCESS",
+  "request_sha256": "c6fc940a9d1f02ea6456ff9162ebc79b5e6189770c4f26a5bb704243841cdbe2",
+  "analysis": {
+    "case_id": "chain-0358-616e4525ae19",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:79a3a54c8de4caf7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0358-616e4525ae19:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:79a3a54c8de4caf7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0358-616e4525ae19:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认对上游资产进行 Use、Link 和 RemoteInteraction，且未发生代码修改；没有证据表明分发、复制、合并或下游分发已发生。",
+      "对象图确认的是 API/代码纳入关系，不足以证明两许可证约束同一对象；scope_shared 未知。当前摘录未提供 CC BY-NC-SA 4.0 的非商业、署名及相同方式共享具体条款，不能据此补写其完整要求。",
+      "MIT 原文匹配到下游代码，但事实未说明对下游受许可软件实施了何种受许可活动；未将 MIT 的通知条件套用于上游 API 调用。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在 CC BY-NC-SA 4.0 授权范围内使用上游原始资产，并遵守该许可的适用条件",
+        "source_refs": [
+          "license-text:upstream:79a3a54c8de4caf7"
+        ],
+        "subject": {
+          "artifact": "chain-0358-616e4525ae19:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "within_license_scope",
+          "CC_license_conditions"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22184,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 873,
+    "output_tokens_details": {
+      "reasoning_tokens": 239
+    },
+    "total_tokens": 23057,
+    "attribution": {
+      "items": {
+        "msg_0cc824634f93d790016af30617ff7c87d29a1b1c1fe63e9d0f": {
+          "input_tokens": 20152,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20152,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0cc824634f93d790016af3061d13f087d28ea27b0a568c3f87": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 634,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 634
+            }
+          ]
+        },
+        "rs_0cc824634f93d790016af3061cfcc087d2a74cf69b00207278": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 239
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.679,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

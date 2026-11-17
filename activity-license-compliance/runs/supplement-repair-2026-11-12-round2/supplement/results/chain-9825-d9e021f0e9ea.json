@@ -1,0 +1,167 @@
+{
+  "case_id": "chain-9825-d9e021f0e9ea",
+  "source_csv_line": 9826,
+  "row": {
+    "github_repo": "pdftriage",
+    "github_url": "https://github.com/adobe-research/pdftriage",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "explosion/spaCy",
+    "artifact_url": "https://github.com/explosion/spaCy",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: docinstruct-v0/inference.py:1 ｜ 调用原文: import spacy ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: docinstruct-v0/inference.py 使用 spaCy 加载并运行文本分类模型。",
+    "batch": "4501-5000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "adobe-research/pdftriage",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "910c3b38609dbb1d1344d720873c77225f4b46073910113ed1d890328d5454fe",
+    "filename": "_supplement_round2/910c3b38609dbb1d1344d720873c77225f4b46073910113ed1d890328d5454fe.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 6; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bd1bef6cb3507a75"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-9825-d9e021f0e9ea:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的活动是对上游 spaCy 资产的 Use 和远程调用；没有证据表明发生复制、修改或分发。",
+      "MIT 的通知条款摘录规定通知须包含在软件副本或实质部分中；结构化 Use 条件未说明其对单纯远程调用的适用范围，因此不据此认定违规。下游 LicenseRef-Custom 的非商业研究条款针对下游材料，但现有事实未确认对该材料的 Use，也未确认两许可约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如复制上游软件或其实质部分，须在副本中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:bd1bef6cb3507a75"
+        ],
+        "subject": {
+          "artifact": "chain-9825-d9e021f0e9ea:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "copy_or_substantial_portion"
+          ]
+        },
+        "unresolved_predicates": [
+          "copy_or_substantial_portion",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-9825-d9e021f0e9ea"
+  },
+  "usage": {
+    "input_tokens": 23161,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1203,
+    "output_tokens_details": {
+      "reasoning_tokens": 704
+    },
+    "total_tokens": 24364,
+    "attribution": {
+      "items": {
+        "msg_07e8887b26ed4d87016af5866ebef887d080e8eaf6751ecd3f": {
+          "input_tokens": 21091,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21091,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07e8887b26ed4d87016af5866ebef887d08c5be932f8146077": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07e8887b26ed4d87016af5867c0af087d0a88477ece75e9b29": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 499,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 499
+            }
+          ]
+        },
+        "rs_07e8887b26ed4d87016af586788d0487d0bc23126e527489c9": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        },
+        "rs_07e8887b26ed4d87016af5867bef4c87d0a07fb61015a5a3b1": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 188
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 32.9
+}

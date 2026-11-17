@@ -1,0 +1,98 @@
+{
+  "case_id": "chain-0275-3215c2e0212b",
+  "input_group_row": 275,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0-or-later",
+    "资产许可证原文标题/标签": "阿里云百炼服务特别说明",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0275-3215c2e0212b",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0275-3215c2e0212b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9f3cf60346c0894d"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0275-3215c2e0212b:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用百炼模型体验生成的内容仅限体验模型效果；不得作其他用途、商业化使用，或提供给第三方及在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "subject": {
+          "artifact": "chain-0275-3215c2e0212b:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "百炼摘录含对生成内容用途、商业化及向第三方提供的限制；已知 Use 和远程调用，但未提供生成内容的具体用途或是否涉及摘录所禁行为，故不能判定违反。",
+      "AGPL-3.0-or-later 第13节摘录要求在修改程序且支持远程交互时提供对应源码机会。记录明确为“远程服务调用（修改不适用）”，不触发该条件；远程调用本身不证明修改了受覆盖程序。",
+      "两项许可的约束对象关系未确定（scope_shared 为 null）；没有足够依据认定双方条款共同适用于同一对象或存在许可间冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0268-8cd4ee4ad513.json",
+  "original_case_id": "chain-0268-8cd4ee4ad513",
+  "original_request_sha256": "1816d6e42201fdfb9300c97a5fd08f3be6314945cf615f85f52857750467f969",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0268-8cd4ee4ad513": "chain-0275-3215c2e0212b",
+    "license-text:upstream:e0a6023d95b56568": "license-text:upstream:e0a6023d95b56568",
+    "license-text:downstream:9f3cf60346c0894d": "license-text:downstream:9f3cf60346c0894d",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/267": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/274"
+  }
+}

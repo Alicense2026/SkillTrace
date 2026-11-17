@@ -1,0 +1,197 @@
+{
+  "case_id": "chain-20418-6300e589ae0c",
+  "source_csv_line": 20419,
+  "row": {
+    "github_repo": "sema",
+    "github_url": "https://github.com/iampenuel/sema",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-3.1-flash-lite",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: lib/ai/evals/runLocalEvals.ts:42 ｜ 调用原文: const config = resolveAIConfig({ SEMA_AI_PROVIDER: \"gemini\", GEMINI_API_KEY: \"synthetic-not-printed\", SEMA_AI_MODEL: \"gemini-3.1-flash-lite\" });（引用处 第42行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 确定性规则命中（大模型不可用，未经复核）",
+    "batch": "12201-14200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "iampenuel/sema",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "9a8f81c3709dbb557908c558e6655c69e32624ed0aaa9b24ad9534323e2e8af1",
+    "filename": "_licenseref_full/texts/9a8f81c3709dbb557908c558e6655c69e32624ed0aaa9b24ad9534323e2e8af1.txt",
+    "evidence_file": "NOTICE.md",
+    "acquisition": "zip:mirror:sema-HEAD/NOTICE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-20418-6300e589ae0c",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d077193a62b02cea"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-20418-6300e589ae0c:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": {
+              "any": [
+                "develop_model_competing_with_Gemini_Services",
+                "reverse_engineer_extract_or_replicate_Service_component"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:422764ce626f4e63"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "S": {
+            "artifact": "chain-20418-6300e589ae0c:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": {
+              "not": "written_authorization"
+            }
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-20418-6300e589ae0c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Services to develop models that compete with the Services, or attempt to reverse engineer, extract, or replicate a Service component, including underlying data or models.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "develop_model_competing_with_Gemini_Services",
+          "reverse_engineer_extract_or_replicate_Service_component"
+        ],
+        "source_refs": [
+          "license-text:upstream:d077193a62b02cea"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-20418-6300e589ae0c:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not commercially deploy the repository project without written authorization.",
+        "trigger": "activity:CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "written_authorization"
+        ],
+        "source_refs": [
+          "license-text:downstream:422764ce626f4e63"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游摘录禁止的是以服务开发竞争模型及反向工程、提取或复制服务组件；结构化抽取把该条款概括为对Use的全面禁止，但其范围超过所给原文，故未据此认定远程API调用违规。竞争模型定义和具体上下文仍由原文决定。",
+      "下游条款适用于仓库材料。事实确认的是远程调用及API链接，不证明调用行为属于对仓库项目的商业部署，也不证明发生分发、转售或再许可；这些活动及书面授权状态未提供。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 16998,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1177,
+    "output_tokens_details": {
+      "reasoning_tokens": 367
+    },
+    "total_tokens": 18175,
+    "attribution": {
+      "items": {
+        "msg_09ad8d538923f523016af53ed9eba887d2996ea76b98bda20c": {
+          "input_tokens": 14928,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14928,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09ad8d538923f523016af53ed9eba887d29cf3a8568d17a46d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09ad8d538923f523016af53ee1081c87d28762df766edc50a9": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 810,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 810
+            }
+          ]
+        },
+        "rs_09ad8d538923f523016af53ee0ec8087d2aa5a4b93f9ba138a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 367
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "0564d47ff1aded80690d770a9b6e13a5c090ef7b47abcf3c60bd04a0d959226e",
+  "elapsed_seconds": 27.79
+}

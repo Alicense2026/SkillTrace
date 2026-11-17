@@ -1,0 +1,210 @@
+{
+  "case_id": "skill-01069",
+  "csv_row": 1070,
+  "source_excel_row": "1476",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01069-1794598476461163000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游软件使用者应以合理且不暗示作者背书的方式给予 BigSk1 适当署名、提供原仓库链接并说明是否作出修改。",
+      "source_refs": [
+        "license:7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8"
+      ],
+      "subject": {
+        "artifact": "skill-01069:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "use_of_software",
+      "unresolved_predicates": [
+        "attribution_given_in_reasonable_non_endorsing_manner"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游软件或其衍生作品不得用于商业目的，除非版权持有人已给予明确书面许可。",
+      "source_refs": [
+        "license:7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8"
+      ],
+      "subject": {
+        "artifact": "skill-01069:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "commercial_use",
+      "unresolved_predicates": [
+        "commercial_use",
+        "explicit_written_permission_from_copyright_holder"
+      ]
+    }
+  ],
+  "limitations": [
+    "已检查本地 MIT 与 LicenseRef-Custom 摘录。已知的是下游远程调用并链接至上游；对象图未确认两份许可约束同一对象，且没有据此推定复制、分发、修改或权重转移。",
+    "MIT 通知条件限于软件副本或实质部分；现有事实未表明发生此类复制或分发。",
+    "下游商业使用是否发生、是否取得版权持有人的明确书面许可均未知；收费不作为商业使用的替代事实。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT 明确允许对上游软件的使用，未附使用条件。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "通知条件限于副本或实质部分；已知远程调用不证明发生复制。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知修改活动；通知条件限于副本或实质部分。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知合并活动；该条款针对上游软件。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知发布活动；通知条件限于副本或实质部分。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知分发活动；通知条件限于副本或实质部分。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知再许可活动；通知条件限于副本或实质部分。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知出售副本活动。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "已知 Use 事实指向上游对象，未证明下游软件的个人或非商业用途。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知下游个人复制或修改活动。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知再分发活动，相关条件尚未触发。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知下游修改活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "保留商业使用限制及明确书面许可例外；商业使用与许可情况未知。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知对衍生作品的商业使用。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "保留下游软件使用时的署名要求；履行情况未知。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知再分发活动。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知公开分发的分支或衍生作品。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知移除、变更或遮蔽通知的事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知使用相关名称或品牌进行背书或推广。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知相关专利主张。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知提交贡献。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知提交贡献。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知提交贡献。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知提交贡献。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知违反许可条款或权利终止事实。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知权利终止事实，销毁副本义务未触发。"
+    }
+  ]
+}

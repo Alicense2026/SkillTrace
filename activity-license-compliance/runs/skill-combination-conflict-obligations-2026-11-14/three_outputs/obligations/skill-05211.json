@@ -1,0 +1,343 @@
+{
+  "case_id": "skill-05211",
+  "csv_row": 5212,
+  "source_excel_row": "7380",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05211-1794600142643189000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-05211:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "使用者须通过接受协议或使用、分发材料而受协议约束；该条本身不授予使用权。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "agreement_assent_by_acceptance_or_use_or_distribution"
+      ],
+      "source_refs": [
+        "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-05211:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "使用者须遵守适用法律法规（含贸易合规法规）及 Llama Materials 的可接受使用政策。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "compliance_with_applicable_laws_and_regulations",
+        "compliance_with_acceptable_use_policy"
+      ],
+      "source_refs": [
+        "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-05211:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若版本发布日期前一日历月，许可方或其关联方提供的产品或服务月活超过7亿，使用者须向 Meta 申请许可，且在 Meta 明确授予权利前不得行使协议权利。",
+      "trigger": "all",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "monthly_active_users_threshold_exceeded",
+        "meta_express_grant"
+      ],
+      "source_refs": [
+        "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-05211:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若使用者提起条款所述侵权诉讼或程序，协议项下许可自提起之日起终止；不得在该许可已终止后继续依该许可行使权利。",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "specified_litigation_instituted",
+        "agreement_license_termination"
+      ],
+      "source_refs": [
+        "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-05211:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "使用者使用或分发 Llama Materials 时，须就由该使用或分发引起或相关的第三方索赔向 Meta 作出赔偿并使其免责。",
+      "trigger": "all",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "third_party_claim_arising_from_or_related_to_use_or_distribution"
+      ],
+      "source_refs": [
+        "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-05211:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若协议终止，使用者须删除 Llama Materials 并停止使用。",
+      "trigger": "agreement_has_terminated",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "agreement_has_terminated"
+      ],
+      "source_refs": [
+        "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知事实仅表明下游通过远程服务调用并使用上游 Llama 3.2-1B；没有分发、打包、修改或组合证据，因此分发触发的协议副本、展示标识和 Notice 文件义务，以及 Apache 再分发义务均未触发。",
+    "Apache-2.0 条款约束下游仓库对象；现有对象图未证实其与上游模型对象相同或共同适用，故未据此认定许可冲突。",
+    "可接受使用政策全文未随本任务提供；只保留许可原文明确纳入的遵守义务，未推断政策内容或实际违规。",
+    "月活门槛、诉讼、第三方索赔及协议终止情况均未知；按条件义务处理，未据未知事实认定违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用触发协议约束；保留接受/受约束条件。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "授予使用权，不含独立履行义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现复制上游材料。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现分发上游材料。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现创作衍生作品。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现修改上游材料。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现分发或提供含上游材料的产品或服务。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现改进模型并分发或提供该模型。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未见作为集成终端用户产品接收材料的事实。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅远程调用，不是分发上游材料副本。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已知上游材料正在被使用；纳入法律法规与 AUP 遵守义务。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "月活门槛及授权状态未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未见使用 Llama 商标的事实。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "诉讼触发未知，保留许可终止后的条件限制。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "索赔是否发生未知，保留条件赔偿义务。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "协议是否终止未知，保留终止后的删除及停止使用义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现对下游仓库对象的复制行为。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现对下游仓库对象创作衍生作品。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现再许可下游仓库对象。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现分发下游仓库对象。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见与下游对象相关的专利权利行使事实。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见出售下游对象副本。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见相关专利诉讼事实。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见依据 Apache 第4节复制或分发下游对象。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见依据 Apache 第4节分发下游对象。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见修改下游对象或其使用事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见下游衍生作品的使用事实。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见使用 Apache 许可方商标的事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见使用 Apache 许可方商标的事实。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见再分发并收费提供支持、保证或额外责任的事实。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分发下游衍生作品。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分发经修改的下游文件。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见以源代码形式分发下游衍生作品。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见带 NOTICE 文件的作品及其衍生作品分发。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见下游修改对象的使用、复制或分发事实。"
+    }
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "case_id": "chain-0084-80f4c460bce5",
+  "status": "SUCCESS",
+  "request_sha256": "2683bc12ea9c44b1452d4621c13f8d1359fd8f49f0fc702f96d66ba3fd128cb5",
+  "analysis": {
+    "case_id": "chain-0084-80f4c460bce5",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2e5f46859f9a2bc6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "developing_models_competing_with_Gemini_services"
+          },
+          "S": {
+            "artifact": "chain-0084-80f4c460bce5:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2e5f46859f9a2bc6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "age_at_least_18",
+                "not_consumer_use",
+                "available_region",
+                "comply_with_prohibited_use_policy",
+                {
+                  "any": [
+                    "not_API_client_users_in_EEA_Switzerland_or_UK",
+                    "paid_service_for_API_client_users_in_EEA_Switzerland_or_UK"
+                  ]
+                },
+                "not_reverse_engine_extract_or_replicate_service_components"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0084-80f4c460bce5:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "供应链事实确认的是 Gemini API 远程调用及 Use；未证明模型权重转移、修改、复制或分发，亦无依据将上游服务条款与下游 MIT 许可视为共同约束同一对象。",
+      "上游条款文本标示生效日期为 2026-03-23；本次仅按所提供的本地文本分析，未核实实际调用时适用的条款版本、API Terms及所引用政策的完整内容。",
+      "是否面向消费者、用户年龄、服务区域、API Client 用户所在地、计费服务状态及具体用途均未知；据此保留条件义务，不认定违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Gemini API 须用于专业或商业目的而非消费者用途；使用者须年满18岁，且不得将服务用于面向或可能被未满18岁者访问的 API Client。",
+        "source_refs": [
+          "license-text:upstream:2e5f46859f9a2bc6"
+        ],
+        "subject": {
+          "artifact": "chain-0084-80f4c460bce5:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "professional_or_business_purpose",
+          "consumer_use",
+          "user_age",
+          "api_client_minor_access"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "仅可在可用地区访问服务；如 API Client 向欧洲经济区、瑞士或英国用户提供服务，须使用 Paid Services。",
+        "source_refs": [
+          "license-text:upstream:2e5f46859f9a2bc6"
+        ],
+        "subject": {
+          "artifact": "chain-0084-80f4c460bce5:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            {
+              "any": [
+                "not_api_client_users_in_EEA_Switzerland_or_UK",
+                "paid_service_for_API_client_users_in_EEA_Switzerland_or_UK"
+              ]
+            }
+          ]
+        },
+        "unresolved_predicates": [
+          "available_region",
+          "api_client_users_in_EEA_Switzerland_or_UK",
+          "paid_service"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得将服务用于开发与 Gemini API 或 Google AI Studio 竞争的模型；不得尝试逆向工程、提取或复制服务组成部分，包括底层数据或模型参数权重；须遵守 Prohibited Use Policy。",
+        "source_refs": [
+          "license-text:upstream:2e5f46859f9a2bc6"
+        ],
+        "subject": {
+          "artifact": "chain-0084-80f4c460bce5:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "competing_model_development",
+          "reverse_engineering_or_extraction",
+          "prohibited_use_policy_compliance"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 32229,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1405,
+    "output_tokens_details": {
+      "reasoning_tokens": 235
+    },
+    "total_tokens": 33634,
+    "attribution": {
+      "items": {
+        "msg_0cbf2de0188286f5016af2eabe74f487d2870b7063c0cd4ad6": {
+          "input_tokens": 30281,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30281,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0cbf2de0188286f5016af2eac3e84487d28ccc5b8297995985": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1170,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1170
+            }
+          ]
+        },
+        "rs_0cbf2de0188286f5016af2eac3d14c87d2be492e09b2055f64": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 235
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 30.501,
+  "auto_applied": false
+}

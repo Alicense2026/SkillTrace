@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-4286-9dd5c2a07583",
+  "source_csv_line": 4287,
+  "row": {
+    "github_repo": "helix",
+    "github_url": "https://github.com/helixml/helix",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "Qwen/Qwen3-8B",
+    "artifact_url": "https://huggingface.co/Qwen/Qwen3-8B",
+    "artifact_license": "apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: api/pkg/server/openai_chat_handlers.go:144 ｜ 调用原文: // e.g., \"together_ai\" + \"Qwen/Qwen3-8B\" -> \"together_ai/Qwen/Qwen3-8B\" ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: openai_chat_handlers.go 中引用的模型，属于实际模型路由",
+    "batch": "1501-2000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "helixml/helix",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e",
+    "filename": "_licenseref_full/texts/051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:helix-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-4286-9dd5c2a07583",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c67fd23bac62c884"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-4286-9dd5c2a07583:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Apache-2.0条款摘录及映射支持对上游原始模型的Use为PERMITTED，但未提供适用于该模型远程调用的其他Apache条款映射。",
+      "下游LicenseRef-Custom摘录针对Helix Platform组件及其服务使用；现有事实只确认调用模型API，不能据此认定该模型属于Helix Platform许可范围或两份许可约束同一对象。"
+    ],
+    "obligations": [],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 30244,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 536,
+    "output_tokens_details": {
+      "reasoning_tokens": 250
+    },
+    "total_tokens": 30780,
+    "attribution": {
+      "items": {
+        "msg_0325fce75ef7328f016af53b72ea2c87d28e9683d0da3bef24": {
+          "input_tokens": 28174,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 28174,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0325fce75ef7328f016af53b72ea2c87d2aa7494a37230f765": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0325fce75ef7328f016af53b77f7d087d281bed4d1ef3a8e45": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 286,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 286
+            }
+          ]
+        },
+        "rs_0325fce75ef7328f016af53b77e0c087d289ebd6f79d4cbda9": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 250
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "8097f705d5596737407379b60d7c48bcec3ed371cceb996872253a2a1857f582",
+  "elapsed_seconds": 16.77
+}

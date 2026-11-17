@@ -1,0 +1,152 @@
+{
+  "case_id": "chain-0001-96ad6c2964ff",
+  "status": "SUCCESS",
+  "request_sha256": "3e036d32ef03206d40a1eacda869d119dcc3dad7b165cf710ddaa6fdcbc1a0f3",
+  "analysis": {
+    "case_id": "chain-0001-96ad6c2964ff",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "in_accordance_with_the_Agreement"
+          },
+          "S": {
+            "artifact": "chain-0001-96ad6c2964ff:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "uses_Output_to_develop_AI_model",
+                "competes_with_OpenAI_products_or_services",
+                {
+                  "not": "Permitted_Exception"
+                }
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0001-96ad6c2964ff:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "TrainModel",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Do not use Output to develop an AI model that competes with OpenAI products or services, unless a Permitted Exception applies.",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "subject": {
+          "artifact": "chain-0001-96ad6c2964ff:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:TrainModel",
+            "uses_Output_to_develop_AI_model",
+            "competes_with_OpenAI_products_or_services"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:TrainModel",
+          "uses_Output_to_develop_AI_model",
+          "competes_with_OpenAI_products_or_services",
+          "Permitted_Exception"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI.txt is a Services Agreement, not a general-purpose license for model weights. Its terms apply to Customer access to and use of the Services; the supplied facts establish a remote API call and use, not transfer of model weights.",
+      "No supplied facts establish model training, use of Output to develop a model, competition with OpenAI products or services, or an applicable Permitted Exception. The training restriction is therefore conditional, not a finding of violation.",
+      "The downstream MIT text permits use and imposes a notice condition for copies or substantial portions; no copying or distribution of the downstream software is established. The API link alone does not establish that both sets of terms govern the same subject or activity."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 34613,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1102,
+    "output_tokens_details": {
+      "reasoning_tokens": 391
+    },
+    "total_tokens": 35715,
+    "attribution": {
+      "items": {
+        "msg_04188a58019ce465016af2ddaeb1c087d19a412cc8fa4e2311": {
+          "input_tokens": 32665,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32665,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04188a58019ce465016af2ddb9067087d1aa030029fd40d2bf": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 711,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 711
+            }
+          ]
+        },
+        "rs_04188a58019ce465016af2ddb8eaf087d1a178a06973be061b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 391
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 26.149,
+  "auto_applied": false
+}

@@ -1,0 +1,45 @@
+{
+  "case_id": "chain-0653-41f2c79b3971",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Include the upstream software's copyright and permission notice in copies or substantial portions, as applicable.",
+      "source_refs": [
+        "license-text:upstream:400c12ed77abb4cb"
+      ],
+      "subject": {
+        "artifact": "chain-0653-41f2c79b3971:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "include_copyright_and_permission_notice"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If using xiaobei source code to operate a multi-tenant environment, obtain xiaobei's explicit written authorization.",
+      "source_refs": [
+        "license-text:downstream:92bb429f12b902bf"
+      ],
+      "subject": {
+        "artifact": "chain-0653-41f2c79b3971:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "use_xiaobei_source_code_to_operate_multi_tenant_environment"
+        ]
+      },
+      "unresolved_predicates": [
+        "use_xiaobei_source_code_to_operate_multi_tenant_environment",
+        "xiaobei_has_explicitly_authorized_use_in_writing"
+      ]
+    }
+  ]
+}

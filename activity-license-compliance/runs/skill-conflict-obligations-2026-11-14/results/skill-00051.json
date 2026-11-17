@@ -1,0 +1,774 @@
+{
+  "case_id": "skill-00051",
+  "csv_row": 52,
+  "source_excel_row": "84",
+  "status": "SUCCESS",
+  "request_sha256": "5b91d507b2e7f267b4203af50b9cee1beda0a7d27a481172f9dc62e5a29f16f0",
+  "analysis": {
+    "case_id": "skill-00051",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "comply_with_applicable_law",
+                "comply_with_these_terms",
+                "comply_with_applicable_additional_terms"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00051:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "complies_with_mistral_usage_policy",
+            "when": "use_on_mistral_ai_infrastructure"
+          },
+          "S": {
+            "artifact": "skill-00051:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00051:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实是下游通过 API 链接并远程调用上游服务；未证明上游模型或输出被复制、修改、分发、组合或训练。故 MIT 的复制通知义务未由本次远程调用触发，也未据此认定许可冲突。",
+      "上游原文适用的基础设施、用户及具体产品范围未完全确定；Usage Policy、Additional Terms 等引用材料未提供，其具体限制不作推断。",
+      "仅列与已知 Use 活动相关的 ASC；其他候选条款的范围或触发与已知事实无关，详见审计。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer 使用 Mistral AI Products 时须遵守适用法律、Terms 及适用的 Additional Terms。",
+        "source_refs": [
+          "license:4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5"
+        ],
+        "subject": {
+          "artifact": "skill-00051:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "适用的产品及 Additional Terms 范围"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer 在 Mistral AI Infrastructure 上使用 Mistral AI Products 时须遵守 Mistral AI Usage Policy；该义务属于使用者，不转由远程服务调用者承担。",
+        "source_refs": [
+          "license:4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5"
+        ],
+        "subject": {
+          "artifact": "skill-00051:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_on_mistral_ai_infrastructure",
+        "unresolved_predicates": [
+          "use_on_mistral_ai_infrastructure",
+          "usage_policy_compliance"
+        ]
+      }
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "已知为远程调用，未触发第三方合作方基础设施条件。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈事实。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈或复制事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈披露事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈许可事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈分发事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈事实。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "所有权及转让声明不构成已知活动的义务。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供向 Mistral Products 提交 Customer Data 的事实。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "责任归属条款未建立与已知活动相对应的独立行为义务。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供对输出来源作表示的事实。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供关闭输出过滤器的事实。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供使用输出的事实。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供以图像输出开发或训练竞品的事实。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供依赖输出或向第三方提供输出的事实。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "约束对象为 Mistral AI 对 Customer Data/Output 的使用，不是本案已知调用者活动。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务承担者为 Mistral AI；无其训练数据事实。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "许可对象为 Mistral AI 使用 Customer Data/Output 训练，非已知活动。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用 Labs 或 Preview Models 的事实。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用 Labs 或 Preview Models 的事实。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用 Labs 或 Preview Models 的事实。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "权利保留条款不独立规定已知活动的义务。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供接收或使用保密信息、或披露保密信息的事实。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已知上游产品 Use；保留遵守适用条款的条件义务。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "期限条款未新增已知活动义务。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无停止使用并终止条款的事实。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供列举的暂停或终止触发事实。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无终止、到期或账户导出事实。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "存续条款未提供与已知活动相关的新义务。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供个人数据或适用数据保护法触发事实。"
+      },
+      {
+        "rule_ref": "U031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规定 Mistral AI 的控制者处理及外部隐私政策。"
+      },
+      {
+        "rule_ref": "U032",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明使用 Mistral AI Infrastructure 或处理个人数据。"
+      },
+      {
+        "rule_ref": "U033",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "更新权条款未独立触发已知活动义务。"
+      },
+      {
+        "rule_ref": "U034",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无 Mistral AI 作出重大更新事实。"
+      },
+      {
+        "rule_ref": "U035",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无条款更新事实。"
+      },
+      {
+        "rule_ref": "U036",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无不同意更新或更新后继续使用事实。"
+      },
+      {
+        "rule_ref": "U037",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无 Terms 要求或授权的通知事实。"
+      },
+      {
+        "rule_ref": "U038",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转让权利或分包义务事实。"
+      },
+      {
+        "rule_ref": "U039",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务承担者为 Mistral AI，且无其分包事实。"
+      },
+      {
+        "rule_ref": "U040",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用对方名称、标识或商标事实。"
+      },
+      {
+        "rule_ref": "U041",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无代表对方承担义务事实。"
+      },
+      {
+        "rule_ref": "U042",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供出口、制裁、受管制输入或相关活动触发事实。"
+      },
+      {
+        "rule_ref": "U043",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "远程 API 调用可能适用基础设施条款；基础设施及政策履行未知，保留条件义务。"
+      },
+      {
+        "rule_ref": "U044",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供在 Mistral AI Infrastructure 建立或维护账户的事实。"
+      },
+      {
+        "rule_ref": "U045",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无分发 End User Account 事实。"
+      },
+      {
+        "rule_ref": "U046",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无发现未授权或欺诈访问的事实。"
+      },
+      {
+        "rule_ref": "U047",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无媒体客户使用核实新闻功能的事实。"
+      },
+      {
+        "rule_ref": "U048",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无媒体客户拟作编辑用途的事实。"
+      },
+      {
+        "rule_ref": "U049",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无创建对话分享链接事实。"
+      },
+      {
+        "rule_ref": "U050",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无启用第三方连接器事实。"
+      },
+      {
+        "rule_ref": "U051",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无连接器输入传送事实。"
+      },
+      {
+        "rule_ref": "U052",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无连接器请求操作事实。"
+      },
+      {
+        "rule_ref": "U053",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用第三方连接器事实。"
+      },
+      {
+        "rule_ref": "U054",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无在产品中存储第三方凭据事实。"
+      },
+      {
+        "rule_ref": "U055",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无存储或使用凭据事实。"
+      },
+      {
+        "rule_ref": "U056",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用第三方技术生成输出事实。"
+      },
+      {
+        "rule_ref": "U057",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规定 Mistral AI 的监控权限，不是调用者义务。"
+      },
+      {
+        "rule_ref": "U058",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无收到第三方内容事实。"
+      },
+      {
+        "rule_ref": "U059",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无复制网页搜索第三方内容事实。"
+      },
+      {
+        "rule_ref": "U060",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无分发网页搜索第三方内容事实。"
+      },
+      {
+        "rule_ref": "U061",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无将网页搜索第三方内容用于机器学习事实。"
+      },
+      {
+        "rule_ref": "U062",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无将网页搜索第三方内容用于商业产品事实。"
+      },
+      {
+        "rule_ref": "U063",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无违反法律或 Usage Policy 的内容使用事实。"
+      },
+      {
+        "rule_ref": "U064",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规定 Mistral AI 的内容审核权限。"
+      },
+      {
+        "rule_ref": "U065",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规定 Mistral AI 对 Usage Data 的使用。"
+      },
+      {
+        "rule_ref": "U066",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用音频产品的事实。"
+      },
+      {
+        "rule_ref": "U067",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无音频内容分发事实。"
+      },
+      {
+        "rule_ref": "U068",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "已知为远程调用，未触发客户自有基础设施条件。"
+      },
+      {
+        "rule_ref": "U069",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "已知为远程调用，未触发合作方基础设施条件。"
+      },
+      {
+        "rule_ref": "U070",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "远程调用可能落入 Mistral AI Infrastructure；范围及适用补充条款未知，条件义务已保留。"
+      },
+      {
+        "rule_ref": "U071",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无通过 Customer Account、Customer Infrastructure 或 Customer Offering 的相关活动事实。"
+      },
+      {
+        "rule_ref": "U072",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无关联方独立工作区事实。"
+      },
+      {
+        "rule_ref": "U073",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "上游产品 Use 已发生，保留遵守有限使用授权及适用条款的义务。"
+      },
+      {
+        "rule_ref": "U074",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无逆向工程事实。"
+      },
+      {
+        "rule_ref": "U075",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无以非许可方法提取产品内容事实。"
+      },
+      {
+        "rule_ref": "U076",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无整合 Vibe 或向第三方提供产品访问事实。"
+      },
+      {
+        "rule_ref": "U077",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无向 End Users 提供访问或使用事实。"
+      },
+      {
+        "rule_ref": "U078",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用 Beta Products 事实。"
+      },
+      {
+        "rule_ref": "U079",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无违反法律、条款或政策的使用事实。"
+      },
+      {
+        "rule_ref": "U080",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无侵犯第三方权利的使用事实。"
+      },
+      {
+        "rule_ref": "U081",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无儿童个人信息或未成年人使用事实。"
+      },
+      {
+        "rule_ref": "U082",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用输出逆向工程事实。"
+      },
+      {
+        "rule_ref": "U083",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无危害产品安全或功能事实。"
+      },
+      {
+        "rule_ref": "U084",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无买卖或转让 API key 或账户事实。"
+      },
+      {
+        "rule_ref": "U085",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无分发 Beta Product 或提供第三方访问事实。"
+      },
+      {
+        "rule_ref": "U086",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "支持义务由 Mistral AI 承担，不是本案调用者义务。"
+      },
+      {
+        "rule_ref": "U087",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无将 Vibe 与对外产品组合的事实。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "已知活动对象为上游 API 服务；未证明使用下游 MIT 软件对象。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无复制 MIT 软件或其实质部分事实；远程调用本身不触发通知条件。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无修改 MIT 软件或复制其实质部分事实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无合并 MIT 软件事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无发布 MIT 软件事实。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无分发 MIT 软件或其实质部分事实。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无再许可 MIT 软件事实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无出售 MIT 软件副本事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00051-1794591068603674000-1.json",
+  "usage": {
+    "input_tokens": 53986,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 4251,
+    "output_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "total_tokens": 58237,
+    "attribution": {
+      "items": {
+        "msg_00121f3239a415c6016af7496208dc87d09e508a4752d8410c": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00121f3239a415c6016af7496208dc87d0a8bb982a47f3b907": {
+          "input_tokens": 51262,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 51262,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00121f3239a415c6016af74968d85887d0a8789f61aa0e0b55": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3938,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3938
+            }
+          ]
+        },
+        "rs_00121f3239a415c6016af74968bc8087d08c41aae8d7d68dbb": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 313
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

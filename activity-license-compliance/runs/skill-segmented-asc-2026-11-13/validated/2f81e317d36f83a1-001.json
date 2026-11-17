@@ -1,0 +1,556 @@
+{
+  "request_sha256": "4168f729f4c20744846820208b32e9948edc2580fb64008e578406d1a366c1c6",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 7,
+        "end_line": 9,
+        "clause_label": "acceptance_as_license_condition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "agree_to_license_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Acceptance; agreement is required to obtain any license under these terms.",
+        "condition_explanation": "agree_to_license_terms means the licensee agrees to the terms as strict obligations and conditions to all licenses.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Agree to these terms as strict obligations and conditions to all licenses.",
+            "actor": "licensee",
+            "object": "PolyForm Small Business License terms",
+            "trigger": "Before obtaining any license under these terms."
+          }
+        ]
+      },
+      {
+        "start_line": 13,
+        "end_line": 20,
+        "clause_label": "copyright_use_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "for_a_permitted_purpose",
+              "distribution_only_under_distribution_license",
+              "changes_and_new_works_only_under_changes_and_new_works_license"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Copyright License; applies to the software and permits otherwise copyright-infringing acts for a permitted purpose. Distribution and making changes or new works are subject to their respective license sections.",
+        "condition_explanation": "for_a_permitted_purpose is a purpose permitted by the terms; the Small Business section identifies qualifying use for the benefit of the licensee's company as a permitted purpose. The two license-section predicates preserve the express limits on distribution and changes/new works.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 24,
+        "end_line": 28,
+        "clause_label": "copy_distribution_permission",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "for_a_permitted_purpose",
+              "distribution_covers_only_software_and_changes_or_new_works_permitted_under_changes_and_new_works_license",
+              "provide_required_license_and_notice_materials_to_each_recipient"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Distribution License; permission covers copies of the software and changes and new works only to the extent permitted by the Changes and New Works License. The recipient-notice duty is in the Notices section.",
+        "condition_explanation": "for_a_permitted_purpose is as defined by the terms, including qualifying company-benefit use under the Small Business section. provide_required_license_and_notice_materials_to_each_recipient means each person receiving a copy of any part gets these terms or their URL and copies of licensor-provided Required Notice lines.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give anyone who gets a copy of any part of the software from the licensee a copy of these terms or their URL, and copies of any plain-text lines beginning with “Required Notice:” that the licensor provided with the software.",
+            "actor": "licensee",
+            "object": "Each distributed copy or part of the software and its accompanying license terms or URL and licensor-provided Required Notice lines",
+            "trigger": "Whenever anyone gets a copy of any part of the software from the licensee."
+          }
+        ]
+      },
+      {
+        "start_line": 32,
+        "end_line": 36,
+        "clause_label": "recipient_notice_delivery_duty",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "deliver_terms_or_url_and_all_licensor_provided_required_notice_lines_to_each_recipient"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Notices; applies when the licensee gives anyone a copy of any part of the software. The required materials are the terms or their URL and any licensor-provided plain-text lines beginning “Required Notice:”.",
+        "condition_explanation": "each_recipient_receives_required_materials means each person who gets a copy of any part from the licensee receives both the terms or their URL and copies of all qualifying notice lines provided with the software.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure each recipient of a copy of any part of the software from the licensee receives a copy of these terms or their URL, and copies of any licensor-provided plain-text lines beginning “Required Notice:”.",
+            "actor": "licensee",
+            "object": "Distributed software copy or part, license terms or URL, and licensor-provided Required Notice lines",
+            "trigger": "Whenever the licensee gives anyone a copy of any part of the software."
+          }
+        ]
+      },
+      {
+        "start_line": 42,
+        "end_line": 44,
+        "clause_label": "make_changes_permission",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "for_a_permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Changes and New Works License; grants an additional copyright license to make changes based on the software. Distribution of resulting material remains subject to the Distribution License.",
+        "condition_explanation": "for_a_permitted_purpose is a purpose permitted by the terms; qualifying company-benefit use is described in the Small Business section.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 42,
+        "end_line": 44,
+        "clause_label": "make_new_works_permission",
+        "activities": [
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "for_a_permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Changes and New Works License; grants an additional copyright license to make new works based on the software. Distribution of resulting material remains subject to the Distribution License.",
+        "condition_explanation": "for_a_permitted_purpose is a purpose permitted by the terms; qualifying company-benefit use is described in the Small Business section.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 48,
+        "end_line": 50,
+        "clause_label": "patent_use_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "no_applicable_patent_license_termination"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Patent License; covers licensor patent claims the licensor can license or becomes able to license that the licensee would infringe by using the software. The license may terminate under Patent Defense.",
+        "condition_explanation": "no_applicable_patent_license_termination means neither the licensee nor, for work on behalf of the licensee's company, that company has made a written claim that the software infringes or contributes to infringement of any patent.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 59,
+        "end_line": 66,
+        "clause_label": "qualifying_company_benefit_purpose",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "for_benefit_of_your_company",
+              "company_has_fewer_than_100_employees_and_independent_contractors",
+              "company_prior_tax_year_revenue_below_inflation_adjusted_2019_usd_1000000_threshold"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Small Business; establishes when company-benefit use of the software is for a permitted purpose. Company includes the organization the individual or entity works for and its controlled, controlling, and commonly controlled organizations, per the supplied definition.",
+        "condition_explanation": "fewer_than_100 counts employees and independent contractors working for the company. The revenue threshold is less than 1,000,000 USD (2019), adjusted for inflation using the specified U.S. Bureau of Labor Statistics CPI-U series and 1982–1984=100 reference base, for the prior tax year.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 70,
+        "end_line": 73,
+        "clause_label": "no_sublicense_or_transfer",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "No Other Rights; prohibits sublicensing any license granted to the licensee. The terms also state they do not transfer licenses to anyone else and do not imply other licenses.",
+        "condition_explanation": "The prohibition applies to sublicensing the licensee's licenses under these terms; the text separately disallows transfer of those licenses.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not sublicense any license granted to the licensee under these terms.",
+            "actor": "licensee",
+            "object": "Licensee's licenses for the software under these terms",
+            "trigger": "At all times while relying on these terms."
+          }
+        ]
+      },
+      {
+        "start_line": 70,
+        "end_line": 73,
+        "clause_label": "no_license_transfer",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "No Other Rights; the licensee may not transfer any license granted under these terms to anyone else.",
+        "condition_explanation": "The restriction concerns transfer of the license itself, not an independently stated restriction on transferring copies of the software.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not transfer any license granted to the licensee under these terms to anyone else.",
+            "actor": "licensee",
+            "object": "Licensee's licenses for the software under these terms",
+            "trigger": "At all times while relying on these terms."
+          }
+        ]
+      },
+      {
+        "start_line": 77,
+        "end_line": 81,
+        "clause_label": "patent_defense_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "any": [
+              "licensee_makes_written_patent_infringement_or_contribution_claim",
+              "company_makes_written_patent_infringement_or_contribution_claim_and_work_is_on_behalf_of_company"
+            ]
+          },
+          "requires": "applicable_patent_license_has_ended"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Patent Defense; a written claim by the licensee ends the patent license for the software immediately. A written claim by the licensee's company ends it immediately for work on behalf of that company.",
+        "condition_explanation": "written_patent_infringement_or_contribution_claim means a written claim that the software infringes or contributes to infringement of any patent. The company-triggered termination is limited to work on behalf of that company.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 85,
+        "end_line": 91,
+        "clause_label": "first_violation_notice_cure_or_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "first_written_notice_of_violation_or_unlicensed_activity_received",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "full_compliance_with_terms_within_32_days_after_notice",
+                  "practical_steps_taken_to_correct_past_violations_within_32_days_after_notice"
+                ]
+              },
+              "licenses_have_ended"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Violations; on the first written notice of a violation or activity not covered by the licenses, licenses can continue if both cure requirements are met within 32 days after receipt; otherwise all licenses end immediately.",
+        "condition_explanation": "first_written_notice_of_violation_or_unlicensed_activity_received is the first written notification that the licensee violated any term or did something with the software not covered by its licenses. The continuation path requires both full compliance and practical corrective steps within the same 32-day period; failure results in immediate termination of all licenses.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Come into full compliance with these terms and take practical steps to correct past violations.",
+            "actor": "licensee",
+            "object": "Licensee's conduct involving the software and past violations",
+            "trigger": "Within 32 days after receiving the first written notice of a violation or activity with the software not covered by the licenses, to allow licenses to continue."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk contains the license text; no incorporated external documents are needed to identify the extracted rules. The Small Business section supplies a specific permitted-purpose case but does not define every possible permitted purpose; no broader purpose grant is inferred.",
+      "The licensee's general copyright permission is constrained by the separate Distribution and Changes and New Works sections. The terms do not expressly create a sublicensing or transfer permission.",
+      "The no-liability paragraph is warranty/liability boilerplate and is not modeled as an activity constraint."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "License title; heading only."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "License URL; contextual identifier, not an operative rule."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Acceptance heading only."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "MODELED",
+        "clause_labels": [
+          "acceptance_as_license_condition"
+        ],
+        "reason": "Requires agreement to the terms as conditions and strict obligations to obtain any license."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Copyright License heading only."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "MODELED",
+        "clause_labels": [
+          "copyright_use_permission"
+        ],
+        "reason": "Grants copyright use for permitted purposes, expressly subject to the distribution and changes/new works sections."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Distribution License heading only."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "MODELED",
+        "clause_labels": [
+          "copy_distribution_permission"
+        ],
+        "reason": "Grants distribution of copies, including qualifying changes and new works, subject to the referenced license section and recipient notices."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Notices heading only."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "recipient_notice_delivery_duty"
+        ],
+        "reason": "Requires delivery of terms or URL and supplied Required Notice lines to each recipient of any part."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative Required Notice example; it does not independently impose a duty or establish that this example notice was supplied with the software."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Changes and New Works License heading only."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "MODELED",
+        "clause_labels": [
+          "make_changes_permission",
+          "make_new_works_permission"
+        ],
+        "reason": "Grants permission to make changes and new works for a permitted purpose."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Patent License heading only."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "MODELED",
+        "clause_labels": [
+          "patent_use_permission"
+        ],
+        "reason": "Grants a patent license for specified licensor claims, subject to the express Patent Defense termination provision."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Fair Use heading only."
+      },
+      {
+        "unit_id": "P0017",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Acknowledges that statutory fair-use rights may exist and are not limited; it does not grant or require a licensee action."
+      },
+      {
+        "unit_id": "P0018",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Small Business heading only."
+      },
+      {
+        "unit_id": "P0019",
+        "status": "MODELED",
+        "clause_labels": [
+          "qualifying_company_benefit_purpose"
+        ],
+        "reason": "Defines a permitted-purpose case with company-benefit, headcount, revenue, inflation-index, and prior-tax-year criteria."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "No Other Rights heading only."
+      },
+      {
+        "unit_id": "P0021",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_sublicense_or_transfer",
+          "no_license_transfer"
+        ],
+        "reason": "Prohibits sublicensing and transfer of licenses and disclaims implied additional licenses."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Patent Defense heading only."
+      },
+      {
+        "unit_id": "P0023",
+        "status": "MODELED",
+        "clause_labels": [
+          "patent_defense_termination"
+        ],
+        "reason": "Specifies immediate patent-license termination after qualifying written patent claims, including the company-work limitation."
+      },
+      {
+        "unit_id": "P0024",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Violations heading only."
+      },
+      {
+        "unit_id": "P0025",
+        "status": "MODELED",
+        "clause_labels": [
+          "first_violation_notice_cure_or_termination"
+        ],
+        "reason": "Models the first written notice trigger, both 32-day cure conditions, and immediate termination otherwise."
+      },
+      {
+        "unit_id": "P0026",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "No Liability heading only."
+      },
+      {
+        "unit_id": "P0027",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty and liability disclaimer; excluded by the task's operative activity-constraint criteria."
+      },
+      {
+        "unit_id": "P0028",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Definitions heading only."
+      },
+      {
+        "unit_id": "P0029",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines licensor and software; used to identify parties and licensed material, but the definitions themselves are not operative grants or duties."
+      },
+      {
+        "unit_id": "P0030",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines “You”; contextual actor identification only."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines company and control; contextual support for the company-benefit and patent-defense rules."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines “Your licenses”; contextual support for the no-transfer, patent-defense, and termination rules."
+      },
+      {
+        "unit_id": "P0033",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines “Use”; contextual definition only, not a separate grant or duty."
+      }
+    ]
+  },
+  "attempt": 2
+}

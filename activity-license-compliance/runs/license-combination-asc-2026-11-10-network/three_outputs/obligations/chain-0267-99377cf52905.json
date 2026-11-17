@@ -1,0 +1,48 @@
+{
+  "case_id": "chain-0267-99377cf52905",
+  "output": [
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "依 DeepSeek 服务条款向终端用户清楚披露输出由 AI 生成、可能包含错误或遗漏且仅供参考。",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0267-99377cf52905:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:RemoteInteraction",
+      "unresolved_predicates": [
+        "disclosure_fulfilled"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若提供的程序属于被修改且支持远程交互的 AGPL 覆盖版本，须显著向远程交互用户提供免费网络途径获取该版本对应源代码。",
+      "source_refs": [
+        "license-text:downstream:04b63bcd676ec99f"
+      ],
+      "subject": {
+        "artifact": "chain-0267-99377cf52905:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "modified_covered_program",
+          "activity:RemoteInteraction",
+          "version_supports_remote_interaction"
+        ]
+      },
+      "unresolved_predicates": [
+        "modified_covered_program",
+        "version_supports_remote_interaction",
+        "source_offer_fulfilled"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

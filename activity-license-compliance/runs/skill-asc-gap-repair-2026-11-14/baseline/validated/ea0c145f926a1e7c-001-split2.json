@@ -1,0 +1,481 @@
+{
+  "request_sha256": "059b2430eda2352ff39cd61ab52dd5fe6443a3656e8ae093d14c6e0a8feb0973",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 90,
+        "end_line": 94,
+        "clause_label": "internal_and_community_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5 permits personal use, research, education, open-source activities, and Internal Use without charge or a Customer Attribution Notice. Internal quality assurance and continuous integration for the organization's own paid product or SaaS are included only if the Covered Materials are not used to provide a paid service for a third party.",
+        "condition_explanation": "Internal Use has the meaning in the supplied definitions. This permission does not displace Sections 6 and 7 when the activity is Paid Third-Party Service Use.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 96,
+        "end_line": 98,
+        "clause_label": "paid_service_rules_control",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "paid_third_party_service_use",
+          "requires": "comply_with_paid_service_rules_in_sections_6_and_7"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5 makes Sections 6 and 7 applicable to Paid Third-Party Service Use even where the activity could also be characterized as personal use, research, education, or open-source activity. This is an applicability rule, not an independent grant.",
+        "condition_explanation": "paid_third_party_service_use means the defined use of Covered Materials, directly or indirectly for compensation, for a third party's product, system, code, release, quality decision, or deliverable. The specific Section 6–7 conditions are modeled separately.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 102,
+        "end_line": 107,
+        "clause_label": "paid_service_with_attribution",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "paid_third_party_service_use",
+          "requires": "attribution_notice_provided_by_earlier_deadline"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 6 permits Paid Third-Party Service Use without an additional license fee if an Attribution Notice is provided for the engagement. The notice is due by the earlier of delivery of the first Customer-facing deliverable or 30 days after Covered Materials use begins for the engagement; if introduced into an existing engagement, the 30-day period starts on introduction.",
+        "condition_explanation": "attribution_notice_provided_by_earlier_deadline means the defined Attribution Notice is provided no later than whichever occurs first: first Customer-facing deliverable or 30 days after use begins, with the stated introduction-date rule for existing engagements. Notice content is specified in the supplied definition.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide an Attribution Notice for the engagement by the earlier of delivery of the first Customer-facing deliverable or 30 days after use of the Covered Materials begins; for introduction into an existing engagement, calculate the 30 days from introduction.",
+            "actor": "licensee providing the paid third-party service",
+            "object": "Attribution Notice for the Covered Materials used in the engagement",
+            "trigger": "Paid Third-Party Service Use; deadline is the earlier of first Customer-facing deliverable and 30 days after use begins, or 30 days after introduction into an existing engagement."
+          }
+        ]
+      },
+      {
+        "start_line": 109,
+        "end_line": 112,
+        "clause_label": "engagement_notice_delivery",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "paid_third_party_service_use",
+          "requires": "one_engagement_notice_reaches_customer_technical_team"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 6 clarifies that one notice per engagement suffices; it does not require a notice on every screen, permanent banner, or every test case. In subcontracted work the notice must reach the ultimate beneficiary's technical team through the ordinary contractual chain or a deliverable.",
+        "condition_explanation": "one_engagement_notice_reaches_customer_technical_team means the notice is provided for the engagement and, for subcontracted work, reaches the ultimate beneficiary's technical team through the stated channel. The definition of Customer includes the ultimate beneficiary.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure the engagement's Attribution Notice reaches the ultimate beneficiary's technical team through the ordinary contractual chain or a deliverable when work is subcontracted.",
+            "actor": "licensee providing or arranging the subcontracted service",
+            "object": "Attribution Notice for the engagement",
+            "trigger": "Paid Third-Party Service Use involving subcontracted work."
+          }
+        ]
+      },
+      {
+        "start_line": 116,
+        "end_line": 121,
+        "clause_label": "notice_accessible_location",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "paid_third_party_service_use",
+          "requires": "notice_reasonably_accessible_to_customer_technical_contact_or_team"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 7 requires the Attribution Notice to be placed where it is reasonably accessible to at least one of the listed Customer technical contacts or teams. Listed examples are project documents accessible to the Customer.",
+        "condition_explanation": "notice_reasonably_accessible_to_customer_technical_contact_or_team means accessibility to at least one Customer technical contact, development team, QA team, product team, or designated project lead. The listed document locations are examples, not an exclusive list.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Place the Attribution Notice where it is reasonably accessible to at least one Customer technical contact, development team, quality assurance team, product team, or designated project lead.",
+            "actor": "licensee providing the paid third-party service",
+            "object": "Attribution Notice and its Customer-accessible placement",
+            "trigger": "Paid Third-Party Service Use requiring an Attribution Notice."
+          }
+        ]
+      },
+      {
+        "start_line": 123,
+        "end_line": 128,
+        "clause_label": "notice_sufficiency_and_confidentiality",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "paid_third_party_service_use",
+          "requires": "notice_is_customer_accessible_and_not_confined_to_insufficient_location"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 7 states that internal-only registers, undelivered package metadata, unrelated websites, and locations not reasonably accessible to the Customer's technical team are insufficient. Customer and engagement names need not be public; a private Customer-facing document suffices. No Customer confidential information must be sent to the Licensor.",
+        "condition_explanation": "The duty to provide a notice remains subject to the accessibility requirement in Section 7. This paragraph identifies insufficient placements and clarifies that public disclosure of Customer or engagement names, and sending Customer confidential information to the Licensor, are not required.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not rely solely on an internal register, package metadata not delivered to the Customer, an unrelated general website, or another location not reasonably accessible to the Customer's technical team as the required notice placement.",
+            "actor": "licensee providing the paid third-party service",
+            "object": "Attribution Notice placement",
+            "trigger": "When providing the Attribution Notice required for Paid Third-Party Service Use."
+          }
+        ]
+      },
+      {
+        "start_line": 132,
+        "end_line": 137,
+        "clause_label": "white_label_paid_service",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "white_label_paid_third_party_service_use_omitting_customer_facing_notice",
+          "requires": "separate_written_commercial_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 8 requires a separate written Commercial License for white-label Paid Third-Party Service Use that omits the Customer-facing Attribution Notice. Such an agreement waives only attribution duties it expressly identifies; it does not grant false-authorship rights or automatically include support, SLA, implementation assistance, customization, or a quality warranty.",
+        "condition_explanation": "white_label_paid_third_party_service_use_omitting_customer_facing_notice means the defined Paid Third-Party Service Use is conducted white-label without the required Customer-facing notice. Commercial License means a separate written agreement with the Licensor expressly permitting use without that notice.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 141,
+        "end_line": 146,
+        "clause_label": "redistribution_conditions",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "redistribution_of_covered_materials_or_modified_version",
+          "requires": {
+            "all": [
+              "include_this_license",
+              "include_notice",
+              "preserve_original_copyright_and_authorship_notices",
+              "clearly_state_when_materials_are_modified",
+              "do_not_represent_the_distributor_or_another_person_as_original_developer",
+              "preserve_original_third_party_material_licenses_and_notices"
+            ]
+          }
+        },
+        "actor_role": "licensee distributing the materials",
+        "scope_note": "Section 9 conditions redistribution of Covered Materials or a Modified Version on all six listed requirements. Covered Materials and Modified Version have the supplied definitions; a configuration file, Customer data, input data, or execution result alone does not make Covered Materials a Modified Version.",
+        "condition_explanation": "The six requirements are cumulative. This rule concerns redistribution, not mere use or remote API interaction.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Include this LICENSE and the NOTICE in the distribution.",
+            "actor": "distributor",
+            "object": "Distribution of Covered Materials or a Modified Version",
+            "trigger": "Redistribution of Covered Materials or a Modified Version."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Preserve the original copyright and authorship notices.",
+            "actor": "distributor",
+            "object": "Notices in the distributed materials",
+            "trigger": "Redistribution of Covered Materials or a Modified Version."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Clearly state when the distributed materials are modified.",
+            "actor": "distributor",
+            "object": "Distributed Covered Materials or Modified Version",
+            "trigger": "Redistribution of Covered Materials or a Modified Version."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not represent the distributor or another person as the original developer.",
+            "actor": "distributor",
+            "object": "Distributed Covered Materials or a Modified Version and its accompanying representations",
+            "trigger": "Redistribution of Covered Materials or a Modified Version."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Preserve the original licenses and notices for Third-Party Materials.",
+            "actor": "distributor",
+            "object": "Third-Party Materials included in the distribution",
+            "trigger": "Redistribution of Covered Materials or a Modified Version containing Third-Party Materials."
+          }
+        ]
+      },
+      {
+        "start_line": 150,
+        "end_line": 154,
+        "clause_label": "embedded_notice_preservation",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "redistribution_of_materials_with_embedded_license_copyright_authorship_or_provenance_information",
+          "requires": "embedded_information_not_removed_falsified_or_materially_obscured"
+        },
+        "actor_role": "licensee distributing the materials",
+        "scope_note": "Section 10 applies on redistribution to license, copyright, authorship, and provenance information already embedded in the Covered Materials or a distribution. It expressly does not require adding machine-readable fields to an existing artifact or runtime-output schema.",
+        "condition_explanation": "The preservation condition applies only to information already embedded; the stated schema-field addition is not required.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not remove, falsify, or materially obscure license information, copyright notices, authorship notices, or provenance information already embedded in the Covered Materials or a distribution.",
+            "actor": "distributor",
+            "object": "Embedded license, copyright, authorship, and provenance information",
+            "trigger": "Redistribution of materials containing such embedded information."
+          }
+        ]
+      },
+      {
+        "start_line": 158,
+        "end_line": 162,
+        "clause_label": "no_false_authorship",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "stating_or_implying_authorship_or_presenting_material_as_original",
+          "requires": {
+            "any": [
+              "claim_or_imply_licensee_is_original_developer",
+              "replace_original_developer_name",
+              "cause_third_party_to_mistake_someone_for_original_developer",
+              "falsify_copyright_notice",
+              "present_modified_version_as_unmodified_original"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Neither this License nor a Commercial License permits the specified false-authorship conduct, including presenting a Modified Version as the unmodified original.",
+        "condition_explanation": "The prohibition applies to the listed authorship, copyright, and modified-version representations.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not claim or imply original-developer authorship, replace the original developer's name, cause mistaken attribution of original development, falsify a copyright notice, or present a Modified Version as the unmodified original.",
+            "actor": "licensee",
+            "object": "Covered Materials, Modified Versions, and associated authorship or copyright representations",
+            "trigger": "Whenever making authorship or copyright representations or presenting the materials."
+          }
+        ]
+      },
+      {
+        "start_line": 166,
+        "end_line": 169,
+        "clause_label": "trademark_endorsement_limit",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "using_project_name_logo_trademark_or_trade_name",
+          "requires": "use_states_or_implies_official_partnership_sponsorship_certification_or_endorsement"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 12 grants no right to use a project name, logo, trademark, or trade name in a way that states or implies official partnership, sponsorship, certification, or endorsement. Truthful identification in an Attribution Notice is permitted.",
+        "condition_explanation": "The prohibition is limited to use implying official partnership, sponsorship, certification, or endorsement; truthful identification in an Attribution Notice is expressly permitted.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use a project name, logo, trademark, or trade name to state or imply official partnership, sponsorship, certification, or endorsement.",
+            "actor": "licensee",
+            "object": "Project name, logo, trademark, or trade name",
+            "trigger": "Whenever using such identifying material in a manner stating or implying official partnership, sponsorship, certification, or endorsement; truthful identification in an Attribution Notice is permitted."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk does not include the text of the general license grant in Section 4; no broader grant, patent permission, sublicensing right, or other permission is inferred.",
+      "Section 9 refers to LICENSE and NOTICE files whose contents are not supplied here.",
+      "Section 13 is supplied only as adjacent context, not as a target paragraph; its third-party-material rule is not cited as a target clause.",
+      "The source defines the Attribution Notice content and relevant defined terms, but those definition excerpts are context and are not citable source ranges."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0019",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "MODELED",
+        "clause_labels": [
+          "internal_and_community_use"
+        ],
+        "reason": "Models listed permitted uses, no-charge/no-notice terms, and the third-party-service boundary."
+      },
+      {
+        "unit_id": "P0021",
+        "status": "MODELED",
+        "clause_labels": [
+          "paid_service_rules_control"
+        ],
+        "reason": "Models applicability of Sections 6 and 7 despite overlapping personal, research, education, or open-source characterizations."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0023",
+        "status": "MODELED",
+        "clause_labels": [
+          "paid_service_with_attribution"
+        ],
+        "reason": "Models conditional permission, no additional license fee, notice requirement, deadline, and existing-engagement timing."
+      },
+      {
+        "unit_id": "P0024",
+        "status": "MODELED",
+        "clause_labels": [
+          "engagement_notice_delivery"
+        ],
+        "reason": "Models one notice per engagement, the lack of repeated-notice requirements, and subcontracted notice reach."
+      },
+      {
+        "unit_id": "P0025",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0026",
+        "status": "MODELED",
+        "clause_labels": [
+          "notice_accessible_location"
+        ],
+        "reason": "Models accessibility requirement, eligible recipients, and example placements."
+      },
+      {
+        "unit_id": "P0027",
+        "status": "MODELED",
+        "clause_labels": [
+          "notice_sufficiency_and_confidentiality"
+        ],
+        "reason": "Models insufficient notice locations, private Customer-facing notice sufficiency, and no requirement to send Customer confidential information to the Licensor."
+      },
+      {
+        "unit_id": "P0028",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0029",
+        "status": "MODELED",
+        "clause_labels": [
+          "white_label_paid_service"
+        ],
+        "reason": "Models separate written Commercial License prerequisite and limited attribution waiver and excluded services."
+      },
+      {
+        "unit_id": "P0030",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "MODELED",
+        "clause_labels": [
+          "redistribution_conditions"
+        ],
+        "reason": "Models conditional redistribution permission and cumulative requirements."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0033",
+        "status": "MODELED",
+        "clause_labels": [
+          "embedded_notice_preservation"
+        ],
+        "reason": "Models preservation of already embedded information on redistribution and the schema-field exception."
+      },
+      {
+        "unit_id": "P0034",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0035",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_false_authorship"
+        ],
+        "reason": "Models enumerated false-authorship prohibitions, including misrepresentation of a Modified Version."
+      },
+      {
+        "unit_id": "P0036",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0037",
+        "status": "MODELED",
+        "clause_labels": [
+          "trademark_endorsement_limit"
+        ],
+        "reason": "Models restriction on implied official affiliation and truthful-Attribution-Notice exception."
+      }
+    ]
+  },
+  "attempt": 2
+}

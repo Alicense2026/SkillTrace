@@ -1,0 +1,177 @@
+{
+  "case_id": "skill-00369",
+  "csv_row": 370,
+  "source_excel_row": "538",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00369-1794596914996806000-2.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "许可方须在其制作或分发的每一份上游软件副本或实质部分中包含版权声明及 MIT 许可声明；如未制作此类副本或实质部分，则无需履行该通知要求。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00369:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "activity:Copy",
+          "activity:Distribute"
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_made_or_distributed",
+        "copyright_and_permission_notices_included"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "许可方须在其制作或分发的每一份下游软件副本或实质部分中包含版权声明及 MIT 许可声明；如未制作此类副本或实质部分，则无需履行该通知要求。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00369:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "activity:Copy",
+          "activity:Distribute"
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_made_or_distributed",
+        "copyright_and_permission_notices_included"
+      ]
+    }
+  ],
+  "limitations": [
+    "本地匹配的上下游许可证均为同一 MIT 文本。记录确认上游软件被复制、修改并使用，但未说明是否制作或分发了含该软件副本或实质部分的材料，也未提供相关通知的履行情况。",
+    "对象图的共享范围未确定；代码纳入关系不等于已发布打包物。未将远程调用、收费或分发推定为已发生。",
+    "未将未被本行事实支持的活动推定为已发生；SellCopies 超出 canonical_activities，未作活动映射。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游软件的使用许可未附加使用条件。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制许可要求的通知义务已保留为条件义务；是否制作副本及是否已附通知未知。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "修改许可要求对副本或实质部分附通知；与上游复制通知义务合并。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行未记载合并活动。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "发布许可要求对副本或实质部分附通知；与上游复制通知义务合并，分发是否发生未知。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发许可要求对副本或实质部分附通知；与上游复制通知义务合并，分发是否发生未知。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "再许可时若包含副本或实质部分，通知要求由上游复制通知义务保留；再许可是否发生未知。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 超出 canonical_activities，未映射为活动。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "下游软件的使用许可未附加使用条件。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "复制许可要求的通知义务已保留为条件义务；下游对象是否制作副本及是否已附通知未知。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "修改许可要求对副本或实质部分附通知；与下游复制通知义务合并。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行未记载合并活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "发布许可要求对副本或实质部分附通知；与下游复制通知义务合并，分发是否发生未知。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "分发许可要求对副本或实质部分附通知；与下游复制通知义务合并，分发是否发生未知。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "再许可时若包含副本或实质部分，通知要求由下游复制通知义务保留；再许可是否发生未知。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 超出 canonical_activities，未映射为活动。"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0286-0acdcc7deb5a",
+  "status": "SUCCESS",
+  "request_sha256": "a5f6bdcea9172115d9821823d61372a8a54ac2a81e0b5c6dd4a21e99e4d1c5d9",
+  "analysis": {
+    "case_id": "chain-0286-0acdcc7deb5a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0286-0acdcc7deb5a:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "S": {
+            "artifact": "chain-0286-0acdcc7deb5a:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": "activity:CommercialUse"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0286-0acdcc7deb5a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not engage in conduct matching the prohibition in the cited excerpt.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-0286-0acdcc7deb5a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If commercial use occurs, pay any required fee and follow applicable product rules.",
+        "trigger": "activity:CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "pay_required_fee_and_follow_product_rules"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      }
+    ],
+    "limitations": [
+      "事实确认的是对智谱开放平台的远程服务调用及使用，不是对模型权重或代码的转移、修改或分发；BSD-3-Clause 的再分发条件因此未据此触发。下游对象的其他使用活动未获证实。",
+      "上游摘录标记为 FIRST_PASS_REVIEW_REQUIRED，且所示协议版本生效日期为 2026 年 9 月 4 日；未提供适用账户、服务功能、产品规则或其他签署文件的具体信息。禁止条款仅在实际行为符合摘录所列禁止情形时适用，现有事实不足以判定该条件成立。",
+      "商业使用、收费及付费功能授权情况均未知；远程调用本身不证明商业使用或收费。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 31655,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1242,
+    "output_tokens_details": {
+      "reasoning_tokens": 426
+    },
+    "total_tokens": 32897,
+    "attribution": {
+      "items": {
+        "msg_001836836a352bf4016af303b8ec2887d2a577f19b43353895": {
+          "input_tokens": 29623,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29623,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_001836836a352bf4016af303c1c06c87d2abc62724f6673700": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 816,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 816
+            }
+          ]
+        },
+        "rs_001836836a352bf4016af303c1a98887d295ca366204909cc2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 426
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 33.237,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

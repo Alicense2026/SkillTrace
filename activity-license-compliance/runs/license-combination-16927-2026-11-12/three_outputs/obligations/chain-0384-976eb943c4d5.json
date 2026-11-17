@@ -1,0 +1,71 @@
+{
+  "case_id": "chain-0384-976eb943c4d5",
+  "output": [
+    {
+      "activity": "Copy",
+      "subject": {
+        "artifact": "chain-0384-976eb943c4d5:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Include the upstream copyright notice and permission notice in copies or substantial portions of the software.",
+      "trigger": "activity:Copy",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [],
+      "source_refs": [
+        "license-text:upstream:04de8583241775d8"
+      ]
+    },
+    {
+      "activity": "Modify",
+      "subject": {
+        "artifact": "chain-0384-976eb943c4d5:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "For the upstream MIT permission to apply, include the copyright and permission notices.",
+      "trigger": "activity:Modify",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [],
+      "source_refs": [
+        "license-text:upstream:04de8583241775d8"
+      ]
+    },
+    {
+      "activity": "Modify",
+      "subject": {
+        "artifact": "chain-0384-976eb943c4d5:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "Make changes only for a permitted purpose under the downstream license.",
+      "trigger": "activity:Modify",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "permitted_purpose"
+      ],
+      "source_refs": [
+        "license-text:downstream:a5d8f6a075599b7d"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0384-976eb943c4d5:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "Agree to the downstream license terms and use the software for a permitted purpose.",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "agree_to_terms",
+        "permitted_purpose"
+      ],
+      "source_refs": [
+        "license-text:downstream:a5d8f6a075599b7d"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

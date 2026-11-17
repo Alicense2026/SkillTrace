@@ -1,0 +1,1028 @@
+{
+  "version": "conflict-patterns-2.0",
+  "purpose": "合成正例/边界对照；不能冒充真实许可证条款或任务事实。",
+  "patterns": [
+    {
+      "pattern_id": "F-O2",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "O2",
+      "figure_case_refs": [
+        "figure10-01",
+        "figure10-02",
+        "figure10-03",
+        "figure10-06",
+        "figure10-07",
+        "figure10-08",
+        "figure10-09",
+        "figure10-12"
+      ],
+      "focus": "许可副本",
+      "variants": [
+        {
+          "id": "explicit_opposition",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "license_copy_included"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "license_copy_included"
+              }
+            }
+          },
+          "expected_engine_status": "ACTIVITY_CONSTRAINT_CONFLICT"
+        },
+        {
+          "id": "downstream_silence",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "license_copy_included"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PERMITTED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "JOINT_CONDITIONS_TO_INHERIT"
+        },
+        {
+          "id": "fulfillment_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "license_copy_included"
+            }
+          },
+          "facts": {
+            "activity:Distribute": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "同范围且触发适用：explicit_opposition→CONSTRAINT_CONFLICT；downstream_silence→CONDITIONS_TO_INHERIT并归义务；fulfillment_unknown→义务UNKNOWN，review_items=[]。",
+      "boundary": "所有相反条款均为合成教学条件，不是图中另一许可证的原文。O3仅按图建模为链接，不自动等同完整源码/模型权重披露。O5的例子显式否定同一要求，不把两个许可证名称不同当作逻辑互斥。"
+    },
+    {
+      "pattern_id": "F-O3",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "O3",
+      "figure_case_refs": [
+        "figure10-06",
+        "figure10-12"
+      ],
+      "focus": "图中的受许可材料链接",
+      "variants": [
+        {
+          "id": "explicit_opposition",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "licensed_material_link_provided"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "licensed_material_link_provided"
+              }
+            }
+          },
+          "expected_engine_status": "ACTIVITY_CONSTRAINT_CONFLICT"
+        },
+        {
+          "id": "downstream_silence",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "licensed_material_link_provided"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PERMITTED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "JOINT_CONDITIONS_TO_INHERIT"
+        },
+        {
+          "id": "fulfillment_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "licensed_material_link_provided"
+            }
+          },
+          "facts": {
+            "activity:Distribute": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "同范围且触发适用：explicit_opposition→CONSTRAINT_CONFLICT；downstream_silence→CONDITIONS_TO_INHERIT并归义务；fulfillment_unknown→义务UNKNOWN，review_items=[]。",
+      "boundary": "所有相反条款均为合成教学条件，不是图中另一许可证的原文。O3仅按图建模为链接，不自动等同完整源码/模型权重披露。O5的例子显式否定同一要求，不把两个许可证名称不同当作逻辑互斥。"
+    },
+    {
+      "pattern_id": "F-O5",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "O5",
+      "figure_case_refs": [
+        "figure10-06",
+        "figure10-11",
+        "figure10-12"
+      ],
+      "focus": "相同许可证/相同方式共享",
+      "variants": [
+        {
+          "id": "explicit_opposition",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_outbound_license_preserved"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "required_outbound_license_preserved"
+              }
+            }
+          },
+          "expected_engine_status": "ACTIVITY_CONSTRAINT_CONFLICT"
+        },
+        {
+          "id": "downstream_silence",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_outbound_license_preserved"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PERMITTED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "JOINT_CONDITIONS_TO_INHERIT"
+        },
+        {
+          "id": "fulfillment_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_outbound_license_preserved"
+            }
+          },
+          "facts": {
+            "activity:Distribute": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "同范围且触发适用：explicit_opposition→CONSTRAINT_CONFLICT；downstream_silence→CONDITIONS_TO_INHERIT并归义务；fulfillment_unknown→义务UNKNOWN，review_items=[]。",
+      "boundary": "所有相反条款均为合成教学条件，不是图中另一许可证的原文。O3仅按图建模为链接，不自动等同完整源码/模型权重披露。O5的例子显式否定同一要求，不把两个许可证名称不同当作逻辑互斥。"
+    },
+    {
+      "pattern_id": "F-O6",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "O6",
+      "figure_case_refs": [
+        "figure10-01",
+        "figure10-03",
+        "figure10-05",
+        "figure10-07",
+        "figure10-09"
+      ],
+      "focus": "标识/归属声明",
+      "variants": [
+        {
+          "id": "explicit_opposition",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_attribution_displayed"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "required_attribution_displayed"
+              }
+            }
+          },
+          "expected_engine_status": "ACTIVITY_CONSTRAINT_CONFLICT"
+        },
+        {
+          "id": "downstream_silence",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_attribution_displayed"
+            }
+          },
+          "downstream_asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PERMITTED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "JOINT_CONDITIONS_TO_INHERIT"
+        },
+        {
+          "id": "fulfillment_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_attribution_displayed"
+            }
+          },
+          "facts": {
+            "activity:Distribute": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "同范围且触发适用：explicit_opposition→CONSTRAINT_CONFLICT；downstream_silence→CONDITIONS_TO_INHERIT并归义务；fulfillment_unknown→义务UNKNOWN，review_items=[]。",
+      "boundary": "所有相反条款均为合成教学条件，不是图中另一许可证的原文。O3仅按图建模为链接，不自动等同完整源码/模型权重披露。O5的例子显式否定同一要求，不把两个许可证名称不同当作逻辑互斥。"
+    },
+    {
+      "pattern_id": "F-O7",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "O7",
+      "figure_case_refs": [
+        "figure10-02",
+        "figure10-08"
+      ],
+      "focus": "限制向下游传递",
+      "variants": [
+        {
+          "id": "explicit_opposition",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_use_restrictions_passed"
+            }
+          },
+          "downstream_asc": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "required_use_restrictions_passed"
+              }
+            }
+          },
+          "expected_engine_status": "ACTIVITY_CONSTRAINT_CONFLICT"
+        },
+        {
+          "id": "downstream_silence",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_use_restrictions_passed"
+            }
+          },
+          "downstream_asc": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PERMITTED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "JOINT_CONDITIONS_TO_INHERIT"
+        },
+        {
+          "id": "fulfillment_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "required_use_restrictions_passed"
+            }
+          },
+          "facts": {
+            "activity:Sublicense": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "同范围且触发适用：explicit_opposition→CONSTRAINT_CONFLICT；downstream_silence→CONDITIONS_TO_INHERIT并归义务；fulfillment_unknown→义务UNKNOWN，review_items=[]。",
+      "boundary": "所有相反条款均为合成教学条件，不是图中另一许可证的原文。O3仅按图建模为链接，不自动等同完整源码/模型权重披露。O5的例子显式否定同一要求，不把两个许可证名称不同当作逻辑互斥。"
+    },
+    {
+      "pattern_id": "F-R1",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "R1",
+      "figure_case_refs": [
+        "figure10-01",
+        "figure10-03",
+        "figure10-07",
+        "figure10-09"
+      ],
+      "focus": "用途限制/AUP",
+      "variants": [
+        {
+          "id": "prohibited_use_observed",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "allowed_by_aup"
+            }
+          },
+          "facts": {
+            "activity:Use": true,
+            "allowed_by_aup": false
+          },
+          "expected_engine_status": "VIOLATION"
+        },
+        {
+          "id": "use_class_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "allowed_by_aup"
+            }
+          },
+          "facts": {
+            "activity:Use": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "明确禁止用途且实际实施→VIOLATION；用途未分类→保留用途义务及unresolved_predicates，不要求逐案人工复核。",
+      "boundary": ""
+    },
+    {
+      "pattern_id": "F-NC",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "R2_NC",
+      "figure_case_refs": [
+        "figure10-03",
+        "figure10-04",
+        "figure10-05",
+        "figure10-10",
+        "figure10-11"
+      ],
+      "focus": "非商业约束",
+      "variants": [
+        {
+          "id": "commercial_use_observed",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "commercial_use"
+              }
+            }
+          },
+          "facts": {
+            "activity:Use": true,
+            "commercial_use": true
+          },
+          "expected_engine_status": "VIOLATION"
+        },
+        {
+          "id": "charging_only",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "commercial_use"
+              }
+            }
+          },
+          "facts": {
+            "activity:Use": true,
+            "activity:Charge": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        },
+        {
+          "id": "noncommercial_confirmed",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "not": "commercial_use"
+              }
+            }
+          },
+          "facts": {
+            "activity:Use": true,
+            "commercial_use": false
+          },
+          "expected_engine_status": "SATISFIED_IN_MAPPED_SCOPE"
+        }
+      ],
+      "output_routing": "商用已证实→VIOLATION；只知收费不能自动令commercial_use=true，归条件义务；非商用且其他要求满足→本项满足。",
+      "boundary": ""
+    },
+    {
+      "pattern_id": "F-SCALE",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "R2_THRESHOLD",
+      "figure_case_refs": [
+        "figure10-01",
+        "figure10-03",
+        "figure10-05",
+        "figure10-07",
+        "figure10-09"
+      ],
+      "focus": "规模门槛后的特别授权",
+      "variants": [
+        {
+          "id": "threshold_true_authorization_absent",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "threshold_applies",
+              "requires": "special_authorization_granted"
+            }
+          },
+          "facts": {
+            "activity:Use": true,
+            "threshold_applies": true,
+            "special_authorization_granted": false
+          },
+          "expected_engine_status": "VIOLATION"
+        },
+        {
+          "id": "threshold_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "threshold_applies",
+              "requires": "special_authorization_granted"
+            }
+          },
+          "facts": {
+            "activity:Use": true
+          },
+          "expected_engine_status": "APPLICABILITY_UNKNOWN"
+        },
+        {
+          "id": "request_only",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Use",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "threshold_applies",
+              "requires": "special_authorization_granted"
+            }
+          },
+          "facts": {
+            "activity:Use": true,
+            "threshold_applies": true,
+            "special_authorization_requested": true
+          },
+          "expected_engine_status": "OBLIGATION_OPEN"
+        }
+      ],
+      "output_routing": "门槛已适用且明确未获必要授权→VIOLATION；门槛/授权未知→条件义务；申请过不等于获授权。",
+      "boundary": "本例假设已提供条款要求“获授权”。Figure10只摘要“申请”，不能拿此合成规则覆盖原图；门槛对象、统计时点和实际必要条件须沿用本任务条款。"
+    },
+    {
+      "pattern_id": "F-R4",
+      "origin": "FIGURE10_PATTERN",
+      "synthetic": true,
+      "family": "R4",
+      "figure_case_refs": [
+        "figure10-01",
+        "figure10-03",
+        "figure10-07",
+        "figure10-09"
+      ],
+      "focus": "输出训练受限模型",
+      "variants": [
+        {
+          "id": "all_predicates_true",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_covered_outputs",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "facts": {
+            "activity:TrainModel": true,
+            "uses_covered_outputs": true,
+            "trains_competing_model": true
+          },
+          "expected_engine_status": "VIOLATION"
+        },
+        {
+          "id": "not_competing",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_covered_outputs",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "facts": {
+            "activity:TrainModel": true,
+            "uses_covered_outputs": true,
+            "trains_competing_model": false
+          },
+          "expected_engine_status": "SATISFIED_IN_MAPPED_SCOPE"
+        },
+        {
+          "id": "competition_unknown",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_covered_outputs",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "facts": {
+            "activity:TrainModel": true,
+            "uses_covered_outputs": true
+          },
+          "expected_engine_status": "CONDITION_UNKNOWN"
+        }
+      ],
+      "output_routing": "全部限制条件满足且已训练→VIOLATION；其中条件为false→此项禁止不触发；未知→限制合规条件归入义务集合。",
+      "boundary": "先核对具体许可版本是否有该限制及例外，不能从Llama3迁移到Llama3.1；当图摘要与提供的原文不一致时服从原文。"
+    },
+    {
+      "pattern_id": "X-REQUIRED-FORBIDDEN",
+      "origin": "SYNTHETIC_EXTENSION",
+      "synthetic": true,
+      "family": "CROSS_ACTIVITY",
+      "figure_case_refs": [],
+      "focus": "强制披露与禁止披露",
+      "variants": [
+        {
+          "id": "same_scope",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": true,
+          "upstream_asc": {
+            "A": "ProvideSource",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "OBLIGATORY",
+              "when": true,
+              "requires": true
+            }
+          },
+          "downstream_asc": {
+            "A": "ProvideSource",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PROHIBITED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "UNSATISFIABLE_OBLIGATIONS"
+        },
+        {
+          "id": "different_scope",
+          "task": "LICENSE_LICENSE",
+          "scope_shared": false,
+          "upstream_asc": {
+            "A": "ProvideSource",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "OBLIGATORY",
+              "when": true,
+              "requires": true
+            }
+          },
+          "downstream_asc": {
+            "A": "ProvideSource",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "PROHIBITED",
+              "when": true,
+              "requires": true
+            }
+          },
+          "expected_engine_status": "SCOPE_EXCLUDED_BY_CONFIRMATION"
+        }
+      ],
+      "output_routing": "相同范围且distribution_applies=true→CONSTRAINT_CONFLICT，即使披露行为尚未发生；明确不同范围→NOT_APPLICABLE。",
+      "boundary": "合成的两个正式条款假设，不代表任意一对真实许可证。这个例子检查必须做与不得做，不能以不做规避已触发的义务。 此对照已将distribution_applies=true代入when；未触发前不能按已激活义务判定。"
+    },
+    {
+      "pattern_id": "X-NETWORK",
+      "origin": "SYNTHETIC_EXTENSION",
+      "synthetic": true,
+      "family": "NETWORK_TRIGGER",
+      "figure_case_refs": [],
+      "focus": "网络服务中的独立触发义务",
+      "variants": [
+        {
+          "id": "network_trigger_met_offer_absent",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "ProvideSource",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "OBLIGATORY",
+              "when": {
+                "all": [
+                  "modified_covered_program",
+                  "network_interaction"
+                ]
+              },
+              "requires": "network_source_offer_available"
+            }
+          },
+          "facts": {
+            "modified_covered_program": true,
+            "network_interaction": true,
+            "activity:ProvideSource": false
+          },
+          "expected_engine_status": "VIOLATION"
+        },
+        {
+          "id": "plain_remote_call",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "ProvideSource",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "OBLIGATORY",
+              "when": {
+                "all": [
+                  "modified_covered_program",
+                  "network_interaction"
+                ]
+              },
+              "requires": "network_source_offer_available"
+            }
+          },
+          "facts": {
+            "activity:RemoteInteraction": true,
+            "modified_covered_program": false
+          },
+          "expected_engine_status": "NOT_APPLICABLE"
+        }
+      ],
+      "output_routing": "条款明确网络触发且履行明确缺失→VIOLATION；只有普通远程调用且无条款所需修改→本项不适用。",
+      "boundary": "合成网络触发条款；不能把任何API调用当作分发或自动套用所有网络义务。"
+    },
+    {
+      "pattern_id": "X-OR",
+      "origin": "SYNTHETIC_EXTENSION",
+      "synthetic": true,
+      "family": "ALTERNATIVE_LICENSE",
+      "figure_case_refs": [],
+      "focus": "可选授权路径",
+      "variants": [
+        {
+          "id": "one_path_satisfied",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "any": [
+                  "path_a_fulfilled",
+                  "path_b_fulfilled"
+                ]
+              }
+            }
+          },
+          "facts": {
+            "activity:Distribute": true,
+            "path_a_fulfilled": true,
+            "path_b_fulfilled": false
+          },
+          "expected_engine_status": "SATISFIED_IN_MAPPED_SCOPE"
+        },
+        {
+          "id": "both_paths_false",
+          "task": "LICENSE_BEHAVIOR",
+          "rule": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "example:licensed-object",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": {
+                "any": [
+                  "path_a_fulfilled",
+                  "path_b_fulfilled"
+                ]
+              }
+            }
+          },
+          "facts": {
+            "activity:Distribute": true,
+            "path_a_fulfilled": false,
+            "path_b_fulfilled": false
+          },
+          "expected_engine_status": "VIOLATION"
+        }
+      ],
+      "output_routing": "任一完整可用路径成立→本项满足；全部明确不成立→VIOLATION；未知时保留一个OR义务，不拆成两项强制义务。",
+      "boundary": ""
+    }
+  ]
+}

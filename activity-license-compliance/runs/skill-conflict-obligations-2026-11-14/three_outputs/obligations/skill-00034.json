@@ -1,0 +1,542 @@
+{
+  "case_id": "skill-00034",
+  "csv_row": 35,
+  "source_excel_row": "60",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00034-1794590760963509000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人使用上游原始作品时，仅在该贡献者可许可且相关专利权利要求因该贡献单独或与提交作品组合而必然受侵犯的范围内，依上游许可享有专利许可；不得据此扩大版权许可范围。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00034:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人使用上游许可人的商号、商标、服务标志或产品名称时，限于合理且惯常地描述作品来源或复制 NOTICE 内容；其他使用不在该许可授权范围内。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00034:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "trademark_or_name_use",
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知活动仅为下游对上游资产的远程调用、链接和使用；没有模型权重转移、分发或修改事实。对象图未确认两许可证共同约束同一对象，故不推定许可冲突。",
+    "AGPL-3.0 §13（D050）针对修改后的程序支持远程网络交互时的源码提供义务；现有事实是调用上游远程服务，未显示下游修改了受覆盖程序，且远程服务提供者的义务不自动转给调用者。",
+    "专利许可的具体权利要求范围、是否使用许可人的商标或名称均无事实；仅列条件义务，不据此认定违规。未将与已知活动无关的条款映射为实际义务。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现上游作品复制活动事实。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现创作衍生作品活动事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现再许可活动事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现分发上游作品活动事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用上游原始作品；专利许可范围取决于列明的专利事实条件。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现出售副本活动事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "无专利诉讼触发事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现复制活动事实。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现分发活动事实。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现对上游作品或衍生作品的使用事实。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现对衍生作品的使用事实。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已知使用上游作品；名称或标志使用及例外条件未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "同一上游名称或标志使用限制，合并列入义务。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现分发时收费提供支持、保证或责任承诺的事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现分发衍生作品活动事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现分发经修改文件活动事实。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现以源码形式分发衍生作品活动事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现 NOTICE 文件及分发衍生作品事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现使用上游修改作品活动事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现复制许可证文件活动事实。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现修改许可证文件活动事实；该条不禁止修改程序。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该使用许可针对下游 AGPL 覆盖作品；已知使用对象是上游远程资产。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现为专属修改或运行设施目的向他人转交作品。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交覆盖作品；后续条款条件亦不由当前事实触发。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现再许可活动事实。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交覆盖作品活动事实。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现按原样转交程序源码副本。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交 §4 原样副本并收费的事实。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现以源码形式转交基于程序的作品。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现组合覆盖作品与独立作品的事实。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交目标代码形式覆盖作品。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现通过 §6(a) 转交目标代码。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现通过 §6(b) 转交目标代码。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现通过 §6(c) 转交目标代码。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现通过指定地点提供目标代码访问。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现点对点转交目标代码。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交目标代码形式作品。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现符合用户产品条件的目标代码转交。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现由下游运营者拒绝网络访问的事实。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现依 §6 提供对应源码或安装信息。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现行使适用额外许可的事实。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交作品并选择移除额外许可。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现向组合作品添加材料。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现向组合作品添加材料或补充条款。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现修改组合作品或采用所述再许可路径。"
+    },
+    {
+      "rule_ref": "D027",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现依 §7 向覆盖作品添加条款。"
+    },
+    {
+      "rule_ref": "D028",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现分发覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D029",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现修改 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D030",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未提供既往违规停止及许可恢复事实。"
+    },
+    {
+      "rule_ref": "D031",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未提供权利人通知、首次通知及及时补救事实。"
+    },
+    {
+      "rule_ref": "D032",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未提供权利终止且未永久恢复事实。"
+    },
+    {
+      "rule_ref": "D033",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现使用下游程序副本的事实；当前调用对象为上游资产。"
+    },
+    {
+      "rule_ref": "D034",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现接收副本时产生的点对点附带传播。"
+    },
+    {
+      "rule_ref": "D035",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现修改下游覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D036",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现传播下游覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D037",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交下游覆盖作品；此条亦非上游 API 再许可。"
+    },
+    {
+      "rule_ref": "D038",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条仅排除第三方合规执法责任，不产生本案已触发义务。"
+    },
+    {
+      "rule_ref": "D039",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现企业交易中的作品转交。"
+    },
+    {
+      "rule_ref": "D040",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现企业交易接收作品。"
+    },
+    {
+      "rule_ref": "D041",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现对 AGPL 权利施加进一步限制的事实。"
+    },
+    {
+      "rule_ref": "D042",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现对 AGPL 授予权利收取许可费、特许权使用费或其他费用。"
+    },
+    {
+      "rule_ref": "D043",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现相关专利诉讼事实。"
+    },
+    {
+      "rule_ref": "D044",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认对贡献者版本行使所述专利许可范围内权利。"
+    },
+    {
+      "rule_ref": "D045",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交作品并明知依赖专利许可且源码不可得。"
+    },
+    {
+      "rule_ref": "D046",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交作品并向部分接收者授予专利许可。"
+    },
+    {
+      "rule_ref": "D047",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现所述第三方歧视性专利许可安排。"
+    },
+    {
+      "rule_ref": "D048",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条保留其他法律抗辩，不产生当前事实下的独立履行义务。"
+    },
+    {
+      "rule_ref": "D049",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现其他义务导致无法同时合规转交作品。"
+    },
+    {
+      "rule_ref": "D050",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "条款要求修改 AGPL 覆盖程序且该修改版本支持远程交互；当前仅知远程调用，未见下游修改该程序。"
+    },
+    {
+      "rule_ref": "D051",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现将 AGPL 覆盖作品与 GPL-3.0 作品组合。"
+    },
+    {
+      "rule_ref": "D052",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现转交所述 AGPL/GPL 组合作品。"
+    },
+    {
+      "rule_ref": "D053",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未提供许可证版本选择事实。"
+    },
+    {
+      "rule_ref": "D054",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未提供许可证版本选择事实。"
+    },
+    {
+      "rule_ref": "D055",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未提供代理授权及其公开接受版本的事实。"
+    },
+    {
+      "rule_ref": "D056",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现选择后续许可证版本的事实。"
+    },
+    {
+      "rule_ref": "D057",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现创作衍生作品活动事实。"
+    },
+    {
+      "rule_ref": "D058",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现出售副本活动事实。"
+    },
+    {
+      "rule_ref": "D059",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现提供付费访问活动事实。"
+    },
+    {
+      "rule_ref": "D060",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现修改 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D061",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现传播覆盖作品活动事实。"
+    },
+    {
+      "rule_ref": "D062",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现为支持或保证收费的事实。"
+    }
+  ]
+}

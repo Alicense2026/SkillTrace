@@ -1,0 +1,141 @@
+{
+  "request_sha256": "ca73624cd415a2aa7d6598a6d39665f9a4b76639f3acbcd16f156b5fba7cf811",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 314,
+        "end_line": 315,
+        "clause_label": "Confidentiality Covenants; Exceptions to Confidentiality",
+        "activities": [
+          "Use",
+          "Distribute",
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": {
+              "any": [
+                {
+                  "all": [
+                    "use_confidential_information_to_exercise_agreement_rights_or_perform_obligations"
+                  ]
+                },
+                {
+                  "all": [
+                    "disclosure_to_own_personnel_subcontractors_or_affiliates_with_need_to_know",
+                    "recipients_bound_by_written_agreements_no_less_protective",
+                    "recipients_directed_to_hold_information_in_strictest_confidence"
+                  ]
+                },
+                {
+                  "all": [
+                    "disclosure_approved_in_writing_by_discloser"
+                  ]
+                },
+                {
+                  "all": [
+                    "disclosure_required_by_law_or_court_order",
+                    "recipient_promptly_notifies_discloser_unless_prohibited_by_law",
+                    "recipient_cooperates_to_seek_protective_order"
+                  ]
+                },
+                {
+                  "all": [
+                    "disclosure_to_legal_counsel_or_professional_advisors",
+                    "recipient_needs_information_for_business_advisory_services"
+                  ]
+                },
+                {
+                  "all": [
+                    "disclosure_by_cohere_to_potential_assignee_acquirer_or_successor",
+                    "recipient_needs_information_for_cohere_corporate_transaction"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "actor_role": "recipient of the other party's Confidential Information",
+        "scope_note": "During the Term and thereafter, the Recipient must not use or disclose the Discloser's Confidential Information except to exercise agreement rights or perform obligations and subject to the listed disclosure exceptions. It must not alter or remove proprietary legends. Confidential Information includes information of a party or its licensors obtained in connection with the Agreement, including reproductions, summaries, analyses, and extracts; the clause concerns handling that information, not a license to use the Cohere Products.",
+        "condition_explanation": "The prohibition applies unless a stated exception covers the use or disclosure. The disclosure exceptions are alternatives: qualifying internal recipients, written approval, legally compelled disclosure with the stated notice/cooperation conditions, professional advisors with a need to know, or (for Cohere only) transaction-related recipients with a need to know."
+      },
+      {
+        "start_line": 316,
+        "end_line": 316,
+        "clause_label": "Return or Destruction",
+        "activities": [
+          "Copy",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "cohere_requests",
+          "requires": "return_or_dispose_tangible_records_of_cohere_confidential_information_as_directed_and_certify_all_returned_or_disposed"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Upon Cohere's request, Customer must promptly return or dispose of tangible records of Cohere Confidential Information as directed by Cohere and certify that all such information has been returned or disposed of. This is a records-handling obligation, not a general return or deletion duty for Cohere Products.",
+        "condition_explanation": "The obligation is triggered by Cohere's request; the required handling method is as Cohere directs."
+      },
+      {
+        "start_line": 318,
+        "end_line": 318,
+        "clause_label": "Customer Warranty",
+        "activities": [
+          "Use",
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "requires": {
+            "all": [
+              "customer_data_contains_no_prohibited_data",
+              "if_personal_information_is_in_customer_data_then_required_notices_and_disclosures_provided_including_to_each_permitted_user",
+              "if_personal_information_is_in_customer_data_then_all_applicable_third_party_consents_and_permissions_obtained",
+              "if_personal_information_is_in_customer_data_then_customer_has_all_authority_required_by_applicable_law_and_privacy_laws_for_cohere_api_saas_services_and_agreement_rights"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer represents, warrants, and covenants that Customer Data contains no Prohibited Data. Where Customer Data contains Personal Information, Customer must have provided required notices and disclosures (including to each Permitted User), obtained applicable third-party consents and permissions, and have the legally required authority to enable Cohere to provide the Cohere API SaaS Services and exercise agreement rights, including the described processing and disclosures. Subject to Section 5(b).",
+        "condition_explanation": "The no-Prohibited-Data requirement applies to Customer Data. The notice, consent, permission, and authority requirements apply if Customer Data contains Personal Information."
+      },
+      {
+        "start_line": 320,
+        "end_line": 320,
+        "clause_label": "Customer Indemnity",
+        "activities": [
+          "Use",
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "losses_arise_from_or_in_connection_with_listed_events",
+          "requires": "defend_indemnify_and_hold_cohere_and_listed_related_persons_harmless; cooperate_in_defense; do_not_settle_without_cohere_prior_written_consent"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer must defend, indemnify, and hold Cohere and the listed related persons harmless for Losses arising from or connected with Customer Data, Customer's breach of its agreement obligations, representations, warranties, or covenants, breach of Sections 2(d) or 5(b), or Customer's or a Permitted User's use of Cohere API SaaS Services in combination with third-party software, applications, or services. Customer must cooperate in the defense and may not settle without Cohere's prior written consent. The combination reference is an indemnity trigger, not permission to combine.",
+        "condition_explanation": "The indemnity applies when losses arise from or in connection with any one of the listed events."
+      }
+    ],
+    "coverage_notes": [
+      "Reviewed all supplied numbered lines. Lines 312–313 define confidentiality and its exclusions but do not independently grant activity rights; lines 317, 319, 321–339 concern warranty/disclaimer, indemnity, liability, and term/termination without operative ASC permissions, restrictions, or activity obligations extracted here.",
+      "This is a partner-procured Client License Agreement excerpt, not necessarily a general repository software license. The contextual preamble identifies the licensed scope as applicable Cohere Models and/or Cohere Applications, plus documentation; the grant and use restrictions are in the contextual preamble, which is not citable under the instructions.",
+      "The supplied lines reference the Usage Policy, Documentation, Partner Terms, Order Form, Scope of Work, and Section 5(b), whose full provisions and parameters are absent. Their applicability and requirements cannot be determined from this chunk.",
+      "Confidentiality clauses apply to Confidential Information, which may include information of either party and its licensors; OriginalArtifact is used only as the available object category and does not imply that the products themselves are necessarily Confidential Information."
+    ]
+  }
+}

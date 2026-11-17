@@ -1,0 +1,516 @@
+{
+  "request_sha256": "d04b12bdc81c499dbf1819c618204a36426f24e959485e4d1835762c1a60be55",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 329,
+        "end_line": 334,
+        "clause_label": "maps_display_in_owned_application",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "owned_and_operated_application_and_display_to_prompt_initiating_end_user_with_associated_links"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Grounding with Google Maps results; use is limited to display in an application owned and operated by the licensee, to the end user who initiated the prompt, with associated Google Maps Links.",
+        "condition_explanation": "owned_and_operated_application means the licensee owns and operates the application. The end_user must be the individual permitted to use that application and must have initiated the prompt.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 336,
+        "end_line": 341,
+        "clause_label": "maps_result_display_restrictions",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "The Google Maps Grounded Result must not be modified or interspersed with other content; specified link-to-result and link-to-destination interstitials, redirects, and inhibitions of complete destination-page display are also forbidden.",
+        "condition_explanation": "The restriction applies to the Google Maps Grounded Result and its associated Google Maps Links and destination page. The source does not enumerate each distinct display action as an allowed activity, so this clause captures the direct modification prohibition; the other stated display restrictions remain noted in scope.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not intersperse other content with a Google Maps Grounded Result or place interstitial content between the result text and its links, or between the links and the associated destination page; do not redirect end users away from destination pages or inhibit their full and complete display.",
+            "actor": "licensee",
+            "object": "Google Maps Grounded Results, Google Maps Links, and associated destination pages",
+            "trigger": "Whenever using or displaying Grounding with Google Maps results."
+          }
+        ]
+      },
+      {
+        "start_line": 343,
+        "end_line": 343,
+        "clause_label": "maps_documentation_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_grounding_with_google_maps_documentation"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Use of Grounding with Google Maps is subject to compliance with its Documentation, which is not included in the supplied text.",
+        "condition_explanation": "comply_with_grounding_with_google_maps_documentation means meet the applicable requirements in the referenced Documentation; its contents cannot be determined from this chunk.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the Documentation for Grounding with Google Maps.",
+            "actor": "licensee",
+            "object": "Use of Grounding with Google Maps",
+            "trigger": "Whenever using Grounding with Google Maps."
+          }
+        ]
+      },
+      {
+        "start_line": 347,
+        "end_line": 356,
+        "clause_label": "maps_result_storage_exceptions",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "storage_purpose_evaluate_and_optimize_display_for_licensee_application",
+                  "storage_duration_at_most_90_days"
+                ]
+              },
+              {
+                "all": [
+                  "storage_purpose_end_user_chat_history_or_prior_conversation_context_within_licensee_application",
+                  "storage_duration_at_most_6_months",
+                  "storage_is_in_end_user_chat_history"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Google Maps Grounded Results may be cached or stored only under either stated exception. The prohibition otherwise applies to the licensee and to end users and third parties the licensee allows to store or cache results. The chat-history exception overrides any cache header.",
+        "condition_explanation": "The first alternative allows storage for no more than 90 days solely to evaluate and optimize display in the licensee's application. The second allows storage in an end user's chat history for no more than six months solely to let that end user view chat history or maintain prior conversation context in the application. The two alternatives are not cumulative.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 358,
+        "end_line": 358,
+        "clause_label": "maps_data_scrape_export_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Scraping or exporting any Google Maps Data is prohibited; the surrounding restriction also prohibits the licensee from allowing end users or third parties to do so.",
+        "condition_explanation": "Google Maps Data has the meaning supplied at lines 314–318, including content in results, metadata, links, and content accessed through links.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not scrape or export Google Maps Data, and do not allow end users or third parties to do so.",
+            "actor": "licensee",
+            "object": "Google Maps Data",
+            "trigger": "Whenever Grounding with Google Maps is used."
+          }
+        ]
+      },
+      {
+        "start_line": 360,
+        "end_line": 360,
+        "clause_label": "maps_data_training_prohibition",
+        "activities": [
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Training on any Google Maps Data is prohibited; the surrounding restriction also prohibits allowing end users or third parties to train on it.",
+        "condition_explanation": "Google Maps Data has the meaning supplied at lines 314–318. The restriction covers training by the licensee and permitting training by end users or third parties.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not train on Google Maps Data or allow end users or third parties to train on it.",
+            "actor": "licensee",
+            "object": "Google Maps Data",
+            "trigger": "Whenever Grounding with Google Maps is used."
+          }
+        ]
+      },
+      {
+        "start_line": 362,
+        "end_line": 363,
+        "clause_label": "maps_customer_application_territory_restriction",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "distribution_or_marketing_in_prohibited_territory",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "The restriction concerns distributing or marketing Customer Applications in a Prohibited Territory as defined in the Documentation. The Documentation and the territory definition are not supplied.",
+        "condition_explanation": "prohibited_territory means a territory designated as prohibited by the referenced Documentation; no territory is inferred.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute or market Customer Applications in a Prohibited Territory.",
+            "actor": "licensee",
+            "object": "Customer Applications",
+            "trigger": "When the distribution or marketing would occur in a Prohibited Territory as defined in the Documentation."
+          }
+        ]
+      },
+      {
+        "start_line": 369,
+        "end_line": 378,
+        "clause_label": "maps_google_data_processing_instruction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_grounding_with_google_maps",
+          "requires": "google_processing_limited_to_stated_storage_and_purposes"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee acknowledges the stated processing as reasonably necessary and instructs Google that stored prompts, contextual information, and generated content may be used for debugging and testing supporting Grounding with Google Maps. Storage is stated to be for 30 days for creating Grounded Results. For paid-quota Gemini API use, debugging and testing processing is in accordance with the referenced Data Processing Addendum; its terms are not supplied.",
+        "condition_explanation": "The instruction applies to information stored for creating Google Maps Grounded Results. The stated debugging/testing use is of that stored information and is limited to systems that support Grounding with Google Maps. For paid-quota use, the referenced Data Processing Addendum also governs that processing.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 380,
+        "end_line": 381,
+        "clause_label": "maps_terms_survival",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "agreement_terminated",
+          "requires": "applicable_grounding_with_google_maps_terms_continue_to_apply"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The subsection concerning Grounding with Google Maps survives termination of the Agreement, as applicable; the text does not specify which provisions are inapplicable after termination.",
+        "condition_explanation": "agreement_terminated means termination of the Agreement. The qualification “as applicable” is preserved and not further defined in the supplied text.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 391,
+        "end_line": 400,
+        "clause_label": "robotics_hardware_safety_and_use_limits",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_robotics_models_with_hardware_or_other_products",
+          "requires": {
+            "all": [
+              "operate_hardware_and_related_products_safely",
+              "use_discretion_before_production_commercial_or_public_use",
+              "not_use_for_safety_critical_applications_or_work"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to Robotics Models used with robotics hardware or other products. Safety-critical examples include healthcare, transportation, and other areas where safety protocols are vital and a malfunction could reasonably foreseeably cause death, personal injury, or property damage. The text also states that use is at the licensee's own risk.",
+        "condition_explanation": "using_robotics_models_with_hardware_or_other_products means using a Robotics Model in connection with hardware or another product. The discretion requirement expressly precedes production, commercial, or public use; the safety-critical-use prohibition is not limited to those environments.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Operate hardware and other products used in connection with Robotics Models in a safe manner.",
+            "actor": "licensee",
+            "object": "Hardware or other products used with Robotics Models",
+            "trigger": "Whenever operating hardware or other products in connection with Robotics Models."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Use discretion before using Robotics Models in a production, commercial, or public environment.",
+            "actor": "licensee",
+            "object": "Robotics Models",
+            "trigger": "Before use in a production, commercial, or public environment."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Robotics Models for safety-critical applications or work, including the stated examples.",
+            "actor": "licensee",
+            "object": "Robotics Models",
+            "trigger": "Whenever considering or making a use for a safety-critical application or work."
+          }
+        ]
+      },
+      {
+        "start_line": 407,
+        "end_line": 408,
+        "clause_label": "services_content_reliance_discretion",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "relying_on_publishing_or_otherwise_using_service_content",
+          "requires": "use_discretion_before_reliance_publication_or_other_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to content provided by the Services and to relying on, publishing, or otherwise using that content.",
+        "condition_explanation": "The text requires discretion before the specified content-related actions; it does not state a separate substantive standard for what discretion entails.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use discretion before relying on, publishing, or otherwise using content provided by the Services.",
+            "actor": "licensee",
+            "object": "Content provided by the Services",
+            "trigger": "Before relying on, publishing, or otherwise using that content."
+          }
+        ]
+      },
+      {
+        "start_line": 410,
+        "end_line": 413,
+        "clause_label": "professional_advice_reliance_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "relying_on_service_content_as_professional_advice",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Services must not be relied on for medical, mental health, legal, financial, or other professional advice. Related content is informational only and is not a medical diagnosis or treatment or a substitute for advice from a qualified professional.",
+        "condition_explanation": "relying_on_service_content_as_professional_advice means treating Services content as professional advice in any listed or other professional domain.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not rely on the Services for medical, mental health, legal, financial, or other professional advice.",
+            "actor": "licensee",
+            "object": "Services and content regarding professional topics",
+            "trigger": "Whenever using or considering reliance on the Services for professional advice."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text references external Documentation, the Google Maps End User Terms, the Google Privacy Policy, and a Data Processing Addendum; their contents are not supplied and have not been inferred.",
+      "The text states Google and its content providers retain all rights to Google Maps Data (lines 323–325); this is a reservation of rights, not an affirmative licensee duty or grant.",
+      "The robotics-model safety and discretion provisions are modeled, but the text's statement that performance and safety are not guaranteed is a disclaimer and is not modeled as an activity constraint.",
+      "The storage clause's restriction on allowing end users or third parties to store results is included in scope; the exception text expressly says “you may” and does not separately specify third-party storage permissions."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0056",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Definitions, destination-page cross-references, and reservation of Google and content-provider rights provide scope context; no affirmative licensee activity rule is created by this paragraph."
+      },
+      {
+        "unit_id": "P0057",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Use-restrictions heading only."
+      },
+      {
+        "unit_id": "P0058",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_display_in_owned_application"
+        ],
+        "reason": "The paragraph limits use to the licensee's owned and operated application and display to the initiating end user with associated links."
+      },
+      {
+        "unit_id": "P0059",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_result_display_restrictions"
+        ],
+        "reason": "The paragraph imposes result-modification and display/link restrictions, including refraining from interstitials, redirects, and inhibiting complete destination-page display."
+      },
+      {
+        "unit_id": "P0060",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_documentation_compliance"
+        ],
+        "reason": "Expressly requires compliance with the Grounding with Google Maps Documentation; that external document is identified as missing."
+      },
+      {
+        "unit_id": "P0061",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introductory text scopes the following prohibitions to the licensee and parties it allows; the specific restrictions are modeled in the following units."
+      },
+      {
+        "unit_id": "P0062",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_result_storage_exceptions"
+        ],
+        "reason": "Introduces the cache/store prohibition and the first exception, whose conditions are completed in P0063."
+      },
+      {
+        "unit_id": "P0063",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_result_storage_exceptions"
+        ],
+        "reason": "States the first storage exception's 90-day maximum and exclusive evaluation/optimization purpose."
+      },
+      {
+        "unit_id": "P0064",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_result_storage_exceptions"
+        ],
+        "reason": "States the alternative chat-history exception, its six-month limit and purposes, and its precedence over cache headers."
+      },
+      {
+        "unit_id": "P0065",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_data_scrape_export_prohibition"
+        ],
+        "reason": "Expressly prohibits scraping or exporting Google Maps Data."
+      },
+      {
+        "unit_id": "P0066",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_data_training_prohibition"
+        ],
+        "reason": "Expressly prohibits training on Google Maps Data."
+      },
+      {
+        "unit_id": "P0067",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_customer_application_territory_restriction"
+        ],
+        "reason": "Prohibits distribution or marketing of Customer Applications in a Documentation-defined Prohibited Territory; the definition is unavailable."
+      },
+      {
+        "unit_id": "P0068",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Data-collection subsection heading only."
+      },
+      {
+        "unit_id": "P0069",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_google_data_processing_instruction"
+        ],
+        "reason": "Acknowledges and instructs Google's 30-day storage and specified creation, debugging, and testing processing, with a paid-quota Data Processing Addendum dependency."
+      },
+      {
+        "unit_id": "P0070",
+        "status": "MODELED",
+        "clause_labels": [
+          "maps_terms_survival"
+        ],
+        "reason": "Expressly provides that the Grounding with Google Maps subsection survives termination, as applicable."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Hardware Safety heading only."
+      },
+      {
+        "unit_id": "P0072",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines the applicability of the following terms to Robotics Models; used as context for the modeled safety rule."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "MODELED",
+        "clause_labels": [
+          "robotics_hardware_safety_and_use_limits"
+        ],
+        "reason": "Requires safe operation and discretion before specified environments and prohibits safety-critical uses. The warranty disclaimer within the paragraph is not treated as a separate activity constraint."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Disclaimers heading only."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes experimental technology and possible inaccurate or offensive content; this is a disclaimer, not an activity duty."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "MODELED",
+        "clause_labels": [
+          "services_content_reliance_discretion"
+        ],
+        "reason": "Expressly directs the user to use discretion before relying on, publishing, or otherwise using Services content."
+      },
+      {
+        "unit_id": "P0077",
+        "status": "MODELED",
+        "clause_labels": [
+          "professional_advice_reliance_prohibition"
+        ],
+        "reason": "Expressly prohibits reliance on Services for professional advice and characterizes related content as informational rather than a substitute for qualified advice."
+      }
+    ]
+  },
+  "attempt": 2
+}

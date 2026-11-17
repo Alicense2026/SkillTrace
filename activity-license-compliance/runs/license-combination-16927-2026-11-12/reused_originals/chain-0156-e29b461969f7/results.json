@@ -1,0 +1,223 @@
+{
+  "case_id": "chain-0156-e29b461969f7",
+  "status": "SUCCESS",
+  "request_sha256": "00ce58fbba65973be4cbde721fd2561216ba3131aa0a0d13c9ac8312429fbd9c",
+  "analysis": {
+    "case_id": "chain-0156-e29b461969f7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0156-e29b461969f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0156-e29b461969f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0156-e29b461969f7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0156-e29b461969f7:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0156-e29b461969f7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0156-e29b461969f7:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图说明代码纳入/组合，但不证明上下游许可条款约束同一对象；scope_shared未知。Apache摘录只确认上游版权许可，且明确未覆盖专利权。",
+      "已知上游代码被复制并修改；未提供下游对象的分发或其他行为事实。MIT通知条款的具体覆盖对象仍须结合是否复制或分发MIT软件及其副本/实质部分判断。"
+    ],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "chain-0156-e29b461969f7:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在软件副本或其实质部分中包含版权声明和许可声明。",
+        "trigger": "activity:Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "MIT材料是否为被复制的软件或其实质部分",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0156-e29b461969f7:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "在分发的软件副本或其实质部分中包含版权声明和许可声明。",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "MIT材料是否包含于分发对象",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19909,
+    "input_tokens_details": {
+      "cached_tokens": 19712,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1414,
+    "output_tokens_details": {
+      "reasoning_tokens": 311
+    },
+    "total_tokens": 21323,
+    "attribution": {
+      "items": {
+        "msg_00c0472995569f84016af2fdaa83c487d2ac3cdb249649eed9": {
+          "input_tokens": 17877,
+          "cached_tokens": 17682,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17877,
+              "cached_tokens": 17682,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00c0472995569f84016af2fdb0de3c87d2bb5826ef1427a63e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1103,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1103
+            }
+          ]
+        },
+        "rs_00c0472995569f84016af2fdb075f487d2ae9d7f3e3c9d528f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 311
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 28.337,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

@@ -1,0 +1,452 @@
+{
+  "request_sha256": "81a8ecfd56117323c59faa7c1950e1fa3a80ae422c88aef73395c0d6067dd0f1",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 398,
+        "end_line": 401,
+        "clause_label": "additional_terms_file_notice",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_adds_terms_to_covered_work_in_accordance_with_section_7",
+          "requires": "applicable_terms_statement_or_location_notice_placed_in_relevant_source_files"
+        },
+        "actor_role": "licensee adding terms",
+        "scope_note": "GPL-3.0 section 7: adding terms to a covered work is conditioned on placing the required notice in relevant source files.",
+        "condition_explanation": "The condition applies when terms are added to a covered work in accordance with section 7. The notice may either state the additional terms that apply to those files or indicate where to find the applicable terms.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Place in relevant source files either a statement of the additional terms that apply to those files or a notice indicating where to find the applicable terms.",
+            "actor": "licensee adding terms",
+            "object": "relevant source files of the covered work",
+            "trigger": "The licensee adds terms to a covered work in accordance with section 7."
+          }
+        ]
+      },
+      {
+        "start_line": 409,
+        "end_line": 413,
+        "clause_label": "unauthorized_modification_prohibited",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "covered_work",
+          "requires": "proposed_modification_is_not_expressly_provided_under_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 8: a covered work may not be modified except as expressly provided by the License. An attempt otherwise is void and automatically terminates the licensee's rights, including the referenced section 11 patent licenses.",
+        "condition_explanation": "A covered work is the Program or a work based on the Program. The prohibition applies when the particular modification is not expressly provided for under the License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify the covered work except as expressly provided under the License.",
+            "actor": "licensee",
+            "object": "covered work",
+            "trigger": "The proposed modification is not expressly provided under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 409,
+        "end_line": 413,
+        "clause_label": "unauthorized_propagation_prohibited",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "covered_work",
+          "requires": "proposed_propagation_is_not_expressly_provided_under_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 8: a covered work may not be propagated except as expressly provided by the License. An attempt otherwise is void and automatically terminates the licensee's rights, including the referenced section 11 patent licenses.",
+        "condition_explanation": "A covered work is the Program or a work based on the Program. Propagation has the meaning supplied by the License; the prohibition applies when the particular propagation is not expressly provided for under the License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not propagate the covered work except as expressly provided under the License.",
+            "actor": "licensee",
+            "object": "covered work",
+            "trigger": "The proposed propagation is not expressly provided under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 415,
+        "end_line": 420,
+        "clause_label": "reinstatement_after_cessation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_ceases_all_license_violations",
+          "requires": {
+            "any": [
+              "license_reinstated_provisionally_unless_copyright_holder_explicitly_and_finally_terminates",
+              {
+                "all": [
+                  "copyright_holder_fails_to_notify_of_violation_by_reasonable_means_before_60_days_after_cessation",
+                  "license_reinstated_permanently"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 8: upon cessation of all violations, the license from the particular copyright holder is reinstated provisionally, unless explicitly and finally terminated, and permanently if that holder fails to give reasonable notice before 60 days after cessation.",
+        "condition_explanation": "Cessation of all violations is required. The outcomes are alternatives: provisional reinstatement subject to explicit and final termination, or permanent reinstatement if the holder fails to give reasonable notice before the 60-day deadline. This clause describes license status, not a duty to use the work.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 422,
+        "end_line": 427,
+        "clause_label": "first_notice_cure_reinstatement",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "copyright_holder_notifies_of_violation_by_reasonable_means",
+              "this_is_first_notice_of_license_violation_for_any_work_from_that_holder",
+              "licensee_cures_violation_before_30_days_after_receipt_of_notice"
+            ]
+          },
+          "requires": "license_permanently_reinstated"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 8: permanent reinstatement applies when the same copyright holder gives reasonable notice, it is the first notice of a License violation for any work from that holder, and the violation is cured before 30 days after receipt.",
+        "condition_explanation": "All three predicates are required; the 30-day period runs from receipt of notice. This clause describes license status, not a duty to use the work.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 429,
+        "end_line": 433,
+        "clause_label": "downstream_licenses_survive_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "recipient_received_copies_or_rights_from_licensee_under_license",
+          "requires": "recipient_license_is_not_terminated_by_licensee_termination"
+        },
+        "actor_role": "downstream recipient",
+        "scope_note": "GPL-3.0 section 8: termination of the licensee's rights does not terminate licenses of parties who received copies or rights from that licensee under the License.",
+        "condition_explanation": "Applies to recipients who received copies or rights under the License; it does not state that the terminated licensee retains rights.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 429,
+        "end_line": 433,
+        "clause_label": "terminated_licensee_not_eligible_for_new_section10_license",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "all": [
+              "licensee_rights_terminated",
+              "rights_not_permanently_reinstated"
+            ]
+          },
+          "requires": "receive_new_license_for_same_material_under_section_10"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 8: a licensee whose rights are terminated and not permanently reinstated does not qualify to receive new licenses for the same material under section 10.",
+        "condition_explanation": "Both termination and absence of permanent reinstatement are required. The clause states ineligibility for a new section 10 license for the same material.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 437,
+        "end_line": 444,
+        "clause_label": "receive_or_run_without_acceptance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "receive_or_run_program_copy_without_accepting_license"
+        },
+        "actor_role": "recipient",
+        "scope_note": "GPL-3.0 section 9: acceptance is not required merely to receive or run a copy. This does not grant propagation or modification rights apart from the License; modifying or propagating indicates acceptance.",
+        "condition_explanation": "The permission is limited to receiving or running a copy without acceptance. Propagation or modification is separately governed by the License, and undertaking either indicates acceptance to do so.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 437,
+        "end_line": 444,
+        "clause_label": "peer_to_peer_receipt_no_acceptance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "ancillary_propagation_occurs_solely_as_consequence_of_peer_to_peer_transmission_to_receive_copy",
+          "requires": "acceptance_not_required_for_that_ancillary_propagation"
+        },
+        "actor_role": "recipient",
+        "scope_note": "GPL-3.0 section 9: ancillary propagation occurring solely as a consequence of using peer-to-peer transmission to receive a copy does not require acceptance.",
+        "condition_explanation": "The exception is limited to ancillary propagation solely resulting from peer-to-peer transmission used to receive the copy; it does not grant other propagation or modification rights.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 448,
+        "end_line": 451,
+        "clause_label": "automatic_downstream_license_on_conveyance",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "licensee_conveys_covered_work",
+          "requires": "recipient_automatically_receives_original_licensors_license_to_run_modify_and_propagate_subject_to_license"
+        },
+        "actor_role": "original licensors",
+        "scope_note": "GPL-3.0 section 10: each conveyance automatically gives the recipient a license from the original licensors to run, modify, and propagate the covered work, subject to the License. The conveying licensee is not responsible for enforcing third-party compliance.",
+        "condition_explanation": "A covered work is the Program or a work based on the Program; conveyance enables other parties to make or receive copies. The automatic grant is not a separate licensee duty to issue a sublicense.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 448,
+        "end_line": 451,
+        "clause_label": "no_duty_to_enforce_downstream_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "third_party_received_covered_work_under_license",
+          "requires": "licensee_not_responsible_for_enforcing_third_party_compliance"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 10 expressly states that the conveying licensee is not responsible for enforcing third-party compliance with the License.",
+        "condition_explanation": "Applies to third parties who receive the covered work; no enforcement duty is imposed on the conveying licensee.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 453,
+        "end_line": 461,
+        "clause_label": "entity_transaction_definition_and_transfer",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "propagation_results_from_entity_transaction_and_party_receives_copy",
+          "requires": {
+            "all": [
+              "party_receives_licenses_predecessor_had_or_could_give_under_section_10",
+              "predecessor_has_or_can_obtain_corresponding_source_with_reasonable_efforts_for_right_to_possession"
+            ]
+          }
+        },
+        "actor_role": "party to entity transaction",
+        "scope_note": "GPL-3.0 section 10: for propagation resulting from an entity transaction, each transaction party receiving a copy receives the specified predecessor licenses and a right to possession of Corresponding Source if the predecessor has it or can obtain it with reasonable efforts.",
+        "condition_explanation": "An entity transaction means transfer of control of an organization or substantially all its assets, subdivision of an organization, or merger of organizations. The licenses and source-possession right are distinct consequences; the source right is limited by the stated availability and reasonable-efforts condition.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 463,
+        "end_line": 469,
+        "clause_label": "no_further_restrictions_on_license_rights",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "restriction_would_apply_to_exercise_of_rights_granted_or_affirmed_under_license",
+          "requires": "impose_further_restriction"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 10: no further restriction may be imposed on exercise of License rights. Examples include charging a license fee, royalty, or other charge for exercising those rights, and initiating patent-infringement litigation over making, using, selling, offering for sale, or importing the Program or a portion.",
+        "condition_explanation": "The prohibition concerns restrictions on exercise of rights granted or affirmed under the License; it is not a general prohibition on charging for unrelated goods or services. The patent-litigation example covers the specified acts and Program subject matter.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not impose further restrictions on exercise of rights granted or affirmed under the License, including a license fee, royalty, or other charge for exercising those rights.",
+            "actor": "licensee",
+            "object": "rights granted or affirmed under the License in the covered work",
+            "trigger": "The proposed restriction would apply to exercise of rights granted or affirmed under the License."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not initiate patent-infringement litigation alleging infringement by making, using, selling, offering for sale, or importing the Program or any portion of it.",
+            "actor": "licensee",
+            "object": "Program or any portion of it",
+            "trigger": "The proposed litigation alleges infringement by one or more of the specified acts."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Section 7 lines 403–405 describe permissible forms of additional terms and refer back to the preceding requirements; they do not create a distinct activity rule.",
+      "Section 10 lines 453–461 define entity transaction and state conditional license and Corresponding Source possession consequences. The source-possession right depends on the predecessor having or being able to obtain the Corresponding Source with reasonable efforts.",
+      "Section 11 begins at line 471, but its operative patent provisions are outside this target chunk. The section 8 reference to termination of patent licenses and section 10 patent-litigation restriction are captured only to the extent stated here."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0072",
+        "status": "MODELED",
+        "clause_labels": [
+          "additional_terms_file_notice"
+        ],
+        "reason": "Captures the conditional section 7 duty to place an applicable-terms statement or location notice in relevant source files."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Specifies alternative forms of additional terms and confirms preceding requirements apply; it does not create a distinct activity rule."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "MODELED",
+        "clause_labels": [
+          "unauthorized_modification_prohibited",
+          "unauthorized_propagation_prohibited"
+        ],
+        "reason": "Models the separate conditional prohibitions on modification and propagation except where expressly provided, including their stated termination consequence."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "MODELED",
+        "clause_labels": [
+          "reinstatement_after_cessation"
+        ],
+        "reason": "Captures provisional reinstatement and the alternative permanent reinstatement rule, including the 60-day notice limit."
+      },
+      {
+        "unit_id": "P0077",
+        "status": "MODELED",
+        "clause_labels": [
+          "first_notice_cure_reinstatement"
+        ],
+        "reason": "Captures permanent reinstatement conditional on reasonable notice, first-notice status, and cure before 30 days after receipt."
+      },
+      {
+        "unit_id": "P0078",
+        "status": "MODELED",
+        "clause_labels": [
+          "downstream_licenses_survive_termination",
+          "terminated_licensee_not_eligible_for_new_section10_license"
+        ],
+        "reason": "Models survival of recipient licenses and the terminated licensee's ineligibility for new section 10 licenses for the same material."
+      },
+      {
+        "unit_id": "P0079",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0080",
+        "status": "MODELED",
+        "clause_labels": [
+          "receive_or_run_without_acceptance",
+          "peer_to_peer_receipt_no_acceptance"
+        ],
+        "reason": "Models receipt and running without acceptance and the narrow peer-to-peer ancillary-propagation exception; the text also clarifies that propagation or modification indicates acceptance."
+      },
+      {
+        "unit_id": "P0081",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0082",
+        "status": "MODELED",
+        "clause_labels": [
+          "automatic_downstream_license_on_conveyance",
+          "no_duty_to_enforce_downstream_compliance"
+        ],
+        "reason": "Captures the automatic recipient license on conveyance and the express absence of a duty to enforce third-party compliance."
+      },
+      {
+        "unit_id": "P0083",
+        "status": "MODELED",
+        "clause_labels": [
+          "entity_transaction_definition_and_transfer"
+        ],
+        "reason": "Captures the entity-transaction definition and the conditional downstream licenses and Corresponding Source possession right."
+      },
+      {
+        "unit_id": "P0084",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_further_restrictions_on_license_rights"
+        ],
+        "reason": "Captures the conditional prohibition on further restrictions, including charges for exercising License rights and the specified patent-litigation restriction."
+      },
+      {
+        "unit_id": "P0085",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0086",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines contributor and contributor version; these are definitions rather than operative permissions or duties."
+      }
+    ]
+  },
+  "attempt": 3
+}

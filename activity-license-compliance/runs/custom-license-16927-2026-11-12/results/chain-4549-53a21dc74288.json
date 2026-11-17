@@ -1,0 +1,219 @@
+{
+  "case_id": "chain-4549-53a21dc74288",
+  "source_csv_line": 4550,
+  "row": {
+    "github_repo": "neuraldeskapp",
+    "github_url": "https://github.com/vakovalskii/neuraldeskapp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "io.github.pipeworx-io/openrouter",
+    "artifact_url": "https://github.com/pipeworx-io/mcp-openrouter",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/agent/ipc-handlers.ts:812 ｜ 调用原文: if (provider.type === 'openrouter') { ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: llm-providers.ts 实际请求 openrouter.ai/api/v1/models 与推理接口",
+    "batch": "2001-2500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "vakovalskii/neuraldeskapp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d",
+    "filename": "_licenseref_full/texts/73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:NeuralDeskApp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-4549-53a21dc74288",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:77d71bee018961ee"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-4549-53a21dc74288:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7322fa8043de26f8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+                "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-4549-53a21dc74288:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7322fa8043de26f8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "purchase_commercial_license_from_licensor",
+            "when": "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd_and_uses_software"
+          },
+          "S": {
+            "artifact": "chain-4549-53a21dc74288:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-4549-53a21dc74288:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "For use under the Community License, revenue or equivalent funding must remain below USD 1,000,000 throughout use, and the software must not be used to create, distribute, or host a substantially similar product or service offered to third parties in competition with the licensor.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+          "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+        ],
+        "source_refs": [
+          "license-text:downstream:7322fa8043de26f8"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-4549-53a21dc74288:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If the licensee's annual gross revenue or funding exceeds USD 1,000,000 and it uses the software, purchase a Commercial License from the licensor.",
+        "trigger": {
+          "all": [
+            "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+            "activity:Use"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+          "activity:Use",
+          "purchase_commercial_license_from_licensor"
+        ],
+        "source_refs": [
+          "license-text:downstream:7322fa8043de26f8"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游 MIT 原文中的通知条款限于副本或软件实质部分；已知事实是远程调用，未证明复制或分发，因此不据此推定通知义务已触发。结构化首轮抽取把通知条件映射到 Use，但摘录上下文不支持将其扩展到单纯远程调用。",
+      "对象图仅确认 downstream 到 upstream 的 API 链接/远程调用；两侧许可是否共同约束同一对象未知。LicenseRef-Custom 的许可条款约束 downstream 自身软件，不能仅凭 API 调用认定与 MIT 条款范围重合。",
+      "未提供 downstream 软件的使用、收入/资金、竞争性产品用途或商业许可履行事实；因此仅保留相应条件义务，不作违规认定。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20453,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1584,
+    "output_tokens_details": {
+      "reasoning_tokens": 372
+    },
+    "total_tokens": 22037,
+    "attribution": {
+      "items": {
+        "msg_014407643fea9922016af53bcd222487d180803d8d02c79732": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_014407643fea9922016af53bcd222487d19d26a428f69cdb1f": {
+          "input_tokens": 18383,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18383,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_014407643fea9922016af53bd4651087d19342a35bfd8c61e6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1212,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1212
+            }
+          ]
+        },
+        "rs_014407643fea9922016af53bd44e2087d19463fbdd76e9565d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 372
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "4e4a94afb8a6ecebbfa41f9e797545f1a8173da144576b4480ed6d9819b39fe5",
+  "elapsed_seconds": 34.89
+}

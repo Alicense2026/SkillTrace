@@ -1,0 +1,459 @@
+{
+  "case_id": "skill-03611",
+  "csv_row": 3612,
+  "source_excel_row": "5019",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-03611-1794594153866445000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者行使CC BY 4.0许可权利时，接受并遵守该公共许可条款。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "acceptance_of_public_license_terms"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者仅在遵守适用公共许可条款的条件下行使许可权利；若权利因不合规而终止且尚未恢复，不得继续依赖该许可。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "public_license_terms_apply",
+        "licensee_fails_to_comply_with_public_license",
+        "terminated_rights_reinstated"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游许可使用者不得在未取得特定事先书面许可时，使用版权持有人或贡献者姓名为源软件衍生产品背书或促销。",
+      "source_refs": [
+        "license:b68305d38e12bb4787287f6cfb5b428de298d06ff59f49b529e69c3f83af221f"
+      ],
+      "subject": {
+        "artifact": "skill-03611:upstream",
+        "kind": "DerivativeWork"
+      },
+      "trigger": "using_copyright_holder_or_contributor_name_to_endorse_or_promote_product_derived_from_software",
+      "unresolved_predicates": [
+        "whether_endorsement_or_promotion_occurs",
+        "specific_prior_written_permission"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若上游软件以源码形式再分发，保留版权声明、条件清单及免责声明；若以二进制形式再分发，在随分发提供的文档和/或其他材料中重现这些内容。两种形式按实际分发形式择一适用。",
+      "source_refs": [
+        "license:b68305d38e12bb4787287f6cfb5b428de298d06ff59f49b529e69c3f83af221f"
+      ],
+      "subject": {
+        "artifact": "skill-03611:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "redistributing_in_source_code_form",
+          "redistributing_in_binary_form"
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "redistribution_form"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者分享CC BY许可材料（包括修改形式）时，满足适用的§3(a)(1)归属条件，包括保留许可人提供的相关信息、注明修改情况，并标明许可及附许可文本或链接；各项保留义务按条款所列前提适用。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "sharing_licensed_material_including_modified_form",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "whether_relevant_information_was_supplied"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者不得对CC BY许可材料施加额外或不同条款，或采用限制接收者行使许可权利的技术措施。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "terms_or_measures_restrict_recipient_exercise_of_licensed_rights",
+      "unresolved_predicates": [
+        "whether_restrictive_terms_or_measures_are_applied"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者不得声称或暗示其本人或其对许可材料的使用与许可人或指定归属对象有关联、受其赞助或背书，或获其官方身份。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "asserts_or_implies_connection_sponsorship_endorsement_or_official_status",
+      "unresolved_predicates": [
+        "whether_such_assertion_or_implication_occurs"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若许可人请求，下游许可使用者须在合理可行范围内移除§3(a)(1)(A)要求的信息。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "sharing_licensed_material_and_licensor_requests_removal",
+      "unresolved_predicates": [
+        "sharing_licensed_material",
+        "licensor_requests_removal"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者分享全部或实质部分数据库内容且适用相关数据库权利时，遵守§3(a)条件；该摘录未提供这些条件的具体内容。",
+      "source_refs": [
+        "license:cbd5af318286b74656f145dff5091907cc23d6d8c9ad09e0291ec2497792ba41"
+      ],
+      "subject": {
+        "artifact": "skill-03611:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "licensee_shares_all_or_substantial_portion_of_database_contents_and_applicable_sui_generis_database_rights_are_included",
+      "unresolved_predicates": [
+        "database_sharing_scope",
+        "applicable_sui_generis_database_rights"
+      ]
+    }
+  ],
+  "limitations": [
+    "可信事实确认下游链接并远程调用上游，且对上游有Use；未确认分发、修改、合并、再许可或背书等行为。API调用不证明两份许可约束同一对象；对象图的scope_shared为未知，因此没有足够依据认定许可冲突。",
+    "BSD分发条款按源码/二进制形式分别适用；当前无分发事实。CC BY的分享归属条件仅在分享时适用。其余已抽取条款中，未映射到当前已知活动或超出活动词表的内容不推断为实际义务或违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游Use明确许可且无附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认修改；摘录仅许可修改。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "上游分发条件以源码或二进制形式择一保留。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "源码分发时的保留条件已纳入。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "二进制分发时的重现条件已纳入。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "上游姓名背书/促销限制及书面许可例外已纳入。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "行使许可权利时接受条款的条件已纳入。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "许可权利行使须遵守公共许可条款的条件已纳入。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "禁止再许可，但没有再许可活动事实。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "复制授权相关；未确认复制活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认分享活动。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认创作改编材料。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认复制改编材料。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认分享改编材料。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认适用例外或限制的使用。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认必要技术修改。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条款是许可人向接收者提供要约，不是当前调用者的义务。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "限制接收者行使权利时不得附加限制的要求已纳入。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        6
+      ],
+      "reason": "不得虚称关联、赞助、背书或官方身份的限制已纳入。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时保留许可人提供的适用信息已纳入。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时保留许可人提供的创作者及指定归属信息已纳入。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时保留许可人提供的版权声明已纳入。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时保留许可人提供的公共许可声明已纳入。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时保留许可人提供的免责声明声明已纳入。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时在合理可行范围保留许可人提供的链接已纳入。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时注明修改情况并保留既有修改说明已纳入。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享时标明许可并提供许可文本或链接已纳入。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅说明履行归属条件的合理方式，不另增义务。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        7
+      ],
+      "reason": "许可人请求移除指定信息的条件已单独纳入。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认分享自制改编材料。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "适用数据库权利前提及复制活动均未确认。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "适用数据库权利前提及分享活动均未确认。"
+    },
+    {
+      "rule_ref": "D027",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "数据库分类后果不是独立行为义务。"
+    },
+    {
+      "rule_ref": "D028",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "数据库内容分享触发§3(a)条件的义务已纳入，并保留摘录未提供具体条件的限制。"
+    },
+    {
+      "rule_ref": "D029",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "权利终止且未恢复时不得继续依赖许可的条件已纳入。"
+    },
+    {
+      "rule_ref": "D030",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "这是违反后的权利恢复条件，不是独立触发的行为义务。"
+    },
+    {
+      "rule_ref": "D031",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "这是许可人恢复权利的条件，不产生当前行为义务。"
+    },
+    {
+      "rule_ref": "D032",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "保留依法无需许可的使用，不产生附加义务。"
+    },
+    {
+      "rule_ref": "D033",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未发现相关商标或标识使用活动；外部政策材料不在范围内。"
+    },
+    {
+      "rule_ref": "D034",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分享许可材料（包括修改形式）时适用归属条件已纳入并与具体子项合并。"
+    }
+  ]
+}

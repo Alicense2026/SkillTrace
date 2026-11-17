@@ -1,0 +1,118 @@
+{
+  "case_id": "chain-0329-f42dd3a29632",
+  "status": "SUCCESS",
+  "request_sha256": "8b81a2c140d5f73e9b2b23f64afdd9d7e0605be158f2bb5e79d6e2f7d9444103",
+  "analysis": {
+    "case_id": "chain-0329-f42dd3a29632",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0329-f42dd3a29632:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对的Llama 3.3许可摘录支持使用须遵守协议这一条件，但未提供足以展开其全部适用要求的条款映射；因此不推断未映射的具体义务。",
+      "事实确认的是对上游材料的远程调用/API关联，未确认分发、修改或模型权重转移。GPL摘录涉及复制、传递及修改版本传递；当前事实未触发这些活动，且未证明GPL条款与上游材料共同约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0329-f42dd3a29632:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用Llama Materials时遵守Llama协议。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22047,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 676,
+    "output_tokens_details": {
+      "reasoning_tokens": 200
+    },
+    "total_tokens": 22723,
+    "attribution": {
+      "items": {
+        "msg_01c8f96d9e1d89e7016af3056aad4487d18fb180b32a47e937": {
+          "input_tokens": 20015,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20015,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_01c8f96d9e1d89e7016af3056f3a9087d1991ae4e658bc2e59": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 476,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 476
+            }
+          ]
+        },
+        "rs_01c8f96d9e1d89e7016af3056f239887d195425e6e86d6c480": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 200
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.533,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

@@ -1,0 +1,220 @@
+{
+  "case_id": "chain-17471-31c01e056487",
+  "source_csv_line": 17472,
+  "row": {
+    "github_repo": "mcp-server",
+    "github_url": "https://github.com/blockscout/mcp-server",
+    "github_license": "LicenseRef-Blockscout",
+    "artifact_name": "PrefectHQ/fastmcp",
+    "artifact_url": "https://github.com/PrefectHQ/fastmcp",
+    "artifact_license": "Apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: blockscout_mcp_server/pro_api_key_context.py:577 ｜ 调用原文: FastMCP schema generation and REST parameter binding continue to work. ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 代码中导入 mcp.server.fastmcp.FastMCP，作为 MCP 服务器 SDK 使用",
+    "batch": "10201-12200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "blockscout/mcp-server",
+    "license_label": "LicenseRef-Blockscout",
+    "sha256": "a7a4f151d2332f45d6fda84136fbf29c4cc50c3d84d9fd58003399caf41705b4",
+    "filename": "_licenseref_full/texts/a7a4f151d2332f45d6fda84136fbf29c4cc50c3d84d9fd58003399caf41705b4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:mcp-server-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-17471-31c01e056487",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f74de56ca0d12412"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-17471-31c01e056487:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b9c7cfa6034de83b"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "no_commercial_licence",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-17471-31c01e056487:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b9c7cfa6034de83b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_this_licence",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-17471-31c01e056487:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-17471-31c01e056487:downstream",
+          "kind": "CombinedProduct"
+        },
+        "requirement": "Do not use rights under the downstream licence for a restricted commercial or monetised use unless a Commercial Licence has been obtained; before an intended use prohibited, restricted, or not granted by the licence, request a Commercial Licence and obtain the Licensor's express written agreement.",
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "commercial_or_restricted_use",
+          "commercial_licence_obtained"
+        ],
+        "source_refs": [
+          "license-text:downstream:b9c7cfa6034de83b"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-17471-31c01e056487:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the downstream licence when exercising its granted use rights.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "comply_with_this_licence"
+        ],
+        "source_refs": [
+          "license-text:downstream:b9c7cfa6034de83b"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes a remote API call and a LINK/REMOTE_CALL relation, not transfer, modification, combination, or distribution of the upstream asset.",
+      "The object graph leaves scope_shared unknown. The downstream licence's commercial-use restriction is therefore retained as a conditional obligation, not a conflict or violation; no charging or commercial-use facts are provided.",
+      "The supplied downstream clauses do not establish that remote interaction alone is a restricted commercial use. The cited commercial-use clause addresses fee/consideration-based availability and related monetised offerings.",
+      "The upstream Apache grant excerpt establishes permission to use the upstream Work, but its structured extraction is FIRST_PASS_REVIEW_REQUIRED. The downstream licence excerpt reserves ungranted rights; no applicable same-scope opposing restriction is established by the available facts and excerpts."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33851,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1283,
+    "output_tokens_details": {
+      "reasoning_tokens": 376
+    },
+    "total_tokens": 35134,
+    "attribution": {
+      "items": {
+        "msg_0f2ab7345bcdb0bd016af53e60fc8087d1971d1f94cdc298f7": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0f2ab7345bcdb0bd016af53e60fc8087d1b8f5eb17c9985d45": {
+          "input_tokens": 31781,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31781,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0f2ab7345bcdb0bd016af53e68711c87d1a180db30db985fb1": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 907,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 907
+            }
+          ]
+        },
+        "rs_0f2ab7345bcdb0bd016af53e68556087d1a7071cf5695fa69f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 376
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "d44d48927686d6d0215a643d90e5df7e2ca99964993a8ee74ee3394d38a7dd5d",
+  "elapsed_seconds": 31.53
+}

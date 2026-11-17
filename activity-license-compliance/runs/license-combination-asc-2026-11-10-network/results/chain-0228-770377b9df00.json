@@ -1,0 +1,157 @@
+{
+  "case_id": "chain-0228-770377b9df00",
+  "status": "SUCCESS",
+  "request_sha256": "24ddbdd728cf1238b4c154c84ae8b7d373880aaec01cf7f78677e73f02d1df7f",
+  "analysis": {
+    "case_id": "chain-0228-770377b9df00",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_license_and_notices",
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0228-770377b9df00:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:afce76e281e6a774"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0228-770377b9df00:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0228-770377b9df00:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If conveying copies of the upstream GPL-3.0 Program, provide a copy of the GPL license and preserve the notices specified in the cited clause.",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "provide_license_and_notices"
+        ],
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0228-770377b9df00:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "When exercising licensed rights in the CC-BY-4.0 material, comply with the applicable CC license conditions.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:afce76e281e6a774"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录证实的是远程服务调用及API链接，不证明代码修改、复制、分发、结合或共享许可对象；两许可的共同适用范围未知。",
+      "GPL摘录涉及复制及传递代码的条件，不显示远程调用本身触发这些条件；当前未发现适用于该调用方式的网络服务源码提供条款。",
+      "CC-BY-4.0摘录为许可授予条款，具体适用条件未在该摘录中展开。活动或许可条件的适用情况未知，故相关事项仅列条件义务。",
+      "结构化条款标记为FIRST_PASS_REVIEW_REQUIRED；本次结论限于所提供摘录，未推断未呈现的条款内容。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18899,
+    "input_tokens_details": {
+      "cached_tokens": 18688,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1170,
+    "output_tokens_details": {
+      "reasoning_tokens": 362
+    },
+    "total_tokens": 20069,
+    "attribution": {
+      "items": {
+        "msg_0b46058502ac96dc016af300bb543887d18a28836fbbee37a6": {
+          "input_tokens": 16867,
+          "cached_tokens": 16658,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16867,
+              "cached_tokens": 16658,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b46058502ac96dc016af300c30e5887d1a7c6fdbfa5c0f2cf": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 808,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 808
+            }
+          ]
+        },
+        "rs_0b46058502ac96dc016af300c2f2c087d18fa47a63bfc822a2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 362
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.667,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

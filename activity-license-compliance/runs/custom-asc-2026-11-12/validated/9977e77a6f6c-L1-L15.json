@@ -1,0 +1,63 @@
+{
+  "request_sha256": "0b0c704389a49368ae13b5fddef08ea6f9156ddd4fbecfda4be423e4dc3db3a7",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 13,
+        "end_line": 13,
+        "clause_label": "公开说明—原始 license 或来源说明",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "skill_directory_contains_original_license_or_source_notice",
+          "requires": "prioritize_compliance_with_that_license_or_source_notice"
+        },
+        "actor_role": "repository user or reuser",
+        "scope_note": "Applies only to a skill directory in this repository that contains its own original license or source notice; it does not state the terms of that separate notice.",
+        "condition_explanation": "The compliance direction applies when the individual skill directory contains an original license or source notice."
+      },
+      {
+        "start_line": 14,
+        "end_line": 14,
+        "clause_label": "公开说明—确认来源和许可边界",
+        "activities": [
+          "CommercialUse",
+          "Distribute",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": {
+            "any": [
+              "commercial_use",
+              "redistribution",
+              "large_scale_modification"
+            ]
+          },
+          "requires": "confirm_relevant_skill_source_and_license_boundaries"
+        },
+        "actor_role": "repository user or reuser",
+        "scope_note": "Requests that users independently confirm the relevant skill’s provenance and licensing boundaries before commercial use, redistribution, or large-scale modification; it grants no permission for those activities.",
+        "condition_explanation": "The confirmation request is triggered by any of commercial use, redistribution, or large-scale modification."
+      }
+    ],
+    "coverage_notes": [
+      "The text describes a collection of skills and gives repository-level guidance; it does not supply a general software license or grant permissions to use, copy, modify, distribute, sublicense, or commercially exploit the repository contents.",
+      "Any license or source notice inside an individual skill is not supplied here; its terms cannot be reconstructed from this text.",
+      "The stated exclusions and retained directory structure describe the repository’s preparation, not obligations imposed on downstream users."
+    ]
+  }
+}

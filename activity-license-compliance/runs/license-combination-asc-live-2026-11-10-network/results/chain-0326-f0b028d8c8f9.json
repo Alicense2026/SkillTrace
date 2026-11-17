@@ -1,0 +1,119 @@
+{
+  "case_id": "chain-0326-f0b028d8c8f9",
+  "status": "SUCCESS",
+  "request_sha256": "68da76526fb6c54e553e2bb489fde7e6f6c85950927f0baf044fbfcc0c08aff1",
+  "analysis": {
+    "case_id": "chain-0326-f0b028d8c8f9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0326-f0b028d8c8f9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0326-f0b028d8c8f9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "retain_applicable_notices",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "notice_retention_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "ISC 原文摘录支持对上游原件 Use 的通知保留条件；未提供通知实际保留情况的证据。",
+      "GPL-3.0 摘录中的相关义务针对复制、传递或修改受覆盖作品等活动。可信事实仅确认远程服务调用且修改不适用，未证明下游发生这些活动；API 调用不单独触发所列传递或源码提供条款。",
+      "对象图中的 LINK/REMOTE_CALL 已确认，但 upstream 与 downstream 的许可约束是否作用于同一对象未知；当前没有依据认定许可冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 19043,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 631,
+    "output_tokens_details": {
+      "reasoning_tokens": 132
+    },
+    "total_tokens": 19674,
+    "attribution": {
+      "items": {
+        "msg_018edaeb5b390cd2016af3052d115c87d28f2dbc62e12c2c84": {
+          "input_tokens": 17011,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17011,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_018edaeb5b390cd2016af30530427c87d28e5b36c283217d45": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 499,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 499
+            }
+          ]
+        },
+        "rs_018edaeb5b390cd2016af3053026d087d2aa02a7b1502aed35": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 132
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.174,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

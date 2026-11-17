@@ -1,0 +1,47 @@
+{
+  "case_id": "chain-13204-03c1a9c32d5f",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-13204-03c1a9c32d5f:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "满足适用MIT许可条件时，保留版权声明和许可声明。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "include_copyright_and_permission_notice"
+      ],
+      "source_refs": [
+        "license-text:upstream:64404b3a439fc356"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-13204-03c1a9c32d5f:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若该材料属于许可覆盖的 Official App，评估使用须为善意评估；若评估后用于常规或持续生产性工作，须购买许可。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "downstream_license_covers_called_service"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "downstream_license_covers_called_service",
+        "good_faith_evaluation",
+        "routine_or_ongoing_productive_use_after_evaluation",
+        "payment_due_paid"
+      ],
+      "source_refs": [
+        "license-text:downstream:cb006ea78c1fbfca"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "case_id": "skill-00061",
+  "csv_row": 62,
+  "source_excel_row": "100",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00061-1794591556296746000-1.json",
+  "output": [
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可方如分发上游 Software 的副本或实质部分，应在所有此类副本或实质部分中包含版权声明和 MIT 许可声明；若未分发该等副本或实质部分，则无需据此添加通知。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00061:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "distribute_upstream_copy_or_substantial_portion",
+      "unresolved_predicates": [
+        "distribute_upstream_copy_or_substantial_portion",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可方如分发下游 Software 的副本或实质部分，应在所有此类副本或实质部分中包含版权声明和 MIT 许可声明；若未分发该等副本或实质部分，则无需据此添加通知。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00061:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "distribute_downstream_copy_or_substantial_portion",
+      "unresolved_predicates": [
+        "distribute_downstream_copy_or_substantial_portion",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Sublicense",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可方如再许可包含上游 Software 副本或实质部分的内容，应在所有此类副本或实质部分中包含版权声明和 MIT 许可声明；若再许可不含该等副本或实质部分，则无需据此添加通知。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00061:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "sublicense_includes_upstream_copy_or_substantial_portion",
+      "unresolved_predicates": [
+        "sublicense_includes_upstream_copy_or_substantial_portion",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Sublicense",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可方如再许可包含下游 Software 副本或实质部分的内容，应在所有此类副本或实质部分中包含版权声明和 MIT 许可声明；若再许可不含该等副本或实质部分，则无需据此添加通知。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00061:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "sublicense_includes_downstream_copy_or_substantial_portion",
+      "unresolved_predicates": [
+        "sublicense_includes_downstream_copy_or_substantial_portion",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    }
+  ],
+  "limitations": [
+    "已核实的活动是对上游 testlib 的 Use、Link 和 RemoteInteraction；没有证据表明复制、修改、分发或再许可已发生。远程调用本身不触发针对副本或实质部分的通知要求。",
+    "对象图的 scope_shared 未知；无证据表明下游代码与上游 Software 是同一对象。对副本、分发、再许可的条款仅按各自对象范围保留条件义务。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游 Software 的 Use 获明确许可，且该条未列附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Copy 不在本任务 canonical_activities 中；远程调用不证明复制。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Modify 不在已知活动事实中；条款仅适用于上游 Software 的修改及其副本。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Combine 不在已知活动事实中；条款仅适用于上游 Software。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发活动未知，保留针对上游 Software 副本或实质部分的条件通知义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "与 U005 是同一上游对象、同一通知要求，已合并去重。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "再许可活动及是否含上游副本未知，保留条件通知义务。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 不在 canonical_activities 中，且无售卖副本事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "下游 Software 的 Use 获明确许可，且该条未列附加义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Copy 不在本任务 canonical_activities 中；远程调用不证明复制。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Modify 不在已知活动事实中；条款仅适用于下游 Software 的修改及其副本。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Combine 不在已知活动事实中；条款仅适用于下游 Software。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "分发活动未知，保留针对下游 Software 副本或实质部分的条件通知义务。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "与 D005 是同一下游对象、同一通知要求，已合并去重。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "再许可活动及是否含下游副本未知，保留条件通知义务。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 不在 canonical_activities 中，且无售卖副本事实。"
+    }
+  ]
+}

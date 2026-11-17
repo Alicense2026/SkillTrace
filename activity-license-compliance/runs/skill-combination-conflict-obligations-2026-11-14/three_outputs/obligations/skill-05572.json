@@ -1,0 +1,217 @@
+{
+  "case_id": "skill-05572",
+  "csv_row": 5573,
+  "source_excel_row": "7882",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05572-1794600467675808000-1.json",
+  "output": [
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人对 skill-05572:downstream 上的 xiaobei 进行商业使用，且 LicenseRef-Custom 第1(a)-(e)项任一条件适用时，须向生产者取得商业许可；不得将此许可要求转加于上游 API 或其他材料。",
+      "source_refs": [
+        "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+      ],
+      "subject": {
+        "artifact": "skill-05572:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "commercial_use",
+          "section_1_conditions_apply"
+        ]
+      },
+      "unresolved_predicates": [
+        "commercial_use",
+        "section_1_conditions_apply",
+        "commercial_license_obtained_from_producer"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人不得将 skill-05572:downstream 上的 xiaobei 用于商业网络爬取或数据采集；仅在实际用途符合该描述时触发。",
+      "source_refs": [
+        "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+      ],
+      "subject": {
+        "artifact": "skill-05572:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "commercial_use",
+          "commercial_web_crawling_or_data_harvesting"
+        ]
+      },
+      "unresolved_predicates": [
+        "commercial_use",
+        "commercial_web_crawling_or_data_harvesting"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人不得将 skill-05572:downstream 上的 xiaobei 用于违法或未经授权的抓取，包括违反适用法律、网站服务条款或 robots 排除指令的抓取。",
+      "source_refs": [
+        "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+      ],
+      "subject": {
+        "artifact": "skill-05572:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "unlawful_or_unauthorized_scraping"
+        ]
+      },
+      "unresolved_predicates": [
+        "unlawful_or_unauthorized_scraping"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人不得使用 skill-05572:downstream 上的 xiaobei 获取媒体平台、交易平台内容或其他受第三方知识产权保护的材料，除非已事先取得权利人的明确授权。",
+      "source_refs": [
+        "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+      ],
+      "subject": {
+        "artifact": "skill-05572:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_xiaobei_to_obtain_protected_content"
+        ]
+      },
+      "unresolved_predicates": [
+        "use_xiaobei_to_obtain_protected_content",
+        "prior_explicit_authorization_from_rightsholder"
+      ]
+    }
+  ],
+  "limitations": [
+    "已确认的是下游对上游的 API 链接及远程调用；没有证据表明上游代码被复制、修改、合并、分发或再许可，因此 MIT 的副本通知条件不因远程调用本身触发。",
+    "商业使用、抓取用途、受保护内容获取及相关授权均未提供事实；保留相应条件义务，不据此判定违规。未发现已触发且相反的许可约束。",
+    "LicenseRef-Custom 对多租户服务、前端标识及贡献代码商业使用的条款涉及尚未证实的活动或对象；本次不据远程调用推定这些活动发生。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT 对上游原始软件的 Use 明示许可，摘录未为单独使用规定附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实复制上游软件或其实质部分；其通知条件不适用于单纯远程调用。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改上游软件或产生其副本。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实合并上游软件或产生其副本。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实发布或分发上游软件副本或实质部分。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发上游软件副本或实质部分。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实再许可上游软件或在再许可中包含其副本。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实出售上游软件副本。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "商业使用及第1(a)-(e)项触发情况未知，保留取得商业许可的条件义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "远程调用不等同于使用下游代码运营多租户环境；未证实该服务活动或其对象范围。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用下游前端或移除、修改其标识。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "实际使用已知，但商业网络爬取或数据采集用途未知；保留该条件限制。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "Use 已发生，抓取是否违法或未经授权未知；保留禁止条件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "Use 已发生，是否获取受保护内容及是否已获事先明确授权未知；保留条件限制。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用下游代码复制受保护内容。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用下游代码分发受保护内容。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该许可仅明确允许贡献代码用于商业目的；没有证据表明相关贡献代码是当前活动对象。"
+    }
+  ]
+}

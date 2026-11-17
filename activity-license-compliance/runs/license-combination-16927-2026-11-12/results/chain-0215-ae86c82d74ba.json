@@ -1,0 +1,82 @@
+{
+  "case_id": "chain-0215-ae86c82d74ba",
+  "input_group_row": 215,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "GPL-3.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0215-ae86c82d74ba",
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e22eb71c241d83ff"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0215-ae86c82d74ba:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e22eb71c241d83ff"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0215-ae86c82d74ba:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "AGPL-3.0 §13 的摘录仅在修改了程序且该版本支持远程交互时要求向远程用户提供对应源码。记录称为远程服务调用且“修改不适用”，未显示该触发条件成立；API调用本身不等于修改、分发或权重转移。",
+      "未提供下游是否提供网络服务、是否修改受覆盖程序或版本是否支持远程交互的独立事实。GPL-3.0 摘录涉及复制、传递、修改版本及源码提供；现有事实未显示这些活动发生。结构化规则为首轮抽取，未对许可证全文作出超出摘录的推断。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0211-989d852e8310.json",
+  "original_case_id": "chain-0211-989d852e8310",
+  "original_request_sha256": "950520effdbe8b59e1a6d2171cae389919c23c5907e5ae820feb11dfd673edfa",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0211-989d852e8310": "chain-0215-ae86c82d74ba",
+    "license-text:upstream:515d434cad2d4fc5": "license-text:upstream:515d434cad2d4fc5",
+    "license-text:downstream:e22eb71c241d83ff": "license-text:downstream:e22eb71c241d83ff",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/210": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/214"
+  }
+}

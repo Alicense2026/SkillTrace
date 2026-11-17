@@ -1,0 +1,716 @@
+{
+  "request_sha256": "a3e6e42c5f8295eda0634105cac71ddff83cf6a232e7166314fab32ce1352c7c",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 11,
+        "end_line": 16,
+        "clause_label": "personal_noncommercial_permissions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "personal_or_educational_or_other_noncommercial_purpose",
+              "not_commercial_use"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "License section 1 permits viewing, learning, personal repository copies, personal-use modifications, and use in personal noncommercial projects. Redistribution is addressed separately.",
+        "condition_explanation": "personal_or_educational_or_other_noncommercial_purpose means the activity is for one of the stated purposes; not_commercial_use is subject to the restrictions in section 3.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 13,
+        "end_line": 14,
+        "clause_label": "personal_copy_and_modification",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "personal_noncommercial_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "License section 1 permits making personal repository copies and making changes or improvements for personal use; commercial purposes remain restricted by section 3.",
+        "condition_explanation": "personal_noncommercial_use means the copying or modification is for personal use and not a commercial purpose.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 15,
+        "end_line": 15,
+        "clause_label": "noncommercial_redistribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "noncommercial_purpose",
+              "appropriate_author_attribution",
+              "original_repository_link",
+              "changes_indicated",
+              "no_suggestion_of_author_endorsement",
+              "license_copy_included",
+              "prominent_original_repository_link"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "License sections 1–3 permit noncommercial redistribution, subject to attribution, license-copy, and public-fork-or-derivative link requirements. Commercial redistribution is prohibited absent explicit written permission.",
+        "condition_explanation": "appropriate_author_attribution, original_repository_link, changes_indicated, and no_suggestion_of_author_endorsement reflect the attribution terms in section 2. license_copy_included applies to any redistribution. prominent_original_repository_link applies to public forks or derivatives.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give appropriate credit to BigSk1, provide a link to the original repository, indicate whether changes were made, and do so in a reasonable manner that does not suggest author endorsement.",
+            "actor": "licensee redistributing the software",
+            "object": "Redistributed software",
+            "trigger": "When redistributing the software; attribution may be given in any reasonable manner, but not in a manner suggesting endorsement."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Include a copy of this license.",
+            "actor": "licensee redistributing the software",
+            "object": "Redistributed software",
+            "trigger": "Whenever the software is redistributed."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Include a prominent link to https://github.com/bigsk1/jarvis-voice.",
+            "actor": "licensee",
+            "object": "Public fork or derivative",
+            "trigger": "When the fork or derivative is public."
+          }
+        ]
+      },
+      {
+        "start_line": 14,
+        "end_line": 14,
+        "clause_label": "modify_for_noncommercial_use",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "not_for_commercial_purposes"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1 permits modifications for personal use. Section 3 prohibits commercial use of the software or derivative works without explicit written permission.",
+        "condition_explanation": "not_for_commercial_purposes excludes the commercial purposes described in section 3.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 32,
+        "end_line": 37,
+        "clause_label": "commercial_use_prohibition",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_explicitly_permitted_in_writing_by_copyright_holder"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 3 prohibits commercial use of the software or derivative works without explicit written permission from the copyright holder. Listed examples include selling software or derivatives, use in a commercial product or service, paid services, inclusion in a sold product, and revenue-generating activity.",
+        "condition_explanation": "not_explicitly_permitted_in_writing_by_copyright_holder is the exception stated in section 3. Commercial purposes include, but are not limited to, the listed examples.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the software for commercial purposes unless the copyright holder has given explicit written permission.",
+            "actor": "licensee",
+            "object": "Software",
+            "trigger": "When the use is for a commercial purpose, including a listed example, and explicit written permission from the copyright holder has not been given."
+          }
+        ]
+      },
+      {
+        "start_line": 32,
+        "end_line": 37,
+        "clause_label": "commercial_use_of_derivative_prohibition",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_explicitly_permitted_in_writing_by_copyright_holder"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 3 expressly applies the commercial-purpose restriction to derivative works as well as the software.",
+        "condition_explanation": "not_explicitly_permitted_in_writing_by_copyright_holder is the stated exception. The non-exhaustive examples of commercial purposes appear in section 3.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use derivative works for commercial purposes unless the copyright holder has given explicit written permission.",
+            "actor": "licensee",
+            "object": "Derivative work",
+            "trigger": "When use of the derivative work is for a commercial purpose and explicit written permission from the copyright holder has not been given."
+          }
+        ]
+      },
+      {
+        "start_line": 22,
+        "end_line": 22,
+        "clause_label": "attribution_and_repository_link",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "use_of_software",
+          "requires": "attribution_given_in_reasonable_non_endorsing_manner"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 2 says any use must satisfy the attribution requirement: credit BigSk1, link the original repository, indicate changes, and avoid suggesting endorsement.",
+        "condition_explanation": "use_of_software means the licensee uses the software. attribution_given_in_reasonable_non_endorsing_manner comprises the listed credit, link, change-indication, and non-endorsement requirements.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give appropriate credit to BigSk1, provide a link to the original repository, indicate whether changes were made, and avoid suggesting author endorsement.",
+            "actor": "licensee",
+            "object": "Software used",
+            "trigger": "Whenever the software is used; the attribution may be provided in any reasonable manner that does not suggest endorsement."
+          }
+        ]
+      },
+      {
+        "start_line": 24,
+        "end_line": 24,
+        "clause_label": "license_copy_on_redistribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "redistribution",
+          "requires": "license_copy_included"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 2 requires a copy of the license in any redistribution.",
+        "condition_explanation": "redistribution means the licensee redistributes the software; license_copy_included means the redistribution contains a copy of this license.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Include a copy of this license.",
+            "actor": "licensee redistributing the software",
+            "object": "Redistributed software",
+            "trigger": "Whenever the software is redistributed."
+          }
+        ]
+      },
+      {
+        "start_line": 26,
+        "end_line": 26,
+        "clause_label": "prominent_link_for_public_forks_or_derivatives",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "public_fork_or_derivative",
+          "requires": "prominent_link_to_original_repository"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 2 requires public forks or derivatives to include a prominent link to the specified original repository.",
+        "condition_explanation": "public_fork_or_derivative means the fork or derivative is public. prominent_link_to_original_repository means a prominent link to https://github.com/bigsk1/jarvis-voice is included.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Include a prominent link to https://github.com/bigsk1/jarvis-voice.",
+            "actor": "licensee",
+            "object": "Public fork or derivative",
+            "trigger": "When a fork or derivative is public."
+          }
+        ]
+      },
+      {
+        "start_line": 39,
+        "end_line": 39,
+        "clause_label": "prohibition_on_removing_or_obscuring_notices",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 3 prohibits removing, altering, or obscuring copyright notices, attribution, or license information.",
+        "condition_explanation": "The prohibition applies to the listed notices and information on the software.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not remove, alter, or obscure copyright notices, attribution, or license information.",
+            "actor": "licensee",
+            "object": "Software notices, attribution, and license information",
+            "trigger": "Whenever the licensee handles or modifies the software."
+          }
+        ]
+      },
+      {
+        "start_line": 41,
+        "end_line": 41,
+        "clause_label": "trademark_endorsement_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "use_of_jarvis_bigsk1_or_associated_branding",
+          "requires": {
+            "all": [
+              "to_endorse_or_promote_products_derived_from_software",
+              "no_prior_written_permission"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 3 restricts use of the names Jarvis, BigSk1, or associated branding to endorse or promote products derived from the software, absent prior written permission.",
+        "condition_explanation": "use_of_jarvis_bigsk1_or_associated_branding identifies the named marks or associated branding; the restriction applies only to the stated endorsement or promotion purpose and when prior written permission is absent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the names Jarvis or BigSk1, or associated branding, to endorse or promote products derived from the software without prior written permission.",
+            "actor": "licensee",
+            "object": "Names Jarvis or BigSk1 and associated branding",
+            "trigger": "When the use is to endorse or promote products derived from the software and prior written permission has not been obtained."
+          }
+        ]
+      },
+      {
+        "start_line": 43,
+        "end_line": 43,
+        "clause_label": "patent_claim_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "patent_claim_against_author_related_to_software",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 3 prohibits making patent claims against the author related to the software.",
+        "condition_explanation": "patent_claim_against_author_related_to_software means the licensee makes a patent claim against the author that relates to the software.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not make patent claims against the author related to the software.",
+            "actor": "licensee",
+            "object": "Patent claims related to the software",
+            "trigger": "When a patent claim against the author relates to the software."
+          }
+        ]
+      },
+      {
+        "start_line": 55,
+        "end_line": 56,
+        "clause_label": "contribution_same_terms_license",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "contribution_submitted",
+          "requires": "contribution_licensed_under_same_terms"
+        },
+        "actor_role": "contributor",
+        "scope_note": "Section 5 states that submitted contributions will be licensed under the same terms as this license. The text does not specify a separate downstream relicensing power.",
+        "condition_explanation": "contribution_submitted means a pull request, issue, or suggestion is submitted to the project. contribution_licensed_under_same_terms means the contribution is licensed under the same terms as this license.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 56,
+        "end_line": 56,
+        "clause_label": "contribution_license_to_copyright_holder",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "contribution_submitted",
+          "requires": "license_granted_to_copyright_holder"
+        },
+        "actor_role": "contributor",
+        "scope_note": "By submitting a contribution, the contributor grants the copyright holder a perpetual, worldwide, non-exclusive, royalty-free license to use, modify, and distribute that contribution.",
+        "condition_explanation": "contribution_submitted means a pull request, issue, or suggestion is submitted. The grant is perpetual, worldwide, non-exclusive, and royalty-free.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 56,
+        "end_line": 56,
+        "clause_label": "contribution_modification_grant",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "contribution_submitted",
+          "requires": "license_granted_to_copyright_holder"
+        },
+        "actor_role": "copyright holder",
+        "scope_note": "Section 5 grants the copyright holder permission to modify submitted contributions under a perpetual, worldwide, non-exclusive, royalty-free license.",
+        "condition_explanation": "contribution_submitted means a pull request, issue, or suggestion is submitted; the grant applies to that contribution.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 56,
+        "end_line": 56,
+        "clause_label": "contribution_distribution_grant",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "contribution_submitted",
+          "requires": "license_granted_to_copyright_holder"
+        },
+        "actor_role": "copyright holder",
+        "scope_note": "Section 5 grants the copyright holder permission to distribute submitted contributions under a perpetual, worldwide, non-exclusive, royalty-free license.",
+        "condition_explanation": "contribution_submitted means a pull request, issue, or suggestion is submitted; the grant applies to that contribution.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 64,
+        "end_line": 64,
+        "clause_label": "rights_terminate_on_noncompliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "failure_to_comply_with_any_license_term",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 7 provides for automatic termination of license rights if the licensee fails to comply with any license term. It states no cure period.",
+        "condition_explanation": "failure_to_comply_with_any_license_term means noncompliance with any term of the license; termination is automatic upon that failure.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 64,
+        "end_line": 64,
+        "clause_label": "destroy_copies_on_termination",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "license_rights_terminated",
+          "requires": "all_copies_destroyed"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 7 requires destruction of all copies of the software in the licensee's possession upon termination.",
+        "condition_explanation": "license_rights_terminated means rights have automatically terminated following failure to comply with a license term.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Destroy all copies of the software in the licensee's possession.",
+            "actor": "licensee",
+            "object": "Copies of the software in the licensee's possession",
+            "trigger": "Upon termination of rights under the license."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The license contains no express payment, privacy, security, or network-service terms.",
+      "Section 4 provides a contact direction for discussing commercial licensing options, not an express commercial-use grant or permission; commercial use remains restricted absent explicit written permission.",
+      "Section 5's contribution language is modeled only for its express same-terms and copyright-holder grants; it does not expressly grant a broader sublicensing right.",
+      "The inspiration references in section 81 do not incorporate the referenced licenses as operative terms in the supplied text."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "License title; identifies the document but creates no operative rule."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Copyright notice is contextual identification, not an operative behavioral rule in this paragraph."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Terms-and-conditions heading."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Permissions heading."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introductory phrase for the enumerated permissions; operative permissions are modeled from the listed items."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "MODELED",
+        "clause_labels": [
+          "personal_noncommercial_permissions",
+          "personal_copy_and_modification",
+          "noncommercial_redistribution",
+          "modify_for_noncommercial_use"
+        ],
+        "reason": "The listed access, study, personal-copy, personal-modification, noncommercial-sharing, and personal-project permissions are represented, with redistribution conditions and commercial-use boundary captured."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Requirements heading."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introductory phrase for section 2 requirements."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "attribution_and_repository_link"
+        ],
+        "reason": "The attribution, repository-link, change-indication, reasonable-manner, and non-endorsement requirements are modeled as conditions and explicit duties."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "license_copy_on_redistribution"
+        ],
+        "reason": "The license-copy requirement on redistribution is modeled."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "MODELED",
+        "clause_labels": [
+          "prominent_link_for_public_forks_or_derivatives"
+        ],
+        "reason": "The prominent-link requirement and its public-fork-or-derivative trigger are modeled."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Restrictions heading."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introductory prohibition phrase; specific prohibitions are modeled from the following items."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "MODELED",
+        "clause_labels": [
+          "commercial_use_prohibition",
+          "commercial_use_of_derivative_prohibition"
+        ],
+        "reason": "The commercial-use restriction for software and derivative works, written-permission exception, and non-exhaustive commercial-purpose examples are represented."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "MODELED",
+        "clause_labels": [
+          "prohibition_on_removing_or_obscuring_notices"
+        ],
+        "reason": "The prohibition on removing, altering, or obscuring notices, attribution, and license information is modeled."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "MODELED",
+        "clause_labels": [
+          "trademark_endorsement_restriction"
+        ],
+        "reason": "The named-mark and branding restriction, limited endorsement or promotion purpose, and prior-written-permission exception are modeled."
+      },
+      {
+        "unit_id": "P0017",
+        "status": "MODELED",
+        "clause_labels": [
+          "patent_claim_restriction"
+        ],
+        "reason": "The prohibition on patent claims against the author related to the software is modeled."
+      },
+      {
+        "unit_id": "P0018",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Commercial-licensing heading."
+      },
+      {
+        "unit_id": "P0019",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Invitation to contact the author to discuss options; it neither grants commercial permission nor imposes a behavioral duty."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Contact information only."
+      },
+      {
+        "unit_id": "P0021",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Contributions heading."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introductory condition for the contribution terms."
+      },
+      {
+        "unit_id": "P0023",
+        "status": "MODELED",
+        "clause_labels": [
+          "contribution_same_terms_license",
+          "contribution_license_to_copyright_holder",
+          "contribution_modification_grant",
+          "contribution_distribution_grant"
+        ],
+        "reason": "Both the same-terms statement and the copyright holder's perpetual, worldwide, non-exclusive, royalty-free use, modification, and distribution grant are represented."
+      },
+      {
+        "unit_id": "P0024",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Disclaimer heading; the following paragraph is excluded as warranty and liability disclaimer material."
+      },
+      {
+        "unit_id": "P0025",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty and liability disclaimer, excluded by the extraction instructions."
+      },
+      {
+        "unit_id": "P0026",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Termination heading."
+      },
+      {
+        "unit_id": "P0027",
+        "status": "MODELED",
+        "clause_labels": [
+          "rights_terminate_on_noncompliance",
+          "destroy_copies_on_termination"
+        ],
+        "reason": "Automatic termination for failure to comply with any term and the duty to destroy all copies in the licensee's possession upon termination are modeled."
+      },
+      {
+        "unit_id": "P0028",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Horizontal rule; no operative content."
+      },
+      {
+        "unit_id": "P0029",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Summary heading expressly states that it is not legally binding."
+      },
+      {
+        "unit_id": "P0030",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Nonbinding summary table; operative permissions and restrictions are extracted from the license terms above."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Horizontal rule; no operative content."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Statement that the license is inspired by other licenses; it does not incorporate their terms."
+      },
+      {
+        "unit_id": "P0033",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Contact direction for questions; no behavioral duty or grant."
+      }
+    ]
+  },
+  "attempt": 1
+}

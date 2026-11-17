@@ -1,0 +1,684 @@
+{
+  "request_sha256": "fe01f77224142d599c2cdc9579bb182f4c990d5d2cff08746731ffa9507f4f05",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 215,
+        "end_line": 215,
+        "clause_label": "restrict_threatening_attack_activity",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "all": [
+              "licensee_business_causes_frequent_attacks_on_baidu_platform_or_other_users",
+              "attacks_threaten_platform_or_other_users",
+              "licensee_fails_to_correct_behavior_promptly_or_remove_effects_as_baidu_requires"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "User Service Agreement, user conduct restriction; applies to use of the service in a business causing frequent attacks and the stated failure to correct or remove effects. Baidu's force-stop and account-freeze measures are enforcement rights.",
+        "condition_explanation": "licensee_business_causes_frequent_attacks_on_baidu_platform_or_other_users means the licensee's business, including listed DNS, security, domain-agent, or reverse-proxy businesses, causes frequent attacks on Baidu's platform or its other users. attacks_threaten_platform_or_other_users means those attacks threaten the platform or other users. licensee_fails_to_correct_behavior_promptly_or_remove_effects_as_baidu_requires captures either stated failure.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not engage in the described service use when the stated attack, threat, and failure-to-correct conditions apply.",
+            "actor": "licensee",
+            "object": "Baidu intelligent-cloud service use",
+            "trigger": "The licensee's business causes frequent attacks on Baidu's platform or other users, the attacks threaten the platform or other users, and the licensee fails promptly to correct the behavior or remove its effects as Baidu requires."
+          }
+        ]
+      },
+      {
+        "start_line": 217,
+        "end_line": 217,
+        "clause_label": "prohibit_malicious_tampering_with_ai_labels",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "artifact_is_baidu_labeled_ai_generated_or_synthetic_content_or_its_label",
+          "requires": "maliciously_delete_alter_forge_or_conceal_label_or_provide_tools_or_services_for_these_acts_or_use_improper_labeling_to_harm_others"
+        },
+        "actor_role": "licensee",
+        "scope_note": "User Service Agreement, user conduct restriction; covers explicit and implicit labels associated with AI-generated or synthetic content, and assistance to another person in the specified malicious acts.",
+        "condition_explanation": "artifact_is_baidu_labeled_ai_generated_or_synthetic_content_or_its_label covers the visible interface labels and less-visible technical labels in generated-content files. The prohibition includes malicious deletion, alteration, forgery, concealment, providing tools or services for another's listed conduct, or improper labeling that harms others' lawful rights.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not maliciously delete, alter, forge, or conceal Baidu's label; provide tools or services for another person to do so; or use improper labeling methods to harm another's lawful rights.",
+            "actor": "licensee",
+            "object": "Baidu label on AI-generated or synthetic content, including its explicit or implicit label, and tools or services supplied to enable the prohibited acts",
+            "trigger": "The material has a label applied by Baidu to AI-generated or synthetic content or its interaction scenario."
+          }
+        ]
+      },
+      {
+        "start_line": 221,
+        "end_line": 221,
+        "clause_label": "content_storage_region_and_transfer_exceptions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "content_is_licensee_content_stored_in_a_region_selected_by_licensee",
+          "requires": {
+            "any": [
+              "licensee_consents_to_migration_from_selected_region",
+              "migration_required_by_applicable_law_or_binding_government_order",
+              "migration_is_entrusted_by_licensee_and_licensee_has_necessary_government_permissions_and_user_authorizations",
+              "processing_in_other_regions_is_for_billing_management_or_technical_services_or_investigating_security_incidents_or_agreement_violations"
+            ]
+          }
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, data-processing provision; object is the licensee's content and related data. Baidu states it will not migrate content from the selected region without consent except for the listed alternatives. It may process some service-use data in service data-center regions and regions where it maintains, operates, supports, or investigates systems and teams.",
+        "condition_explanation": "licensee_consents_to_migration_from_selected_region is consent to migration from the chosen region. migration_required_by_applicable_law_or_binding_government_order is the mandatory-law/order exception. migration_is_entrusted_by_licensee_and_licensee_has_necessary_government_permissions_and_user_authorizations requires an instruction/entrustment and the licensee's necessary permissions and authorizations. processing_in_other_regions_is_for_billing_management_or_technical_services_or_investigating_security_incidents_or_agreement_violations is the stated service-processing exception. The exceptions are alternatives, not cumulative requirements.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not migrate the licensee's content out of the region selected by the licensee without the licensee's consent, except where a stated exception applies.",
+            "actor": "Baidu intelligent cloud",
+            "object": "Licensee content stored in the licensee-selected region",
+            "trigger": "Migration from the selected region is contemplated and none of the listed legal/order, properly authorized entrustment, or specified service-processing exceptions applies."
+          }
+        ]
+      },
+      {
+        "start_line": 223,
+        "end_line": 223,
+        "clause_label": "restrict_export_controlled_service_provision_and_use",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "provide_controlled_products_or_services_through_baidu_service_to_prohibited_destination_entity_or_person_without_competent_authority_permission",
+              "use_baidu_products_or_services_for_purpose_prohibited_by_applicable_export_control_or_sanctions_law"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "User Service Agreement, export-control and sanctions restriction; binds the licensee and entities it authorizes to use Baidu products or services. Authority permission is stated for provision to prohibited destinations, entities, or persons; the separate prohibited-use-purpose undertaking has no stated exception.",
+        "condition_explanation": "provide_controlled_products_or_services_through_baidu_service_to_prohibited_destination_entity_or_person_without_competent_authority_permission describes provision through the Baidu service to a prohibited destination, entity, or person absent permission from the relevant authority. use_baidu_products_or_services_for_purpose_prohibited_by_applicable_export_control_or_sanctions_law means using the provider's products or services for any use those laws prohibit.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not provide controlled products or services through the Baidu service to a destination, entity, or person prohibited by applicable export-control or sanctions law unless the relevant authority has permitted it; do not use Baidu products or services for a purpose prohibited by those laws.",
+            "actor": "licensee and entities the licensee authorizes to use the products or services",
+            "object": "Baidu products or services and controlled products or services provided through them",
+            "trigger": "The destination, entity, person, or use is prohibited under applicable export-control or sanctions laws; authority permission excuses only the described provision to a prohibited destination, entity, or person."
+          }
+        ]
+      },
+      {
+        "start_line": 225,
+        "end_line": 225,
+        "clause_label": "authorize_support_information_processing",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "customer_support_services_are_provided_to_licensee",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, authorization for Baidu affiliates or Baidu-authorized third-party partners to process information to provide customer support.",
+        "condition_explanation": "customer_support_services_are_provided_to_licensee means the information processing is for providing customer support services to the licensee.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 227,
+        "end_line": 227,
+        "clause_label": "share_and_entrust_personal_information_for_service",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "processing_or_sharing_licensee_personal_information_for_product_or_service_provision_improvement_or_user_experience",
+          "requires": {
+            "all": [
+              "recipient_is_provider_affiliate_or_third_party_partner_or_authorized_processor",
+              "processor_acts_only_on_provider_instructions_and_within_entrusted_scope",
+              "processor_is_bound_by_appropriate_personal_information_protection_confidentiality_and_security_obligations",
+              "provider_supervises_processor_personal_information_processing"
+            ]
+          }
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, personal-information sharing and entrusted-processing terms. Third parties receiving shared personal information have no right to use it for other purposes. For entrusted processing, Baidu says it will impose confidentiality and security safeguards, limit processing to its instructions and entrusted scope, supervise processing, and enter data-protection agreements.",
+        "condition_explanation": "processing_or_sharing_licensee_personal_information_for_product_or_service_provision_improvement_or_user_experience limits purposes to providing services or support, providing better products/services, or improving user experience. The other predicates state the recipient and safeguards conditions.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure affiliates and third parties receiving shared personal information are subject to appropriate personal-information-protection obligations; for entrusted processing, require confidentiality and effective safeguards, limit the processor to provider instructions and entrusted scope, supervise its processing, and require relevant data-protection measures by agreement.",
+            "actor": "Baidu intelligent cloud",
+            "object": "Licensee personal information shared with affiliates or third parties or entrusted to processors",
+            "trigger": "Baidu shares or entrusts personal-information processing for the stated product/service, technical-support, customer-support, or user-experience purposes."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use shared personal information for any purpose other than the entrusted purpose and scope specified by Baidu's instructions.",
+            "actor": "third-party recipient or entrusted processor",
+            "object": "Licensee personal information shared or entrusted for processing",
+            "trigger": "The recipient receives the personal information under the sharing or entrusted-processing arrangement."
+          }
+        ]
+      },
+      {
+        "start_line": 229,
+        "end_line": 230,
+        "clause_label": "provider_service_refusal_and_suspension_right",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "licensee_violates_user_service_agreement",
+              "licensee_uses_service_for_illegal_or_noncompliant_activity_or_infringes_others_lawful_rights"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, Baidu's right to refuse continued service and, for illegal, noncompliant, or rights-infringing use, to suspend or terminate service and retain legal remedies.",
+        "condition_explanation": "licensee_violates_user_service_agreement means a violation of the User Service Agreement. The second predicate means illegal or noncompliant activity or infringement of another person's lawful rights.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 234,
+        "end_line": 234,
+        "clause_label": "early_service_end_by_mutual_agreement",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "both_parties_agree_to_end_service_early",
+          "requires": true
+        },
+        "actor_role": "both_parties",
+        "scope_note": "User Service Agreement, early-ending provision; the service term ends early if both parties agree.",
+        "condition_explanation": "both_parties_agree_to_end_service_early requires agreement by both parties to end the service early.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 236,
+        "end_line": 236,
+        "clause_label": "terminate_service_and_delete_data_for_serious_breach",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_seriously_breaches_agreement_including_legal_violation_or_failure_to_perform_agreement_promise",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, early termination provision; Baidu may terminate the service early and delete the licensee's data for the stated serious breach.",
+        "condition_explanation": "licensee_seriously_breaches_agreement_including_legal_violation_or_failure_to_perform_agreement_promise includes serious breach of the agreement, violation of applicable laws or regulations, or failure to fulfill an agreement undertaking.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 238,
+        "end_line": 238,
+        "clause_label": "suspend_or_terminate_for_security_threat_impact",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_website_is_affected_by_network_security_threat_and_affects_provider_or_other_networks_or_servers",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, security-threat termination provision; Baidu may suspend or terminate service if threats affecting the licensee's website affect Baidu or other networks or servers.",
+        "condition_explanation": "The predicate refers to threats such as computer viruses or network attacks that affect the licensee's website and consequently affect Baidu or other networks or servers.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 240,
+        "end_line": 246,
+        "clause_label": "output_publication_duties",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_publishes_or_distributes_output_generated_by_ai_model_in_service",
+          "requires": {
+            "all": [
+              "check_output_truthfulness_and_accuracy_and_avoid_false_information",
+              "fulfill_applicable_law_and_regulatory_labeling_duties",
+              "avoid_publishing_or_distributing_output_violating_law_or_agreement"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "User Service Agreement, AI-generated output; applies only when the licensee publishes or distributes output generated by an AI model in the service. The output is not presumed to be a derivative of the model.",
+        "condition_explanation": "check_output_truthfulness_and_accuracy_and_avoid_false_information requires active verification of truth and accuracy and avoidance of disseminating false information. fulfill_applicable_law_and_regulatory_labeling_duties applies labeling obligations required by laws and regulatory requirements. avoid_publishing_or_distributing_output_violating_law_or_agreement covers output content that violates applicable law or the agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Actively verify the truthfulness and accuracy of the output and avoid disseminating false information.",
+            "actor": "licensee",
+            "object": "AI-model-generated output from the service that the licensee publishes or distributes",
+            "trigger": "Before or in connection with publishing or distributing the output."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Perform labeling required by applicable laws and regulatory requirements.",
+            "actor": "licensee",
+            "object": "AI-model-generated output from the service that the licensee publishes or distributes",
+            "trigger": "The licensee publishes or distributes the output and applicable law or regulatory requirements impose a labeling duty."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not publish or distribute output content that violates applicable law or the agreement.",
+            "actor": "licensee",
+            "object": "AI-model-generated output from the service",
+            "trigger": "The licensee publishes or distributes the output."
+          }
+        ]
+      },
+      {
+        "start_line": 254,
+        "end_line": 254,
+        "clause_label": "provider_service_delivery_commitment",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "agreement_applies",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, provider undertaking to provide products and services according to the agreement.",
+        "condition_explanation": "agreement_applies means the provider has undertaken to provide products and services under this agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide products and services in accordance with the agreement and perform the agreement's obligations and responsibilities.",
+            "actor": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+            "object": "Products and services promised under the User Service Agreement",
+            "trigger": "The agreement applies."
+          }
+        ]
+      },
+      {
+        "start_line": 260,
+        "end_line": 260,
+        "clause_label": "provider_confidentiality_and_privacy_protection",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_receives_customer_confidential_information",
+          "requires": "disclosure_is_required_by_law_or_authorized_by_customer"
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, provider commitment to protect customer trade secrets, confidential information, and privacy; disclosure to a third party is barred absent a legal reason or the customer's permission.",
+        "condition_explanation": "provider_receives_customer_confidential_information means Baidu holds the customer's confidential information or trade secrets. disclosure_is_required_by_law_or_authorized_by_customer captures the stated exceptions.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not disclose the customer's confidential information to a third party except for a legal reason or with the customer's permission.",
+            "actor": "Baidu intelligent cloud",
+            "object": "Customer confidential information and trade secrets",
+            "trigger": "Baidu holds the information and no legal reason for disclosure or customer permission exists."
+          }
+        ]
+      },
+      {
+        "start_line": 264,
+        "end_line": 264,
+        "clause_label": "provider_maintain_underlying_architecture_and_own_software",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "provider_provides_service",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, provider's operational-maintenance commitment limited to underlying technical architecture below the operating system and software supplied by Baidu. Customer-installed third-party applications are the customer's responsibility.",
+        "condition_explanation": "provider_provides_service means Baidu provides the service whose underlying architecture or Baidu-supplied software is to be maintained.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide underlying technical-architecture support below the operating system and operate and maintain software supplied by Baidu.",
+            "actor": "Baidu intelligent cloud",
+            "object": "Underlying service technical architecture and Baidu-supplied software",
+            "trigger": "Baidu provides the relevant service."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The chunk includes behavioral restrictions, data-processing terms, service termination rights, AI-output duties, and service-provider commitments; it does not grant a general license to copy, modify, distribute, sublicense, or commercially exploit Baidu materials.",
+      "Product-specific rules, orders, and incorporated documents may add terms; their contents are not supplied here. The threshold for resource-arrears suspension is left to product documentation.",
+      "Headings and blank lines are audited as context or nonoperative. Provider rights to suspend, terminate, or refuse service are recorded as permissions, not duties."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0098",
+        "status": "MODELED",
+        "clause_labels": [
+          "restrict_threatening_attack_activity"
+        ],
+        "reason": "The conditional restriction and its attack, threat, and failure-to-correct conditions are modeled."
+      },
+      {
+        "unit_id": "P0099",
+        "status": "MODELED",
+        "clause_labels": [
+          "prohibit_malicious_tampering_with_ai_labels"
+        ],
+        "reason": "The prohibition covers malicious label tampering, concealment, assistance, and harmful improper labeling."
+      },
+      {
+        "unit_id": "P0100",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only; it identifies the data-processing topic but imposes no independent duty."
+      },
+      {
+        "unit_id": "P0101",
+        "status": "MODELED",
+        "clause_labels": [
+          "content_storage_region_and_transfer_exceptions"
+        ],
+        "reason": "The selected-region restriction and listed alternative exceptions are modeled."
+      },
+      {
+        "unit_id": "P0102",
+        "status": "MODELED",
+        "clause_labels": [
+          "restrict_export_controlled_service_provision_and_use"
+        ],
+        "reason": "The export-control and sanctions restrictions and the stated authority-permission exception are modeled."
+      },
+      {
+        "unit_id": "P0103",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorize_support_information_processing"
+        ],
+        "reason": "The authorization for affiliates or authorized partners to process information for customer support is captured."
+      },
+      {
+        "unit_id": "P0104",
+        "status": "MODELED",
+        "clause_labels": [
+          "share_and_entrust_personal_information_for_service"
+        ],
+        "reason": "Sharing purposes, processor limits, safeguards, supervision, and the no-other-use restriction are captured."
+      },
+      {
+        "unit_id": "P0105",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_service_refusal_and_suspension_right"
+        ],
+        "reason": "The provider's refusal, suspension, and termination rights for the stated conduct are modeled."
+      },
+      {
+        "unit_id": "P0106",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "The text introduces the following early-termination list; it is not itself the mutual-agreement condition."
+      },
+      {
+        "unit_id": "P0107",
+        "status": "MODELED",
+        "clause_labels": [
+          "early_service_end_by_mutual_agreement"
+        ],
+        "reason": "The operative mutual-agreement condition is modeled."
+      },
+      {
+        "unit_id": "P0108",
+        "status": "MODELED",
+        "clause_labels": [
+          "terminate_service_and_delete_data_for_serious_breach"
+        ],
+        "reason": "The provider's early-termination and data-deletion rights for serious breach are modeled."
+      },
+      {
+        "unit_id": "P0109",
+        "status": "MODELED",
+        "clause_labels": [
+          "suspend_or_terminate_for_security_threat_impact"
+        ],
+        "reason": "The conditional provider suspension or termination right when a website security threat affects the provider or other networks or servers is modeled."
+      },
+      {
+        "unit_id": "P0110",
+        "status": "MODELED",
+        "clause_labels": [
+          "output_publication_duties"
+        ],
+        "reason": "The output-publication trigger introduces the duties modeled in the cited clause."
+      },
+      {
+        "unit_id": "P0111",
+        "status": "MODELED",
+        "clause_labels": [
+          "output_publication_duties"
+        ],
+        "reason": "Truthfulness and accuracy checking and avoiding false information are included."
+      },
+      {
+        "unit_id": "P0112",
+        "status": "MODELED",
+        "clause_labels": [
+          "output_publication_duties"
+        ],
+        "reason": "Applicable legal and regulatory labeling duties are included."
+      },
+      {
+        "unit_id": "P0113",
+        "status": "MODELED",
+        "clause_labels": [
+          "output_publication_duties"
+        ],
+        "reason": "The restriction on publishing or distributing output that violates law or the agreement is included."
+      },
+      {
+        "unit_id": "P0114",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading and numbered subheading introduce the provider section; they make no independent operative commitment."
+      },
+      {
+        "unit_id": "P0115",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_service_delivery_commitment"
+        ],
+        "reason": "The provider's commitment to supply products and services under the agreement is modeled."
+      },
+      {
+        "unit_id": "P0116",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The possible delegation of services and potential separate agreements are descriptive and impose no action duty in this paragraph."
+      },
+      {
+        "unit_id": "P0117",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only; no independent operative content."
+      },
+      {
+        "unit_id": "P0118",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_confidentiality_and_privacy_protection"
+        ],
+        "reason": "The provider's nondisclosure obligation and its legal-reason/customer-permission exceptions are modeled."
+      },
+      {
+        "unit_id": "P0119",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading introducing technical-architecture support; the operative commitment appears in the following paragraph."
+      },
+      {
+        "unit_id": "P0120",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The paragraph assigns responsibility for customer-installed third-party applications and describes the provider's support boundary; it does not establish a relevant licensee activity constraint or explicit provider delivery requirement beyond the separately modeled commitment."
+      },
+      {
+        "unit_id": "P0121",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading only; it introduces service-disclaimer text."
+      },
+      {
+        "unit_id": "P0122",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Blank line; no operative text."
+      },
+      {
+        "unit_id": "P0123",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Account authorization and attribution of account actions and fees do not establish a relevant artifact-use constraint here."
+      },
+      {
+        "unit_id": "P0124",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading introducing compatibility disclaimer text."
+      },
+      {
+        "unit_id": "P0125",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Compatibility and accuracy disclaimers and the recommendation to stop use and contact support are outside this activity-constraint extraction."
+      },
+      {
+        "unit_id": "P0126",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading introducing free-resource terms."
+      },
+      {
+        "unit_id": "P0127",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The free-service availability disclaimer and possible future fee notice impose no present activity duty."
+      },
+      {
+        "unit_id": "P0128",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading introducing ICP filing information terms."
+      },
+      {
+        "unit_id": "P0129",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The paragraph concerns ICP filing accuracy, updates, collection, and verification, not a relevant artifact-use activity."
+      },
+      {
+        "unit_id": "P0130",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "ICP-filing information-use and third-party disclosure terms concern filing data rather than the allowed artifact-use activities."
+      },
+      {
+        "unit_id": "P0131",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Heading only; the resource-abuse enforcement right is stated in the following paragraph."
+      },
+      {
+        "unit_id": "P0132",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The provider's resource-abuse enforcement right is not an express behavioral duty in this paragraph."
+      },
+      {
+        "unit_id": "P0133",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading introducing arrears-related service restrictions."
+      },
+      {
+        "unit_id": "P0134",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The paragraph concerns provider suspension rights for arrears, consequences, and account-level billing setoff; it does not state an additional activity constraint to model."
+      },
+      {
+        "unit_id": "P0135",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The paragraph concerns provider remedies for arrears, not artifact-use permissions or prohibitions."
+      }
+    ]
+  },
+  "attempt": 3
+}

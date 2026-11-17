@@ -1,0 +1,174 @@
+{
+  "case_id": "chain-0083-ab12718f0434",
+  "input_group_row": 83,
+  "aggregate_count": 17,
+  "combination": {
+    "GitHub许可证": "BUSL-1.1",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "17"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0083-ab12718f0434",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0083-ab12718f0434:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:fef5a7f56d20f713"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "non_production_use_and_compliance_with_current_license_requirements"
+          },
+          "S": {
+            "artifact": "chain-0083-ab12718f0434:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:fef5a7f56d20f713"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "production_use_permitted_by_applicable_additional_use_grant"
+          },
+          "S": {
+            "artifact": "chain-0083-ab12718f0434:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0083-ab12718f0434:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If this use concerns the BUSL Licensed Work, it must be non-production use and comply with the current license requirements; production use requires permission under an applicable Additional Use Grant.",
+        "trigger": "all",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "production_use",
+          "current_license_requirements_complied_with",
+          "applicable_additional_use_grant"
+        ],
+        "source_refs": [
+          "license-text:downstream:fef5a7f56d20f713"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes a remote service call and a link to the upstream Apache-2.0 asset, while recording code modification as not applicable. It does not establish that the BUSL Licensed Work is itself used, bundled, modified, or distributed, or that the two licenses govern the same subject.",
+      "The BUSL excerpt describes non-production use and a possible Additional Use Grant but does not include the applicable grant, its contents, or the specific work/version and transition-date details. No conclusion about production-use permission or a violation follows from the supplied facts.",
+      "The provided BUSL excerpts do not establish a network-service obligation triggered solely by API use. The Figure 10 network pattern is synthetic and is not applied."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 25730,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1062,
+    "output_tokens_details": {
+      "reasoning_tokens": 332
+    },
+    "total_tokens": 26792,
+    "attribution": {
+      "items": {
+        "msg_092ea687b4703b24016af52ee4665087d09b0196d213321be0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_092ea687b4703b24016af52ee4665487d0a630896d79e851d7": {
+          "input_tokens": 23660,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23660,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_092ea687b4703b24016af52eeb034c87d0b4c27652ef4a0396": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 730,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 730
+            }
+          ]
+        },
+        "rs_092ea687b4703b24016af52eeaec5087d0aeff107b2c9e3298": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 332
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "3d075c5893c9f4aaff38af35de3559ff2014888d178c8831efd9ef0fcc27ce92",
+  "elapsed_seconds": 30.34
+}

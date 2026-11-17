@@ -1,0 +1,74 @@
+{
+  "case_id": "chain-9045-4a70e294d6b3",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-9045-4a70e294d6b3:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Include the copyright notice and permission notice in copies or substantial portions of the software where the MIT notice condition applies.",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "whether copies or substantial portions of the upstream software are involved"
+      ],
+      "source_refs": [
+        "license-text:upstream:3e7b560cc4d520e8"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-9045-4a70e294d6b3:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the skill directory contains an original license or source notice, prioritize compliance with that notice.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "skill_directory_contains_original_license_or_source_notice"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "skill_directory_contains_original_license_or_source_notice"
+      ],
+      "source_refs": [
+        "license-text:downstream:6679a02811750571"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-9045-4a70e294d6b3:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Before commercial use, redistribution, or large-scale modification, independently confirm the relevant skill's provenance and licensing boundaries.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          {
+            "any": [
+              "commercial_use",
+              "redistribution",
+              "large_scale_modification"
+            ]
+          }
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification"
+      ],
+      "source_refs": [
+        "license-text:downstream:6679a02811750571"
+      ]
+    }
+  ]
+}

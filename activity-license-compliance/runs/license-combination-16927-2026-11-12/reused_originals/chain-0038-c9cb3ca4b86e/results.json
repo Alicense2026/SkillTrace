@@ -1,0 +1,137 @@
+{
+  "case_id": "chain-0038-c9cb3ca4b86e",
+  "status": "SUCCESS",
+  "request_sha256": "736efb6b0b638ce79a8130de4761b65f69bcf0781893c27e6a339a375bcd0533",
+  "analysis": {
+    "case_id": "chain-0038-c9cb3ca4b86e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": true,
+            "when": "using_services_to_develop_competing_models_or_to_reverse_engineer_extract_or_replicate_service_components"
+          },
+          "S": {
+            "artifact": "chain-0038-c9cb3ca4b86e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b2a9412c1561cfb2"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_at_no_charge_through_network_server"
+          },
+          "S": {
+            "artifact": "chain-0038-c9cb3ca4b86e:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API Additional Terms of Service 的 L31-L34 摘录禁止使用服务开发与其竞争的模型，以及逆向工程、提取或复制服务组件；当前事实仅确认 API 使用和远程调用，未表明存在上述目的或行为。",
+      "AGPL-3.0 第13条摘录仅在修改了受涵盖程序且该版本支持网络远程交互时要求提供对应源码。记录说明代码修改不适用；远程调用的是 Gemini API，不能据此认定下游 AGPL 程序提供网络服务或触发该条义务。",
+      "上游服务与下游 AGPL 对象的共同适用范围未建立；没有依据认定许可条款存在冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得使用 Gemini API 服务开发与该服务竞争的模型，也不得尝试逆向工程、提取或复制服务组件（包括底层数据或模型）。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0038-c9cb3ca4b86e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_services_to_develop_competing_models_or_to_reverse_engineer_extract_or_replicate_service_components",
+        "unresolved_predicates": [
+          "competing_model_development",
+          "reverse_engineering_extraction_or_replication"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17216,
+    "input_tokens_details": {
+      "cached_tokens": 17024,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 959,
+    "output_tokens_details": {
+      "reasoning_tokens": 247
+    },
+    "total_tokens": 18175,
+    "attribution": {
+      "items": {
+        "msg_0d45607ed863a0c7016af2f88dcba487d28e006b9d5aa5345e": {
+          "input_tokens": 15184,
+          "cached_tokens": 14994,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15184,
+              "cached_tokens": 14994,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d45607ed863a0c7016af2f892c73087d2958216338361c2c5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 712,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 712
+            }
+          ]
+        },
+        "rs_0d45607ed863a0c7016af2f892ab8487d2b6054232aa0ce672": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 247
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.552,
+  "auto_applied": false,
+  "aggregate_count": 48
+}

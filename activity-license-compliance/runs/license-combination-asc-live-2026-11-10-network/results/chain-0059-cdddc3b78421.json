@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0059-cdddc3b78421",
+  "status": "SUCCESS",
+  "request_sha256": "b2f2b6ab3a3a8e1a1450776ac99c30b0c0c3450d8e2748bd753a5e193938d452",
+  "analysis": {
+    "case_id": "chain-0059-cdddc3b78421",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0059-cdddc3b78421:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:60630457334fda6b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0059-cdddc3b78421:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Include the copyright notice and permission notice in copies or substantial portions of the upstream MIT Software.",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "subject": {
+          "artifact": "chain-0059-cdddc3b78421:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Retain applicable notices when using the downstream BSD-3-Clause Software.",
+        "source_refs": [
+          "license-text:downstream:60630457334fda6b"
+        ],
+        "subject": {
+          "artifact": "chain-0059-cdddc3b78421:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_software_use",
+          "retain_applicable_notices"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes use, linking, and remote interaction with the upstream asset, while code modification is stated not to apply. It does not establish distribution, copying, bundling, or use of the downstream artifact itself.",
+      "The provided excerpts contain no specific RemoteInteraction or Link rule. The dependency/bundle scope is unknown, and the API relationship alone does not establish that both licenses constrain the same object; no license-license conflict is supported on the checked facts.",
+      "The MIT and BSD structured rules are marked FIRST_PASS_REVIEW_REQUIRED. The cited excerpts support the notice conditions, but do not resolve any broader scope questions."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20110,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1001,
+    "output_tokens_details": {
+      "reasoning_tokens": 266
+    },
+    "total_tokens": 21111,
+    "attribution": {
+      "items": {
+        "msg_039fe6178da7c976016af2f967cae087d29498a4f3f08f2ae3": {
+          "input_tokens": 18078,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18078,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_039fe6178da7c976016af2f96daccc87d2952b2f6b1f570cda": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 735,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 735
+            }
+          ]
+        },
+        "rs_039fe6178da7c976016af2f96d911c87d2b7be04acd014af2f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 266
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.605,
+  "auto_applied": false,
+  "aggregate_count": 22
+}

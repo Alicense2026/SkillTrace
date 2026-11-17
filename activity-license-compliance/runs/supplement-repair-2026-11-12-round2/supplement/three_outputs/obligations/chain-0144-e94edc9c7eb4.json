@@ -1,0 +1,33 @@
+{
+  "case_id": "chain-0144-e94edc9c7eb4",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 Gemini Services 时，不得将其用于开发与 Services 竞争的模型，或反向工程、提取、复制其任何组件（包括底层数据或模型）。",
+      "source_refs": [
+        "license-text:upstream:ffe5b0021e0b945a"
+      ],
+      "subject": {
+        "artifact": "chain-0144-e94edc9c7eb4:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          {
+            "any": [
+              "develop_competing_model",
+              "reverse_engineer_extract_or_replicate_service_component"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "develop_competing_model",
+        "reverse_engineer_extract_or_replicate_service_component"
+      ]
+    }
+  ]
+}

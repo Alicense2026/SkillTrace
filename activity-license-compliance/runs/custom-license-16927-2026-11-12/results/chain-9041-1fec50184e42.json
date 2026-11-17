@@ -1,0 +1,349 @@
+{
+  "case_id": "chain-9041-1fec50184e42",
+  "source_csv_line": 9042,
+  "row": {
+    "github_repo": "computer-science-skills-collection",
+    "github_url": "https://github.com/bighardperson/computer-science-skills-collection",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-3-pro-image-preview",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: skills/AI绘图/scripts/generate_image.py:114 ｜ 调用原文: response = client.models.generate_content( ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: generate_image.py 通过 google-genai 客户端实际调用该图像生成模型",
+    "batch": "4001-4500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "bighardperson/computer-science-skills-collection",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "9977e77a6f6c286cd08ea0016d12ee25190bdae8af647bcd5e798b7e5cef96b2",
+    "filename": "_licenseref_full/texts/9977e77a6f6c286cd08ea0016d12ee25190bdae8af647bcd5e798b7e5cef96b2.txt",
+    "evidence_file": "LICENSE_NOTICE.md",
+    "acquisition": "zip:mirror:computer-science-skills-collection-HEAD/LICENSE_NOTICE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-9041-1fec50184e42",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1af8b8e098b77e96"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "use_of_services_to_develop_competing_models_or_reverse_engineer_extract_or_replicate_service_components"
+          },
+          "S": {
+            "artifact": "chain-9041-1fec50184e42:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prioritize_compliance_with_that_license_or_source_notice",
+            "when": "skill_directory_contains_original_license_or_source_notice"
+          },
+          "S": {
+            "artifact": "chain-9041-1fec50184e42:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9041-1fec50184e42:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9041-1fec50184e42:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9041-1fec50184e42:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 Gemini API 条款摘录标记为 FIRST_PASS_REVIEW_REQUIRED；禁止范围按摘录限定为利用服务开发竞争模型，或逆向、提取、复制服务组件。事实仅证明远程图像生成调用，未证明这些触发行为。",
+      "下游 L13 仅在 skill 目录包含原始许可或来源说明时要求优先遵守该说明；该条件及说明内容未提供。L14 是来源与许可边界确认要求，不授予商用或再分发许可。",
+      "对象图确认的是 API 链接/远程调用，不证明下游资产是上游模型权重、衍生物或组合产品；未据此推定许可共同约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得利用服务开发与服务竞争的模型，亦不得尝试逆向工程、提取或复制服务组件（包括底层数据或模型参数权重）。",
+        "source_refs": [
+          "license-text:upstream:1af8b8e098b77e96"
+        ],
+        "subject": {
+          "artifact": "chain-9041-1fec50184e42:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_of_services_to_develop_competing_models_or_reverse_engineer_extract_or_replicate_service_components"
+          ]
+        },
+        "unresolved_predicates": [
+          "use_of_services_to_develop_competing_models",
+          "reverse_engineering_extraction_or_replication_of_service_components"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该 skill 目录包含原始 license 或来源说明，优先遵守该许可或说明；其具体要求未在摘录中给出。",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "subject": {
+          "artifact": "chain-9041-1fec50184e42:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "skill_directory_contains_original_license_or_source_notice"
+          ]
+        },
+        "unresolved_predicates": [
+          "skill_directory_contains_original_license_or_source_notice"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在商用、再分发或大规模改造前，确认对应 skill 的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "subject": {
+          "artifact": "chain-9041-1fec50184e42:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "commercial_use",
+            "redistribution",
+            "large_scale_modification"
+          ]
+        },
+        "unresolved_predicates": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification",
+          "confirmation_of_skill_source_and_license_boundaries"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在商用、再分发或大规模改造前，确认对应 skill 的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "subject": {
+          "artifact": "chain-9041-1fec50184e42:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "commercial_use",
+            "redistribution",
+            "large_scale_modification"
+          ]
+        },
+        "unresolved_predicates": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification",
+          "confirmation_of_skill_source_and_license_boundaries"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在商用、再分发或大规模改造前，确认对应 skill 的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "subject": {
+          "artifact": "chain-9041-1fec50184e42:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "commercial_use",
+            "redistribution",
+            "large_scale_modification"
+          ]
+        },
+        "unresolved_predicates": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification",
+          "confirmation_of_skill_source_and_license_boundaries"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18190,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2293,
+    "output_tokens_details": {
+      "reasoning_tokens": 436
+    },
+    "total_tokens": 20483,
+    "attribution": {
+      "items": {
+        "msg_02f1e37ca2e3cadb016af53c2a96bc87d0aeb7890f98af2d51": {
+          "input_tokens": 16120,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16120,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02f1e37ca2e3cadb016af53c2a96bc87d0b7ea75f798fc57f6": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02f1e37ca2e3cadb016af53c33608487d08e1202f1fd6b3acf": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1857,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1857
+            }
+          ]
+        },
+        "rs_02f1e37ca2e3cadb016af53c3344cc87d0b275ef36de0209ec": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 436
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "b2e7034f8963d5ac37e321164da6186faa4fa6b21792db58b2c7d061631044fd",
+  "elapsed_seconds": 49.27
+}

@@ -1,0 +1,135 @@
+{
+  "case_id": "chain-0009-c41f34e5c190",
+  "status": "SUCCESS",
+  "request_sha256": "99c121eb3aab3e85e06ccd00439b56a64535e635bb7c3f26fb079c4a6f41eec9",
+  "analysis": {
+    "case_id": "chain-0009-c41f34e5c190",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": true,
+            "when": {
+              "any": [
+                "develop_models_competing_with_Gemini_Services",
+                "attempt_reverse_engineer_extract_or_replicate_Service_components"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0009-c41f34e5c190:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini 条款摘录明确针对开发与 Services 竞争的模型，以及对 Services 组件进行逆向工程、提取或复制；没有证据表明本次远程 API 调用实施了这些行为。结构化禁用规则的无条件表示需结合原文范围理解。",
+      "MIT 原文条款约束 downstream 软件，但已知事实仅确认对 upstream 服务的 Use、Link 和 RemoteInteraction；没有事实证明对 MIT 对象实施了使用、复制、分发或其他相关活动，因此未将 MIT 条款视为本次已触发的冲突或义务。",
+      "对象图未确定上下游许可约束是否覆盖同一对象；但本例没有发现可据此成立的许可证冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Gemini Services 时，不得将其用于开发与 Services 竞争的模型，也不得尝试逆向工程、提取或复制 Services 的组件（包括底层数据或模型参数权重）。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0009-c41f34e5c190:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            {
+              "any": [
+                "develop_models_competing_with_Gemini_Services",
+                "attempt_reverse_engineer_extract_or_replicate_Service_components"
+              ]
+            }
+          ]
+        },
+        "unresolved_predicates": [
+          "develop_models_competing_with_Gemini_Services",
+          "attempt_reverse_engineer_extract_or_replicate_Service_components"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19061,
+    "input_tokens_details": {
+      "cached_tokens": 18944,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 942,
+    "output_tokens_details": {
+      "reasoning_tokens": 310
+    },
+    "total_tokens": 20003,
+    "attribution": {
+      "items": {
+        "msg_0ed8827a04f9aa1b016af2f6fccdb487d19f1de8a2249b3cd5": {
+          "input_tokens": 17029,
+          "cached_tokens": 16914,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17029,
+              "cached_tokens": 16914,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ed8827a04f9aa1b016af2f703d70c87d188c7c7ef4dd3ae15": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 632,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 632
+            }
+          ]
+        },
+        "rs_0ed8827a04f9aa1b016af2f703bb7c87d1beb855621596e4d6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 310
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.763,
+  "auto_applied": false,
+  "aggregate_count": 504
+}

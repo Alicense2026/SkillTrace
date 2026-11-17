@@ -1,0 +1,267 @@
+{
+  "request_sha256": "80f94ceb72e5284730e4bd07dac7908661148cd89921a6b969eb67ba4309c7f8",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 338,
+        "end_line": 338,
+        "clause_label": "nonrenewal_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "party_intends_not_to_renew",
+              "notice_given_at_least_15_days_before_end_of_current_term"
+            ]
+          },
+          "requires": "written_notice_to_other_party"
+        },
+        "actor_role": "either_party",
+        "scope_note": "Cohere agreement, Section 13(a): either Party may prevent automatic renewal by giving the other Party written notice before the stated deadline.",
+        "condition_explanation": "party_intends_not_to_renew means the Party elects not to renew; current term means the Initial Term or then-current Renewal Term, as applicable. Use is the closest available activity for giving notice.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 339,
+        "end_line": 339,
+        "clause_label": "terminate_via_website",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "either_party",
+        "scope_note": "Cohere agreement, Section 13(b): either Party may terminate the Agreement at any time via the Website.",
+        "condition_explanation": "Termination is available to either Party at any time and must be effected via the Website. Use is the closest available activity for termination.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 340,
+        "end_line": 340,
+        "clause_label": "terminate_for_uncured_material_breach",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "other_party_committed_material_breach",
+              "breaching_party_received_notice_of_breach",
+              "15_calendar_days_elapsed_since_receipt",
+              "material_breach_not_corrected"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "nonbreaching_party",
+        "scope_note": "Cohere agreement, Section 13(c): either Party may terminate if the other Party materially breaches and fails to correct the breach within 15 calendar days after receiving notice.",
+        "condition_explanation": "The termination right requires a material breach, notice to the breaching Party, and failure to correct within the 15-calendar-day cure period. Use is the closest available activity for termination.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 341,
+        "end_line": 341,
+        "clause_label": "cease_access_after_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "agreement_expired_or_terminated",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Cohere agreement, Section 13(d): on expiration or earlier termination, Customer must immediately cease accessing or using the Cohere API SaaS Services.",
+        "condition_explanation": "The prohibition applies immediately upon either expiration or earlier termination.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Immediately cease accessing and using the Cohere API SaaS Services.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services",
+            "trigger": "Upon expiration or earlier termination of the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 341,
+        "end_line": 341,
+        "clause_label": "cohere_posttermination_data_handling",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "agreement_terminated",
+              "customer_requests_within_30_calendar_days_following_termination"
+            ]
+          },
+          "requires": {
+            "any": [
+              "delete_customer_data_remaining_in_cohere_service_hardware_or_systems",
+              "otherwise_render_customer_data_inaccessible_in_cohere_service_hardware_or_systems"
+            ]
+          }
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere agreement, Section 13(d): at Customer’s request, Cohere will delete or render inaccessible remaining Customer Data, including Custom Models. The stated duty does not apply to API Data or Finetuning Data submitted in accordance with Section 3(a)(iii).",
+        "condition_explanation": "The request must be made within 30 calendar days following termination. Deletion or inaccessibility is required upon a timely request; the specified Section 3(a)(iii) data is excepted. Use represents the data-handling action; the precise action and object are stated in the obligation.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "At Customer’s timely request, delete or otherwise render inaccessible Customer Data remaining in hardware or systems used to provide the Cohere API SaaS Services, including Custom Models.",
+            "actor": "Cohere",
+            "object": "Customer Data remaining in Cohere service hardware or systems, including Custom Models, excluding API Data or Finetuning Data submitted in accordance with Section 3(a)(iii).",
+            "trigger": "Agreement termination and Customer request within 30 calendar days following termination; no deletion or inaccessibility duty for the specified Section 3(a)(iii) API Data or Finetuning Data."
+          }
+        ]
+      },
+      {
+        "start_line": 344,
+        "end_line": 344,
+        "clause_label": "notice_delivery_effectiveness",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "notice_delivered_in_writing_and_in_person",
+              "notice_delivered_by_email",
+              "notice_sent_by_overnight_courier",
+              "notice_sent_by_first_class_mail_postage_prepaid"
+            ]
+          },
+          "requires": "notice_sent_to_official_contact_designated_by_recipient"
+        },
+        "actor_role": "party_sending_notice",
+        "scope_note": "Cohere agreement, Section 14(a): notices are effective upon written in-person or email delivery, one day after sending by overnight courier, or five days after prepaid first-class mail is sent to the recipient’s designated official contact. Use represents giving notice.",
+        "condition_explanation": "The listed delivery methods are alternatives. Effectiveness depends on the method and its stated timing; notices must be sent to the designated official contact. Specific contact details continue in lines 345–350 and 352.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 352,
+        "end_line": 352,
+        "clause_label": "customer_notice_contact_maintenance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "during_the_term",
+          "requires": "keep_customer_contact_information_on_file_with_cohere_current"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Cohere agreement, Section 14(a): Customer is responsible for keeping its postal or email contact information on file with Cohere current at all times during the Term. Use represents maintaining the notice contact information.",
+        "condition_explanation": "The duty applies throughout the Term.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Keep Customer’s current postal or email contact information on file with Cohere.",
+            "actor": "Customer",
+            "object": "Customer’s notice contact information on file with Cohere.",
+            "trigger": "At all times during the Term."
+          }
+        ]
+      },
+      {
+        "start_line": 352,
+        "end_line": 352,
+        "clause_label": "cohere_notice_contact_change",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "post_new_contact_information_on_website",
+              "give_notice_of_new_contact_information_to_customer"
+            ]
+          }
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere agreement, Section 14(a): Cohere may change its contact information by posting the new information on the Website or giving notice to Customer.",
+        "condition_explanation": "The stated methods are alternatives. Use represents changing notice contact information.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Lines 335–336 are liability limitations and are excluded as nonoperative for this activity-constraint extraction.",
+      "The available activities do not include termination, giving notice, or data deletion; Use is used as the closest representation where necessary, with precise actions stated in scope_note and obligation_items.",
+      "Section 3(a)(iii), referenced for the post-termination data exception, is not included; its contents are not inferred."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0095",
+        "status": "MODELED",
+        "clause_labels": [
+          "nonrenewal_notice",
+          "terminate_via_website",
+          "terminate_for_uncured_material_breach",
+          "cease_access_after_termination",
+          "cohere_posttermination_data_handling",
+          "notice_delivery_effectiveness"
+        ],
+        "reason": "Lines 335–336 contain excluded liability limitations; lines 338–344 contain modeled nonrenewal, termination, post-termination cessation and data handling, and notice-delivery provisions."
+      },
+      {
+        "unit_id": "P0096",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 347 supplies a postal address in the notice-address listing and creates no independent activity rule."
+      },
+      {
+        "unit_id": "P0097",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 350 supplies Cohere’s notice email address and creates no independent activity rule."
+      },
+      {
+        "unit_id": "P0098",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_notice_contact_maintenance",
+          "cohere_notice_contact_change"
+        ],
+        "reason": "Line 352 permits Cohere to change its notice contact information by either of two methods and requires Customer to keep its contact information on file current during the Term."
+      }
+    ]
+  },
+  "attempt": 3
+}

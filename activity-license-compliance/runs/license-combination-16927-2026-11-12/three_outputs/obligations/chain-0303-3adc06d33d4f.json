@@ -1,0 +1,48 @@
+{
+  "case_id": "chain-0303-3adc06d33d4f",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0303-3adc06d33d4f:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Do not use the platform or its models in the prohibited ways described in the excerpt, including extracting platform data, parameters or code; specified restricted-purpose or decision-making use; reverse engineering; unauthorized modification or derivative creation; or using outputs/data to develop or train other models.",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "conduct_matches_prohibition_in_excerpt"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "subject": {
+        "artifact": "chain-0303-3adc06d33d4f:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the applicable service or feature is subject to the paid commercial-use terms, pay any required fee and follow the applicable product rules; the excerpt separately describes free-feature restrictions and paid-feature authorization.",
+      "trigger": {
+        "all": [
+          "activity:CommercialUse",
+          "paid_feature_or_model_applies"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "commercial_use",
+        "paid_feature_or_model_applies",
+        "required_fee_paid",
+        "product_rules_followed"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

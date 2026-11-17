@@ -1,0 +1,274 @@
+{
+  "request_sha256": "2af1fbeb243cff8f82bf05763b5c0ceb2dbf08dc8a640ccad2accd900582a220",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 246,
+        "end_line": 246,
+        "clause_label": "Cohere API SaaS Services — provisioning",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "during_term",
+          "requires": "customer_and_permitted_users_comply_with_agreement"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere must make the Cohere API SaaS Services available to Customer during the Term, subject to Customer’s and its Permitted Users’ compliance with the Agreement. This is a service-provision obligation, not a grant of software rights.",
+        "condition_explanation": "The obligation applies during the Term and is conditioned on Customer and its Permitted Users complying with the Agreement."
+      },
+      {
+        "start_line": 247,
+        "end_line": 247,
+        "clause_label": "Cohere API SaaS Services — Custom Model",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "custom_model_provided",
+          "requires": "use_solely_to_provide_customer_api_saas_services"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "If specified in an Order Form or selected by Customer on the Website, Cohere develops a Custom Model and provides the SaaS Services using it. Cohere must use that model solely to provide those services to Customer and destroy it upon termination or expiration. No Customer right to train or otherwise use the model is granted here.",
+        "condition_explanation": "This clause applies if a Custom Model is specified in an Order Form or selected on the Website. Cohere’s use is limited to providing the SaaS Services to Customer; destruction is triggered by termination or expiration."
+      },
+      {
+        "start_line": 248,
+        "end_line": 248,
+        "clause_label": "Customer’s Permitted User Responsibilities",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "permitted_users_access_or_use_services",
+          "requires": {
+            "all": [
+              "identify_and_authenticate_permitted_users",
+              "ensure_only_permitted_users_access_and_use",
+              "permitted_users_comply_with_agreement"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer is responsible for identifying and authenticating Permitted Users, restricting access and use to them, and ensuring their compliance with the Agreement.",
+        "condition_explanation": "These responsibilities apply to Customer’s Permitted Users’ access to or use of the Cohere API SaaS Service."
+      },
+      {
+        "start_line": 249,
+        "end_line": 249,
+        "clause_label": "Restrictions on Use — general restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "not_expressly_permitted_by_agreement_and_applicable_third_party_license"
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Access to or use of the Services or Cohere Products is prohibited unless expressly permitted by the Agreement; Licensed Third-Party Technology is additionally subject to its applicable third-party license. This is a restriction, not an affirmative license grant.",
+        "condition_explanation": "The prohibition applies when the access or use is not expressly permitted by the Agreement and, for Licensed Third-Party Technology, the applicable third-party license."
+      },
+      {
+        "start_line": 250,
+        "end_line": 250,
+        "clause_label": "Restrictions on Use — unlawful, infringing, harmful-purpose uses",
+        "activities": [
+          "Use",
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "access_or_use_services_or_products_or_develop_customer_application",
+          "requires": {
+            "any": [
+              "violates_usage_policy",
+              "infringes_or_violates_rights_or_lacks_required_data_consents_and_licenses",
+              "adversely_affects_cohere_reputation_goodwill_or_relationships",
+              "violates_applicable_law"
+            ]
+          }
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Prohibits access to or use of Services or Cohere Products, and development of a Customer Application, in any listed manner or for any listed purpose. Customer Data processing is expressly included in the rights-infringement restriction.",
+        "condition_explanation": "The prohibition applies if any listed condition holds: Usage Policy violation; rights infringement or violation, including processing Customer Data without required consents and licenses; adverse effects on Cohere’s reputation, goodwill, or relationships; or violation of applicable law."
+      },
+      {
+        "start_line": 251,
+        "end_line": 251,
+        "clause_label": "Restrictions on Use — competitive, replication, benchmarking, and competitor uses",
+        "activities": [
+          "Use",
+          "TrainModel",
+          "Combine",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "access_or_use_services_or_products_or_output_or_develop_customer_application",
+          "requires": {
+            "any": [
+              "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+              "purpose_is_replicating_services_or_products_look_and_feel",
+              "purpose_is_benchmarking_or_competitive_analysis",
+              "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+            ]
+          }
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Prohibits the specified uses of Services or Cohere Products, use of any Output, and development of a Customer Application for the listed purposes. Output is included as the object of a use restriction; it is not thereby licensed or assigned. Competitor status is reasonably determined by Cohere; the text gives large-language-model licensors or sellers as an included example.",
+        "condition_explanation": "The prohibition applies if any listed purpose or beneficiary condition holds. The direct-competitor condition includes entities offering large language models for license or sale."
+      },
+      {
+        "start_line": 252,
+        "end_line": 252,
+        "clause_label": "Restrictions on Use — access and making available",
+        "activities": [
+          "Distribute",
+          "Sublicense",
+          "ProvideNetworkService",
+          "RemoteInteraction"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "recipient_is_not_a_permitted_user"
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Prohibits distributing, sublicensing, permitting access to, or otherwise making the Services or any part available to any Person except a Permitted User. The exception is limited to access by Permitted Users and is not a general sublicensing grant.",
+        "condition_explanation": "The prohibition applies when the recipient is not a Permitted User."
+      },
+      {
+        "start_line": 253,
+        "end_line": 253,
+        "clause_label": "Restrictions on Use — modification and reverse engineering",
+        "activities": [
+          "Modify",
+          "CreateDerivative",
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "modification_without_cohere_prior_written_approval_or_decompilation_or_reverse_engineering_or_reverse_assembly_or_disassembly_of_object_code"
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Modification is prohibited without Cohere’s prior written approval. Decompiling, reverse engineering, reverse assembling, or disassembling object code of any Services or Cohere Products is prohibited. No broader permission to modify is granted.",
+        "condition_explanation": "The prohibition applies to modification when prior written approval has not been obtained, and applies to any of the listed object-code analysis acts."
+      },
+      {
+        "start_line": 254,
+        "end_line": 254,
+        "clause_label": "Restrictions on Use — proprietary notices",
+        "activities": [
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "requires": "remove_or_obscure_proprietary_notices_or_labels"
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Prohibits removing or obscuring proprietary notices or labels on the Services or Cohere Products.",
+        "condition_explanation": "The prohibition applies when a proprietary notice or label is removed or obscured."
+      },
+      {
+        "start_line": 255,
+        "end_line": 255,
+        "clause_label": "Restrictions on Use — Restricted Locations",
+        "activities": [
+          "Use",
+          "RemoteInteraction"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "access_or_use_from_restricted_location"
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Prohibits access to or use of Services or Cohere Products from a Restricted Location, defined to include Belarus, China (including Hong Kong and Macau), Iran, North Korea, Russia, and Syria, and locations Cohere later advises are restricted.",
+        "condition_explanation": "The prohibition applies when access or use is from a Restricted Location."
+      },
+      {
+        "start_line": 256,
+        "end_line": 256,
+        "clause_label": "Restrictions on Use — personal, family, or household purposes",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "purpose_is_personal_family_or_household"
+        },
+        "actor_role": "Customer and any other Person, including Permitted Users",
+        "scope_note": "Prohibits using the Cohere API SaaS Services or Cohere API for personal, family, or household purposes.",
+        "condition_explanation": "The prohibition applies when the purpose of use is personal, family, or household."
+      },
+      {
+        "start_line": 257,
+        "end_line": 267,
+        "clause_label": "Suspension of Access; Scheduled Downtime; Modifications",
+        "activities": [
+          "Use",
+          "RemoteInteraction"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "cohere_exercises_discretionary_suspension_or_modification_right",
+          "requires": "any_listed_suspension_or_modification_ground"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may suspend or revoke Customer’s access to or use of Cohere Products or Services at any time for any reason, including the listed grounds, and may make modifications to the Cohere API SaaS Services. It may temporarily suspend availability of a Custom Model after 24 consecutive hours without Customer access, but must promptly restore access when Customer attempts to access it. This clause grants Cohere discretionary rights; it does not authorize Customer activity.",
+        "condition_explanation": "The general suspension and modification rights are discretionary and may be exercised for any reason, with the listed reasons as nonexclusive examples. The Custom Model temporary-suspension provision applies after 24 consecutive hours without access, with restoration required promptly upon an access attempt."
+      }
+    ],
+    "coverage_notes": [
+      "The chunk is from a Cohere API SaaS Services agreement, not a standalone repository software license. The covered scope is the Cohere API, Cohere Platform, related Documentation, Services, and, where applicable, a Custom Model; separate terms may govern Licensed Third-Party Technology.",
+      "The earlier grant and definitions are outside this chunk. These lines do not establish an affirmative Customer license beyond the referenced Agreement, nor do they specify a Customer right to copy, train, distribute, or commercially exploit the Products.",
+      "The Usage Policy, Documentation, Order Forms, Website selections, and applicable third-party license may affect scope or conditions; their contents are not included here. Partner, trial, or other product schedules should not be presumed applicable.",
+      "Line 264 contains the apparent text error “ServicesI”; it is not separately extracted as an ASC clause."
+    ]
+  }
+}

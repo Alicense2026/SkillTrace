@@ -1,0 +1,511 @@
+{
+  "case_id": "skill-00107",
+  "csv_row": 108,
+  "source_excel_row": "181",
+  "status": "SUCCESS",
+  "request_sha256": "a63f65fd8700e834d75c3f4693b7e76ce1cf088168fd1b3741e3b40d1921b5a6",
+  "analysis": {
+    "case_id": "skill-00107",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "license_in_force_and_threshold_not_exceeded",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00107:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "applicable_laws_and_regulations_complied_with_and_acceptable_use_policy_adhered_to",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00107:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "meta_expressly_grants_rights",
+            "when": "release_date_monthly_active_users_of_licensee_or_affiliates_products_or_services_in_preceding_calendar_month_greater_than_700_million"
+          },
+          "S": {
+            "artifact": "skill-00107:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "reasonable_and_customary_use_in_describing_and_redistributing_materials_or_express_section_5_a_mark_license_applies",
+            "when": "use_of_name_or_mark_owned_by_or_associated_with_other_party_or_its_affiliate_in_connection_with_llama_materials"
+          },
+          "S": {
+            "artifact": "skill-00107:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "third_party_claim_arising_out_of_or_related_to_licensee_use_or_distribution_is_indemnified",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00107:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": false,
+            "when": "agreement_terminated"
+          },
+          "S": {
+            "artifact": "skill-00107:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00107:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对本地 Llama 3.1 Community License 与 MIT 原文。事实仅确认下游远程调用及使用上游服务；未确认模型权重、源码或副本进入下游仓库，也未确认分发、修改、训练或再许可，因此不将上游分发义务套用于 API 调用。",
+      "对象图的跨侧许可共同范围未知；MIT 对下游软件的许可不证明其覆盖 Llama Materials。没有据此认定许可冲突。",
+      "Llama 可接受使用政策及品牌指南仅以外部链接并入，文本未提供；不推断其具体要求。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游许可的被许可人使用 Llama Materials 时，须遵守适用法律法规（含贸易合规规定）并遵循该材料的可接受使用政策。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_laws_and_regulations_complied_with",
+          "acceptable_use_policy_adhered_to"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游许可的被许可人仅在许可生效且第2节门槛未阻止行使权利时，方可依据该许可使用 Llama Materials。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "license_in_force",
+          "threshold_not_exceeded"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若在 Llama 3.1 发布日、前一日历月内被许可人或其关联方提供的产品或服务月活超过 7 亿，上游被许可人须向 Meta 申请许可，且在 Meta 明确授予权利前不得行使协议权利。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "all",
+        "unresolved_predicates": [
+          "release_date_monthly_active_users_of_licensee_or_affiliates_products_or_services_in_preceding_calendar_month_greater_than_700_million",
+          "meta_expressly_grants_rights"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游被许可人使用 Meta 或其关联方名称、标识时，须限于合理惯常的材料描述或再分发，或适用第5(a)节明确授予的有限许可；使用获准的 Llama 标识还须遵守品牌指南。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_of_name_or_mark_owned_by_or_associated_with_other_party_or_its_affiliate_in_connection_with_llama_materials",
+        "unresolved_predicates": [
+          "use_of_name_or_mark",
+          "exception_applies",
+          "brand_guidelines_followed"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若第三方提出因上游被许可人使用或分发 Llama Materials 而产生或相关的索赔，上游被许可人须就该索赔向 Meta 作出赔偿并使其免责。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "third_party_claim_arising_out_of_or_related_to_licensee_use_or_distribution",
+        "unresolved_predicates": [
+          "third_party_claim_arising_out_of_or_related_to_licensee_use_or_distribution"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若协议终止，上游被许可人须停止使用 Llama Materials。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "agreement_terminated",
+        "unresolved_predicates": [
+          "agreement_terminated"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若协议终止，上游被许可人须删除 Llama Materials；删除事项无法映射为本任务允许的活动。",
+        "source_refs": [
+          "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+        ],
+        "subject": {
+          "artifact": "skill-00107:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "agreement_terminated",
+        "unresolved_predicates": [
+          "agreement_terminated"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "使用许可及门槛前提保留为条件义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认复制上游材料。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发或提供含上游材料的产品或服务。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认创作上游材料衍生作品。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认修改上游材料。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认使用上游材料或输出创建的模型被分发或提供。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "事实未显示接收者从被许可人处通过集成终端产品取得材料或衍生物。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发上游材料副本。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已知使用上游材料，保留法律合规与使用政策义务。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "门槛事实未知，保留申请与获准前不得行使权利的条件义务。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "保留标识使用限制及适用时的品牌指南义务。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "保留相关名称或标识的条件性限制。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供触发该条款的诉讼或程序事实。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "索赔触发事实未知，保留条件性赔偿义务。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          5
+        ],
+        "reason": "协议是否终止未知，保留终止时停止使用的义务。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          6
+        ],
+        "reason": "终止时删除义务保留；该行为超出活动词表。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "MIT 对下游软件使用明示无额外条件；与上游材料是不同对象。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认复制下游软件。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认修改下游软件。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认合并下游软件。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认发布下游软件。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发下游软件副本。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认再许可下游软件。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认出售下游软件副本。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00107-1794596221047074000-1.json",
+  "usage": {
+    "input_tokens": 22390,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3669,
+    "output_tokens_details": {
+      "reasoning_tokens": 236
+    },
+    "total_tokens": 26059,
+    "attribution": {
+      "items": {
+        "msg_0afd24fb19036ed5016af75d838e9087d2a6358fca021518af": {
+          "input_tokens": 19666,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19666,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0afd24fb19036ed5016af75d838e9087d2bf993bfd9e2b00bc": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0afd24fb19036ed5016af75d8833ec87d2a18e32b9e274d31d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3433,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3433
+            }
+          ]
+        },
+        "rs_0afd24fb19036ed5016af75d881cb887d2b426a6c1a1d06769": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 236
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

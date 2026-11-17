@@ -1,0 +1,126 @@
+{
+  "case_id": "chain-0034-1d85a5ee571c",
+  "status": "SUCCESS",
+  "request_sha256": "2376a32a4cd8a197a419981477ac88d4116b3770b8121be732bbf22a375a23b9",
+  "analysis": {
+    "case_id": "chain-0034-1d85a5ee571c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "Use"
+          },
+          "S": {
+            "artifact": "chain-0034-1d85a5ee571c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "依适用订单或其他订单确认，支付使用 Mistral AI Products 所产生的应付款项；摘录称发票日起30日内支付，但具体费用及适用订单未提供。",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "subject": {
+          "artifact": "chain-0034-1d85a5ee571c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "fees_due_under_applicable_order"
+          ]
+        },
+        "unresolved_predicates": [
+          "fees_due_under_applicable_order",
+          "payment_fulfilled"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游结构化规则仅包含费用条款；未提供可用于判定远程调用/API使用许可范围或限制的条款映射，不能据此推断此类条款不存在。",
+      "对象图确认远程调用及链接，但下游 MIT 对象与上游服务约束是否共同适用的范围为未知；没有依据判定许可冲突。",
+      "记录未证明下游软件被复制、修改、分发或并入服务。MIT 通知义务的摘录仅在相应活动及受保护对象适用时相关，不能仅凭远程调用判定触发或未履行。",
+      "上游费用条款摘录提及适用订单及应付款项；订单、费用及付款履行信息未提供。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18670,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 884,
+    "output_tokens_details": {
+      "reasoning_tokens": 309
+    },
+    "total_tokens": 19554,
+    "attribution": {
+      "items": {
+        "msg_067809a996589816016af2f817ef5887d29c0ffb23c3918e2d": {
+          "input_tokens": 16638,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16638,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_067809a996589816016af2f81dfa5887d2bcf1b66aed0ff45d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 575,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 575
+            }
+          ]
+        },
+        "rs_067809a996589816016af2f81de31887d29017c5ee6da0c86f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 309
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.767,
+  "auto_applied": false,
+  "aggregate_count": 56
+}

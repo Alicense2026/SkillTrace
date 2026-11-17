@@ -1,0 +1,541 @@
+{
+  "request_sha256": "85b7bf90d8d2df741662fc2c5ea34c500d17ca23bfe5132e81b5409d7d4ae6ac",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 126,
+        "end_line": 129,
+        "clause_label": "paid_service_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "paid_service_terms_followed_and_applicable_fee_paid"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Platform agreement, paid services; specific service terms and published fees govern. Users under 18 may not use paid services.",
+        "condition_explanation": "paid_service_terms_followed_and_applicable_fee_paid means the user accepts and follows the relevant paid-service agreement and pays the applicable published fee. The provider sets fees on the relevant service page. A refund is generally unavailable except where the relevant service has a special provision or provider fault alone prevents normal use.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use paid services if under 18 years of age.",
+            "actor": "user under 18",
+            "object": "paid platform service",
+            "trigger": "whenever the user is under 18"
+          }
+        ]
+      },
+      {
+        "start_line": 132,
+        "end_line": 134,
+        "clause_label": "free_service_conditions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "free_service_is_available",
+          "requires": "accept_service_conditions_and_limits"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Free and time-limited free services are available only as actually provided and subject to reasonable limits and changing availability.",
+        "condition_explanation": "free_service_is_available means the service is actually made available by the platform; conditions and limits are those applicable to that service.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 137,
+        "end_line": 143,
+        "clause_label": "output_marking",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not (law_allows_or_separate_written_agreement_or_platform_approved_removal_request_with_replacement_marking)"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibition concerns explicit or implicit marks embedded in platform AI-generated synthetic content or marks on the interaction interface. Special-reason removal requires written application and commitments; the clause does not expressly say approval is guaranteed.",
+        "condition_explanation": "law_allows_or_separate_written_agreement means an applicable legal exception or separate written agreement. platform_approved_removal_request_with_replacement_marking means the user submits a written application explaining reasons and use, undertakes applicable marking duties, and adds appropriate replacement marks after removal.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not tamper with, erase, obscure, or cover embedded explicit or implicit marks, including metadata marks and digital watermarks, or interaction-interface marks, except where law or a separate written agreement provides otherwise.",
+            "actor": "user",
+            "object": "platform-generated synthetic content and interface marks",
+            "trigger": "when handling marked content or interfaces, unless an applicable legal exception or separate written agreement applies"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Submit a written application detailing the reason and intended use for mark removal.",
+            "actor": "user requesting mark removal",
+            "object": "platform-generated synthetic content marks",
+            "trigger": "when applying for removal for special reasons"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Undertake to bear marking obligations applicable under the cited laws, regulations, and standards.",
+            "actor": "user requesting mark removal",
+            "object": "content after removal of platform marks",
+            "trigger": "when seeking removal"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Add appropriate replacement marks after removal, as required by applicable rules.",
+            "actor": "user requesting mark removal",
+            "object": "content after removal of platform marks",
+            "trigger": "after marks are removed"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear legal responsibility and risks resulting from mark removal.",
+            "actor": "user requesting mark removal",
+            "object": "mark removal",
+            "trigger": "when agreeing to removal"
+          }
+        ]
+      },
+      {
+        "start_line": 144,
+        "end_line": 146,
+        "clause_label": "advertising_and_anonymized_data",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "providing_platform_services_or_processing_user_content_as_described",
+          "requires": "applicable_law_complied_with_and_data_irreversibly_anonymized_for_the_described_analytics"
+        },
+        "actor_role": "provider",
+        "scope_note": "Provider may send advertising and may, as permitted by applicable law, process content using technical measures so recipients cannot re-identify individuals or conduct anonymized research, statistics, prediction, product improvement, commercial decision support, and machine-learning/model-algorithm training.",
+        "condition_explanation": "data_irreversibly_anonymized_for_the_described_analytics means the data recipient cannot identify a particular person and the data cannot be restored to identifiable form; line 146 states consent need not be separately obtained for data processed in this manner under applicable law.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 148,
+        "end_line": 166,
+        "clause_label": "platform_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "platform_service_agreement_in_effect",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "User may terminate by account cancellation, rejecting changes before effectiveness and stopping use, or expressly declining further service when platform termination conditions are met. Provider may terminate for the listed grounds, including breach, serious violations, contact failure, false registration information, rejection of updated terms, and other cases it considers requiring termination. Following termination, provider generally need not disclose account information, may retain user information after anonymization, and may pursue past breaches.",
+        "condition_explanation": "platform_service_agreement_in_effect ends through the user or provider termination paths stated in lines 149–161; the three-business-day contact correction period applies to the stated contact-change ground.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 168,
+        "end_line": 176,
+        "clause_label": "contact_details",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "registered_as_platform_user_and_receiving_services",
+          "requires": "provide_accurate_effective_contact_details_and_keep_them_updated"
+        },
+        "actor_role": "licensee",
+        "scope_note": "User duties concerning contact details and the agreed methods and effect of service of notices and legal documents.",
+        "condition_explanation": "provide_accurate_effective_contact_details_and_keep_them_updated includes timely updates, maintaining contactability, and accepting the stated electronic and judicial service methods.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide true, accurate, effective contact details, update them promptly when changed, and remain contactable.",
+            "actor": "user",
+            "object": "user contact details",
+            "trigger": "upon registration and throughout receipt of platform services"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear the legal consequences of inaccurate or outdated contact details that prevent or delay service of legal documents.",
+            "actor": "user",
+            "object": "contact details used for legal service",
+            "trigger": "when inaccurate or unupdated details prevent or delay service"
+          }
+        ]
+      },
+      {
+        "start_line": 181,
+        "end_line": 186,
+        "clause_label": "platform_commercial_use",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "paid_feature_and_paid_under_platform_rules",
+              "other_written_authorization"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Non-paid platform and model features are limited to noncommercial personal research or study. Paid features may be commercially used after payment or other authorization and in accordance with applicable rules. Default license for authorized use is nonexclusive, nontransferable, nonsublicensable, non-sub-licensable, and time-limited. Restrictions in lines 183–186 apply absent written consent; paid rule-compliant commercialization of models and generated content is expressly excepted from the relevant line 183 restriction.",
+        "condition_explanation": "paid_feature_and_paid_under_platform_rules means the feature is paid and the user pays the consideration required by then-effective rules and follows the product rules. other_written_authorization means authorization from Zhipu. Restrictions in lines 183–186 are subject to written consent where specified.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not commercially use non-paid platform or platform-model features; use them only for personal, noncommercial research or study.",
+            "actor": "user",
+            "object": "non-paid platform and platform-model features",
+            "trigger": "whenever using a non-paid feature"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not copy, transfer, sell, rent, lend, license, provide for another's use, or otherwise commercialize the platform, platform models, associated access keys, technical documentation, API interfaces, developer tools, or other technical tools, except as expressly permitted by Zhipu; paid rule-compliant commercialization of platform models and generated content is allowed.",
+            "actor": "user",
+            "object": "platform, platform models, associated keys, documentation, interfaces, and tools",
+            "trigger": "unless Zhipu expressly consents or the specific paid-use exception applies"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not create software with functionality substantially the same as the platform and platform models and provide it to third parties.",
+            "actor": "user",
+            "object": "software substantially duplicating platform functionality",
+            "trigger": "absent written consent"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not develop products or services competing with the platform or platform models.",
+            "actor": "user",
+            "object": "platform and platform models",
+            "trigger": "absent written consent"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not delete or modify platform or platform-model copyright notices, and inform customers and end users not to do so.",
+            "actor": "user",
+            "object": "platform and platform-model copyright notices",
+            "trigger": "when using or providing access to the platform or platform models"
+          }
+        ]
+      },
+      {
+        "start_line": 187,
+        "end_line": 188,
+        "clause_label": "input_output_rights_and_notices",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "preserve_attached_proprietary_rights_notices_and_links"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Input content copyright remains with its original author. The agreement states that copyright in generated content is maintained by the user, without inferring a broader output license; user is responsible for independent judgment and handling resulting IP issues. Prohibition on removing notices or links applies where attached to or included in the platform or presented content.",
+        "condition_explanation": "preserve_attached_proprietary_rights_notices_and_links applies where such notices or links are attached to or included in the platform or presented content.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not delete, conceal, modify, or replace proprietary-rights notices or other links attached to or included in the platform or presented content.",
+            "actor": "user",
+            "object": "platform and presented content",
+            "trigger": "when such notices or links are attached to or included in the material"
+          }
+        ]
+      },
+      {
+        "start_line": 190,
+        "end_line": 190,
+        "clause_label": "no_product_modification",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not expressly_permitted_by_agreement_or_authorized_in_writing"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to Zhipu-provided products; source code is not provided except where expressly licensed.",
+        "condition_explanation": "expressly_permitted_by_agreement_or_authorized_in_writing means an express license provision or written Zhipu permission authorizes modification.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify parameters or code of Zhipu-provided products.",
+            "actor": "user",
+            "object": "Zhipu-provided product parameters and code",
+            "trigger": "unless expressly licensed or authorized in writing"
+          }
+        ]
+      },
+      {
+        "start_line": 193,
+        "end_line": 193,
+        "clause_label": "indemnity_efforts",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_platform_or_platform_models",
+          "requires": "make_every_effort_to_prevent_related_claims_and_losses_to_zhipu"
+        },
+        "actor_role": "licensee",
+        "scope_note": "User promises efforts to prevent claims, arbitration, compensation, or losses related to use and bears related responsibility if such a situation occurs.",
+        "condition_explanation": "related_claims_and_losses_to_zhipu means claims, arbitration, compensation, or losses connected with the user's platform or model use.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use every effort to prevent Zhipu, its affiliates, and their employees from facing claims, arbitration, compensation, or losses related to the user's use; bear the related responsibility if such a situation occurs.",
+            "actor": "user",
+            "object": "claims and losses related to platform or model use",
+            "trigger": "when the user's use gives rise to such a situation"
+          }
+        ]
+      },
+      {
+        "start_line": 216,
+        "end_line": 218,
+        "clause_label": "privacy_and_data_license",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_uses_platform_services",
+          "requires": "privacy_policy_applies_and_no_separate_agreement_overrides_improvement_processing"
+        },
+        "actor_role": "provider",
+        "scope_note": "Personal-information processing is subject to the separately published privacy policy, which is not supplied. Provider may use data generated during use to locate, maintain, and optimize products unless separately agreed otherwise. User grants provider and affiliates a broad, nonexclusive, worldwide, perpetual, royalty-free license, including sublicensing, over non-personal text, images, video, audio, and other non-personal information provided, published, or formed during service use. Rights are not transferred by upload or publication; personal information is excluded from this non-personal-information license.",
+        "condition_explanation": "privacy_policy_applies refers to the incorporated but unsupplied Zhipu Open Platform Privacy Policy. improvement_processing_exception means a separate agreement with Zhipu provides otherwise.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 221,
+        "end_line": 221,
+        "clause_label": "minor_free_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_is_minor",
+          "requires": "guardian_consent_and_free_feature_used_for_study_or_research"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Minors may use only non-paid large-model-platform functions for study or research with guardian consent; minors may not recharge or use paid services.",
+        "condition_explanation": "guardian_consent_and_free_feature_used_for_study_or_research requires both guardian consent and a non-paid function used for study or research.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not recharge or use services requiring payment.",
+            "actor": "minor user",
+            "object": "paid platform services",
+            "trigger": "whenever the user is a minor"
+          }
+        ]
+      },
+      {
+        "start_line": 224,
+        "end_line": 224,
+        "clause_label": "export_sanctions_and_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not (sanctioned_destination_or_person_or_prohibited_end_use_or_controlled_input)"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to the service, its provision to restricted destinations/persons/entities, prohibited end uses, and user/end-user inputs containing material or information requiring an export-control license.",
+        "condition_explanation": "sanctioned_destination_or_person_or_prohibited_end_use_or_controlled_input covers applicable export-control and sanctions restrictions, listed persons/entities including through ownership, control, or association, military-related or human-rights-abusive prohibited end uses, and controlled input material requiring an export license.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable PRC and other relevant export-control and economic-sanctions laws and regulations.",
+            "actor": "user",
+            "object": "use and provision of the service",
+            "trigger": "whenever using or providing the service"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not provide the service directly or indirectly to sanctioned countries/regions or listed persons/entities, or use it for prohibited end uses, including military-related or human-rights-abusive purposes.",
+            "actor": "user and represented persons/entities",
+            "object": "service",
+            "trigger": "whenever providing or using the service"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not include material or information requiring an export-control license in inputs.",
+            "actor": "user and end users",
+            "object": "service inputs",
+            "trigger": "whenever submitting inputs"
+          }
+        ]
+      },
+      {
+        "start_line": 227,
+        "end_line": 230,
+        "clause_label": "breach_remedies",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_has_reason_to_believe_or_finds_listed_breach_or_problem",
+          "requires": "provider_may_inquire_request_correction_restrict_or_terminate_as_stated"
+        },
+        "actor_role": "provider",
+        "scope_note": "Provider may inquire and request correction with a reasonable response period; remedies for prohibited resale include suspension/termination, account restrictions, five times cumulative consumption during the resale period as liquidated damages, no refund of paid/recharged sums, and compensation for losses. Provider may remove or restrict specified suspect information without notice.",
+        "condition_explanation": "listed_breach_or_problem means suspected registration or use problems, resale or disguised resale of services/API keys, or information reasonably believed fraudulent, disruptive, against public interest, or seriously harmful to legitimate interests.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 239,
+        "end_line": 239,
+        "clause_label": "model_license_heading",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section heading only; no independent behavioral rule.",
+        "condition_explanation": "No independent behavioral duty is created by the heading.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 241,
+        "end_line": 241,
+        "clause_label": "model_license_acceptance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_uses_model_subject_to_model_commercial_license",
+          "requires": "accept_and_follow_model_commercial_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Use of a model covered by the Model Commercial Authorization Application and license signifies acceptance; users who disagree are directed not to pay and to stop using the model.",
+        "condition_explanation": "user_uses_model_subject_to_model_commercial_license means use of a model covered by the Model Commercial Authorization Application and referenced license.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not select payment and stop using the large model if unwilling to accept the model commercial license.",
+            "actor": "prospective model user who disagrees with the license",
+            "object": "licensed large model",
+            "trigger": "when the user does not agree to the license terms"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The separately referenced privacy policy, paid-service agreements, product and platform rules, and product documentation are not supplied; their contents and variable data-buffer period cannot be determined.",
+      "Provider warranty, liability, service-quality, and third-party-service disclaimers were not modeled as activity constraints. Provider's described advertising and anonymized-data processing are captured; no additional consent duty is inferred.",
+      "Line 239 is a heading only. Line 241 is an operative acceptance notice."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0004",
+        "status": "MODELED",
+        "clause_labels": [
+          "paid_service_use",
+          "free_service_conditions",
+          "output_marking",
+          "advertising_and_anonymized_data",
+          "platform_termination",
+          "contact_details",
+          "platform_commercial_use",
+          "input_output_rights_and_notices",
+          "no_product_modification",
+          "indemnity_efforts"
+        ],
+        "reason": "Covers operative paid/free service conditions, content-marking restrictions and duties, provider data-use permission, termination, contact obligations, commercial-use scope and restrictions, content rights/notices, product modification, and user undertaking. Warranty/liability and service-quality disclaimers are nonoperative for this extraction."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "MODELED",
+        "clause_labels": [
+          "privacy_and_data_license",
+          "minor_free_use",
+          "export_sanctions_and_use",
+          "breach_remedies"
+        ],
+        "reason": "Covers privacy/data processing and non-personal-content license, minors' restrictions, export-control and sanctions restrictions, and provider breach remedies. The incorporated privacy policy is missing."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "CONTEXT",
+        "clause_labels": [
+          "model_license_heading"
+        ],
+        "reason": "The unit is the heading “模型商用许可协议”; it identifies the following section but creates no independent behavioral rule."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "MODELED",
+        "clause_labels": [
+          "model_license_acceptance"
+        ],
+        "reason": "The notice states that use signifies acceptance and directs a dissenting user not to pay and to stop using the model."
+      }
+    ]
+  },
+  "attempt": 2
+}

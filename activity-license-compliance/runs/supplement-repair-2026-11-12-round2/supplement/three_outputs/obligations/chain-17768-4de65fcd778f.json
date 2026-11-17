@@ -1,0 +1,68 @@
+{
+  "case_id": "chain-17768-4de65fcd778f",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-17768-4de65fcd778f:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Comply with the Llama agreement, including applicable law and the incorporated Acceptable Use Policy; do not use Llama Materials or their outputs/results to improve another large language model, except Meta Llama 3 or its derivatives.",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "compliance_with_Llama_agreement",
+        "aup_compliance",
+        "use_of_outputs_to_improve_another_large_language_model"
+      ],
+      "source_refs": [
+        "license-text:upstream:982ff5da11854c68"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-17768-4de65fcd778f:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the COCL-licensed software is used, satisfy the non-commercial-use grant conditions, including license compliance, retaining license/NOTICE/copyright/attribution/license notices in copies and derivative works, and clearly marking modified files as changed.",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "whether_downstream_software_use_is_in_scope",
+        "non_commercial_use",
+        "license_compliance",
+        "license_notice_and_attribution_notices_retained_in_all_copies_and_derivative_works",
+        "modified_files_clearly_marked_as_changed"
+      ],
+      "source_refs": [
+        "license-text:downstream:2a5468c230491b4f"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-17768-4de65fcd778f:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the use constitutes Commercial Use under COCL section 1.2, obtain separately negotiated written commercial rights; this License itself grants no Commercial Use.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "activity_constitutes_commercial_use_under_section_1_2"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity_constitutes_commercial_use_under_section_1_2",
+        "separately_negotiated_written_commercial_rights"
+      ],
+      "source_refs": [
+        "license-text:downstream:2a5468c230491b4f"
+      ]
+    }
+  ]
+}

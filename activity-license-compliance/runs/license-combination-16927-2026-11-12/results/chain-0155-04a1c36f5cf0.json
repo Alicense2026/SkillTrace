@@ -1,0 +1,111 @@
+{
+  "case_id": "chain-0155-04a1c36f5cf0",
+  "input_group_row": 155,
+  "aggregate_count": 6,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "CC-BY-SA-4.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "6"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0155-04a1c36f5cf0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "within_license_scope"
+          },
+          "S": {
+            "artifact": "chain-0155-04a1c36f5cf0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b4c1aacb28693f0e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0155-04a1c36f5cf0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查的相关原文摘录为 CC-BY-SA-4.0 第2(a)节授权片段及 MIT 授权、通知条款。CC 摘录指出授权限于 Licensed Rights，但未提供当前活动是否属于该范围所需的完整定义及具体条件；不能据此补写归属、相同方式共享或其他义务。",
+      "可信事实确认的是远程服务调用及 API/代码纳入关系，并未确认分发、复制、修改、组合或下游 MIT 软件本身的使用。对象图中的依赖、捆绑及修改副本范围均未知。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0155-04a1c36f5cf0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用落入 CC-BY-SA-4.0 的 Licensed Rights 范围，须遵守该许可适用条件。",
+        "trigger": "all",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope",
+          "CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0155-04a1c36f5cf0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用 MIT 许可的软件，须按 MIT 通知条款在所有副本或实质部分中包含版权声明及许可声明。",
+        "trigger": "all",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_software_use",
+          "copy_or_substantial_portion"
+        ],
+        "source_refs": [
+          "license-text:downstream:b4c1aacb28693f0e"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0157-24eddc098315.json",
+  "original_case_id": "chain-0157-24eddc098315",
+  "original_request_sha256": "bf2b9edb8d4f6501e50ec9c1aa98ed719f0ed3ca448b93fce9411cf9a02a6b23",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0157-24eddc098315": "chain-0155-04a1c36f5cf0",
+    "license-text:upstream:37a2df393b20197f": "license-text:upstream:37a2df393b20197f",
+    "license-text:downstream:b4c1aacb28693f0e": "license-text:downstream:b4c1aacb28693f0e",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/156": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/154"
+  }
+}

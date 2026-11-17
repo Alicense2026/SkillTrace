@@ -1,0 +1,147 @@
+{
+  "request_sha256": "c87386c0b3efec2fc4a69fca2c9b0c70c3ec5b92ebd4562aaf9a81eab2b44af1",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 39,
+        "end_line": 41,
+        "clause_label": "fees_taxes_and_service_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "pay_account_fees_at_model_pricing_page_rates_unless_otherwise_agreed",
+              "remit_applicable_withholding_taxes_timely_and_provide_evidence_on_request",
+              "make_gross_up_payment_as_required_to_preserve_anthropic_receipt",
+              "comply_with_supplemental_credits_terms_if_credits_used"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Sections H.1–H.3: Customer's use of the Services. Fees are for amounts incurred by Customer's account at the published Model Pricing Page rates unless the parties agree otherwise; rates may be updated on the stated notice schedule. The clause also addresses prepayment credits, taxes, withholding, and gross-up payments. Nonpayment when due may result in suspension or termination; this is a stated consequence, not a separate Customer duty.",
+        "condition_explanation": "The listed predicates describe payment and tax duties attached to Customer's use. Supplemental Credits Terms apply only to credits; the supplied material does not include those terms. Applicable tax and withholding duties depend on the relevant facts and law.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay fees incurred by Customer's account at the rates specified on the Model Pricing Page, unless otherwise agreed by the parties.",
+            "actor": "Customer",
+            "object": "Fees for Services incurred by Customer's account",
+            "trigger": "Fees are incurred by Customer's account and are due."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Remit necessary withholding Taxes to the relevant authority on a timely basis and provide Anthropic evidence of remittance upon request.",
+            "actor": "Customer",
+            "object": "Withholding Taxes and evidence of their remittance",
+            "trigger": "Withholding Taxes are necessary; evidence is owed when Anthropic requests it."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Anthropic the Gross-up Payment sufficient to ensure Anthropic receives the amount it would have received absent the required withholding or reduction, taking applicable Taxes on the Gross-up Payment into account.",
+            "actor": "Customer",
+            "object": "Gross-up Payment to Anthropic",
+            "trigger": "A withholding or reduction by Customer is required."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with Anthropic's Supplemental Credits Terms.",
+            "actor": "Customer",
+            "object": "Credits used for Services",
+            "trigger": "Customer uses credits; the incorporated Supplemental Credits Terms are not supplied."
+          }
+        ]
+      },
+      {
+        "start_line": 46,
+        "end_line": 48,
+        "clause_label": "termination_rights_and_lawful_provision",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "terms_not_terminated"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section I.2 gives each party a convenience termination right by Notice, with Anthropic required to provide 30 days' prior Notice; either party may terminate for the other party's material breach by 30 days' prior Notice detailing the breach unless cured within that period; Anthropic may terminate immediately with Notice if it reasonably believes or determines providing Services to Customer is prohibited by applicable law. These procedural termination rights do not themselves specify a Customer activity beyond the resulting access boundary.",
+        "condition_explanation": "terms_not_terminated means the Terms remain in effect. The termination notice, breach, cure, and applicable-law conditions govern the parties' termination rights, not an independent licensee permission.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 50,
+        "end_line": 52,
+        "clause_label": "service_suspension_and_post_termination_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "any": [
+              "terms_terminated",
+              "anthropic_suspends_customer_access"
+            ]
+          },
+          "requires": "do_not_access_or_use_services"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Sections I.3–I.4: Anthropic may suspend access on the specified security, policy/use-restriction, legal, material-cost, or third-party-vendor grounds. Upon termination, Customer may no longer access the Services. This rule captures the resulting access boundary; the suspension and termination procedures themselves are not customer conduct permissions.",
+        "condition_explanation": "anthropic_suspends_customer_access means Anthropic has suspended access under I.3.a, including a suspension resulting from a vendor suspending or terminating a required third-party service or product. terms_terminated means the Terms have terminated. A suspension ends when its triggering event is cured, where curable, and Anthropic resumes access; no access prohibition is asserted after resumption unless the Terms have terminated.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use the Services while Customer's access is suspended or after termination of the Terms.",
+            "actor": "Customer",
+            "object": "Anthropic Services",
+            "trigger": "Anthropic has suspended Customer's access, or the Terms have terminated."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The Model Pricing Page, Supplemental Credits Terms, and incorporated policies or service terms are not supplied; their contents are not inferred.",
+      "The suspension provision includes Anthropic's reasonable-efforts notice and resumption duties, and the termination section includes notice and cure procedures. Those actor-specific procedural duties do not map faithfully to the allowed activities and are identified as unresolved in the audit.",
+      "The dispute-resolution paragraphs contain operative duties and procedures that cannot be faithfully represented with the allowed activities; they are identified as unresolved below. Venue and arbitration forum details are not modeled as activity constraints."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "fees_taxes_and_service_access"
+        ],
+        "reason": "Sections H.1–H.3 impose account-fee and tax payment duties, provide for credits and rate updates, and state consequences of failure to pay; the behavioral payment duties are captured as conditions on Customer's use."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "termination_rights_and_lawful_provision",
+          "service_suspension_and_post_termination_access"
+        ],
+        "reason": "The clauses capture termination-triggered and suspension-triggered access restrictions, but the notice, breach-cure, suspension-notice, and resumption procedures impose operative duties or rights that do not map faithfully to the allowed activities."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The paragraph imposes operative dispute-notice, good-faith informal-resolution, and timely-response duties and provides for arbitration and equitable relief. These procedural duties and mechanisms cannot be faithfully represented using the allowed activities."
+      }
+    ]
+  },
+  "attempt": 2
+}

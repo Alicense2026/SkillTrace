@@ -1,0 +1,81 @@
+{
+  "case_id": "chain-0094-1dc66db4a0f1",
+  "input_group_row": 94,
+  "aggregate_count": 15,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "LLAMA 4 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "15"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0094-1dc66db4a0f1",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0094-1dc66db4a0f1:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "可信记录称上游资产为“Llama（版本未识别；本地原文未匹配）”，而本地上游文本匹配到 Meta Llama 4。无法据现有材料确定该资产是否受该本地文本约束；因此该条件义务仅在该文本确实适用时成立。",
+      "本地 MIT 摘录针对 downstream Software；记录确认的是对上游的远程服务调用，未证明使用、复制或分发 downstream MIT 软件，故不据此扩展 MIT 条款结论。",
+      "上游分发条款仅在分发或提供 Llama 材料、其衍生作品或包含它们的产品/服务时触发。现有事实只确认 API 远程调用，未确认权重转移、分发或提供包含材料的产品/服务；不推定该触发条件成立。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若本地匹配的 Llama 协议文本适用于该上游资产，则使用须遵守该协议。",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "subject": {
+          "artifact": "chain-0094-1dc66db4a0f1:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "upstream_text_applies"
+          ]
+        },
+        "unresolved_predicates": [
+          "upstream_text_applies",
+          "compliance_with_Llama_agreement"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0100-bd91dcce958a.json",
+  "original_case_id": "chain-0100-bd91dcce958a",
+  "original_request_sha256": "2b0431dbf036885c5cd4ba84e36919a1cb53dda7dff58f48519a9808cc5d33bf",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0100-bd91dcce958a": "chain-0094-1dc66db4a0f1",
+    "license-text:upstream:c2f47a4e8b18a63d": "license-text:upstream:c2f47a4e8b18a63d",
+    "license-text:downstream:088e8cd98c819d2a": "license-text:downstream:088e8cd98c819d2a",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/99": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/93"
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "case_id": "skill-02530",
+  "csv_row": 2531,
+  "source_excel_row": "3503",
+  "status": "SUCCESS",
+  "request_sha256": "3967ec51c84926cf1b9a383430d8a492c484f6d3b317501ce0ba5a2db1cdba56",
+  "analysis": {
+    "case_id": "skill-02530",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02530:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "source_redistribution_conditions_met",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02530:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "binary_redistribution_conditions_met",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02530:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "source_redistribution_conditions_met",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02530:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "binary_redistribution_conditions_met",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02530:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use/上游原始软件；BSD-2-Clause 明确允许使用；本行已确认远程调用及使用，没有相反条款或冲突见证；同一 BSD-2-Clause 原文亦适用于下游标签，但没有证据表明下游 CombinedProduct 与上游原始软件是同一受约束对象；来源：许可证原文及可信供应链记录。",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf",
+          "./paper/evaluation/skill-supply-chain-2026-11-13/filtered-no-unlicense/retained_relationships.csv#/rows/2529"
+        ],
+        "status": "CONDITIONS_INCLUDED"
+      }
+    ],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "分发者在以源代码形式再分发上游 zstd 软件时，须保留版权声明、条件清单及免责声明。",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "subject": {
+          "artifact": "skill-02530:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "source_form_redistribution",
+        "unresolved_predicates": [
+          "source_form_redistribution",
+          "source_notice_materials_retained"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "分发者在以二进制形式再分发上游 zstd 软件时，须在随分发提供的文档和/或其他材料中重现版权声明、条件清单及免责声明。",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "subject": {
+          "artifact": "skill-02530:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "binary_form_redistribution",
+        "unresolved_predicates": [
+          "binary_form_redistribution",
+          "binary_notice_materials_reproduced"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "分发者在以源代码形式再分发下游软件时，须保留版权声明、条件清单及免责声明。",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "subject": {
+          "artifact": "skill-02530:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "source_form_redistribution",
+        "unresolved_predicates": [
+          "source_form_redistribution",
+          "source_notice_materials_retained"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "分发者在以二进制形式再分发下游软件时，须在随分发提供的文档和/或其他材料中重现版权声明、条件清单及免责声明。",
+        "source_refs": [
+          "license:6851fe0351d49c930e9d42dc29522d8397a02cfefa1b27495bd3b36c560dd5bf"
+        ],
+        "subject": {
+          "artifact": "skill-02530:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "binary_form_redistribution",
+        "unresolved_predicates": [
+          "binary_form_redistribution",
+          "binary_notice_materials_reproduced"
+        ]
+      }
+    ],
+    "limitations": [
+      "本行确认的是远程服务调用、链接和使用；未确认修改、分发、源码或二进制再分发，故相应通知义务仅作为条件义务保留。",
+      "对象图未确认依赖、捆绑、修改副本或组合产品关系；不能据此将上游原始软件的许可条件扩大到下游 CombinedProduct。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "源代码再分发时保留声明等材料的义务已作为条件义务保留。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "二进制再分发时重现声明等材料的义务已作为条件义务保留。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "原文明确允许使用，未规定不伴随再分发的独立通知义务。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "本行没有已确认的修改活动。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "源代码再分发保留材料的具体义务已合并记录。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "二进制再分发重现材料的具体义务已合并记录。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "下游软件源代码再分发的保留材料义务已作为条件义务保留。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "下游软件二进制再分发的重现材料义务已作为条件义务保留。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "已确认的使用对象是上游服务；无证据表明下游 OriginalArtifact 本身发生使用。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "本行没有已确认的修改活动。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "下游软件源代码再分发保留材料的具体义务已合并记录。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "下游软件二进制再分发重现材料的具体义务已合并记录。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-02530-1794593575252059000-2.json",
+  "usage": {
+    "input_tokens": 18586,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2710,
+    "output_tokens_details": {
+      "reasoning_tokens": 190
+    },
+    "total_tokens": 21296,
+    "attribution": {
+      "items": {
+        "msg_0eaf0c6919f657d6016af7536172a487d08087eee7c67389df": {
+          "input_tokens": 15862,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15862,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0eaf0c6919f657d6016af7536172a487d0add4babdb3d7567a": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0eaf0c6919f657d6016af75365cd4487d09f6c75a6d130f653": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2520,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2520
+            }
+          ]
+        },
+        "rs_0eaf0c6919f657d6016af75365b19887d092d7f82bed53e61e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 190
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

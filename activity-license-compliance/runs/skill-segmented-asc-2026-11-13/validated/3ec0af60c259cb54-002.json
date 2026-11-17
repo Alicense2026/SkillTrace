@@ -1,0 +1,204 @@
+{
+  "request_sha256": "139a94cff0f1f7e1fda9ef05c9fdef2596df231a516ccfe56bf0ad25c373d331",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 48,
+        "end_line": 50,
+        "clause_label": "confidential_information_use_limited_to_agreement_purpose",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_only_to_exercise_agreement_rights_or_fulfill_agreement_obligations"
+        },
+        "actor_role": "recipient",
+        "scope_note": "Section 7.1(a): applies to a Recipient’s use of the Discloser’s Confidential Information; Confidential Information includes Customer Content. Section 7.2 exceptions apply where the information is public through no fault of Recipient, was previously possessed or known, was rightfully disclosed without restriction by a third party, or was independently developed without use of the Confidential Information.",
+        "condition_explanation": "use_only_to_exercise_agreement_rights_or_fulfill_agreement_obligations means the Recipient uses the Discloser’s Confidential Information only for those purposes, subject to the Section 7.2 exceptions.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 48,
+        "end_line": 50,
+        "clause_label": "confidential_information_disclosure_restricted",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_permitted_disclosure"
+        },
+        "actor_role": "recipient",
+        "scope_note": "Sections 7.1(c) and 7.3: applies to disclosure of the Discloser’s Confidential Information. Disclosure is permitted to Affiliates, employees, contractors, and agents with a need to know who are bound by confidentiality obligations at least as restrictive; disclosure required by law is permitted subject to reasonable efforts to notify the Discloser beforehand to the extent permitted.",
+        "condition_explanation": "not_permitted_disclosure is false for a disclosure to a qualifying need-to-know recipient bound by the required confidentiality obligations, or a disclosure required by law for which reasonable prior notice efforts are made to the extent permitted; otherwise it is true.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not disclose the Discloser’s Confidential Information except as expressly permitted by the Agreement.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "Whenever the Recipient would disclose the information, except for a permitted disclosure under Section 7.3."
+          }
+        ]
+      },
+      {
+        "start_line": 50,
+        "end_line": 50,
+        "clause_label": "confidential_information_protection_measures",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "reasonable_protection_measures_taken"
+        },
+        "actor_role": "recipient",
+        "scope_note": "Section 7.1(b): applies to the Recipient’s handling of the Discloser’s Confidential Information, subject to the Section 7.2 exceptions.",
+        "condition_explanation": "reasonable_protection_measures_taken means the Recipient takes reasonable measures to protect the Confidential Information.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Take reasonable measures to protect the Discloser’s Confidential Information.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "While the Recipient holds or handles the Confidential Information, except to the extent the Section 7.2 exceptions apply."
+          }
+        ]
+      },
+      {
+        "start_line": 58,
+        "end_line": 59,
+        "clause_label": "customer_grants_openai_limited_content_use_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "reasonably_necessary_to_deliver_services"
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Sections 9.1–9.2: Customer grants OpenAI only the limited rights reasonably necessary to deliver the Services; that permission extends to subcontractors or subprocessors. The Agreement otherwise grants OpenAI no IP Rights in Customer Content except as expressly set forth.",
+        "condition_explanation": "reasonably_necessary_to_deliver_services means the use is reasonably necessary for OpenAI to deliver the Services.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 60,
+        "end_line": 60,
+        "clause_label": "openai_feedback_use_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_provides_feedback",
+          "requires": true
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Section 9.3: if Customer provides Feedback regarding the Services, Customer grants OpenAI the right to use and exploit that Feedback without restriction or compensation.",
+        "condition_explanation": "customer_provides_feedback means Customer has provided Feedback regarding the Services.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 62,
+        "end_line": 62,
+        "clause_label": "publicity_and_relationship_statements_prohibited_without_written_permission",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_express_prior_written_permission_for_this_instance"
+        },
+        "actor_role": "either_party",
+        "scope_note": "Section 10: absent express prior written permission in each instance, neither Party may include the other Party’s name or logo on websites, media, or marketing materials, or make a public statement about its relationship with the other Party or the Agreement.",
+        "condition_explanation": "not_express_prior_written_permission_for_this_instance means the acting Party lacks express prior written permission for the particular use or statement.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not include the other Party’s name or logo on websites, media, or marketing materials, and do not make a public statement about the relationship or Agreement, without express prior written permission in each instance.",
+            "actor": "Either Party",
+            "object": "The other Party’s name or logo, or a public statement about the relationship or Agreement",
+            "trigger": "Whenever the Party would make the specified use or statement, unless it has express prior written permission for that instance."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The Security Measures, Audit Reports, DPA, Healthcare Addendum, Service Credit Terms, Order Form, Pricing Page, and OpenAI Policies are incorporated or referenced but not supplied here; their substantive terms are not inferred.",
+      "Several operative provisions cannot be faithfully represented with the supplied activity/object schema: OpenAI’s security-measure and audit-report delivery duties; the incorporated DPA obligations; the PHI-specific prohibition; payment, tax, invoice-dispute, and billing-information duties; suspension and account-control provisions; and the requirement that a Recipient be responsible for certain personnel breaches. Related target paragraphs are marked UNRESOLVED where applicable.",
+      "Section 9.1’s reservation that Customer receives no ownership rights in the Services is noted in scope, but the schema does not provide an ownership-rights activity."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0006",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The paragraph contains operative OpenAI duties to comply with and provide Audit Reports under specified conditions, a Customer termination option with a five-business-day deadline, a conditional PHI prohibition, and duties under the incorporated DPA. These cannot all be faithfully represented with the permitted activities and objects, and the DPA and referenced security terms are absent."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The paragraph imposes operative payment, billing-information, tax, invoice-dispute, and payment-uplift duties and provides fee-charging and suspension terms. The supplied Charge activity is defined for charges to third parties, not payments to the provider, so these duties cannot be faithfully encoded as licensee actions."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "MODELED",
+        "clause_labels": [
+          "confidential_information_use_limited_to_agreement_purpose",
+          "confidential_information_disclosure_restricted",
+          "confidential_information_protection_measures"
+        ],
+        "reason": "Sections 7.1–7.3 are represented with the agreement-purpose restriction, disclosure restriction and exceptions, and reasonable-protection duty. Section 7.2’s specified exceptions and Section 7.3’s permitted disclosure paths are stated in scope and conditions."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The paragraph grants OpenAI discretion to request or directly suspend or terminate an End User account and to limit or suspend Services, and imposes notice, tailoring, and restoration-cooperation duties. Those actions and duties are not faithfully representable with the available activities; suspension is not itself a listed activity."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "customer_grants_openai_limited_content_use_permission",
+          "openai_feedback_use_permission"
+        ],
+        "reason": "Sections 9.2 and 9.3 are modeled, but Section 9.1 also contains an operative reservation of rights and a limited Customer right to use Services, neither of which is fully expressible as an activity constraint in the supplied schema."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "MODELED",
+        "clause_labels": [
+          "publicity_and_relationship_statements_prohibited_without_written_permission"
+        ],
+        "reason": "The prohibition on specified publicity and public statements, including its express-prior-written-permission exception for each instance, is represented."
+      }
+    ]
+  },
+  "attempt": 2
+}

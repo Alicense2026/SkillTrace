@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0011-de3bd535bed6",
+  "status": "SUCCESS",
+  "request_sha256": "c035d7faee7a4c5cd01b9b1a917e2e74d00c22e48941cdffe50e9615428ec3f5",
+  "analysis": {
+    "case_id": "chain-0011-de3bd535bed6",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "S": {
+            "artifact": "chain-0011-de3bd535bed6:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_fees"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2a07d0faff95278c"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0011-de3bd535bed6:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0011-de3bd535bed6:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer须按订单表规定的币种及付款条款支付适用费用；费用是否适用及其金额未由现有事实确定。",
+        "trigger": "applicable_fees",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees",
+          "payment_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "已核对的OpenAI服务协议结构化摘录仅涉及费用支付；不据此推断其他服务使用、网络调用或下游使用限制。",
+      "已知的是下游Apache代码/资产与上游服务存在API链接及远程调用，不证明两份许可约束同一对象；上游服务协议的费用条款与Apache许可的使用许可不构成已证实的许可冲突。",
+      "记录称代码修改不适用；未发现分发、源码提供、复制或模型权重转移事实。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 17286,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 843,
+    "output_tokens_details": {
+      "reasoning_tokens": 248
+    },
+    "total_tokens": 18129,
+    "attribution": {
+      "items": {
+        "msg_05044618c8224154016af2f6de4e1c87d2bc44f2096671c264": {
+          "input_tokens": 15254,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15254,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05044618c8224154016af2f6e390c887d2afc1e60c5b182c07": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 595,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 595
+            }
+          ]
+        },
+        "rs_05044618c8224154016af2f6e3754887d298b1b5a5293bb753": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 248
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.369,
+  "auto_applied": false,
+  "aggregate_count": 393
+}

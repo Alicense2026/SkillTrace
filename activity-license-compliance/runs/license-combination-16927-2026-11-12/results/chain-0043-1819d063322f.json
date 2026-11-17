@@ -1,0 +1,78 @@
+{
+  "case_id": "chain-0043-1819d063322f",
+  "input_group_row": 43,
+  "aggregate_count": 54,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "Mistral AI Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "54"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0043-1819d063322f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0043-1819d063322f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0043-1819d063322f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Pay fees due for use under the applicable Order Form, within 30 days of invoice; where a Customer Account exists, fees are charged monthly as provided in the Order Form or other order confirmation.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_order_form",
+          "fees_due",
+          "invoice_or_customer_account_payment_terms",
+          "payment_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的是对上游 Mistral 产品的 Use 和远程调用；这不证明下游 Apache 许可材料与上游服务属于同一受约束对象。对象图中的共享范围及依赖关系未确定，因此不作许可间冲突判断。",
+      "上游摘录规定客户对到期费用的支付义务，但订单、费用金额、发票及付款履行情况未知；不能据此认定未付款或违规。",
+      "下游 Apache 条款摘录涉及其 Work 及衍生作品的版权许可；现有事实未证明本次调用涉及对下游 Apache 作品的相关活动，故未列为本次活动适用的 ASC。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0036-9db25792c902.json",
+  "original_case_id": "chain-0036-9db25792c902",
+  "original_request_sha256": "9e0d5b8bab93be2b7cd0bc7ca6b64738ed1d69ff71898a33a5f60b7bb9f92010",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0036-9db25792c902": "chain-0043-1819d063322f",
+    "license-text:upstream:282b79bf9fcbaf7a": "license-text:upstream:282b79bf9fcbaf7a",
+    "license-text:downstream:457c0be84a56c878": "license-text:downstream:457c0be84a56c878",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/35": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/42"
+  }
+}

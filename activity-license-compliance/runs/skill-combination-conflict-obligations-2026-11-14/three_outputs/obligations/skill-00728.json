@@ -1,0 +1,364 @@
+{
+  "case_id": "skill-00728",
+  "csv_row": 729,
+  "source_excel_row": "1039",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00728-1794597589790135000-2.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "MIT被许可方须在其制作或分发的上游软件副本或实质部分中包含版权声明和MIT许可声明；仅涉及上游对象，不要求将其自动施加于独立下游代码。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00728:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "copy_or_distribute_copy_or_substantial_portion",
+      "unresolved_predicates": [
+        "copy_or_distribute_copy_or_substantial_portion",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Apache被许可方分发上游 Work 或其衍生作品副本时，须向每位接收者提供Apache许可副本；分发修改文件时，还须使该文件带有醒目的修改声明。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "distribute_upstream_work_or_derivative",
+      "unresolved_predicates": [
+        "distribution",
+        "modified_file",
+        "license_copy_provided",
+        "change_notice_present"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Apache被许可方仅在以源代码形式分发上游衍生作品时，须保留其中适用于该衍生作品的 Work 源代码版权、专利、商标及归属声明。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "DerivativeWork"
+      },
+      "trigger": "all",
+      "unresolved_predicates": [
+        "distribute_derivative",
+        "source_form",
+        "applicable_notices_retained"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Apache被许可方仅在 Work 的分发包含 NOTICE 文件且分发衍生作品时，须在衍生作品中提供 NOTICE 内适用归属声明的可读副本；不适用的声明可排除。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "DerivativeWork"
+      },
+      "trigger": {
+        "all": [
+          "work_includes_notice_file_as_part_of_distribution",
+          "distribute_derivative"
+        ]
+      },
+      "unresolved_predicates": [
+        "work_includes_notice_file_as_part_of_distribution",
+        "distribute_derivative",
+        "notice_attributions_included"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Apache专利许可仅覆盖许可贡献者可许可且因其贡献单独或与提交的 Work 结合而必然侵权的专利权利要求；本义务不扩张为版权许可范围。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 Apache 许可人的商号、商标、服务标记或产品名称时，限于合理且惯常地描述 Work 来源或复制 NOTICE 内容；其他使用不在许可授权内。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "use_licensor_name_or_mark",
+      "unresolved_predicates": [
+        "use_licensor_name_or_mark",
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "MIT被许可方分发上游软件副本或实质部分时，须在每份此类副本或实质部分中包含版权声明和MIT许可声明；该要求不因 Apache 条款沉默而排除。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "distribute_copy_or_substantial_portion",
+      "unresolved_predicates": [
+        "distribution",
+        "copy_or_substantial_portion",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "Modify",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "MIT被许可方修改上游软件时，如该修改制作了副本或实质部分，该副本或实质部分须包含版权声明和MIT许可声明；MIT条款不要求一般性修改标记。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00728:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "modify_upstream_software",
+      "unresolved_predicates": [
+        "modification",
+        "copy_or_substantial_portion_created",
+        "notices_included"
+      ]
+    }
+  ],
+  "limitations": [
+    "可信事实确认上游代码纳入及上游 Copy、Use；是否修改无法确定，且没有确认分发、下游复制、再许可或通知履行事实。因此不判实际违规，相关触发和履行要求保留为条件义务。",
+    "对象图的代码纳入不等同于已发布打包物；上游 Apache 与下游 MIT 的许可对象范围不当然相同。现有材料未显示同范围相反要求，未发现许可冲突。",
+    "Apache专利诉讼终止条款及MIT按副本触发的通知条款没有足够的已知触发事实；此处仅列可对应当前活动的规则和义务。",
+    "结构化规则未为部分许可授权条款列出本活动词表外的限制细节；不据此推断额外义务。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "Apache第2节复制授权；本条无独立履行义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "衍生作品授权；未确认发生衍生创作，且本条无独立履行义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "再许可授权；未确认再许可，且本条无独立履行义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分发授权须结合第4节条件；具体通知义务由U009等记录。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "上游Use已发生；专利许可的有限适用范围作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "未确认出售副本；该专利授权条款无独立履行义务。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未有发起所述专利诉讼的事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "Apache复制/分发条件中的许可副本及修改文件声明义务已合并保留。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1,
+        2,
+        3
+      ],
+      "reason": "Apache分发许可副本、修改声明、源代码声明保留及NOTICE归属义务均已分别保留。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条是遵守其他许可条件的前提，不产生可独立列出的新义务。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "许可条件允许衍生作品整体附加或不同条款，不产生独立履行义务。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅为商标使用例外条件；不单独产生义务。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "已确认上游Use，商标使用限制及其例外作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "没有确认分发时收费提供支持、保证或额外责任的活动。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "衍生作品分发许可；其条件义务已由U009及相应义务表达。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "分发修改文件时的醒目修改声明已纳入合并义务。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "以源代码形式分发衍生作品时保留适用声明的义务已保留。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "NOTICE文件及衍生作品分发两个条件均已保留。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "这是遵守许可条件的概括条件，未新增独立履行要求。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT使用授权；本条未列独立通知义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "MIT复制通知义务按制作或分发副本、实质部分的条件保留。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "MIT修改条款中的副本通知要求已合并保留；是否制作副本未知。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "MIT合并条款涉及软件副本或实质部分时的通知要求已合并保留。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0,
+        7
+      ],
+      "reason": "MIT发布/分发通知要求已按上游、下游对象分别保留。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0,
+        7
+      ],
+      "reason": "MIT分发副本或实质部分的通知要求已按对象范围分别保留。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "MIT再许可中的副本通知条件已合并保留；是否再许可未知。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "MIT出售副本通知条件已合并保留；未把收费本身推定为出售副本。"
+    }
+  ]
+}

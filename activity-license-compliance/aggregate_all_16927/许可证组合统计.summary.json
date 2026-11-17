@@ -1,0 +1,55 @@
+{
+  "input": "activity-license-compliance/aggregate_all_16927/result.csv",
+  "input_sha256": "70567c22933766e8e85073829857fe3644f7971f859172092ec69897239a649b",
+  "input_rows": 23206,
+  "retained_rows": 23112,
+  "groups": 413,
+  "excluded": {
+    "LGPL系列": 29,
+    "GPL-2.0系列": 65
+  },
+  "normalizations": {
+    "apache-2.0 → Apache-2.0": 1008,
+    "mit → MIT": 512,
+    "cc-by-4.0 → CC-BY-4.0": 7,
+    "cc-by-nc-sa-4.0 → CC-BY-NC-SA-4.0": 1,
+    "cc-by-nc-4.0 → CC-BY-NC-4.0": 4,
+    "gemma → Apache-2.0": 3,
+    "cc0-1.0 → CC0-1.0": 2,
+    "odc-by → ODC-BY-1.0": 2,
+    "cc-by-sa-4.0 → CC-BY-SA-4.0": 1
+  },
+  "integration_counts": {
+    "远程服务调用（修改不适用）": 23057,
+    "代码层面集成（修改：是）": 28,
+    "代码层面集成（修改：无法确定）": 14,
+    "代码层面集成（修改：否）": 13
+  },
+  "proprietary_titles": {
+    "OpenAI Services Agreement": 2256,
+    "Anthropic Commercial Terms of Service": 1949,
+    "Gemini API Additional Terms of Service": 1256,
+    "智谱开放平台用户协议": 190,
+    "Cohere Commercial SaaS Agreement": 85,
+    "DeepSeek Open Platform Terms of Service": 545,
+    "阿里云百炼服务特别说明": 473,
+    "LLAMA 3.3 COMMUNITY LICENSE AGREEMENT": 131,
+    "百度智能云用户服务协议": 25,
+    "Kimi 模型服务协议（用户协议）": 86,
+    "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT": 85,
+    "LLAMA 4 COMMUNITY LICENSE AGREEMENT": 40,
+    "Mistral AI Commercial Terms of Service": 155,
+    "LLAMA 3.1 COMMUNITY LICENSE AGREEMENT": 100,
+    "LLAMA 3 COMMUNITY LICENSE AGREEMENT": 74,
+    "LLAMA 2 COMMUNITY LICENSE AGREEMENT": 10
+  },
+  "llama_default_4_rows": 37,
+  "conventions": [
+    "按用户实验口径排除GPL-2.0系列和LGPL系列，并非法律效力判断",
+    "Gemma主许可按Apache-2.0；ODC-BY按1.0；BUSL-1.1保留按模板分析",
+    "忽略仓库名称，合并许可证大小写别名；直接标注的Llama许可证标签沿用原标签",
+    "proprietary按资产URL匹配原文标题；Llama按资产名识别版本，无法识别按4",
+    "保留unknown、other、Unlicense和自定义标签；此表是统计输入，不是合规结论",
+    "Cohere选API适用Commercial SaaS Agreement；百度原文还含线上订购协议"
+  ]
+}

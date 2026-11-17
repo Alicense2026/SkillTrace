@@ -1,0 +1,225 @@
+{
+  "case_id": "chain-0053-4ff2a500ac7c",
+  "status": "SUCCESS",
+  "request_sha256": "b2530cd28f9477e7b4e2f38d237aada9073205e24510bd9b9e8028a885ef7496",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0053-4ff2a500ac7c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0053-4ff2a500ac7c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": "outputs_provided_by_service"
+          },
+          "S": {
+            "artifact": "chain-0053-4ff2a500ac7c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d1bdfda347634501"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_to_remote_users_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0053-4ff2a500ac7c:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "DeepSeek Open Platform Terms 的访问授权及输出披露摘录适用于服务/API，不是模型权重再分发授权。输出披露义务是否由本次具体输出交付触发、以及是否已履行，记录未说明。",
+      "AGPL 第13节摘录针对经修改且支持远程交互的程序版本。记录确认远程服务调用，但未确认下游对象是该类修改版本；API调用本身不证明修改、对象范围重合或源码义务已触发。",
+      "结构化条款均标记 FIRST_PASS_REVIEW_REQUIRED；本判断限于所列摘录与已知活动。"
+    ],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 DeepSeek Open Platform 服务条款。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0053-4ff2a500ac7c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": []
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如服务输出提供给终端用户，须清晰披露输出由 AI 生成、可能含错误或遗漏且仅供参考。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0053-4ff2a500ac7c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "outputs_provided_by_service"
+          ]
+        },
+        "unresolved_predicates": [
+          "outputs_provided_by_service",
+          "disclosure_fulfilled"
+        ]
+      },
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若下游对象属于经修改且支持远程网络交互的受覆盖程序版本，须向远程交互用户显著提供免费获取该版本对应源码的机会。",
+        "source_refs": [
+          "license-text:downstream:d1bdfda347634501"
+        ],
+        "subject": {
+          "artifact": "chain-0053-4ff2a500ac7c:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "scope_shared",
+            "modified_covered_program",
+            "version_supports_remote_network_interaction"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "modified_covered_program",
+          "version_supports_remote_network_interaction",
+          "source_offer_fulfilled"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0053-4ff2a500ac7c"
+  },
+  "usage": {
+    "input_tokens": 17346,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1526,
+    "output_tokens_details": {
+      "reasoning_tokens": 243
+    },
+    "total_tokens": 18872,
+    "attribution": {
+      "items": {
+        "msg_04c44236c46cb1bc016af2f8fea6f487d28b27fdb26bcc2666": {
+          "input_tokens": 15314,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15314,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04c44236c46cb1bc016af2f90466e087d29fc323cbe0ad150e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1283,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1283
+            }
+          ]
+        },
+        "rs_04c44236c46cb1bc016af2f9044b1087d28f80a355e28d0d28": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 243
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 31.277,
+  "auto_applied": false,
+  "aggregate_count": 28
+}

@@ -1,0 +1,47 @@
+{
+  "case_id": "chain-0150-4a38e0966eec",
+  "output": [
+    {
+      "activity": "Charge",
+      "subject": {
+        "artifact": "chain-0150-4a38e0966eec:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "客户须按订单表约定的币种和付款条款向 OpenAI 或适用的转售方支付适用费用。",
+      "trigger": true,
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "applicable_fees",
+        "payment_due_or_performed"
+      ],
+      "source_refs": [
+        "license-text:upstream:c9e0443a56323634"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0150-4a38e0966eec:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若该使用涉及 CC-BY-NC-4.0 所授 Licensed Rights 和受其覆盖的材料，须在该许可范围内使用。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_within_CC_license"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "scope_within_CC_license"
+      ],
+      "source_refs": [
+        "license-text:downstream:ed42a8e402a278f2"
+      ]
+    }
+  ],
+  "aggregate_count": 5
+}

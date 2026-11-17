@@ -1,0 +1,336 @@
+{
+  "case_id": "chain-9042-480a21d62ec0",
+  "source_csv_line": 9043,
+  "row": {
+    "github_repo": "computer-science-skills-collection",
+    "github_url": "https://github.com/bighardperson/computer-science-skills-collection",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-4o",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: skills/arxiv-reader/config.py:17 ｜ 调用原文: LLM_MODEL = os.getenv(\"LLM_MODEL\", \"gpt-4o\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: arxiv-reader/config.py 中 LLM_MODEL 默认值，被 agent 实际加载调用",
+    "batch": "4001-4500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "bighardperson/computer-science-skills-collection",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "9977e77a6f6c286cd08ea0016d12ee25190bdae8af647bcd5e798b7e5cef96b2",
+    "filename": "_licenseref_full/texts/9977e77a6f6c286cd08ea0016d12ee25190bdae8af647bcd5e798b7e5cef96b2.txt",
+    "evidence_file": "LICENSE_NOTICE.md",
+    "acquisition": "zip:mirror:computer-science-skills-collection-HEAD/LICENSE_NOTICE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-9042-480a21d62ec0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prioritize_compliance_with_that_license_or_source_notice",
+            "when": "skill_directory_contains_original_license_or_source_notice"
+          },
+          "S": {
+            "artifact": "chain-9042-480a21d62ec0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9042-480a21d62ec0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9042-480a21d62ec0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9042-480a21d62ec0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认对 gpt-4o 的远程调用及 API 链接关系，但没有证明下游代码、模型权重或副本纳入上游对象；本次不据此认定两侧许可对同一对象适用。",
+      "上游原文摘录仅涉及客户向 OpenAI 或其经销商支付费用，不能据此推断下游收费或其他 API 使用限制；该付款义务的具体费用及触发事实未提供。",
+      "下游 L13 仅要求在技能目录包含原始许可或来源说明时优先遵守该说明；该目录条件及相关说明内容未知。L14 的商用、再分发或大规模改造事实也未提供。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "按适用订单及付款条款向 OpenAI 或其经销商支付适用费用。",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "subject": {
+          "artifact": "chain-9042-480a21d62ec0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "applicable_fees_and_payment_due"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若技能目录包含原始许可或来源说明，优先遵守该许可或说明。",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-9042-480a21d62ec0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "skill_directory_contains_original_license_or_source_notice",
+        "unresolved_predicates": [
+          "skill_directory_contains_original_license_or_source_notice"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在商用、再分发或大规模改造时，确认对应技能的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-9042-480a21d62ec0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "commercial_use",
+            "redistribution",
+            "large_scale_modification"
+          ]
+        },
+        "unresolved_predicates": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在商用、再分发或大规模改造时，确认对应技能的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-9042-480a21d62ec0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "commercial_use",
+            "redistribution",
+            "large_scale_modification"
+          ]
+        },
+        "unresolved_predicates": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在商用、再分发或大规模改造时，确认对应技能的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-9042-480a21d62ec0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "commercial_use",
+            "redistribution",
+            "large_scale_modification"
+          ]
+        },
+        "unresolved_predicates": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-9042-480a21d62ec0"
+  },
+  "usage": {
+    "input_tokens": 18083,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2053,
+    "output_tokens_details": {
+      "reasoning_tokens": 317
+    },
+    "total_tokens": 20136,
+    "attribution": {
+      "items": {
+        "msg_031be69e5437e1eb016af53c37c7e487d084378963a7d173f0": {
+          "input_tokens": 16013,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16013,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_031be69e5437e1eb016af53c37c7e487d0a4e3fc37e9b6a931": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_031be69e5437e1eb016af53c3eaae887d09d006422fdae7dc4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1736,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1736
+            }
+          ]
+        },
+        "rs_031be69e5437e1eb016af53c3e8f3487d0a831c05618a340b6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 317
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "e6bf0428a8aeb20fd8cce60fb917511154a319bc71cc52645d45495eb286bf5e",
+  "elapsed_seconds": 43.65
+}

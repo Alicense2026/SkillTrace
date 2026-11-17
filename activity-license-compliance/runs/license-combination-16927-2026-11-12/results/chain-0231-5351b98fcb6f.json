@@ -1,0 +1,113 @@
+{
+  "case_id": "chain-0231-5351b98fcb6f",
+  "input_group_row": 231,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "CC-BY-4.0",
+    "资产许可证原文标题/标签": "GPL-3.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0231-5351b98fcb6f",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_license_and_notices",
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0231-5351b98fcb6f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:afce76e281e6a774"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0231-5351b98fcb6f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0231-5351b98fcb6f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If conveying copies of the upstream GPL-3.0 Program, provide a copy of the GPL license and preserve the notices specified in the cited clause.",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "provide_license_and_notices"
+        ],
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0231-5351b98fcb6f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "When exercising licensed rights in the CC-BY-4.0 material, comply with the applicable CC license conditions.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:afce76e281e6a774"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录证实的是远程服务调用及API链接，不证明代码修改、复制、分发、结合或共享许可对象；两许可的共同适用范围未知。",
+      "GPL摘录涉及复制及传递代码的条件，不显示远程调用本身触发这些条件；当前未发现适用于该调用方式的网络服务源码提供条款。",
+      "CC-BY-4.0摘录为许可授予条款，具体适用条件未在该摘录中展开。活动或许可条件的适用情况未知，故相关事项仅列条件义务。",
+      "结构化条款标记为FIRST_PASS_REVIEW_REQUIRED；本次结论限于所提供摘录，未推断未呈现的条款内容。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0228-770377b9df00.json",
+  "original_case_id": "chain-0228-770377b9df00",
+  "original_request_sha256": "24ddbdd728cf1238b4c154c84ae8b7d373880aaec01cf7f78677e73f02d1df7f",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0228-770377b9df00": "chain-0231-5351b98fcb6f",
+    "license-text:upstream:515d434cad2d4fc5": "license-text:upstream:515d434cad2d4fc5",
+    "license-text:downstream:afce76e281e6a774": "license-text:downstream:afce76e281e6a774",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/227": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/230"
+  }
+}

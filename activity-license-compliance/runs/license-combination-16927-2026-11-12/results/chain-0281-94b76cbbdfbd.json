@@ -1,0 +1,93 @@
+{
+  "case_id": "chain-0281-94b76cbbdfbd",
+  "input_group_row": 281,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "PostgreSQL",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0281-94b76cbbdfbd",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:962aebd556187189"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0281-94b76cbbdfbd:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "preserve_copyright_notice_and_permission_paragraph",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:aaa62f6e8cfb02fb"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0281-94b76cbbdfbd:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0281-94b76cbbdfbd:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "preserve_copyright_notice_and_permission_paragraph",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "preserve_copyright_notice_and_permission_paragraph"
+        ],
+        "source_refs": [
+          "license-text:upstream:962aebd556187189"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录表明对 PostgreSQL 资产有 Use 和远程调用，但没有分发、修改副本或源码提供的事实；未据此触发分发条件，也未将 API 调用视作权重转移或分发。",
+      "对象图中的依赖、捆绑、修改副本和组合产品关系未确定，双方许可条款是否共同约束同一对象未知；现有条款摘录未显示与 PostgreSQL 使用通知保留要求相反的 Apache 条款。",
+      "结构化条款标记为 FIRST_PASS_REVIEW_REQUIRED；本分析限于所列许可文本摘录及映射。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0274-8a88bdc662b1.json",
+  "original_case_id": "chain-0274-8a88bdc662b1",
+  "original_request_sha256": "4ddd28fb21e19c72fee6bbc3b5822df687738aeb967e0595bafacfee39c93d92",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0274-8a88bdc662b1": "chain-0281-94b76cbbdfbd",
+    "license-text:upstream:962aebd556187189": "license-text:upstream:962aebd556187189",
+    "license-text:downstream:aaa62f6e8cfb02fb": "license-text:downstream:aaa62f6e8cfb02fb",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/273": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/280"
+  }
+}

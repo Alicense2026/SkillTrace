@@ -1,0 +1,29 @@
+{
+  "case_id": "chain-0034-1d85a5ee571c",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "依适用订单或其他订单确认，支付使用 Mistral AI Products 所产生的应付款项；摘录称发票日起30日内支付，但具体费用及适用订单未提供。",
+      "source_refs": [
+        "license-text:upstream:282b79bf9fcbaf7a"
+      ],
+      "subject": {
+        "artifact": "chain-0034-1d85a5ee571c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "fees_due_under_applicable_order"
+        ]
+      },
+      "unresolved_predicates": [
+        "fees_due_under_applicable_order",
+        "payment_fulfilled"
+      ]
+    }
+  ],
+  "aggregate_count": 56
+}

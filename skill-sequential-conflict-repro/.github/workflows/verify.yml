@@ -1,0 +1,26 @@
+name: verify
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Verify packaged experiment data
+        run: python scripts/verify_repro.py
+      - name: Regenerate report
+        run: python scripts/build_report.py
+      - name: Regenerate readable task log
+        run: python scripts/export_task_log.py
+      - name: Test SkillTrace log scanner
+        run: python -m unittest discover -s tests -v
+      - name: Scan sample agent log
+        run: python scripts/skilltrace_logscan.py examples/skilltrace/sample_codex_c1.jsonl

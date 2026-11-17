@@ -1,0 +1,210 @@
+{
+  "request_sha256": "4798fec88ebc01c3dbff6d8f9851699c0e9f95117d812da28daaa5e5fa3b98d5",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 637,
+        "end_line": 640,
+        "clause_label": "GPL_redistribute_permission",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "under_gpl_terms_and_version_selected_by_licensee"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 example notice grants permission to redistribute the identified program under GPL version 3 or, at the licensee's option, any later version. Selecting a later version is optional.",
+        "condition_explanation": "under_gpl_terms_and_version_selected_by_licensee means redistributing the program under the GNU GPL as published by the Free Software Foundation, version 3 or a later version chosen by the licensee.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 637,
+        "end_line": 640,
+        "clause_label": "GPL_modify_permission",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "under_gpl_terms_and_version_selected_by_licensee"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 example notice grants permission to modify the identified program under GPL version 3 or, at the licensee's option, any later version. Selecting a later version is optional.",
+        "condition_explanation": "under_gpl_terms_and_version_selected_by_licensee means modifying the program under the GNU GPL as published by the Free Software Foundation, version 3 or a later version chosen by the licensee.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 650,
+        "end_line": 650,
+        "clause_label": "contact_information_notice_duty",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "contact_information_included"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The example notice instructs the person applying it to add electronic and paper contact information for the identified program; the contact information is not specified in the source excerpt.",
+        "condition_explanation": "contact_information_included means the program's notice includes information on how to contact the relevant person by electronic and paper mail.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Add information on how to contact the relevant person by electronic mail and paper mail.",
+            "actor": "person applying the example notice to the program",
+            "object": "contact information in the program's notice",
+            "trigger": "When applying this example notice to the program."
+          }
+        ]
+      },
+      {
+        "start_line": 652,
+        "end_line": 658,
+        "clause_label": "terminal_interaction_startup_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "program_does_terminal_interaction",
+          "requires": "startup_notice_shown_in_interactive_mode"
+        },
+        "actor_role": "licensee",
+        "scope_note": "For a program that does terminal interaction, the example directs that a short notice be output when the program starts in an interactive mode. It gives the notice's contents: program and copyright identification, warranty disclaimer information, and a statement that redistribution is permitted under conditions with a reference to those conditions.",
+        "condition_explanation": "program_does_terminal_interaction means the program does terminal interaction. startup_notice_shown_in_interactive_mode means the program outputs a short notice when it starts in an interactive mode; the source provides sample text, not fixed values for its placeholders.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Make the program output a short notice when it starts in an interactive mode, including the program and copyright identification, warranty-information reference, and redistribution-conditions reference.",
+            "actor": "person applying the example notice to the program",
+            "object": "startup notice output by the program",
+            "trigger": "If the program does terminal interaction and starts in an interactive mode."
+          }
+        ]
+      },
+      {
+        "start_line": 669,
+        "end_line": 674,
+        "clause_label": "proprietary_incorporation_not_permitted",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "The GPL statement says the identified program may not be incorporated into proprietary programs. It separately describes, without granting a permission, the option of using the LGPL for a library intended to permit linking with proprietary applications.",
+        "condition_explanation": "The prohibition applies to incorporating the identified program into a proprietary program. The excerpt's suggestion to consider the LGPL is not itself a permission under this GPL notice.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not incorporate the program into a proprietary program.",
+            "actor": "person incorporating the program",
+            "object": "the program and the proprietary program into which it would be incorporated",
+            "trigger": "When incorporating the program into another program."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The chunk is an example notice and accompanying guidance, not the full GPL text. The clauses permitting redistribution and modification refer to compliance with GPL terms; the complete terms and any applicable requirements are outside these target paragraphs and are not reconstructed here.",
+      "The sample notice contains symbolic program, year, and author placeholders; no values are supplied or inferred.",
+      "The GPL passage's statement against proprietary incorporation is represented as a prohibition. The suggestion to use the LGPL instead does not grant a GPL permission to link proprietary applications."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0113",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Lines 634–635 are sample notice placeholders for program name, year, and author, not operative license rules."
+      },
+      {
+        "unit_id": "P0114",
+        "status": "MODELED",
+        "clause_labels": [
+          "GPL_redistribute_permission",
+          "GPL_modify_permission"
+        ],
+        "reason": "The paragraph grants permission to redistribute and modify under GPL version 3 or a later version selected by the licensee."
+      },
+      {
+        "unit_id": "P0115",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Lines 642–645 are a warranty disclaimer and reference to further GPL terms, not an activity constraint in this extraction."
+      },
+      {
+        "unit_id": "P0116",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "The paragraph directs the recipient to the GPL text or website if a copy was not received; it does not state an operative use restriction or duty."
+      },
+      {
+        "unit_id": "P0117",
+        "status": "MODELED",
+        "clause_labels": [
+          "contact_information_notice_duty"
+        ],
+        "reason": "The instruction to add electronic and paper contact information is modeled as a notice duty."
+      },
+      {
+        "unit_id": "P0118",
+        "status": "MODELED",
+        "clause_labels": [
+          "terminal_interaction_startup_notice"
+        ],
+        "reason": "The conditional instruction specifies a startup notice for terminal-interactive programs in interactive mode."
+      },
+      {
+        "unit_id": "P0119",
+        "status": "MODELED",
+        "clause_labels": [
+          "terminal_interaction_startup_notice"
+        ],
+        "reason": "These lines supply the contents of the short startup notice required by the conditional instruction."
+      },
+      {
+        "unit_id": "P0120",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "These lines explain that the sample commands may be adapted for the program's interface; they do not impose an independent activity constraint."
+      },
+      {
+        "unit_id": "P0121",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The advice to seek an employer or school copyright disclaimer is qualified as appropriate and necessary; the remaining lines point to further application guidance rather than impose a license duty."
+      },
+      {
+        "unit_id": "P0122",
+        "status": "MODELED",
+        "clause_labels": [
+          "proprietary_incorporation_not_permitted"
+        ],
+        "reason": "The paragraph prohibits incorporating the program into proprietary programs; its LGPL suggestion is guidance about a different license, not a permission under this one."
+      }
+    ]
+  },
+  "attempt": 2
+}

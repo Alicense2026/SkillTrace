@@ -1,0 +1,91 @@
+{
+  "case_id": "chain-0026-e8b56e0d3476",
+  "input_group_row": 26,
+  "aggregate_count": 112,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "阿里云百炼服务特别说明",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "112"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0026-e8b56e0d3476",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0026-e8b56e0d3476:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:02dfe77e930a26a7"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0026-e8b56e0d3476:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0026-e8b56e0d3476:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在使用阿里云百炼模型体验生成的内容时，仅将其用于体验模型效果；不得用于其他目的，包括商业化使用或向第三方提供、传播、分发。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "limitations": [
+      "上游摘录的限制针对模型体验生成内容的用途；现有事实仅确认远程服务调用和Use，未说明该次调用是否属于摘录所述模型体验、生成内容的用途或是否涉及商业化、向第三方提供等受限行为，故不据此认定违规。",
+      "对象图确认API调用/加载关系，但下游代码与上游服务是否落入共同许可约束范围未知；Apache许可摘录仅说明下游作品的版权许可，未形成与上游条款相反的约束。",
+      "现有摘录未明确规定普通远程调用本身的网络服务、源码提供或分发义务；不据此推断此类义务。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0023-b2970747494f.json",
+  "original_case_id": "chain-0023-b2970747494f",
+  "original_request_sha256": "c251c74ede16a838a99d7761bd9163c1c1f2d1f1929d888d50f3b9a8b0e83a05",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0023-b2970747494f": "chain-0026-e8b56e0d3476",
+    "license-text:upstream:e0a6023d95b56568": "license-text:upstream:e0a6023d95b56568",
+    "license-text:downstream:02dfe77e930a26a7": "license-text:downstream:02dfe77e930a26a7",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/22": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/25"
+  }
+}

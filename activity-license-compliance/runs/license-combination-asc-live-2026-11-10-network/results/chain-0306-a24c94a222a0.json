@@ -1,0 +1,171 @@
+{
+  "case_id": "chain-0306-a24c94a222a0",
+  "status": "SUCCESS",
+  "request_sha256": "9ea27334d2c76615cf1e7b2366d0c66aa9a10d4b25613e8a4d8bec98a9a5d1eb",
+  "analysis": {
+    "case_id": "chain-0306-a24c94a222a0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "license_whole_work_under_GPL_and_provide_source"
+          },
+          "S": {
+            "artifact": "chain-0306-a24c94a222a0:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_corresponding_source_by_allowed_method"
+          },
+          "S": {
+            "artifact": "chain-0306-a24c94a222a0:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0f33cb60dfca4c8f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0306-a24c94a222a0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实是对 GPL-3.0 资产进行远程服务调用，代码修改不适用；未提供分发、修改副本、提供源码或再许可事实。所摘录的 GPL 条款针对复制/传递等行为，不能据此推定远程调用触发这些要求。",
+      "CC0-1.0 摘录涉及 downstream 对象的权利放弃；对象图仅确认 API 调用/链接关系，未确认其与 upstream GPL 资产属于同一许可约束范围。未发现可据此判定的许可冲突。",
+      "结构化条款摘录未提供适用于 RemoteInteraction、ProvideNetworkService 或一般 Use 的 GPL 条款；不据此推断许可义务或豁免。"
+    ],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若传递受 GPL 覆盖的 upstream 修改版本，须按 GPL 许可整个作品并提供源码。",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "subject": {
+          "artifact": "chain-0306-a24c94a222a0:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "covered_work_scope"
+        ]
+      },
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发受 GPL 覆盖的目标代码，须按许可允许的方式提供对应源码。",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "subject": {
+          "artifact": "chain-0306-a24c94a222a0:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "all(activity:Distribute, object_code_conveyance)",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "object_code_conveyance",
+          "covered_work_scope"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18907,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1137,
+    "output_tokens_details": {
+      "reasoning_tokens": 225
+    },
+    "total_tokens": 20044,
+    "attribution": {
+      "items": {
+        "msg_021e22f15147ca65016af304e8947c87d2ad964fdb71c7ab67": {
+          "input_tokens": 16875,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16875,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_021e22f15147ca65016af304edf92887d2960a70e4b41abaa9": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 912,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 912
+            }
+          ]
+        },
+        "rs_021e22f15147ca65016af304eddda087d29753d35bf94ffb93": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 225
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.226,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

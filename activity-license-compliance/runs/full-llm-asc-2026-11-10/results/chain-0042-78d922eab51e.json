@@ -1,0 +1,172 @@
+{
+  "case_id": "chain-0042-78d922eab51e",
+  "status": "SUCCESS",
+  "request_sha256": "8e0a53ebdb104043c9cdda7c694916e7b8253ab1b6187124e12641c5d1a6c10b",
+  "analysis": {
+    "case_id": "chain-0042-78d922eab51e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d04521e5e9cd5880"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0042-78d922eab51e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d04521e5e9cd5880"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0042-78d922eab51e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本地 MIT 原文明确允许使用、复制、修改、合并、发布、分发、再许可和销售；副本或软件实质部分须包含版权声明和许可声明。远程调用、链接本身不证明复制、分发、修改或许可范围重叠。",
+      "下游活动及其是否包含上游材料均未确定；不据此推定下游 CombinedProduct 受上游 MIT 条款约束。"
+    ],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "chain-0042-78d922eab51e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在软件的所有副本或实质部分中包含版权声明和许可声明。",
+        "trigger": "activity:Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Copy",
+          "notice_included"
+        ],
+        "source_refs": [
+          "license-text:upstream:d04521e5e9cd5880"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0042-78d922eab51e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在分发的副本或软件实质部分中包含版权声明和许可声明。",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "notice_included"
+        ],
+        "source_refs": [
+          "license-text:upstream:d04521e5e9cd5880"
+        ]
+      },
+      {
+        "activity": "Sublicense",
+        "subject": {
+          "artifact": "chain-0042-78d922eab51e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在涉及的软件副本或实质部分中包含版权声明和许可声明。",
+        "trigger": "activity:Sublicense",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Sublicense",
+          "notice_included"
+        ],
+        "source_refs": [
+          "license-text:upstream:d04521e5e9cd5880"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 34139,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1239,
+    "output_tokens_details": {
+      "reasoning_tokens": 395
+    },
+    "total_tokens": 35378,
+    "attribution": {
+      "items": {
+        "msg_0a4ef9934e34cf9e016af2e70e7bd487d2953ec7aaf38f11ca": {
+          "input_tokens": 32191,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32191,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a4ef9934e34cf9e016af2e7180d1087d280571823effde409": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 844,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 844
+            }
+          ]
+        },
+        "rs_0a4ef9934e34cf9e016af2e717f16487d2bf0101ceb682598c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 395
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 35.368,
+  "auto_applied": false
+}

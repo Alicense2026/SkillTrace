@@ -1,0 +1,78 @@
+{
+  "request_sha256": "3361fb898f781b7ac4534dee60e4678bab2d1e19dfa8eb287d253a84eeb73bca",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 44,
+        "end_line": 44,
+        "clause_label": "gap/voice_replica_original_voice_deletion",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "voice_replication_task_completed",
+          "requires": "original_voice_deleted_and_not_stored_or_used"
+        },
+        "actor_role": "provider",
+        "scope_note": "For model-square voice-replication experience, the provider states that the uploaded original voice is deleted after the replication task is complete and is not stored or used. This is distinct from the user's restrictions on uploaded audio and the completed replica.",
+        "condition_explanation": "voice_replication_task_completed means the voice-replication task has finished. The clause's provider duty concerns the user's original uploaded voice, not the generated replica.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Delete the user's original voice after the voice-replication task is completed.",
+            "actor": "platform provider",
+            "object": "User's original uploaded voice recording",
+            "trigger": "When the voice-replication task is completed."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not store or use the user's original voice recording.",
+            "actor": "platform provider",
+            "object": "User's original uploaded voice recording",
+            "trigger": "At all times, including after the voice-replication task is completed."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The customer-service-benefits standard referenced at line 29 is not supplied; the existing support_standard_external anchor models the local obligation to follow it, but its detailed requirements cannot be verified.",
+      "Line 49 refers to third-party service agreements and policies that are not supplied. No contents or additional obligations from those agreements are inferred."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0014",
+        "status": "MODELED",
+        "clause_labels": [
+          "support_standard_external"
+        ],
+        "reason": "The provider's commitment to supply after-sales support according to the website's published customer-service-benefits standard is captured by the existing anchor; the standard's details are unavailable."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "MODELED",
+        "clause_labels": [
+          "experience_ai_label",
+          "experience_input_content_lawfulness",
+          "experience_content_collection_disclosure",
+          "voice_replica_upload_restrictions",
+          "voice_replica_experience_only",
+          "gap/voice_replica_original_voice_deletion",
+          "experience_output_restricted_use"
+        ],
+        "reason": "Existing anchors cover the AI-label restriction, user-content requirements and collection disclosure, voice-upload restrictions, experience-only replica use, and experience-output restrictions; the added clause captures deletion and non-storage/non-use of the original voice."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "The paragraph allocates responsibility for third-party disputes and support, disclaims provider responsibility and support, and directs users seeking third-party support to contact the third party. The support-contact direction does not map faithfully to an allowed activity; no third-party agreement terms are supplied or inferred."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

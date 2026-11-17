@@ -1,0 +1,223 @@
+{
+  "case_id": "chain-0211-c3de4902f146",
+  "input_group_row": 211,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0211-c3de4902f146",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components"
+              ]
+            },
+            "when": "use_upstream_Gemini_API_services"
+          },
+          "S": {
+            "artifact": "chain-0211-c3de4902f146:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:13e51f38ed6c021b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agree_to_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0211-c3de4902f146:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:13e51f38ed6c021b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "noncommercial_purpose",
+                "qualifying_personal_use_without_anticipated_commercial_application",
+                "use_by_qualifying_noncommercial_organization"
+              ]
+            },
+            "when": "use_licensed_software"
+          },
+          "S": {
+            "artifact": "chain-0211-c3de4902f146:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游摘录涉及使用 Gemini Services 开发竞争模型以及逆向工程、提取或复制服务组件；没有证据表明当前远程 API 调用属于这些行为，因此不判违规。相关结构化条款标记 FIRST_PASS_REVIEW_REQUIRED，具体定义和上下文仍以来源全文为准。",
+      "对象图确认下游资产与上游 API 存在链接和远程调用，但共同许可约束范围未知；不能据此认定两许可同范围适用或存在许可冲突。API调用不等于模型权重转移。",
+      "下游 permitted purpose 的具体适用事实未知。收费、商业用途、个人用途或合格组织身份均不能从现有记录推定。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "同意 PolyForm Noncommercial 条款。",
+        "source_refs": [
+          "license-text:downstream:13e51f38ed6c021b"
+        ],
+        "subject": {
+          "artifact": "chain-0211-c3de4902f146:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "agree_to_terms"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "仅为许可所列 permitted purpose 使用：非商业目的，或符合条款条件的个人用途，或由条款所列合格组织使用。",
+        "source_refs": [
+          "license-text:downstream:13e51f38ed6c021b"
+        ],
+        "subject": {
+          "artifact": "chain-0211-c3de4902f146:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "noncommercial_purpose",
+          "qualifying_personal_use_without_anticipated_commercial_application",
+          "use_by_qualifying_noncommercial_organization"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Gemini API 服务时，不得利用服务开发与 Gemini API 或 Google AI Studio 竞争的模型，也不得尝试逆向工程、提取或复制服务组件。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0211-c3de4902f146:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_upstream_Gemini_API_services",
+        "unresolved_predicates": [
+          "develop_competing_model",
+          "attempt_reverse_engineer_extract_or_replicate"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 31687,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1488,
+    "output_tokens_details": {
+      "reasoning_tokens": 317
+    },
+    "total_tokens": 33175,
+    "attribution": {
+      "items": {
+        "msg_0e09abfdcde9d988016af52feb518c87d0b260e2387227012e": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e09abfdcde9d988016af52feb518c87d0b834cc870daec768": {
+          "input_tokens": 29617,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29617,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e09abfdcde9d988016af52ff1f37487d0a11f6a34818a5729": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1171,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1171
+            }
+          ]
+        },
+        "rs_0e09abfdcde9d988016af52ff1dc8087d08bd713a933d8838e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 317
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "0c176dcb2a725e7ed0be2c6d54c704e975de011eadb572f714a955af52105521",
+  "elapsed_seconds": 37.29
+}

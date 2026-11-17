@@ -1,0 +1,106 @@
+{
+  "case_id": "chain-2251-c50e14d5efa9",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-2251-c50e14d5efa9:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If a copy or substantial portion of the Software is made or provided, include the copyright notice and permission notice in that copy or substantial portion.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "copy_or_substantial_portion"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion",
+        "include_copyright_and_permission_notice"
+      ],
+      "source_refs": [
+        "license-text:upstream:bef591f1c28b6755"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-2251-c50e14d5efa9:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the used asset is the Community Edition, do not use the 5ire Brand in modified versions and prominently state: “This product is based on 5ire Community Edition and is not affiliated with 5ire.”",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_is_community_edition"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "scope_is_community_edition",
+        "no_5ire_brand_used_in_modified_versions",
+        "prominent_required_statement_present"
+      ],
+      "source_refs": [
+        "license-text:downstream:a53ccaf49d1cf3ce"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-2251-c50e14d5efa9:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If using the Community Edition, do not engage in a use that triggers the commercial-license requirement: the specified modified-code distribution or SaaS cases, or use of the 5ire Brand in a product, service, or promotion. The terms of any separate commercial license are not specified in the supplied excerpt.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_is_community_edition",
+          {
+            "any": [
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "serves_enterprise_clients_over_10_users"
+                ]
+              },
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "integrates_into_hardware_or_products_for_sale"
+                ]
+              },
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "government_or_education_procurement_involves_sensitive_data"
+                ]
+              },
+              "uses_5ire_brand_in_product_service_or_promotion"
+            ]
+          }
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "scope_is_community_edition",
+        "modified_code",
+        "distribution_directly_or_as_saas",
+        "serves_enterprise_clients_over_10_users",
+        "integrates_into_hardware_or_products_for_sale",
+        "government_or_education_procurement_involves_sensitive_data",
+        "uses_5ire_brand_in_product_service_or_promotion"
+      ],
+      "source_refs": [
+        "license-text:downstream:a53ccaf49d1cf3ce"
+      ]
+    }
+  ]
+}

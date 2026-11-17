@@ -1,0 +1,92 @@
+{
+  "request_sha256": "744b50ad0c4a2130ddd1bab463ad91d2b9835601a5b95b578aacefa0f25bd4aa",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 87,
+        "end_line": 87,
+        "clause_label": "commercial_terms_provide_service_access_export_restriction",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "providing_service_access_prohibited_by_applicable_law",
+              "export_or_import_into_country_prohibited_or_illegal_without_appropriate_license",
+              "recipient_or_country_covered_by_us_sanctions"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial Terms of Service, M.8. The represented activity is providing access to the Anthropic Services; the object is those Services. The paragraph separately prohibits exporting them in specified circumstances, but export itself has no exact activity in the supplied schema.",
+        "condition_explanation": "The access restriction applies where providing access is prohibited under U.S. or other applicable international law. The listed country and sanctions circumstances are included by the text. The export-specific condition includes its stated appropriate-license qualification.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not provide access to the Anthropic Services where doing so is prohibited under U.S. or other applicable international law, including the specified country, licensing, and sanctions circumstances.",
+            "actor": "Customer",
+            "object": "Anthropic Services",
+            "trigger": "Whenever providing access to the Services would be prohibited under applicable law."
+          }
+        ]
+      },
+      {
+        "start_line": 96,
+        "end_line": 96,
+        "clause_label": "consumer_service_use_agreement_by_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "accessing_services_signifies_agreement_to_consumer_terms_and_included_acceptable_use_policy"
+        },
+        "actor_role": "individual user",
+        "scope_note": "Consumer Terms of Service, paragraph 96, for Claude.ai, Claude Pro, and the other individual products and services identified there—not API keys, the Console, or offerings governed by the Commercial Terms. The object is the consumer Services.",
+        "condition_explanation": "The paragraph states that accessing the consumer Services constitutes agreement to these Terms, which include the Acceptable Use Policy. The Acceptable Use Policy text is not supplied, so no additional restrictions are inferred.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "M.8's prohibition on exporting Services is operative but export is not an exact allowed activity; the clause models only the distinct prohibition on providing service access. The export-specific restriction remains unrepresented.",
+      "M.1–M.4 include operative notice requirements, agreement to receive electronic communications, amendment mechanics, and assignment/delegation restrictions. These are not faithfully expressible as the supplied activity/object rules; P0014 is therefore UNRESOLVED.",
+      "M.5, M.7, and M.9–M.10 concern severability, governing law and venue, integration, and force majeure, not activity constraints.",
+      "The incorporated Usage Policy, Supported Regions Policy, Service Specific Terms, DPA, Model Pricing Page, Section J (Disputes), and the Consumer Terms' Acceptable Use Policy are not supplied; their contents are not inferred."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0014",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "commercial_terms_provide_service_access_export_restriction"
+        ],
+        "reason": "The restriction on providing service access is modeled, but the export prohibition cannot be represented with an exact supplied activity. The paragraph also contains operative notice, electronic-communications, amendment, and assignment/delegation terms that do not map faithfully to the activity/object schema."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "MODELED",
+        "clause_labels": [
+          "consumer_service_use_agreement_by_access"
+        ],
+        "reason": "Paragraph 96 expressly makes access to the identified consumer Services agreement to the Consumer Terms, including the Acceptable Use Policy. It also distinguishes the consumer Services from API and Console use governed by the Commercial Terms. Paragraph 97 merely points to the Privacy Policy and supplies no specific privacy duty."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Paragraph 101 describes Anthropic's work and does not impose a behavioral duty, permission, or prohibition."
+      }
+    ]
+  },
+  "attempt": 2
+}

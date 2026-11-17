@@ -1,0 +1,160 @@
+{
+  "case_id": "chain-0104-831da48134f7",
+  "status": "SUCCESS",
+  "request_sha256": "4bc66695035f50ce1b970594c948878624a225acf0d9cce3ac4dba0cf2221a98",
+  "analysis": {
+    "case_id": "chain-0104-831da48134f7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0104-831da48134f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0104-831da48134f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0104-831da48134f7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ffbe7139ea4d5b24"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "network_source_offer_available",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0104-831da48134f7:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "The record establishes API use, remote interaction, and a LINK relation, but does not establish that the downstream artifact contains, modifies, or is a derivative of the upstream service or program; the object graph marks dependency and modified-copy relations unknown.",
+      "The AGPL-3.0 section 13 excerpt conditions its source-offer duty on modifying the Program and remote interaction with that modified version. The trusted record says code modification is not applicable; an API call alone does not establish the modification trigger or transfer model weights. No source-offer duty or violation is therefore inferred.",
+      "The upstream excerpt’s prohibitions address specified conduct (including extraction, reverse engineering, and certain uses); the supplied facts do not establish such conduct. The excerpt also distinguishes free-feature limitations from paid-feature authorization, but the record does not establish the applicable product tier or relevant commercial-use facts. No commercial-use violation is inferred.",
+      "Both local license texts are identified by hash, but the excerpts are marked FIRST_PASS_REVIEW_REQUIRED. Conclusions are limited to the cited excerpts and mapped activities."
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+  },
+  "usage": {
+    "input_tokens": 30939,
+    "input_tokens_details": {
+      "cached_tokens": 30720,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1168,
+    "output_tokens_details": {
+      "reasoning_tokens": 372
+    },
+    "total_tokens": 32107,
+    "attribution": {
+      "items": {
+        "msg_0c658cfb5bf57e7c016af2fb97f87487d18e766fca3f01609b": {
+          "input_tokens": 28907,
+          "cached_tokens": 28690,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 28907,
+              "cached_tokens": 28690,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c658cfb5bf57e7c016af2fb9f51ec87d1be4ca41841e112a9": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 796,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 796
+            }
+          ]
+        },
+        "rs_0c658cfb5bf57e7c016af2fb9f362087d1b310356f202a608e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 372
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.309,
+  "auto_applied": false,
+  "aggregate_count": 9
+}

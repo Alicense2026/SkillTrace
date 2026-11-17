@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0165-aa730527bb6a",
+  "status": "SUCCESS",
+  "request_sha256": "474547107dd8bd413f48d94f2382dbe8abf72920931d59c06252477aee1093ab",
+  "analysis": {
+    "case_id": "chain-0165-aa730527bb6a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0165-aa730527bb6a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:45cda7ce9015c7b5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0165-aa730527bb6a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0165-aa730527bb6a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "向 OpenAI 或其转售商支付适用费用，并按订单表中的货币及付款条款履行。",
+        "trigger": "applicable_fees_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0165-aa730527bb6a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅在 CC 许可范围内行使许可权利；此许可授予本身不表明 OpenAI API 服务或其输出属于该许可材料。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope"
+        ],
+        "source_refs": [
+          "license-text:downstream:45cda7ce9015c7b5"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI 原文中唯一匹配的结构化条款为费用支付条款；其方向是客户向服务商付款，不构成客户向下游收费的许可或禁止。",
+      "CC-BY-NC-SA-4.0 摘录仅显示对 Licensed Rights 的授予，适用对象限于许可范围内的材料。任务事实确认了 API/代码链接及远程调用，但未证明该服务调用、OpenAI 资产或下游 CombinedProduct 与 CC 许可材料为同一受约束对象；不得据此推断共同许可范围。",
+      "未提供可适用于本次远程调用的 OpenAI 使用、输出、商业用途或网络服务条款映射；不得从 proprietary 标签或 CC 条款补写相关限制。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 19558,
+    "input_tokens_details": {
+      "cached_tokens": 19328,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1040,
+    "output_tokens_details": {
+      "reasoning_tokens": 246
+    },
+    "total_tokens": 20598,
+    "attribution": {
+      "items": {
+        "msg_0f46f3fad9fb6847016af2fe0e7f1887d2855593239d6e613d": {
+          "input_tokens": 17526,
+          "cached_tokens": 17298,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17526,
+              "cached_tokens": 17298,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0f46f3fad9fb6847016af2fe146c0087d292a2262e95020c2a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 794,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 794
+            }
+          ]
+        },
+        "rs_0f46f3fad9fb6847016af2fe14504487d2b2d14d86c54773d2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 246
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.671,
+  "auto_applied": false,
+  "aggregate_count": 4
+}

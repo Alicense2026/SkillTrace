@@ -1,0 +1,198 @@
+{
+  "request_sha256": "13e807171b0cf423f537028a5143aa5556e3123ca43fbc8f8e41402a694f586a",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 75,
+        "end_line": 75,
+        "clause_label": "confidential_information_limited_use_and_protection",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "use_only_to_fulfill_agreement_obligations",
+              "protect_at_least_own_information_care",
+              "protect_at_least_reasonable_care"
+            ]
+          }
+        },
+        "actor_role": "Receiving Party",
+        "scope_note": "Section 6.3 applies to either party when it receives the other party’s Confidential Information. The object is the particular Confidential Information received, including Customer Data and Outputs when they qualify as such. Mistral AI may disclose Customer Confidential Information to need-to-know employees, contractors, or service providers bound by substantially consistent terms, or when required by law; before a legally required disclosure, it must attempt to notify Customer if permitted.",
+        "condition_explanation": "use_only_to_fulfill_agreement_obligations means the Receiving Party uses the information solely to fulfill its obligations under the Agreement. protect_at_least_own_information_care means it protects the information with no less care than it uses for its own confidential information. protect_at_least_reasonable_care is a floor, even if the Receiving Party uses less care for its own information. The stated Mistral disclosure paths qualify the confidentiality restrictions; the legally required disclosure notice is qualified by whether notice is permitted.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use the received Confidential Information solely to fulfill obligations under the Agreement.",
+            "actor": "Receiving Party",
+            "object": "The Disclosing Party’s Confidential Information received by the Receiving Party.",
+            "trigger": "Whenever the Receiving Party uses the Confidential Information."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Protect the Confidential Information with at least the same degree of care used to protect the Receiving Party’s own confidential information, and in no event less than reasonable care.",
+            "actor": "Receiving Party",
+            "object": "The Disclosing Party’s Confidential Information received by the Receiving Party.",
+            "trigger": "While the information is Confidential Information in the Receiving Party’s possession or control."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Attempt to notify Customer before disclosing Customer Confidential Information when disclosure is required by law, if notification is permitted.",
+            "actor": "Mistral AI",
+            "object": "Customer Confidential Information proposed to be disclosed as required by law.",
+            "trigger": "Before a legally required disclosure, if applicable law permits advance notification."
+          }
+        ]
+      },
+      {
+        "start_line": 82,
+        "end_line": 82,
+        "clause_label": "customer_use_in_compliance_with_law_and_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "comply_with_applicable_law",
+              "comply_with_these_terms",
+              "comply_with_applicable_additional_terms"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 7.3 is Customer’s representation and warranty concerning Customer’s use of the Mistral AI Products. This models its express use constraint, not a broader grant of rights.",
+        "condition_explanation": "The three predicates refer respectively to compliance with applicable law, these Terms, and any Additional Terms applicable to Customer’s use.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Mistral AI Products except in accordance with applicable law, these Terms, and applicable Additional Terms.",
+            "actor": "Customer",
+            "object": "Mistral AI Products.",
+            "trigger": "Whenever Customer uses the Mistral AI Products."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a proprietary service agreement excerpt, not a standalone license grant; the cited clauses do not independently establish a broader permission to use or distribute products or materials.",
+      "Sections 8.1, 8.3, and 8.4 contain operative indemnity and claims-procedure obligations, but the allowed activities and objects do not represent indemnifying, defending, paying, notifying, controlling a claim, or cooperating in litigation. Those obligations remain explicitly unresolved below.",
+      "Sections 10.2 and 10.3 require payment of fees and taxes, including specified payment timing, invoice dispute handling, tax withholding gross-up, and remittance. The activity vocabulary cannot represent paying the provider or remitting taxes; Charge and SellCopies would incorrectly describe charging third parties.",
+      "Section 6.3’s Mistral disclosure exceptions and notice qualification are described in the confidentiality clause; its other confidentiality duties are covered. No external pricing page, Documentation, Order Form, Usage Policy, or Additional Terms are supplied, so their contents and any variable pricing or other terms cannot be determined."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0035",
+        "status": "MODELED",
+        "clause_labels": [
+          "confidential_information_limited_use_and_protection"
+        ],
+        "reason": "Section 6.3 imposes confidentiality use and protection duties; the clause also captures the expressly stated Mistral disclosure paths and qualified advance-notice duty."
+      },
+      {
+        "unit_id": "P0036",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0037",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Mutual representations and warranties about authority and performance with reasonable care and skill; these are warranties, not behavioral constraints on the listed activities."
+      },
+      {
+        "unit_id": "P0038",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_use_in_compliance_with_law_and_terms"
+        ],
+        "reason": "Section 7.3 expressly states that Customer’s use must comply with law, these Terms, and applicable Additional Terms."
+      },
+      {
+        "unit_id": "P0039",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimers and statements concerning product and output quality do not create behavioral activity constraints."
+      },
+      {
+        "unit_id": "P0040",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Provider’s third-party intellectual-property indemnity is an operative obligation, but indemnifying, defending, and holding harmless cannot be represented with the allowed activities or objects."
+      },
+      {
+        "unit_id": "P0041",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Lists exclusions and limits on the provider’s indemnity obligation; it does not impose an activity constraint representable by the permitted vocabulary."
+      },
+      {
+        "unit_id": "P0042",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Customer’s indemnity, defense, and hold-harmless obligation is operative but cannot be represented by the allowed activities or objects."
+      },
+      {
+        "unit_id": "P0043",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The claims procedure imposes operative notice, control, cooperation, and consent obligations that the allowed activities and objects cannot faithfully represent."
+      },
+      {
+        "unit_id": "P0044",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Specifies exclusivity of remedies for certain claims; it does not create a behavioral activity constraint."
+      },
+      {
+        "unit_id": "P0045",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading and damages-liability disclaimer; not an activity constraint."
+      },
+      {
+        "unit_id": "P0046",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Liability cap and exceptions allocate financial liability rather than constrain an allowed activity."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading and pricing-information provision; no specific activity duty or permission is created."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Customer’s fee-payment deadlines, automatic monthly charges where applicable, and non-refund/non-cancellation/non-credit terms are operative, but provider payment cannot be represented by the allowed activities. Charge is reserved for the licensee charging third parties."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Customer’s tax-payment, no-deduction, exemption-certificate, withholding gross-up, and tax-remittance duties are operative but cannot be represented as provider payment or tax remittance using the allowed activities."
+      },
+      {
+        "unit_id": "P0050",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Customer must pay undisputed fees and give a sufficiently detailed good-faith invoice dispute notice within 15 days; payment and notice actions cannot be represented by the allowed activities."
+      }
+    ]
+  },
+  "attempt": 2
+}

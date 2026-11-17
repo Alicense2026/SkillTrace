@@ -1,0 +1,304 @@
+{
+  "case_id": "chain-19908-dbd7005c201a",
+  "source_csv_line": 19909,
+  "row": {
+    "github_repo": "dsplab",
+    "github_url": "https://github.com/juandavidru4641/dsplab",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "deepseek-chat",
+    "artifact_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/llmProviders.ts:12 ｜ 调用原文: { id: 'deepseek', name: 'DeepSeek', endpoint: 'https://api.deepseek.com', defaultModel: 'deepseek-chat' }, ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: DeepSeek 提供商预设的 defaultModel，用于实际请求。",
+    "batch": "12201-14200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "juandavidru4641/dsplab",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "75c8a6756cdc92be5ff3d3ca65f2c7221906d3e6a10fd9a8d3c12ce6fda14b62",
+    "filename": "_licenseref_full/texts/75c8a6756cdc92be5ff3d3ca65f2c7221906d3e6a10fd9a8d3c12ce6fda14b62.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:dsplab-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-19908-dbd7005c201a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-19908-dbd7005c201a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-19908-dbd7005c201a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "personal_educational_or_noncommercial_open_source_purpose",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-19908-dbd7005c201a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "commercial_use_without_separate_commercial_license",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-19908-dbd7005c201a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "prominent_author_attribution_and_link_to_original_vultlab_repository",
+            "when": "distribution_occurs_or_project_incorporates_significant_source_portions"
+          },
+          "S": {
+            "artifact": "chain-19908-dbd7005c201a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的范围是 DeepSeek API 远程调用及链接关系；没有证据表明 DeepSeek 模型权重转移、下游软件修改、分发、捆绑或源码纳入，也不能仅凭 API 调用认定两份许可约束同一对象。",
+      "DeepSeek 服务条款中的“comply with service terms”范围较宽；所提供摘录不足以逐项映射其全部要求。仅据明确摘录列出输出披露义务，不推断其他条款。",
+      "下游许可证的用途、商业使用、分发及重要源码纳入事实均未提供；其条件义务不代表这些活动已发生。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 DeepSeek 服务时须遵守适用的服务条款。",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "subject": {
+          "artifact": "chain-19908-dbd7005c201a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "向终端用户明确披露输出由 AI 生成、可能含有错误或遗漏且仅供参考。",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "subject": {
+          "artifact": "chain-19908-dbd7005c201a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "end_user_disclosure_fulfillment"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用下游软件，须限于个人、教育或非商业开源目的。",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "subject": {
+          "artifact": "chain-19908-dbd7005c201a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "personal_educational_or_noncommercial_open_source_purpose"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "商业使用下游软件前须取得单独的商业许可。",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "subject": {
+          "artifact": "chain-19908-dbd7005c201a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "separate_commercial_license"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发下游软件，或项目纳入其重要源码部分，须显著注明原作者 syso 并链接至原 VultLab 项目仓库。",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "subject": {
+          "artifact": "chain-19908-dbd7005c201a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "any",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "project_incorporates_significant_source_portions",
+          "attribution_and_link_fulfillment"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19705,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2123,
+    "output_tokens_details": {
+      "reasoning_tokens": 524
+    },
+    "total_tokens": 21828,
+    "attribution": {
+      "items": {
+        "msg_0d285b62e4caf34f016af53ec3659487d1b196810482e68064": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d285b62e4caf34f016af53ec3659487d1ba553ca529053701": {
+          "input_tokens": 17635,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17635,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d285b62e4caf34f016af53ecd765c87d1b003fec2d97670a8": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1599,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1599
+            }
+          ]
+        },
+        "rs_0d285b62e4caf34f016af53eca999c87d1a2ea3b3eea0650ac": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 371
+        },
+        "rs_0d285b62e4caf34f016af53ecd5ab887d18bfcd787d2248797": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 153
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "717eed541ee1eeaf945cac5969c15adec12611343109a9982598357713dc600f",
+  "elapsed_seconds": 48.05
+}

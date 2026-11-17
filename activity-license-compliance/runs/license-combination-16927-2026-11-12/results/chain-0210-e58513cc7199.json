@@ -1,0 +1,192 @@
+{
+  "case_id": "chain-0210-e58513cc7199",
+  "input_group_row": 210,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "DeepSeek Open Platform Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0210-e58513cc7199",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0210-e58513cc7199:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0210-e58513cc7199:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0210-e58513cc7199:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "DeepSeek terms excerpts support service-access conditions and an end-user AI-output disclosure duty. The available evidence does not establish whether the required disclosure was provided, so no violation is concluded.",
+      "The object graph identifies an API link/remote-call relation but leaves dependency and shared licensing scope unknown. The PolyForm excerpts concern the downstream licensor's software; the evidence does not establish that the API call exercises rights in that software or that its terms govern the upstream service.",
+      "The DeepSeek source is labeled proprietary, which is not treated as a general license or as evidence of additional restrictions beyond the cited excerpts."
+    ],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Clearly disclose to end users that service output is AI-generated, may contain errors or omissions, and is for reference only.",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0210-e58513cc7199:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "ai_output_disclosure_provided"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the applicable DeepSeek Open Platform service terms.",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0210-e58513cc7199:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 31639,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1156,
+    "output_tokens_details": {
+      "reasoning_tokens": 278
+    },
+    "total_tokens": 32795,
+    "attribution": {
+      "items": {
+        "msg_0677a119feaff5b5016af52fd797d487d08e7956f20fb31986": {
+          "input_tokens": 29569,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29569,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0677a119feaff5b5016af52fd797d487d0be11c8b9182de2bd": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0677a119feaff5b5016af52fdd442c87d0b75207df4dcea225": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 878,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 878
+            }
+          ]
+        },
+        "rs_0677a119feaff5b5016af52fdd288887d0a0d55fb3332bc27d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 278
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "41cb6c0d8db3c5e2bec39e62fd474771961e130852a3baf75a2c1615c60baeaf",
+  "elapsed_seconds": 29.86
+}

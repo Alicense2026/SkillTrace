@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0151-ce43b6621d10",
+  "status": "SUCCESS",
+  "request_sha256": "00134997c71fd5d19daff765d323445727f85632b53f18f0895fb1bcf52668b5",
+  "analysis": {
+    "case_id": "chain-0151-ce43b6621d10",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "S": {
+            "artifact": "chain-0151-ce43b6621d10:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:5fda8764d1af6d59"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0151-ce43b6621d10:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0151-ce43b6621d10:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer must pay applicable fees to OpenAI or its reseller in the currency and under the payment terms in the Order Form; applicable taxes and other payment terms in the quoted clause also apply.",
+        "trigger": true,
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_and_order_form_terms",
+          "payment_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI.txt 的匹配结构化条款仅涉及客户向 OpenAI 或其经销商支付费用；其范围注释明确指出，这不证明客户可向下游用户收费。没有据此推断其他专有许可条件。",
+      "可信记录表明存在远程服务调用及 API 链接关系，但不证明两份许可约束同一对象，也不证明发生修改、分发或模型权重转移。CC0 摘录支持对下游原始作品的使用许可；不据此扩展至未映射对象或其他活动。",
+      "费用适用情况、Order Form 条款及付款履行情况未提供，故保留为条件义务，不认定违规。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 17561,
+    "input_tokens_details": {
+      "cached_tokens": 17408,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 862,
+    "output_tokens_details": {
+      "reasoning_tokens": 224
+    },
+    "total_tokens": 18423,
+    "attribution": {
+      "items": {
+        "msg_0b5e5dcb2d932e7d016af2fd6d5a7087d193021062bfc5dc5e": {
+          "input_tokens": 15529,
+          "cached_tokens": 15378,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15529,
+              "cached_tokens": 15378,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b5e5dcb2d932e7d016af2fd7230e487d180fb249d598e5ddc": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 638,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 638
+            }
+          ]
+        },
+        "rs_0b5e5dcb2d932e7d016af2fd72154087d1bc3127d3e2ac02b4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 224
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.011,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

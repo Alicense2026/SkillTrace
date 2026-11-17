@@ -1,0 +1,218 @@
+{
+  "case_id": "skill-00544",
+  "csv_row": 545,
+  "source_excel_row": "773",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00544-1794597164149160000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游许可使用者须在许可有效且第2节阈值未阻止行使权利时，方可依许可使用Llama Materials。",
+      "source_refs": [
+        "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+      ],
+      "subject": {
+        "artifact": "skill-00544:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "license_in_force_and_threshold_not_exceeded"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游许可使用者使用Llama Materials时须遵守适用法律法规（包括贸易合规法规）及纳入许可的可接受使用政策。",
+      "source_refs": [
+        "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+      ],
+      "subject": {
+        "artifact": "skill-00544:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "applicable_laws_and_regulations_complied_with",
+        "acceptable_use_policy_adhered_to"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若许可约定的版本发布日期及前一日历月月活门槛适用于上游许可使用者，须向Meta申请许可；在Meta明确授予权利前，上游许可使用者不得行使协议项下权利。",
+      "source_refs": [
+        "license:bf2eac60b81e5c5f779fc3b4849d3bfacfd63f97f3eb68b44e9c6868c5801712"
+      ],
+      "subject": {
+        "artifact": "skill-00544:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "all",
+      "unresolved_predicates": [
+        "release_date_monthly_active_users_of_licensee_or_affiliates_products_or_services_in_preceding_calendar_month_greater_than_700_million",
+        "meta_expressly_grants_rights"
+      ]
+    }
+  ],
+  "limitations": [
+    "已确认的是下游仓库对上游模型的远程调用及链接；没有证据表明模型权重、上游材料或其副本被下游复制、修改、捆绑、分发或再许可。MIT 的复制与通知条款因此未显示为本次远程调用的义务。",
+    "上游许可的月活阈值事实未知；如达到阈值且未获 Meta 明确授权，使用权受禁止。已提供的摘录未包含被引用的可接受使用政策及品牌指南正文，无法判断其具体要求。",
+    "MIT许可文本针对Software；本记录仅表明仓库无该模型资产源码且通过远程服务调用，不能据此认定MIT许可覆盖模型或API服务。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用许可及阈值条件作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见复制上游材料的事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见上游许可使用者分发或提供材料、衍生物或包含材料的产品或服务；远程调用不等同该触发。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见创作上游材料衍生作品的事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见修改上游材料的事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见使用材料或输出创建、训练、微调或改进模型并分发该模型的事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未见作为集成终端用户产品一部分接收材料或衍生物的事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分发上游材料副本的事实。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已发生上游材料使用；法律法规及可接受使用政策要求作为义务保留。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "使用已发生；阈值及明确授权状态未知，按条件保留申请与未获授权前不得行使权利的要求。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见为履行模型命名要求而使用Llama标记的事实。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见在材料相关情境使用Meta或其关联方名称、标记的事实。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见提起条款所述诉讼或程序的事实。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见相关第三方索赔事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见许可终止事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见许可终止事实；删除活动不在允许活动词表内。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "已知活动是下游远程调用，不是对下游Software对象行使MIT许可使用权。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见复制下游Software或其实质部分。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见修改下游Software。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见合并下游Software。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见发布下游Software副本或其实质部分。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分发下游Software副本或其实质部分。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见再许可中包含下游Software副本或其实质部分。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见出售下游Software副本或其实质部分。"
+    }
+  ]
+}

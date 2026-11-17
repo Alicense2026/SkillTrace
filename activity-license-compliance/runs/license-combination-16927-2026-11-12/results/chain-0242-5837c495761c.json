@@ -1,0 +1,250 @@
+{
+  "case_id": "chain-0242-5837c495761c",
+  "input_group_row": 242,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "DeepSeek Open Platform Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0242-5837c495761c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0242-5837c495761c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0242-5837c495761c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_AI_generated_and_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0242-5837c495761c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a9a19e650c6d6d03"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0242-5837c495761c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对 DeepSeek Open Platform Terms 的服务访问条款及输出披露条款，以及 Elastic License 2.0 的 hosted/managed service 条款。结构化抽取标记 FIRST_PASS_REVIEW_REQUIRED；本结论限于所给摘录及其明确范围。",
+      "事实确认 API 远程调用和上游服务使用，但未说明 Elastic 软件是否用于提供该服务、服务是否向用户提供其任何实质功能，或两份许可的限制是否共同适用于同一对象。因此不判定许可冲突；Elastic 条款的实质功能触发条件仍未知。",
+      "未提供输出披露履行情况及 DeepSeek 服务条款合规证据；缺少履行证据不等于未履行。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 DeepSeek Open Platform 服务条款。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0242-5837c495761c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 DeepSeek Open Platform 服务条款。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0242-5837c495761c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "向终端用户清楚披露输出由 AI 生成、可能包含错误或遗漏且仅供参考。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0242-5837c495761c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "output_disclosure_fulfilled"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若服务向用户提供 Elastic 软件任何实质功能，则不得以该软件向第三方提供 hosted 或 managed service。",
+        "source_refs": [
+          "license-text:downstream:a9a19e650c6d6d03"
+        ],
+        "subject": {
+          "artifact": "chain-0242-5837c495761c:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:RemoteInteraction",
+          "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 27205,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1693,
+    "output_tokens_details": {
+      "reasoning_tokens": 320
+    },
+    "total_tokens": 28898,
+    "attribution": {
+      "items": {
+        "msg_0e366b907850b35d016af53057553887d0857954b79bb66e18": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e366b907850b35d016af53057553887d0b3459926fd7b99a8": {
+          "input_tokens": 25135,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25135,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e366b907850b35d016af5305df68487d0ac3c72ea53a2be26": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1373,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1373
+            }
+          ]
+        },
+        "rs_0e366b907850b35d016af5305dac5c87d0bca828f948ef84b7": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 320
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "a19b9c8db5ed0d4179c67b153b6fd59112d802b8a6d90afca474eed33361de89",
+  "elapsed_seconds": 39.33
+}

@@ -1,0 +1,397 @@
+{
+  "case_id": "chain-9043-f2d7deb35f22",
+  "source_csv_line": 9044,
+  "row": {
+    "github_repo": "computer-science-skills-collection",
+    "github_url": "https://github.com/bighardperson/computer-science-skills-collection",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "claude-sonnet-4-20250514",
+    "artifact_url": "https://docs.anthropic.com/en/docs/about-claude/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: skills/content-ops/scripts/editorial-brain.py:37 ｜ 调用原文: DEFAULT_MODEL = os.environ.get(\"EDITORIAL_BRAIN_MODEL\", \"claude-sonnet-4-20250514\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: content-ops/editorial-brain.py 中作为实际调用的模型标识",
+    "batch": "4001-4500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "bighardperson/computer-science-skills-collection",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "9977e77a6f6c286cd08ea0016d12ee25190bdae8af647bcd5e798b7e5cef96b2",
+    "filename": "_licenseref_full/texts/9977e77a6f6c286cd08ea0016d12ee25190bdae8af647bcd5e798b7e5cef96b2.txt",
+    "evidence_file": "LICENSE_NOTICE.md",
+    "acquisition": "zip:mirror:computer-science-skills-collection-HEAD/LICENSE_NOTICE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-9043-f2d7deb35f22",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-9043-f2d7deb35f22:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-9043-f2d7deb35f22:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prioritize_compliance_with_that_license_or_source_notice",
+            "when": "skill_directory_contains_original_license_or_source_notice"
+          },
+          "S": {
+            "artifact": "chain-9043-f2d7deb35f22:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9043-f2d7deb35f22:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9043-f2d7deb35f22:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "confirm_relevant_skill_source_and_license_boundaries",
+            "when": {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-9043-f2d7deb35f22:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文摘录只确认服务使用许可受服务条款约束，未提供这些服务条款的具体内容；不据此推断额外限制。",
+      "下游L13要求仅在技能目录含原始许可或来源说明时适用；该条件未提供。L14所涉商用、再分发及大规模改造事实也未提供。",
+      "对象图确认的是下游技能对上游模型的API链接/远程调用，且scope_shared未知；没有证据表明上游许可与下游仓库许可共同约束同一对象。本次不据此认定许可证冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游服务时遵守适用的服务条款。",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "subject": {
+          "artifact": "chain-9043-f2d7deb35f22:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "适用服务条款的具体要求及履行情况"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "进行远程服务交互时遵守适用的服务条款。",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "subject": {
+          "artifact": "chain-9043-f2d7deb35f22:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "适用服务条款的具体要求及履行情况"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若技能目录含原始许可或来源说明，优先遵守该许可或说明。",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "subject": {
+          "artifact": "chain-9043-f2d7deb35f22:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "skill_directory_contains_original_license_or_source_notice"
+          ]
+        },
+        "unresolved_predicates": [
+          "skill_directory_contains_original_license_or_source_notice"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若发生商用、再分发或大规模改造，确认相关技能的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "subject": {
+          "artifact": "chain-9043-f2d7deb35f22:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Modify",
+            {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Modify",
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification",
+          "confirm_relevant_skill_source_and_license_boundaries"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若发生商用、再分发或大规模改造，确认相关技能的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "subject": {
+          "artifact": "chain-9043-f2d7deb35f22:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification",
+          "confirm_relevant_skill_source_and_license_boundaries"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若发生商用、再分发或大规模改造，确认相关技能的来源和许可边界。",
+        "source_refs": [
+          "license-text:downstream:9b6049479255b0b6"
+        ],
+        "subject": {
+          "artifact": "chain-9043-f2d7deb35f22:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:CommercialUse",
+            {
+              "any": [
+                "commercial_use",
+                "redistribution",
+                "large_scale_modification"
+              ]
+            }
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification",
+          "confirm_relevant_skill_source_and_license_boundaries"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18008,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2407,
+    "output_tokens_details": {
+      "reasoning_tokens": 279
+    },
+    "total_tokens": 20415,
+    "attribution": {
+      "items": {
+        "msg_09f918cf1b197062016af53c3ad3dc87d0a087f9adef8a56ce": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09f918cf1b197062016af53c3ad3dc87d0bd6de26c7b167a74": {
+          "input_tokens": 15938,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15938,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09f918cf1b197062016af53c40876487d0b4f18874289be493": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2128,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2128
+            }
+          ]
+        },
+        "rs_09f918cf1b197062016af53c406bb087d0b30421f8ecf37154": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 279
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "f22fa3e510c3c71aa849852162ec3bfa32e67a8b70bdbfc760cccbe85ebbce82",
+  "elapsed_seconds": 49.94
+}

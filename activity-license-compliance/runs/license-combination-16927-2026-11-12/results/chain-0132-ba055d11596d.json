@@ -1,0 +1,274 @@
+{
+  "case_id": "chain-0132-ba055d11596d",
+  "input_group_row": 132,
+  "aggregate_count": 8,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "百度智能云用户服务协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "8"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0132-ba055d11596d",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_agreement_and_applicable_service_rules",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0132-ba055d11596d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "service_opened_and_applicable_order_terms_followed",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0132-ba055d11596d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "service_opened_and_applicable_order_terms_followed",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0132-ba055d11596d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not_explicitly_authorized_elsewhere"
+          },
+          "S": {
+            "artifact": "chain-0132-ba055d11596d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not_explicitly_authorized_elsewhere"
+          },
+          "S": {
+            "artifact": "chain-0132-ba055d11596d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_agreed_amount_on_time",
+            "when": "service_fee_due_under_agreement"
+          },
+          "S": {
+            "artifact": "chain-0132-ba055d11596d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图确认下游通过链接/API远程调用上游；代码修改不适用，且无证据表明MIT软件被复制、纳入或转移到上游服务中，故不能据MIT条款认定其与百度智能云条款共同约束同一对象。",
+      "未提供服务开通、适用订单及费用到期或支付情况；也未提供是否存在另行明确授权。仅依据远程调用事实，不能判定相关条件已满足或违反。",
+      "已检查与已知Use、RemoteInteraction活动相关的条款；其他取决于未证实活动或特定行为的限制不作为已触发结论。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守协议及适用服务规则；服务须已开通并遵循适用订单条款。",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "subject": {
+          "artifact": "chain-0132-ba055d11596d:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_opened",
+          "applicable_order_terms_followed"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "服务须已开通并遵循适用订单条款。",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "subject": {
+          "artifact": "chain-0132-ba055d11596d:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_opened",
+          "applicable_order_terms_followed"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "服务费用到期时按约定金额及时支付。",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "subject": {
+          "artifact": "chain-0132-ba055d11596d:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "service_fee_due_under_agreement"
+          ]
+        },
+        "unresolved_predicates": [
+          "service_fee_due_under_agreement",
+          "pay_agreed_amount_on_time"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 53424,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1826,
+    "output_tokens_details": {
+      "reasoning_tokens": 443
+    },
+    "total_tokens": 55250,
+    "attribution": {
+      "items": {
+        "msg_085153ad11d6d660016af52f40f3ec87d0a71b11448db46120": {
+          "input_tokens": 51354,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 51354,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_085153ad11d6d660016af52f40f3ec87d0ac8167eb9c5023bc": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_085153ad11d6d660016af52f497cfc87d0a4a8dcb96f688288": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1383,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1383
+            }
+          ]
+        },
+        "rs_085153ad11d6d660016af52f4761dc87d0b2ee5a43aeeeb727": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 332
+        },
+        "rs_085153ad11d6d660016af52f4965e887d0b26da6df7a9f63cc": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 111
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "d1b5804f45be32959da35d74ed88546fa0e5be19133298147aed6c7f0163df63",
+  "elapsed_seconds": 45.69
+}

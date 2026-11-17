@@ -1,0 +1,115 @@
+{
+  "case_id": "chain-0300-6ca8bdd6a21c",
+  "status": "SUCCESS",
+  "request_sha256": "c69e795ff80fb8341073d0e41dc43eeb6fb2ae577acf3add777214f9d7118309",
+  "analysis": {
+    "case_id": "chain-0300-6ca8bdd6a21c",
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0300-6ca8bdd6a21c:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：为受覆盖的修改版本提供对应源码访问机会；条款触发需该程序已修改且支持网络交互。已知是远程调用，但记录明确修改不适用，故触发条件不成立，本项不适用，不构成未履行。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "AGPL-3.0第13节摘录仅对修改后的程序及网络交互情形规定源码提供义务；记录说明修改不适用，因此该义务在本案不触发。",
+      "对象图仅确认下游与上游之间存在API链接/远程调用，未确认依赖、修改副本、组合产品或共同受许可范围；因此不据此认定两许可证对同一对象共同适用，也不判断未证实的分发等活动。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 20496,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 752,
+    "output_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "total_tokens": 21248,
+    "attribution": {
+      "items": {
+        "msg_02dd73eed0bd8b26016af304792fe887d1b854653b0b3b0776": {
+          "input_tokens": 18464,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18464,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02dd73eed0bd8b26016af3047edb4087d1b0d6f01144cbc6da": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 464,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 464
+            }
+          ]
+        },
+        "rs_02dd73eed0bd8b26016af3047ebfd487d1bb97773110e4dca3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 288
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 16.967,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

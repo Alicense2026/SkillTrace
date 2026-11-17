@@ -1,0 +1,96 @@
+{
+  "case_id": "chain-0106-a26defce46d2",
+  "input_group_row": 106,
+  "aggregate_count": 12,
+  "combination": {
+    "GitHub许可证": "CC-BY-NC-4.0",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "12"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0106-a26defce46d2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0106-a26defce46d2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4dc990f995576086"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0106-a26defce46d2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If the use exercises CC-BY-NC-4.0 Licensed Rights in Licensed Material, comply with the applicable CC license conditions.",
+        "source_refs": [
+          "license-text:downstream:4dc990f995576086"
+        ],
+        "subject": {
+          "artifact": "chain-0106-a26defce46d2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "within_license_scope"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes remote service invocation and a link/API-use relationship, not distribution, modification, bundling, or a shared licensed object. No conflict is established from the two license labels alone.",
+      "The provided CC-BY-NC-4.0 excerpts identify the grant and its scope but do not include the operative NonCommercial definition or the full applicable conditions. No commercial-use restriction or conclusion about whether the upstream API use exercises downstream Licensed Rights is inferred."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0092-e322d5b23c38.json",
+  "original_case_id": "chain-0092-e322d5b23c38",
+  "original_request_sha256": "1d74393d1f3955ec2f41d0774688a152531f84ce1ddb1544c4a48c22a9d2a171",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0092-e322d5b23c38": "chain-0106-a26defce46d2",
+    "license-text:upstream:f442ffb3b75c892c": "license-text:upstream:f442ffb3b75c892c",
+    "license-text:downstream:4dc990f995576086": "license-text:downstream:4dc990f995576086",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/91": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/105"
+  }
+}

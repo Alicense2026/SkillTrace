@@ -1,0 +1,147 @@
+{
+  "case_id": "chain-0195-ccdb8c051519",
+  "input_group_row": 195,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "CC-BY-NC-SA-4.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0195-ccdb8c051519",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components"
+              ]
+            },
+            "when": "use_Gemini_API_Services"
+          },
+          "S": {
+            "artifact": "chain-0195-ccdb8c051519:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2f93eb6f29708206"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": "exercise_CC_Licensed_Rights"
+          },
+          "S": {
+            "artifact": "chain-0195-ccdb8c051519:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2f93eb6f29708206"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "exercise_CC_Licensed_Rights"
+          },
+          "S": {
+            "artifact": "chain-0195-ccdb8c051519:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0195-ccdb8c051519:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得将 Gemini API Services 用于开发与 Gemini API 或 Google AI Studio 竞争的模型；不得尝试对服务组件进行逆向工程、提取或复制。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_Gemini_API_Services"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_Gemini_API_Services",
+          "competing_model_development",
+          "reverse_engineering_extraction_or_replication"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0195-ccdb8c051519:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅在 CC 许可范围内行使 Licensed Rights，并遵守该许可适用的条件。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "exercise_CC_Licensed_Rights"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "exercise_CC_Licensed_Rights",
+          "within_license_scope",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:2f93eb6f29708206"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游摘录针对将服务用于开发竞争模型及逆向工程、提取或复制服务组件；记录仅证明远程 API 调用，未证明这些受限用途，因此不据此认定违规。",
+      "对象图确认下游与上游存在 API 链接和远程调用，但依赖、修改副本或组合产品关系未知；没有证据证明两份许可针对同一受约束对象，故不判定许可间冲突。",
+      "下游 CC 条款摘录仅能支持许可范围及遵守适用许可条件的要求；材料是否属于 CC Licensed Material、实际是否行使相关权利及具体条件是否满足均未知。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0187-8259c5c59f1a.json",
+  "original_case_id": "chain-0187-8259c5c59f1a",
+  "original_request_sha256": "b46e29a6fea48f4a179be0f6c5de45f148b92579d7c945b69df0c45647463e0d",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0187-8259c5c59f1a": "chain-0195-ccdb8c051519",
+    "license-text:upstream:ffe5b0021e0b945a": "license-text:upstream:ffe5b0021e0b945a",
+    "license-text:downstream:2f93eb6f29708206": "license-text:downstream:2f93eb6f29708206",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/186": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/194"
+  }
+}

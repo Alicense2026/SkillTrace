@@ -1,0 +1,279 @@
+{
+  "case_id": "chain-0908-97b510933483",
+  "source_csv_line": 909,
+  "row": {
+    "github_repo": "yao",
+    "github_url": "https://github.com/YaoApp/yao",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "deepseek-chat",
+    "artifact_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: agent/sandbox/v2/dsh/command.go:43 ｜ 调用原文: primary.Model = \"deepseek-chat\"（引用处 第42行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: sandbox dsh command 中的常量，可能是默认模型配置",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "yaoapp/yao",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ba8a74a81726baf73380d22116482271e8e9ce27691d9a37754f83af1053659e",
+    "filename": "_licenseref_full/texts/ba8a74a81726baf73380d22116482271e8e9ce27691d9a37754f83af1053659e.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:yao-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-0908-97b510933483",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0908-97b510933483:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": "output_supplied_to_end_users"
+          },
+          "S": {
+            "artifact": "chain-0908-97b510933483:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "certificate_verification_logic_processes_and_related_pages_preserved_and_complete_verification_system_maintained",
+            "when": "using_yao_engine"
+          },
+          "S": {
+            "artifact": "chain-0908-97b510933483:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "commercial_license_from_infinite_wisdom_software_obtained",
+            "when": {
+              "any": [
+                "organization_has_50_or_more_employees",
+                "organization_has_annual_revenue_exceeding_usd_1000000"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0908-97b510933483:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "DeepSeek Terms L20-L21 (DeepSeek.txt; SHA-256 bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0) grant access to and use of the API service, not redistribution of model weights. The evidence establishes a remote call and use, not transfer or distribution of weights.",
+      "DeepSeek Terms L175-L176 require disclosure to end users, but the record does not establish whether outputs were supplied to end users; the obligation is therefore conditional.",
+      "The downstream LicenseRef-Custom text (SHA-256 ba8a74a81726baf73380d22116482271e8e9ce27691d9a37754f83af1053659e) identifies Yao Engine commercial-use and enterprise-threshold conditions. The record does not establish downstream Yao Engine use, commercial use, organization size/revenue, or fulfillment of the stated conditions; no violation is inferred.",
+      "Structured ASC extraction is marked FIRST_PASS_REVIEW_REQUIRED. No conflict is established between the API-service terms and the downstream terms for the evidenced remote call; broader license interaction is not assessed absent a shared covered object or additional applicable terms."
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the applicable DeepSeek service terms.",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "subject": {
+          "artifact": "chain-0908-97b510933483:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If output is supplied to end users, clearly disclose that it is AI-generated, may contain errors or omissions, and is for reference only.",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "subject": {
+          "artifact": "chain-0908-97b510933483:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "RemoteInteraction",
+            "output_supplied_to_end_users"
+          ]
+        },
+        "unresolved_predicates": [
+          "output_supplied_to_end_users",
+          "disclosure_fulfillment"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If using Yao Engine, preserve the certificate verification logic, processes, and related pages, and maintain the complete verification system.",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "subject": {
+          "artifact": "chain-0908-97b510933483:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_yao_engine",
+        "unresolved_predicates": [
+          "using_yao_engine",
+          "verification_system_fulfillment"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If the organization has 50 or more employees or annual revenue exceeding USD 1,000,000, obtain a commercial license from Infinite Wisdom Software.",
+        "source_refs": [
+          "license-text:downstream:661d8444038009fb"
+        ],
+        "subject": {
+          "artifact": "chain-0908-97b510933483:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "organization_has_50_or_more_employees",
+            "organization_has_annual_revenue_exceeding_usd_1000000"
+          ]
+        },
+        "unresolved_predicates": [
+          "organization_has_50_or_more_employees",
+          "organization_has_annual_revenue_exceeding_usd_1000000",
+          "commercial_license_obtained"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19373,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1882,
+    "output_tokens_details": {
+      "reasoning_tokens": 323
+    },
+    "total_tokens": 21255,
+    "attribution": {
+      "items": {
+        "msg_0818afdd1f6825a0016af53af793c887d0858492deb259eeb0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0818afdd1f6825a0016af53af793c887d0b0d9aa3a810dcdb4": {
+          "input_tokens": 17303,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17303,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0818afdd1f6825a0016af53afe08cc87d0838ca57eb2f1db43": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1559,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1559
+            }
+          ]
+        },
+        "rs_0818afdd1f6825a0016af53afded4487d089b75c759dfb80f0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 323
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "d1533f068789376837ca3b6e60eabca80fd0d89109ec5863e92ef2f4a8bcab16",
+  "elapsed_seconds": 40.0
+}

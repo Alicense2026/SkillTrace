@@ -1,0 +1,57 @@
+{
+  "case_id": "chain-0244-55a2330088a8",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若所用智谱服务或功能属于需付费授权的范围，应缴纳所需费用并遵守适用产品规则；不得实施上游协议摘录明确禁止的行为。",
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ],
+      "subject": {
+        "artifact": "chain-0244-55a2330088a8:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          {
+            "any": [
+              "paid_feature_or_model_use",
+              "conduct_matches_prohibition_in_excerpt"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "paid_feature_or_model_use",
+        "conduct_matches_prohibition_in_excerpt",
+        "pay_required_fee_and_follow_product_rules"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若服务属于托管或管理服务，且向用户提供 Elastic 软件实质性功能访问，则不得提供该服务。",
+      "source_refs": [
+        "license-text:downstream:9cc808a662acf38e"
+      ],
+      "subject": {
+        "artifact": "chain-0244-55a2330088a8:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+        ]
+      },
+      "unresolved_predicates": [
+        "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+      ]
+    }
+  ],
+  "aggregate_count": 2
+}

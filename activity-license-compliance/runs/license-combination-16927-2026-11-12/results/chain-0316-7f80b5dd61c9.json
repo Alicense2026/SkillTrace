@@ -1,0 +1,316 @@
+{
+  "case_id": "chain-0316-7f80b5dd61c9",
+  "input_group_row": 316,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "Cohere Commercial SaaS Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0316-7f80b5dd61c9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_and_incorporation_comply_with_agreement_and_related_documentation_and_application_interfaces_with_api_saas_services"
+          },
+          "S": {
+            "artifact": "chain-0316-7f80b5dd61c9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "violates_usage_policy",
+                "infringes_or_violates_rights_or_lacks_required_data_consents_and_licenses",
+                "adversely_affects_cohere_reputation_goodwill_or_relationships",
+                "violates_applicable_law"
+              ]
+            },
+            "when": "access_or_use_services_or_products_or_develop_customer_application"
+          },
+          "S": {
+            "artifact": "chain-0316-7f80b5dd61c9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+                "purpose_is_replicating_services_or_products_look_and_feel",
+                "purpose_is_benchmarking_or_competitive_analysis",
+                "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+              ]
+            },
+            "when": "access_or_use_services_or_products_or_output_or_develop_customer_application"
+          },
+          "S": {
+            "artifact": "chain-0316-7f80b5dd61c9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "do_not_block_or_interfere_with_monitoring; provide_application_access_at_no_cost_if_cohere_requests_it_for_compliance_review",
+            "when": "customer_uses_cohere_api"
+          },
+          "S": {
+            "artifact": "chain-0316-7f80b5dd61c9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees",
+            "when": "using_cohere_api_saas_services"
+          },
+          "S": {
+            "artifact": "chain-0316-7f80b5dd61c9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e163399eacb8a4fe"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+          },
+          "S": {
+            "artifact": "chain-0316-7f80b5dd61c9:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Cohere API 调用及关联关系已确认，但不证明 Elastic 软件被修改、复制、分发，或作为托管/管理服务提供给第三方；Elastic 的 hosted-service 限制仅在其明确触发条件成立时适用。",
+      "Cohere 条款适用范围为匹配到的 Direct API Commercial SaaS Agreement；使用目的、Usage Policy 合规情况、受限地点、Permitted User 状态及其他具体限制触发事实未提供。",
+      "结构化条款为 FIRST_PASS_REVIEW_REQUIRED 抽取；结论限于所给摘录及对应活动、对象。未据此推断其他未提供条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用或纳入 Cohere API 时遵守协议及相关文档，并仅在许可的接口应用范围内使用。",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "subject": {
+          "artifact": "chain-0316-7f80b5dd61c9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "agreement_and_documentation_compliance"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得阻碍或干扰 Cohere 对 API 使用的监控；若 Cohere 为合规审查提出请求，应免费提供 Customer Application 的访问和使用。",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "subject": {
+          "artifact": "chain-0316-7f80b5dd61c9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "monitoring_not_interfered_with",
+          "cohere_compliance_review_request"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "支付适用费用。",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "subject": {
+          "artifact": "chain-0316-7f80b5dd61c9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_fees_paid"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得为基准测试、竞争分析、构建或训练类似/竞争产品、复制服务外观，或 Cohere 合理认定的直接竞争者之使用或利益而访问或使用服务、产品或输出。",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "subject": {
+          "artifact": "chain-0316-7f80b5dd61c9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+          "purpose_is_replicating_services_or_products_look_and_feel",
+          "purpose_is_benchmarking_or_competitive_analysis",
+          "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得以违反 Usage Policy、侵犯或违反权利、缺少必要数据同意或许可、损害 Cohere 声誉/商誉/关系或违反法律的方式或目的使用服务、产品或开发 Customer Application。",
+        "source_refs": [
+          "license-text:upstream:25e024a0291a3273"
+        ],
+        "subject": {
+          "artifact": "chain-0316-7f80b5dd61c9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "violates_usage_policy",
+          "infringes_or_violates_rights_or_lacks_required_data_consents_and_licenses",
+          "adversely_affects_cohere_reputation_goodwill_or_relationships",
+          "violates_applicable_law"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 50776,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2278,
+    "output_tokens_details": {
+      "reasoning_tokens": 223
+    },
+    "total_tokens": 53054,
+    "attribution": {
+      "items": {
+        "msg_06a2895f7826a583016af5317980b887d1863524fa6cc08f32": {
+          "input_tokens": 48706,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 48706,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06a2895f7826a583016af5317980b887d19e1e862a1da6fb4f": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06a2895f7826a583016af5317e3ebc87d199112b4cc293b3f2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2055,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2055
+            }
+          ]
+        },
+        "rs_06a2895f7826a583016af5317e279487d1b288bc925aa9b67a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 223
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "b9eb2193c21b91acc06691706eaadd0650fe6fe2e5f610bd8e3bbd7b8a3c884f",
+  "elapsed_seconds": 51.1
+}

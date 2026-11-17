@@ -1,0 +1,897 @@
+{
+  "case_id": "skill-00055",
+  "csv_row": 56,
+  "source_excel_row": "88",
+  "status": "SUCCESS",
+  "request_sha256": "da5618c12931e1d31881d0332ecb5106132152ddb007580ed3d2a2b885e140f0",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00055:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00055:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实为下游远程调用、链接并使用 DeepSeek 服务；未证实权重、模型或服务副本被复制、修改、组合或分发。MIT 的副本通知条件因此未触发。DeepSeek 条款中的其他用途限制是否触发取决于未提供的具体用途事实，按条件义务保留；被引用的 DeepSeek Terms of Use、适用法律及其他外部规则正文未提供，不据此补写义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "开发者及终端用户使用 DeepSeek 服务时，须遵守适用条款、DeepSeek Terms of Use及适用法律；避免侵权、谋取不当利益及扰乱平台秩序；按适用情形满足账户、API 密钥、输入权利与合规、下游运营、数据安全、隐私披露、输出标识及人工审查、品牌、出口管制与制裁等条款要求。具体条件分别适用，不将远程调用视为模型权重转移或分发。",
+        "source_refs": [
+          "license:bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0"
+        ],
+        "subject": {
+          "artifact": "skill-00055:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "具体用途及内容是否触发条款中的禁止用途",
+          "是否向终端用户提供输出或提供公众服务",
+          "账户、API密钥及输入处理条件是否满足",
+          "个人信息处理、品牌使用、出口管制及制裁相关条件"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "skill-00055",
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "使用上游服务须遵守适用条款。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "组合活动未证实。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务主体为 DeepSeek 服务提供者，不转由调用者承担。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "上游服务使用受其服务条款约束。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "账户使用要求纳入条件义务。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "API 密钥安全与不披露要求纳入条件义务。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "使用及终端用户行为要求纳入条件义务。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在提供或运营下游服务时适用的运营者义务予以保留。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "公众服务及个人信息处理条件义务予以保留。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务使用相关安全措施要求予以保留。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "提交输入时的权利及合规保证予以保留。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "使用输入的条款及法律前置条件予以保留。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款对象为服务输出，未证实本案使用该输出。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实开发衍生产品。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实训练模型。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "品牌使用限制按其触发条件保留。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "品牌呈现限制按其触发条件保留。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在发生相关品牌条款违约且 DeepSeek 要求时适用。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "终端用户访问下游服务且开发者为控制者时适用。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实使用需预付款的付费服务。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实付费服务价格或服务调整。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实充值。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实退款申请。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实充值。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务使用及终端用户行为条件义务予以保留。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "责任分配条款不构成此处可核验的活动义务，且触发事实未知。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "争议处理条款不是本案活动约束。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "执法及赔偿触发事实未证实。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在向终端用户提供输出时适用的披露要求予以保留。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务使用相关出口管制与制裁条件予以保留。"
+      },
+      {
+        "rule_ref": "U031",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "修订条款生效且不接受时须停止使用。"
+      },
+      {
+        "rule_ref": "U032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务主体为 DeepSeek；未证实相关服务变更。"
+      },
+      {
+        "rule_ref": "U033",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务主体为 DeepSeek 服务提供者。"
+      },
+      {
+        "rule_ref": "U034",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在用户未达适用年龄时适用。"
+      },
+      {
+        "rule_ref": "U035",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "账户注册及使用条件义务予以保留。"
+      },
+      {
+        "rule_ref": "U036",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "账户承诺适用于账户注册或使用。"
+      },
+      {
+        "rule_ref": "U037",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "注册信息及不得代他人使用账户的要求予以保留。"
+      },
+      {
+        "rule_ref": "U038",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "账户使用时的凭据安全要求予以保留。"
+      },
+      {
+        "rule_ref": "U039",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在注册账户时适用。"
+      },
+      {
+        "rule_ref": "U040",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "持有或使用账户时不得向他人提供账户。"
+      },
+      {
+        "rule_ref": "U041",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "凭据保护及发现未授权使用后的通知要求予以保留。"
+      },
+      {
+        "rule_ref": "U042",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实停止服务或删除账户。"
+      },
+      {
+        "rule_ref": "U043",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "账户删除后的供应商权利，不是调用者义务。"
+      },
+      {
+        "rule_ref": "U044",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "使用服务须处于明示授权范围内。"
+      },
+      {
+        "rule_ref": "U045",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实发布或传播服务输出。"
+      },
+      {
+        "rule_ref": "U046",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务使用目的限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U047",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该条款授予 DeepSeek 审查权，不构成调用者义务。"
+      },
+      {
+        "rule_ref": "U048",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U049",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "内容性质及生成用途未知，保留条件要求。"
+      },
+      {
+        "rule_ref": "U050",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "内容性质及生成用途未知，保留条件要求。"
+      },
+      {
+        "rule_ref": "U051",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "内容性质及生成用途未知，保留条件要求。"
+      },
+      {
+        "rule_ref": "U052",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "内容性质及生成用途未知，保留条件要求。"
+      },
+      {
+        "rule_ref": "U053",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U054",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U055",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U056",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U057",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U058",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关内容用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U059",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务安全及相关行为限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U060",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "网络侵入限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U061",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "网络干扰或破坏限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U062",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "不得窃取、逆向或复制服务材料的限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U063",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务安全限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U064",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "不当用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U065",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "违法或侵权用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U066",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "危险用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U067",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "侵权及不公平竞争用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U068",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实复制服务。"
+      },
+      {
+        "rule_ref": "U069",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "远程调用不等于转移服务或分发服务副本。"
+      },
+      {
+        "rule_ref": "U070",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实租赁服务。"
+      },
+      {
+        "rule_ref": "U071",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实借出服务。"
+      },
+      {
+        "rule_ref": "U072",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实出售服务。"
+      },
+      {
+        "rule_ref": "U073",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实再许可服务。"
+      },
+      {
+        "rule_ref": "U074",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "其他法律及供应商权益用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U075",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "提交输入时的权利及合规要求予以保留。"
+      },
+      {
+        "rule_ref": "U076",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "输入使用许可受法律及条款条件约束。"
+      },
+      {
+        "rule_ref": "U077",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规则针对服务输出的权利；本案未提供输出使用事实。"
+      },
+      {
+        "rule_ref": "U078",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "输入或输出使用须合法并遵守条款。"
+      },
+      {
+        "rule_ref": "U079",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "对象为 DeepSeek 对输入和输出的处理权限，不是调用者义务。"
+      },
+      {
+        "rule_ref": "U080",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实使用输出所链接的外部资源。"
+      },
+      {
+        "rule_ref": "U081",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在平台生成标签存在时适用。"
+      },
+      {
+        "rule_ref": "U082",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "相关信息及用途限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U083",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "仅在输出用于可能对自然人产生法律或重大影响的用途时适用。"
+      },
+      {
+        "rule_ref": "U084",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "品牌使用限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U085",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实提交反馈；规则涉及反馈材料。"
+      },
+      {
+        "rule_ref": "U086",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该规则描述供应商救济权，不是用户活动义务。"
+      },
+      {
+        "rule_ref": "U087",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务使用相关出口管制及制裁限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U088",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "输入内容出口许可限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "U089",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "修订条款公布后继续使用的接受条件予以保留。"
+      },
+      {
+        "rule_ref": "U090",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "修订条款公布且用户不接受时须停止使用。"
+      },
+      {
+        "rule_ref": "U091",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实向终端用户提供或发布输出。"
+      },
+      {
+        "rule_ref": "U092",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "责任与赔偿触发事实未知，且不构成本案已证实的活动义务。"
+      },
+      {
+        "rule_ref": "U093",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务访问和使用的出口管制与制裁合规条件予以保留。"
+      },
+      {
+        "rule_ref": "U094",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "品牌使用限制按触发条件保留。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "MIT 明示允许使用；本条未另设使用义务。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实复制软件副本或实质部分。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实修改 MIT 软件。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实合并 MIT 软件。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实发布 MIT 软件。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实分发 MIT 软件副本或实质部分。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实再许可 MIT 软件副本或实质部分。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实出售 MIT 软件副本。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00055-1794591250796833000-3.json",
+  "usage": {
+    "input_tokens": 58006,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 4568,
+    "output_tokens_details": {
+      "reasoning_tokens": 629
+    },
+    "total_tokens": 62574,
+    "attribution": {
+      "items": {
+        "msg_064d562631e411f4016af74af0406087d097971012f90e5b21": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_064d562631e411f4016af74af0406087d0bd78837041288e46": {
+          "input_tokens": 55282,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 55282,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_064d562631e411f4016af74afc48e887d08f5ab8320b023f92": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3939,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3939
+            }
+          ]
+        },
+        "rs_064d562631e411f4016af74afa24a487d098571bd43700f50c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        },
+        "rs_064d562631e411f4016af74afc2d4087d0af4eef0acbd9bed1": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 113
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 3,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

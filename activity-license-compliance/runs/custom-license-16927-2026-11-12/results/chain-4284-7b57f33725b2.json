@@ -1,0 +1,239 @@
+{
+  "case_id": "chain-4284-7b57f33725b2",
+  "source_csv_line": 4285,
+  "row": {
+    "github_repo": "helix",
+    "github_url": "https://github.com/helixml/helix",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "Qwen/Qwen3-Coder-Next",
+    "artifact_url": "https://huggingface.co/Qwen/Qwen3-Coder-Next",
+    "artifact_license": "apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: api/pkg/external-agent/zed_config.go:877 ｜ 调用原文: // helixProvider=\"nebius\", model=\"Qwen/Qwen3-Coder\" → zedProvider=\"openai\", zedModel=\"nebius/Qwen/Qwen3-Coder\" ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: zed_config.go 中为编码代理配置的模型，属于真实使用的模型",
+    "batch": "1501-2000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "helixml/helix",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e",
+    "filename": "_licenseref_full/texts/051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:helix-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:206b3ee093762d7f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4284-7b57f33725b2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e4105201f2189fc5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "within_subscription_term",
+                "subject_to_agreement_and_applicable_order_form",
+                "in_accordance_with_applicable_documentation",
+                "for_customer_internal_business_purposes"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4284-7b57f33725b2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e4105201f2189fc5"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "within_subscription_term",
+                "subject_to_agreement_and_applicable_order_form",
+                "in_accordance_with_applicable_documentation",
+                "for_customer_internal_business_purposes"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4284-7b57f33725b2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对的上游 Apache 摘录为版权许可授予，覆盖对 Work 的使用；未见与之相反的下游要求。",
+      "下游 LicenseRef-Custom 是 Helix Platform 服务协议，而非 Qwen 模型许可。现有对象图只确认 API 调用/链接，不确认下游协议的 Platform 使用对象与上游模型对象为同一受约束对象；因此不据此认定许可冲突或确定适用。",
+      "摘录未提供具体订阅期、Order Form 或适用 Documentation，也未确认本次模型调用是否属于协议所指的 Helix Platform 使用；仅保留相应条件义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该远程交互属于 Helix Platform 协议覆盖的使用，则须在适用订阅期内、遵守协议及适用 Order Form，并依适用 Documentation 且用于客户内部业务目的。",
+        "source_refs": [
+          "license-text:downstream:e4105201f2189fc5"
+        ],
+        "subject": {
+          "artifact": "chain-4284-7b57f33725b2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "remote_interaction",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "within_subscription_term",
+          "subject_to_agreement_and_applicable_order_form",
+          "in_accordance_with_applicable_documentation",
+          "for_customer_internal_business_purposes"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该使用属于 Helix Platform 协议覆盖的使用，则须在适用订阅期内、遵守协议及适用 Order Form，并依适用 Documentation 且用于客户内部业务目的。",
+        "source_refs": [
+          "license-text:downstream:e4105201f2189fc5"
+        ],
+        "subject": {
+          "artifact": "chain-4284-7b57f33725b2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "within_subscription_term",
+          "subject_to_agreement_and_applicable_order_form",
+          "in_accordance_with_applicable_documentation",
+          "for_customer_internal_business_purposes"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-4284-7b57f33725b2"
+  },
+  "usage": {
+    "input_tokens": 30238,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1522,
+    "output_tokens_details": {
+      "reasoning_tokens": 379
+    },
+    "total_tokens": 31760,
+    "attribution": {
+      "items": {
+        "msg_038c85ae1d91e62f016af53b699fbc87d08b43be2324777169": {
+          "input_tokens": 28168,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 28168,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_038c85ae1d91e62f016af53b699fbc87d09c1e7b8a4441bc53": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_038c85ae1d91e62f016af53b70f10c87d094cca0505c14c477": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1143,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1143
+            }
+          ]
+        },
+        "rs_038c85ae1d91e62f016af53b70d2cc87d0b61b1fb59133b16b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 379
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "3402db1cb3a38d0b4f9b1479618d440c40c580e58155f8114c80a18bfd2b04cf",
+  "elapsed_seconds": 36.15
+}

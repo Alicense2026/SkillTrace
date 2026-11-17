@@ -1,0 +1,103 @@
+{
+  "case_id": "chain-2249-7ed27c0fc620",
+  "output": [
+    {
+      "activity": "Charge",
+      "subject": {
+        "artifact": "chain-2249-7ed27c0fc620:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "按订单表及适用付款条款向 OpenAI 或其转售方支付适用费用。",
+      "trigger": "customer_receives_services",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "applicable_fees_paid"
+      ],
+      "source_refs": [
+        "license-text:upstream:17203006862c3616"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-2249-7ed27c0fc620:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若使用 Community Edition，修改版本不得使用 5ire Brand（包括名称、标志或营销材料），并须显著声明：“This product is based on 5ire Community Edition and is not affiliated with 5ire.”",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_community_edition"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "use_community_edition",
+        "no_5ire_brand_used_in_modified_versions",
+        "prominent_required_statement_present"
+      ],
+      "source_refs": [
+        "license-text:downstream:e9885d188bc56765"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-2249-7ed27c0fc620:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若使用 Community Edition，且发生任一列明情形（修改代码并直接或以 SaaS 方式分发且服务超过 10 人的企业客户、集成至待售硬件或产品、涉及敏感数据的政府/教育采购，或在产品、服务或推广中使用 5ire Brand），须取得 5ire 商业许可；否则不得实施触发该要求的行为。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_community_edition",
+          {
+            "any": [
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "serves_enterprise_clients_over_10_users"
+                ]
+              },
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "integrates_into_hardware_or_products_for_sale"
+                ]
+              },
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "government_or_education_procurement_involves_sensitive_data"
+                ]
+              },
+              "uses_5ire_brand_in_product_service_or_promotion"
+            ]
+          }
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "use_community_edition",
+        "modified_code",
+        "distribution_directly_or_as_saas",
+        "serves_enterprise_clients_over_10_users",
+        "integrates_into_hardware_or_products_for_sale",
+        "government_or_education_procurement_involves_sensitive_data",
+        "uses_5ire_brand_in_product_service_or_promotion",
+        "commercial_license_obtained"
+      ],
+      "source_refs": [
+        "license-text:downstream:e9885d188bc56765"
+      ]
+    }
+  ]
+}

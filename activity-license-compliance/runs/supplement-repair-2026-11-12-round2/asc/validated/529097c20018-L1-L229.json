@@ -1,0 +1,300 @@
+{
+  "request_sha256": "ad403a1141d26ab02f0743424a98ff96906bac575e997a1598112633804b0ec7",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 49,
+        "end_line": 53,
+        "clause_label": "2(a) Internal use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "internal_purposes_within_licensee_organization_or_affiliates"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Licensor grants use of the FIM One Software for internal purposes within the licensee's organization and its defined Affiliates; this is not a general grant for external use.",
+        "condition_explanation": "Use is permitted only for internal purposes within the licensee's organization or an Affiliate."
+      },
+      {
+        "start_line": 55,
+        "end_line": 55,
+        "clause_label": "2(b) Modification and derivative works",
+        "activities": [
+          "Modify",
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "comply_with_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The grant covers modifying the Software and creating works based on or derived from it, subject to the License's restrictions, including the competing-product restriction.",
+        "condition_explanation": "The permission is subject to the License, including restrictions elsewhere in the text; it does not authorize restricted competing-product activity."
+      },
+      {
+        "start_line": 57,
+        "end_line": 58,
+        "clause_label": "2(c) Distribution",
+        "activities": [
+          "Distribute",
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "license_copy_included_with_each_distribution"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The grant covers distributing the Software and Derivative Works in Source or Object form. Each distribution must include a copy of this License.",
+        "condition_explanation": "Distribution is permitted only if a copy of the License accompanies each distribution."
+      },
+      {
+        "start_line": 60,
+        "end_line": 62,
+        "clause_label": "2(d) Component use in applications",
+        "activities": [
+          "Use",
+          "Combine",
+          "Link"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "application_does_not_constitute_competing_product",
+              "application_does_not_constitute_hosted_service_restricted_by_section_3"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "The Software may be used as a component within the licensee's own applications, subject to the competing-product and Hosted Service restrictions. The clause does not grant unrestricted rights in the resulting application.",
+        "condition_explanation": "Both predicates must hold: the application must not be a Competing Product, and it must not be a Hosted Service restricted by Section 3."
+      },
+      {
+        "start_line": 68,
+        "end_line": 87,
+        "clause_label": "3(a) Hosted Service restriction and single-customer exception",
+        "activities": [
+          "ProvideNetworkService",
+          "RemoteInteraction",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "all": [
+              "provide_hosted_service_to_third_parties",
+              "no_prior_written_authorization_from_licensor",
+              "single_customer_exception_conditions_not_all_met"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Use of the Software, in whole or in part, to provide a Hosted Service to third parties is prohibited without prior written authorization. The text gives examples including multi-tenant platforms, managed services enabling third parties to create, configure, or run agents, and reselling cloud access. Exception: deployment for one customer in a dedicated single-tenant environment is allowed only if it serves that customer exclusively; the customer grants no access to or shares it with another third party; use is solely for that customer's internal business operations and is not a reusable multi-customer platform; it is not shared across tenants; and FIM One branding, product names, copyright notices, and branding remain visible and unaltered.",
+        "condition_explanation": "The prohibition applies when the licensee provides a Hosted Service to third parties without prior written authorization and the single-customer exception's requirements are not all met. The exception requires all five listed conditions; prior written authorization is a separate route stated in the text."
+      },
+      {
+        "start_line": 89,
+        "end_line": 92,
+        "clause_label": "3(b) Competing Product restriction",
+        "activities": [
+          "Use",
+          "CreateDerivative",
+          "Distribute",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "requires": "use_software_to_develop_distribute_or_operate_competing_product"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not use the Software, in whole or in part, to develop, distribute, or operate a Competing Product, including by forking it to create an alternative agent orchestration or workflow execution platform.",
+        "condition_explanation": "The prohibition is triggered by using the Software to develop, distribute, or operate a product or service providing substantially similar agent orchestration, agent runtime, workflow execution, or task planning capabilities or serving the same purpose."
+      },
+      {
+        "start_line": 94,
+        "end_line": 97,
+        "clause_label": "3(c) Branding and attribution restriction",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "requires": "remove_alter_or_obscure_fim_one_branding_or_notices_or_white_label_without_separate_commercial_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not remove, alter, or obscure FIM One branding, logos, copyright notices, or license notices included in the Software. White-labeling is prohibited absent a separate commercial license from Licensor.",
+        "condition_explanation": "The prohibition applies to removal, alteration, or obscuring of the specified included branding or notices, and to white-labeling without a separate commercial license."
+      },
+      {
+        "start_line": 99,
+        "end_line": 101,
+        "clause_label": "3(d) License integrity",
+        "activities": [
+          "Use",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "requires": "remove_disable_or_circumvent_license_verification_feature_gating_or_entitlement_checks"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not remove, disable, or circumvent license verification, feature gating, or entitlement checks present in the Software.",
+        "condition_explanation": "The prohibition applies when the licensee removes, disables, or circumvents one of the specified mechanisms present in the Software."
+      },
+      {
+        "start_line": 105,
+        "end_line": 110,
+        "clause_label": "4 Trademarks",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "use_licensor_marks_beyond_reasonable_origin_description_or_suggest_endorsement_sponsorship_or_affiliation_without_prior_written_consent"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The License grants no rights to Licensor's trademarks, trade names, service marks, or logos, except use reasonably necessary to describe the Software's origin in compliance with Section 3(c). Use suggesting endorsement, sponsorship, or affiliation requires prior written consent.",
+        "condition_explanation": "The restriction applies to mark use beyond the stated origin-description exception, and to any use suggesting endorsement, sponsorship, or affiliation without prior written consent."
+      },
+      {
+        "start_line": 124,
+        "end_line": 133,
+        "clause_label": "6 Patent License and termination on patent litigation",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute",
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "patent_claim_licensable_by_licensor_and_necessarily_infringed_by_software_and_not_infringed_solely_by_modifications_or_combinations"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Licensor grants a perpetual, worldwide, non-exclusive, royalty-free patent license to make, have made, use, and otherwise transfer the Software, limited to Licensor-licensable claims necessarily infringed by the Software. It does not extend to claims infringed solely by the licensee's modifications or combinations with other software. Any patent licenses granted under the License terminate on the date the licensee files patent litigation against any entity alleging that the Software constitutes patent infringement.",
+        "condition_explanation": "Coverage requires a claim Licensor can license that is necessarily infringed by the Software; claims infringed solely by modifications or combinations are excluded. Filing the specified patent litigation terminates the patent licenses."
+      },
+      {
+        "start_line": 155,
+        "end_line": 168,
+        "clause_label": "9 Termination, cure, and post-termination duties",
+        "activities": [
+          "Use",
+          "Distribute",
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "license_terminated",
+          "requires": {
+            "all": [
+              "cease_all_use_of_software",
+              "cease_all_distribution_of_software",
+              "destroy_all_copies_in_licensee_possession"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Rights terminate automatically upon failure to comply with any License term. Upon discovering a violation, Licensor must give written notice specifying it; the licensee has 30 days from receipt to cure, and a timely cure reinstates rights retroactively. A second violation after reinstatement causes immediate, permanent termination with no further cure period. Upon termination, the licensee must cease all use and distribution of the Software and destroy all copies in its possession.",
+        "condition_explanation": "The cessation and destruction duties apply upon termination. The stated cure applies after written notice of a violation and lasts 30 days from receipt; it does not apply to a second violation after reinstatement."
+      },
+      {
+        "start_line": 172,
+        "end_line": 180,
+        "clause_label": "10(a)-(b) Audit and cooperation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "licensor_conducts_audit_to_verify_license_compliance",
+          "requires": "reasonably_cooperate_including_providing_access_to_relevant_systems_records_and_personnel"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Licensor may audit the licensee's Software use to verify compliance no more than once per calendar year and on at least 30 days' prior written notice. The licensee must reasonably cooperate, including by providing access to relevant systems, records, and personnel. If an audit reveals non-compliance, the licensee must promptly cure in accordance with Section 9(b).",
+        "condition_explanation": "The cooperation duty applies when Licensor conducts an audit under the stated frequency and notice limits. The cure duty is triggered by an audit revealing non-compliance and follows Section 9(b)'s notice and cure terms."
+      },
+      {
+        "start_line": 182,
+        "end_line": 184,
+        "clause_label": "10(c) Audit costs",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "audit_reveals_material_non_compliance",
+          "requires": "pay_reasonable_audit_costs"
+        },
+        "actor_role": "licensee",
+        "scope_note": "If an audit reveals material non-compliance, including unauthorized Hosted Service use or Competing Product development, the licensee bears the reasonable costs of the audit.",
+        "condition_explanation": "The payment duty is triggered by an audit revealing material non-compliance."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text identifies the licensed artifact as the FIM One Software, including source code, object code, documentation, and associated files made available under the License. Derivative Works are defined as works based on or derived from that Software. No model, database, or output rights are stated.",
+      "Section 2 grants are subject to the License. The text does not grant general charging, selling, sublicensing, or model-training rights; no such permissions are inferred. The Hosted Service restriction expressly mentions reselling cloud access, but does not create a general charge or paid-access grant.",
+      "The separate commercial license mentioned for white-labeling and Section 5 may cover additional uses, but its terms are not supplied. Prior written authorization for Hosted Services and any separate commercial license are not provided here.",
+      "Section 2's distribution grant requires a copy of the License with each distribution. The supplied text does not state a general source-provision obligation, copyleft requirement, or downstream sublicensing grant.",
+      "Sections 7-8 disclaim warranties and limit liability; these are omitted as not operative ASC permissions, prohibitions, or obligations of the requested activity types. Sections 11-12 and audit cost consequences are otherwise omitted except for the audit cooperation and cost duties captured above."
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "case_id": "chain-3181-e9aa1e1a5a6c",
+  "source_csv_line": 3182,
+  "row": {
+    "github_repo": "fim-one",
+    "github_url": "https://github.com/fim-ai/fim-one",
+    "github_license": "LicenseRef-FIM-One",
+    "artifact_name": "deepseek-chat",
+    "artifact_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: frontend/src/types/model_provider.ts:27 ｜ 调用原文: model_name: string // API identifier: \"deepseek-chat\"（引用处 第27行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 仅出现在前端类型定义 model_provider.ts 的模型列表常量中，未见实际调用",
+    "batch": "1001-1500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "fim-ai/fim-one",
+    "license_label": "LicenseRef-FIM-One",
+    "sha256": "529097c20018019e691dd5775dc90e2c41646d6acaee4ef8c67b3e4020588a99",
+    "filename": "FIM+One+Source+Available+License.txt",
+    "evidence_file": "FIM+One+Source+Available+License.txt",
+    "acquisition": "User-supplied local original; RNA repository spelling resolved against dataset",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-3181-e9aa1e1a5a6c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-3181-e9aa1e1a5a6c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-3181-e9aa1e1a5a6c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": "output_provided_to_end_users"
+          },
+          "S": {
+            "artifact": "chain-3181-e9aa1e1a5a6c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-3181-e9aa1e1a5a6c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_service_terms",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-3181-e9aa1e1a5a6c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "output_provided_to_end_users"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "output_provided_to_end_users",
+          "disclosure_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb12cac8a1098bfb"
+        ]
+      }
+    ],
+    "limitations": [
+      "DeepSeek API remote interaction and use are established, but the record does not establish whether service outputs are provided to end users; the disclosure duty is therefore conditional.",
+      "The downstream FIM One license text is available, but the API link does not establish that the FIM One software is used as a component, bundled, modified, distributed, or otherwise within the relevant license scope. No license-to-license conflict is established from the supplied facts."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 27457,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1195,
+    "output_tokens_details": {
+      "reasoning_tokens": 319
+    },
+    "total_tokens": 28652,
+    "attribution": {
+      "items": {
+        "msg_00f62a7446152ed2016af586406ca887d0b46006a21b10947b": {
+          "input_tokens": 25387,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25387,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00f62a7446152ed2016af586406ca887d0bc89417f11166780": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00f62a7446152ed2016af58647c23487d0ab9d6a6332a931f6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 876,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 876
+            }
+          ]
+        },
+        "rs_00f62a7446152ed2016af58647a6bc87d0bfaf2158e61f4e4f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 319
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 30.97
+}

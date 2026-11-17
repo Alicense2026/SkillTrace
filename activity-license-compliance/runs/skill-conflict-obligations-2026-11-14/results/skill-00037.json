@@ -1,0 +1,925 @@
+{
+  "case_id": "skill-00037",
+  "csv_row": 38,
+  "source_excel_row": "67",
+  "status": "SUCCESS",
+  "request_sha256": "4af73f0d046645cf636fad791a08d09c8b7e15ecc938a8b4e442236fd152bc22",
+  "analysis": {
+    "case_id": "skill-00037",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_terms_and_restrictions",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00037:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_laws_applicable_to_that_party_and_activity",
+            "when": "party_provides_or_uses_services"
+          },
+          "S": {
+            "artifact": "skill-00037:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_terms_usage_policy_supported_regions_policy_and_service_specific_terms",
+            "when": "customer_or_user_uses_services"
+          },
+          "S": {
+            "artifact": "skill-00037:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00037:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "comply_with_commercial_terms",
+                "comply_with_acceptable_use_policy",
+                "comply_with_supported_regions_policy",
+                "comply_with_applicable_posted_guidelines_and_supplemental_terms"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00037:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "PROHIBITED",
+            "requires": true,
+            "when": "access_or_use_is_to_develop_competing_product_or_service_or_resell_services"
+          },
+          "S": {
+            "artifact": "skill-00037:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "give_recipients_license_copy",
+                {
+                  "any": [
+                    "file_unmodified",
+                    "modified_file_carries_prominent_change_notice"
+                  ]
+                },
+                {
+                  "any": [
+                    "not_distributed_derivative_source_form",
+                    "retain_applicable_work_source_notices_in_distributed_derivative_source"
+                  ]
+                },
+                {
+                  "any": [
+                    "work_has_no_notice_file",
+                    "not_distributed_derivative",
+                    "distributed_derivative_includes_readable_applicable_notice_attributions"
+                  ]
+                }
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00037:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游为 Anthropic 商业服务条款，本地文本不构成面向调用者的通用模型权重许可；对象图仅确认远程调用/链接，不确认权重转移、捆绑、修改或分发。",
+      "Usage Policy、Supported Regions Policy、Service Specific Terms及适用第三方条款被引用但全文未提供；不推断其具体限制。",
+      "下游 Apache-2.0 条款约束下游仓库中的 Work；现有事实不足以证明 Anthropic 服务或其输出属于该 Work，故不将该许可的分发条件套用于远程调用。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer须按适用范围遵守 Anthropic 服务条款及其限制。",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "subject": {
+          "artifact": "skill-00037:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": []
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer须遵守适用于其使用服务的法律，包括适用的数据隐私法律。",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "subject": {
+          "artifact": "skill-00037:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "applicable_laws"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer及其用户须遵守服务条款、Usage Policy、Supported Regions Policy及适用的 Service Specific Terms。",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "subject": {
+          "artifact": "skill-00037:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "incorporated_policy_requirements"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer须遵守商业条款、Acceptable Use Policy、Supported Regions Policy及适用的已发布指南和补充条款。",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "subject": {
+          "artifact": "skill-00037:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "incorporated_policy_requirements"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer不得为开发与 Anthropic 服务竞争的产品或服务而访问服务，包括训练竞争性 AI 模型或转售服务；该条款所述明确批准例外适用于其规定的行为。",
+        "source_refs": [
+          "license:9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8"
+        ],
+        "subject": {
+          "artifact": "skill-00037:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "competitive_development_or_model_training_or_resale",
+        "unresolved_predicates": [
+          "competitive_development_or_model_training_or_resale",
+          "anthropic_express_approval"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "服务使用许可受适用条款及限制约束。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "第三方功能许可仅在客户选择使用该功能时适用；本例未识别该类功能。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无提供反馈事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该规则约束 Anthropic 对 Customer Content 的训练，不是调用者义务；也无相关训练事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未提供客户使用 Customer Content 的具体事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "数据处理附录义务由 Anthropic 承担，不转移给调用者。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "保留 Customer 对其服务使用适用法律的义务。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "服务使用受条款及并入政策约束；具体政策文本未提供。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供 Anthropic 提出合理信息请求的事实。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供 Customer 使用或分享服务输出的事实。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未提供向用户提供服务的事实。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "保留针对竞争性开发、模型训练或转售的条件禁止；相关目的及批准情况未知。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无逆向工程或复制服务事实。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无支持第三方实施受限行为的事实。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "账户活动责任条款未建立与本行活动相对应的独立行为要求。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无账户疑似遭入侵或受攻击事实。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用保密信息的事实。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无披露保密信息的事实。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无依法披露保密信息的事实。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "销毁行为不在本任务活动词表中，且无请求事实。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无主张未明确授予之权利的事实。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规则规范 Anthropic 使用 Customer 名称或标识。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无 Anthropic 提出公开引语或联合营销请求的事实。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "相关收费、税款、账户费用或积分事实未提供；收费不当然证明商业使用。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无条款终止或相关终止程序事实。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无服务暂停或条款终止事实。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无向服务提交 Inputs 的独立事实。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无受限制地区、对象或违法提供服务访问的事实。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "此规则仅适用于消费者服务，不适用于所示服务调用范围。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "此年龄条款不适用于本例已识别的服务调用义务。"
+      },
+      {
+        "rule_ref": "U031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无提供账户信息事实。"
+      },
+      {
+        "rule_ref": "U032",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无分享账户凭据或向他人开放账户事实。"
+      },
+      {
+        "rule_ref": "U033",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无发现账户未授权访问事实。"
+      },
+      {
+        "rule_ref": "U034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无组织邮箱账户关联企业账户事实。"
+      },
+      {
+        "rule_ref": "U035",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无评估用途事实。"
+      },
+      {
+        "rule_ref": "U036",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "商业条款及并入政策适用于服务使用。"
+      },
+      {
+        "rule_ref": "U037",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无违反法律法规的服务访问或使用事实。"
+      },
+      {
+        "rule_ref": "U038",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "保留竞争性开发或转售服务的条件禁止；是否存在该目的未知。"
+      },
+      {
+        "rule_ref": "U039",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无反编译、逆向工程或拆解事实。"
+      },
+      {
+        "rule_ref": "U040",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无爬取、抓取或收集服务数据事实。"
+      },
+      {
+        "rule_ref": "U041",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无利用服务获取未授权访问或欺骗他人的事实。"
+      },
+      {
+        "rule_ref": "U042",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无侵犯或侵害第三方权利事实。"
+      },
+      {
+        "rule_ref": "U043",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "已知远程服务调用不单独证明该条款所称自动或非人工访问方式。"
+      },
+      {
+        "rule_ref": "U044",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无限制他人使用服务或造成条款所述损害风险的事实。"
+      },
+      {
+        "rule_ref": "U045",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无依赖服务进行指定金融交易或提供、接收相关建议的事实。"
+      },
+      {
+        "rule_ref": "U046",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无滥用、干扰或破坏服务的事实。"
+      },
+      {
+        "rule_ref": "U047",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无提交 Inputs 或指示服务执行 Actions 的具体事实。"
+      },
+      {
+        "rule_ref": "U048",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无输入权利主张相关事实。"
+      },
+      {
+        "rule_ref": "U049",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "输出权利转让不产生本例已识别的独立调用者义务。"
+      },
+      {
+        "rule_ref": "U050",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规则约束 Anthropic 对 Materials 的使用，不限制调用者对模型权重的使用。"
+      },
+      {
+        "rule_ref": "U051",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无反馈或评价输出事实。"
+      },
+      {
+        "rule_ref": "U052",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未提供适用费用、购买或税款事实；收费本身不构成商业使用证据。"
+      },
+      {
+        "rule_ref": "U053",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无个人订阅服务访问事实。"
+      },
+      {
+        "rule_ref": "U054",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "取消订阅不属于本任务活动。"
+      },
+      {
+        "rule_ref": "U055",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "订阅取消及退款不属于本任务活动。"
+      },
+      {
+        "rule_ref": "U056",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无订阅费调整或续订事实。"
+      },
+      {
+        "rule_ref": "U057",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用与 Anthropic 服务结合的第三方内容、服务或集成事实。"
+      },
+      {
+        "rule_ref": "U058",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无第三方内容报告事实。"
+      },
+      {
+        "rule_ref": "U059",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规则仅涉及 Anthropic 软件更新。"
+      },
+      {
+        "rule_ref": "U060",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无触发赔偿或抗辩合作义务的事实。"
+      },
+      {
+        "rule_ref": "U061",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无更新条款发布、通知或拒绝接受事实。"
+      },
+      {
+        "rule_ref": "U062",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "若存在适用补充条款，服务使用须遵守该等条款；已由适用条款义务概括保留。"
+      },
+      {
+        "rule_ref": "U063",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无服务访问被暂停或终止的事实。"
+      },
+      {
+        "rule_ref": "U064",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅确认客户可停止访问服务的许可。"
+      },
+      {
+        "rule_ref": "U065",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无账户因长期不活跃而终止的事实。"
+      },
+      {
+        "rule_ref": "U066",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规则涉及 Anthropic 终止后的数据删除选择。"
+      },
+      {
+        "rule_ref": "U067",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转让或转许可服务条款的事实。"
+      },
+      {
+        "rule_ref": "U068",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无使用 Anthropic 名称、标识或商标的事实。"
+      },
+      {
+        "rule_ref": "U069",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无出口管制或受限对象访问事实。"
+      },
+      {
+        "rule_ref": "U070",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规则涉及 Anthropic 对政府请求或执法报告的处理。"
+      },
+      {
+        "rule_ref": "U071",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无美国政府用户事实。"
+      },
+      {
+        "rule_ref": "U072",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "恢复访问的义务由 Anthropic 承担。"
+      },
+      {
+        "rule_ref": "U073",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无适用额外费用及审阅接受机会事实。"
+      },
+      {
+        "rule_ref": "U074",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无到期未付款事实；该条款规定服务提供者可采取的后果。"
+      },
+      {
+        "rule_ref": "U075",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该条款授予 Anthropic 暂停服务的选择权，不限制调用者的已知行为。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "Apache复制许可对象是下游Work；无相关复制事实。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无制作Apache Work衍生作品事实。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无转许可Apache Work事实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发Apache Work事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无相关专利权使用事实。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无相关专利权出售行为事实。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无专利诉讼事实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无Apache Work复制或分发事实。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无Apache Work分发事实。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无对Apache Work或其衍生作品的使用事实。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无Apache衍生作品使用事实。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无使用Apache许可方商标事实。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无使用Apache许可方名称或商标事实。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无再分发时提供额外担保或收费事实。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发Apache衍生作品事实。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发经修改Apache文件事实。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无以源代码形式分发Apache衍生作品事实。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无NOTICE文件及分发衍生作品事实。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无Apache修改作品使用事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00037-1794590791332538000-1.json",
+  "usage": {
+    "input_tokens": 55766,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 5167,
+    "output_tokens_details": {
+      "reasoning_tokens": 366
+    },
+    "total_tokens": 60933,
+    "attribution": {
+      "items": {
+        "msg_0adcea87509b4c91016af7484ea52887d1bb2095031a77cbef": {
+          "input_tokens": 53042,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 53042,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0adcea87509b4c91016af7484ea52887d1be75942f1f102e8d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0adcea87509b4c91016af748566a4487d1ac1c481c2134ed2f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 4801,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 4801
+            }
+          ]
+        },
+        "rs_0adcea87509b4c91016af74853924887d1acc1916fcd19e0b4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 214
+        },
+        "rs_0adcea87509b4c91016af748564eb887d1b4709deae07ad646": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 152
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

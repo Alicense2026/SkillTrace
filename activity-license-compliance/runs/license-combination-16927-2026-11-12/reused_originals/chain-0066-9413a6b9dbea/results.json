@@ -1,0 +1,142 @@
+{
+  "case_id": "chain-0066-9413a6b9dbea",
+  "status": "SUCCESS",
+  "request_sha256": "0f2b760e8d49b99ad4a91ecc2dd98349fd7555859e56ee38b4c3c7c737b06611",
+  "analysis": {
+    "case_id": "chain-0066-9413a6b9dbea",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "use_of_model_experience_generated_content"
+          },
+          "S": {
+            "artifact": "chain-0066-9413a6b9dbea:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e3ad1d1e0b6d0561"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_AGPL_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0066-9413a6b9dbea:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "A/S：Use / upstream 原始服务；摘录限制模型体验生成内容的商业化使用及向第三方提供、使用、传播或分发；事实仅确认远程服务调用和使用，未说明使用或传播生成内容，也未证明发生摘录所指行为，因此不构成已确认违反。来源：aliyun.txt L42-L45。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：ProvideSource / 下游修改版；AGPL第13条要求在修改了受覆盖程序且该版本支持网络交互、用户通过网络远程交互时提供对应源码获取机会；记录确认的是远程API服务调用且代码修改不适用，不是该修改版的网络交互，触发条件未成立。来源：LICENSE-AGPL-3.0-only.txt §13。",
+        "source_refs": [
+          "license-text:downstream:e3ad1d1e0b6d0561"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "阿里云摘录中的使用限制针对模型体验生成内容；本记录未说明是否生成或如何使用、提供输出，故仅能判断已知远程调用事实，不能进一步认定相关限制已触发或被违反。",
+      "AGPL §13摘录以修改受覆盖程序为前提；记录称代码修改不适用。若实际另有被修改的AGPL程序并由用户通过网络远程交互，需按该事实重新评估。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19118,
+    "input_tokens_details": {
+      "cached_tokens": 18944,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1083,
+    "output_tokens_details": {
+      "reasoning_tokens": 309
+    },
+    "total_tokens": 20201,
+    "attribution": {
+      "items": {
+        "msg_0a8aa1f8f5d41993016af2fa05b4e887d2bf7e409cd1e820e9": {
+          "input_tokens": 17086,
+          "cached_tokens": 16914,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17086,
+              "cached_tokens": 16914,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a8aa1f8f5d41993016af2fa0c546887d29a9d528da8e45724": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 774,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 774
+            }
+          ]
+        },
+        "rs_0a8aa1f8f5d41993016af2fa0c38c887d2b9f1909c28d8f5dd": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 309
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.936,
+  "auto_applied": false,
+  "aggregate_count": 17
+}

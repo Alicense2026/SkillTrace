@@ -1,0 +1,444 @@
+{
+  "request_sha256": "04637726d688d7e06b7da822c7ca4d70ca1a2db8d3e8c91d91186217a84fa81c",
+  "data": {
+    "decisions": [
+      {
+        "candidate_id": "C001",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-ad4c0b17c7677c326a7b4c4d"
+        ],
+        "reason": "Section 2 grants reproduction of the Work (lines 66–71); the current Copy rule has the same licensee, OriginalArtifact, and permitted action.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C002",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-aa70660a08e53e9be463ba3d"
+        ],
+        "reason": "Section 2 permits preparing Derivative Works of the Work (lines 66–71), and section 1 defines the scope of Derivative Works (lines 40–46). The current CreateDerivative rule matches the candidate’s actor, object, action, and permission.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C003",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-b0b5afd89e40acf538a5c056"
+        ],
+        "reason": "Section 2 expressly grants sublicensing of the Work and Derivative Works in Source or Object form (lines 66–71); the current rule matches the candidate’s actor, object, action, and permission.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C004",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-04992753b8ca64a5da4a8d1d"
+        ],
+        "reason": "Section 2 grants distribution of the Work (lines 66–71). Section 4 separately states conditions for redistribution (lines 89–117); the current distribution rule identifies those conditions in its scope and condition explanation.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C005",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 2 expressly grants distribution of both the Work and Derivative Works (lines 66–71), but the current distribution rule’s ASC object is OriginalArtifact, not DerivativeWork. Its prose mentioning Derivative Works does not fix that object mismatch.",
+        "corrected_clause": {
+          "start_line": 66,
+          "end_line": 71,
+          "clause_label": "copyright_distribute_derivative",
+          "activities": [
+            "Distribute"
+          ],
+          "objects": [
+            "DerivativeWork"
+          ],
+          "C": {
+            "kind": "PERMITTED",
+            "when": true,
+            "requires": true
+          },
+          "actor_role": "licensee",
+          "scope_note": "Apache-2.0 section 2 permits distribution of Derivative Works in Source or Object form; section 4 states conditions for redistributing copies.",
+          "condition_explanation": "The grant is subject to the License. Section 4 conditions distribution of copies.",
+          "obligation_items": []
+        }
+      },
+      {
+        "candidate_id": "C006",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "The source expressly grants public display in section 2 (lines 66–71), but public display is not an allowed activity. Mapping it to the generic Use activity would use a placeholder for an out-of-scope procedure.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C007",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "The source expressly grants public performance in section 2 (lines 66–71), but public performance is not an allowed activity. Mapping it to the generic Use activity would use a placeholder for an out-of-scope procedure.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C008",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-4790c380b555c38cfd7a7875"
+        ],
+        "reason": "Section 3 grants patent use only for claims licensable by the Contributor and necessarily infringed by its Contribution alone or combined with the submitted Work (lines 73–81). The current Use rule captures that limited claim scope; the candidate’s broader enumeration of patent acts does not alter its expressible Use component.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C009",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-03bd45411dcb77f414612aa0"
+        ],
+        "reason": "Section 3 terminates patent licenses for the Work as of filing when the licensee institutes the specified patent litigation, including a cross-claim or counterclaim (lines 82–87). The current rule captures the same trigger and limited consequence.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C010",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-9229f6164210f9492fd0380e"
+        ],
+        "reason": "Section 4 permits distribution of Work copies subject to recipient-license, modified-file notice, applicable source-notice, and conditional NOTICE-file duties (lines 89–110). The current distribution rule covers those duties and prerequisites; its source excerpt also includes the full applicable section 4 language (lines 89–110).",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C011",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 4(b) requires prominent change notices on distributed modified files (lines 97–98). The current distribution rule includes that duty, but its ASC object is OriginalArtifact rather than the candidate’s ModifiedArtifact, so it does not match the candidate’s object.",
+        "corrected_clause": {
+          "start_line": 97,
+          "end_line": 98,
+          "clause_label": "modified_file_notice",
+          "activities": [
+            "Distribute"
+          ],
+          "objects": [
+            "ModifiedArtifact"
+          ],
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "licensee_distributes_modified_file",
+            "requires": "prominent_notice_states_file_was_changed"
+          },
+          "actor_role": "licensee",
+          "scope_note": "Apache-2.0 section 4(b) applies to any modified file the licensee distributes; it requires a prominent notice stating that the licensee changed the file.",
+          "condition_explanation": "licensee_distributes_modified_file means the licensee distributes a file that it modified.",
+          "obligation_items": [
+            {
+              "duty_type": "PERFORM",
+              "content": "Cause the modified file to carry a prominent notice stating that the licensee changed the file.",
+              "actor": "licensee distributing the modified file",
+              "object": "each modified file distributed",
+              "trigger": "Whenever the licensee distributes a modified file under section 4."
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "C012",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 4(c) requires retention of applicable source notices in the Source form of a distributed Derivative Work, subject to the stated exclusion (lines 100–104). The current distribution rule includes this duty but has OriginalArtifact, not DerivativeWork, as its ASC object.",
+        "corrected_clause": {
+          "start_line": 100,
+          "end_line": 104,
+          "clause_label": "retain_source_notices",
+          "activities": [
+            "Distribute"
+          ],
+          "objects": [
+            "DerivativeWork"
+          ],
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "licensee_distributes_derivative_in_source_form",
+            "requires": "retain_applicable_source_form_notices"
+          },
+          "actor_role": "licensee",
+          "scope_note": "Apache-2.0 section 4(c) applies only to Source form of a Derivative Work that the licensee distributes. It requires retention of applicable copyright, patent, trademark, and attribution notices from the Work's Source form, excluding notices that do not pertain to any part of the Derivative Work.",
+          "condition_explanation": "licensee_distributes_derivative_in_source_form means the licensee distributes a Derivative Work in Source form. retain_applicable_source_form_notices means retaining the specified notices, with the express nonpertinence exclusion.",
+          "obligation_items": [
+            {
+              "duty_type": "PERFORM",
+              "content": "Retain all copyright, patent, trademark, and attribution notices from the Work's Source form that pertain to any part of the Derivative Work.",
+              "actor": "licensee distributing the Derivative Work",
+              "object": "Source form of the distributed Derivative Work",
+              "trigger": "Only when the licensee distributes the Derivative Work in Source form; notices that do not pertain to any part of it are excluded."
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "C013",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 4(d) conditionally requires readable applicable NOTICE attributions when the Work’s distribution includes a NOTICE file and a Derivative Work is distributed (lines 106–110). The current distribution rule includes this duty but has OriginalArtifact, not DerivativeWork, as its ASC object.",
+        "corrected_clause": {
+          "start_line": 106,
+          "end_line": 110,
+          "clause_label": "notice_file_attributions",
+          "activities": [
+            "Distribute"
+          ],
+          "objects": [
+            "DerivativeWork"
+          ],
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": {
+              "all": [
+                "work_includes_notice_file_as_part_of_distribution",
+                "licensee_distributes_derivative_work"
+              ]
+            },
+            "requires": "include_readable_copy_of_applicable_notice_attributions"
+          },
+          "actor_role": "licensee",
+          "scope_note": "Apache-2.0 section 4(d) applies only if the Work includes a NOTICE text file as part of its distribution and the licensee distributes a Derivative Work. Irrelevant notices may be excluded.",
+          "condition_explanation": "work_includes_notice_file_as_part_of_distribution and licensee_distributes_derivative_work are both required. Applicable attribution notices are those that pertain to a part of the Derivative Work.",
+          "obligation_items": [
+            {
+              "duty_type": "PERFORM",
+              "content": "Include a readable copy of the applicable attribution notices contained in the NOTICE file.",
+              "actor": "licensee distributing the Derivative Work",
+              "object": "Derivative Work distribution",
+              "trigger": "Only if the Work includes a NOTICE text file as part of its distribution and the licensee distributes a Derivative Work; exclude notices that do not pertain to any part of the Derivative Work."
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "C014",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 4 permits additional or different terms for modifications or a Derivative Work as a whole, provided use, reproduction, and distribution of the Work otherwise comply (lines 112–117). The candidate mislabels this permission as Distribute; the current rules express it as Use, so the candidate needs correction to that action.",
+        "corrected_clause": {
+          "start_line": 112,
+          "end_line": 117,
+          "clause_label": "additional_modification_terms",
+          "activities": [
+            "Use"
+          ],
+          "objects": [
+            "ModifiedArtifact"
+          ],
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": true,
+            "requires": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+          },
+          "actor_role": "licensee",
+          "scope_note": "Apache-2.0 section 4 permits the licensee to add its own copyright statement to modifications and provide additional or different terms for use, reproduction, or distribution of modifications or a Derivative Work as a whole, provided use, reproduction, and distribution of the Work otherwise comply with the License.",
+          "condition_explanation": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license means the licensee's use, reproduction, and distribution of the Work comply with the applicable License conditions.",
+          "obligation_items": []
+        }
+      },
+      {
+        "candidate_id": "C015",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-8ba458a1f5d05acf55bce5a3",
+          "seg-cd4df4a5f878680801e80234"
+        ],
+        "reason": "Section 6 withholds general permission for Licensor names and marks, except for reasonable and customary origin-description use or reproduction of NOTICE content (lines 127–130). The current exception and restriction rules together capture the candidate’s conditions and exceptions.",
+        "corrected_clause": null
+      }
+    ]
+  },
+  "additions": [
+    {
+      "rule_id": "gap-8219530e1f05577a79d3d94d",
+      "license_id": "LICENSE-APACHE.txt",
+      "source_aliases": [
+        "LICENSE-APACHE.txt"
+      ],
+      "source_sha256": "a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "DerivativeWork"
+        },
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        }
+      },
+      "source_lines": [
+        66,
+        71
+      ],
+      "source_excerpt": "   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.",
+      "clause_label": "historical/a8cb04406cee234e-001/C005/copyright_distribute_derivative",
+      "actor_role": "licensee",
+      "scope_note": "Apache-2.0 section 2 permits distribution of Derivative Works in Source or Object form; section 4 states conditions for redistributing copies.",
+      "condition_explanation": "The grant is subject to the License. Section 4 conditions distribution of copies.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "a8cb04406cee234e-001"
+    },
+    {
+      "rule_id": "gap-773d5a2e47c95b2c51ea49b8",
+      "license_id": "LICENSE-APACHE.txt",
+      "source_aliases": [
+        "LICENSE-APACHE.txt"
+      ],
+      "source_sha256": "a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "ModifiedArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_distributes_modified_file",
+          "requires": "prominent_notice_states_file_was_changed"
+        }
+      },
+      "source_lines": [
+        97,
+        98
+      ],
+      "source_excerpt": "      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and",
+      "clause_label": "historical/a8cb04406cee234e-001/C011/modified_file_notice",
+      "actor_role": "licensee",
+      "scope_note": "Apache-2.0 section 4(b) applies to any modified file the licensee distributes; it requires a prominent notice stating that the licensee changed the file.",
+      "condition_explanation": "licensee_distributes_modified_file means the licensee distributes a file that it modified.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Cause the modified file to carry a prominent notice stating that the licensee changed the file.",
+          "actor": "licensee distributing the modified file",
+          "object": "each modified file distributed",
+          "trigger": "Whenever the licensee distributes a modified file under section 4."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "a8cb04406cee234e-001"
+    },
+    {
+      "rule_id": "gap-fd6abf415ea996aa1f7d7dba",
+      "license_id": "LICENSE-APACHE.txt",
+      "source_aliases": [
+        "LICENSE-APACHE.txt"
+      ],
+      "source_sha256": "a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "DerivativeWork"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_distributes_derivative_in_source_form",
+          "requires": "retain_applicable_source_form_notices"
+        }
+      },
+      "source_lines": [
+        100,
+        104
+      ],
+      "source_excerpt": "      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work, excluding\n          those notices that do not pertain to any part of the Derivative\n          Works; and",
+      "clause_label": "historical/a8cb04406cee234e-001/C012/retain_source_notices",
+      "actor_role": "licensee",
+      "scope_note": "Apache-2.0 section 4(c) applies only to Source form of a Derivative Work that the licensee distributes. It requires retention of applicable copyright, patent, trademark, and attribution notices from the Work's Source form, excluding notices that do not pertain to any part of the Derivative Work.",
+      "condition_explanation": "licensee_distributes_derivative_in_source_form means the licensee distributes a Derivative Work in Source form. retain_applicable_source_form_notices means retaining the specified notices, with the express nonpertinence exclusion.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Retain all copyright, patent, trademark, and attribution notices from the Work's Source form that pertain to any part of the Derivative Work.",
+          "actor": "licensee distributing the Derivative Work",
+          "object": "Source form of the distributed Derivative Work",
+          "trigger": "Only when the licensee distributes the Derivative Work in Source form; notices that do not pertain to any part of it are excluded."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "a8cb04406cee234e-001"
+    },
+    {
+      "rule_id": "gap-e8c9895cb2d4252a53e2e74a",
+      "license_id": "LICENSE-APACHE.txt",
+      "source_aliases": [
+        "LICENSE-APACHE.txt"
+      ],
+      "source_sha256": "a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "DerivativeWork"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "work_includes_notice_file_as_part_of_distribution",
+              "licensee_distributes_derivative_work"
+            ]
+          },
+          "requires": "include_readable_copy_of_applicable_notice_attributions"
+        }
+      },
+      "source_lines": [
+        106,
+        110
+      ],
+      "source_excerpt": "      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works.",
+      "clause_label": "historical/a8cb04406cee234e-001/C013/notice_file_attributions",
+      "actor_role": "licensee",
+      "scope_note": "Apache-2.0 section 4(d) applies only if the Work includes a NOTICE text file as part of its distribution and the licensee distributes a Derivative Work. Irrelevant notices may be excluded.",
+      "condition_explanation": "work_includes_notice_file_as_part_of_distribution and licensee_distributes_derivative_work are both required. Applicable attribution notices are those that pertain to a part of the Derivative Work.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Include a readable copy of the applicable attribution notices contained in the NOTICE file.",
+          "actor": "licensee distributing the Derivative Work",
+          "object": "Derivative Work distribution",
+          "trigger": "Only if the Work includes a NOTICE text file as part of its distribution and the licensee distributes a Derivative Work; exclude notices that do not pertain to any part of the Derivative Work."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "a8cb04406cee234e-001"
+    },
+    {
+      "rule_id": "gap-f01a12f4a911929b79c784a0",
+      "license_id": "LICENSE-APACHE.txt",
+      "source_aliases": [
+        "LICENSE-APACHE.txt"
+      ],
+      "source_sha256": "a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "ModifiedArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+        }
+      },
+      "source_lines": [
+        112,
+        117
+      ],
+      "source_excerpt": "      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.",
+      "clause_label": "historical/a8cb04406cee234e-001/C014/additional_modification_terms",
+      "actor_role": "licensee",
+      "scope_note": "Apache-2.0 section 4 permits the licensee to add its own copyright statement to modifications and provide additional or different terms for use, reproduction, or distribution of modifications or a Derivative Work as a whole, provided use, reproduction, and distribution of the Work otherwise comply with the License.",
+      "condition_explanation": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license means the licensee's use, reproduction, and distribution of the Work comply with the applicable License conditions.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "a8cb04406cee234e-001"
+    }
+  ]
+}

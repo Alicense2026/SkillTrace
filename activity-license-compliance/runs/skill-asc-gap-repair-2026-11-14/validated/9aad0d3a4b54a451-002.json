@@ -1,0 +1,58 @@
+{
+  "request_sha256": "5c9a47425e0934671f91336c5d57c17261afc15ef0f1b3b2a807be00f6c6897e",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 51,
+        "end_line": 51,
+        "clause_label": "gap/resume_service_after_curable_suspension",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "suspension_triggering_event_cured_and_suspension_is_curable",
+          "requires": "resume_customer_access_as_soon_as_reasonably_possible"
+        },
+        "actor_role": "Anthropic",
+        "scope_note": "Section I.3.b: Anthropic must use reasonable efforts to resume providing access after the event giving rise to a Service Suspension is cured, where curable. This clause captures the express resumption duty, not the separate written-notice duty.",
+        "condition_explanation": "suspension_triggering_event_cured_and_suspension_is_curable means the event giving rise to the Service Suspension has been cured and is capable of cure.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use reasonable efforts to resume providing Customer access to the Services as soon as reasonably possible after the event giving rise to a Service Suspension is cured, where curable.",
+            "actor": "Anthropic",
+            "object": "Customer's access to the Services",
+            "trigger": "A Service Suspension has occurred and its triggering event is cured, where that event is curable."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The referenced notice, breach-cure, and dispute procedures are locally stated in the supplied text; they are not missing external documents. The existing access-boundary anchors cover the consequences of suspension and termination, but the fixed activity vocabulary cannot faithfully represent every procedural notice or termination action."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0010",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "termination_rights_and_lawful_provision",
+          "service_suspension_and_post_termination_access",
+          "gap/resume_service_after_curable_suspension"
+        ],
+        "reason": "The existing anchors cover termination-triggered and suspension-triggered restrictions on Customer access, and the added clause captures Anthropic's resumption duty. The remaining operative procedures—giving termination Notice, detailing a material breach and allowing the 30-day cure period, and providing reasonable-efforts written notice of a Service Suspension—are notice/procedural actions that do not fit an allowed activity."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Good-faith informal dispute resolution, giving and responding to a Dispute Notice, arbitration, and seeking equitable relief are dispute-resolution or procedural actions that do not fit the fixed activity vocabulary."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

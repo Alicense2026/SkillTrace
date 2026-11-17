@@ -1,0 +1,51 @@
+{
+  "case_id": "chain-0153-0cf9ee7ca47a",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "按适用订单项支付使用 Mistral AI Products 所产生的到期费用。",
+      "source_refs": [
+        "license-text:upstream:282b79bf9fcbaf7a"
+      ],
+      "subject": {
+        "artifact": "chain-0153-0cf9ee7ca47a:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "applicable_order_form",
+        "fees_due",
+        "payment_made"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若分发 GPL 覆盖的修改版本，须按 GPL 条款许可整个作品并提供源码；若以目标代码形式分发覆盖作品，还须按 GPL 允许的方式提供对应源码。",
+      "source_refs": [
+        "license-text:downstream:18cfdf82656eeeef"
+      ],
+      "subject": {
+        "artifact": "chain-0153-0cf9ee7ca47a:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "scope_shared"
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "scope_shared",
+        "distribution_form",
+        "license_whole_work_under_GPL_and_provide_source",
+        "provide_corresponding_source_by_allowed_method"
+      ]
+    }
+  ],
+  "aggregate_count": 5
+}

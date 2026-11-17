@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0267-d5fcb1565bc2",
+  "input_group_row": 267,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "BSD-3-Clause",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0267-d5fcb1565bc2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0267-d5fcb1565bc2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "BSD-3-Clause 摘录仅明确使用须保留适用通知；履行情况未提供。",
+      "AGPL-3.0 第13条摘录以修改程序且该版本支持远程交互为触发条件。可信记录明确代码修改不适用；已知的远程调用是对上游原始资产的API调用，不证明下游修改或分发了AGPL涵盖程序，故该网络源码提供义务在当前事实下不触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 BSD-3-Clause 资产时保留适用通知。",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "subject": {
+          "artifact": "chain-0267-d5fcb1565bc2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "retain_applicable_notices"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 18437,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 848,
+    "output_tokens_details": {
+      "reasoning_tokens": 397
+    },
+    "total_tokens": 19285,
+    "attribution": {
+      "items": {
+        "msg_04461390750a29f7016af530a2329c87d08224d3087da23561": {
+          "input_tokens": 16367,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16367,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04461390750a29f7016af530a2329c87d09a0876ec6f1142e3": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04461390750a29f7016af530a9dda487d09a711d734ace8d2a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 451,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 451
+            }
+          ]
+        },
+        "rs_04461390750a29f7016af530a9c20087d0888e2ef6d513fb6e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 397
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "f179b0daaf659ca52bec13fda71c40bf2fd5a4a0d5f5230bdf88200829ab26fc",
+  "elapsed_seconds": 28.25
+}

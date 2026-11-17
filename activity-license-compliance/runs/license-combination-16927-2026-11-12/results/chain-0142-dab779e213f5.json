@@ -1,0 +1,167 @@
+{
+  "case_id": "chain-0142-dab779e213f5",
+  "input_group_row": 142,
+  "aggregate_count": 7,
+  "combination": {
+    "GitHub许可证": "Sustainable-Use",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "7"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0142-dab779e213f5",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0142-dab779e213f5:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:88efe956d3b624b5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "internal_business_purpose",
+                "non_commercial_use",
+                "personal_use"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0142-dab779e213f5:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图确认下游到上游为API链接及远程调用，但未确认两份许可的受约束对象范围重合；因此不据此认定许可冲突。",
+      "Sustainable-Use摘录将使用限制于列明目的之一，但本记录未说明该许可覆盖的下游软件是否正是本次远程调用中被使用的对象；也未提供适用目的事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若本次使用落入Sustainable-Use许可覆盖范围，须用于许可方自身内部业务目的、非商业用途或个人用途之一。",
+        "source_refs": [
+          "license-text:downstream:88efe956d3b624b5"
+        ],
+        "subject": {
+          "artifact": "chain-0142-dab779e213f5:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "internal_business_purpose",
+          "non_commercial_use",
+          "personal_use"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 25568,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 880,
+    "output_tokens_details": {
+      "reasoning_tokens": 332
+    },
+    "total_tokens": 26448,
+    "attribution": {
+      "items": {
+        "msg_0aed1ae60e39d69e016af52f7675c487d09d4f4a20bc6f2bdc": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0aed1ae60e39d69e016af52f7675c487d0a84d09ddf263f874": {
+          "input_tokens": 23498,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23498,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0aed1ae60e39d69e016af52f7ced7887d0bb50bced6340a405": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 548,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 548
+            }
+          ]
+        },
+        "rs_0aed1ae60e39d69e016af52f7cd6a087d0ac570d3ad38daddc": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 332
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "af3272ad5ee84a733199cbffb03a747b131c9e5bcb6cab702626fd180ae70409",
+  "elapsed_seconds": 31.89
+}

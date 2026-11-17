@@ -1,0 +1,207 @@
+{
+  "case_id": "chain-5067-bdb5d1dbbfc9",
+  "source_csv_line": 5068,
+  "row": {
+    "github_repo": "databricks-agent-skills",
+    "github_url": "https://github.com/databricks/databricks-agent-skills",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "fzaninotto/Faker",
+    "artifact_url": "https://github.com/fzaninotto/Faker",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: plugins/databricks/antigravity/skills/databricks-synthetic-data-gen/scripts/generate_synthetic_data.py:1 ｜ 调用原文: \"\"\"Generate synthetic data using Spark + Faker + Pandas UDFs. ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: generate_synthetic_data.py 依赖 Faker 生成合成数据",
+    "batch": "2001-2500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "databricks/databricks-agent-skills",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "df8afbfd34830a45f85dff044550a913a3355be1c61ab756417e7670cb48fa1c",
+    "filename": "_licenseref_full/texts/df8afbfd34830a45f85dff044550a913a3355be1c61ab756417e7670cb48fa1c.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:databricks-agent-skills-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "elapsed_seconds": 30.51,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/custom-license-16927-2026-11-12",
+  "relationship_weight": 1,
+  "original_error": "Invalid obligation values",
+  "analysis": {
+    "case_id": "chain-5067-bdb5d1dbbfc9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:14e44f4c5e872ed4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-5067-bdb5d1dbbfc9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9af738e0f56c18b7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "use_in_connection_with_Databricks_Services_pursuant_to_Agreement",
+                "comply_with_applicable_Databricks_Service_restrictions",
+                "use_in_accordance_with_applicable_documentation"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-5067-bdb5d1dbbfc9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9af738e0f56c18b7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_not_in_connection_with_Databricks_Services_pursuant_to_Agreement"
+          },
+          "S": {
+            "artifact": "chain-5067-bdb5d1dbbfc9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认上游 Faker 的远程调用和 Use；该事实不证明下游仓库材料与上游材料构成同一受约束对象。对象图中的 scope_shared 未知，且未证实下游 OriginalArtifact 的 Use 已发生。",
+      "MIT 摘录中的通知义务明确涉及副本或软件实质部分；本案没有 Copy 或分发事实，故不据此认定通知义务已触发。",
+      "LicenseRef-Custom 的 Use 条款适用于其 Licensed Materials，并要求依 Databricks Services 协议、适用限制及文档使用；当前事实未说明这些使用条件是否满足。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-5067-bdb5d1dbbfc9:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅可在依照 Agreement 使用 Databricks Services 的关联情形下使用 Licensed Materials，并须遵守适用的 Databricks Services 限制及适用文档。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "scope_shared",
+          "use_in_connection_with_Databricks_Services_pursuant_to_Agreement",
+          "comply_with_applicable_Databricks_Service_restrictions",
+          "use_in_accordance_with_applicable_documentation"
+        ],
+        "source_refs": [
+          "license-text:downstream:9af738e0f56c18b7"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 27687,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1281,
+    "output_tokens_details": {
+      "reasoning_tokens": 374
+    },
+    "total_tokens": 28968,
+    "attribution": {
+      "items": {
+        "msg_0c6890f17161f0b1016af58415b8f087d0b4ac44db522362da": {
+          "input_tokens": 24094,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 24094,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c6890f17161f0b1016af58415b8f087d0b5b599b413e63ff0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c6890f17161f0b1016af5841d036c87d0804ca3962639d3d3": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 907,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 907
+            }
+          ]
+        },
+        "rs_0c6890f17161f0b1016af5841ce7a887d0a3262a428ec2fe01": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 374
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3553,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

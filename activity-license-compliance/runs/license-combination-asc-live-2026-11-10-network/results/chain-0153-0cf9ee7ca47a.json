@@ -1,0 +1,121 @@
+{
+  "case_id": "chain-0153-0cf9ee7ca47a",
+  "status": "SUCCESS",
+  "request_sha256": "fc88935e368819111a14d323f0265f45ea70e84510c008a5c643de0788dfefac",
+  "analysis": {
+    "case_id": "chain-0153-0cf9ee7ca47a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_fees_due_under_applicable_order_form",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0153-0cf9ee7ca47a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Mistral 条款摘录涉及客户为产品使用支付到期费用，但没有提供 applicable Order Form、费用是否到期或付款履行情况；不据此认定欠费或下游收费。",
+      "已提供的 GPL 摘录约束复制、修改或传递等活动；本记录仅确认远程调用，未证明对 GPL 对象实施这些活动。对象图中的下游依赖及范围是否共享仍未知，不能据此推定 GPL 条件适用于 API 调用。",
+      "本结论限于所提供的结构化条款摘录及已确认活动；结构化抽取标记为 FIRST_PASS_REVIEW_REQUIRED。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "支付 applicable Order Form（如有）项下因使用 Mistral AI Products 而到期的费用。",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "subject": {
+          "artifact": "chain-0153-0cf9ee7ca47a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_order_form_exists",
+          "fees_due",
+          "payment_fulfilled"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17327,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 802,
+    "output_tokens_details": {
+      "reasoning_tokens": 261
+    },
+    "total_tokens": 18129,
+    "attribution": {
+      "items": {
+        "msg_072c02e13fd6d26e016af2fd61b1e887d28fb52849602a81a6": {
+          "input_tokens": 15295,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15295,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_072c02e13fd6d26e016af2fd67185c87d2bc26db7e80586a01": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 541,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 541
+            }
+          ]
+        },
+        "rs_072c02e13fd6d26e016af2fd66fcb887d29801ec5967377c1f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 261
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.047,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

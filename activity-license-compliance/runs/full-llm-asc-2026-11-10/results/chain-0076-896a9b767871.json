@@ -1,0 +1,160 @@
+{
+  "case_id": "chain-0076-896a9b767871",
+  "status": "SUCCESS",
+  "request_sha256": "7abbace9a5b671a552c1544ae2e55342c3471cf0b4994d445298ceb3b1a2fa9e",
+  "analysis": {
+    "case_id": "chain-0076-896a9b767871",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f6ca500fbecb4ada"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0076-896a9b767871:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f6ca500fbecb4ada"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0076-896a9b767871:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f6ca500fbecb4ada"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "outputs_provided_to_end_users"
+          },
+          "S": {
+            "artifact": "chain-0076-896a9b767871:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的范围是 DeepSeek Open Platform API 的 Use 与 RemoteInteraction；条款明确是 API 服务条款，不是模型权重再分发授权。没有证据表明权重转移、分发、修改或组合发生。",
+      "当地原文提及 DeepSeek Terms of Use、补充政策及指南，但其内容可能影响完整适用条件；结构化摘录不足以覆盖这些被援引文件的全部要求。",
+      "是否向终端用户提供输出未知，因此输出披露义务保留为条件义务。对象图中的 API 链接不证明 downstream 与 upstream 许可约束同一对象；本案未发现可成立的许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如向终端用户提供服务输出，应清楚披露输出由 AI 生成、可能包含错误或遗漏且仅供参考。",
+        "source_refs": [
+          "license-text:upstream:f6ca500fbecb4ada"
+        ],
+        "subject": {
+          "artifact": "chain-0076-896a9b767871:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "outputs_provided_to_end_users"
+          ]
+        },
+        "unresolved_predicates": [
+          "outputs_provided_to_end_users",
+          "disclosure_fulfilled"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 36944,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1063,
+    "output_tokens_details": {
+      "reasoning_tokens": 289
+    },
+    "total_tokens": 38007,
+    "attribution": {
+      "items": {
+        "msg_0817f0ac0a6b84f0016af2e9fc242487d19d6c9359a5a8d98f": {
+          "input_tokens": 34996,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 34996,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0817f0ac0a6b84f0016af2ea028a6487d1966d3d2bf611745a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 774,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 774
+            }
+          ]
+        },
+        "rs_0817f0ac0a6b84f0016af2ea026ee887d1b89876ebdf0e8f27": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 289
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 23.125,
+  "auto_applied": false
+}

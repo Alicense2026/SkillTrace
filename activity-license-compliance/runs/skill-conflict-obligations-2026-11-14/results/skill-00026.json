@@ -1,0 +1,319 @@
+{
+  "case_id": "skill-00026",
+  "csv_row": 27,
+  "source_excel_row": "48",
+  "status": "SUCCESS",
+  "request_sha256": "b22d39fab37e647cf15d0270e92b130d1ff160bb48bc2f87bdefb32820a203f5",
+  "analysis": {
+    "case_id": "skill-00026",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00026:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "no_copy_or_substantial_portion_created",
+                "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00026:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "copyright_and_permission_notices_appear_in_all_copies",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00026:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "copyright_and_permission_notices_appear_in_all_copies",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00026:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如复制上游 Software 的副本或实质部分，须在所有此类副本或实质部分中包含上游版权声明和 MIT 许可声明；若未制作此类副本或实质部分，则此条件不要求附加通知。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00026:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": [
+          "copy_or_substantial_portion_created"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游 Software 的被许可人行使使用许可时，如制作该软件副本，须在所有副本中包含版权声明和 ISC 许可声明；仅远程调用本身不证明制作了副本。",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "subject": {
+          "artifact": "skill-00026:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "activity:Copy"
+          ]
+        },
+        "unresolved_predicates": [
+          "copy_created",
+          "downstream_software_in_call_scope"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游 Software 的被许可人如复制软件，须在每一副本中包含版权声明和 ISC 许可声明。",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "subject": {
+          "artifact": "skill-00026:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": [
+          "copy_created",
+          "downstream_software_in_copy_scope"
+        ]
+      }
+    ],
+    "limitations": [
+      "本地 MIT、ISC 原文及对应结构化条款已用于本次检查。事实记载的是远程服务调用和 API 链接；未证明复制、分发或修改。远程调用不自动触发副本通知义务。",
+      "对象图未确认下游 OriginalArtifact 与本次 API 调用对象重合；因此 ISC 对本次调用的适用范围保留为条件，未据此认定冲突或违规。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "MIT 明确允许使用，摘录未对单纯使用附加条件。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "复制许可及副本通知条件保留为条件义务；是否制作副本未知。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对修改；本行记录远程调用，未提供修改事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对合并；未提供合并事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对发布；未提供发布事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对分发；未提供分发事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对再许可；未提供再许可事实。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对出售副本；未提供出售事实。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "ISC 使用条款规定副本中的通知条件；调用是否涉及下游软件及副本未知，故保留条件义务。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "ISC 复制条款及副本通知条件保留为条件义务；未证明已复制。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对修改；未提供修改事实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款针对分发；未提供分发事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00026-1794590600875235000-1.json",
+  "usage": {
+    "input_tokens": 17014,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2502,
+    "output_tokens_details": {
+      "reasoning_tokens": 562
+    },
+    "total_tokens": 19516,
+    "attribution": {
+      "items": {
+        "msg_09bd15202acd8ed4016af7478d7df087d19583af30f6a13b01": {
+          "input_tokens": 14290,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14290,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09bd15202acd8ed4016af7478d7df087d1abd43f3140be6225": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09bd15202acd8ed4016af74798660c87d1b4815c242a62974c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1940,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1940
+            }
+          ]
+        },
+        "rs_09bd15202acd8ed4016af747969db887d1b4d736896aedbaa4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 468
+        },
+        "rs_09bd15202acd8ed4016af747984a4487d1b14c65b3e9ccbc8a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 94
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

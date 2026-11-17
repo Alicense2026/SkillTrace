@@ -1,0 +1,146 @@
+{
+  "case_id": "chain-0137-2bd3a7331c5d",
+  "input_group_row": 137,
+  "aggregate_count": 7,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "7"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0137-2bd3a7331c5d",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0137-2bd3a7331c5d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI Services Agreement 的相关结构化摘录只规定客户向 OpenAI 或经销商支付适用费用；未提供订单、费用到期或付款履行事实，因此无法判断该义务是否已触发或履行。",
+      "已知事实是对上游服务的远程调用及链接关系，不证明下游 Elastic 软件被修改、作为托管/管理服务提供给第三方，或与上游服务构成许可共同约束的对象。Elastic 条款中的相关禁止不据此套用于该 API 调用。",
+      "OpenAI 原文匹配到的结构化规则仅此一项；本分析不把 proprietary 标签视为额外许可条款，也不推断未映射的服务使用限制。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0137-2bd3a7331c5d:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "向 OpenAI 或客户经销商支付订单所列适用费用，并按订单付款期限履行。",
+        "trigger": "applicable_fees_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 27224,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 933,
+    "output_tokens_details": {
+      "reasoning_tokens": 415
+    },
+    "total_tokens": 28157,
+    "attribution": {
+      "items": {
+        "msg_0a8cc0950dff8941016af52f5a4b7087d09242b0851df71f1b": {
+          "input_tokens": 25154,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25154,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a8cc0950dff8941016af52f5a4b7087d0bf608250140219bf": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a8cc0950dff8941016af52f62d62c87d0b853d279561d1d13": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 518,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 518
+            }
+          ]
+        },
+        "rs_0a8cc0950dff8941016af52f60712c87d087992e7fdd9cd77e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 288
+        },
+        "rs_0a8cc0950dff8941016af52f62bf0c87d0bb74ddc8246bf5a4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 127
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "c1d0377859a0d13f0fc63ba1b47c4aa6e95f77a384bc646120e0bbb6519af7b0",
+  "elapsed_seconds": 25.31
+}

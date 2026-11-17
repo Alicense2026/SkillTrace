@@ -1,0 +1,293 @@
+{
+  "case_id": "skill-00339",
+  "csv_row": 340,
+  "source_excel_row": "493",
+  "status": "SUCCESS",
+  "request_sha256": "f5c73316c0c3a9ff923c06258318ea4a19cbb4304a42a2a2400e0e8026d2758e",
+  "analysis": {
+    "case_id": "skill-00339",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00339:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:5b1cf701a7fd0db2387887344c09827d78d382264ee640de4bd46c4f6fced97f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_is_for_viewing_or_evaluation",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00339:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:5b1cf701a7fd0db2387887344c09827d78d382264ee640de4bd46c4f6fced97f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                {
+                  "not": "use_is_for_viewing_or_evaluation"
+                },
+                {
+                  "not": "prior_written_consent_from_ai_shifu"
+                }
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00339:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use；上游 MIT 允许使用下游仓库中对应的上游原件，但该许可不扩及下游仓库原件；下游自定义条款将使用限于查看或评估，超出该范围须事先取得 AI-Shifu 书面同意。已知存在使用及远程调用，但查看/评估用途与同意情况未知；双方要求可通过限于查看或评估，或取得事先书面同意共同满足，因此属于可履行的继承条件而非相反约束。来源：U001、D001、D002。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+          "license:5b1cf701a7fd0db2387887344c09827d78d382264ee640de4bd46c4f6fced97f"
+        ],
+        "status": "CONDITIONS_TO_INHERIT"
+      }
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可使用者对 skill-00339:downstream 的原件，仅可将使用限于查看或评估；如使用超出查看或评估范围，须事先取得 AI-Shifu 书面同意。该条件针对下游仓库材料，不因上游 MIT 许可而免除。",
+        "source_refs": [
+          "license:5b1cf701a7fd0db2387887344c09827d78d382264ee640de4bd46c4f6fced97f"
+        ],
+        "subject": {
+          "artifact": "skill-00339:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "use_is_for_viewing_or_evaluation",
+          "prior_written_consent_from_ai_shifu"
+        ]
+      }
+    ],
+    "limitations": [
+      "已知的远程服务调用和链接关系不证明复制、修改、分发、合并或再许可；这些活动无已知事实，未据此套用相关条款。",
+      "上游 MIT 的通知义务仅涉及其软件的副本或实质部分；现有事实未显示此类复制或分发，不据此要求远程调用提供通知。",
+      "未确认下游使用是否仅为查看或评估，也未确认是否取得事先书面同意；因此保留条件义务，不判定实际违规。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "上游 MIT 使用许可未列附加义务；其许可不覆盖下游仓库材料。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "已知事实为使用和远程调用，未显示复制上游软件。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示修改上游软件。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示合并上游软件。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示发布或分发上游软件。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示分发上游软件。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示再许可上游软件。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示出售上游软件副本。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已知存在下游材料使用；查看或评估用途条件已纳入第0项义务，触发是否满足未知。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已知存在下游材料使用；超出查看或评估时须事先取得书面同意的条件已与D001合并纳入第0项义务。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示复制下游仓库材料。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示修改下游仓库材料。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示合并下游仓库材料。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示发布或分发下游仓库材料。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示再许可下游仓库材料。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未显示出售下游仓库材料。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00339-1794596888112742000-1.json",
+  "usage": {
+    "input_tokens": 18919,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2138,
+    "output_tokens_details": {
+      "reasoning_tokens": 385
+    },
+    "total_tokens": 21057,
+    "attribution": {
+      "items": {
+        "msg_01833b5190346786016af7601bda2487d08fd36ed53d11bb07": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_01833b5190346786016af7601bda2487d0a2f35bb740a183c7": {
+          "input_tokens": 16195,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16195,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_01833b5190346786016af7602381d087d0a1b551f664b4282f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1753,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1753
+            }
+          ]
+        },
+        "rs_01833b5190346786016af76023661487d08a1086df68230c1c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 385
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

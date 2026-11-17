@@ -1,0 +1,229 @@
+{
+  "request_sha256": "bd3651ffbf221198e95d40ea7c9d470f4994f91a0138712ce8ff7081124b6e85",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 366,
+        "end_line": 366,
+        "clause_label": "provider_service_suspension_termination_right",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_violates_applicable_law_or_agreement",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "General user service agreement, §免责声明(2): Baidu may suspend or terminate service when the user violates laws or the agreement; this is a provider permission, not a user restriction.",
+        "condition_explanation": "user_violates_applicable_law_or_agreement means the user has violated national or local laws or the service agreement.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 367,
+        "end_line": 367,
+        "clause_label": "provider_termination_and_disclosure_for_serious_misconduct",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_commits_listed_or_other_serious_service_rule_misconduct",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "General user service agreement, §免责声明(3): Baidu may terminate services, disclose the misconduct within Baidu-affiliated sites, and cancel the account; the text also describes possible effects on access to other Baidu services. These are provider permissions, not user duties.",
+        "condition_explanation": "user_commits_listed_or_other_serious_service_rule_misconduct means the user engages in fraud, publishes or sells counterfeit or inferior goods, infringes others’ lawful rights, or otherwise seriously violates any Baidu service rule.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 368,
+        "end_line": 368,
+        "clause_label": "service_use_subject_to_current_guidance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "accept_and_follow_current_service_guidance"
+        },
+        "actor_role": "licensee",
+        "scope_note": "General user service agreement, §免责声明(4): using the service signifies acceptance of applicable service guidance and rules; use is stated to be premised on agreeing to follow them. Baidu may unilaterally adjust the rules, which are the prompts shown or messages sent at the time of use.",
+        "condition_explanation": "accept_and_follow_current_service_guidance means the user accepts and follows applicable transaction-operation prompts and service rules presented on the relevant page or sent by SMS, telephone, or similar means when using the service.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Accept and follow the applicable service guidance and rules presented for use of the service.",
+            "actor": "user",
+            "object": "Baidu intelligent cloud service and its applicable service guidance and rules",
+            "trigger": "Whenever the user uses the service; the applicable guidance and rules are those shown or sent at the time of use."
+          }
+        ]
+      },
+      {
+        "start_line": 369,
+        "end_line": 369,
+        "clause_label": "check_service_site_during_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "check_relevant_service_website_in_a_timely_manner"
+        },
+        "actor_role": "licensee",
+        "scope_note": "General user service agreement, §免责声明(5): the user is told to log in to the relevant product-service website in a timely manner during service use to check and perform transaction operations. The clause disclaims provider responsibility for specified missed-notice consequences; that disclaimer is not extracted as a rule.",
+        "condition_explanation": "check_relevant_service_website_in_a_timely_manner means timely checking the relevant product-service website during the service process for progress and next-step transaction operations, since email, SMS, and telephone notices may not be received or timely received.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Log in to the relevant product-service website in a timely manner to check service progress and perform transaction operations.",
+            "actor": "user",
+            "object": "Relevant product-service website and transaction operations",
+            "trigger": "During the service process, because electronic notices may not be received or timely received."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The cited provisions are from the general Baidu Intelligent Cloud user service agreement. The referenced, changeable product rules and service-specific guidance are not supplied; their contents cannot be determined here.",
+      "Warranty, risk-allocation, and liability-disclaimer paragraphs, including the listed outage and failure causes, do not create behavioral duties under this extraction task."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0155",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0156",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States provider warranty limitations; no behavioral duty or activity constraint."
+      },
+      {
+        "unit_id": "P0157",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer concerning service availability and materials; no behavioral duty."
+      },
+      {
+        "unit_id": "P0158",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Allocates risk and responsibility for downloaded materials; no behavioral duty."
+      },
+      {
+        "unit_id": "P0159",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Allocates responsibility for risk and damage from the user's use of downloaded materials; no behavioral duty."
+      },
+      {
+        "unit_id": "P0160",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_service_suspension_termination_right",
+          "provider_termination_and_disclosure_for_serious_misconduct",
+          "service_use_subject_to_current_guidance",
+          "check_service_site_during_use"
+        ],
+        "reason": "Lines 366–367 grant conditional provider rights; line 368 makes use subject to applicable guidance and rules; line 369 directs the user to check the relevant service website in a timely manner. The remaining notice and liability disclaimers in this unit are nonoperative."
+      },
+      {
+        "unit_id": "P0161",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Allocates responsibility for consequences of incorrect contact information or email security and stability; no behavioral duty."
+      },
+      {
+        "unit_id": "P0162",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Introduces circumstances under which provider liability is disclaimed; no behavioral duty."
+      },
+      {
+        "unit_id": "P0163",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for maintenance downtime."
+      },
+      {
+        "unit_id": "P0164",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for external network or equipment issues."
+      },
+      {
+        "unit_id": "P0165",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for force-majeure outages."
+      },
+      {
+        "unit_id": "P0166",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for outages or delays attributed to listed causes."
+      },
+      {
+        "unit_id": "P0167",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for customer maintenance or confidentiality failures."
+      },
+      {
+        "unit_id": "P0168",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for customer or authorized-operation causes."
+      },
+      {
+        "unit_id": "P0169",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for failure to follow documentation or recommendations."
+      },
+      {
+        "unit_id": "P0170",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer concerning local-disk data loss and resulting unavailability."
+      },
+      {
+        "unit_id": "P0171",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for customer-installed or third-party software and configuration."
+      },
+      {
+        "unit_id": "P0172",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer concerning preemptible instances released due to price or inventory."
+      },
+      {
+        "unit_id": "P0173",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Provider liability disclaimer for announced or notified maintenance."
+      }
+    ]
+  },
+  "attempt": 2
+}

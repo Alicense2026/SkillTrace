@@ -1,0 +1,120 @@
+{
+  "case_id": "chain-0036-9db25792c902",
+  "status": "SUCCESS",
+  "request_sha256": "9e0d5b8bab93be2b7cd0bc7ca6b64738ed1d69ff71898a33a5f60b7bb9f92010",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "Use"
+          },
+          "S": {
+            "artifact": "chain-0036-9db25792c902:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游摘录规定客户使用产品应支付适用订单项下费用，但未提供订单、发票或付款事实；不能判断具体应付金额或是否逾期。",
+      "已知关系为API链接/远程调用，不能据此认定下游取得、修改或分发上游材料，也不能认定两许可在同一对象范围内共同适用。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "按适用订单或订单确认支付因使用 Mistral AI Products 到期的费用；摘录规定的付款期限为发票日期起30日，除非适用订单另有规定。",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "subject": {
+          "artifact": "chain-0036-9db25792c902:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "applicable_order_terms",
+          "fees_due",
+          "payment_status"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0036-9db25792c902"
+  },
+  "usage": {
+    "input_tokens": 17030,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 658,
+    "output_tokens_details": {
+      "reasoning_tokens": 213
+    },
+    "total_tokens": 17688,
+    "attribution": {
+      "items": {
+        "msg_037b77b5b424104b016af2f83848a487d2b436fc6bce42b249": {
+          "input_tokens": 14998,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14998,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_037b77b5b424104b016af2f83d349887d2b30f7a793edd224c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 445,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 445
+            }
+          ]
+        },
+        "rs_037b77b5b424104b016af2f83d1d7087d2ba6abdb345066112": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 213
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 15.33,
+  "auto_applied": false,
+  "aggregate_count": 51
+}

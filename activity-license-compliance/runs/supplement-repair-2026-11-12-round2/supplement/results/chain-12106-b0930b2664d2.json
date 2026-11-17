@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-12106-b0930b2664d2",
+  "source_csv_line": 12107,
+  "row": {
+    "github_repo": "10x-n8n-skill",
+    "github_url": "https://github.com/openanalystinc/10x-n8n-skill",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-3.5-turbo-instruct",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: docs/nodes/n8n-repo/packages/@n8n/nodes-langchain/nodes/llms/LMOpenAi/LmOpenAi.node.ts:82 ｜ 调用原文: default: { mode: 'list', value: 'gpt-3.5-turbo-instruct' },（引用处 第105行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: vendored n8n OpenAI 节点中的默认模型标识，未确认本 skill 实际调用",
+    "batch": "6001-6500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "openanalystinc/10x-n8n-skill",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112",
+    "filename": "_supplement_round2/ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 3; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-12106-b0930b2664d2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e6a68bd2115bf620"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_under_order_form",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-12106-b0930b2664d2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Customer must pay applicable fees in the currency and according to the payment terms on the Order Form; the excerpt does not establish any charge to downstream users.",
+        "source_refs": [
+          "license-text:upstream:e6a68bd2115bf620"
+        ],
+        "subject": {
+          "artifact": "chain-12106-b0930b2664d2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "true",
+        "unresolved_predicates": []
+      }
+    ],
+    "limitations": [
+      "The upstream OpenAI excerpt covers customer payment to OpenAI or its reseller; it does not establish whether fees are due under a particular Order Form or imply permission conditions for API use.",
+      "The downstream text concerns use of the Software, but the supplied facts establish a remote API call and link, not use of the downstream Software or that the linked model is within the text's scope. No downstream use restriction is concluded from those facts.",
+      "The downstream excerpt says permission is not granted for listed activities without explicit written permission, but does not specify authorization terms. Its structured ASC entries are UNSPECIFIED; the excerpt does not support a more definite license conclusion here."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17856,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 812,
+    "output_tokens_details": {
+      "reasoning_tokens": 334
+    },
+    "total_tokens": 18668,
+    "attribution": {
+      "items": {
+        "msg_06f19e8a8596c658016af58695deec87d092db795a2618d501": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06f19e8a8596c658016af58695deec87d0939962c56233c984": {
+          "input_tokens": 15786,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15786,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06f19e8a8596c658016af5869e003087d081542dc11ee3e204": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 478,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 478
+            }
+          ]
+        },
+        "rs_06f19e8a8596c658016af5869de49887d0a760dc4e550e7f7b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 334
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 25.82
+}

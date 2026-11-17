@@ -1,0 +1,442 @@
+{
+  "request_sha256": "e5d214e8367830df288e9a00ec53a8bbdee34faac3cdfc88c4901067aaddbe4c",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 156,
+        "end_line": 156,
+        "clause_label": "north_support_model_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_solely_to_support_north"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 2(b)(ii): permits access to one instance of the Cohere Models specified by Cohere, and Compass, only as needed to support North.",
+        "condition_explanation": "use_solely_to_support_north means use is only to the extent necessary to support North.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 158,
+        "end_line": 158,
+        "clause_label": "standalone_model_use_excluded",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "not": "expressly_included_in_order_form"
+          },
+          "requires": "use_cohere_models_standalone_from_north"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 2(b): standalone Cohere Model use from North is excluded unless expressly included in the applicable Order Form.",
+        "condition_explanation": "expressly_included_in_order_form means the applicable Order Form expressly provides for standalone Cohere Model use from North.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Cohere Models on a standalone basis from North.",
+            "actor": "Client",
+            "object": "Cohere Models used standalone from North",
+            "trigger": "Whenever the applicable Order Form does not expressly provide for that standalone use."
+          }
+        ]
+      },
+      {
+        "start_line": 163,
+        "end_line": 163,
+        "clause_label": "north_environment_requirements",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "client_environment_meets_cohere_minimum_requirements",
+              "technical_prerequisites_implemented_before_installation"
+            ]
+          }
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 3(a)(i): North may only be installed or hosted in a qualifying Client Environment; Client must implement Cohere-provided technical prerequisites before installation.",
+        "condition_explanation": "client_environment_meets_cohere_minimum_requirements means the Client Environment satisfies the minimum requirements provided to Client by Cohere. technical_prerequisites_implemented_before_installation means prerequisites Cohere provided to Client have been implemented before North is installed.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Implement Cohere-provided technical prerequisites before installing North.",
+            "actor": "Client",
+            "object": "Technical prerequisites for North installation provided by Cohere",
+            "trigger": "Before installing North."
+          }
+        ]
+      },
+      {
+        "start_line": 165,
+        "end_line": 165,
+        "clause_label": "non_cohere_model_indemnity_exception",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "use_north_with_non_cohere_large_language_model"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 3(a)(ii): using North with a non-Cohere large language model removes Cohere’s indemnification obligations for that use; this is an indemnity limitation, not a use permission or restriction.",
+        "condition_explanation": "use_north_with_non_cohere_large_language_model means Client uses North with a large language model other than Cohere Models. The text specifies the indemnity consequence only.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 168,
+        "end_line": 168,
+        "clause_label": "north_tools_data_access_description",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "north_tool_enabled_for_access_to_external_organizational_data"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 4(a): describes an option to enable North Tools so North Users can access and query organizational data in external sources from within North; it does not itself state a distinct license grant or behavioral duty.",
+        "condition_explanation": "north_tool_enabled_for_access_to_external_organizational_data means Client enables a North Tool for North Users to access or query organizational data in external sources.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 170,
+        "end_line": 170,
+        "clause_label": "third_party_tool_access_controls",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "client_enables_north_tool_with_third_party_component",
+          "requires": "third_party_access_controls_managed_and_configured"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 4(b): portions of North Tools supplied by a Third-Party Product owner and outside Cohere’s control are treated as Third-Party Products; Client selects North Tools and is responsible for managing and configuring access controls in Third-Party Products.",
+        "condition_explanation": "client_enables_north_tool_with_third_party_component means Client chooses to enable a North Tool containing a third-party portion outside Cohere’s control. third_party_access_controls_managed_and_configured means Client manages and configures access controls in the relevant Third-Party Products.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Determine which North Tools to enable and manage and configure access controls in Third-Party Products.",
+            "actor": "Client",
+            "object": "North Tools selected for enablement and access controls in Third-Party Products",
+            "trigger": "When North Tools are available for Client to enable or use, including tools with third-party portions outside Cohere’s control."
+          }
+        ]
+      },
+      {
+        "start_line": 172,
+        "end_line": 172,
+        "clause_label": "client_owned_north_tools_definition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "order_form_or_scope_of_work_expressly_identifies_development_of_client_owned_north_tools"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 4(c): defines Client Owned North Tools and states they are owned by Client for Agreement purposes if their development is expressly identified in the applicable Order Form or Scope of Work. This is an ownership allocation, not a grant of a listed activity.",
+        "condition_explanation": "order_form_or_scope_of_work_expressly_identifies_development_of_client_owned_north_tools means the applicable Order Form or Scope of Work expressly identifies development of such tools. Client Owned North Tools are tools developed by Cohere or Client, designed to connect North with external applications or services, and unique and proprietary to Client.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 175,
+        "end_line": 175,
+        "clause_label": "north_user_entitlement_overage",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "north_user_entitlement_exceeded",
+          "requires": "applicable_order_form_north_incremental_user_fee_paid"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 5(a): for North licensed by user count, included use is limited to the Order Form entitlement; excess users are charged at the Order Form’s per-user fee. A removed user count decreases only 90 days after the associated account is fully decommissioned, as demonstrated by Client’s written records.",
+        "condition_explanation": "north_user_entitlement_exceeded means North is used for more users than the number specified in the North User entitlement. applicable_order_form_north_incremental_user_fee_paid means the applicable Order Form’s incremental user fee is paid. A removed North User does not reduce the count until 90 days after full account decommissioning demonstrated by Client’s written records.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the North Incremental User Fee at the per-North-User rate set out in the applicable Order Form for use exceeding the North User entitlement.",
+            "actor": "Client",
+            "object": "North Incremental User Fee for North Users exceeding the Order Form entitlement",
+            "trigger": "When North is licensed by a defined number of North Users and use exceeds that entitlement; removal reduces the count only 90 days after associated account decommissioning is fully completed and demonstrated by Client’s written records."
+          }
+        ]
+      },
+      {
+        "start_line": 177,
+        "end_line": 177,
+        "clause_label": "north_tpm_overage_fee",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "tpm_exceeds_order_form_entitlement_at_any_time_during_term",
+          "requires": "incremental_usage_purchased_to_cover_maximum_tpm"
+        },
+        "actor_role": "Client",
+        "scope_note": "North Partner Terms, Section 5(b): where North is licensed by TPM, exceeding the licensed TPM amount at any time during the Order Form term makes a fee immediately due to Partner for the remainder of that term, at Order Form pricing. Purchases must cover the maximum TPM reached at any time.",
+        "condition_explanation": "tpm_exceeds_order_form_entitlement_at_any_time_during_term means processed TPM exceeds the license entitlement at any time during the Order Form term, as may be evidenced in a Usage Report. incremental_usage_purchased_to_cover_maximum_tpm means incremental usage is purchased to cover the maximum TPM reached during the term.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Partner the immediately due incremental-usage fee for the remainder of the Order Form term, based on Order Form pricing, and purchase incremental usage covering the maximum TPM reached.",
+            "actor": "Client",
+            "object": "Incremental TPM usage fees payable to Partner",
+            "trigger": "When processed TPM exceeds the license entitlement at any time during the Order Form term; the required purchase covers the maximum TPM reached at any time."
+          }
+        ]
+      },
+      {
+        "start_line": 184,
+        "end_line": 184,
+        "clause_label": "acceptance_or_cease_saas_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_cohere_api_saas_services",
+          "requires": "customer_accepts_and_agrees_to_comply_with_agreement"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial SaaS Agreement, acceptance paragraph: use signifies acceptance and agreement to comply with the Agreement as amended under Section 14(l); a Customer that does not accept and agree must immediately cease further use. Includes representations concerning capacity and authority when acting for another person.",
+        "condition_explanation": "customer_accepts_and_agrees_to_comply_with_agreement means Customer accepts the Agreement and agrees to be bound by and comply with its terms. This clause does not encode the separate capacity and authority representations as activity constraints.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Immediately cease any further use of the Cohere API SaaS Services.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services",
+            "trigger": "If Customer does not accept and agree to be bound by the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 186,
+        "end_line": 186,
+        "clause_label": "benchmarking_access_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "access_for_monitoring_or_benchmarking_or_competitive_purpose"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial SaaS Agreement: access to the Cohere API SaaS Services is prohibited for monitoring availability, performance, or functionality, or for any benchmarking or competitive purpose.",
+        "condition_explanation": "access_for_monitoring_or_benchmarking_or_competitive_purpose means access for monitoring service availability, performance, or functionality, or for any benchmarking or competitive purpose.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access the Cohere API SaaS Services for monitoring availability, performance, or functionality, or for benchmarking or competitive purposes.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services",
+            "trigger": "Whenever the purpose of access is monitoring availability, performance, or functionality, or benchmarking or competitive activity."
+          }
+        ]
+      },
+      {
+        "start_line": 188,
+        "end_line": 188,
+        "clause_label": "direct_competitor_access_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "customer_is_cohere_direct_competitor",
+          "requires": {
+            "not": "cohere_prior_written_consent"
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial SaaS Agreement: direct competitors may not access the Cohere API SaaS Services unless Cohere gives prior written consent.",
+        "condition_explanation": "customer_is_cohere_direct_competitor means Customer is a direct competitor of Cohere. cohere_prior_written_consent means Cohere has given prior written consent to that competitor’s access.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access the Cohere API SaaS Services.",
+            "actor": "Customer that is a direct competitor of Cohere",
+            "object": "Cohere API SaaS Services",
+            "trigger": "Unless Cohere has given prior written consent."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk combines North Partner Terms and a separate Commercial SaaS Agreement; clauses are scoped to the agreement and section indicated.",
+      "Order Forms, Scope of Work, Partner Terms, Usage Policy, and referenced Agreement provisions are not supplied in full. Pricing and entitlement values remain symbolic; referenced external terms and Cohere-provided technical requirements cannot be inferred.",
+      "Ownership, indemnity consequences, and descriptive tool functionality do not themselves create activity grants or duties beyond what is expressly modeled."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0069",
+        "status": "MODELED",
+        "clause_labels": [
+          "north_support_model_access"
+        ],
+        "reason": "Models the limited permission to access one specified Cohere Model instance and Compass solely as necessary to support North."
+      },
+      {
+        "unit_id": "P0070",
+        "status": "MODELED",
+        "clause_labels": [
+          "standalone_model_use_excluded"
+        ],
+        "reason": "Models the exclusion of standalone Cohere Model use unless expressly included in the applicable Order Form."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading and introductory precedence language; no independent activity constraint."
+      },
+      {
+        "unit_id": "P0072",
+        "status": "MODELED",
+        "clause_labels": [
+          "north_environment_requirements"
+        ],
+        "reason": "Models the Client Environment limitation and pre-installation prerequisite duty."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "MODELED",
+        "clause_labels": [
+          "non_cohere_model_indemnity_exception"
+        ],
+        "reason": "Captures the stated indemnity consequence without treating it as a use prohibition or permission."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "MODELED",
+        "clause_labels": [
+          "north_tools_data_access_description"
+        ],
+        "reason": "Captures the described North Tools option and external-data functionality without inventing a grant."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "MODELED",
+        "clause_labels": [
+          "third_party_tool_access_controls"
+        ],
+        "reason": "Models Client’s responsibility for North Tool selection and third-party access controls."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "MODELED",
+        "clause_labels": [
+          "client_owned_north_tools_definition"
+        ],
+        "reason": "Captures the conditional ownership allocation and definition without inventing an activity grant."
+      },
+      {
+        "unit_id": "P0077",
+        "status": "MODELED",
+        "clause_labels": [
+          "north_user_entitlement_overage"
+        ],
+        "reason": "Models entitlement limits, overage fee duty, and the 90-day decommissioning rule."
+      },
+      {
+        "unit_id": "P0078",
+        "status": "MODELED",
+        "clause_labels": [
+          "north_tpm_overage_fee"
+        ],
+        "reason": "Models the TPM overage payment and maximum-usage purchase requirement."
+      },
+      {
+        "unit_id": "P0079",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Commercial SaaS Agreement title and formation/defined-party text; no independent activity constraint."
+      },
+      {
+        "unit_id": "P0080",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Describes the Agreement’s subject matter and service purpose; no operative activity constraint."
+      },
+      {
+        "unit_id": "P0081",
+        "status": "MODELED",
+        "clause_labels": [
+          "acceptance_or_cease_saas_use"
+        ],
+        "reason": "Models the acceptance condition for use and the express immediate cease-use duty upon nonacceptance."
+      },
+      {
+        "unit_id": "P0082",
+        "status": "MODELED",
+        "clause_labels": [
+          "benchmarking_access_prohibition"
+        ],
+        "reason": "Models the express conditional prohibition on access for monitoring, benchmarking, or competitive purposes."
+      },
+      {
+        "unit_id": "P0083",
+        "status": "MODELED",
+        "clause_labels": [
+          "direct_competitor_access_prohibition"
+        ],
+        "reason": "Models the direct-competitor access prohibition and prior written-consent exception."
+      }
+    ]
+  },
+  "attempt": 3
+}

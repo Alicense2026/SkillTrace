@@ -1,0 +1,175 @@
+{
+  "case_id": "chain-12766-088bce95c765",
+  "source_csv_line": 12767,
+  "row": {
+    "github_repo": "10x-n8n-skill",
+    "github_url": "https://github.com/openanalystinc/10x-n8n-skill",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-5-mini",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: docs/nodes/n8n-repo/packages/@n8n/nodes-langchain/nodes/llms/LMChatOpenAi/LmChatOpenAi.node.ts:219 ｜ 调用原文: placeholder: 'gpt-5-mini',（引用处 第209行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: vendored n8n OpenAI 节点参数选项，未被技能代码调用",
+    "batch": "6001-6500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "openanalystinc/10x-n8n-skill",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112",
+    "filename": "_supplement_round2/ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 3; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-12766-088bce95c765",
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0203a39709397e0a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "UNSPECIFIED"
+          },
+          "S": {
+            "artifact": "chain-12766-088bce95c765:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0203a39709397e0a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "user_is_not_authorized",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-12766-088bce95c765:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Use the Software only as an authorized user, under the applicable terms agreed with 10x.in; the supplied text does not state those terms.",
+        "source_refs": [
+          "license-text:downstream:0203a39709397e0a"
+        ],
+        "subject": {
+          "artifact": "chain-12766-088bce95c765:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "user_is_not_authorized",
+          "applicable_terms_agreed_with_10x.in"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes remote interaction with the upstream OpenAI service, not transfer or modification of model weights, distribution, or a shared licensed object. The object graph marks scope_shared as unknown; the supplied clauses do not establish a license-to-license conflict.",
+      "The downstream text does not provide an affirmative grant, define how authorization is obtained, or supply the agreed terms. No conclusion about authorization can be drawn from the available evidence.",
+      "The upstream excerpt concerns customer payment to OpenAI or its reseller; it does not establish a downstream usage restriction relevant to the observed API call."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17777,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 995,
+    "output_tokens_details": {
+      "reasoning_tokens": 410
+    },
+    "total_tokens": 18772,
+    "attribution": {
+      "items": {
+        "msg_0df01fc24c7812bd016af586bd1a7887d09dbeea005b71f7a2": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0df01fc24c7812bd016af586bd1a7887d0b785e02617be85c9": {
+          "input_tokens": 15707,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15707,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0df01fc24c7812bd016af586c5790087d08bc4db18a9a34151": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 585,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 585
+            }
+          ]
+        },
+        "rs_0df01fc24c7812bd016af586c561f487d0926f5d17b8e73a68": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 410
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 29.79
+}

@@ -1,0 +1,125 @@
+{
+  "request_sha256": "e709682e6b8799672d39b25569cbb6e6459bb31abdd62dfbf4371f0ff8360f9d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 5,
+        "end_line": 6,
+        "clause_label": "Commercial Usage Terms — commercial use",
+        "activities": [
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "branding_and_copyright_information_preserved_or_changes_authorized",
+              "certificate_verification_system_preserved",
+              "commercial_license_obtained_if_enterprise_threshold_met"
+            ]
+          }
+        },
+        "actor_role": "Yao Engine user or organization",
+        "scope_note": "Commercial use of Yao Engine under this text, subject to the stated additional conditions. The text refers other rights and restrictions to Apache License 2.0 but does not reproduce them.",
+        "condition_explanation": "Preserve branding and copyright information unless changes are authorized by the specified certificate; preserve the certificate verification system; and obtain a commercial license if the organization meets either stated enterprise threshold."
+      },
+      {
+        "start_line": 10,
+        "end_line": 11,
+        "clause_label": "Trademark and Branding Requirements",
+        "activities": [
+          "Modify",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "remove_or_modify_yao_logo_or_copyright_information_without_authorization_certificate"
+        },
+        "actor_role": "Yao Engine user or modifier",
+        "scope_note": "Applies to the Yao Engine / Yao Agents / Tai / Tai Link console/application logo and copyright information. Changes are allowed only with an authorization certificate issued through Yao Developer Certificate.",
+        "condition_explanation": "The prohibition applies when the specified logo or copyright information is removed or modified without the stated authorization certificate."
+      },
+      {
+        "start_line": 15,
+        "end_line": 16,
+        "clause_label": "Authorization Verification Requirements",
+        "activities": [
+          "Modify",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "using_yao_engine",
+          "requires": "certificate_verification_logic_processes_and_related_pages_preserved_and_complete_verification_system_maintained"
+        },
+        "actor_role": "Yao Engine user or modifier",
+        "scope_note": "The certificate verification logic, processes, and related pages marked in code comments must be preserved, and the complete verification system must be maintained regardless of usage purpose.",
+        "condition_explanation": "The preservation and maintenance duty applies when using Yao Engine, regardless of purpose."
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "Enterprise Scale Requirements",
+        "activities": [
+          "Use",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": {
+            "any": [
+              "organization_has_50_or_more_employees",
+              "organization_has_annual_revenue_exceeding_usd_1000000"
+            ]
+          },
+          "requires": "commercial_license_from_infinite_wisdom_software_obtained"
+        },
+        "actor_role": "organization using Yao Engine",
+        "scope_note": "Organizations meeting either threshold must obtain a commercial license from Infinite Wisdom Software.",
+        "condition_explanation": "The license requirement applies if the organization has 50 or more employees or annual revenue exceeding USD 1,000,000."
+      },
+      {
+        "start_line": 24,
+        "end_line": 26,
+        "clause_label": "Contributor Agreement",
+        "activities": [
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "contributor_agrees_to_stated_contributor_terms"
+        },
+        "actor_role": "contributor",
+        "scope_note": "The text says contributors should agree that Infinite Wisdom Software may adjust the open-source agreement and that contributed code may be used commercially, including in cloud business operations. It does not expressly state that contribution itself grants a license or specify the scope of other rights in contributed code.",
+        "condition_explanation": "These statements are framed as terms a contributor should agree to; the text does not specify a mechanism or consequence for lack of agreement."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text identifies the license as a modified Apache License 2.0 and links to the external Apache license, but does not provide its terms. No Apache permissions, conditions, or restrictions are reconstructed here.",
+      "The commercial-use sentence introduces conditions with an incomplete formulation; the precise relationship between the branding and verification requirements and the commercial-license requirement is not fully clear. The enterprise thresholds are stated expressly as triggers for obtaining a commercial license.",
+      "The text does not specify commercial-license fees or terms. The contact URL is not treated as supplying those terms.",
+      "No operative clauses are supplied here addressing distribution, copying, source provision, sublicensing, linking, network access, training, or rights in outputs; their absence is not treated as a prohibition."
+    ]
+  }
+}

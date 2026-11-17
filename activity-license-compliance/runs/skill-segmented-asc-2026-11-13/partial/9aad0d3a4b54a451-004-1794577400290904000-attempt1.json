@@ -1,0 +1,64 @@
+{
+  "clauses": [
+    {
+      "start_line": 87,
+      "end_line": 87,
+      "clause_label": "commercial_terms_export_access_restriction",
+      "activities": [
+        "ProvideNetworkService"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "any": [
+            "access_prohibited_by_us_or_applicable_international_law",
+            "export_or_import_into_country_prohibited_or_illegal_without_appropriate_license",
+            "recipient_or_country_covered_by_us_sanctions"
+          ]
+        }
+      },
+      "actor_role": "Customer",
+      "scope_note": "Commercial Terms of Service, M.8: restricts Customer from exporting or providing access to the Anthropic Services in the specified prohibited circumstances. The object is the Services, not Customer’s independent materials.",
+      "condition_explanation": "The restriction applies if any listed legal or sanctions condition makes the export or access prohibited. The appropriate-license qualification is part of the country-specific condition; the clause does not prohibit export where the required license makes it lawful.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not export the Anthropic Services or provide access to them in circumstances prohibited by applicable law, including the specified unlicensed export or import and sanctions circumstances.",
+          "actor": "Customer",
+          "object": "Anthropic Services",
+          "trigger": "Whenever exporting the Services or providing access to them would be prohibited under U.S. or other applicable international law, including the specified country, licensing, or sanctions circumstances."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "M.8's export and access restriction is represented. The chunk does not supply the referenced Usage Policy, Supported Regions Policy, Service Specific Terms, DPA, Model Pricing Page, or Section J (Disputes); their substantive terms are not inferred.",
+    "M.1–M.4 contain operative notice, electronic-communications, amendment, assignment, and delegation provisions that do not map faithfully to the allowed activities and objects. M.5, M.7, and M.9–M.10 concern severability, governing law and venue, integration, and force majeure rather than activity constraints."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0014",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "commercial_terms_export_access_restriction"
+      ],
+      "reason": "M.8's export and access prohibition is modeled, but M.1–M.4 also impose operative notice, electronic-communications, amendment, assignment, and delegation terms that cannot be faithfully represented with the supplied activity/object schema. The remaining provisions in the paragraph are not activity constraints."
+    },
+    {
+      "unit_id": "P0015",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "This paragraph identifies the separate consumer terms, their general scope, and a reference to the Privacy Policy; it does not state an operative activity constraint."
+    },
+    {
+      "unit_id": "P0016",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "This paragraph is a descriptive statement about Anthropic’s work, not a behavioral duty, permission, or prohibition."
+    }
+  ]
+}

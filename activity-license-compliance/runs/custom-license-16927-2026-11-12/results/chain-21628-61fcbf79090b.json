@@ -1,0 +1,219 @@
+{
+  "case_id": "chain-21628-61fcbf79090b",
+  "source_csv_line": 21629,
+  "row": {
+    "github_repo": "fodda-mcp",
+    "github_url": "https://github.com/piers-fawkes/fodda-mcp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ai.hashgrid/sdk",
+    "artifact_url": "https://github.com/hashgrid-labs/sdk",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: scratch/extract_mcp_tools.ts:2 ｜ 调用原文: import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'; ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/index.ts、scripts/simulate_gemini.ts 等实际导入的 MCP 服务端/客户端 SDK",
+    "batch": "14201-16927",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "piers-fawkes/fodda-mcp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "a38ca8666bf8aee0a97bda169270ed0dfc6aa7758baaf713cc90856f4a5f038f",
+    "filename": "_licenseref_full/texts/a38ca8666bf8aee0a97bda169270ed0dfc6aa7758baaf713cc90856f4a5f038f.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:fodda-mcp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-21628-61fcbf79090b",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-21628-61fcbf79090b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "comply_with_license_terms",
+                "comply_with_fodda_terms_of_service",
+                "install_and_run_software",
+                "connect_to_fodda_service",
+                "use_valid_fodda_api_key"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-21628-61fcbf79090b:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "required_to_run_software_as_intended"
+            }
+          },
+          "S": {
+            "artifact": "chain-21628-61fcbf79090b:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "The supplied custom-license text references Fodda Terms of Service, but their contents are not provided; their requirements cannot be assessed.",
+      "The object graph establishes a remote-call/link relationship, not that the two licenses govern the same artifact. No license-license conflict is established.",
+      "The record does not establish commercial use, copying, distribution, or whether notices, a valid API key, and the referenced service terms have been complied with."
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-21628-61fcbf79090b:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use is permitted only subject to compliance with the custom license terms and Fodda Terms of Service, for installing and running the software to connect to Fodda with a valid Fodda API key.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "comply_with_license_terms",
+          "comply_with_fodda_terms_of_service",
+          "install_and_run_software",
+          "connect_to_fodda_service",
+          "use_valid_fodda_api_key"
+        ],
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-21628-61fcbf79090b:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not commercially exploit the software, except to the extent the act is required to run it as intended.",
+        "trigger": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "commercial_use",
+          "required_to_run_software_as_intended"
+        ],
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21146,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1239,
+    "output_tokens_details": {
+      "reasoning_tokens": 315
+    },
+    "total_tokens": 22385,
+    "attribution": {
+      "items": {
+        "msg_025ac9e189688b43016af53f0dae8887d2ad505b1e88de6436": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_025ac9e189688b43016af53f0dae8887d2b4c188ade43209aa": {
+          "input_tokens": 19076,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19076,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_025ac9e189688b43016af53f1477b887d292ceb82148d7378c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 924,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 924
+            }
+          ]
+        },
+        "rs_025ac9e189688b43016af53f145c3887d29bed1f4c6e3ad7e1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 315
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "9d491a492d112b954a98c3726b5e3b767ee22d95017c8f4e7e113f7269f059b0",
+  "elapsed_seconds": 29.86
+}

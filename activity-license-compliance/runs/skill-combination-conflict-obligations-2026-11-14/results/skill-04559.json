@@ -1,0 +1,391 @@
+{
+  "case_id": "skill-04559",
+  "csv_row": 4560,
+  "source_excel_row": "6415",
+  "status": "SUCCESS",
+  "request_sha256": "4a4e3720710e661d08bc213a100d4f30417cc27ac24cb6a74e633840a9e35584",
+  "analysis": {
+    "case_id": "skill-04559",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-04559:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "viewing_on_github_platform_under_github_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-04559:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": true,
+            "when": {
+              "not": "prior_written_permission_from_owner"
+            }
+          },
+          "S": {
+            "artifact": "skill-04559:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "viewing_on_github_platform_under_github_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-04559:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若下游实际将上游受许可内容用于其他产品、服务或网站，须先取得权利人书面许可；此限制约束该受许可内容，不自动延伸至独立代码或API调用本身。",
+        "source_refs": [
+          "license:270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429"
+        ],
+        "subject": {
+          "artifact": "skill-04559:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "Use",
+            "covered_content_used_in_another_product_service_or_website"
+          ]
+        },
+        "unresolved_predicates": [
+          "covered_content_used_in_another_product_service_or_website",
+          "prior_written_permission_from_owner"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游对自有仓库受许可内容的使用，仅在 GitHub 平台且符合 GitHub 服务条款时获明确许可；不得据此推定普通远程 API 调用属于该平台使用。",
+        "source_refs": [
+          "license:270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429"
+        ],
+        "subject": {
+          "artifact": "skill-04559:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "viewing_on_github_platform_under_github_terms"
+        ]
+      }
+    ],
+    "limitations": [
+      "事实确认的是下游对上游 API 的远程调用及链接关系；未确认上游软件副本、实质部分或模型权重转移、打包或修改。MIT 的副本通知条件因此不由远程调用本身触发。",
+      "自定义许可限制针对其所称的仓库内容。现有对象图未确认该内容是否被纳入或用于下游产品/服务，故保留条件义务，不判定许可冲突或行为违规。",
+      "自定义许可同时提供法文及英文对应条款；本输出按结构化记录审查已映射活动。未将未发生或未证实的复制、分发、衍生、训练、部署等活动判为违规。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "MIT 明确许可使用；该条无附加义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "复制活动及副本或实质部分均未证实；非远程调用义务。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "修改活动未证实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "合并活动未证实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "发布/分发活动未证实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "分发活动未证实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "再许可活动未证实。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "出售副本不属于本行已知活动。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "保留自定义许可仅明确允许符合 GitHub 平台及其服务条款的使用；普通 API 调用不等同该项许可。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "GitHub fork 活动未证实。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "复制活动未证实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "再分发活动未证实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "再发布活动未证实。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留将受许可内容用于其他产品或服务须先取得书面许可的条件；现有 API 调用事实不证明该内容被纳入下游。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "部署至其他实例或数据库未证实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "创作衍生作品未证实。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "将受许可内容用于训练未证实。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "从历史、分叉或早期副本提取未证实。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "英文对应条款与 D001 同义，合并保留其 GitHub 平台使用限制。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "GitHub fork 活动未证实。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "复制活动未证实。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "再分发活动未证实。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "再发布活动未证实。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "英文对应条款与 D006 同义，合并保留其他产品或服务使用的书面许可条件。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "部署至其他实例或数据库未证实。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "创作衍生作品未证实。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "将受许可内容用于训练未证实。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "从历史、分叉或早期副本提取未证实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-04559-1794594881002890000-2.json",
+  "usage": {
+    "input_tokens": 25425,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2637,
+    "output_tokens_details": {
+      "reasoning_tokens": 375
+    },
+    "total_tokens": 28062,
+    "attribution": {
+      "items": {
+        "msg_011fa8490e529503016af7587f245487d285d97103c0402af4": {
+          "input_tokens": 22701,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22701,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_011fa8490e529503016af7587f245487d2b691e6700d3116e4": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_011fa8490e529503016af75886861487d281ed6dddfd8e3244": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2262,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2262
+            }
+          ]
+        },
+        "rs_011fa8490e529503016af758866f1887d288b6257f23599665": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 375
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

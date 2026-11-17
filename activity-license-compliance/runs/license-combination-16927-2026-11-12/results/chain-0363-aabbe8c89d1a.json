@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0363-aabbe8c89d1a",
+  "input_group_row": 363,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "ODC-BY-1.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0363-aabbe8c89d1a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:0a6bafb3e71bea08"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_license_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0363-aabbe8c89d1a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "ODC-By-1.0 §3.1 许可的是 Database Rights；摘录明确不覆盖 Contents 的独立权利。当前材料未说明 API 所用内容是否属于 Database 或其 Contents，也未提供足以映射 RemoteInteraction 的专门条款，故不推断远程调用触发分发、披露或其他义务。",
+      "MIT 文本中的相关候选规则针对下游软件对象；已知事实仅为该软件远程调用上游资产，未证明两许可对同一对象、同一活动适用，亦无依据认定许可冲突。",
+      "ODC-By-1.0 §4.3 的通知要求以公开使用 Produced Work 为触发条件；未提供 Produced Work 或公开使用事实。§4.2 的公开传递要求也未因远程调用事实而触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 Database 时遵守 ODC-By-1.0 的适用条款。",
+        "source_refs": [
+          "license-text:upstream:0a6bafb3e71bea08"
+        ],
+        "subject": {
+          "artifact": "chain-0363-aabbe8c89d1a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_applicable_license_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 30824,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 754,
+    "output_tokens_details": {
+      "reasoning_tokens": 212
+    },
+    "total_tokens": 31578,
+    "attribution": {
+      "items": {
+        "msg_047eb3cc2cb6c2f6016af53225502c87d19df458915a638a0f": {
+          "input_tokens": 28754,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 28754,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_047eb3cc2cb6c2f6016af53225502c87d1b45d30b93454179e": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_047eb3cc2cb6c2f6016af5322a3eec87d188c015df839ba5a5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 542,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 542
+            }
+          ]
+        },
+        "rs_047eb3cc2cb6c2f6016af5322a233c87d1a80f7d71f365ea29": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 212
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "f94438c1022f1469710242f2a8b063732666317bd0f3d01b5a2a2d693900c428",
+  "elapsed_seconds": 25.18
+}

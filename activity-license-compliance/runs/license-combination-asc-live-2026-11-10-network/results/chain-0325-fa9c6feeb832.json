@@ -1,0 +1,135 @@
+{
+  "case_id": "chain-0325-fa9c6feeb832",
+  "status": "SUCCESS",
+  "request_sha256": "27320c87f83b048c6b2436f9e1a996e2979b64f999eecb1e7b11600db88179b2",
+  "analysis": {
+    "case_id": "chain-0325-fa9c6feeb832",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3ad6fc15fe136784"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0325-fa9c6feeb832:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7573e62adf208714"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_license_and_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0325-fa9c6feeb832:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0325-fa9c6feeb832:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If conveying verbatim copies of the GPL-3.0 Program, include a copy of the GPL license and preserve the required copyright, license, non-permissive-term, and warranty notices.",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute"
+        ],
+        "source_refs": [
+          "license-text:downstream:7573e62adf208714"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes use and remote API interaction with the upstream CC0-1.0 asset, and states that code modification does not apply. It does not establish distribution, copying, or modification of the downstream GPL-3.0 artifact.",
+      "The object graph identifies a link/API-call relation but leaves dependency and shared scope unknown. The supplied GPL excerpts concern conveying GPL-covered works; they do not establish that the remote call conveys or modifies such a work.",
+      "No conflict is established between the CC0 waiver and the GPL conveying conditions on the facts provided. The GPL modified-source and corresponding-source provisions are not applied absent evidence of a covered modified work or its conveyance."
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18817,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 881,
+    "output_tokens_details": {
+      "reasoning_tokens": 299
+    },
+    "total_tokens": 19698,
+    "attribution": {
+      "items": {
+        "msg_0fbccac9e10de6e0016af30512e0e087d1b888538f9a64f758": {
+          "input_tokens": 16785,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16785,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0fbccac9e10de6e0016af3051ab19c87d1a6bf56b630c27ea6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 582,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 582
+            }
+          ]
+        },
+        "rs_0fbccac9e10de6e0016af3051a960487d180c05ecc538dca21": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 299
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.981,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

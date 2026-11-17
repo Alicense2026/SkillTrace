@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0157-24eddc098315",
+  "status": "SUCCESS",
+  "request_sha256": "bf2b9edb8d4f6501e50ec9c1aa98ed719f0ed3ca448b93fce9411cf9a02a6b23",
+  "analysis": {
+    "case_id": "chain-0157-24eddc098315",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0157-24eddc098315:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0157-24eddc098315:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 CC-BY-SA-4.0 的相关授权摘录仅表明行使许可权利须受许可条款约束；具体适用条件及本次 API 使用是否属于许可权利范围，不能由现有摘录确定。规则为首轮抽取且标有 FIRST_PASS_REVIEW_REQUIRED。",
+      "对象图确认 downstream 对 upstream 的链接和远程调用，但依赖、捆绑、修改副本及共同产品范围均未知。因此未认定 MIT 与 CC-BY-SA-4.0 共同约束同一对象，也未据此判断许可冲突。",
+      "MIT 条款摘录涉及 MIT 软件本身的许可及通知；事实未表明本次远程调用使用或分发了 downstream MIT 软件，故未将其套用于 upstream API 调用。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0157-24eddc098315:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若本次使用属于 CC-BY-SA-4.0 的许可范围，须在该范围内行使权利并遵守适用的 CC-BY-SA-4.0 条件。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope",
+          "applicable_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21988,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 889,
+    "output_tokens_details": {
+      "reasoning_tokens": 210
+    },
+    "total_tokens": 22877,
+    "attribution": {
+      "items": {
+        "msg_0c9c9de1e4a27cbf016af2fd92a62887d1855d27a54381634a": {
+          "input_tokens": 19956,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19956,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c9c9de1e4a27cbf016af2fd97c07887d1910349aa2b02591a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 679,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 679
+            }
+          ]
+        },
+        "rs_0c9c9de1e4a27cbf016af2fd97a4b087d1a870eeee67780f13": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 210
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.831,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

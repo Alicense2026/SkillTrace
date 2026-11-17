@@ -1,0 +1,145 @@
+{
+  "request_sha256": "56b811439bca89ca262539ef2a140232877e9ddbb52ace236d068daec555f322",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 13,
+        "end_line": 14,
+        "clause_label": "gap/original-source-terms-commercial-use",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "skill_has_original_license_or_source_instructions",
+          "requires": {
+            "all": [
+              "source_and_license_boundaries_confirmed",
+              "applicable_original_instructions_prioritized"
+            ]
+          }
+        },
+        "actor_role": "repository user",
+        "scope_note": "Applies to commercial use of a skill in the repository when its directory contains an original license or source instructions; does not supply or infer the contents of those external terms or grant permission beyond them.",
+        "condition_explanation": "skill_has_original_license_or_source_instructions means the directory contains the original license or source note described in line 13. source_and_license_boundaries_confirmed reflects line 14's request to independently confirm the skill's source and license boundaries before commercial use. applicable_original_instructions_prioritized reflects line 13's request to prioritize compliance with those original instructions. The original license and source note contents are not supplied.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Independently confirm the skill's source and license boundaries before commercial use.",
+            "actor": "repository user",
+            "object": "the skill being used commercially",
+            "trigger": "before commercial use of a skill whose source and license boundaries have not yet been confirmed"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Prioritize compliance with the skill directory's original license or source instructions.",
+            "actor": "repository user",
+            "object": "the skill's original license or source instructions",
+            "trigger": "when the skill directory contains an original license or source instructions"
+          }
+        ]
+      },
+      {
+        "start_line": 13,
+        "end_line": 14,
+        "clause_label": "gap/original-source-terms-redistribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "skill_has_original_license_or_source_instructions",
+          "requires": {
+            "all": [
+              "source_and_license_boundaries_confirmed",
+              "applicable_original_instructions_prioritized"
+            ]
+          }
+        },
+        "actor_role": "repository user",
+        "scope_note": "Applies to redistribution of a skill in the repository when its directory contains an original license or source instructions; does not supply or infer the contents of those external terms or grant permission beyond them.",
+        "condition_explanation": "skill_has_original_license_or_source_instructions means the directory contains the original license or source note described in line 13. source_and_license_boundaries_confirmed reflects line 14's request to independently confirm the skill's source and license boundaries before redistribution. applicable_original_instructions_prioritized reflects line 13's request to prioritize compliance with those original instructions. The original license and source note contents are not supplied.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Independently confirm the skill's source and license boundaries before redistribution.",
+            "actor": "repository user",
+            "object": "the skill being redistributed",
+            "trigger": "before redistribution of a skill whose source and license boundaries have not yet been confirmed"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Prioritize compliance with the skill directory's original license or source instructions.",
+            "actor": "repository user",
+            "object": "the skill's original license or source instructions",
+            "trigger": "when the skill directory contains an original license or source instructions"
+          }
+        ]
+      },
+      {
+        "start_line": 13,
+        "end_line": 14,
+        "clause_label": "gap/original-source-terms-large-scale-modification",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "skill_has_original_license_or_source_instructions",
+          "requires": {
+            "all": [
+              "source_and_license_boundaries_confirmed",
+              "applicable_original_instructions_prioritized",
+              "modification_is_large_scale"
+            ]
+          }
+        },
+        "actor_role": "repository user",
+        "scope_note": "Applies only to large-scale modification of a skill in the repository when its directory contains an original license or source instructions; does not supply or infer the contents of those external terms or grant permission beyond them.",
+        "condition_explanation": "skill_has_original_license_or_source_instructions means the directory contains the original license or source note described in line 13. source_and_license_boundaries_confirmed reflects line 14's request to independently confirm the skill's source and license boundaries before large-scale modification. applicable_original_instructions_prioritized reflects line 13's request to prioritize compliance with those original instructions. modification_is_large_scale preserves line 14's stated scope. The original license and source note contents are not supplied.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Independently confirm the skill's source and license boundaries before large-scale modification.",
+            "actor": "repository user",
+            "object": "the skill being modified",
+            "trigger": "before large-scale modification of a skill whose source and license boundaries have not yet been confirmed"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Prioritize compliance with the skill directory's original license or source instructions.",
+            "actor": "repository user",
+            "object": "the skill's original license or source instructions",
+            "trigger": "when the skill directory contains an original license or source instructions"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The cited original license or source instructions are not supplied; their substantive terms and applicability cannot be extracted or inferred. The local guidance to prioritize them and confirm source and license boundaries is modeled separately."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0006",
+        "status": "EXTERNAL_REFERENCE_EXCLUDED",
+        "clause_labels": [
+          "gap/original-source-terms-commercial-use",
+          "gap/original-source-terms-redistribution",
+          "gap/original-source-terms-large-scale-modification"
+        ],
+        "reason": "Lines 13–14 locally request prioritizing any directory-level original license or source instructions and independently confirming source and license boundaries before commercial use, redistribution, or large-scale modification; these portions are modeled in the cited clauses. The referenced directory-level texts are absent, so their substantive rules are excluded rather than inferred."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

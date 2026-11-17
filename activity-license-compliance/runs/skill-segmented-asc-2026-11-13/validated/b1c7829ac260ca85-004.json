@@ -1,0 +1,454 @@
+{
+  "request_sha256": "8b0c0ba4ad7920a6e1b3d817c67473184dc64ec2789b6e0e9db9d28993f75fc5",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 145,
+        "end_line": 146,
+        "clause_label": "patent_reliance_source_or_alternative",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "corresponding_source_publicly_available_free_under_license",
+              "arrange_to_lose_patent_license_benefit_for_work",
+              "extend_patent_license_to_downstream_recipients"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §11; conveying a covered work while knowingly relying on a patent license, where Corresponding Source is not already available for free copying under the License through a public network server or other readily accessible means. The three stated ways to address this are alternatives.",
+        "condition_explanation": "knowingly_relying means actual knowledge that, absent the patent license, conveying in a country or the recipient's use there would infringe identifiable patents the actor has reason to believe valid. The source-availability exception and the three alternatives are preserved.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Make Corresponding Source available for anyone to copy free of charge under the License through a publicly available network server or other readily accessible means, or arrange to relinquish the patent-license benefit for this work, or arrange consistently with the License to extend the patent license to downstream recipients.",
+            "actor": "licensee conveying the work",
+            "object": "Corresponding Source or patent-license benefit/extension for the covered work",
+            "trigger": "The actor conveys the covered work, knowingly relies on a patent license, and Corresponding Source is not already available as specified; any one of the three alternatives suffices."
+          }
+        ]
+      },
+      {
+        "start_line": 148,
+        "end_line": 148,
+        "clause_label": "patent_license_automatically_extends",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "patent_license_extended_to_all_recipients_and_works_based_on_work"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §11; a single transaction or arrangement in which the actor conveys, or procures conveyance of, a covered work and grants a patent license to some recipients for use, propagation, modification, or conveyance of a specific copy.",
+        "condition_explanation": "The patent license automatically extends to all recipients of the covered work and works based on it when the stated conveyance and grant occur.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Extend the granted patent license to all recipients of the covered work and works based on it, as the license provides automatically.",
+            "actor": "licensee granting the patent license in connection with the conveyance",
+            "object": "Patent license covering the covered work and works based on it",
+            "trigger": "A covered work is conveyed, or its conveyance is procured, under a single transaction or arrangement and the actor grants some recipients a patent license for a specific copy."
+          }
+        ]
+      },
+      {
+        "start_line": 150,
+        "end_line": 150,
+        "clause_label": "discriminatory_patent_arrangement_conveyance_bar",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "third_party_discriminatory_patent_license_arrangement_applies"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §11; prohibits conveying a covered work under the specified paid, activity-based arrangement with a third-party software distributor. Exception: the arrangement was entered into, or the patent license granted, before 28 March 2007.",
+        "condition_explanation": "The arrangement predicate requires payment based on the extent of the actor's conveyance activity and a third-party discriminatory patent license to recipients, either in connection with conveyed copies (or copies made from them) or primarily for and in connection with products or compilations containing the work. A patent license is discriminatory when it excludes, prohibits, or conditions on non-exercise a right specifically granted by the License. The pre-28-March-2007 exception defeats the prohibition.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not convey the covered work under the specified third-party arrangement.",
+            "actor": "licensee party to the arrangement",
+            "object": "Covered work",
+            "trigger": "The arrangement and discriminatory-license conditions stated in scope_note apply, and neither stated pre-28-March-2007 exception applies."
+          }
+        ]
+      },
+      {
+        "start_line": 152,
+        "end_line": 152,
+        "clause_label": "implied_patent_defenses_preserved",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §11; preserves implied licenses and other patent-infringement defenses otherwise available under applicable patent law; it does not itself grant a new patent license.",
+        "condition_explanation": "The clause preserves whatever implied licenses or defenses applicable patent law otherwise makes available.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 155,
+        "end_line": 156,
+        "clause_label": "conflicting_obligations_bar_conveyance",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "cannot_convey_while_satisfying_license_and_other_obligations"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §12; conflicting conditions imposed by court order, agreement, or otherwise do not excuse compliance with the License. Conveyance is barred if the actor cannot satisfy both the License and other pertinent obligations; the royalty-collection example illustrates the rule.",
+        "condition_explanation": "The prohibition applies only when simultaneous compliance is impossible. The example concerns an obligation to collect royalties from recipients for further conveyance.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not convey the covered work when conveyance cannot simultaneously satisfy the License and other pertinent obligations.",
+            "actor": "licensee subject to the conflicting conditions",
+            "object": "Covered work",
+            "trigger": "Conditions imposed on the actor contradict License conditions and make compliant conveyance impossible."
+          }
+        ]
+      },
+      {
+        "start_line": 159,
+        "end_line": 159,
+        "clause_label": "modified_network_version_source_offer",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": "modified_program_supports_remote_computer_network_interaction"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §13; applies if the actor modifies the Program and the modified version supports remote interaction through a computer network. The offer must be prominent, available to all remote users, and provide access from a network server at no charge through standard or customary copying means. Source includes Corresponding Source for incorporated work covered by GPL version 3 under the following paragraph.",
+        "condition_explanation": "Both modification and support for remote network interaction are required; merely interacting with another network service does not trigger this duty. The source-offer opportunity is for all users interacting remotely with the modified version.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Prominently offer all users interacting remotely through a computer network an opportunity to receive the version's Corresponding Source, by providing no-charge network-server access through standard or customary software-copying means; include the specified incorporated GPL version 3 work's Corresponding Source.",
+            "actor": "person who modifies the Program and provides the modified version",
+            "object": "Corresponding Source of the modified version, including the specified incorporated GPL version 3 work",
+            "trigger": "The actor modified the Program and the modified version supports remote computer-network interaction."
+          }
+        ]
+      },
+      {
+        "start_line": 161,
+        "end_line": 161,
+        "clause_label": "agpl_gplv3_combination_permission",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "combined_work_contains_agpl_covered_work_and_gpl_version_3_work"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §13; expressly permits linking or combining an AGPL-covered work with a GPL version 3 work into one combined work and conveying the result. AGPL continues to govern the covered-work part; GPL version 3 continues to govern the combined work's other part.",
+        "condition_explanation": "The permission is limited to the stated combination of a covered work and a work licensed under GPL version 3; it does not relicense either component under the other's terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 161,
+        "end_line": 161,
+        "clause_label": "convey_agpl_gplv3_combined_work",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "combined_work_contains_agpl_covered_work_and_gpl_version_3_work"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §13; permission to convey the combined work described in the adjacent combination rule. Each component retains its specified license.",
+        "condition_explanation": "Applies to the resulting single combined work made from an AGPL-covered work and a GPL version 3 work.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 166,
+        "end_line": 166,
+        "clause_label": "choose_later_agpl_version",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "program_specifies_numbered_agpl_version_or_later"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §14; when the Program specifies a numbered AGPL version “or any later version,” the licensee may choose that version or any later FSF-published version.",
+        "condition_explanation": "This is a choice of license version, not a duty to use a later version.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 166,
+        "end_line": 166,
+        "clause_label": "choose_any_published_agpl_version",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "program_specifies_no_agpl_version_number"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §14; if the Program specifies no AGPL version number, the licensee may choose any version ever published by the Free Software Foundation.",
+        "condition_explanation": "This version-choice path applies only when the Program specifies no version number.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 168,
+        "end_line": 168,
+        "clause_label": "proxy_acceptance_authorizes_version_choice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "program_authorizes_proxy_to_select_future_versions_and_proxy_publicly_accepts_version"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §14; where the Program specifies that a proxy may decide which future versions apply, that proxy's public acceptance of a version permanently authorizes the licensee to choose it for the Program.",
+        "condition_explanation": "Both the Program's proxy-selection provision and the proxy's public acceptance of the version are required.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 170,
+        "end_line": 170,
+        "clause_label": "later_version_additional_obligations_limit",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "licensee_chooses_later_license_version"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §14; choosing a later version does not impose additional obligations on an author or copyright holder as a result of that choice.",
+        "condition_explanation": "This limits additional obligations arising from the choice itself; it does not state that later versions impose no obligations on licensees.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The source text applies to AGPL-3.0; the supplied AGPL-3.0-or-later label does not change the quoted clauses' scope. The Program's actual version designation and any proxy provision are not supplied and remain symbolic.",
+      "Paragraphs 172–179 are warranty/liability disclaimer and interpretation provisions, excluded as nonoperative for this activity-constraint extraction. Template and instructional material at lines 185–196 is not treated as operative license text."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0055",
+        "status": "MODELED",
+        "clause_labels": [
+          "patent_reliance_source_or_alternative"
+        ],
+        "reason": "Models the conditional conveyance rule and its three alternative compliance paths, including the knowingly-relying definition."
+      },
+      {
+        "unit_id": "P0056",
+        "status": "MODELED",
+        "clause_labels": [
+          "patent_license_automatically_extends"
+        ],
+        "reason": "Models the automatic extension of a granted patent license to all recipients and works based on the covered work under the stated transaction conditions."
+      },
+      {
+        "unit_id": "P0057",
+        "status": "MODELED",
+        "clause_labels": [
+          "discriminatory_patent_arrangement_conveyance_bar"
+        ],
+        "reason": "Defines discriminatory patent licensing and models the conditional conveyance prohibition and its pre-28-March-2007 exception."
+      },
+      {
+        "unit_id": "P0058",
+        "status": "MODELED",
+        "clause_labels": [
+          "implied_patent_defenses_preserved"
+        ],
+        "reason": "Records preservation of implied licenses and other patent defenses without treating it as a new patent grant."
+      },
+      {
+        "unit_id": "P0059",
+        "status": "MODELED",
+        "clause_labels": [
+          "conflicting_obligations_bar_conveyance"
+        ],
+        "reason": "Models the no-excuse rule and the bar on conveyance when simultaneous compliance with the License and other pertinent obligations is impossible."
+      },
+      {
+        "unit_id": "P0060",
+        "status": "MODELED",
+        "clause_labels": [
+          "modified_network_version_source_offer"
+        ],
+        "reason": "Models the source-offer duty conditioned on modification and network-interaction support, including the access terms and incorporated GPLv3 source."
+      },
+      {
+        "unit_id": "P0061",
+        "status": "MODELED",
+        "clause_labels": [
+          "agpl_gplv3_combination_permission",
+          "convey_agpl_gplv3_combined_work"
+        ],
+        "reason": "Models permission to link or combine and convey the specified combined work, while preserving each component's license."
+      },
+      {
+        "unit_id": "P0062",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading and description of possible future revisions; it does not itself impose a behavioral constraint."
+      },
+      {
+        "unit_id": "P0063",
+        "status": "MODELED",
+        "clause_labels": [
+          "choose_later_agpl_version",
+          "choose_any_published_agpl_version"
+        ],
+        "reason": "Models both version-choice paths and their distinct Program-version conditions."
+      },
+      {
+        "unit_id": "P0064",
+        "status": "MODELED",
+        "clause_labels": [
+          "proxy_acceptance_authorizes_version_choice"
+        ],
+        "reason": "Models the proxy-based version-choice authorization and its prerequisites."
+      },
+      {
+        "unit_id": "P0065",
+        "status": "MODELED",
+        "clause_labels": [
+          "later_version_additional_obligations_limit"
+        ],
+        "reason": "Models the limit on additional obligations imposed on authors or copyright holders as a result of choosing a later version."
+      },
+      {
+        "unit_id": "P0066",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer and allocation of quality/performance risk; excluded warranty-disclaimer material."
+      },
+      {
+        "unit_id": "P0067",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Limitation-of-liability disclaimer; excluded disclaimer material."
+      },
+      {
+        "unit_id": "P0068",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Interpretation of warranty and liability disclaimers; excluded disclaimer material."
+      },
+      {
+        "unit_id": "P0069",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "End marker, not an operative rule."
+      },
+      {
+        "unit_id": "P0070",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Heading for application guidance, not a license duty."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Recommendation about making a new program free software, not an operative duty under this License."
+      },
+      {
+        "unit_id": "P0072",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Application instructions and template notice guidance, not an operative license duty governing the supplied Program."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Template program-name and copyright notice, not an operative rule governing the supplied Program."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Template license statement in application guidance, not an operative rule governing the supplied Program."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Template warranty statement, not an operative rule governing the supplied Program."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Template instruction about receiving a license copy, not an operative duty for this extraction."
+      }
+    ]
+  },
+  "attempt": 2
+}

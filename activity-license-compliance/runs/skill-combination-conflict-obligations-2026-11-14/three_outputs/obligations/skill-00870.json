@@ -1,0 +1,214 @@
+{
+  "case_id": "skill-00870",
+  "csv_row": 871,
+  "source_excel_row": "1230",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00870-1794597956127267000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00870:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "下游许可使用者须同意 PolyForm-Noncommercial 条款；该条款将同意规定为取得许可的条件。",
+      "trigger": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "agreed_to_terms"
+      ],
+      "source_refs": [
+        "license:ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00870:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "下游许可使用者仅可为许可所界定的 permitted purpose 使用软件；该条件可由非商业目的、列明的个人用途及其限定条件、或列明组织类型等许可规定的路径满足。适用的公平使用权利不受条款限制。",
+      "trigger": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "permitted_purpose"
+      ],
+      "source_refs": [
+        "license:ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00870:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若首次收到关于违反条款或未获许可行为的书面通知，须在收到通知后32天内完全合规并采取实际措施纠正既往违规；两项均完成，许可方可继续。",
+      "trigger": "first_written_notice_of_violation_or_unlicensed_action",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "first_written_notice_of_violation_or_unlicensed_action"
+      ],
+      "source_refs": [
+        "license:ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知事实为下游远程调用并使用上游软件；未证明分发、复制、修改或再许可，因此相关条款不作为本次实际行为结论。",
+    "对象图未确定上下游许可是否约束同一对象（scope_shared=null）；本次使用条款对应不同主体对象，未据许可名称差异推断冲突。",
+    "商业目的、具体 permitted purpose、条款同意及书面通知等事实未知；不据此认定违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游 MIT 明确允许对上游软件进行 Use，摘录未附该活动的额外义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Copy 未见已发生事实；该规则的通知条件仅针对复制或实质部分。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Modify 未见已发生事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Combine 未见已发生事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Distribute 未见已发生事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Distribute 未见已发生事实；复制或实质部分的通知条件未触发。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Sublicense 未见已发生事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 未见已发生事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "实际 Use 受取得许可须同意条款的条件约束；同意事实未知，已保留条件义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "实际 Use 须属于许可定义的 permitted purpose；具体目的未知，已保留条件义务。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Distribute 未见已发生事实；该规则还仅许可 permitted purpose 范围内的分发。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见向他人提供软件副本的事实，接收者通知条件未触发。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Modify 未见已发生事实。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "CreateDerivative 未见已发生事实。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该摘录规定特定专利许可范围，未构成本次已知 Use 的独立履行义务。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "非商业目的属于 permitted purpose 的一条许可路径；已并入 permitted purpose 条件，未假定商业状态。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "列明个人用途及其限定条件属于 permitted purpose 的一条路径；已并入同一条件义务。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "列明组织类型属于 permitted purpose 的一条路径；已并入同一条件义务。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "条款保留依法存在的公平使用权；作为 permitted purpose 条件的适用例外一并说明。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未见 Sublicense 活动；不得再许可的禁止未被触发。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "若发生条款所述书面专利主张，相关专利许可终止；该触发事实未知，已条件化保留避免依赖已终止许可的要求。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "首次书面通知触发限期补救路径；通知事实未知，已保留条件义务。"
+    }
+  ]
+}

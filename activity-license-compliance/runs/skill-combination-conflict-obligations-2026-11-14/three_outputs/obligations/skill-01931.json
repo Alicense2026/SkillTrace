@@ -1,0 +1,261 @@
+{
+  "case_id": "skill-01931",
+  "csv_row": 1932,
+  "source_excel_row": "2680",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01931-1794599415273938000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人复制上游软件或其实质部分时，应在每份副本或实质部分中包含版权声明和 MIT 许可声明；若未产生副本或实质部分则无需履行该通知要求。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-01931:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Copy",
+          "copy_or_substantial_portion_created"
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人向公众分享下游原始材料时，按 CC BY-NC-SA 4.0 保留随材料提供的归属及许可信息（仅限许可人提供的信息，并受合理可行性限制），标示是否修改及既有修改，并标示该材料依本许可授权且附许可文本或链接。",
+      "source_refs": [
+        "license:047d2259741a3ebb30d8c8a43d4ba79b5b229a069acd1d2bea49f22b297d8e98"
+      ],
+      "subject": {
+        "artifact": "skill-01931:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "licensee_shares_licensed_material",
+      "unresolved_predicates": [
+        "licensee_shares_licensed_material",
+        "supplied_attribution_and_license_information",
+        "indicate_modifications",
+        "include_public_license_text_or_uri"
+      ]
+    }
+  ],
+  "limitations": [
+    "已确认的事实是下游通过远程服务调用并使用上游模型；这不证明复制、分发、修改、合并或再许可上游材料。",
+    "对象图未确认上游与下游许可约束同一对象；MIT 通知条件仅在制作或分发上游软件副本或实质部分时适用。",
+    "下游 CC BY-NC-SA 条款约束下游许可材料及其适用权利；现有事实未表明下游原始材料已被分享，也未证明上游模型属于该许可材料。未据此推定商业用途、衍生关系或许可冲突。",
+    "已检查与已知 Use/RemoteInteraction 事实相关的本地条款；其他条件触发活动及相应履行状态未知，未据此认定违规或冲突。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游软件的 Use 获许可；该条未列附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制许可及其副本通知条件合并保留；复制与实质部分事实未知，故保留条件义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "修改许可涉及的副本通知要求与 U002 同一，已合并保留。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "合并许可涉及的副本通知要求与 U002 同一，已合并保留。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "发布许可涉及的副本通知要求与 U002 同一，已合并保留。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发许可涉及的副本通知要求与 U002 同一，已合并保留。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "再许可涉及的副本通知要求与 U002 同一，已合并保留。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "出售副本涉及的通知要求与 U002 同一，已合并保留。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款针对下游许可材料的复制；已知 Use 对象是上游原始模型，未证明涉及下游许可材料。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款针对分享下游许可材料；没有下游分享事实。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款禁止对下游许可材料及其许可权利再许可；没有该对象上的再许可事实。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款针对创作源自下游许可材料的适应性材料；未证明该对象或创作活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款针对复制下游适应性材料；没有相应对象或复制事实。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款针对分享下游适应性材料；没有相应对象或分享事实。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "非商业限制仅针对行使下游许可材料的许可权利；已知 Use 是对上游模型的调用，未证明行使该许可权利。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅许可为行使相关权利所必需的技术修改；没有下游许可材料上的修改事实。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有对下游许可材料施加限制性附加条款或技术措施的事实。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有声称或暗示与许可人存在关联、认可或官方身份的事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游材料分享时的归属、修改标示及许可文本或链接义务合并保留；分享是否发生未知。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该义务以许可人请求移除且移除合理可行为条件；未有请求事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "ShareAlike 条件以分享自行创作的适应性材料为触发；没有该对象或分享事实。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "适应性材料分享时的可选许可路径条件尚无适用对象或触发事实。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分享自行创作的适应性材料事实，故无需增加适应该许可的文本或链接义务。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有对适应性材料施加限制性附加条款或技术措施的事实。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "适用范围以相关数据库权利及数据库内容利用为条件；无此类事实。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "适用范围以相关数据库权利及将全部或实质部分纳入数据库为条件；无此类事实。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分享全部或实质部分数据库内容的事实。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该许可持续期间与合规条件针对下游许可材料；已知 Use 对象未被证明属于该材料。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有不合规导致下游许可权利终止的事实。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有下游许可权利终止或相关补救事实。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有下游许可权利终止或许可人明确恢复权利的事实。"
+    }
+  ]
+}

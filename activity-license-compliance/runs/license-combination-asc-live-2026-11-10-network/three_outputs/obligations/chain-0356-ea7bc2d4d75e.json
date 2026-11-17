@@ -1,0 +1,68 @@
+{
+  "case_id": "chain-0356-ea7bc2d4d75e",
+  "output": [
+    {
+      "activity": "ProvideSource",
+      "subject": {
+        "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "若修改后的受涵盖程序支持远程交互，须显著向通过计算机网络远程交互的用户提供免费获取该版本 Corresponding Source 的机会，可从网络服务器提供访问。",
+      "trigger": {
+        "all": [
+          "modified_covered_program",
+          "version_supports_remote_interaction",
+          "remote_users_interact_through_computer_network"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "version_supports_remote_interaction",
+        "remote_users_interact_through_computer_network",
+        "source_offer_provided"
+      ],
+      "source_refs": [
+        "license-text:upstream:5b08064288d26a33"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "subject": {
+        "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "将版权声明和许可声明纳入软件的所有副本或实质部分。",
+      "trigger": "copying_downstream_licensed_software_or_substantial_portion",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "downstream_copy_scope",
+        "copyright_and_permission_notice_included"
+      ],
+      "source_refs": [
+        "license-text:downstream:246613076f619962"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "分发 MIT 软件副本或实质部分时，须随附版权声明和许可声明。",
+      "trigger": "distribute_downstream_licensed_software_or_substantial_portion",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "downstream_distribution_scope",
+        "copyright_and_permission_notice_included"
+      ],
+      "source_refs": [
+        "license-text:downstream:246613076f619962"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

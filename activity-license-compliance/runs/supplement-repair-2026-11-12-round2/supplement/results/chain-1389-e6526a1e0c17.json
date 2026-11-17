@@ -1,0 +1,226 @@
+{
+  "case_id": "chain-1389-e6526a1e0c17",
+  "source_csv_line": 1390,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "glm-5.3-flash-reap50-iq3m",
+    "artifact_url": "https://open.bigmodel.cn/dev/api",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: crates/screenpipe-core/src/workflows/model_choice.rs:9 ｜ 调用原文: pub const PRIVATE_MODEL: &str = \"glm-5.3-flash-reap50-iq3m\";（引用处 第9行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: workflows model_choice.rs 中作为可选本地模型标识",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "attempts": 2,
+  "analysis": {
+    "case_id": "chain-1389-e6526a1e0c17",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fa601a1a893ccb99"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-1389-e6526a1e0c17:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fa601a1a893ccb99"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": "activity:CommercialUse"
+          },
+          "S": {
+            "artifact": "chain-1389-e6526a1e0c17:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游协议原文版本标示为2026年9月4日；摘录含用户协议、平台服务定义及第3条部分使用限制，但仍有FIRST_PASS_REVIEW_REQUIRED标记，且未提供用户接受、用户类型、适用产品规则或相关使用行为的事实。故保留条件性要求，不据此认定违规。",
+      "下游LicenseRef-Custom约束Screenpipe Licensed Work（Screenpipe软件及其源码、文档和由该源码构建的二进制）。已知关系仅为远程API调用及链接；未证实上游API模型或服务属于、包含或依赖该Licensed Work，因此不将下游条款套用于上游模型调用，也不判定许可冲突。",
+      "已知发生上游Use、RemoteInteraction及API链接；未证实商用、收费、复制、修改、分发、转授权、提供网络服务或向第三方提供服务。收费不等于商用，API调用和链接也不证明权重转移或分发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用智谱开放平台服务时，不得实施摘录所列的不当使用行为；具体禁止行为及其适用范围以完整协议和适用规则为准。",
+        "source_refs": [
+          "license-text:upstream:fa601a1a893ccb99"
+        ],
+        "subject": {
+          "artifact": "chain-1389-e6526a1e0c17:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt",
+          "applicable_full_clause_context"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如对上游服务实施商用，须支付所需费用并遵守适用产品规则。",
+        "source_refs": [
+          "license-text:upstream:fa601a1a893ccb99"
+        ],
+        "subject": {
+          "artifact": "chain-1389-e6526a1e0c17:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "commercial_use",
+          "pay_required_fee_and_follow_product_rules"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 36575,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 872,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 37447,
+    "attribution": {
+      "items": {
+        "msg_03198aab8b266137016af585b6a9b087d180ace2703a7bdc4b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03198aab8b266137016af585b6a9b087d184d64712def6977d": {
+          "input_tokens": 32881,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32881,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03198aab8b266137016af585b73bbc87d1939eebda868b8600": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 872,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 872
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3654,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "error": "Unknown subject",
+      "diagnostics": [
+        {
+          "path": "$.asc_rules[1].triple.S",
+          "invalid": {
+            "artifact": "chain-1389-e6526a1a893ccb17:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "problem": "Must exactly match an allowed_subjects object"
+        },
+        {
+          "path": "$.obligations[0].subject",
+          "invalid": {
+            "artifact": "chain-1389-e6526a1a893ccb17:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "problem": "Must exactly match an allowed_subjects object"
+        },
+        {
+          "path": "$.obligations[1].source_refs",
+          "invalid": [
+            "license-text:upstream:fa601a1a893ccb17"
+          ],
+          "problem": "Only exact allowed_refs are valid; locate corresponding original evidence, do not invent aliases"
+        },
+        {
+          "path": "$.obligations[1].subject",
+          "invalid": {
+            "artifact": "chain-1389-e6526a1a893ccb17:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "problem": "Must exactly match an allowed_subjects object"
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 55.21
+}

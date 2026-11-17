@@ -1,0 +1,418 @@
+{
+  "request_sha256": "ec2633e17b760c5c53a772cef53171b7907a6848cf2c732493bf19a1865645d4",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 118,
+        "end_line": 118,
+        "clause_label": "8.Termination: unauthorized propagation or modification",
+        "activities": [
+          "Distribute",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "expressly_provided_by_license"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "A covered work may not be propagated or modified except as expressly provided under this License; an attempt outside that scope is void and automatically terminates the licensee's rights, including the specified patent licenses.",
+        "condition_explanation": "expressly_provided_by_license means the particular propagation or modification is expressly provided for under the License. The prohibition applies when it is not."
+      },
+      {
+        "start_line": 120,
+        "end_line": 120,
+        "clause_label": "8.Termination: provisional and permanent reinstatement after cessation",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "all_license_violations_ceased",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "reinstatement_is_provisional",
+                  "copyright_holder_has_not_explicitly_and_finally_terminated_license"
+                ]
+              },
+              {
+                "all": [
+                  "copyright_holder_did_not_notify_of_violation_by_reasonable_means_within_60_days_after_cessation",
+                  "reinstatement_is_permanent"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "After the licensee ceases all violations, the license from the particular copyright holder is reinstated provisionally unless and until that holder explicitly and finally terminates it; it is reinstated permanently if that holder fails to notify of the violation by reasonable means before 60 days after cessation.",
+        "condition_explanation": "all_license_violations_ceased requires cessation of every violation. The alternatives distinguish provisional reinstatement (subject to explicit final termination) from permanent reinstatement when the holder fails to notify within the stated 60-day period."
+      },
+      {
+        "start_line": 122,
+        "end_line": 122,
+        "clause_label": "8.Termination: permanent reinstatement after first notice and timely cure",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "copyright_holder_notified_of_violation_by_reasonable_means",
+              "this_is_first_notice_of_any_license_violation_from_that_holder",
+              "violation_cured_before_30_days_after_receipt_of_notice"
+            ]
+          },
+          "requires": "license_reinstated_permanently"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The particular copyright holder's license is permanently reinstated only when that holder gives notice by reasonable means, this is the licensee's first notice of a License violation from that holder for any work, and the licensee cures before 30 days after receiving notice.",
+        "condition_explanation": "All three predicates are required; the 30-day cure deadline is measured from receipt of notice."
+      },
+      {
+        "start_line": 124,
+        "end_line": 124,
+        "clause_label": "8.Termination: downstream licenses survive; no new license if not reinstated",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_rights_terminated_and_not_permanently_reinstated",
+          "requires": "no_new_license_for_same_material_under_section_10"
+        },
+        "actor_role": "licensee and downstream recipients",
+        "scope_note": "Termination of the licensee's rights does not terminate licenses of parties who received copies or rights from that licensee under the License. A licensee whose rights were terminated and not permanently reinstated does not qualify to receive new licenses for the same material under section 10.",
+        "condition_explanation": "The no-new-license consequence applies only if the licensee's rights were terminated and have not been permanently reinstated. This clause preserves downstream licenses; it does not itself grant a new license to the terminated licensee."
+      },
+      {
+        "start_line": 127,
+        "end_line": 127,
+        "clause_label": "9.Acceptance: receiving or running copies without acceptance; acceptance by modification or propagation",
+        "activities": [
+          "Copy",
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "any": [
+              "activity_is_receiving_or_running_a_copy",
+              "activity_is_ancillary_propagation_solely_due_to_peer_to_peer_receipt",
+              "license_accepted_for_modification_or_other_propagation"
+            ]
+          }
+        },
+        "actor_role": "recipient or licensee",
+        "scope_note": "Receiving or running a Program copy does not require acceptance; ancillary propagation solely resulting from peer-to-peer transmission to receive a copy likewise does not require acceptance. Those statements do not grant permission to propagate or modify: the License is the only stated source of such permission, and modifying or propagating indicates acceptance of the License for that activity.",
+        "condition_explanation": "The alternatives identify the activities not requiring acceptance and the distinct case in which modification or propagation indicates acceptance. Do not read the first two alternatives as permission to propagate or modify."
+      },
+      {
+        "start_line": 130,
+        "end_line": 130,
+        "clause_label": "10.Automatic Licensing of Downstream Recipients",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "covered_work_conveyed_to_recipient",
+          "requires": "recipient_license_from_original_licensors_subject_to_this_license"
+        },
+        "actor_role": "recipient (beneficiary); original licensors (grantors)",
+        "scope_note": "Each conveyance of a covered work automatically gives its recipient a license from the original licensors to run, modify, and propagate that work, subject to the License.",
+        "condition_explanation": "The downstream license arises each time a covered work is conveyed and remains subject to the License."
+      },
+      {
+        "start_line": 132,
+        "end_line": 132,
+        "clause_label": "10.Entity transaction: successor licenses and source-possession right",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute",
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "propagation_results_from_entity_transaction_and_party_receives_copy",
+          "requires": {
+            "all": [
+              "receiving_party_gets_predecessor_licenses_under_section_10",
+              "right_to_possession_of_corresponding_source_if_predecessor_has_it_or_can_get_it_with_reasonable_efforts"
+            ]
+          }
+        },
+        "actor_role": "party to entity transaction receiving a copy; predecessor in interest",
+        "scope_note": "When propagation results from an entity transaction, each transaction party receiving a copy receives the licenses the predecessor had or could give under the preceding paragraph, plus a right to possession of the work's Corresponding Source from the predecessor if the predecessor has it or can obtain it with reasonable efforts.",
+        "condition_explanation": "entity_transaction has the meaning stated in section 10 (transfer of organizational control or substantially all assets, subdivision, or merger). The source-possession right is bounded by the predecessor's possession or ability to obtain the source with reasonable efforts."
+      },
+      {
+        "start_line": 134,
+        "end_line": 134,
+        "clause_label": "10.No further restrictions on License rights",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute",
+          "SellCopies",
+          "Charge"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "imposing_a_further_restriction_on_exercise_of_rights_granted_or_affirmed_by_license",
+          "requires": "restriction_is_imposed"
+        },
+        "actor_role": "licensee",
+        "scope_note": "A licensee may not impose further restrictions on exercise of rights granted or affirmed by the License. Examples include imposing a license fee, royalty, or other charge for exercising those rights, and initiating patent litigation alleging infringement by making, using, selling, offering for sale, or importing the Program or any portion. This is not a general prohibition on charging for copies or other transactions.",
+        "condition_explanation": "The prohibition applies to a restriction on exercise of License-granted or -affirmed rights. A charge is covered when imposed for exercising those rights, not merely because a copy is sold."
+      },
+      {
+        "start_line": 141,
+        "end_line": 141,
+        "clause_label": "11.Contributor essential-patent license",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute",
+          "SellCopies"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "requires": "nonexclusive_worldwide_royalty_free_patent_license_under_contributor_essential_patent_claims"
+        },
+        "actor_role": "contributor (grantor); licensee (grantee)",
+        "scope_note": "Each contributor grants a non-exclusive, worldwide, royalty-free patent license under that contributor's essential patent claims to make, use, sell, offer for sale, import, and otherwise run, modify, and propagate the contents of its contributor version. The grant is limited to essential patent claims as defined in section 11.",
+        "condition_explanation": "The grant covers only the contributor's essential patent claims and the contributor-version contents; the definition excludes claims infringed only because of further modification."
+      },
+      {
+        "start_line": 145,
+        "end_line": 146,
+        "clause_label": "11.Patent reliance: alternative source or patent-license actions on conveyance",
+        "activities": [
+          "Distribute",
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "covered_work_conveyed",
+              "licensee_knowingly_relies_on_patent_license",
+              "corresponding_source_not_available_to_anyone_for_copying_free_of_charge_under_this_license_through_public_network_server_or_other_readily_accessible_means"
+            ]
+          },
+          "requires": {
+            "any": [
+              "make_corresponding_source_so_available",
+              "arrange_to_deprive_self_of_benefit_of_patent_license_for_this_work",
+              "arrange_to_extend_patent_license_to_downstream_recipients_consistently_with_license"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "On the specified conveyance, the licensee must choose one of three alternatives: make Corresponding Source available under the stated free-copying and License terms; arrange to lose the benefit of the patent license for this work; or arrange to extend the patent license to downstream recipients consistently with the License. “Knowingly relying” requires actual knowledge that, but for the patent license, the conveyance or recipient use in a country would infringe identifiable patents there that the licensee has reason to believe valid.",
+        "condition_explanation": "All three trigger predicates are required. The three compliance paths are alternatives, not cumulative obligations. The source availability predicate requires availability to anyone for copying, free of charge, under the License, via a publicly available network server or other readily accessible means."
+      },
+      {
+        "start_line": 148,
+        "end_line": 148,
+        "clause_label": "11.Automatic extension of patent license to recipients",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "all": [
+              "single_transaction_or_arrangement",
+              "covered_work_conveyed_or_propagation_by_procuring_conveyance",
+              "licensee_grants_patent_license_to_some_recipients_authorizing_use_propagation_modification_or_conveyance_of_specific_copy"
+            ]
+          },
+          "requires": "patent_license_automatically_extended_to_all_recipients_and_works_based_on_covered_work"
+        },
+        "actor_role": "licensee (patent-license grantor); all recipients (beneficiaries)",
+        "scope_note": "If the specified transaction or arrangement and patent-license grant occur, the patent license the licensee grants automatically extends to all recipients of the covered work and works based on it.",
+        "condition_explanation": "All listed predicates are required, including a grant to some recipients authorizing at least the stated activities concerning a specific copy."
+      },
+      {
+        "start_line": 150,
+        "end_line": 150,
+        "clause_label": "11.Discriminatory patent arrangement restriction on conveyance",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "all": [
+              "licensee_is_party_to_third_party_software_distribution_arrangement",
+              "licensee_pays_third_party_based_on_extent_of_conveying_activity",
+              "third_party_grants_discriminatory_patent_license_to_a_recipient_of_licensee_conveyance",
+              "arrangement_or_patent_license_not_entered_or_granted_before_2007_03_28"
+            ]
+          },
+          "requires": "conveyance_of_covered_work"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not convey a covered work when all stated arrangement and discriminatory-license conditions hold. The recipient license must concern either copies conveyed by the licensee (or copies made from them), or primarily specific products or compilations containing the covered work. The restriction does not apply if the arrangement was entered into, or that patent license was granted, before 28 March 2007.",
+        "condition_explanation": "All trigger predicates are required. discriminatory_patent_license means a patent license that excludes, prohibits, or is conditioned on non-exercise of one or more rights specifically granted by the License. The date exception is disjunctive: either prior entry into the arrangement or prior grant of the patent license avoids this prohibition."
+      },
+      {
+        "start_line": 155,
+        "end_line": 156,
+        "clause_label": "12.Incompatible obligations: no conveyance",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "other_conditions_imposed_on_licensee_contradict_license_conditions",
+          "requires": "cannot_convey_while_simultaneously_satisfying_license_and_all_other_pertinent_obligations"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Contradictory conditions imposed by court order, agreement, or otherwise do not excuse compliance with the License. If the licensee cannot convey while satisfying both the License and other pertinent obligations, the licensee may not convey. The royalty example illustrates the conflict but does not make every royalty or every conveyance prohibited.",
+        "condition_explanation": "The prohibition requires both contradictory imposed conditions and inability to satisfy the License and all other pertinent obligations simultaneously by conveying. The example concerns an obligation to collect royalties from further conveyers."
+      }
+    ],
+    "coverage_audit": [
+      {
+        "unit": 14,
+        "status": "MODELED",
+        "clause_labels": [
+          "8.Termination: unauthorized propagation or modification",
+          "8.Termination: provisional and permanent reinstatement after cessation",
+          "8.Termination: permanent reinstatement after first notice and timely cure",
+          "8.Termination: downstream licenses survive; no new license if not reinstated"
+        ],
+        "explanation": "Covers unauthorized propagation/modification termination, the distinct reinstatement routes and their holder-specific notice, 60-day, first-notice, and 30-day cure conditions, and downstream-license survival/no-new-license consequence."
+      },
+      {
+        "unit": 15,
+        "status": "PARTIAL",
+        "clause_labels": [
+          "9.Acceptance: receiving or running copies without acceptance; acceptance by modification or propagation"
+        ],
+        "explanation": "Covers the receiving/running and peer-to-peer ancillary-propagation acceptance exceptions and acceptance by modifying or propagating. The statement that only the License grants propagation/modification permission is recorded as a scope limit, not an independent grant."
+      },
+      {
+        "unit": 16,
+        "status": "PARTIAL",
+        "clause_labels": [
+          "10.Automatic Licensing of Downstream Recipients",
+          "10.Entity transaction: successor licenses and source-possession right",
+          "10.No further restrictions on License rights"
+        ],
+        "explanation": "Models automatic downstream licenses, the entity-transaction licenses and conditional source-possession right, and the prohibition on further restrictions including charges for exercising licensed rights. The no-responsibility-for-enforcing-third-party-compliance sentence is not an allowed ASC activity."
+      },
+      {
+        "unit": 17,
+        "status": "PARTIAL",
+        "clause_labels": [
+          "11.Contributor essential-patent license",
+          "11.Patent reliance: alternative source or patent-license actions on conveyance",
+          "11.Automatic extension of patent license to recipients",
+          "11.Discriminatory patent arrangement restriction on conveyance"
+        ],
+        "explanation": "Covers the essential-patent grant, the three alternative patent-reliance compliance paths, automatic extension, and the conditional discriminatory-arrangement conveyance prohibition and date exception. The implied-license/other-defenses reservation is not represented as an affirmative grant."
+      },
+      {
+        "unit": 18,
+        "status": "MODELED",
+        "clause_labels": [
+          "12.Incompatible obligations: no conveyance"
+        ],
+        "explanation": "Covers the rule that conflicting external conditions do not excuse License compliance and the prohibition only when simultaneous compliance makes conveyance impossible, including the royalty example."
+      }
+    ],
+    "coverage_notes": [
+      "Citations use only the supplied numbered chunk; sections 2–7 and 13–14 were not included in these review units and are not extracted here.",
+      "Section 8 reinstatement and section 10 automatic licensing are represented as conditional scope effects, not as independent grants beyond their stated terms.",
+      "The patent clause's alternative actions are modeled as one any-of requirement; the source-availability branch and the loss/extension branches are alternatives.",
+      "Section 9's limited non-acceptance statements do not create permission to propagate or modify; no broader permission is inferred.",
+      "The chunk contains no standalone general commercial-use, network-service, training, data/input/output, or model-output grant. Definitions and non-ASC provisions are not treated as grants."
+    ]
+  }
+}

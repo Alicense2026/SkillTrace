@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-0223-494e64d8b66b",
+  "status": "SUCCESS",
+  "request_sha256": "f485415338a6a32b9a8c95b7b5d9f2300d86bcc1480c9cb5f9619e6435b43718",
+  "analysis": {
+    "case_id": "chain-0223-494e64d8b66b",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0223-494e64d8b66b:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "S": {
+            "artifact": "chain-0223-494e64d8b66b:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0223-494e64d8b66b:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_service_terms",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0223-494e64d8b66b:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_service_terms",
+        "trigger": "activity:RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      }
+    ],
+    "limitations": [
+      "Anthropic 服务许可摘录限定为服务访问；本案事实为远程调用，未证明复制、修改、分发或模型权重转移。",
+      "BSD-2-Clause 的结构化规则未覆盖 CombinedProduct 对象；下游活动亦未证实发生，因此无法将其条款映射到本案已发生的活动。",
+      "对象图中的 LINK/REMOTE_CALL 不证明上下游许可共同约束同一对象；共同范围未知。相关结构化条款标记为 FIRST_PASS_REVIEW_REQUIRED，结论限于提供的摘录与映射。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 17593,
+    "input_tokens_details": {
+      "cached_tokens": 17408,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 957,
+    "output_tokens_details": {
+      "reasoning_tokens": 241
+    },
+    "total_tokens": 18550,
+    "attribution": {
+      "items": {
+        "msg_05ff153a5e119264016af3008cc2b087d197bb7e545adbfc8e": {
+          "input_tokens": 15561,
+          "cached_tokens": 15378,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15561,
+              "cached_tokens": 15378,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05ff153a5e119264016af300929fa887d1b0e04ba179652b68": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 716,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 716
+            }
+          ]
+        },
+        "rs_05ff153a5e119264016af3009288a887d1b59eff0e7dfefad5": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 241
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.484,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

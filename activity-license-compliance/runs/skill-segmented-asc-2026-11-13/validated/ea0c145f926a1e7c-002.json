@@ -1,0 +1,157 @@
+{
+  "request_sha256": "eb28ff75b158f0767d32c6e10a08c19ff4f0d2f53a7f76e5fcbbf1936ed9320b",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 173,
+        "end_line": 176,
+        "clause_label": "third_party_terms_and_notices",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "covered_materials_are_third_party_vendored_copied_or_separately_licensed",
+          "requires": "comply_with_original_license_terms_and_retain_third_party_terms_and_notices"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 13: applies to identified third-party materials, which are governed by their original license terms and notices rather than this License. For ordinary external dependencies, dependency lockfiles and package metadata are authoritative records.",
+        "condition_explanation": "The predicate applies when material is identified as third-party, vendored, copied, or separately licensed. The applicable original license terms and notices govern; the lockfile and package metadata are authoritative records for ordinary external dependencies.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Retain the applicable original license terms and notices for the third-party material.",
+            "actor": "licensee",
+            "object": "identified third-party, vendored, copied, or separately licensed material and its original license terms and notices",
+            "trigger": "when the licensee handles material identified as third-party, vendored, copied, or separately licensed"
+          }
+        ]
+      },
+      {
+        "start_line": 180,
+        "end_line": 188,
+        "clause_label": "termination_and_first_or_unintentional_violation_cure",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "licensee_complies_with_license",
+                  "rights_not_terminated"
+                ]
+              },
+              {
+                "all": [
+                  "first_or_unintentional_violation",
+                  "written_notice_describes_violation",
+                  "cure_within_30_days_after_receipt"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 14: rights terminate upon failure to comply. For a first or unintentional violation, written notice describing the violation followed by cure within 30 days after receipt preserves rights or automatically reinstates already-terminated rights upon cure. The listed cure examples are not exhaustive. The draft does not expand the treatment of continuing, repeated, or intentional violations beyond rights and remedies available under applicable law.",
+        "condition_explanation": "The first branch requires compliance and rights not having terminated. The alternative cure branch requires all three facts: a first or unintentional violation, receipt of written notice describing it, and cure within 30 days after receipt. Cure may include providing the Customer Attribution Notice, restoring NOTICE, correcting an inaccurate original-developer statement, identifying a Modified Version, or adding LICENSE to a distribution. No additional rule for continuing, repeated, or intentional violations is stated.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk contains no operative patent, sublicensing, fee, or source-provision terms.",
+      "Third-party materials are governed by their original license terms; those external terms are not supplied, so their specific requirements cannot be extracted.",
+      "Section 14 refers to remedies available under applicable law but does not specify them.",
+      "Warranty and liability disclaimers and the no-support statement are not modeled as activity constraints; section 17 disclaims Licensor duties rather than imposing a duty on the licensee.",
+      "Section 18's signed-agreement exception and severability language are not activity permissions or duties; no governing-law, jurisdiction, arbitration, audit, penalty, or minimum-fee term is created."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0038",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0039",
+        "status": "MODELED",
+        "clause_labels": [
+          "third_party_terms_and_notices"
+        ],
+        "reason": "Excludes identified third-party materials from this License, assigns their original terms and notices, requires retention, and identifies authoritative dependency records."
+      },
+      {
+        "unit_id": "P0040",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0041",
+        "status": "MODELED",
+        "clause_labels": [
+          "termination_and_first_or_unintentional_violation_cure"
+        ],
+        "reason": "Models termination for noncompliance and the stated notice-and-cure exception, including the 30-day deadline, reinstatement, cure examples, and limitation on treatment of other violations."
+      },
+      {
+        "unit_id": "P0042",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0043",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer and allocation of risk; no activity-specific permission or duty for this extraction."
+      },
+      {
+        "unit_id": "P0044",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0045",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Liability disclaimer; no activity-specific permission or duty for this extraction."
+      },
+      {
+        "unit_id": "P0046",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States that the Licensor is not required to provide listed support or services; it imposes no activity duty on the licensee."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Entire-agreement, signed-agreement exception, severability, and absence of specified legal terms do not create an activity-specific permission or duty."
+      }
+    ]
+  },
+  "attempt": 1
+}

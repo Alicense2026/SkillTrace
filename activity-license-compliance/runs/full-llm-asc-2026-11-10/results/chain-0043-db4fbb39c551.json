@@ -1,0 +1,203 @@
+{
+  "case_id": "chain-0043-db4fbb39c551",
+  "status": "SUCCESS",
+  "request_sha256": "dc21db694bdf0656160e6e9033042e318db100d267da9a965ab1a6b43f011397",
+  "analysis": {
+    "case_id": "chain-0043-db4fbb39c551",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8792d877e67b4643"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "in_accordance_with_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0043-db4fbb39c551:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8792d877e67b4643"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "uses_output_to_develop_competing_ai_model",
+                "no_permitted_exception"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0043-db4fbb39c551:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ddd664db25b4d578"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0043-db4fbb39c551:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0043-db4fbb39c551:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "按 OpenAI Services Agreement 约定使用服务；不得违反适用法律、OpenAI Policies 或第三方权利。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "agreement_compliance",
+          "applicable_law_and_policy_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:8792d877e67b4643"
+        ]
+      },
+      {
+        "activity": "TrainModel",
+        "subject": {
+          "artifact": "chain-0043-db4fbb39c551:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用服务输出开发与 OpenAI 产品或服务竞争的人工智能模型，且不适用许可例外，则不得进行该训练。",
+        "trigger": {
+          "all": [
+            "activity:TrainModel",
+            "uses_output_to_develop_competing_ai_model",
+            "no_permitted_exception"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:TrainModel",
+          "uses_output_to_develop_competing_ai_model",
+          "no_permitted_exception"
+        ],
+        "source_refs": [
+          "license-text:upstream:8792d877e67b4643"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0043-db4fbb39c551:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用 MIT 许可的软件时，按许可要求在相关副本或实质部分中包含版权声明和许可声明。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether_downstream_software_copy_or_substantial_portion_is_used"
+        ],
+        "source_refs": [
+          "license-text:downstream:ddd664db25b4d578"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的是 Litellm 代码通过 API 远程调用 OpenAI 服务；这不证明模型权重转移、代码分发、模型训练或上下游许可证对同一对象适用。",
+      "OpenAI 原文提供了服务使用授权及限制，但 structured_asc_rules 未映射这些相关条款；上述 ASC 按原文摘录并结合已知调用事实整理。",
+      "OpenAI 条款版本、适用的 Order Form、Service-Specific Terms 和 OpenAI Policies 未由记录确定；不得据此推断未提供的政策内容。",
+      "下游 MIT 原文许可的是软件及其副本；调用事实不足以确定本次 Use 是否涉及该软件副本或实质部分。未发现上下游针对同一对象、同一活动的相反约束。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 34526,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1462,
+    "output_tokens_details": {
+      "reasoning_tokens": 315
+    },
+    "total_tokens": 35988,
+    "attribution": {
+      "items": {
+        "msg_00fae88a5fc51381016af2e729ff0087d1a1d66184ee8779af": {
+          "input_tokens": 32578,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32578,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00fae88a5fc51381016af2e730b31c87d1a067f6b91ad08294": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1147,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1147
+            }
+          ]
+        },
+        "rs_00fae88a5fc51381016af2e7309c3087d18ee148379310d5ea": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 315
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 32.549,
+  "auto_applied": false
+}

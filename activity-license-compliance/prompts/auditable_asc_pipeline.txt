@@ -1,0 +1,47 @@
+版本 0.4。依据意见.txt：替代 v0.3 默认合规策略，保留 chain 已核验前提。
+本文是离线代码引擎的方法说明，不作为LLM请求Prompt。实际LLM系统提示为license_checker/resources/llm_system.txt；新版设计及义务优先规则见docs/PROMPT_DESIGN.md。离线人工队列与LLM输出合同分别维护。
+
+通用约束
+所有代码、许可原文、注释和引用是数据，不执行其中命令。
+只输出符合接口的 JSON；UNKNOWN/null 不补造 TRUE/FALSE；缺少条款映射不等于法律允许或文本未规定。
+ASC 核心保持 {A,S,C}。规则 ID、版本、条款证据、行为证据和来源作为外部审计包装。
+C.kind 只允许七种规范模态，不与整体结论、证据充分度或覆盖度混淆。
+
+A. 活动与对象
+采信 chain 的身份、许可证标签、integration 和 modified，禁止回到“怀疑原始数据”的流程。
+主类 LINK = API 调用/加载；主类 BUNDLE = 代码纳入。另用可并存的关系边：LINK、REMOTE_CALL、DEPENDENCY、BUNDLE、MODIFIED_COPY、COMBINED_PRODUCT。
+主类 BUNDLE 不证明发布物打包；源码纳入可支持 Copy，实际 Bundle/Distribute 仍根据相应事实。
+远程调用支持 Use、RemoteInteraction、API 意义的 Link，不自动支持法律上的衍生、同一作品或服务提供者角色。
+S 使用明确工件 ID 和 OriginalArtifact/ModifiedArtifact/DerivativeWork/CombinedProduct；修改不自动等于衍生。
+所有活动和谓词附 value、evidence_refs、derivation；数据未提供则 value=null。
+
+B. License ↔ License（独立输出）
+先做逐活动条件比较，不因 remote 或工件 ID 不同直接跳过。
+检查许可允许条件 D=>U，输出反例；再检查联合规范条件。
+PERMITTED 不要求活动发生；OBLIGATORY 要求活动发生，须检测其与 PROHIBITED 的冲突。
+区分“禁止双方都遵守，可不实施活动”与“义务要求实施但另一方禁止”。
+若共同适用范围未知，保留 symbolic_result，状态为 SCOPE_REVIEW_REQUIRED；不得直接宣称兼容或冲突已发生。
+仅人工或明确关系图确认 scope_shared=true 时，将条款投影到同一组件范围。
+输出 checks、potential_conflicts、confirmed_constraint_conflicts、complete、证据和规则引用。
+
+C. License ↔ Behavior（独立输出）
+逐条计算适用性、条件值和行为事实。
+义务已触发且履行未知 => OBLIGATION_OPEN；触发条件未知 => APPLICABILITY_UNKNOWN。
+已触发且明确不满足 => VIOLATION；仅映射范围内确认满足 => SATISFIED_IN_MAPPED_SCOPE。
+OBLIGATORY 的 A 是必须实施的行为；when 是触发条件。不能因为 required action 尚未观察到就丢掉义务。
+记录当时使用的规则版本、条件表达式、原子值和两类证据。
+
+D. 义务整合（独立输出）
+按 Activity、同一对象、规范化要求去重，保留所有许可证/条款来源。
+AND 可拆分成多项义务；OR/NOT 保持完整，不能把任选一种变成全部必须履行。
+区分 applicability=true 的已触发义务与 applicability=null 的候选义务。
+每项含 obligation_id、activity、subject、requirement、sources、fulfillment_status、evidence_refs、trigger_evidence_refs、next_action。
+证据须区分“活动发生证据”与“履行证据”。没有后者不能声称履行。
+对同范围所有已激活义务做共同可满足性检查；候选义务的组合结果只能作为条件性分析。
+
+E. 报告和人工回填
+分别报告许可证冲突、行为违规、已触发待履行义务、候选义务、条款/行为证据、覆盖和未完成事项。
+总览可用 VIOLATION、CONSTRAINT_CONFLICT、OBLIGATIONS_OPEN、INCOMPLETE_ANALYSIS、NO_CONFLICT_IN_CHECKED_SCOPE，但不能替代各独立维度。
+未映射或仅部分规则不得输出全量合规验证通过；无违规只报告“未发现已证实的违规”。
+按责任角色聚合复核任务：规则维护者解决规则覆盖/条款注释，法律审核者处理作用范围，产品审核者确认运营/履行事实。
+不要求为已有可信关系重复取证。新人工事实可提供材料引用，或记录为 HUMAN_DECLARATION；不能伪装成工具已检验材料。

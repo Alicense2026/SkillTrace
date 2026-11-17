@@ -1,0 +1,67 @@
+{
+  "request_sha256": "1df24c1afaed584da378cd3c91ea54f3703da283d1852f5a729f24472e41cc08",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 319,
+        "end_line": 319,
+        "clause_label": "gap/provider_delete_online_data_on_user_release_or_deletion",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_releases_service_or_deletes_user_business_data",
+          "requires": "provider_deletes_online_user_business_data_and_ceases_retaining_it_according_to_user_instruction"
+        },
+        "actor_role": "provider",
+        "scope_note": "User Service Agreement, §用户业务数据和公开信息, user business data. When the user releases the service or deletes data, Baidu must delete the online data and, as instructed by the user, stop retaining it.",
+        "condition_explanation": "user_releases_service_or_deletes_user_business_data means either the user releases the service or the user deletes data. The deletion and cessation-of-retention duties are subject to the user's instruction.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Delete the user's online business data and, according to the user's instruction, cease retaining that data.",
+            "actor": "Baidu intelligent cloud",
+            "object": "User business data held online",
+            "trigger": "The user releases the service or deletes the data."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "P0142’s buffer-period duration is incorporated from service-specific terms, product documentation, or service descriptions not supplied here; the locally stated retention and deletion rule is preserved in the existing anchor clause.",
+      "P0151’s service-specific order terms governing charges, resource-use methods, and unused resources are referenced but not supplied; no terms are inferred."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0142",
+        "status": "EXTERNAL_REFERENCE_EXCLUDED",
+        "clause_labels": [
+          "split2/split1/user_data_deletion_and_change",
+          "gap/provider_delete_online_data_on_user_release_or_deletion",
+          "split2/split1/provider_data_storage_and_deletion_after_buffer",
+          "split2/split1/no_post_deletion_retention_export_or_return_duty",
+          "split2/split1/provider_data_center_storage_and_security",
+          "split2/split1/user_cross_region_data_transfer_compliance"
+        ],
+        "reason": "The paragraph’s locally stated data rights, deletion duties, storage/security terms, and cross-region transfer requirements are covered by the cited clauses. The duration of the incorporated buffer period is not supplied, so its contents cannot be extracted."
+      },
+      {
+        "unit_id": "P0151",
+        "status": "EXTERNAL_REFERENCE_EXCLUDED",
+        "clause_labels": [
+          "split2/split1/account_service_activation_and_use",
+          "split2/split1/early_unjustified_unsubscription_fees",
+          "split2/split1/service_order_controls_charges_and_resources",
+          "split2/split1/provider_service_change_notice_and_refund"
+        ],
+        "reason": "The paragraph’s stated activation, early-unsubscription remedy, and service-change notice/refund rules are covered by the cited clauses. The order-specific charging, resource-use, and unused-resource terms are referenced but not supplied."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 2
+}

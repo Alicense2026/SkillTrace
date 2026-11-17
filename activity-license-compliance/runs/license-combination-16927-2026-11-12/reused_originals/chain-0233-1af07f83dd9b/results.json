@@ -1,0 +1,164 @@
+{
+  "case_id": "chain-0233-1af07f83dd9b",
+  "status": "SUCCESS",
+  "request_sha256": "feecf3d5749aea1d4da4cd9bd9eb8e459fba73f1cfb64b983a67f1ece5c09521",
+  "analysis": {
+    "case_id": "chain-0233-1af07f83dd9b",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1af07f83dd9b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:716d8b602d8c0b68"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1af07f83dd9b:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "阿里云摘录针对模型体验生成内容的用途作出限制；现有事实仅确认远程服务调用和使用，未证明所涉使用或内容符合摘录中的受限情形。摘录标记为FIRST_PASS_REVIEW_REQUIRED，完整适用范围及例外未由该摘录确定。",
+      "对象图仅确认API调用/加载关系；未确认两许可约束同一对象或CC许可材料涵盖该服务调用。因此不据此认定许可冲突，也不将CC许可条款自动套用于上游服务。",
+      "下游CC许可摘录所示授权限于Licensed Rights及Licensed Material；本次事实未证明实际行使该许可权利。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0233-1af07f83dd9b:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用行为符合摘录所述限制情形，仅将模型体验生成内容用于体验模型效果；不得用于其他目的或商业化，也不得提供给第三方或在第三方平台使用、传播或分发。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "conduct_matches_prohibition_in_excerpt"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0233-1af07f83dd9b:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "如使用行为行使CC许可所授予的Licensed Rights，须在该许可授权范围内并遵守CC许可条件。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "within_license_scope"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope"
+        ],
+        "source_refs": [
+          "license-text:downstream:716d8b602d8c0b68"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21862,
+    "input_tokens_details": {
+      "cached_tokens": 21632,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1057,
+    "output_tokens_details": {
+      "reasoning_tokens": 211
+    },
+    "total_tokens": 22919,
+    "attribution": {
+      "items": {
+        "msg_0b9b79e4fffd3ea5016af3010b5e3487d1846099070baba29c": {
+          "input_tokens": 19830,
+          "cached_tokens": 19602,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19830,
+              "cached_tokens": 19602,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b9b79e4fffd3ea5016af3011095b887d19cd166061f111ce7": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 846,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 846
+            }
+          ]
+        },
+        "rs_0b9b79e4fffd3ea5016af301107e9c87d1801a1e35774caa6a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 211
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.631,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

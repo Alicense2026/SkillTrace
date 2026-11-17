@@ -1,0 +1,136 @@
+{
+  "case_id": "chain-0113-5c52374923f8",
+  "status": "SUCCESS",
+  "request_sha256": "69f302ced47da47e0c9279681a9bf8f2307a14a3ce84170fb39549156e3562c6",
+  "analysis": {
+    "case_id": "chain-0113-5c52374923f8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0113-5c52374923f8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:5dd080570db8ab13"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0113-5c52374923f8:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "BSD-2-Clause摘录支持对上游原始资产的Use附条件许可，但未提供通知保留条款的完整上下文；该条件按首轮结构化抽取列为义务。",
+      "对象图确认下游产品与上游资产存在API调用/链接关系，但依赖及共同许可约束范围未知（scope_shared=null）。不同对象上的许可条款不足以证明冲突。",
+      "结构化条款未映射RemoteInteraction；不得仅因远程调用推断分发、修改、源码提供或权重转移。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "保留适用通知。",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b"
+        ],
+        "subject": {
+          "artifact": "chain-0113-5c52374923f8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "retain_applicable_notices"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18723,
+    "input_tokens_details": {
+      "cached_tokens": 18560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 757,
+    "output_tokens_details": {
+      "reasoning_tokens": 189
+    },
+    "total_tokens": 19480,
+    "attribution": {
+      "items": {
+        "msg_0f142c1cfd0e7bab016af2fbf73ca487d2bc95a4a2a35a3efe": {
+          "input_tokens": 16691,
+          "cached_tokens": 16530,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16691,
+              "cached_tokens": 16530,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0f142c1cfd0e7bab016af2fbfb14d087d2af483910250d0726": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 568,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 568
+            }
+          ]
+        },
+        "rs_0f142c1cfd0e7bab016af2fbfafdb887d2a7eedc370fda6a7f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 189
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 16.603,
+  "auto_applied": false,
+  "aggregate_count": 8
+}

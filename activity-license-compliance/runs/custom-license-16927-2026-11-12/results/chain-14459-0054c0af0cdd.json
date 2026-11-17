@@ -1,0 +1,227 @@
+{
+  "case_id": "chain-14459-0054c0af0cdd",
+  "source_csv_line": 14460,
+  "row": {
+    "github_repo": "yaswarm-agency",
+    "github_url": "https://github.com/YaRepo/yaswarm-agency",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "claude-code",
+    "artifact_url": "https://docs.anthropic.com/en/docs/about-claude/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: apps/agency-ui/server/routes/bots.ts:402 ｜ 调用原文: claude: \"claude-code\",（引用处 第122行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: bots.ts 中作为后端 CLI 工具/模型后端登记",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "yarepo/yaswarm-agency",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4",
+    "filename": "_licenseref_full/texts/2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:yaswarm-agency-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:57bc8ca74b09832f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14459-0054c0af0cdd:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:57bc8ca74b09832f"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14459-0054c0af0cdd:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:358419e064b2d76d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "prior_written_authorization_from_copyright_holder"
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14459-0054c0af0cdd:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文摘录规定服务访问须遵守服务条款；未提供服务条款全文或其具体履行事实，不能进一步判断是否满足。",
+      "下游 L5 条款针对 YaSwarm 软件；对象图显示的是下游对上游服务的链接/远程调用，不证明上游服务与 YaSwarm 软件为同一受约束对象。因此不据此认定许可冲突。",
+      "下游 Use 活动及是否取得事先书面授权均无事实。未将未提供的授权条款范围或条件推定为已满足或已违反。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-14459-0054c0af0cdd:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守 Anthropic 服务条款。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:57bc8ca74b09832f"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-14459-0054c0af0cdd:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守 Anthropic 服务条款。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:57bc8ca74b09832f"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-14459-0054c0af0cdd:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用 YaSwarm 软件前须取得版权持有人的事先书面授权。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "prior_written_authorization_from_copyright_holder"
+        ],
+        "source_refs": [
+          "license-text:downstream:358419e064b2d76d"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-14459-0054c0af0cdd"
+  },
+  "usage": {
+    "input_tokens": 16969,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1247,
+    "output_tokens_details": {
+      "reasoning_tokens": 267
+    },
+    "total_tokens": 18216,
+    "attribution": {
+      "items": {
+        "msg_010ef77ba2548bea016af53dd4a65487d18063f92b0c4777af": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_010ef77ba2548bea016af53dd4a65487d1a43f53b446b9e05b": {
+          "input_tokens": 14899,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14899,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_010ef77ba2548bea016af53dda791887d195cd2af2a3c7b411": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 980,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 980
+            }
+          ]
+        },
+        "rs_010ef77ba2548bea016af53dda5d5487d1a84b84007c5e15d0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 267
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "f8af775a9ef983fc70ae51458dfb7e4bec14455ee2798c4bde6d61fd43a32f5d",
+  "elapsed_seconds": 28.53
+}

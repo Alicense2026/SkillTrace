@@ -1,0 +1,584 @@
+{
+  "case_id": "skill-01746",
+  "csv_row": 1747,
+  "source_excel_row": "2403",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01746-1794599297413259000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方使用上游 Llama Materials 时须遵守适用法律法规（包括贸易合规）及适用的 Acceptable Use Policy；不得从未提供的外部政策文本推定更多具体义务。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-01746:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "applicable_law_compliance",
+        "acceptable_use_policy_compliance"
+      ]
+    },
+    {
+      "activity": "TrainModel",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方不得使用 Llama Materials 或其输出、结果改进其他大型语言模型；Meta Llama 3及其衍生作品除外。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-01746:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "uses_llama_materials_or_outputs_to_improve_large_language_model",
+      "unresolved_predicates": [
+        "uses_llama_materials_or_outputs_to_improve_large_language_model",
+        "target_model_is_meta_llama_3_or_derivative"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若许可方或其关联方在该版本发布日期前一日历月的月活超过7亿，须向 Meta 申请许可；在 Meta 明确授予相关权利前不得行使协议权利。申请本身不等于获准。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-01746:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "licensee_or_affiliate_products_exceeded_700m_mau_threshold_on_release_date",
+      "unresolved_predicates": [
+        "licensee_or_affiliate_products_exceeded_700m_mau_threshold_on_release_date",
+        "meta_expressly_grants_rights"
+      ]
+    }
+  ],
+  "limitations": [
+    "本例已知的是远程 API 调用及对上游材料的使用；没有模型权重转移、修改或分发事实。GPL-3.0针对下游独立代码的条款不因远程调用自动约束上游材料；对象图未确认两许可适用于同一对象，故无许可证冲突结论。",
+    "未提供外部 AUP 全文；仅保留本地许可明确纳入的遵守义务，不推断其具体内容。未提供实际使用场景、月活阈值或授权状态，故不判定行为违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "使用许可；另列限制已单独抽取。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本例无复制上游材料事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本例无分发或提供上游材料事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本例无创作衍生作品事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本例无修改事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发或提供使用上游材料的产品、服务事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有创建或分发基于上游材料改进的模型事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发上游材料副本事实。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用上游材料时适用法律及AUP义务已合并保留。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "保留不使用材料或输出改进其他大型语言模型的条件限制。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "阈值及明确授权状态未知，条件义务仍保留。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有为满足模型命名要求使用商标的事实。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无衍生作品或修改事实。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关诉讼或权利主张事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有协议终止事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有第三方索赔事实；该项亦无词表内忠实活动映射。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "其适用范围由U009的AUP遵守义务涵盖；具体禁止用途未知。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "其适用范围由U009的AUP遵守义务涵盖；未见相关用途事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "其适用范围由U009的AUP遵守义务涵盖；未见相关用途事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅许可复制下游GPL许可证文件；本例无该活动事实。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅许可分发下游GPL许可证文件；本例无该活动事实。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象为下游GPL程序，非本例调用的上游材料。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无下游GPL程序运行输出的事实。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象为未分发的下游GPL覆盖作品。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无代为修改或提供运行设施的事实。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无下游GPL覆盖作品分发或再许可事实。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关技术措施或法律事实。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发下游GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发GPL程序原样源码副本事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无出售下游GPL程序副本事实。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发基于GPL程序的修改作品事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发修改后的GPL源码事实。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发修改后的GPL源码事实。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发基于GPL程序的修改作品事实。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无相关交互界面或作品分发事实。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无组合或分发GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发GPL对象码事实。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无物理产品中的对象码分发事实。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无物理产品中的对象码分发事实。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无相关对象码分发事实。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无指定地点提供对象码事实。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无点对点对象码分发事实。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无对象码作品分发事实。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无用户产品、对象码分发或交易事实。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无接收方修改或拒绝网络访问事实。"
+    },
+    {
+      "rule_ref": "D027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无GPL对应源码或安装信息提供事实。"
+    },
+    {
+      "rule_ref": "D028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无适用于该GPL程序的附加许可事实。"
+    },
+    {
+      "rule_ref": "D029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无向GPL覆盖作品添加材料事实。"
+    },
+    {
+      "rule_ref": "D031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无经权利人授权向GPL作品添加材料或附加条款事实。"
+    },
+    {
+      "rule_ref": "D032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无GPL再许可或传递其他许可证材料事实。"
+    },
+    {
+      "rule_ref": "D033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无向GPL覆盖作品添加条款事实。"
+    },
+    {
+      "rule_ref": "D034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象为下游GPL程序；没有修改该覆盖作品的事实。"
+    },
+    {
+      "rule_ref": "D035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无传播下游GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无停止违规或许可恢复事实。"
+    },
+    {
+      "rule_ref": "D037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无收到通知、补救或许可恢复事实。"
+    },
+    {
+      "rule_ref": "D038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无下游接收者许可状态事实。"
+    },
+    {
+      "rule_ref": "D039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无GPL权利终止事实。"
+    },
+    {
+      "rule_ref": "D040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本例不是接收或运行下游GPL程序副本的事实。"
+    },
+    {
+      "rule_ref": "D041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无点对点接收GPL副本事实。"
+    },
+    {
+      "rule_ref": "D042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无传递GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无第三方收到GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无实体交易传播GPL作品事实。"
+    },
+    {
+      "rule_ref": "D045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无对GPL权利施加进一步限制或相关专利诉讼事实。"
+    },
+    {
+      "rule_ref": "D046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象为GPL贡献者版本的专利许可，不是远程调用的上游材料。"
+    },
+    {
+      "rule_ref": "D047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无修改GPL贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无出售GPL贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无要约出售GPL贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D050",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无传播GPL贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无依赖专利许可并传递GPL覆盖作品的事实。"
+    },
+    {
+      "rule_ref": "D052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无单一安排下分发及授予专利许可事实。"
+    },
+    {
+      "rule_ref": "D053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无相关第三方安排、歧视性专利许可或分发事实。"
+    },
+    {
+      "rule_ref": "D054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无依赖GPL专利许可或抗辩事实。"
+    },
+    {
+      "rule_ref": "D055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无GPL覆盖作品传递或不能同时履行的其他义务事实。"
+    },
+    {
+      "rule_ref": "D056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无与AGPLv3作品链接事实。"
+    },
+    {
+      "rule_ref": "D057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无与AGPLv3作品组合事实。"
+    },
+    {
+      "rule_ref": "D058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无传递AGPL/GPL组合作品事实。"
+    },
+    {
+      "rule_ref": "D059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无选择GPL版本的相关行为事实。"
+    },
+    {
+      "rule_ref": "D060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无代理接受版本或选择版本的事实。"
+    },
+    {
+      "rule_ref": "D061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发该示例所指程序事实。"
+    },
+    {
+      "rule_ref": "D062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无修改该示例所指程序事实。"
+    },
+    {
+      "rule_ref": "D063",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无应用GPL示例通知的事实。"
+    },
+    {
+      "rule_ref": "D064",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无该程序终端交互或启动事实。"
+    },
+    {
+      "rule_ref": "D065",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有将GPL程序并入专有程序的事实；远程API调用不等于组合。"
+    }
+  ]
+}

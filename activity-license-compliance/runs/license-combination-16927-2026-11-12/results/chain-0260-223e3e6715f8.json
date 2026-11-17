@@ -1,0 +1,145 @@
+{
+  "case_id": "chain-0260-223e3e6715f8",
+  "input_group_row": 260,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "阿里云百炼服务特别说明",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0260-223e3e6715f8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0260-223e3e6715f8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "阿里云原文摘录涵盖体验功能，并限制生成内容的用途及向第三方提供、传播或分发；现有事实只确认使用及远程服务调用，不能判定实际行为是否落入摘录中的特定禁止情形。",
+      "上游结构化规则标记为 FIRST_PASS_REVIEW_REQUIRED；仅凭所给摘录不能确定其适用对象、完整上下文或例外。",
+      "下游 PolyForm 许可的条款范围是许可方软件；现有对象图仅确认 API 链接/远程调用，未证明该许可的软件被纳入或适用于上游服务对象，故不据此推定下游许可义务或许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用阿里云体验服务生成内容，应仅将生成内容用于体验模型效果；不得用于其他用途、商业化目的，或以任何形式提供给第三方、在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "subject": {
+          "artifact": "chain-0260-223e3e6715f8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "experience_generated_content_use"
+          ]
+        },
+        "unresolved_predicates": [
+          "experience_generated_content_use",
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 33974,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 892,
+    "output_tokens_details": {
+      "reasoning_tokens": 304
+    },
+    "total_tokens": 34866,
+    "attribution": {
+      "items": {
+        "msg_070e9c1455f4776b016af53085974087d09913ce22e358293f": {
+          "input_tokens": 31904,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31904,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_070e9c1455f4776b016af53085974087d0be00a1df13e97afc": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_070e9c1455f4776b016af5308bdf2887d0a2c229f793eb0b02": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 588,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 588
+            }
+          ]
+        },
+        "rs_070e9c1455f4776b016af5308bc39087d0a336988eb0dd81ba": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 304
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "1a5fc07fa4e7a5f29f9c49bc10720c4fdcc0130329ecc505d052739a6be983f6",
+  "elapsed_seconds": 25.77
+}

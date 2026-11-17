@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-19607-65302603a4d9",
+  "source_csv_line": 19608,
+  "row": {
+    "github_repo": "kawa.mcp",
+    "github_url": "https://github.com/kawacode-ai/kawa.mcp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ai.hashgrid/sdk",
+    "artifact_url": "https://github.com/hashgrid-labs/sdk",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/index.ts:3 ｜ 调用原文: import { Server } from '@modelcontextprotocol/sdk/server/index.js' ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: Real MCP SDK dependency imported in src/index.ts for Server, StdioServerTransport, and MCP request/response types.",
+    "batch": "12201-14200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "kawacode-ai/kawa.mcp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "9a18b8c81d537efb49be034e068a900d6f03d0203d9b77f1a4c31185c21450ed",
+    "filename": "_licenseref_full/texts/9a18b8c81d537efb49be034e068a900d6f03d0203d9b77f1a4c31185c21450ed.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:kawa.mcp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-19607-65302603a4d9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-19607-65302603a4d9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "MIT 条款适用于上游 SDK；对象图确认下游与上游存在 API 链接和远程调用，但未确认两份许可约束共同适用于同一对象，因此未据此推断许可冲突。",
+      "下游 LicenseRef-Custom 的摘录含托管服务、商业产品再分发等限制，但现有事实未证明下游软件被作为托管服务提供、被分发或被捆绑；不得将 API 调用本身视作这些活动。",
+      "使用 LicenseRef-Custom 软件的许可条件没有对应的下游 Use 活动事实，故未据此生成已触发的义务或违规发现。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 MIT 软件时纳入版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "subject": {
+          "artifact": "chain-19607-65302603a4d9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21808,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 887,
+    "output_tokens_details": {
+      "reasoning_tokens": 405
+    },
+    "total_tokens": 22695,
+    "attribution": {
+      "items": {
+        "msg_06e301e033cf63b7016af53e9a83dc87d1895218f230cc4c5b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06e301e033cf63b7016af53e9a83dc87d1b2f880ea1e0e19e4": {
+          "input_tokens": 19738,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19738,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06e301e033cf63b7016af53ea254f087d1b4c6798dbe68e055": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 482,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 482
+            }
+          ]
+        },
+        "rs_06e301e033cf63b7016af53ea2394c87d19618cb5f851b07c6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 405
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "7b750946b63cf6e6a36f0786cab414a8c4fc1bca05aea464d852010a41ad362d",
+  "elapsed_seconds": 22.19
+}

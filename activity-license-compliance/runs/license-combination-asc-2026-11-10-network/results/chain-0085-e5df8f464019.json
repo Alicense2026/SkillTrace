@@ -1,0 +1,157 @@
+{
+  "case_id": "chain-0085-e5df8f464019",
+  "status": "SUCCESS",
+  "request_sha256": "f23f9a1013af1aebdf7335b7074ba9ca48502758c36d3d4855a5665fb8bfea0b",
+  "analysis": {
+    "case_id": "chain-0085-e5df8f464019",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_laws_and_Llama_Acceptable_Use_Policy",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0085-e5df8f464019:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_Llama_materials_or_outputs_to_improve_another_large_language_model",
+            "when": "activity:TrainModel"
+          },
+          "S": {
+            "artifact": "chain-0085-e5df8f464019:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0085-e5df8f464019:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with applicable laws and regulations and the Llama Materials Acceptable Use Policy.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_applicable_laws",
+          "compliance_with_Llama_Acceptable_Use_Policy"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      },
+      {
+        "activity": "TrainModel",
+        "subject": {
+          "artifact": "chain-0085-e5df8f464019:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use Llama Materials or their outputs to improve another large language model, except Meta Llama 3 or its derivative works.",
+        "trigger": "activity:TrainModel",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:TrainModel",
+          "use_of_Llama_materials_or_outputs_to_improve_another_large_language_model"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes use, remote service interaction, and a link to the upstream Llama 3 artifact; it states code modification is not applicable. It does not establish distribution, modification, or transfer of model weights.",
+      "The object graph does not establish that the Apache-2.0 downstream artifact and the Llama materials are the same or shared licensed subject (scope_shared is unknown). No license-license conflict is established from the available facts and excerpts.",
+      "The Llama excerpt incorporates the Acceptable Use Policy by reference, but its contents are not provided; specific policy restrictions cannot be assessed.",
+      "The structured Llama extraction is marked FIRST_PASS_REVIEW_REQUIRED. The excerpt supports the cited use conditions and training restriction, but does not establish any further duties for this API-call scenario."
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22773,
+    "input_tokens_details": {
+      "cached_tokens": 22656,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1147,
+    "output_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "total_tokens": 23920,
+    "attribution": {
+      "items": {
+        "msg_0514b680a80de3ae016af2facc464c87d29b6a61dc5e8e33ea": {
+          "input_tokens": 20741,
+          "cached_tokens": 20626,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20741,
+              "cached_tokens": 20626,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0514b680a80de3ae016af2fad30b0487d2aeb34c804c617cec": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 834,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 834
+            }
+          ]
+        },
+        "rs_0514b680a80de3ae016af2fad2f3fc87d28f32eb8cd86d245a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 313
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.352,
+  "auto_applied": false,
+  "aggregate_count": 14
+}

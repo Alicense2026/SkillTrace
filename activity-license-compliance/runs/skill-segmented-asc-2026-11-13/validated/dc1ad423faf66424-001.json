@@ -1,0 +1,757 @@
+{
+  "request_sha256": "b71cd1d823a2ccdd783510b9fb6b3de3291a7ff30a710ca8bee70c036c547bbb",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 21,
+        "end_line": 21,
+        "clause_label": "registration_or_verification_required",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "user_registration_or_real_name_verification"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, platform service access; registration or real-name verification is required before using the service.",
+        "condition_explanation": "user_registration_or_real_name_verification means completing user registration or real-name verification first.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 24,
+        "end_line": 24,
+        "clause_label": "capacity_and_guardian_registration",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_lacks_applicable_civil_capacity",
+          "requires": "guardian_supervision_guidance_and_consent"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, registration; applies when the user lacks civil capacity appropriate to the conduct under PRC law.",
+        "condition_explanation": "guardian_supervision_guidance_and_consent means registration occurs under a guardian’s supervision and guidance and with the guardian’s consent.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Register only under the guardian’s supervision and guidance and with the guardian’s consent.",
+            "actor": "user lacking applicable civil capacity",
+            "object": "platform account registration",
+            "trigger": "The user lacks civil capacity appropriate to the conduct under PRC law and registers for the service."
+          }
+        ]
+      },
+      {
+        "start_line": 25,
+        "end_line": 25,
+        "clause_label": "limited_unauthenticated_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "not_logged_in_or_registered",
+          "requires": "core_services_and_functions_not_accessed"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, platform service; use without login or registration is possible but excludes core services and functions.",
+        "condition_explanation": "not_logged_in_or_registered means using the platform without signing in or creating an account; core services and functions are unavailable in that state.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 28,
+        "end_line": 34,
+        "clause_label": "account_registration_and_representative_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "accurate_user_type_and_authorized_account_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, account registration and use. Entity representatives warrant authority; the entity bears legal and financial responsibility for their acceptance/use and related personnel’s account access/use; individual users bear responsibility for their own use. Platform may freeze or close accounts or refuse service for improper registration or improper multiple-account use, with compensation liability if that conduct causes loss.",
+        "condition_explanation": "accurate_user_type_and_authorized_account_use means selecting the appropriate personal or enterprise user type, using a mobile number the user is entitled to use, supplying required information, and accepting the agreement; for an entity, the representative has authority and the entity accepts the stated responsibility.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Register under the user type appropriate to the capacity represented and actual service use.",
+            "actor": "user",
+            "object": "platform account",
+            "trigger": "The user registers or uses the platform."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure the representative is legally authorized to bind the entity and has authority to accept the agreement for it.",
+            "actor": "entity representative",
+            "object": "entity’s acceptance of and use of the platform service",
+            "trigger": "An individual accepts the agreement or uses the service as an entity’s representative."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear legal and financial responsibility for the representative’s voluntary acceptance or use and for related employees’, agents’ or contractors’ access to or use of the entity account.",
+            "actor": "represented enterprise or entity",
+            "object": "entity account and platform service use",
+            "trigger": "The representative accepts the agreement or uses the service for the entity, or related personnel access or use the entity account."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear responsibility for the individual user’s own service use.",
+            "actor": "individual user",
+            "object": "platform service use",
+            "trigger": "The user represents only themself and uses the service."
+          }
+        ]
+      },
+      {
+        "start_line": 37,
+        "end_line": 38,
+        "clause_label": "account_personal_use_and_security",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "third_party_account_access_or_account_information_access",
+          "requires": "platform_prior_consent"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, account and associated personal information. Account is limited to the user; direct or indirect authorization of third-party account use or access to account information is invalid absent platform consent. The platform may refuse service or terminate if its stated rules and procedures determine account use may endanger account or platform information security.",
+        "condition_explanation": "third_party_account_access_or_account_information_access means the user directly or indirectly authorizes another party to use the account or obtain information under it; platform_prior_consent means consent from the platform before that authorization.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not authorize a third party, directly or indirectly, to use the account or access information under it without platform consent.",
+            "actor": "account user",
+            "object": "platform account and information associated with it",
+            "trigger": "A third party would use the account or obtain information under it and the platform has not consented."
+          }
+        ]
+      },
+      {
+        "start_line": 41,
+        "end_line": 42,
+        "clause_label": "account_information_updates",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "platform_requests_or_law_requires_information_verification",
+          "requires": "latest_true_complete_and_valid_information_provided"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, user-provided account information; includes cooperation with legally required verification and consequences for failure to update, respond, or provide valid information.",
+        "condition_explanation": "platform_requests_or_law_requires_information_verification means the platform requests updated information or applicable law requires the platform to verify specified user information.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Keep provided information updated and, when requested for legally required verification, cooperate by supplying current, truthful, complete, and valid information.",
+            "actor": "user",
+            "object": "user-provided account and verification information",
+            "trigger": "The user has provided information, or the platform requests cooperation with a legally required verification."
+          }
+        ]
+      },
+      {
+        "start_line": 45,
+        "end_line": 45,
+        "clause_label": "platform_service_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "agreement_compliance"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, internet natural-language processing, open-platform, API-call, and subsequently developed platform services; platform may add or reduce service content for business needs.",
+        "condition_explanation": "agreement_compliance means compliance with applicable agreement terms and service-specific requirements; service availability and content may change.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 46,
+        "end_line": 46,
+        "clause_label": "orderly_platform_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "proper_conduct_and_no_disruption_of_platform_order"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, use of the platform.",
+        "condition_explanation": "proper_conduct_and_no_disruption_of_platform_order means not engaging in improper conduct or disrupting normal platform order.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use the platform without improper conduct and without disrupting its normal order.",
+            "actor": "user",
+            "object": "platform service",
+            "trigger": "Any use of the platform."
+          }
+        ]
+      },
+      {
+        "start_line": 47,
+        "end_line": 68,
+        "clause_label": "prohibited_input_and_induced_output_content",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "input_or_induced_output_contains_prohibited_content"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, content submitted to the platform or induced from it, including statements and images. The enumerated prohibited categories include unlawful or harmful content, rights-infringing or potentially infringing material, private or personal information, and other listed categories; applicable law also governs published statements and images.",
+        "condition_explanation": "input_or_induced_output_contains_prohibited_content means the user submits or induces output containing any content enumerated in lines 48–67, including content prohibited by applicable laws or regulations.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not submit or induce the platform to output statements or images containing any enumerated prohibited category or otherwise prohibited by applicable law.",
+            "actor": "user",
+            "object": "user input to the platform and content induced from the platform",
+            "trigger": "The proposed input or induced output contains content described in lines 48–67 or prohibited by applicable law."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable national laws and regulations when publishing statements or images.",
+            "actor": "user",
+            "object": "published statements and images",
+            "trigger": "The user publishes statements or images."
+          }
+        ]
+      },
+      {
+        "start_line": 70,
+        "end_line": 82,
+        "clause_label": "platform_misuse_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "use_involves_any_enumerated_prohibited_method"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, platform, platform models, platform-related data, code, and other platform intellectual-property content. Restrictions cover extraction, specified high-stakes or decision uses, removal of copyright information, reverse engineering, exploitation of Zhipu IP, unauthorized technical interference or tools, competitive model activity, malicious-code generation, and other unauthorized or harmful use. The specific-function exception applies to the copying/modification/etc. restriction in line 76; the specific-business-scenario exception applies to the model/prompt/generated-content restriction in line 80.",
+        "condition_explanation": "use_involves_any_enumerated_prohibited_method means any action listed in lines 70–82. For line 76, copying, modifying, adding, deleting, hooking into, or creating derivative works from the specified platform data or systems is prohibited except through a specific function opened by Zhipu. For line 80, use of platform models, prompts, or model-generated content for other-model development/training/annotation/fine-tuning/optimization/iteration is prohibited except combining the platform model with the user’s specific business scenario; use of platform models or exported data to develop, train, or improve competing algorithms or models is also prohibited.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not attempt to extract data, parameters, or code from the platform; use it for listed qualification-dependent services or any decision-making; remove copyright information; reverse engineer, disassemble, decompile, or otherwise seek source code; or exploit Zhipu intellectual-property content in the listed ways.",
+            "actor": "user",
+            "object": "platform, platform models, and Zhipu intellectual-property content",
+            "trigger": "Any use of the platform or its intellectual-property content."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not copy, modify, add to, delete, hook into, or create derivative works from the platform, specified runtime-memory data, client-server interaction data, or system data necessary to run the platform, except through a specific function opened by Zhipu; do not use unauthorized plugins,外挂, or third-party tools or services to connect to the platform or related systems.",
+            "actor": "user",
+            "object": "platform and its specified runtime, interaction, and system data",
+            "trigger": "The conduct concerns the specified platform or data and is not performed through a specific function opened by Zhipu."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not alter or forge software instructions or data to change functions or effects, or operate or publicly distribute software or methods for those purposes, whether or not commercially; do not use non-Zhipu-developed or unauthorized third-party software, plugins,外挂, or systems to access or use the service, or make, publish, or distribute those tools; do not interfere with the platform, its components, modules, or data.",
+            "actor": "user",
+            "object": "platform software, service, components, modules, and data",
+            "trigger": "Any listed alteration, distribution, unauthorized access, tool-making, or interference."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use platform models, prompts, or content generated through platform-model prompts for development, training, annotation, fine-tuning, optimization, iteration, or similar activity involving a new or other model, except use that combines the platform model with the user’s specific business scenario; do not use platform models or exported data to develop, train, or improve an algorithm or model that competes with Zhipu.",
+            "actor": "user",
+            "object": "platform models, prompts, model-generated content, and exported data",
+            "trigger": "The use is for an activity or competing-model purpose stated in line 80 and is not the stated specific-business-scenario exception."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the platform or its models to generate malicious code or engage in other conduct not expressly authorized by Zhipu or that may harm Zhipu’s interests.",
+            "actor": "user",
+            "object": "platform and platform models",
+            "trigger": "The conduct generates malicious code or is otherwise unauthorized or potentially harmful to Zhipu’s interests."
+          }
+        ]
+      },
+      {
+        "start_line": 83,
+        "end_line": 83,
+        "clause_label": "third_party_service_provider_responsibility",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "user_accepts_all_corresponding_rights_duties_and_liabilities"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, user-provided services to third parties using the platform or its models. The user bears the corresponding rights, duties, and responsibilities; this is not a general platform-service resale grant.",
+        "condition_explanation": "user_accepts_all_corresponding_rights_duties_and_liabilities means the user, not Zhipu, assumes the rights, obligations, and responsibilities arising from providing the third-party service.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear the rights, obligations, and responsibilities associated with the service provided to the third party using the platform or its models.",
+            "actor": "user providing the third-party service",
+            "object": "service provided to the third party using the platform or its models",
+            "trigger": "The user provides a service to any third party using the platform or its models."
+          }
+        ]
+      },
+      {
+        "start_line": 84,
+        "end_line": 84,
+        "clause_label": "overseas_use_and_export_controls",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "use_or_transfer_is_overseas_or_export_related",
+          "requires": "applicable_foreign_rules_and_required_approvals_and_zhipu_prior_consent"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, platform and products developed using it. Overseas use must follow applicable foreign restrictions and supervision. Transfers/resales/exports to regulated countries or persons are prohibited; direct or indirect export of the platform or technology containing it requires the government approvals and Zhipu’s prior consent specified in the agreement.",
+        "condition_explanation": "use_or_transfer_is_overseas_or_export_related includes overseas platform use, resale/export/transfer to regulated countries or persons, and export of the platform or technology containing or internal to it. For export of the platform or such technology, both necessary government approval and prior Zhipu consent are required.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable US, EU, and other foreign-government laws, regulations, policies, restrictions, and supervision when using the platform overseas.",
+            "actor": "user",
+            "object": "overseas platform use",
+            "trigger": "The user uses the platform overseas."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not resell, export, or transfer the platform or a product developed using it to a regulated country or regulated person.",
+            "actor": "user",
+            "object": "platform or product developed using the platform",
+            "trigger": "The destination is a country or person subject to regulated controls."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not directly or indirectly export the platform or technology containing or internal to it unless necessary government approvals and Zhipu’s prior consent have both been obtained.",
+            "actor": "user",
+            "object": "platform and technology containing or internal to the platform",
+            "trigger": "A direct or indirect export is proposed and either necessary government approval or Zhipu’s prior consent is absent."
+          }
+        ]
+      },
+      {
+        "start_line": 86,
+        "end_line": 93,
+        "clause_label": "service_compliance_operational_duties",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "applicable_law_compliance_and_service_specific_duties"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, platform services and API-developed products/apps. Covers applicable law, filings and assessments, accurate model-use disclosures, generated-content governance, handling illegal or harmful API responses, virtual-person rights and competition, and restrictions on third-party service provision. Service resale, credentials-sharing and equivalent provision require prior written consent; lawful compliant integration into the user’s own product for its end users is expressly not treated as restricted conduct, subject to agreement and product/subscription rules.",
+        "condition_explanation": "applicable_law_compliance_and_service_specific_duties means compliance with the cited and other applicable laws, regulations, policies, and standards; required filings and assessments for API-developed products; truthful and accurate disclosures; effective safety, legality, and compliance controls; timely handling of discovered or reported illegal or harmful responses; and, when creating virtual persons, protection of third-party rights and avoidance of unfair competition. The third-party service restriction in line 92 has a prior-written-consent exception and an own-product compliant-integration exception.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use platform services in compliance with the cited generative-AI, algorithm-recommendation, deep-synthesis, and other applicable laws, regulations, policies, and standards.",
+            "actor": "user",
+            "object": "platform services",
+            "trigger": "Any use of platform services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Complete applicable algorithm filing, security assessment, launch filing, approval, evaluation, and other legally or policy-required compliance procedures for products and applications developed using the platform’s model API.",
+            "actor": "user or API product/application operator",
+            "object": "API-developed product or application",
+            "trigger": "The user calls a platform model API to develop a product or application, to the extent the procedure is required by applicable law or policy."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Accurately and truthfully disclose use of platform models and any other models as required by applicable rules and authorities, and do not falsely or misleadingly label or display a product or service as using a platform model when it does not.",
+            "actor": "user",
+            "object": "model-use disclosures, labels, and displays for products and services",
+            "trigger": "The user represents model use in a product or service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Effectively manage and control the safety, legality, and compliance of application-generated content, establishing mechanisms including content review, user management, data security, monitoring and warning, and emergency response.",
+            "actor": "user or application operator",
+            "object": "application-generated content and application controls",
+            "trigger": "The user operates an application that generates content."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly take legally required deletion, blocking, withdrawal, or other disposition measures for illegal or harmful information discovered in or reported from API responses, to ensure lawful and compliant application operation.",
+            "actor": "user or application operator",
+            "object": "illegal or harmful information returned by the API",
+            "trigger": "The user discovers or is notified of illegal or harmful information in an API response."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure a virtual person’s appearance, avatar, name, character setting, and creation-process data and content do not infringe third-party rights, and do not use the virtual person for conduct that may constitute unfair competition.",
+            "actor": "user creating the virtual person",
+            "object": "virtual person and its creation-process data and content",
+            "trigger": "The user creates a virtual person using the platform."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not provide the platform service, related API keys, tokens, credentials, account permissions, or other service capabilities to a third party by rental, loan, sale, distribution, resale, transfer, account sharing, sublicense, repackaging, service relay, aggregation relay, or equivalent means without prior written Zhipu consent.",
+            "actor": "user",
+            "object": "platform service and related access credentials or service capabilities",
+            "trigger": "The user proposes to provide them to a third party through a listed or equivalent means and lacks Zhipu’s prior written consent."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure that integration of the service into the user’s own product, application, or function for its end users complies with the agreement and Zhipu’s applicable product and subscription rules.",
+            "actor": "user integrating the service",
+            "object": "integrated service and own product, application, or function",
+            "trigger": "The user relies on the own-product integration exception to provide service to end users."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear the consequences of violations of the stated laws and requirements and compensate Zhipu for losses caused by the user’s conduct.",
+            "actor": "user",
+            "object": "losses suffered by Zhipu and consequences of the user’s conduct",
+            "trigger": "The user violates the stated laws or requirements, or the user’s conduct causes loss to Zhipu."
+          }
+        ]
+      },
+      {
+        "start_line": 94,
+        "end_line": 96,
+        "clause_label": "zhipu_brand_and_endorsement_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "use_or_publicity_identifies_zhipu_or_related_persons_or_claims_endorsement",
+          "requires": "zhipu_prior_written_consent_and_any_required_written_confirmation"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, Zhipu and affiliate marks, names, identifying descriptions, personnel and team attributes, and endorsement claims, across any channel or purpose. Prior written consent is required; specified publicity/advertising/influence content and investment or cooperation solicitation additionally require prior written confirmation and commitment.",
+        "condition_explanation": "use_or_publicity_identifies_zhipu_or_related_persons_or_claims_endorsement covers the listed use, quotation, publication, display, mention, or registration of marks or identifying information; use of listed personal attributes; similarity-based identifiers; and claims of Zhipu or affiliate endorsement. zhipu_prior_written_consent means consent obtained in writing in advance; the additional publicity and solicitation acts require the written confirmation and commitment stated in line 96.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use, cite, publish, copy, display, mention, register, or seek registration of the listed Zhipu or affiliate marks, identifiers, identifying descriptions, or listed personal and team attributes without prior written consent.",
+            "actor": "user",
+            "object": "Zhipu and affiliate marks, identifying information, and listed personnel or team attributes",
+            "trigger": "The proposed conduct identifies Zhipu, an affiliate, or listed persons and prior written consent has not been obtained."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not state directly or indirectly that the user’s or an affiliate’s products or services are endorsed or supported by Zhipu or its affiliates without prior written consent; do not publicize or disclose Zhipu-related promotional, advertising, or influence strategy or content, or use the brand to solicit investment or cooperation, without the stated prior written confirmation and commitment.",
+            "actor": "user",
+            "object": "endorsement statements and Zhipu-related promotional content or solicitation",
+            "trigger": "The user proposes an endorsement claim, publicity or disclosure, or investment/cooperation solicitation and has not obtained the applicable prior written consent or confirmation and commitment."
+          }
+        ]
+      },
+      {
+        "start_line": 97,
+        "end_line": 97,
+        "clause_label": "user_added_training_risk",
+        "activities": [
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_adds_new_data_to_train_fine_tune_or_develop_model_during_platform_use",
+          "requires": "user_assumes_resulting_responsibility"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, training, fine-tuning, and development with new data added during use of the platform or its models. If the user seeks to hold Zhipu responsible for resulting damage, the user must prove the damage is unrelated to that training, fine-tuning, or development.",
+        "condition_explanation": "user_adds_new_data_to_train_fine_tune_or_develop_model_during_platform_use means the user adds new data in the course of using the platform or its models for model training, fine-tuning, or development.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Assume responsibility for consequences arising from model training, fine-tuning, or development using newly added data.",
+            "actor": "user",
+            "object": "training, fine-tuning, or development using newly added data",
+            "trigger": "The user adds new data to train, fine-tune, or develop a model while using the platform or its models."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Prove that claimed damage is unrelated to the user’s training, fine-tuning, or development in order to claim that Zhipu is responsible for that damage.",
+            "actor": "user seeking to hold Zhipu responsible",
+            "object": "claimed damage arising after training, fine-tuning, or development",
+            "trigger": "The user has trained, fine-tuned, or developed a model and claims Zhipu is responsible for resulting damage."
+          }
+        ]
+      },
+      {
+        "start_line": 100,
+        "end_line": 106,
+        "clause_label": "uploaded_data_rights_and_conditions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "upload_store_or_process_user_uploaded_data",
+          "requires": "data_is_lawful_noninfringing_and_authorized_personal_information"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, user-uploaded data. User retains ownership and responsibility for content and source; Zhipu may use or disclose it only to execute service instructions, except legally required cooperation with authorities or separate agreement.",
+        "condition_explanation": "data_is_lawful_noninfringing_and_authorized_personal_information means the data is safe and lawful, contains no illegal, noncompliant, or harmful content, infringes no third-party rights, and, if it contains personal information, was obtained with legally valid authorization.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure uploaded data is safe and lawful, contains no illegal, noncompliant, or harmful content, does not infringe third-party rights, and includes personal information only when lawfully obtained with required authorization.",
+            "actor": "user uploading data",
+            "object": "user-uploaded data",
+            "trigger": "The user uploads, stores, or processes data through the platform."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use or disclose user-uploaded data except to perform the user’s service requirements, unless legally required to cooperate with an authority or separately agreed with the user.",
+            "actor": "Zhipu / platform service provider",
+            "object": "user-uploaded data",
+            "trigger": "The provider proposes to use or disclose user-uploaded data outside performance of the user’s service requirements and neither legally required authority cooperation nor a separate agreement applies."
+          }
+        ]
+      },
+      {
+        "start_line": 108,
+        "end_line": 113,
+        "clause_label": "exported_nonuser_data_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "data_is_exported_non_user_uploaded_data",
+          "requires": "use_is_not_direct_sale_resale_third_party_license_independent_data_product_or_competing_development"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, exported data obtained from the platform excluding user-uploaded data. Direct sale, resale, licensing to third parties, commercialization as an independent data product, and development or modification of competing models or products are prohibited. User bears responsibility for use and resulting consequences; after download and user modification the platform disclaims responsibility for integrity, security, and compliance.",
+        "condition_explanation": "data_is_exported_non_user_uploaded_data means data exported from the platform that is not user-uploaded data. The allowed condition excludes each of the prohibited commercialization paths and use to develop or modify a model or product competing with the company.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not directly sell or resell exported data, license it to a third party, or commercialize it as an independent data product.",
+            "actor": "user",
+            "object": "exported non-user-uploaded data",
+            "trigger": "The data was exported from the platform and is not user-uploaded data."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use exported data to develop or modify a model or product competing with the company.",
+            "actor": "user",
+            "object": "exported non-user-uploaded data",
+            "trigger": "The user proposes to use exported data to develop or modify a competing model or product."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear responsibility for consequences of using exported data and compensate the platform for losses caused by improper use.",
+            "actor": "user",
+            "object": "exported non-user-uploaded data and resulting losses",
+            "trigger": "The user uses exported data, or improper use causes loss to the platform."
+          }
+        ]
+      },
+      {
+        "start_line": 115,
+        "end_line": 116,
+        "clause_label": "uploaded_data_deletion_and_retention",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_deletes_data_or_service_expires_or_terminates",
+          "requires": "provider_retains_only_for_documented_buffer_period_then_deletes_all_related_copies"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, user-uploaded data and cached or backup copies. The user may delete or change data. Following user deletion, expiry, or early termination, the provider retains data during the buffer period specified in product documentation and then deletes related data; deletion is irreversible and the provider has no continuing retention, export, or return duty.",
+        "condition_explanation": "user_deletes_data_or_service_expires_or_terminates means any of the listed events. documented_buffer_period means the period stated in the applicable product documentation; its value is not supplied here.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Retain user-uploaded data during the applicable documented buffer period after user deletion, service-term expiry, or early termination, then delete all related data, including cached and backup copies.",
+            "actor": "Zhipu / platform service provider",
+            "object": "user-uploaded data and related cached or backup copies",
+            "trigger": "The user deletes the data, the service term expires, or the service terminates early; retention lasts only for the product-documentation buffer period."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear the consequences and responsibility arising from deletion because deleted data cannot be recovered.",
+            "actor": "user",
+            "object": "user-uploaded data deleted by the user or following the retention period",
+            "trigger": "User-uploaded data is deleted."
+          }
+        ]
+      },
+      {
+        "start_line": 117,
+        "end_line": 118,
+        "clause_label": "uploaded_data_violation_enforcement",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_uploads_data_in_violation_or_provider_finds_illegal_content",
+          "requires": "subject_to_immediate_deletion_and_possible_suspension_or_termination"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Main user agreement, uploaded data; provider may immediately delete violating or illegal content and may suspend or terminate service depending on severity, retaining the right to pursue legal responsibility.",
+        "condition_explanation": "user_uploads_data_in_violation_or_provider_finds_illegal_content means the user violates the data terms or the provider finds illegal or noncompliant content in uploaded data.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 121,
+        "end_line": 122,
+        "clause_label": "provider_maintenance_and_response",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": "maintain_normal_platform_operation_and_reply_within_legally_required_period"
+        },
+        "actor_role": "provider",
+        "scope_note": "Main user agreement, platform provider’s express duties to maintain normal platform operation using existing technology, make efforts to improve technology and user experience, and respond to service-related questions or reports within the legally prescribed period.",
+        "condition_explanation": "Legally prescribed period is the period required by law; no numerical period is specified in this excerpt.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Maintain normal operation of the platform using existing technology and endeavor to improve technology and the user’s service experience.",
+            "actor": "Zhipu / platform service provider",
+            "object": "platform service",
+            "trigger": "The provider supplies the platform service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Respond within the legally prescribed period to issues and reports concerning the product or service encountered during registration or use.",
+            "actor": "Zhipu / platform service provider",
+            "object": "user’s service-related question or report",
+            "trigger": "A user raises a product- or service-related issue or report during registration or use."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "P0003 is a broad target spanning lines 6–122; clauses model operative terms in that range. Lines 6–20 are effective-date, execution, definition, and interpretive context; they do not independently grant model rights. External platform rules, product and subscription rules, product documentation, and cited laws are incorporated or referenced but not supplied in full; their contents and the data-retention buffer period cannot be determined here.",
+      "The separate model-license terms beginning at line 243 and the adjacent fee schedule are outside the target chunk and are not modeled. No model-license grant, price, or payment duty is inferred.",
+      "The agreement states user-uploaded-data ownership but does not grant ownership of or a general license to outputs. The original artifact object is used only as the closest available category for platform services, accounts, data, and content; scope notes specify identity."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 1 is the document filename, not an operative license term."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Lines 3–4 are page/interface text and the agreement title, not operative terms."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "registration_or_verification_required",
+          "capacity_and_guardian_registration",
+          "limited_unauthenticated_access",
+          "account_registration_and_representative_responsibility",
+          "account_personal_use_and_security",
+          "account_information_updates",
+          "platform_service_access",
+          "orderly_platform_use",
+          "prohibited_input_and_induced_output_content",
+          "platform_misuse_restrictions",
+          "third_party_service_provider_responsibility",
+          "overseas_use_and_export_controls",
+          "service_compliance_operational_duties",
+          "zhipu_brand_and_endorsement_restriction",
+          "user_added_training_risk",
+          "uploaded_data_rights_and_conditions",
+          "exported_nonuser_data_restrictions",
+          "uploaded_data_deletion_and_retention",
+          "uploaded_data_violation_enforcement",
+          "provider_maintenance_and_response"
+        ],
+        "reason": "Reviewed the full target range, lines 6–122. Operative platform-use permissions, restrictions, conditions, user and provider duties, data terms, and service duties are represented by the cited clauses; introductory execution text and definitions are contextual rather than independent grants."
+      }
+    ]
+  },
+  "attempt": 1
+}

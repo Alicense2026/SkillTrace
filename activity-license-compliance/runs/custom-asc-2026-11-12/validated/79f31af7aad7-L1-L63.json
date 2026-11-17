@@ -1,0 +1,185 @@
+{
+  "request_sha256": "7919ad085445b93d82b3a8102416a66a0e7c621ceb03b5bdd619090189b21502",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 13,
+        "end_line": 17,
+        "clause_label": "2. Grant of Rights",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PERMITTED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Licensee may use, copy, modify, and distribute the software and derivative works, internally or commercially or non-commercially. The separate product-inclusion grant is limited to products or systems that are not resold or provided as hosted services.",
+        "condition_explanation": "No additional condition is stated for the listed use, copying, modification, and distribution rights. Product or system inclusion is expressly limited to cases where it is neither resold nor provided as a hosted service."
+      },
+      {
+        "start_line": 17,
+        "end_line": 17,
+        "clause_label": "2. Grant of Rights — product or system inclusion",
+        "activities": [
+          "Combine",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "not_resold",
+              "not_provided_as_hosted_service"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "The software may be included within the licensee’s products or systems only if those products or systems are not resold and are not provided as hosted services.",
+        "condition_explanation": "Both conditions apply: the product or system must not be resold, and it must not be provided as a hosted service."
+      },
+      {
+        "start_line": 24,
+        "end_line": 29,
+        "clause_label": "3. Restrictions — hosted or managed service",
+        "activities": [
+          "ProvideNetworkService",
+          "RemoteInteraction"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "no_repaera_commercial_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not offer the software, or any substantial part of it, as a managed, hosted, or cloud service, including SaaS, DBaaS, or equivalent forms, unless it obtains a Repaera Commercial License. The text does not provide that separate license’s terms.",
+        "condition_explanation": "The prohibition applies when the licensee has not obtained a Repaera Commercial License. The text says one must be obtained to offer a hosted or managed service."
+      },
+      {
+        "start_line": 25,
+        "end_line": 25,
+        "clause_label": "3. Restrictions — resale, sublicensing, or commercial repackaging",
+        "activities": [
+          "SellCopies",
+          "Sublicense",
+          "CommercialUse",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "primary_value_derives_from_repaera_software"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Reselling, sublicensing, or otherwise commercially repackaging the software or derivative works is prohibited where the primary value derives from Repaera’s software. The clause does not state a general prohibition on every sublicense or resale regardless of that criterion.",
+        "condition_explanation": "The prohibition applies when the primary value of the resale, sublicense, or commercial repackaging derives from Repaera’s software."
+      },
+      {
+        "start_line": 26,
+        "end_line": 27,
+        "clause_label": "3. Restrictions — origin, marks, and notices",
+        "activities": [
+          "Use",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "requires": {
+            "any": [
+              "misrepresent_origin",
+              "use_repaera_name_logo_or_marks_to_suggest_official_endorsement",
+              "remove_or_alter_copyright_notices_or_license_headers"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not misrepresent the software’s origin, use Repaera’s name, logo, or marks in a way suggesting official endorsement, or remove or alter copyright notices or license headers.",
+        "condition_explanation": "Each listed act is independently prohibited: misrepresenting origin; using Repaera marks to suggest endorsement; or removing or altering copyright notices or license headers."
+      },
+      {
+        "start_line": 34,
+        "end_line": 39,
+        "clause_label": "4. Attribution",
+        "activities": [
+          "Distribute",
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": {
+            "any": [
+              "distribution_occurs",
+              "derivative_work_exists"
+            ]
+          },
+          "requires": "include_the_notice_specified_in_lines_37_38"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee must include the specified Repaera components and ROSE license notice in any distribution or derivative work.",
+        "condition_explanation": "The notice requirement is triggered by distribution or by a derivative work; it does not state that creating a derivative work requires distributing it."
+      },
+      {
+        "start_line": 56,
+        "end_line": 57,
+        "clause_label": "7. Termination",
+        "activities": [
+          "Use",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "license_rights_terminated_for_violation_of_above_restrictions",
+          "requires": {
+            "all": [
+              "cease_use",
+              "cease_distribution"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Violation of any of the stated restrictions automatically terminates rights under this license; upon termination the licensee must cease distribution and use of the software.",
+        "condition_explanation": "The cessation obligation is triggered by termination, which the text says occurs automatically upon violation of the above restrictions."
+      }
+    ],
+    "coverage_notes": [
+      "The text identifies the licensed subject as Repaera software and derivative works; it does not specify model, database, input, or output rights.",
+      "The separate Repaera Commercial License is referenced but its terms are not supplied; no additional terms for hosted-service use are inferred.",
+      "No source-provision, training, fee, or patent-retaliation clause is supplied.",
+      "Warranty and liability disclaimers are omitted as unrelated to the requested activities."
+    ]
+  }
+}

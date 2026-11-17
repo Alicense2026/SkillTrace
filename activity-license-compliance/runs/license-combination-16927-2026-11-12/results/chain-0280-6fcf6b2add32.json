@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0280-6fcf6b2add32",
+  "input_group_row": 280,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "ODC-BY-1.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0280-6fcf6b2add32",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:0a6bafb3e71bea08"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_license_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0280-6fcf6b2add32:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "ODC-BY-1.0第3.1节明确授予数据库使用权且允许商业使用，但以遵守许可条款为条件。结构化摘录未提供所有使用条件的完整映射，不能据此认定具体履行情况。",
+      "已知事实仅表明远程服务调用及API/代码纳入关系；没有证据表明数据库或其副本被分发、公开使用产生作品、被修改或再许可。不得将远程调用等同于分发或模型/权重转移。",
+      "下游Apache-2.0摘录涉及下游Work的权利；当前没有已确认的下游对象活动可据此作出相关结论。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游数据库时遵守ODC-BY-1.0许可条款。",
+        "source_refs": [
+          "license-text:upstream:0a6bafb3e71bea08"
+        ],
+        "subject": {
+          "artifact": "chain-0280-6fcf6b2add32:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_license_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 29307,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 780,
+    "output_tokens_details": {
+      "reasoning_tokens": 273
+    },
+    "total_tokens": 30087,
+    "attribution": {
+      "items": {
+        "msg_08de799698ff20ce016af530bc0c1087d0994867117d6ab5d3": {
+          "input_tokens": 27237,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 27237,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08de799698ff20ce016af530bc0c1087d0a433a5393a5f50fc": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08de799698ff20ce016af530c1a15c87d0b778281846767366": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 507,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 507
+            }
+          ]
+        },
+        "rs_08de799698ff20ce016af530c18a4c87d0b3631b482489ecfb": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 273
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "954b5e1173c3fcb72a022225b95f67270696c089a5614ba2fabd06c87dd1a930",
+  "elapsed_seconds": 24.36
+}

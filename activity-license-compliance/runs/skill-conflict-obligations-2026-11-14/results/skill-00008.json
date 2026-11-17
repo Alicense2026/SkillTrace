@@ -1,0 +1,277 @@
+{
+  "case_id": "skill-00008",
+  "csv_row": 9,
+  "source_excel_row": "21",
+  "status": "SUCCESS",
+  "request_sha256": "da43974d2b31e706a83089f57343be3a325fd61d0399336e56b0ce93c177d13e",
+  "analysis": {
+    "case_id": "skill-00008",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:8a6fc0879cecc0b96bf4c08159b9d733bf0f15fcf32879aec98c4ffd05424554"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00008:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "no_copy_or_substantial_portion_distributed",
+                "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00008:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实仅证明对上游对象的 Use、Link 和 RemoteInteraction；API调用不证明复制、分发、修改、再许可或将上游对象纳入下游产品。",
+      "上下游许可目前约束的对象范围是否重合未知；没有依据认定两许可存在冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游许可对象的每份副本或实质部分如被制作或分发，licensee须在其中包含版权声明和MIT许可声明；不涉及副本或实质部分时无需据此添加声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00008:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "activity:Copy",
+            "activity:Modify",
+            "activity:Combine",
+            "activity:Distribute",
+            "activity:Sublicense",
+            "activity:SellCopies"
+          ]
+        },
+        "unresolved_predicates": [
+          "是否制作、分发或以其他列明方式涉及下游许可对象的副本或实质部分"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "上游MIT-0授权Use且未规定附加义务；已知上游对象被使用。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅授权Copy且无附加义务；没有已知复制事实。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅授权Modify且无附加义务；没有已知修改事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅授权Combine且无附加义务；没有已知合并事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅授权Distribute且无附加义务；没有已知分发事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅授权Sublicense且无附加义务；没有已知再许可事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条款仅授权SellCopies且无附加义务；没有已知销售副本事实。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该规则针对下游原始对象的Use；已知Use事实指向上游原始对象。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "Copy产生副本或实质部分时，声明义务已按条件纳入第0项。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "Modify涉及下游软件副本或实质部分时，声明义务已纳入第0项。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "Combine涉及下游软件副本或实质部分时，声明义务已纳入第0项。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "Publish/Distribute触发副本或实质部分的声明义务，已纳入第0项。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "Distribute副本或实质部分时的声明义务已纳入第0项。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "Sublicense包含副本或实质部分时的声明义务已纳入第0项。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "SellCopies涉及副本或实质部分时的声明义务已纳入第0项。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00008-1794590271874607000-1.json",
+  "usage": {
+    "input_tokens": 17409,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2194,
+    "output_tokens_details": {
+      "reasoning_tokens": 589
+    },
+    "total_tokens": 19603,
+    "attribution": {
+      "items": {
+        "msg_046acc5af7a850de016af74644656487d0884048fc4729923d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_046acc5af7a850de016af74644656487d0b0f232c19897bd9a": {
+          "input_tokens": 14685,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14685,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_046acc5af7a850de016af7464f8ee887d0a73fbcd2c397570c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1605,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1605
+            }
+          ]
+        },
+        "rs_046acc5af7a850de016af7464e22e887d0b5dfe777f16e6a32": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        },
+        "rs_046acc5af7a850de016af7464f732887d0a65c55c805fc654c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 73
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

@@ -1,0 +1,95 @@
+{
+  "case_id": "chain-0273-3a54af389b1b",
+  "input_group_row": 273,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0-or-later",
+    "资产许可证原文标题/标签": "AGPL-3.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0273-3a54af389b1b",
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "provide_corresponding_source_access_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "remote_interaction_supported"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0273-3a54af389b1b:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:363cd04a67aff871"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "provide_corresponding_source_access_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "remote_interaction_supported"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0273-3a54af389b1b:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "ProvideSource/各自受覆盖的修改程序；两份AGPL原文第13条均仅在修改程序且支持远程交互时要求提供对应源码访问；两方要求相同，不构成相反约束。已知事实为远程服务调用且修改不适用，故本次未触发该义务；条款及来源：第13条。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33",
+          "license-text:downstream:363cd04a67aff871"
+        ],
+        "status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+      }
+    ],
+    "obligations": [],
+    "limitations": [
+      "对象图确认下游与上游之间存在API链接/远程调用，但依赖、修改副本或组合产品关系未知；远程调用本身不证明上游程序被修改，也不将上游义务自动扩展至下游对象。",
+      "本次仅检查两份本地AGPL文本中提供的第13条摘录及其网络源码提供要求；未据此推断其他条款或未提供的适用范围。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0266-5cd53bb2d8af.json",
+  "original_case_id": "chain-0266-5cd53bb2d8af",
+  "original_request_sha256": "9680d1e78f3808faa41221a321533497a2fd81f72bb5adb785156d3a56e56453",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0266-5cd53bb2d8af": "chain-0273-3a54af389b1b",
+    "license-text:upstream:5b08064288d26a33": "license-text:upstream:5b08064288d26a33",
+    "license-text:downstream:363cd04a67aff871": "license-text:downstream:363cd04a67aff871",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/265": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/272"
+  }
+}

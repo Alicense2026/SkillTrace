@@ -1,0 +1,558 @@
+{
+  "request_sha256": "48a9d183062c6a9dd796f5e8690c13abaf504112c09b667eb52de3044b4d40d8",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 254,
+        "end_line": 255,
+        "clause_label": "use_model_with_source_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "model_source_identified_and_license_or_link_included"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条。适用于使用所涉大模型；模型指开源模型及衍生模型的统称。",
+        "condition_explanation": "model_source_identified_and_license_or_link_included means注明大模型来源并附上本许可协议或其链接；本协议对“使用”的定义包括下载、运算、共享、修改、分发等操作。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "注明所使用大模型的来源，并附上此大模型许可协议或其链接。",
+            "actor": "使用者",
+            "object": "所使用的大模型",
+            "trigger": "使用大模型时"
+          }
+        ]
+      },
+      {
+        "start_line": 254,
+        "end_line": 255,
+        "clause_label": "use_generated_content_with_source_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "model_source_identified_and_license_or_link_included"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条。对象为模型生成内容；依定义，模型生成内容是在不改变参数的情况下输入提示词所生成的内容。",
+        "condition_explanation": "model_source_identified_and_license_or_link_included means注明生成该内容的大模型来源并附上本许可协议或其链接。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "注明生成内容所用大模型的来源，并附上此大模型许可协议或其链接。",
+            "actor": "使用者",
+            "object": "模型生成内容",
+            "trigger": "使用模型生成内容时"
+          }
+        ]
+      },
+      {
+        "start_line": 254,
+        "end_line": 254,
+        "clause_label": "model_inference_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "model_source_identified_and_license_or_link_included"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条授予模型推理使用权；来源说明条件适用。许可为非专有、永久，但发生协议所述违法违规或违约情形时发布者可撤销授权并立即终止使用。",
+        "condition_explanation": "model_source_identified_and_license_or_link_included means使用大模型时注明其来源并附上许可协议或链接。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "注明所使用大模型的来源，并附上此大模型许可协议或其链接。",
+            "actor": "使用者",
+            "object": "用于推理的大模型",
+            "trigger": "对大模型进行推理时"
+          }
+        ]
+      },
+      {
+        "start_line": 254,
+        "end_line": 254,
+        "clause_label": "develop_application_or_service",
+        "activities": [
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "model_source_identified_and_license_or_link_included"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条允许基于模型开发应用或产品服务；不据此将应用或服务认定为模型衍生物。",
+        "condition_explanation": "model_source_identified_and_license_or_link_included means使用模型开发时注明大模型来源并附上许可协议或链接。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "注明所用大模型的来源，并附上此大模型许可协议或其链接。",
+            "actor": "使用者",
+            "object": "用于开发应用或产品服务的大模型",
+            "trigger": "基于大模型开发应用或产品服务时"
+          }
+        ]
+      },
+      {
+        "start_line": 256,
+        "end_line": 256,
+        "clause_label": "publish_modified_derivative_model",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "model_source_identified_and_license_or_link_included"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条允许发布、传播使用者自行修改开源模型形成的衍生模型。第三条另有关于模型复制、转让等的限制，协议未说明二者的具体边界。",
+        "condition_explanation": "model_source_identified_and_license_or_link_included means注明大模型来源并附上许可协议或链接。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "注明大模型来源，并附上此大模型许可协议或其链接。",
+            "actor": "使用者",
+            "object": "自行修改开源模型形成的衍生模型",
+            "trigger": "发布或传播该衍生模型时"
+          }
+        ]
+      },
+      {
+        "start_line": 256,
+        "end_line": 256,
+        "clause_label": "publish_derivative_model_generated_content",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "model_source_identified_and_license_or_link_included"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条允许发布、传播衍生模型生成的内容；生成内容不因此当然成为模型的衍生物。",
+        "condition_explanation": "model_source_identified_and_license_or_link_included means注明生成该内容的大模型来源并附上许可协议或链接。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "注明生成内容所用大模型的来源，并附上此大模型许可协议或其链接。",
+            "actor": "使用者",
+            "object": "衍生模型生成的内容",
+            "trigger": "发布或传播该生成内容时"
+          }
+        ]
+      },
+      {
+        "start_line": 257,
+        "end_line": 257,
+        "clause_label": "no_publisher_named_promotion",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条禁止以发布者名义推广宣传大模型。",
+        "condition_explanation": "无明示例外。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得以发布者的名义推广宣传此大模型。",
+            "actor": "使用者",
+            "object": "大模型的推广宣传",
+            "trigger": "推广宣传该大模型时"
+          }
+        ]
+      },
+      {
+        "start_line": 258,
+        "end_line": 258,
+        "clause_label": "commercial_use_with_written_authorization",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "publisher_written_authorization",
+              "reasonable_legitimate_commercial_purpose"
+            ]
+          }
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第二条；商业使用须获得发布者书面授权，并以合理、正当的商业目的进行。",
+        "condition_explanation": "publisher_written_authorization means已获得发布者书面授权；reasonable_legitimate_commercial_purpose means商业目的合理、正当。",
+        "obligation_items": []
+      },
+      {
+        "start_line": 261,
+        "end_line": 261,
+        "clause_label": "no_copy_model",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第三条，禁止复制模型全部或部分。",
+        "condition_explanation": "条文未明示例外；与第二条允许发布自行修改形成的衍生模型之间的具体边界未说明。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得复制模型的全部或部分。",
+            "actor": "使用者",
+            "object": "模型的全部或部分",
+            "trigger": "复制模型时"
+          }
+        ]
+      },
+      {
+        "start_line": 261,
+        "end_line": 261,
+        "clause_label": "no_transfer_rent_lend_or_sell_model",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第三条，禁止转让、出租、出借或出售模型全部或部分。",
+        "condition_explanation": "条文未明示例外；不推定允许转让经修改形成的衍生模型之外的模型材料。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得转让、出租、出借或出售模型的全部或部分。",
+            "actor": "使用者",
+            "object": "模型的全部或部分",
+            "trigger": "进行转让、出租、出借或出售时"
+          }
+        ]
+      },
+      {
+        "start_line": 261,
+        "end_line": 261,
+        "clause_label": "no_sublicense_model",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第三条禁止对模型全部或部分提供分许可、转许可。",
+        "condition_explanation": "条文未明示例外；与允许发布衍生模型的具体边界未说明。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得对模型的全部或部分提供分许可或转许可。",
+            "actor": "使用者",
+            "object": "模型的全部或部分",
+            "trigger": "提供分许可或转许可时"
+          }
+        ]
+      },
+      {
+        "start_line": 261,
+        "end_line": 261,
+        "clause_label": "no_competitive_business",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "engaging_in_business_competing_with_publisher",
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第三条禁止从事与发布者相竞争的业务；条文未定义竞争业务的判定标准。",
+        "condition_explanation": "engaging_in_business_competing_with_publisher means使用者从事与发布者相竞争的业务。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得从事与发布者相竞争的业务。",
+            "actor": "使用者",
+            "object": "与发布者相竞争的业务",
+            "trigger": "从事相关业务时"
+          }
+        ]
+      },
+      {
+        "start_line": 264,
+        "end_line": 264,
+        "clause_label": "modify_model_to_create_derivative",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_agreement"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第四条允许通过改变算法或参数修改开源模型以取得衍生模型，条件是不违反本协议。",
+        "condition_explanation": "comply_with_agreement means修改行为须符合本协议的适用条件和限制。",
+        "obligation_items": []
+      },
+      {
+        "start_line": 271,
+        "end_line": 271,
+        "clause_label": "commercial_derivative_retains_license_and_copyright",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "retain_original_license_and_copyright_notice",
+              "comply_with_agreement"
+            ]
+          }
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第六条首款适用于商业使用开源模型过程中基于其开发的衍生作品，包括修改、衍生或集成版本。",
+        "condition_explanation": "retain_original_license_and_copyright_notice means在衍生作品中保留开源模型原始许可和版权声明；comply_with_agreement means继续遵守本协议。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "保留开源模型的原始许可和版权声明，并遵守本协议。",
+            "actor": "使用者",
+            "object": "基于开源模型开发的衍生作品",
+            "trigger": "商业使用开源模型过程中开发或使用该衍生作品时"
+          }
+        ]
+      },
+      {
+        "start_line": 272,
+        "end_line": 272,
+        "clause_label": "lawful_model_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_applicable_law_and_required_filings_assessments_and_prohibited_use_constraints"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第六条规定使用开源模型的责任、适用法律和备案评估要求，并列举禁止用途。",
+        "condition_explanation": "comply_with_applicable_law_and_required_filings_assessments_and_prohibited_use_constraints means遵守使用地适用法律法规政策、履行相应算法备案和安全评估要求，并不得将模型用于条文列举的违法违规、欺诈、侵权、危害国家安全、违反公序良俗或侵害所列权益的用途。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "遵守使用地适用的法律、法规和政策，并履行相应算法备案、安全评估等要求。",
+            "actor": "使用者",
+            "object": "开源模型的使用",
+            "trigger": "使用开源模型时，且适用规则要求备案或评估时"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得将开源模型用于违法违规、欺诈、侵权、危害国家安全、违反公序良俗，或侵害条文所列他人权益的用途。",
+            "actor": "使用者",
+            "object": "开源模型",
+            "trigger": "使用开源模型时"
+          }
+        ]
+      },
+      {
+        "start_line": 272,
+        "end_line": 272,
+        "clause_label": "lawful_generated_content_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_applicable_law_and_required_filings_assessments_and_prohibited_use_constraints"
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第六条对模型生成内容的使用单独规定责任、合规要求和禁止用途；生成内容不当然是模型衍生物。",
+        "condition_explanation": "comply_with_applicable_law_and_required_filings_assessments_and_prohibited_use_constraints means遵守适用法律法规政策、履行相应备案和评估要求，并不得将生成内容用于条文列举的禁止用途。",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "遵守使用地适用的法律、法规和政策，并履行相应算法备案、安全评估等要求。",
+            "actor": "使用者",
+            "object": "模型生成内容的使用",
+            "trigger": "使用模型生成内容时，且适用规则要求备案或评估时"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得将模型生成内容用于违法违规、欺诈、侵权、危害国家安全、违反公序良俗，或侵害条文所列他人权益的用途。",
+            "actor": "使用者",
+            "object": "模型生成内容",
+            "trigger": "使用模型生成内容时"
+          }
+        ]
+      },
+      {
+        "start_line": 273,
+        "end_line": 273,
+        "clause_label": "no_reverse_engineering_or_confidential_information_extraction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "normal_use_exceeded_and_attempt_to_extract_listed_information",
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第六条；禁止正常使用以外的反向工程、反编译等措施，且行为目的为尝试提取指定信息。",
+        "condition_explanation": "normal_use_exceeded_and_attempt_to_extract_listed_information requires both采取正常使用以外的措施，以及试图提取模型数据、参数、代码或发布者保密信息。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不得以正常使用以外的措施对开源模型进行反向工程、反编译等，并试图提取模型数据、参数、代码或发布者保密信息。",
+            "actor": "使用者",
+            "object": "开源模型",
+            "trigger": "采取所述措施并试图提取所列信息时"
+          }
+        ]
+      },
+      {
+        "start_line": 277,
+        "end_line": 277,
+        "clause_label": "stop_use_if_new_version_rejected",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "all": [
+              "publisher_notifies_revised_or_new_agreement",
+              "user_does_not_accept_revision"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "使用者（licensee）",
+        "scope_note": "模型商用许可协议第七条：通知的修订版或新版于发布之日起三日内生效；不接受者应停止使用本协议授权的大模型。",
+        "condition_explanation": "publisher_notifies_revised_or_new_agreement means发布者以公告、电子邮箱、短信等方式通知修订版或新版；user_does_not_accept_revision means使用者不接受该版本；不接受时继续使用即为被禁止。",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "不接受修订版或新版时，停止使用本协议授权的大模型。",
+            "actor": "使用者",
+            "object": "本协议授权的大模型",
+            "trigger": "发布者通知修订版或新版，且使用者不接受该版本时"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "《模型商用授权申请》、具体模型范围及任何书面商业授权未提供，相关授权范围无法确定。",
+      "第261行全面禁止模型复制、转让等行为与第256行允许发布、传播自行修改形成的衍生模型存在文本边界张力；未推定该许可使复制或转许可获得授权。",
+      "第267行是责任承担及保证否认，第274行是责任限制，第280至282行是法律适用、管辖、可分割性及不弃权条款；依任务要求不作为活动约束提取。",
+      "定义行244至251仅用于解释范围，不作为规则引用。"
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0008",
+        "status": "MODELED",
+        "clause_labels": [
+          "use_model_with_source_notice",
+          "use_generated_content_with_source_notice",
+          "model_inference_permission",
+          "develop_application_or_service",
+          "publish_modified_derivative_model",
+          "publish_derivative_model_generated_content",
+          "no_publisher_named_promotion",
+          "commercial_use_with_written_authorization",
+          "no_copy_model",
+          "no_transfer_rent_lend_or_sell_model",
+          "no_sublicense_model",
+          "no_competitive_business",
+          "modify_model_to_create_derivative",
+          "commercial_derivative_retains_license_and_copyright",
+          "lawful_model_use",
+          "lawful_generated_content_use",
+          "no_reverse_engineering_or_confidential_information_extraction",
+          "stop_use_if_new_version_rejected"
+        ],
+        "reason": "覆盖目标段中的模型使用及来源说明条件、衍生模型和生成内容的发布许可、宣传及商业使用限制、模型处分和竞争限制、修改许可、商业衍生作品保留声明要求、合规与禁止用途、反向工程限制及拒绝新版后的停止使用要求。定义仅用于解释对象；保证否认、责任限制和法律/程序条款未转化为活动约束。"
+      }
+    ]
+  },
+  "attempt": 3
+}

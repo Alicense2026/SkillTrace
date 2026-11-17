@@ -1,0 +1,653 @@
+{
+  "request_sha256": "f17a37341879fbe7de82954c88ac08db684cdf7dd8f53d5c80cfd969ac6ce03a",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "acceptance_by_confirmation_or_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_confirms_acceptance_or_uses_service",
+          "requires": "accept_agreement_and_be_bound_by_it"
+        },
+        "actor_role": "user",
+        "scope_note": "Acceptance of the agreement governing use of Baidu Intelligent Cloud services; acceptance occurs by checking, clicking to confirm, otherwise indicating acceptance, or using the service.",
+        "condition_explanation": "accept_agreement_and_be_bound_by_it means the user accepts the agreement and is bound by it when any stated acceptance method occurs.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 8,
+        "end_line": 8,
+        "clause_label": "incorporated_service_rules",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_applicable_published_service_rules"
+        },
+        "actor_role": "user",
+        "scope_note": "Use of Baidu Intelligent Cloud services is subject to service rules formally published or displayed through the website or other agreed means. Their substantive terms are not supplied.",
+        "condition_explanation": "comply_with_applicable_published_service_rules means follow applicable service agreements, specifications, SLA terms, technical specifications, operating documents, billing standards, business rules, and other formally published service rules.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable service rules formally published or displayed through the website or other agreed means.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud service use",
+            "trigger": "Whenever the user uses a service governed by applicable service rules."
+          }
+        ]
+      },
+      {
+        "start_line": 10,
+        "end_line": 10,
+        "clause_label": "specific_service_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_or_purchasing_a_specific_service",
+          "requires": "follow_terms_for_that_specific_service"
+        },
+        "actor_role": "user",
+        "scope_note": "The user must confirm the terms for the particular cloud service used or purchased; the specific terms are not supplied.",
+        "condition_explanation": "follow_terms_for_that_specific_service means comply with the terms corresponding to the particular service used or purchased.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Confirm and follow the terms applicable to the specific cloud service used or purchased.",
+            "actor": "user",
+            "object": "The particular Baidu Intelligent Cloud service",
+            "trigger": "When using or purchasing that particular service."
+          }
+        ]
+      },
+      {
+        "start_line": 12,
+        "end_line": 12,
+        "clause_label": "continued_use_accepts_amendments",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "continued_use_after_agreement_change_is_announced",
+          "requires": "follow_modified_agreement"
+        },
+        "actor_role": "user",
+        "scope_note": "The user may stop using the service if they disagree with an announced modification. Continued use indicates acceptance of the modified agreement.",
+        "condition_explanation": "continued_use_after_agreement_change_is_announced means use continues after announcement of a modification to the service agreement. follow_modified_agreement means follow the modified agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Follow the modified agreement.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud service use",
+            "trigger": "The agreement change has been announced and the user continues using the service."
+          }
+        ]
+      },
+      {
+        "start_line": 23,
+        "end_line": 25,
+        "clause_label": "account_credentials_security",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "account_security_duties_observed"
+        },
+        "actor_role": "user",
+        "scope_note": "Applies to the user's commercial-product account. The user must protect credentials, report specified account-risk circumstances and cooperate with Baidu's verification process. The user remains responsible for third-party or unauthorized use until Baidu processes the account under its procedure.",
+        "condition_explanation": "account_security_duties_observed means credentials are not disclosed, specified account-risk circumstances are reported through Baidu's process, and requested verification information is provided.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Protect account username and password and do not disclose them to anyone.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud commercial-product account credentials",
+            "trigger": "Whenever the user has the credentials."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Apply to Baidu Intelligent Cloud and follow its process if the account administrator leaves, credentials are known or suspected to be known by a third party, or unauthorized account use is known or suspected.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account",
+            "trigger": "Any listed account-administration, credential exposure, or unauthorized-use circumstance occurs."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide requested detailed information to cooperate with Baidu Intelligent Cloud's account-owner verification.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account",
+            "trigger": "Baidu requests information to confirm account ownership."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Bear responsibility for third-party service use or unauthorized use until Baidu Intelligent Cloud completes its account-processing procedure.",
+            "actor": "user",
+            "object": "Service use through the user's account",
+            "trigger": "Third-party or unauthorized use occurs before Baidu completes account processing."
+          }
+        ]
+      },
+      {
+        "start_line": 29,
+        "end_line": 32,
+        "clause_label": "registration_eligibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "registering_or_actually_using_service",
+          "requires": {
+            "all": [
+              "full_civil_capacity_legal_subject",
+              "not_sanctions_or_trade_control_target"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Eligibility applies when completing registration or actually using the service. The text says minors or persons with limited civil capacity lack the stated qualification and that the user and guardian bear consequences of improper registration.",
+        "condition_explanation": "full_civil_capacity_legal_subject means a natural person, legal person, or other organization with full civil rights and capacity. not_sanctions_or_trade_control_target means the user is not a target of sanctions or trade controls imposed by a country, international organization, or region.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Register or actually use the service only as a natural person, legal person, or other organization with full civil rights and capacity.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account and service use",
+            "trigger": "Completing registration or actually using the service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Commit that the user is not a target of sanctions or trade controls imposed by a country, international organization, or region.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account and service use",
+            "trigger": "Registration or service use."
+          }
+        ]
+      },
+      {
+        "start_line": 36,
+        "end_line": 36,
+        "clause_label": "account_required_for_service",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "before_using_service",
+          "requires": "account_registered_and_obtained"
+        },
+        "actor_role": "user",
+        "scope_note": "The user must register and obtain an account before using the service.",
+        "condition_explanation": "account_registered_and_obtained means the user has registered and obtained an account provided by Baidu Intelligent Cloud.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Register and obtain an account provided by Baidu Intelligent Cloud before using the service.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account",
+            "trigger": "Before using the service."
+          }
+        ]
+      },
+      {
+        "start_line": 39,
+        "end_line": 39,
+        "clause_label": "registration_guidance_account_type",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "registering_account",
+          "requires": "read_guidance_and_select_account_type_correctly"
+        },
+        "actor_role": "user",
+        "scope_note": "Account-registration requirement to review the registration guidance and select the account type correctly.",
+        "condition_explanation": "read_guidance_and_select_account_type_correctly means fully read the website registration instructions and correctly select the account type.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Fully read the website registration guidance and correctly select the account type.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account registration",
+            "trigger": "When registering an account."
+          }
+        ]
+      },
+      {
+        "start_line": 41,
+        "end_line": 41,
+        "clause_label": "registration_information_accuracy",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "providing_user_information",
+          "requires": "information_true_accurate_complete_timely_and_contactable"
+        },
+        "actor_role": "user",
+        "scope_note": "Applies to user information supplied for the account.",
+        "condition_explanation": "information_true_accurate_complete_timely_and_contactable means the information is true, accurate, complete, timely, and permits Baidu Intelligent Cloud to contact the user.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide true, accurate, complete, and timely user information and ensure Baidu Intelligent Cloud can contact the user through the supplied contact details.",
+            "actor": "user",
+            "object": "User information supplied for the account",
+            "trigger": "When providing user information."
+          }
+        ]
+      },
+      {
+        "start_line": 43,
+        "end_line": 43,
+        "clause_label": "account_name_avatar_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "setting_account_name_or_avatar",
+          "requires": {
+            "all": [
+              "not_violative_of_law_morality_or_service_rules",
+              "not_confusing_or_misleading"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Applies to account names and avatars. Baidu may restrict the account or refuse service if the user refuses a requested change.",
+        "condition_explanation": "not_violative_of_law_morality_or_service_rules means not contrary to laws, regulations, public order or good morals, or applicable service rules. not_confusing_or_misleading means not likely to confuse others or cause mistaken identity.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not set an account name or avatar that violates laws, regulations, public order or good morals, or applicable service rules.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account name or avatar",
+            "trigger": "When setting an account name or avatar."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not set an account name or avatar that confuses others or causes mistaken identity.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account name or avatar",
+            "trigger": "When setting an account name or avatar."
+          }
+        ]
+      },
+      {
+        "start_line": 45,
+        "end_line": 45,
+        "clause_label": "identity_and_qualification_materials",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "baidu_requires_materials_for_service",
+          "requires": "provide_required_materials_timely"
+        },
+        "actor_role": "user",
+        "scope_note": "Baidu may refuse the relevant service if requested identity or enterprise-qualification materials are not supplied.",
+        "condition_explanation": "provide_required_materials_timely means supplying the identity documents and enterprise qualification materials requested by Baidu in a timely manner.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide requested identity documents and enterprise qualification materials in a timely manner.",
+            "actor": "user",
+            "object": "Identity documents and enterprise qualification materials",
+            "trigger": "When Baidu Intelligent Cloud requires them for the service."
+          }
+        ]
+      },
+      {
+        "start_line": 47,
+        "end_line": 47,
+        "clause_label": "registration_information_truthfulness",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "providing_registration_materials_or_information",
+          "requires": "materials_and_information_correct_and_true"
+        },
+        "actor_role": "user",
+        "scope_note": "Baidu reserves the right to cancel registration eligibility or suspend or terminate service if supplied materials or information are incorrect or untrue.",
+        "condition_explanation": "materials_and_information_correct_and_true means supplied registration materials and information are correct and true.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide correct and truthful registration materials and information.",
+            "actor": "user",
+            "object": "Registration materials and information",
+            "trigger": "When supplying registration materials or information."
+          }
+        ]
+      },
+      {
+        "start_line": 49,
+        "end_line": 49,
+        "clause_label": "account_nontransferability",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_or_transferring_account",
+          "requires": "account_holder_only_use_and_transfer_only_with_baidu_consent_and_real_name_change"
+        },
+        "actor_role": "user",
+        "scope_note": "Only the user may use the account. Transfer, gift, or inheritance requires Baidu's consent and a real-name account change.",
+        "condition_explanation": "account_holder_only_use means only the user personally uses the account. transfer_only_with_baidu_consent_and_real_name_change means Baidu consents and the account's real-name information is changed before transfer, gift, or inheritance.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not permit anyone other than the user personally to use the account.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account",
+            "trigger": "Whenever the account is used."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not transfer, give, or bequeath the account without Baidu Intelligent Cloud's consent and a real-name account change.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account",
+            "trigger": "Before any transfer, gift, or inheritance of the account."
+          }
+        ]
+      },
+      {
+        "start_line": 51,
+        "end_line": 51,
+        "clause_label": "authorized_representative_registration",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "registering_for_another_person_or_entity",
+          "requires": "provide_agent_and_principal_details_and_written_authorization"
+        },
+        "actor_role": "user acting as representative",
+        "scope_note": "Applies to registration as agent for another natural person or organization. If the materials are not supplied, Baidu treats the registrant as the user.",
+        "condition_explanation": "provide_agent_and_principal_details_and_written_authorization means providing detailed information for both agent and represented party, plus written authorization.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide Baidu Intelligent Cloud detailed information about the agent and represented party, together with written authorization.",
+            "actor": "user acting as representative",
+            "object": "Registration information and written authorization",
+            "trigger": "When registering on behalf of another natural person or organization."
+          }
+        ]
+      },
+      {
+        "start_line": 53,
+        "end_line": 53,
+        "clause_label": "contact_details_maintenance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "providing_or_changing_contact_details",
+          "requires": "contact_details_accurate_current_and_valid"
+        },
+        "actor_role": "user",
+        "scope_note": "The user must keep supplied contact details accurate and valid, update them timely, and follow Baidu's requirements for updates. The user bears consequences of being unreachable through supplied contacts.",
+        "condition_explanation": "contact_details_accurate_current_and_valid means the supplied email, telephone, address, postal code, and other contact details are accurately provided, kept valid, and timely updated when changed.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Accurately provide and timely update contact details, keep them valid, and follow Baidu Intelligent Cloud's required update process when they change.",
+            "actor": "user",
+            "object": "User contact details",
+            "trigger": "When providing contact details and whenever they change or need updating."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "This chunk concerns acceptance, incorporation of service rules, and accounts and registration; it does not grant general rights to exploit Baidu materials.",
+      "The substantive contents of incorporated service rules and specific service terms are not supplied, so their details cannot be extracted.",
+      "The target paragraphs have been audited against their supplied unit IDs and source ranges."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Agreement title only."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Identifies the agreement parties and subject matter; it does not establish a distinct activity constraint."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "acceptance_by_confirmation_or_use"
+        ],
+        "reason": "Provides that confirming acceptance or using the service constitutes acceptance and makes the agreement binding."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "MODELED",
+        "clause_labels": [
+          "incorporated_service_rules"
+        ],
+        "reason": "Makes formally published or displayed service rules binding as part of the agreement."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "MODELED",
+        "clause_labels": [
+          "specific_service_terms"
+        ],
+        "reason": "Requires confirmation of the terms for the specific service used or purchased."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "MODELED",
+        "clause_labels": [
+          "continued_use_accepts_amendments"
+        ],
+        "reason": "Permits stopping service if the user disagrees with announced changes; continued use signifies acceptance and adherence to the changed terms."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Account-section heading and account-type subsection label."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Describes account categories and their general function; no independent activity constraint."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Describes personal accounts, registration methods, and intended users."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Describes enterprise accounts and their product-access scope."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_credentials_security"
+        ],
+        "reason": "Covers credential protection, reporting specified account risks, cooperation with verification, and responsibility pending account processing."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Registration subsection heading."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "MODELED",
+        "clause_labels": [
+          "registration_eligibility"
+        ],
+        "reason": "Sets capacity eligibility for registration or use and the commitment concerning sanctions or trade-control targets."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Registration subsection label only."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_required_for_service"
+        ],
+        "reason": "Requires obtaining an account before using the service."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "MODELED",
+        "clause_labels": [
+          "registration_guidance_account_type"
+        ],
+        "reason": "Requires reviewing registration guidance and correctly selecting an account type."
+      },
+      {
+        "unit_id": "P0017",
+        "status": "MODELED",
+        "clause_labels": [
+          "registration_information_accuracy"
+        ],
+        "reason": "Requires supplied user information to be true, accurate, complete, timely, and contactable."
+      },
+      {
+        "unit_id": "P0018",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_name_avatar_restrictions"
+        ],
+        "reason": "Restricts account names and avatars that violate the stated standards or cause confusion or mistaken identity."
+      },
+      {
+        "unit_id": "P0019",
+        "status": "MODELED",
+        "clause_labels": [
+          "identity_and_qualification_materials"
+        ],
+        "reason": "Requires timely provision of requested identity and enterprise-qualification materials."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "MODELED",
+        "clause_labels": [
+          "registration_information_truthfulness"
+        ],
+        "reason": "Requires correct and truthful registration materials and information."
+      },
+      {
+        "unit_id": "P0021",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_nontransferability"
+        ],
+        "reason": "Restricts account use to the user and bars account transfer, gift, or inheritance without the stated consent and real-name change."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_representative_registration"
+        ],
+        "reason": "Requires representative and represented-party details and written authorization for registration as an agent."
+      },
+      {
+        "unit_id": "P0023",
+        "status": "MODELED",
+        "clause_labels": [
+          "contact_details_maintenance"
+        ],
+        "reason": "Requires accurate, valid contact details and timely updates through the specified process."
+      },
+      {
+        "unit_id": "P0024",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introduces the subsequent account-security subsection; it states no operative rule itself."
+      }
+    ]
+  },
+  "attempt": 3
+}

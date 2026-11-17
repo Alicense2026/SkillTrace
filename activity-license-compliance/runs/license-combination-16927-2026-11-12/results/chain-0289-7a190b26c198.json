@@ -1,0 +1,71 @@
+{
+  "case_id": "chain-0289-7a190b26c198",
+  "input_group_row": 289,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "BSD-3-Clause",
+    "资产许可证原文标题/标签": "BSD-3-Clause",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0289-7a190b26c198",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices"
+          },
+          "S": {
+            "artifact": "chain-0289-7a190b26c198:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0289-7a190b26c198:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "retain_applicable_notices",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ]
+      }
+    ],
+    "limitations": [
+      "许可证原文摘录仅提供许可授予的引导语，未包含具体通知条件；结构化抽取列出 retain_applicable_notices，但无法据此核对其完整适用范围及履行细节。",
+      "已知的是上游资产的 Use、Link 和 RemoteInteraction；远程调用及链接关系不证明分发、修改、权重转移或许可约束共同作用于同一对象。上下游共享范围未知，因此不据此判定许可冲突。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0282-850b54456edc.json",
+  "original_case_id": "chain-0282-850b54456edc",
+  "original_request_sha256": "70ba1e2896a21c3353c2700733c0c9effa8a50e24ef27dab180b1925dddf8f9e",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0282-850b54456edc": "chain-0289-7a190b26c198",
+    "license-text:upstream:5d410e8cefff0f80": "license-text:upstream:5d410e8cefff0f80",
+    "license-text:downstream:5d410e8cefff0f80": "license-text:downstream:5d410e8cefff0f80",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/281": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/288"
+  }
+}

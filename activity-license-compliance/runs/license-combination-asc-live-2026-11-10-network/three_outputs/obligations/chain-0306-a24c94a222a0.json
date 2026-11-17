@@ -1,0 +1,43 @@
+{
+  "case_id": "chain-0306-a24c94a222a0",
+  "output": [
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若传递受 GPL 覆盖的 upstream 修改版本，须按 GPL 许可整个作品并提供源码。",
+      "source_refs": [
+        "license-text:upstream:515d434cad2d4fc5"
+      ],
+      "subject": {
+        "artifact": "chain-0306-a24c94a222a0:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": "activity:Distribute",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "covered_work_scope"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若分发受 GPL 覆盖的目标代码，须按许可允许的方式提供对应源码。",
+      "source_refs": [
+        "license-text:upstream:515d434cad2d4fc5"
+      ],
+      "subject": {
+        "artifact": "chain-0306-a24c94a222a0:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": "all(activity:Distribute, object_code_conveyance)",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "object_code_conveyance",
+        "covered_work_scope"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

@@ -1,0 +1,113 @@
+{
+  "case_id": "chain-0089-e6a4f0fa2697",
+  "input_group_row": 89,
+  "aggregate_count": 15,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "LLAMA 3 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "15"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0089-e6a4f0fa2697",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_laws_and_Llama_Acceptable_Use_Policy",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0089-e6a4f0fa2697:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_Llama_materials_or_outputs_to_improve_another_large_language_model",
+            "when": "activity:TrainModel"
+          },
+          "S": {
+            "artifact": "chain-0089-e6a4f0fa2697:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0089-e6a4f0fa2697:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with applicable laws and regulations and the Llama Materials Acceptable Use Policy.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_applicable_laws",
+          "compliance_with_Llama_Acceptable_Use_Policy"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      },
+      {
+        "activity": "TrainModel",
+        "subject": {
+          "artifact": "chain-0089-e6a4f0fa2697:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use Llama Materials or their outputs to improve another large language model, except Meta Llama 3 or its derivative works.",
+        "trigger": "activity:TrainModel",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:TrainModel",
+          "use_of_Llama_materials_or_outputs_to_improve_another_large_language_model"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes use, remote service interaction, and a link to the upstream Llama 3 artifact; it states code modification is not applicable. It does not establish distribution, modification, or transfer of model weights.",
+      "The object graph does not establish that the Apache-2.0 downstream artifact and the Llama materials are the same or shared licensed subject (scope_shared is unknown). No license-license conflict is established from the available facts and excerpts.",
+      "The Llama excerpt incorporates the Acceptable Use Policy by reference, but its contents are not provided; specific policy restrictions cannot be assessed.",
+      "The structured Llama extraction is marked FIRST_PASS_REVIEW_REQUIRED. The excerpt supports the cited use conditions and training restriction, but does not establish any further duties for this API-call scenario."
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0085-e5df8f464019.json",
+  "original_case_id": "chain-0085-e5df8f464019",
+  "original_request_sha256": "f23f9a1013af1aebdf7335b7074ba9ca48502758c36d3d4855a5665fb8bfea0b",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0085-e5df8f464019": "chain-0089-e6a4f0fa2697",
+    "license-text:upstream:b7874099eaa0bc72": "license-text:upstream:b7874099eaa0bc72",
+    "license-text:downstream:53294e0db19b87c5": "license-text:downstream:53294e0db19b87c5",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/84": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/88"
+  }
+}

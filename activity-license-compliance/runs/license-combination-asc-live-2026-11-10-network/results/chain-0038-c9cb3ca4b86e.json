@@ -1,0 +1,120 @@
+{
+  "case_id": "chain-0038-c9cb3ca4b86e",
+  "status": "SUCCESS",
+  "request_sha256": "736efb6b0b638ce79a8130de4761b65f69bcf0781893c27e6a339a375bcd0533",
+  "analysis": {
+    "case_id": "chain-0038-c9cb3ca4b86e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "requires": true,
+            "when": "developing_models_that_compete_with_Gemini_API_or_Google_AI_Studio_or_attempting_to_reverse_engineer_extract_or_replicate_any_Service_component_including_underlying_data_or_models"
+          },
+          "S": {
+            "artifact": "chain-0038-c9cb3ca4b86e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API Additional Terms excerpt expressly restricts use to develop competing models and attempts to reverse engineer, extract, or replicate Service components. The recorded API use does not establish either restricted purpose, so no violation is found.",
+      "The AGPL-3.0 section 13 excerpt requires a source offer for a modified version supporting remote interaction. The trusted record says code modification is not applicable; the API call alone does not establish a modified AGPL program or make that clause applicable. No AGPL source-offer obligation is inferred.",
+      "The AGPL source excerpt contains separate entries for AGPL-3.0-only and AGPL-3.0-or-later, while the record gives only the AGPL-3.0 label. The available facts do not establish a modified downstream copy or shared license scope."
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Do not use the Gemini API Services to develop models that compete with the Services, or attempt to reverse engineer, extract, or replicate any Service component, including underlying data or models.",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0038-c9cb3ca4b86e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "developing_competing_model",
+          "attempting_reverse_engineering_extraction_or_replication"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17216,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 790,
+    "output_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "total_tokens": 18006,
+    "attribution": {
+      "items": {
+        "msg_0e485e4abe4f31ed016af2f85cc7c487d1871009555c780f09": {
+          "input_tokens": 15184,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15184,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e485e4abe4f31ed016af2f860ec8887d1bc41f8f2d92ecee2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 591,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 591
+            }
+          ]
+        },
+        "rs_0e485e4abe4f31ed016af2f860d0d887d184e3fb9a420d5983": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 199
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 17.318,
+  "auto_applied": false,
+  "aggregate_count": 48
+}

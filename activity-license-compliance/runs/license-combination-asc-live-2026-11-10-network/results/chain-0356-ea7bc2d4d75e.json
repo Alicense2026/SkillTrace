@@ -1,0 +1,269 @@
+{
+  "case_id": "chain-0356-ea7bc2d4d75e",
+  "status": "SUCCESS",
+  "request_sha256": "d569bc747a1c8a6cbbe3e667b54adf9f8f98ff875fc89bb3dfae18ab918fa87c",
+  "analysis": {
+    "case_id": "chain-0356-ea7bc2d4d75e",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_to_remote_users_at_no_charge_via_network_server",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_to_remote_users_at_no_charge_via_network_server",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_to_remote_users_at_no_charge_via_network_server",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "subject": {
+          "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "若修改后的受涵盖程序支持远程交互，须显著向通过计算机网络远程交互的用户提供免费获取该版本 Corresponding Source 的机会，可从网络服务器提供访问。",
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "version_supports_remote_interaction",
+            "remote_users_interact_through_computer_network"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "version_supports_remote_interaction",
+          "remote_users_interact_through_computer_network",
+          "source_offer_provided"
+        ],
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "将版权声明和许可声明纳入软件的所有副本或实质部分。",
+        "trigger": "copying_downstream_licensed_software_or_substantial_portion",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_copy_scope",
+          "copyright_and_permission_notice_included"
+        ],
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "分发 MIT 软件副本或实质部分时，须随附版权声明和许可声明。",
+        "trigger": "distribute_downstream_licensed_software_or_substantial_portion",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "downstream_distribution_scope",
+          "copyright_and_permission_notice_included"
+        ],
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ]
+      }
+    ],
+    "limitations": [
+      "AGPL 第 13 条摘录支持修改版本的网络交互源码提供义务；本案记录未明确确认该版本支持远程交互、网络用户交互或源码提供情况，因此保留条件义务，不判定违规。",
+      "对象图中 downstream 与 upstream 的链接、远程调用及打包关系未确认同一许可范围；代码层面集成且修改为已知事实，但未证明 MIT 条款和 AGPL 网络条款共同约束同一对象或已发生分发。",
+      "结构化 MIT 摘录仅覆盖许可授予及通知条件；未据未提供的条款推断其他义务。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19743,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1844,
+    "output_tokens_details": {
+      "reasoning_tokens": 246
+    },
+    "total_tokens": 21587,
+    "attribution": {
+      "items": {
+        "msg_0881f22525a7f236016af305d8c7c887d1a1b9549466b31fe7": {
+          "input_tokens": 17711,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17711,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0881f22525a7f236016af305de7ce487d1bac093155b681d05": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1598,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1598
+            }
+          ]
+        },
+        "rs_0881f22525a7f236016af305de610c87d1ae21b3a07f1af486": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 246
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 43.97,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

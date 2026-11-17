@@ -1,0 +1,110 @@
+{
+  "case_id": "chain-0335-39d234c76753",
+  "input_group_row": 335,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "LLAMA 4 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0335-39d234c76753",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement"
+          },
+          "S": {
+            "artifact": "chain-0335-39d234c76753:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e8aa7311a73e06c9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices"
+          },
+          "S": {
+            "artifact": "chain-0335-39d234c76753:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "When using the upstream Llama Materials, comply with the applicable Llama agreement.",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "subject": {
+          "artifact": "chain-0335-39d234c76753:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_Llama_agreement_version",
+          "compliance_with_applicable_agreement"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Retain applicable copyright and permission notices in copies of the downstream ISC software.",
+        "source_refs": [
+          "license-text:downstream:e8aa7311a73e06c9"
+        ],
+        "subject": {
+          "artifact": "chain-0335-39d234c76753:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_use_scope",
+          "retention_of_applicable_notices"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录标注为“Llama（版本未识别）”，但本地匹配的上游原文是 LLAMA 4 COMMUNITY LICENSE AGREEMENT；无法确认该文本适用于本次远程调用所用材料。上游许可义务因此仅作条件性记录，未推断其他版本条款。",
+      "对象图确认下游通过链接/远程调用使用上游材料，但未确认两份许可约束同一对象；远程调用不视为权重转移、修改或分发。所给ISC摘录针对下游软件，未明确规定API远程调用本身的条件。",
+      "未提供分发、再许可、打包或提供源码事实；未将这些活动的条款或义务扩展到本次已确认的远程调用。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0333-ceb15bbca2ff.json",
+  "original_case_id": "chain-0333-ceb15bbca2ff",
+  "original_request_sha256": "b27b6b174b024be9b4f54559f70d4b652cb65373067a03731731d917593a46b1",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0333-ceb15bbca2ff": "chain-0335-39d234c76753",
+    "license-text:upstream:c2f47a4e8b18a63d": "license-text:upstream:c2f47a4e8b18a63d",
+    "license-text:downstream:e8aa7311a73e06c9": "license-text:downstream:e8aa7311a73e06c9",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/332": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/334"
+  }
+}

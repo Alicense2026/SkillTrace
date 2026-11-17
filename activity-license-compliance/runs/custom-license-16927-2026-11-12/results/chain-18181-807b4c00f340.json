@@ -1,0 +1,175 @@
+{
+  "case_id": "chain-18181-807b4c00f340",
+  "source_csv_line": 18182,
+  "row": {
+    "github_repo": "swiggy-builders-club---ai-agent-",
+    "github_url": "https://github.com/codeultr0n/swiggy-builders-club---ai-agent-",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-2.5-flash",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: orchestrator/llm.py:38 ｜ 调用原文: return os.getenv(\"GEMINI_MODEL\", \"gemini-2.5-flash\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: LLMClient 中作为 Gemini 默认回退模型真实引用",
+    "batch": "10201-12200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "codeultr0n/swiggy-builders-club---ai-agent-",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "dd57c16e24b648f1c1972e83903ed5effac04eb2ce6d73bb3660d464c05f2ac6",
+    "filename": "_licenseref_full/texts/dd57c16e24b648f1c1972e83903ed5effac04eb2ce6d73bb3660d464c05f2ac6.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:Swiggy-Builders-Club---Ai-agent--HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-18181-807b4c00f340",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d8b40e4e1b062778"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_to_develop_models_competing_with_Gemini_services",
+                "attempt_to_reverse_engineer_extract_or_replicate_Gemini_service_components"
+              ]
+            },
+            "when": "use_of_Gemini_API_services"
+          },
+          "S": {
+            "artifact": "chain-18181-807b4c00f340:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:50528beb0feb1280"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED"
+          },
+          "S": {
+            "artifact": "chain-18181-807b4c00f340:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:50528beb0feb1280"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_is_unauthorized",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-18181-807b4c00f340:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "已核实的事实是下游项目通过远程 API 调用 Gemini，且对象图仅确认 API 调用/链接关系；未证明下游软件与 Gemini 服务是同一受约束对象，也未证明下游软件被复制、分发、修改或以其他方式使用。因此不能据此把下游 LicenseRef-Custom 的软件使用禁令套用于 Gemini 服务调用，亦不能作许可冲突结论。",
+      "Gemini 条款摘录禁止将服务用于开发竞争模型，以及反向工程、提取或复制服务组件；当前事实仅证明 API 使用，没有证据表明这些具体触发行为发生。结构化条款为 FIRST_PASS_REVIEW_REQUIRED，摘录不足以判断所有定义、例外及该禁止条款的完整适用范围。",
+      "下游 LicenseRef-Custom 条款说明软件仅为演示目的提供，并禁止未经授权的使用；文本未定义何为授权。当前记录没有确认对下游软件本身实施了 Use，也未说明该用途是否获授权，故不能判定违规或据此生成已触发义务。"
+    ],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17667,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1102,
+    "output_tokens_details": {
+      "reasoning_tokens": 394
+    },
+    "total_tokens": 18769,
+    "attribution": {
+      "items": {
+        "msg_066668b83292eebe016af53e8681cc87d295c7fdf1c841a21a": {
+          "input_tokens": 15597,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15597,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_066668b83292eebe016af53e8681cc87d2b56cd6ac728320ea": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_066668b83292eebe016af53e8e428487d2a338041f06b6ea4e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 708,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 708
+            }
+          ]
+        },
+        "rs_066668b83292eebe016af53e8e1f4887d298026e2f486e6f8b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 394
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "e1347e9e46b8f12641fed51663da08780e1d51cde5abd0168aed907fe1486057",
+  "elapsed_seconds": 26.07
+}

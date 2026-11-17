@@ -1,0 +1,156 @@
+{
+  "request_sha256": "5541bade3e62a3acca09c8c83e306b7d26146078693917a732e1683c6b476c9d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 413,
+        "end_line": 413,
+        "clause_label": "gap/complaint_claim_resolution_and_indemnity",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "third_party_ip_ownership_question_or_complaint_arises_from_licensee_service_use",
+          "requires": "licensee_resolves_claims_and_bears_related_costs_and_losses_to_indemnify_other_party"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Bailian Service Agreement §7.4; supplements the existing complaint-documentation-and-cooperation rule. Applies to claims, litigation, or threatened litigation arising from a third party's challenge to ownership of materials used with the service or of the service itself.",
+        "condition_explanation": "When such a challenge leads to a claim, litigation, or potential litigation, the party in breach must resolve it, bear the expenses and losses, and hold the other party harmless. The text does not identify which party is in breach in advance.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "If the licensee is the breaching party, resolve the resulting claim, litigation, or threatened litigation, bear the associated costs and losses, and hold the other party harmless.",
+            "actor": "licensee, if the licensee is the breaching party",
+            "object": "Claims, litigation, or threatened litigation concerning intellectual-property ownership of materials used with the service or of the service",
+            "trigger": "A third party questions or complains about the relevant ownership, and the licensee is the breaching party in the resulting matter."
+          }
+        ]
+      },
+      {
+        "start_line": 415,
+        "end_line": 415,
+        "clause_label": "gap/commercialization_indemnity",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_or_downstream_customer_commercializes_generated_content_externally",
+          "requires": "licensee_indemnifies_aliyun_and_affiliates_for_losses_caused_by_commercialization"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Bailian Service Agreement §7.6; supplements the existing lawful-input-and-output condition for external commercial use. This is a loss-allocation duty, not a general prohibition on commercialization.",
+        "condition_explanation": "The licensee must compensate Aliyun and its affiliates for losses caused by the licensee's or downstream customers' input or output conduct; the section specifically warns of increased infringement risk from unauthorized text, well-known IP, or failure to follow referenced §4.3.4.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Compensate Aliyun and its affiliates for losses caused by the licensee's or its downstream customers' input or output conduct.",
+            "actor": "licensee",
+            "object": "Losses suffered by Aliyun or its affiliates from input or output conduct relating to external commercialization of generated content",
+            "trigger": "Losses are caused by the licensee's or a downstream customer's input or output conduct; heightened-risk circumstances identified in §7.6 include unauthorized text, well-known IP, and failure to follow §4.3.4."
+          }
+        ]
+      },
+      {
+        "start_line": 430,
+        "end_line": 430,
+        "clause_label": "gap/confidentiality_direct_loss_compensation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "confidential_information_leak_causes_loss_to_other_party",
+          "requires": "responsible_party_compensates_direct_economic_loss"
+        },
+        "actor_role": "both_parties",
+        "scope_note": "Bailian Service Agreement §8.5; mutual compensation duty associated with leakage of confidential information, alongside the existing protection and mitigation duties.",
+        "condition_explanation": "The party whose conduct gives rise to the loss must compensate the other party for direct economic loss caused by the leakage.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Compensate the other party for direct economic loss caused by the leakage.",
+            "actor": "party responsible for the leakage",
+            "object": "Other party's direct economic loss caused by leakage of confidential information",
+            "trigger": "A confidential-information leakage event causes direct economic loss to the other party."
+          }
+        ]
+      },
+      {
+        "start_line": 464,
+        "end_line": 464,
+        "clause_label": "gap/export_control_use_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_export_control_or_sanctions_prohibited_destination_recipient_or_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Bailian Service Agreement §13.2; restrictions on direct or indirect provision of Aliyun products or services and on their use under applicable export-control and economic-sanctions laws.",
+        "condition_explanation": "The licensee must comply with applicable PRC and other applicable export-control and economic-sanctions laws. The restriction covers direct or indirect provision to listed sanctioned countries or regions, or restricted-list entities or individuals, and uses prohibited by those laws.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not directly or indirectly provide the products or services to destinations, entities, or individuals listed as sanctioned or restricted under applicable export-control or economic-sanctions laws, or use them for purposes prohibited by those laws.",
+            "actor": "licensee",
+            "object": "Aliyun products or services",
+            "trigger": "Whenever providing or using the products or services, subject to applicable export-control and economic-sanctions laws."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The target is one supplied unit spanning Bailian Service Agreement §§7.2–13.8. The existing immutable anchors cover many express rules; additions address the specific claim-cost/indemnity, confidentiality-loss compensation, and export-control duties not covered by those anchors.",
+      "Bailian Service Agreement §7.3 defers fine-tuned-model IP allocation to service documentation, announcements, or third-party terms; those terms are not supplied here, so no ownership result is inferred. Section 7.6 refers to §4.3.4, whose text is not included in this target unit; its content is not inferred.",
+      "Contract termination, notice delivery mechanics, dispute resolution, severability, and similar provisions do not create activity constraints representable by the fixed activity vocabulary. No new permission is inferred from ownership allocations or confidentiality definitions."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0044",
+        "status": "MODELED",
+        "clause_labels": [
+          "restricted_use_of_aliyun_marks",
+          "authorized_mark_use_follows_specifications",
+          "fine_tuned_model_ip_allocation_reference",
+          "uploaded_materials_rights_and_non_dispute",
+          "complaint_documentation_and_cooperation",
+          "gap/complaint_claim_resolution_and_indemnity",
+          "generated_content_ownership_allocation",
+          "commercialization_requires_lawful_inputs_and_outputs",
+          "gap/commercialization_indemnity",
+          "waiver_of_claims_for_similar_generated_content",
+          "confidential_information_scope_definition",
+          "confidential_information_limited_use_and_safeguarding",
+          "confidential_information_access_limited",
+          "confidentiality_exception_paths",
+          "confidentiality_breach_response",
+          "gap/confidentiality_direct_loss_compensation",
+          "provider_remedies_for_breach_or_abnormal_use",
+          "user_termination_after_72_hour_outage",
+          "provide_and_maintain_contact_information",
+          "contact_information_accuracy_and_updates",
+          "gap/export_control_use_restrictions"
+        ],
+        "reason": "The express mark restrictions and authorized-use conditions, uploaded-material assurances, complaint cooperation and claim allocation, generated-content ownership terms, lawful input/output and commercialization duties, similarity-claim waiver, confidentiality duties and exceptions, leakage response and compensation, enforcement provision, 72-hour outage termination option, contact-information duties, and export-control restrictions are covered by the cited anchors and additions. The fine-tuned-model allocation anchor records a deferral without inventing the missing ownership terms. Remaining contract mechanics such as dispute resolution and notice delivery are outside the activity-constraint vocabulary."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

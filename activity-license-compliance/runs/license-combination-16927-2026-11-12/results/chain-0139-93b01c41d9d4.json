@@ -1,0 +1,99 @@
+{
+  "case_id": "chain-0139-93b01c41d9d4",
+  "input_group_row": 139,
+  "aggregate_count": 7,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "7"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0139-93b01c41d9d4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0139-93b01c41d9d4:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "activity:Use",
+            "requires": {
+              "any": [
+                "use_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_service_component_including_underlying_data_or_models"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a84b5844ce11531a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0139-93b01c41d9d4:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "activity:Use",
+            "requires": "retain_applicable_notices"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0139-93b01c41d9d4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Gemini API Services to develop models competing with the Services, or attempt to reverse engineer, extract, or replicate their components, including underlying data or models.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+          "attempt_to_reverse_engineer_extract_or_replicate_service_component_including_underlying_data_or_models"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "limitations": [
+      "本地 Gemini API Additional Terms 摘录（L31-L34）明确限制竞争模型开发及逆向工程、提取或复制服务组件；未提供事实表明这些行为已发生，因此不判违规。结构化条款将其抽取为一般 Use 禁止，但原文限定语控制本判断。",
+      "对象图确认下游 ISC 软件与上游 Gemini API 存在链接和远程调用，但依赖、捆绑、修改副本及共同产品范围均未知；不能据此认定两许可证约束同一对象或构成许可冲突。",
+      "ISC 摘录的通知条件仅在适用软件的复制或相关使用范围内评估；任务未证明这些活动发生，故不据此认定已违反通知条件。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0245-2f6560f99617.json",
+  "original_case_id": "chain-0245-2f6560f99617",
+  "original_request_sha256": "50be76e1fd0ea628cc87861ba5fae0fcf506acb23d9ea3f9fe38a1019b01f9ea",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0245-2f6560f99617": "chain-0139-93b01c41d9d4",
+    "license-text:upstream:ffe5b0021e0b945a": "license-text:upstream:ffe5b0021e0b945a",
+    "license-text:downstream:a84b5844ce11531a": "license-text:downstream:a84b5844ce11531a",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/244": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/138"
+  }
+}

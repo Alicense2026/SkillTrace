@@ -1,0 +1,584 @@
+{
+  "request_sha256": "866f3c527616d4e537cc143b2aa38b69bfeb32f8336508610978efb4b56b45dd",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 246,
+        "end_line": 246,
+        "clause_label": "cohere_provision_services",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": "customer_and_permitted_users_comply_with_agreement"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere must make the Cohere API SaaS Services available to Customer during the Term, subject to Customer’s and its Permitted Users’ compliance with the Agreement.",
+        "condition_explanation": "customer_and_permitted_users_comply_with_agreement means Customer and its Permitted Users comply with the Agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Make the Cohere API SaaS Services available to Customer on the Agreement’s terms during the Term.",
+            "actor": "Cohere",
+            "object": "Cohere API SaaS Services",
+            "trigger": "During the Term while Customer and its Permitted Users comply with the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 247,
+        "end_line": 247,
+        "clause_label": "custom_model_order_or_selection",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "custom_model_set_out_in_order_form",
+              "customer_selects_custom_model_on_website"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "If either specified trigger applies, Cohere develops a Custom Model and provides the Cohere API SaaS Services using it; the Custom Model is used solely to provide those services to Customer and is destroyed upon termination or expiration.",
+        "condition_explanation": "The two stated triggers are alternatives, not cumulative. custom_model_set_out_in_order_form means the Custom Model is set out in an Order Form; customer_selects_custom_model_on_website means Customer selects one on the Website.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Develop the Custom Model and provide the Cohere API SaaS Services using it.",
+            "actor": "Cohere",
+            "object": "Custom Model and Cohere API SaaS Services",
+            "trigger": "A Custom Model is set out in an Order Form or Customer selects one on the Website."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Use the Custom Model only to provide the Cohere API SaaS Services to Customer.",
+            "actor": "Cohere",
+            "object": "Custom Model",
+            "trigger": "Whenever Cohere uses the Custom Model."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Destroy the Custom Model.",
+            "actor": "Cohere",
+            "object": "Custom Model",
+            "trigger": "Upon termination or expiration of the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 248,
+        "end_line": 248,
+        "clause_label": "customer_permitted_user_controls",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "customer_identifies_and_authenticates_permitted_users",
+              "only_permitted_users_access_and_use_service",
+              "customer_ensures_permitted_user_compliance"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer’s responsibilities for identifying and authenticating Permitted Users, restricting service access and use to them, and ensuring their compliance with the Agreement. This clause represents those duties as conditions on Customer’s access or use; it does not create an unconditional OBLIGATORY Use rule.",
+        "condition_explanation": "customer_identifies_and_authenticates_permitted_users means Customer identifies and authenticates all Permitted Users. only_permitted_users_access_and_use_service means only Permitted Users access and use the Cohere API SaaS Service. customer_ensures_permitted_user_compliance means Customer ensures Permitted Users comply with the Agreement. Permitted Users are users authorized by Customer on its behalf to access and use the Cohere API SaaS Services.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Identify and authenticate all Permitted Users.",
+            "actor": "Customer",
+            "object": "Permitted User accounts",
+            "trigger": "Whenever persons are authorized as Permitted Users or access is managed."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure that only Permitted Users access and use the Cohere API SaaS Service.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Service",
+            "trigger": "Whenever access to or use of the Cohere API SaaS Service is permitted."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure Permitted Users comply with the Agreement.",
+            "actor": "Customer",
+            "object": "Permitted Users’ conduct in relation to the Agreement",
+            "trigger": "Whenever a Permitted User acts in relation to the Services or Cohere Products."
+          }
+        ]
+      },
+      {
+        "start_line": 249,
+        "end_line": 256,
+        "clause_label": "general_use_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "expressly_permitted_by_agreement_and_applicable_third_party_license"
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Applies to access to or use of Services and Cohere Products, subject to what the Agreement expressly permits. Licensed Third-Party Technology is also subject to its applicable third-party licence. Specific prohibitions in lines 250–256 are separately extracted.",
+        "condition_explanation": "expressly_permitted_by_agreement_and_applicable_third_party_license means the particular access or use is expressly permitted by this Agreement and, for Licensed Third-Party Technology, by its applicable third-party licence.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use Services or Cohere Products except as expressly permitted by the Agreement and, for Licensed Third-Party Technology, its applicable third-party licence.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Services and Cohere Products",
+            "trigger": "Whenever access to or use of those materials or services is undertaken or permitted."
+          }
+        ]
+      },
+      {
+        "start_line": 250,
+        "end_line": 250,
+        "clause_label": "prohibited_unlawful_or_rights_violating_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": {
+              "any": [
+                "violates_usage_policy",
+                "infringes_or_misappropriates_third_party_rights",
+                "adversely_affects_cohere_reputation_or_relationships",
+                "violates_applicable_law"
+              ]
+            }
+          }
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits, including Permitted Users",
+        "scope_note": "Prohibits the specified manner or purpose of access or use of Services or Cohere Products, and development of a Customer Application. Rights violations include processing Customer Data without all necessary consents and licences.",
+        "condition_explanation": "The prohibited predicates are alternatives. violates_usage_policy concerns the referenced Usage Policy, whose external text and updates are not supplied. infringes_or_misappropriates_third_party_rights includes intellectual property, publicity, personality, and privacy rights, including processing Customer Data without necessary consents and licences. adversely_affects_cohere_reputation_or_relationships refers to Cohere’s reputation or goodwill, its trademarks, or relationships with its customers and licensors. violates_applicable_law means violation of applicable law.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use Services or Cohere Products, or develop a Customer Application, in a manner or for a purpose that violates the Usage Policy, infringes or misappropriates third-party rights, adversely affects the specified Cohere interests, or violates applicable law.",
+            "actor": "Customer and any Person whose conduct Customer permits, including Permitted Users",
+            "object": "Services, Cohere Products, Customer Application, and Customer Data where processed",
+            "trigger": "Whenever engaging in the described access, use, application development, or Customer Data processing."
+          }
+        ]
+      },
+      {
+        "start_line": 251,
+        "end_line": 251,
+        "clause_label": "prohibited_competitive_or_replicative_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": {
+              "any": [
+                "purpose_building_or_training_similar_or_competitive_product",
+                "purpose_replicating_look_and_feel",
+                "purpose_benchmarking_or_competitive_analysis",
+                "use_or_benefit_of_direct_cohere_competitor"
+              ]
+            }
+          }
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Prohibits the listed purposes for access or use of Services or Cohere Products, use of any Output, or development of a Customer Application. A direct competitor includes an entity offering large language models for license or sale, and is otherwise reasonably determined by Cohere.",
+        "condition_explanation": "The prohibited purposes are alternatives. purpose_building_or_training_similar_or_competitive_product includes building or training a similar or competitive product or service, such as a competitive AI model. purpose_replicating_look_and_feel means developing an application that replicates the look and feel of Services or Cohere Products. purpose_benchmarking_or_competitive_analysis means benchmarking or conducting competitive analysis of them. use_or_benefit_of_direct_cohere_competitor means use for the use or benefit of a direct Cohere competitor.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not engage in the specified access, use, Output use, or Customer Application development for any listed competitive, replicative, benchmarking, or competitor-benefit purpose.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Services, Cohere Products, Output, and Customer Application, as applicable",
+            "trigger": "Whenever access, use, Output use, or application development is for any of the listed purposes."
+          }
+        ]
+      },
+      {
+        "start_line": 252,
+        "end_line": 252,
+        "clause_label": "restricted_service_distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "recipient_is_permitted_user"
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Services or any part of them may not be distributed, sublicensed, made accessible, or otherwise made available to any Person other than a Permitted User.",
+        "condition_explanation": "recipient_is_permitted_user means the recipient is a Permitted User. The restriction also covers sublicensing and granting access, not only distribution.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute, sublicense, permit access to, or otherwise make Services or any part of them available except to a Permitted User.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Services",
+            "trigger": "Whenever Services or any part of them are distributed, sublicensed, or made accessible or available."
+          }
+        ]
+      },
+      {
+        "start_line": 253,
+        "end_line": 253,
+        "clause_label": "prohibited_modification_and_reverse_engineering",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "prior_written_cohere_approval"
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Modification is prohibited without Cohere’s prior written approval; decompilation, reverse engineering, reverse assembly, and disassembly of object code are also prohibited.",
+        "condition_explanation": "prior_written_cohere_approval means Cohere has given prior written approval. The approval exception applies expressly to Modify; the text does not extend it to the listed reverse-engineering actions.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify Services or Cohere Products without Cohere’s prior written approval, or decompile, reverse engineer, reverse assemble, or disassemble their object code.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Services and Cohere Products, including their object code",
+            "trigger": "Whenever undertaking modification or a listed object-code activity; prior written Cohere approval is an exception only for modification."
+          }
+        ]
+      },
+      {
+        "start_line": 254,
+        "end_line": 254,
+        "clause_label": "proprietary_notices",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "proprietary_notices_and_labels_not_removed_or_obscured"
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Prohibits removal or obscuring of proprietary notices or labels on Services or Cohere Products.",
+        "condition_explanation": "proprietary_notices_and_labels_not_removed_or_obscured means proprietary notices and labels on the covered Services or Cohere Products remain neither removed nor obscured.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not remove or obscure proprietary notices or labels.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Proprietary notices or labels on Services or Cohere Products",
+            "trigger": "Whenever handling Services or Cohere Products bearing such notices or labels."
+          }
+        ]
+      },
+      {
+        "start_line": 255,
+        "end_line": 255,
+        "clause_label": "restricted_location_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "access_not_from_restricted_location"
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Prohibits access to or use of Services or Cohere Products from a Restricted Location. The definition includes Belarus, China (including Hong Kong and Macau), Iran, North Korea, Russia, Syria, and locations Cohere may later advise are Restricted Locations.",
+        "condition_explanation": "access_not_from_restricted_location means access and use do not occur from a location within the Agreement’s defined Restricted Location.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use Services or Cohere Products from a Restricted Location.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Services and Cohere Products",
+            "trigger": "Whenever accessing or using them."
+          }
+        ]
+      },
+      {
+        "start_line": 256,
+        "end_line": 256,
+        "clause_label": "no_personal_household_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "use_not_for_personal_family_or_household_purposes"
+        },
+        "actor_role": "Customer and any Person whose conduct Customer permits",
+        "scope_note": "Applies specifically to the Cohere API SaaS Services and the Cohere API.",
+        "condition_explanation": "use_not_for_personal_family_or_household_purposes means the use is not for personal, family, or household purposes.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Cohere API SaaS Services or Cohere API for personal, family, or household purposes.",
+            "actor": "Customer and any Person whose conduct Customer permits",
+            "object": "Cohere API SaaS Services and Cohere API",
+            "trigger": "Whenever using those services or products."
+          }
+        ]
+      },
+      {
+        "start_line": 257,
+        "end_line": 258,
+        "clause_label": "cohere_discretionary_suspension",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may suspend or revoke Customer’s access to or use of Cohere Products or Services at any time, for any reason, in its discretion. The listed examples and the distinct 24-hour Custom Model suspension rule are extracted separately. The excerpt specifies no cure or restoration deadline for this general suspension power.",
+        "condition_explanation": "The discretion is stated as available at any time and for any reason; the grounds listed in lines 259–265 are examples, not cumulative prerequisites.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 259,
+        "end_line": 265,
+        "clause_label": "listed_suspension_grounds",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "scheduled_maintenance",
+              "force_majeure",
+              "customer_delinquent_fees",
+              "good_faith_belief_of_violation",
+              "emergency_security_concerns",
+              "use_contrary_to_documentation",
+              "regulatory_requirement_or_change_in_law"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Examples of circumstances in which Cohere may suspend or revoke Customer’s access to or use of Cohere Products or Services. Cohere may act under the broader discretion in lines 257–258 as well.",
+        "condition_explanation": "The grounds are alternatives. customer_delinquent_fees means Customer is delinquent in Fees under Section 9. good_faith_belief_of_violation means Cohere in good faith believes Customer or a Permitted User violated the Agreement or Cohere-provided or Website-posted guidelines, including the Usage Policy. use_contrary_to_documentation means Customer’s use is contrary to related Documentation. regulatory_requirement_or_change_in_law includes action required by a regulatory body or resulting from a change in applicable law. force_majeure refers to the Agreement’s defined Force Majeure.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 266,
+        "end_line": 266,
+        "clause_label": "inactive_custom_model_suspension",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "custom_model_unaccessed_for_24_consecutive_hours",
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may temporarily suspend availability of a Custom Model after Customer has not accessed it for 24 consecutive hours; Cohere must promptly restore access when Customer attempts to access it.",
+        "condition_explanation": "custom_model_unaccessed_for_24_consecutive_hours means Customer has not accessed the Custom Model for 24 consecutive hours.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly restore Customer’s access to the Custom Model.",
+            "actor": "Cohere",
+            "object": "Custom Model access",
+            "trigger": "After availability was temporarily suspended under this clause, when Customer attempts to access the Custom Model."
+          }
+        ]
+      },
+      {
+        "start_line": 267,
+        "end_line": 267,
+        "clause_label": "service_modifications",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may make any Modifications to the Cohere API SaaS Services.",
+        "condition_explanation": "Modifications has the defined meaning, including modifications, improvements, customizations, patches, bug fixes, updates, enhancements, aggregations, compilations, derivative works, translations, and adaptations.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 268,
+        "end_line": 268,
+        "clause_label": "subcontract_service_provision",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may engage third parties, including cloud service providers, to provide the Cohere API SaaS Services.",
+        "condition_explanation": "Third-party engagement is permitted for the purpose stated: providing the Cohere API SaaS Services.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 269,
+        "end_line": 269,
+        "clause_label": "optional_professional_services",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "professional_services_set_out_in_order_form",
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may provide one-time implementation services, including configuration, technical integration, and initial training, as may be set out in an Order Form.",
+        "condition_explanation": "professional_services_set_out_in_order_form means the Professional Services are set out in an Order Form.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 270,
+        "end_line": 270,
+        "clause_label": "beta_services_internal_evaluation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "beta_services_made_available_to_customer",
+          "requires": "internal_testing_or_evaluation"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Beta Services, if made available, are for testing or evaluating features and functionality for Customer’s internal business purposes. The same paragraph permits Cohere to modify Beta Services or terminate access at any time, for any or no reason, in its discretion.",
+        "condition_explanation": "beta_services_made_available_to_customer means Cohere has made the early-access Beta Services available to Customer. internal_testing_or_evaluation means testing or evaluating features and functionality for Customer’s internal business purposes.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 270,
+        "end_line": 270,
+        "clause_label": "cohere_beta_modification_or_termination",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "beta_services_made_available_to_customer",
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may modify Beta Services or terminate Customer’s access to Beta Services or any part of them at any time, for any or no reason, in its sole discretion, with or without prior notice.",
+        "condition_explanation": "beta_services_made_available_to_customer means Cohere has made Beta Services available to Customer.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The Usage Policy, Documentation, Order Forms, other Agreement sections, and applicable third-party licence terms are referenced but not supplied here; their content is not inferred.",
+      "Line 244 defines Website and is contextual rather than operative. Lines 257–258 state broad discretionary suspension authority; lines 259–265 give alternative examples, not additional cumulative conditions.",
+      "Line 271 contains warranty, indemnification, and liability disclaimers and a liability cap, which are nonoperative for this activity-constraint extraction."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0086",
+        "status": "MODELED",
+        "clause_labels": [
+          "cohere_provision_services",
+          "custom_model_order_or_selection",
+          "customer_permitted_user_controls",
+          "general_use_restriction",
+          "prohibited_unlawful_or_rights_violating_use",
+          "prohibited_competitive_or_replicative_use",
+          "restricted_service_distribution",
+          "prohibited_modification_and_reverse_engineering",
+          "proprietary_notices",
+          "restricted_location_access",
+          "no_personal_household_use",
+          "cohere_discretionary_suspension",
+          "listed_suspension_grounds",
+          "inactive_custom_model_suspension",
+          "service_modifications",
+          "subcontract_service_provision",
+          "optional_professional_services",
+          "beta_services_internal_evaluation",
+          "cohere_beta_modification_or_termination"
+        ],
+        "reason": "Operative service-provision, Customer responsibility, use restrictions, discretionary suspension and modification powers, subcontracting, optional professional services, and Beta Services terms are modeled. The Website definition is contextual and the warranty, liability, and indemnification text at line 271 is nonoperative for this activity-constraint extraction."
+      }
+    ]
+  },
+  "attempt": 2
+}

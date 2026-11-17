@@ -1,0 +1,152 @@
+{
+  "case_id": "chain-0065-c37d240cee4d",
+  "status": "SUCCESS",
+  "request_sha256": "977a4954ad3f54c95ce8f126b5707b36c18ddeabd70531d808622968d5fca64f",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2520b5a8c608be8d"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "supports_remote_user_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0065-c37d240cee4d:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2520b5a8c608be8d"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "supports_remote_user_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0065-c37d240cee4d:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "case_id": "chain-0065-c37d240cee4d",
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 Qwen 资产标记为 Apache-2.0；下游 Cherry Studio 标记为 AGPL-3.0。已知关系是 API 远程调用/链接，没有证据表明模型权重被复制、修改、合并或纳入下游产品，因此不能仅凭许可标签认定两份许可共同约束同一对象。",
+      "AGPL 第13条的源码提供义务以修改受覆盖程序且该修改版本支持用户通过网络远程交互为条件。现有事实确认的是应用调用远程 API，不足以证明这些条款触发条件；下游是否修改了受覆盖程序以及是否向用户提供相应网络交互服务均未知。",
+      "Apache-2.0 第4节的再分发条件与 AGPL-3.0 第13节源码提供条款不因当前已知 API 调用而触发。未发现许可副本、归属通知、源码提供或其他履行事实，不据此认定未履行。"
+    ],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若修改了受 AGPL 覆盖的程序，且该修改版本支持用户通过计算机网络远程交互，则须显著向所有此类用户提供获取该版本 Corresponding Source 的机会，并通过网络服务器免费提供源码访问。",
+        "source_refs": [
+          "license-text:downstream:2520b5a8c608be8d"
+        ],
+        "subject": {
+          "artifact": "chain-0065-c37d240cee4d:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "supports_remote_user_interaction"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "supports_remote_user_interaction"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33719,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1114,
+    "output_tokens_details": {
+      "reasoning_tokens": 278
+    },
+    "total_tokens": 34833,
+    "attribution": {
+      "items": {
+        "msg_04950341fcb2bde6016af2e919ee5087d29ca2c9e8f343610b": {
+          "input_tokens": 31771,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31771,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04950341fcb2bde6016af2e91f722c87d2896ece52b772246f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 836,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 836
+            }
+          ]
+        },
+        "rs_04950341fcb2bde6016af2e91f566087d2ad453d36b5fdfada": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 278
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.816,
+  "auto_applied": false
+}

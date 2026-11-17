@@ -1,0 +1,67 @@
+{
+  "request_sha256": "6d123d034c9fe65ee9dd993fdf262adfa36f6769bd0a4805cb6fab0b3d360c4a",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 425,
+        "end_line": 426,
+        "clause_label": "gap/export_sanctions_law_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "accessing_or_using_services_or_providing_inputs_or_obtaining_outputs",
+          "requires": "comply_with_all_applicable_export_control_and_sanctions_laws"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section titled “Export Control and Sanctions” separately makes the user responsible for complying with all applicable Export Control and Sanctions Laws relating to the user’s and end users’ access to and use of the Services. This general compliance duty is distinct from the specific use and Input restrictions in the immutable anchors.",
+        "condition_explanation": "comply_with_all_applicable_export_control_and_sanctions_laws means comply with all applicable laws and regulations governing export controls and sanctions in connection with the user’s and end users’ access to and use of the Services.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with all applicable Export Control and Sanctions Laws related to your and your end users’ access to and use of the Services.",
+            "actor": "you",
+            "object": "access to and use of the DeepSeek Services, including providing Inputs and obtaining Outputs",
+            "trigger": "Whenever you or your end users access or use the Services, provide Inputs, or obtain Outputs."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Section 8.2’s express responsibility for third-party liabilities and duty to compensate DeepSeek for specified losses in paragraph 395 are not representable by an allowed activity; these duties remain unresolved rather than being converted into a fictitious Use permission.",
+      "Paragraph 413 is a limitation of liability, not an activity constraint."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0116",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "provider_remedial_measures"
+        ],
+        "reason": "The provider’s reserved remedial measures are covered by the existing anchor. The paragraph also expressly makes the user responsible for specified third-party liabilities and requires compensation to DeepSeek for specified losses; those duties do not fit an allowed activity."
+      },
+      {
+        "unit_id": "P0123",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section 8.4 limits liability for certain categories of loss and caps aggregate liability; it imposes no activity constraint or behavioral duty."
+      },
+      {
+        "unit_id": "P0126",
+        "status": "MODELED",
+        "clause_labels": [
+          "gap/export_sanctions_law_compliance",
+          "sanctions_restricted_service_use",
+          "export_control_input_content_restriction"
+        ],
+        "reason": "The paragraph’s general export-control and sanctions compliance duty is modeled, and its specific prohibited service uses and restriction on Input contents are covered by the cited anchors."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

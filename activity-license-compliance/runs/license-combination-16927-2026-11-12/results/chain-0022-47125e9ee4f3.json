@@ -1,0 +1,75 @@
+{
+  "case_id": "chain-0022-47125e9ee4f3",
+  "input_group_row": 22,
+  "aggregate_count": 128,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "MIT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "128"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0022-47125e9ee4f3",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0022-47125e9ee4f3:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0022-47125e9ee4f3:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the copyright notice and permission notice in copies or substantial portions of the Software, where applicable.",
+        "trigger": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "copy_or_substantial_portion_involved",
+          "notice_included"
+        ],
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ]
+      }
+    ],
+    "limitations": [
+      "记录确认的是对 MIT 标记资产的远程服务调用及 API/链接关系；不据此推断代码修改、复制、分发、源码提供或 GPL 许可材料转移。",
+      "MIT 摘录中的通知条件明确针对复制或软件实质部分；现有事实未说明远程调用是否涉及此类复制，故仅列条件义务。",
+      "GPL 摘录涵盖复制、修改版本传递及非源码形式分发等情形；这些活动未由记录证实。未发现可用于判定普通远程调用的相关 GPL 条款摘录。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0020-53f27a7e27ba.json",
+  "original_case_id": "chain-0020-53f27a7e27ba",
+  "original_request_sha256": "47edcd8ccee3239a89e13ae437c8c1fd67cdb2e0734788c9edd5f99df79f4036",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0020-53f27a7e27ba": "chain-0022-47125e9ee4f3",
+    "license-text:upstream:04de8583241775d8": "license-text:upstream:04de8583241775d8",
+    "license-text:downstream:4084f749838d7e68": "license-text:downstream:4084f749838d7e68",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/19": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/21"
+  }
+}

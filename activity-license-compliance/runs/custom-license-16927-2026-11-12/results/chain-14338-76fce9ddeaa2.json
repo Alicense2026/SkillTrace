@@ -1,0 +1,246 @@
+{
+  "case_id": "chain-14338-76fce9ddeaa2",
+  "source_csv_line": 14339,
+  "row": {
+    "github_repo": "yahia-quest-arena",
+    "github_url": "https://github.com/MBeji/yahia-quest-arena",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "claude-haiku-4-5",
+    "artifact_url": "https://docs.anthropic.com/en/docs/about-claude/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/shared/constants/ai.ts:421 ｜ 调用原文: anthropic: { fast: \"claude-haiku-4-5\", rich: \"claude-sonnet-5\" },（引用处 第419行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/shared/constants/ai.ts 中作为 AI 模型标识符集中定义，供 ai-call.server 调用",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "mbeji/yahia-quest-arena",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429",
+    "filename": "_licenseref_full/texts/270c63e3999345ad240b87eab724b06328f0448190981d41c566c8ca6a97c429.txt",
+    "evidence_file": "LICENSE-CONTENT.md",
+    "acquisition": "zip:mirror:yahia-quest-arena-HEAD/LICENSE-CONTENT.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c97d65c4d95e3a26"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14338-76fce9ddeaa2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c97d65c4d95e3a26"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14338-76fce9ddeaa2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:02a0213fad70a66f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_github_public_repository_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14338-76fce9ddeaa2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:02a0213fad70a66f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "owner_prior_written_permission"
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14338-76fce9ddeaa2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "case_id": "chain-14338-76fce9ddeaa2",
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Anthropic 条款摘录授权使用 Services 并要求遵守服务条款，但未提供服务条款的具体内容；未据此推断更具体的许可限制。",
+      "下游 LicenseRef-Custom 条款涉及仓库教育内容等；已知的 API 调用/链接不证明该内容被使用。其 GitHub 服务条款所给权限范围及任何所有者书面许可均未提供。",
+      "对象图未确认上下游许可约束共同作用于同一对象；未将 API 调用认定为模型权重转移、分发或衍生。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Anthropic Services 时遵守适用的服务条款。",
+        "source_refs": [
+          "license-text:upstream:c97d65c4d95e3a26"
+        ],
+        "subject": {
+          "artifact": "chain-14338-76fce9ddeaa2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "进行远程交互时遵守适用的服务条款。",
+        "source_refs": [
+          "license-text:upstream:c97d65c4d95e3a26"
+        ],
+        "subject": {
+          "artifact": "chain-14338-76fce9ddeaa2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用下游受约束内容，须限于 GitHub 公共仓库条款所允许的平台查看/分叉范围；否则，未经所有者事先书面许可不得使用该内容。",
+        "source_refs": [
+          "license-text:downstream:02a0213fad70a66f"
+        ],
+        "subject": {
+          "artifact": "chain-14338-76fce9ddeaa2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "within_github_public_repository_terms",
+          "owner_prior_written_permission"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18723,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1625,
+    "output_tokens_details": {
+      "reasoning_tokens": 485
+    },
+    "total_tokens": 20348,
+    "attribution": {
+      "items": {
+        "msg_09f2d40c3224416e016af53db18ad887d18edac5c5635b2e7f": {
+          "input_tokens": 16653,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16653,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09f2d40c3224416e016af53db18ad887d1a3fd73840a4b7ca6": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09f2d40c3224416e016af53dbaf85887d1abe87b2fc5c43759": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1140,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1140
+            }
+          ]
+        },
+        "rs_09f2d40c3224416e016af53dbadc9087d19c8286fc361736cc": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 485
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "092691e5458cc6d64effe06a1db391b71f6a125534bbebe48eb8b40a4bca10d0",
+  "elapsed_seconds": 35.51
+}

@@ -1,0 +1,150 @@
+{
+  "case_id": "chain-0140-df2205115395",
+  "status": "SUCCESS",
+  "request_sha256": "4fbc1accefd34e6b0967a0addef4362210272b754df92a401da1c99ffc8aa9d5",
+  "analysis": {
+    "case_id": "chain-0140-df2205115395",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0140-df2205115395:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "S": {
+            "artifact": "chain-0140-df2205115395:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": "activity:Distribute"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0140-df2205115395:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the Llama agreement when using the Llama Materials.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0140-df2205115395:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If distributing or making available covered Llama Materials, derivatives, or a product or service containing them, provide a copy of the agreement and prominently display “Built with Llama” on a related website, user interface, blogpost, about page, or product documentation.",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute"
+        ],
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "已确认的是对上游 Llama 3.3 材料的远程调用/使用；未确认分发、改动或将模型权重转移给下游。远程调用本身不触发分发义务。",
+      "下游 MIT 许可条款约束下游软件对象；现有事实未证明本次活动涉及对该对象的使用、复制或分发，因此未据此认定冲突或新增义务。",
+      "上游使用许可摘录要求遵守协议，但未在该摘录中列出完整协议条件；具体适用范围和条件须以该版本完整文本为准。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 23185,
+    "input_tokens_details": {
+      "cached_tokens": 23040,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 939,
+    "output_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "total_tokens": 24124,
+    "attribution": {
+      "items": {
+        "msg_0d9c0a2ee1c9f872016af2fcc6429c87d18dedfac34b351307": {
+          "input_tokens": 21153,
+          "cached_tokens": 21010,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21153,
+              "cached_tokens": 21010,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d9c0a2ee1c9f872016af2fcca615c87d18aba38922a72ed72": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 754,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 754
+            }
+          ]
+        },
+        "rs_0d9c0a2ee1c9f872016af2fcca459087d1bd66086529fbc01a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 185
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.801,
+  "auto_applied": false,
+  "aggregate_count": 6
+}

@@ -1,0 +1,144 @@
+{
+  "case_id": "chain-0029-d8b2244bb225",
+  "status": "SUCCESS",
+  "request_sha256": "21cae8b1e2d832d9bf71980a43399e73bf860c2a375451ca9b4ae31669840ed6",
+  "analysis": {
+    "case_id": "chain-0029-d8b2244bb225",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0029-d8b2244bb225:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ea4c887805d7254c"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "remote_interaction",
+                "version_supports_network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0029-d8b2244bb225:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI.txt 本次匹配到的结构化条款仅涉及客户向 OpenAI 或其经销商支付适用费用；不能据此判断客户能否向下游收费或其他服务使用限制。",
+      "AGPL 第13条适用于修改了程序且该修改版本支持网络交互、并有用户远程交互时的源码提供义务。可信记录说明此处是远程服务调用且代码修改不适用；没有证据表明下游对象是该条所述的修改程序。未将 API 调用本身推定为分发或修改。",
+      "两个本地许可证文本均标记为首轮结构化抽取；本次只依据提供的相关摘录判断。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如产生适用费用，客户须按订单表及协议付款条款向 OpenAI 或其经销商支付。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0029-d8b2244bb225:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "applicable_fees_due",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_fulfillment"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 16951,
+    "input_tokens_details": {
+      "cached_tokens": 16768,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 958,
+    "output_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "total_tokens": 17909,
+    "attribution": {
+      "items": {
+        "msg_0962d505f9eaf016016af2f7f6e70487d1ba6e6518726b47ea": {
+          "input_tokens": 14919,
+          "cached_tokens": 14738,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14919,
+              "cached_tokens": 14738,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0962d505f9eaf016016af2f7fccc5487d19b907e499cae5103": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 670,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 670
+            }
+          ]
+        },
+        "rs_0962d505f9eaf016016af2f7fcb0a887d183b6aa87d45f35c4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 288
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.475,
+  "auto_applied": false,
+  "aggregate_count": 78
+}

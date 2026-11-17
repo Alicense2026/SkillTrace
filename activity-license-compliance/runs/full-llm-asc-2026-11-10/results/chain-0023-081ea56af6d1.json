@@ -1,0 +1,170 @@
+{
+  "case_id": "chain-0023-081ea56af6d1",
+  "status": "SUCCESS",
+  "request_sha256": "fe9d8cf9e58cf7f88af467002d45ac423d0d9ea2e026b72543745c696d7dd4da",
+  "analysis": {
+    "case_id": "chain-0023-081ea56af6d1",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2065d4322d7fd0ad"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "professional_or_business_purpose",
+                "not_consumer_use",
+                "user_age_at_least_18",
+                "service_or_api_client_use_within_available_region",
+                "comply_with_prohibited_use_policy_and_api_prohibitions"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0023-081ea56af6d1:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2065d4322d7fd0ad"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "develop_model_competing_with_Gemini_API_or_Google_AI_Studio",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0023-081ea56af6d1:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0023-081ea56af6d1:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the Gemini API only for professional or business purposes, not consumer use; meet the stated age and available-region restrictions; and comply with the Prohibited Use Policy and API Prohibitions.",
+        "trigger": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "professional_or_business_purpose",
+          "consumer_use",
+          "user_age_at_least_18",
+          "service_or_api_client_use_within_available_region",
+          "compliance_with_prohibited_use_policy_and_api_prohibitions"
+        ],
+        "source_refs": [
+          "license-text:upstream:2065d4322d7fd0ad"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0023-081ea56af6d1:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Gemini API Services to develop models that compete with Gemini API or Google AI Studio.",
+        "trigger": {
+          "all": [
+            "Use",
+            "develop_model_competing_with_Gemini_API_or_Google_AI_Studio"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "develop_model_competing_with_Gemini_API_or_Google_AI_Studio"
+        ],
+        "source_refs": [
+          "license-text:upstream:2065d4322d7fd0ad"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认的是远程 Gemini API 调用及 Use；不据此推定模型权重转移、分发、修改或竞争模型开发。",
+      "BSD-3-Clause 原文约束的是下游软件对象；对象图仅确认 API 调用/链接，依赖及共同产品范围未知，故没有认定两份许可对同一对象和活动共同适用或存在冲突。",
+      "上游条款版本标示生效日为 2026-03-23；本次按提供的本地原文分析。实际用户、地域、用途及政策合规事实未提供。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 27672,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1230,
+    "output_tokens_details": {
+      "reasoning_tokens": 295
+    },
+    "total_tokens": 28902,
+    "attribution": {
+      "items": {
+        "msg_07b3f2780d5d5a4b016af2e0e8bf5487d1b43472ef3ae12dab": {
+          "input_tokens": 25724,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25724,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07b3f2780d5d5a4b016af2e0ee955c87d1a4834e9b11667a7e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 935,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 935
+            }
+          ]
+        },
+        "rs_07b3f2780d5d5a4b016af2e0ee799087d19bf7fe8ac666b224": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 295
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 30.672,
+  "auto_applied": false
+}

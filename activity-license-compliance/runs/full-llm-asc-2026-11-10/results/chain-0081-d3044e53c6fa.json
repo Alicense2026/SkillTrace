@@ -1,0 +1,224 @@
+{
+  "case_id": "chain-0081-d3044e53c6fa",
+  "status": "SUCCESS",
+  "request_sha256": "085c5852ae8923d94aec3f397bcc42f2f12880f7b14cca9b2743dd443c0c84b5",
+  "analysis": {
+    "case_id": "chain-0081-d3044e53c6fa",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0081-d3044e53c6fa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0081-d3044e53c6fa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "access_to_build_competing_product_or_service",
+                "train_competing_ai_model",
+                "resell_services_without_express_approval",
+                "reverse_engineer_or_duplicate_services"
+              ]
+            },
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0081-d3044e53c6fa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "notify_users_that_output_factual_assertions_should_be_independently_checked",
+            "when": "outputs_shared_with_users"
+          },
+          "S": {
+            "artifact": "chain-0081-d3044e53c6fa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0081-d3044e53c6fa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the Anthropic Services only in compliance with the applicable Commercial Terms, incorporated Usage Policy, Supported Regions Policy, and Service Specific Terms.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_service_terms",
+          "compliance_with_incorporated_policies"
+        ],
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0081-d3044e53c6fa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not access the Services to build a competing product or service, train competing AI models, resell the Services without express approval, or reverse engineer or duplicate the Services.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "access_to_build_competing_product_or_service",
+          "train_competing_ai_model",
+          "resell_services_without_express_approval",
+          "reverse_engineer_or_duplicate_services"
+        ],
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0081-d3044e53c6fa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If Outputs are shared with Users, notify them that factual assertions in Outputs should not be relied upon without independently checking their accuracy.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "outputs_shared_with_users"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "outputs_shared_with_users",
+          "user_notification"
+        ],
+        "source_refs": [
+          "license-text:upstream:fae380c757cebfef"
+        ]
+      }
+    ],
+    "limitations": [
+      "本地 Anthropic 文本包含 2025-06-17 Commercial Terms 与 2025-10-08 Consumer Terms；记录表明调用模型 API，Commercial Terms 明确适用于 Anthropic API key。实际接受的条款版本及其并入情况未由事实单独确认；本分析依照 API 服务条款片段作条件性判断。",
+      "结构化 ASC 是首轮抽取；相关服务条款、Usage Policy、Supported Regions Policy、Service Specific Terms 中被引用的完整文本未提供，无法进一步判定其具体限制或履行情况。",
+      "MIT 原文约束下游仓库软件的使用、复制、修改、分发等，不因 API 链接而自动约束上游模型服务；当前未证明下游活动涉及分发或将 MIT 软件与上游服务合并。没有发现许可冲突或已证实违规。",
+      "远程调用及 API 链接不构成模型权重转移、分发或源码提供的证据；未将网络服务披露或输出训练限制套用于本案。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 36733,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1709,
+    "output_tokens_details": {
+      "reasoning_tokens": 340
+    },
+    "total_tokens": 38442,
+    "attribution": {
+      "items": {
+        "msg_0be26973ec0c1b91016af2ea7e317087d2b5378cd19f5dfacc": {
+          "input_tokens": 34785,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 34785,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0be26973ec0c1b91016af2ea850bac87d28e0de923127c7808": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1369,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1369
+            }
+          ]
+        },
+        "rs_0be26973ec0c1b91016af2ea84efe887d28e6c0c74f45275f8": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 340
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 34.464,
+  "auto_applied": false
+}

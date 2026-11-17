@@ -1,0 +1,279 @@
+{
+  "case_id": "skill-03696",
+  "csv_row": 3697,
+  "source_excel_row": "5156",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-03696-1794599566551875000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游被许可方使用 Llama Materials 时须受本协议约束；使用事实触发协议约束，但是否已接受协议未知。",
+      "source_refs": [
+        "license:6b346865267ef58a4592287a99e9417178223c9300e9da361ce7801be6dea61f"
+      ],
+      "subject": {
+        "artifact": "skill-03696:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "true",
+      "unresolved_predicates": [
+        "licensee_agrees_to_be_bound_by_this_agreement"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游被许可方使用 Llama Materials 时须遵守适用法律法规（包括贸易合规法规）及适用的 Llama Materials 可接受使用政策。",
+      "source_refs": [
+        "license:6b346865267ef58a4592287a99e9417178223c9300e9da361ce7801be6dea61f"
+      ],
+      "subject": {
+        "artifact": "skill-03696:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "compliance_with_applicable_laws_and_regulations",
+        "adherence_to_acceptable_use_policy"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若达到协议规定的月活门槛，上游被许可方须向 Meta 申请许可，并在 Meta 明确授予权利前不得行使协议权利；仅申请不等于获准。",
+      "source_refs": [
+        "license:6b346865267ef58a4592287a99e9417178223c9300e9da361ce7801be6dea61f"
+      ],
+      "subject": {
+        "artifact": "skill-03696:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "on_llama_4_version_release_date_licensee_or_its_affiliates_had_more_than_700_million_monthly_active_users_of_products_or_services_made_available_by_or_for_them_in_the_preceding_calendar_month",
+      "unresolved_predicates": [
+        "threshold_applies",
+        "license_requested",
+        "meta_express_grant"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若上游被许可方因相关第三方索赔负有合同约定义务，须就该索赔赔偿并使 Meta 免受损害。",
+      "source_refs": [
+        "license:6b346865267ef58a4592287a99e9417178223c9300e9da361ce7801be6dea61f"
+      ],
+      "subject": {
+        "artifact": "skill-03696:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "third_party_claim_arises_out_of_or_relates_to_licensee_use_or_distribution_of_llama_materials",
+      "unresolved_predicates": [
+        "third_party_claim"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若协议终止，上游被许可方须删除 Llama Materials 并停止使用。",
+      "source_refs": [
+        "license:6b346865267ef58a4592287a99e9417178223c9300e9da361ce7801be6dea61f"
+      ],
+      "subject": {
+        "artifact": "skill-03696:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "agreement_has_been_terminated",
+      "unresolved_predicates": [
+        "agreement_has_been_terminated"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游 ISC 被许可方在其软件副本中须保留上方版权声明及许可声明；仅有远程调用事实不能证明已制作副本。",
+      "source_refs": [
+        "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+      ],
+      "subject": {
+        "artifact": "skill-03696:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "copies_exist"
+        ]
+      },
+      "unresolved_predicates": [
+        "copies_exist",
+        "notices_in_all_copies"
+      ]
+    }
+  ],
+  "limitations": [
+    "上游资产身份及 Llama 4 协议是否适用于该远程服务仍不确定；原文条款仅按已提供的本地 Llama 4 文本分析。",
+    "对象图表明存在远程调用和链接，但两侧许可证是否共同约束同一对象未知；未发现可据此成立的许可证冲突。",
+    "未提供可接受使用政策及品牌指南正文，无法判断其具体要求；未推断其内容。",
+    "分发、复制、修改、模型训练、收费、规模门槛、特别授权、商标使用、诉讼及终止均无已知事实，不据此认定违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游原始材料的使用许可；该条未列独立履行义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行没有已知复制活动。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行没有已知分发活动。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行没有已知衍生作品创作活动。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行没有已知修改活动。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用触发协议约束；是否接受协议未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生已知分发或提供含材料产品、服务的活动。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生已知分发或提供含材料产品、服务的活动。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知使用材料或输出改进并分发模型的活动。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "没有证据表明使用者作为集成终端产品接收方取得材料；该例外不作为本行义务。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知分发 Llama Materials 副本。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已知使用上游材料；法律合规及可接受使用政策要求合并保留。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "使用权受门槛条件限制；门槛和申请情况未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "门槛触发时须取得明确授予；申请不等于获准，合并保留在同一条件义务。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "没有已知在 Llama Materials 关联情境中使用他方商标的事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知触发模型命名要求的模型改进及分发活动。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "没有已知提起条款所述诉讼或程序的事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "索赔触发事实未知；按条件保留赔偿义务。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "终止事实未知；按终止条件保留删除并停止使用义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "ISC 使用许可的副本通知要求已保留；是否存在副本及是否包含通知未知。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知复制活动。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知修改活动。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有已知分发活动。"
+    }
+  ]
+}

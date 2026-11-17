@@ -1,0 +1,120 @@
+{
+  "case_id": "chain-0005-6b42217ecd00",
+  "status": "SUCCESS",
+  "request_sha256": "03e76c71da6da21e8aca6e2094b3c13255bd8bff8a79fe7738893327bea30a58",
+  "analysis": {
+    "case_id": "chain-0005-6b42217ecd00",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0005-6b42217ecd00:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0005-6b42217ecd00:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer must pay applicable service fees to OpenAI or its reseller according to the Order Form and applicable payment terms.",
+        "trigger": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_and_payment_terms",
+          "payment_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI.txt 摘录为服务费用及客户向 OpenAI/经销商付款的条款；Order Form、具体费用和付款履行情况未提供。已知远程服务调用不证明存在用户向下游收费，也不证明任何分发、修改或复制。",
+      "对象图中的 MIT 与上游服务仅有 API 链接/远程调用关系，是否共同约束同一对象未知；未据此推定许可冲突。MIT 条款摘录针对 downstream 软件及其复制、分发等活动，现有事实未证明这些活动发生。",
+      "上游文本仅匹配到一项结构化条款；本判断不将 proprietary 视为一份通用许可，也不推断摘录之外的条款。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 18826,
+    "input_tokens_details": {
+      "cached_tokens": 18688,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 751,
+    "output_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "total_tokens": 19577,
+    "attribution": {
+      "items": {
+        "msg_0b49bd9c82b84bc8016af2f6cb2b2487d1a84c8ad4bf58d583": {
+          "input_tokens": 16794,
+          "cached_tokens": 16658,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16794,
+              "cached_tokens": 16658,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b49bd9c82b84bc8016af2f6d08f3087d19f51d21ba2730c8d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 521,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 521
+            }
+          ]
+        },
+        "rs_0b49bd9c82b84bc8016af2f6d073a887d19654db7528cc5af8": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 230
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 17.228,
+  "auto_applied": false,
+  "aggregate_count": 937
+}

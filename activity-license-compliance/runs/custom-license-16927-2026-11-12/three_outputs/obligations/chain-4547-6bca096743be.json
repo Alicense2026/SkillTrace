@@ -1,0 +1,65 @@
+{
+  "case_id": "chain-4547-6bca096743be",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 Anthropic Services 时遵守适用的服务条款。",
+      "source_refs": [
+        "license-text:upstream:d919d7957a7c72ce"
+      ],
+      "subject": {
+        "artifact": "chain-4547-6bca096743be:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用 ValeDesk Software，须在整个使用期间满足年总收入或等值资金低于 1,000,000 美元，并且不得将该软件用于创建、分发或托管与许可方竞争、且向第三方提供的实质相似产品或服务。",
+      "source_refs": [
+        "license-text:downstream:15e785c2f659d324"
+      ],
+      "subject": {
+        "artifact": "chain-4547-6bca096743be:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+        "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用 ValeDesk Software 且年总收入或资金超过 1,000,000 美元，须向许可方购买商业许可证；该许可证的具体条款未提供。",
+      "source_refs": [
+        "license-text:downstream:15e785c2f659d324"
+      ],
+      "subject": {
+        "artifact": "chain-4547-6bca096743be:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd"
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Use",
+        "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+        "purchase_commercial_license_from_licensor"
+      ]
+    }
+  ]
+}

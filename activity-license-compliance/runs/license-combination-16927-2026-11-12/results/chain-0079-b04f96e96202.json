@@ -1,0 +1,75 @@
+{
+  "case_id": "chain-0079-b04f96e96202",
+  "input_group_row": 79,
+  "aggregate_count": 18,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "CC-BY-4.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "18"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0079-b04f96e96202",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0079-b04f96e96202:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "CC-BY-4.0 摘录仅提供受许可权利须遵守许可条款的概括性授权，未提供具体归属、通知或其他条件的摘录；不据此推断未提供的条款。",
+      "对象图确认的是 API/代码调用关系，未确认两份许可约束同一对象；下游活动及共享范围未知。远程调用本身不视为分发、修改或权重转移。",
+      "Apache-2.0 的结构化摘录涉及下游 Work 的版权授权，但本例事实未确认该 Work 上发生了相应受许可活动。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 CC-BY-4.0 上游原始材料时，遵守该许可的适用条件。",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ],
+        "subject": {
+          "artifact": "chain-0079-b04f96e96202:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "具体适用的CC-BY-4.0条件及其履行情况"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0083-8e8fe97fc693.json",
+  "original_case_id": "chain-0083-8e8fe97fc693",
+  "original_request_sha256": "ae229d494a49a0faedd4c2a6e2051e8b8e26d6c5fc148dcfd055eb5cba3e0843",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0083-8e8fe97fc693": "chain-0079-b04f96e96202",
+    "license-text:upstream:6c58d51d2054a711": "license-text:upstream:6c58d51d2054a711",
+    "license-text:downstream:bdecfb6b97491d08": "license-text:downstream:bdecfb6b97491d08",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/82": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/78"
+  }
+}

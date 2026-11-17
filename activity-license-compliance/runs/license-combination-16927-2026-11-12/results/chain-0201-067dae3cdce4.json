@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-0201-067dae3cdce4",
+  "input_group_row": 201,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0201-067dae3cdce4",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0201-067dae3cdce4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0201-067dae3cdce4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not engage in conduct matching a prohibition in the cited excerpt.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt",
+          "scope_of_prohibition_for_API_use"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认的是远程 API 调用和 API 链接关系；不据此认定模型权重转移、代码修改、分发或商业使用。",
+      "智谱条款摘录列有多种禁止用途，但现有事实不能证明本次 API 调用符合其中任何具体禁止情形；其对本次调用的具体适用范围仍不明确。",
+      "GPL-3.0 的已映射条款针对复制、修改、分发或提供源码等活动；本案未提供这些活动已发生的事实。对象图中的上下游共同受约束范围也未知，故不据此认定许可证冲突或源码提供义务。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0194-eaa92606c100.json",
+  "original_case_id": "chain-0194-eaa92606c100",
+  "original_request_sha256": "ff0c135a4ee35e691fc9bbfa456fe7dbdd3c2b0e8ced521885d1e16dc24bdd23",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0194-eaa92606c100": "chain-0201-067dae3cdce4",
+    "license-text:upstream:1092ebce191fce09": "license-text:upstream:1092ebce191fce09",
+    "license-text:downstream:e1f7314e93ab7a9e": "license-text:downstream:e1f7314e93ab7a9e",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/193": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/200"
+  }
+}

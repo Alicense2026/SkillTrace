@@ -1,0 +1,119 @@
+{
+  "case_id": "chain-0329-f42dd3a29632",
+  "status": "SUCCESS",
+  "request_sha256": "8b81a2c140d5f73e9b2b23f64afdd9d7e0605be158f2bb5e79d6e2f7d9444103",
+  "analysis": {
+    "case_id": "chain-0329-f42dd3a29632",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0329-f42dd3a29632:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the Llama 3.3 Community License Agreement when using the Llama Materials.",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "subject": {
+          "artifact": "chain-0329-f42dd3a29632:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ]
+      }
+    ],
+    "limitations": [
+      "The upstream source excerpt establishes a conditional grant requiring compliance with the agreement, but does not supply enough applicable clause detail to determine every compliance condition for this API-call relationship.",
+      "No provided Llama clause specifically maps ordinary remote interaction to a source-offer duty. The recorded remote call does not establish distribution, source provision, or transfer of model weights.",
+      "The GPL excerpts concern copying or conveying GPL-covered code and modified works. No such downstream activity is established, and the object graph leaves dependency and shared scope unknown; these excerpts do not establish a conflict with the Llama use grant."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22047,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 668,
+    "output_tokens_details": {
+      "reasoning_tokens": 190
+    },
+    "total_tokens": 22715,
+    "attribution": {
+      "items": {
+        "msg_0177b18545a8445f016af30592c7ac87d1a226833c206921a1": {
+          "input_tokens": 20015,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20015,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0177b18545a8445f016af30596e6f087d1b77fdcf7681a5c98": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 478,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 478
+            }
+          ]
+        },
+        "rs_0177b18545a8445f016af30596cfe087d1b89689ccb375e8e8": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 190
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 15.376,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

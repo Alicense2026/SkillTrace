@@ -1,0 +1,142 @@
+{
+  "case_id": "chain-0147-31e4c4451b99",
+  "status": "SUCCESS",
+  "request_sha256": "1703a880a399471d1cbd65bdf32c6c9543d3c0b92614c7a26470064bf9d6e119",
+  "analysis": {
+    "case_id": "chain-0147-31e4c4451b99",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0147-31e4c4451b99:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "activity:Use",
+            "requires": {
+              "any": [
+                "develop_competing_model_using_services",
+                "reverse_engineer_extract_or_replicate_service_component"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9b9323f6a80d42e3"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0147-31e4c4451b99:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "exercising_CC_BY_licensed_rights",
+            "requires": "comply_with_CC_license_conditions"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0147-31e4c4451b99:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Gemini API Services to develop models that compete with the Services, or attempt to reverse engineer, extract, or replicate any component of the Services, including underlying data or models.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "develop_competing_model_using_services",
+          "reverse_engineer_extract_or_replicate_service_component"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游原文将竞争模型开发及逆向工程、提取或复制列为禁止行为；首轮结构化抽取把该条款映射为不带触发条件的广泛Use禁止，不能据此认定一般API调用本身被禁止。",
+      "可信事实确认远程API调用及链接关系，但不证明竞争模型开发、逆向工程、提取或复制行为，也不证明下游CC-BY材料被使用或许可范围在两侧共享。CC-BY摘录仅为许可授权概述，具体条件需按适用情形确定。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17921,
+    "input_tokens_details": {
+      "cached_tokens": 17792,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1072,
+    "output_tokens_details": {
+      "reasoning_tokens": 371
+    },
+    "total_tokens": 18993,
+    "attribution": {
+      "items": {
+        "msg_0c1928f40a433af3016af2fd12ea7087d19ccaa3b4935ce396": {
+          "input_tokens": 15889,
+          "cached_tokens": 15762,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15889,
+              "cached_tokens": 15762,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c1928f40a433af3016af2fd1a43dc87d1ade1df6d3762b6d8": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 701,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 701
+            }
+          ]
+        },
+        "rs_0c1928f40a433af3016af2fd1a281487d18f9ada59167c74f2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 371
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.662,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

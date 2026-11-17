@@ -1,0 +1,263 @@
+{
+  "case_id": "chain-0652-2006ebceb3bc",
+  "source_csv_line": 653,
+  "row": {
+    "github_repo": "xiaobei",
+    "github_url": "https://github.com/TeamWiseFlow/xiaobei",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "fastclaw-ai/camoufox-cli",
+    "artifact_url": "https://github.com/fastclaw-ai/fastclaw/tree/dev/internal/agent/bundled_skills/camoufox-cli",
+    "artifact_license": "Apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: crews/main/skills/expert-douyin/tools/_shared/publish_browser.py:48 ｜ 调用原文: cmd = [os.environ.get('CAMOUFOX_CLI', 'camoufox-cli'), '--session', SESSION, ｜ 证据等级: 待复核（中） ｜ 解析: skillsmp → skillsmp ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: browser_publish_text.py / publish_browser.py 实际 subprocess 调用浏览器 CLI",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "teamwiseflow/xiaobei",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f",
+    "filename": "_supplement_round2/8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 5; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-0652-2006ebceb3bc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7cb970e56de3b55f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0652-2006ebceb3bc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:f0be14ab9458dd7b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "conditions_below_are_met_and_commercial_license_obtained_from_producer",
+                "conditions_below_are_not_met"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0652-2006ebceb3bc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:f0be14ab9458dd7b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "xiaobei_has_explicitly_authorized_use_in_writing"
+            }
+          },
+          "S": {
+            "artifact": "chain-0652-2006ebceb3bc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:f0be14ab9458dd7b"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "xiaobei_has_explicitly_authorized_use_in_writing"
+            }
+          },
+          "S": {
+            "artifact": "chain-0652-2006ebceb3bc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:f0be14ab9458dd7b"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "xiaobei_has_explicitly_authorized_use_in_writing"
+            }
+          },
+          "S": {
+            "artifact": "chain-0652-2006ebceb3bc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "活动记录确认远程调用及Use，但没有证明该调用使用了xiaobei源代码、属于多租户环境，或满足许可证所述其他使用限制；因此不据此判定违反条件禁止条款。",
+      "下游商业许可条款称若满足下列条件须取得生产者商业许可，但结构化摘录未提供其所指条件的完整适用内容。保留条件义务，不推定商业使用或已触发许可要求。",
+      "对象图确认调用/链接关系，但scope_shared未知；这不足以证明上下游许可证共同约束同一对象。Apache条款摘录仅明确授予上游对象的使用权。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0652-2006ebceb3bc:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用xiaobei源代码运营多租户环境，须先取得xiaobei明确书面授权。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_xiaobei_source_code_to_operate_multi_tenant_environment"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_xiaobei_source_code_to_operate_multi_tenant_environment",
+          "xiaobei_has_explicitly_authorized_use_in_writing"
+        ],
+        "source_refs": [
+          "license-text:downstream:f0be14ab9458dd7b"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0652-2006ebceb3bc:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若许可证所指的下列条件适用于该使用，须取得生产者商业许可；否则按该条款所述非触发路径处理。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "conditions_below_are_met"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conditions_below_are_met",
+          "commercial_license_obtained_from_producer"
+        ],
+        "source_refs": [
+          "license-text:downstream:f0be14ab9458dd7b"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20762,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1464,
+    "output_tokens_details": {
+      "reasoning_tokens": 308
+    },
+    "total_tokens": 22226,
+    "attribution": {
+      "items": {
+        "msg_066fa07995e1ec57016af5855fbd3087d0830fc4416e17cdb9": {
+          "input_tokens": 18692,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18692,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_066fa07995e1ec57016af5855fbd3087d0b1458e0710c6ba6b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_066fa07995e1ec57016af58565f03887d0bd7c72731ee9a18b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1156,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1156
+            }
+          ]
+        },
+        "rs_066fa07995e1ec57016af58565d49487d0a19e99b90635d95e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 308
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 35.12
+}

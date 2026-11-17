@@ -1,0 +1,174 @@
+{
+  "case_id": "chain-0261-3e92c158fa42",
+  "input_group_row": 261,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "Sustainable-Use",
+    "资产许可证原文标题/标签": "Anthropic Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0261-3e92c158fa42:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0261-3e92c158fa42:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游摘录授予服务访问权限并要求遵守服务条款，但未提供这些条款的具体内容；无法据此判断其余服务条件是否满足。",
+      "下游 Sustainable-Use 条款约束其软件。已知关系是远程 API 调用，未证明下游软件被使用、复制、修改或分发，也未证明两份许可约束同一对象；因此不将下游软件的使用或分发限制套用于上游服务调用。",
+      "未提供履行服务条款的证据不等于未履行；未发现有事实支持的确定冲突或违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 Anthropic 服务条款",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0261-3e92c158fa42:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 Anthropic 服务条款",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0261-3e92c158fa42:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0261-3e92c158fa42"
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 24497,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1100,
+    "output_tokens_details": {
+      "reasoning_tokens": 400
+    },
+    "total_tokens": 25597,
+    "attribution": {
+      "items": {
+        "msg_029f8e7e0920410a016af5309ac31887d082d0d21b603e3434": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_029f8e7e0920410a016af5309ac31887d086c8b89dc9df22f5": {
+          "input_tokens": 22427,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22427,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_029f8e7e0920410a016af530a28fe487d0a18432c16342a09a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 700,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 700
+            }
+          ]
+        },
+        "rs_029f8e7e0920410a016af530a278b887d0b8b8608ed290605b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 400
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "310bb837b6d70c3c5ccf100e6e5141ea665097380ae8018c173c73212c85ad22",
+  "elapsed_seconds": 28.17
+}

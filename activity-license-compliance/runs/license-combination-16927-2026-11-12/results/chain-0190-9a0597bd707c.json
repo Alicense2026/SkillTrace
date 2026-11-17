@@ -1,0 +1,92 @@
+{
+  "case_id": "chain-0190-9a0597bd707c",
+  "input_group_row": 190,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "LLAMA 2 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0190-9a0597bd707c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0190-9a0597bd707c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:03b92faa95bc9b49"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0190-9a0597bd707c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0190-9a0597bd707c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_Llama_agreement",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ]
+      }
+    ],
+    "limitations": [
+      "Llama 2 Community License Agreement 摘录规定，Llama Materials 的使用须遵守该协议；结构化规则为首轮抽取，且此处未提供完整协议条款，无法进一步列明全部合规要求。",
+      "已证实的关系是 API 调用/链接，代码修改不适用；没有依据将其视为分发、权重转移或受许可材料复制。所给条款摘录未映射独立的 RemoteInteraction 义务。",
+      "对象图未确认上下游许可约束共同适用于同一对象（scope_shared 未知）。Apache 摘录针对 downstream Work，不能仅凭 API 调用将其扩展至 upstream Llama Materials；因此不据此认定许可冲突。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0181-a11eeda84751.json",
+  "original_case_id": "chain-0181-a11eeda84751",
+  "original_request_sha256": "f451f1bb02dd14e11d37b543d8de9dd13ca6995c04a37b16a548f6173fb21223",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0181-a11eeda84751": "chain-0190-9a0597bd707c",
+    "license-text:upstream:2537dca3832f1e4d": "license-text:upstream:2537dca3832f1e4d",
+    "license-text:downstream:03b92faa95bc9b49": "license-text:downstream:03b92faa95bc9b49",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/180": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/189"
+  }
+}

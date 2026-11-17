@@ -1,0 +1,321 @@
+{
+  "request_sha256": "86c2cf50fe323b8a65aa55efb2237fdef7ad44495138d8651f2160081fd88b06",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 274,
+        "end_line": 274,
+        "clause_label": "customer_data_license_to_cohere",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "provide_services"
+                ]
+              },
+              {
+                "all": [
+                  "exercise_agreement_rights_and_perform_agreement_obligations"
+                ]
+              },
+              {
+                "all": [
+                  "improve_or_enhance_services_or_other_offerings_or_benchmark_them"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Section 3(a), grant concerning Customer Data. The license is nonexclusive, worldwide, royalty-free, irrevocable, sublicensable, and fully paid-up. Its scope includes access, collection, processing, storage, disclosure, and transmission; API Data and Finetuning Data may be shared with third parties for Cohere services and other purposes allowed by those parties’ terms. Cohere may share Finetuning Data used to train or fine-tune a Custom Model, but may not share the Custom Model itself. The grant does not transfer Customer Data ownership; other rights are reserved.",
+        "condition_explanation": "provide_services means using Customer Data to provide the Services. exercise_agreement_rights_and_perform_agreement_obligations means using it to exercise Cohere’s agreement rights or perform its obligations, including checking Customer’s compliance with the Agreement and responsible-use guidelines. improve_or_enhance_services_or_other_offerings_or_benchmark_them covers the separate improvement, enhancement, and benchmarking purpose. The alternatives are independent permitted purposes.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 274,
+        "end_line": 274,
+        "clause_label": "customer_retains_customer_data_ownership",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "retain_ownership_and_intellectual_property_rights_in_customer_data"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 3(a), Customer Data ownership reservation. This records the express ownership allocation, not a license to Cohere or a grant of rights in other material.",
+        "condition_explanation": "retain_ownership_and_intellectual_property_rights_in_customer_data means Customer retains all ownership and intellectual property rights in and to Customer Data.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 282,
+        "end_line": 282,
+        "clause_label": "access_credentials_confidential_and_nonsharing",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "access_services_as_directed_by_cohere_and_do_not_share_access_credentials_without_prior_consent"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 4(a), access to the Cohere API SaaS Services using Access Credentials. Cohere may revoke access through those credentials, including API keys, at any time without Customer’s consent. The paragraph’s Access Credentials definition is incorporated as context.",
+        "condition_explanation": "access_services_as_directed_by_cohere_and_do_not_share_access_credentials_without_prior_consent requires following Cohere’s directions for access and treating Access Credentials as Cohere confidential information that may not be shared with third parties absent Cohere’s prior consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not share Access Credentials with any third party without Cohere’s prior consent.",
+            "actor": "Customer",
+            "object": "Access Credentials",
+            "trigger": "Whenever Customer has or uses Access Credentials; exception: Cohere has given prior consent to the third-party sharing."
+          }
+        ]
+      },
+      {
+        "start_line": 283,
+        "end_line": 283,
+        "clause_label": "customer_api_incorporation_and_internal_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_api_for_internal_business_purposes_or_incorporate_api_into_customer_products_or_services_in_compliance_with_agreement_and_documentation"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 4(b), Cohere API use and incorporation. This is conditioned on the Agreement and related Documentation; it does not grant rights beyond the stated API use and incorporation.",
+        "condition_explanation": "use_api_for_internal_business_purposes_or_incorporate_api_into_customer_products_or_services_in_compliance_with_agreement_and_documentation allows either stated use, provided it complies with the Agreement and related Documentation.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 284,
+        "end_line": 284,
+        "clause_label": "limited_api_and_documentation_license",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_api_and_related_documentation_only_to_develop_customer_applications_interfacing_with_services_in_compliance_with_agreement_and_documentation"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 4(c), Cohere’s revocable, non-exclusive, non-sublicensable, non-transferable license to access and use the Cohere API and related Documentation solely to facilitate development of Customer Applications that interface with the Cohere API SaaS Services. The paragraph’s Customer Application definition is incorporated as context.",
+        "condition_explanation": "use_api_and_related_documentation_only_to_develop_customer_applications_interfacing_with_services_in_compliance_with_agreement_and_documentation requires the stated development purpose and compliance with the Agreement and provided Documentation. The license is revocable and does not authorize sublicensing or transfer.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 288,
+        "end_line": 289,
+        "clause_label": "api_monitoring_and_application_review",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "cohere_monitors_customer_api_use_or_requests_application_access_for_compliance_review",
+          "requires": "do_not_block_or_interfere_with_monitoring_and_provide_application_access_and_use_at_no_cost_when_requested"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 5, monitoring use of the API and reviewing a Customer Application. The no-cost application access and use is required only at Cohere’s request and for monitoring or agreement-compliance review.",
+        "condition_explanation": "cohere_monitors_customer_api_use_or_requests_application_access_for_compliance_review applies when Cohere monitors Customer’s API use, or requests access to and use of the Customer Application for the stated purposes. The noninterference duty applies to monitoring; the access-and-use duty applies upon Cohere’s request.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not block or otherwise interfere with Cohere’s monitoring of Customer’s use of the Cohere API.",
+            "actor": "Customer",
+            "object": "Customer’s use of the Cohere API",
+            "trigger": "Whenever Cohere monitors Customer’s use of the Cohere API."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide Cohere access to and use of the Customer Application at no cost.",
+            "actor": "Customer",
+            "object": "Customer Application",
+            "trigger": "When Cohere requests access and use for monitoring or reviewing the application for compliance with the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 292,
+        "end_line": 292,
+        "clause_label": "prohibited_data_exclusion_and_advance_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "do_not_include_prohibited_data_in_customer_data",
+              {
+                "any": [
+                  {
+                    "not": "require_cohere_to_process_or_handle_prohibited_data"
+                  },
+                  {
+                    "all": [
+                      "notify_cohere_before_cohere_processes_or_handles_prohibited_data",
+                      "cohere_chooses_to_process_or_handle_it",
+                      "parties_enter_separate_definitive_agreement"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6(b), Customer Data and Prohibited Data. Prohibited Data is defined in the agreement as Personal Information other than BCI. This agreement itself neither requires Cohere to accept such data nor compels the parties to enter a separate agreement.",
+        "condition_explanation": "do_not_include_prohibited_data_in_customer_data is the general prohibition. If Customer requires Cohere to process or otherwise handle Prohibited Data, the alternative path requires advance notice, Cohere’s discretionary choice to process it, and a separate definitive agreement between the parties. The separate-agreement path does not override the prohibition on including Prohibited Data in Customer Data.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not include Prohibited Data in Customer Data.",
+            "actor": "Customer",
+            "object": "Customer Data",
+            "trigger": "Whenever Customer submits or otherwise provides Customer Data; Prohibited Data means Personal Information other than BCI."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Notify Cohere of the intent to require Cohere to process or otherwise handle Prohibited Data before that processing or handling.",
+            "actor": "Customer",
+            "object": "Prohibited Data",
+            "trigger": "Before requiring Cohere to process or otherwise handle Prohibited Data."
+          }
+        ]
+      },
+      {
+        "start_line": 296,
+        "end_line": 297,
+        "clause_label": "account_provisioning_and_user_breach_response",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "customer_requests_administrator_accounts",
+          "requires": "issue_one_or_more_administrator_accounts_for_customer_account_creation"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Section 7, Customer User Account. Cohere must issue one or more administrator accounts upon Customer’s request. The paragraph also makes Customer responsible for Permitted Users’ access and use and deems their agreement breach to be Customer’s breach.",
+        "condition_explanation": "customer_requests_administrator_accounts is the express condition triggering Cohere’s account-issuance obligation. Permitted Users are employees or contractors of Customer whom Customer wishes to access and use the Services.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Issue one or more administrator accounts to Customer with the capability to create Customer User Accounts.",
+            "actor": "Cohere",
+            "object": "Administrator Accounts",
+            "trigger": "Upon Customer’s request."
+          }
+        ]
+      },
+      {
+        "start_line": 297,
+        "end_line": 297,
+        "clause_label": "customer_notify_and_follow_instructions_on_user_breach",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "a_permitted_user_breaches_the_agreement",
+          "requires": "immediately_notify_cohere_of_the_breach_and_follow_coheres_instructions"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 7, Customer User Account. Applies to a breach by any Permitted User; Cohere’s other rights and remedies are preserved. Customer is responsible and liable for Permitted Users’ access to or use of Services or Cohere Products, and their acts or omissions breaching the Agreement are deemed Customer’s breach.",
+        "condition_explanation": "a_permitted_user_breaches_the_agreement is the triggering event. The required response is immediate notice to Cohere and compliance with Cohere’s instructions, which may include restricting the user’s access or use.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Immediately notify Cohere of the Permitted User’s breach.",
+            "actor": "Customer",
+            "object": "Permitted User’s breach of the Agreement",
+            "trigger": "When any Permitted User breaches the Agreement."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Follow Cohere’s instructions concerning the Permitted User’s breach.",
+            "actor": "Customer",
+            "object": "Permitted User’s access to or use of the Services or Cohere Products",
+            "trigger": "When any Permitted User breaches the Agreement and Cohere gives instructions concerning that breach."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Section 3(a) permits Cohere to share API Data and Finetuning Data with third parties on terms that may permit the third parties’ own purposes; those third-party terms are not provided here, so their additional permissions and safeguards cannot be determined.",
+      "The linked Cohere Privacy Policy, Usage Policy, Documentation, and any separate definitive agreement for Prohibited Data are not supplied; their requirements are not inferred.",
+      "The prohibition on sharing a Custom Model with a third party and the permission to share its training or fine-tuning data are captured in the Customer Data license scope note.",
+      "Paragraph 294 is a security/confidentiality disclaimer, not an operative behavioral duty for this extraction."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0087",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_data_license_to_cohere",
+          "customer_retains_customer_data_ownership",
+          "access_credentials_confidential_and_nonsharing",
+          "customer_api_incorporation_and_internal_use",
+          "limited_api_and_documentation_license",
+          "api_monitoring_and_application_review",
+          "prohibited_data_exclusion_and_advance_notice"
+        ],
+        "reason": "The paragraph’s Customer Data ownership and license, credential restrictions, API use permission and license, monitoring duties, and Prohibited Data restriction and notice path are modeled."
+      },
+      {
+        "unit_id": "P0088",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "This paragraph disclaims a guarantee of security or confidentiality; it creates no behavioral duty or activity constraint."
+      },
+      {
+        "unit_id": "P0089",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_provisioning_and_user_breach_response"
+        ],
+        "reason": "Cohere’s account-issuance obligation upon request and Customer’s breach-response duties are modeled."
+      }
+    ]
+  },
+  "attempt": 1
+}

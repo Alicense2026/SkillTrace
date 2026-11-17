@@ -1,0 +1,90 @@
+{
+  "case_id": "chain-0082-3e92860ecbde",
+  "input_group_row": 82,
+  "aggregate_count": 17,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "LLAMA 4 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "17"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement"
+          },
+          "S": {
+            "artifact": "chain-0082-3e92860ecbde:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:638f84b412e9e045"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0082-3e92860ecbde:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "供应链记录仅标注“Llama（版本未识别；本地原文未匹配）”；可用上游原文是 Llama 4 Community License Agreement，虽匹配 Meta Llama 4，但不能据此确认其适用于本次资产。因此相关上游条款的适用性仍待版本匹配确认。",
+      "对象图确认 API 链接及远程调用，但依赖、捆绑、修改副本及共同许可范围均未知；远程调用不单独证明分发、修改或许可范围重叠。",
+      "Apache 原文摘录给出下游作品的 Use 许可；当前事实记录的是对上游材料的远程调用，不能据此认定该摘录约束该调用或与上游许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如该资产确属所引用的 Llama 许可覆盖材料，使用须遵守该 Llama 协议。",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "subject": {
+          "artifact": "chain-0082-3e92860ecbde:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "all",
+        "unresolved_predicates": [
+          "upstream_asset_version_matches_Llama4"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0082-3e92860ecbde"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0068-b37613b21bce.json",
+  "original_case_id": "chain-0068-b37613b21bce",
+  "original_request_sha256": "626fa04ce326b7d1f2753acec1ad5ae4a84f4fefd5fcfc4c86d0b1bb91cbbd3a",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0068-b37613b21bce": "chain-0082-3e92860ecbde",
+    "license-text:upstream:c2f47a4e8b18a63d": "license-text:upstream:c2f47a4e8b18a63d",
+    "license-text:downstream:638f84b412e9e045": "license-text:downstream:638f84b412e9e045",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/67": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/81"
+  }
+}

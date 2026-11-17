@@ -1,0 +1,160 @@
+{
+  "case_id": "chain-14544-8c25f9008697",
+  "source_csv_line": 14545,
+  "row": {
+    "github_repo": "agentic-pkm-mvp",
+    "github_url": "https://github.com/RasmusTho/agentic-pkm-mvp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "langchain-ai/langchain",
+    "artifact_url": "https://github.com/langchain-ai/langchain",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: app/eval/llm_client.py:94 ｜ 调用原文: \"\"\"Return a LangChain LLM bridge for Ragas, backed only by Product ChatClient.\"\"\" ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: AI 依赖中列出的 LangChain 框架，被代码真实依赖",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "rasmustho/agentic-pkm-mvp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f",
+    "filename": "_licenseref_full/texts/e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:agentic-pkm-mvp-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14544-8c25f9008697",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:320c454008dccb5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-14544-8c25f9008697:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "MIT 许可文本的匹配摘录涵盖使用许可及通知条件，但结构化规则标记为 FIRST_PASS_REVIEW_REQUIRED；摘录未明确该通知条件是否适用于不涉及复制或实质部分的单纯远程使用，因此不推断其已被违反。",
+      "下游 LicenseRef-Custom 的相关限制针对其自有仓库内容；已证实的是对上游 LangChain 的远程调用，未证实下游项目被作为托管服务提供或有下游仓库内容参与该远程交互。故不将该限制套用于本次调用。",
+      "对象图未确认上下游许可共同约束同一对象；没有证据表明发生复制、修改、分发、再许可或源码提供。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-14544-8c25f9008697:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "如该使用涉及软件副本或其 substantial portions，须在所有副本中包含版权声明和许可声明；单纯远程使用是否触发该条件，依据现有摘录无法确定。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_involves_copy_or_substantial_portion"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_involves_copy_or_substantial_portion",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:320c454008dccb5d"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23168,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1084,
+    "output_tokens_details": {
+      "reasoning_tokens": 507
+    },
+    "total_tokens": 24252,
+    "attribution": {
+      "items": {
+        "msg_094d1c26824e78fd016af53e084b0c87d280d954f3fc77fd29": {
+          "input_tokens": 21098,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21098,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_094d1c26824e78fd016af53e084b0c87d287ff0b82d1629ea0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_094d1c26824e78fd016af53e11f21087d2bd8a957b42883d51": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 577,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 577
+            }
+          ]
+        },
+        "rs_094d1c26824e78fd016af53e11db2887d2925bdd4e31e34244": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 507
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "188a081b7b98a1bdfa7159f09479a0f965ee25de662d447580a8b25ea555edf2",
+  "elapsed_seconds": 25.32
+}

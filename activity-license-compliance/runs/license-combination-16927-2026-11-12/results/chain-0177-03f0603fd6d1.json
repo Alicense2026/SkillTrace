@@ -1,0 +1,90 @@
+{
+  "case_id": "chain-0177-03f0603fd6d1",
+  "input_group_row": 177,
+  "aggregate_count": 4,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "AGPL-3.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "4"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0177-03f0603fd6d1",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge_through_network_server",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0177-03f0603fd6d1:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若上游材料构成已修改且支持远程交互的受覆盖程序，应显著向通过计算机网络远程交互的用户提供免费获取该版本对应源码的机会，可通过网络服务器提供。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "subject": {
+          "artifact": "chain-0177-03f0603fd6d1:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "version_supports_remote_interaction",
+            "users_interact_remotely_through_computer_network"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "version_supports_remote_interaction",
+          "users_interact_remotely_through_computer_network",
+          "network_source_offer_available"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认的是对上游原始资产的远程服务调用及API/链接关系，并标明代码修改不适用；不能据此认定上游程序已被修改、支持远程交互或构成触发第13条的受覆盖版本。",
+      "对象图中的依赖、修改副本及组合产品关系均未知；API调用不自动证明GPL下游资产纳入上游程序或形成共同受约束对象。因此未判定AGPL与GPL之间存在许可冲突。",
+      "下游GPL摘录中的修改、分发和源码提供条件，仅在相应活动及覆盖范围成立时相关；当前没有此类活动事实，故不据此生成已触发义务或违规结论。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0190-25abc7e654fd.json",
+  "original_case_id": "chain-0190-25abc7e654fd",
+  "original_request_sha256": "34e95fedeaced4f786a6db9d2a2f622c76913c7100dda7c855d02fb9a12d9e30",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0190-25abc7e654fd": "chain-0177-03f0603fd6d1",
+    "license-text:upstream:5b08064288d26a33": "license-text:upstream:5b08064288d26a33",
+    "license-text:downstream:238c85c172f9c1be": "license-text:downstream:238c85c172f9c1be",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/189": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/176"
+  }
+}

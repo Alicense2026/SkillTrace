@@ -1,0 +1,169 @@
+{
+  "case_id": "chain-0068-b37613b21bce",
+  "status": "SUCCESS",
+  "request_sha256": "626fa04ce326b7d1f2753acec1ad5ae4a84f4fefd5fcfc4c86d0b1bb91cbbd3a",
+  "analysis": {
+    "case_id": "chain-0068-b37613b21bce",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement"
+          },
+          "S": {
+            "artifact": "chain-0068-b37613b21bce:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:638f84b412e9e045"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0068-b37613b21bce:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY"
+          },
+          "S": {
+            "artifact": "chain-0068-b37613b21bce:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0068-b37613b21bce:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_Llama_agreement",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "asset_license_version",
+          "agreement_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0068-b37613b21bce:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "if distributing or making available covered Llama Materials, derivative works, or a product or service containing them, provide a copy of the agreement and prominently display “Built with Llama” in a related location",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "asset_license_version",
+          "distribution_or_availability"
+        ],
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ]
+      }
+    ],
+    "limitations": [
+      "事实记录将上游资产标为“Llama（版本未识别；本地原文未匹配）”，而本地上游文本为 Llama 4 Community License Agreement；因此该文本与资产版本的适用性不能确定，相关要求仅作条件性处理。",
+      "已确认的活动是对上游资产的 Use、Link 和 RemoteInteraction；记录未确认分发、再许可或修改。对象图中的依赖、打包、修改副本和组合产品关系均未知。",
+      "结构化抽取标记为 FIRST_PASS_REVIEW_REQUIRED；所提供摘录不足以确认所有可能适用的协议条件。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21776,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1125,
+    "output_tokens_details": {
+      "reasoning_tokens": 269
+    },
+    "total_tokens": 22901,
+    "attribution": {
+      "items": {
+        "msg_0e60ffd4cc5f65d1016af2f9d6009087d1bfb90abf88b7cfea": {
+          "input_tokens": 19744,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19744,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e60ffd4cc5f65d1016af2f9db45dc87d1bbc49b323cf6f0b2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 856,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 856
+            }
+          ]
+        },
+        "rs_0e60ffd4cc5f65d1016af2f9db2efc87d18096a23c14143dd0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 269
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 23.216,
+  "auto_applied": false,
+  "aggregate_count": 17
+}

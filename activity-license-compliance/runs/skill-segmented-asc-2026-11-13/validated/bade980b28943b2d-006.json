@@ -1,0 +1,335 @@
+{
+  "request_sha256": "4cb041dc3f43285b9ea3334f5ce45cf33887a3133215dea90696f43d1813ee1f",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 381,
+        "end_line": 381,
+        "clause_label": "brand_identifier_use_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "deepseek_permission_or_relevant_law_allows_use"
+          }
+        },
+        "actor_role": "licensee_or_end_user",
+        "scope_note": "Section 6.2 restricts use of DeepSeek-related trademarks, service marks, trade names, domain names, website names, logos, URLs, and other prominent brand features, individually or in combination; it also covers displaying, applying to register, or implying a right to deal with those identifiers.",
+        "condition_explanation": "deepseek_permission_or_relevant_law_allows_use means the use is permitted by relevant law or licensed by DeepSeek, as stated in the clause.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use, display, or apply to register the specified DeepSeek-related brand identifiers, or imply a right to display, use, or otherwise deal with them, unless permitted by relevant law or licensed by DeepSeek.",
+            "actor": "you or your end users",
+            "object": "DeepSeek-related brand identifiers",
+            "trigger": "Whenever you or an end user would use, display, register, or imply a right to deal with a specified identifier, except to the extent permitted by relevant law or licensed by DeepSeek."
+          }
+        ]
+      },
+      {
+        "start_line": 386,
+        "end_line": 386,
+        "clause_label": "provider_use_of_feedback",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "feedback_submitted_to_deepseek",
+          "requires": true
+        },
+        "actor_role": "vendor",
+        "scope_note": "Section 6.2 says DeepSeek may use feedback without restriction or compensation to the submitting user. The object is the submitted feedback; this is not a grant concerning other user material.",
+        "condition_explanation": "feedback_submitted_to_deepseek means the user has provided feedback to DeepSeek through the described channels.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 395,
+        "end_line": 395,
+        "clause_label": "provider_remedial_measures",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "terms_violation_or_service_use_risk_or_harm",
+          "requires": true
+        },
+        "actor_role": "vendor",
+        "scope_note": "Section 8.2 reserves DeepSeek's right to take listed measures in response to a Terms or other service-terms violation, or where use of the Services could cause risk or harm to DeepSeek, users, or others. This models only the reserved provider action; the separate compensation obligation is not representable as one of the allowed activities.",
+        "condition_explanation": "terms_violation_or_service_use_risk_or_harm means either a violation of these Terms or other service terms, or service use that could cause risk or harm to DeepSeek, its users, or anyone else.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 426,
+        "end_line": 426,
+        "clause_label": "sanctions_restricted_service_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "use_in_or_for_benefit_of_comprehensively_sanctioned_country",
+              "use_by_or_for_restricted_party_where_use_prohibited",
+              "prohibited_export_reexport_or_transfer",
+              "prohibited_end_use"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 8.6 prohibits specified service uses and exports, re-exports, and transfers under applicable Export Control and Sanctions Laws. This clause covers use of the Services; the separate restriction on submitted Inputs is captured in the following clause.",
+        "condition_explanation": "The predicates refer to the applicable Export Control and Sanctions Laws: use in or for the benefit of, or export, re-export, or transfer to or within, a comprehensively sanctioned country; use by a party on a restricted-party list where that use is prohibited; or an end use prohibited by those laws.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services in or for the benefit of a comprehensively sanctioned country, for a restricted party where the use is prohibited, or for an end use prohibited by applicable Export Control and Sanctions Laws; do not export, re-export, or transfer the Services in a prohibited manner.",
+            "actor": "you and your end users",
+            "object": "DeepSeek Services",
+            "trigger": "Whenever accessing or using the Services, or exporting, re-exporting, or transferring them, where applicable Export Control and Sanctions Laws prohibit that use or transfer."
+          }
+        ]
+      },
+      {
+        "start_line": 426,
+        "end_line": 426,
+        "clause_label": "export_control_input_content_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "providing_inputs_to_or_obtaining_outputs_via_services",
+          "requires": "input_material_or_information_requires_license_for_release_or_export"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 8.6 separately states that your and your end users' Inputs must not include material or information requiring a license for release or export. The object is the Input, not the Output.",
+        "condition_explanation": "input_material_or_information_requires_license_for_release_or_export means the Input includes material or information that requires a license for release or export under applicable law.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not include material or information requiring a license for release or export in Inputs.",
+            "actor": "you and your end users",
+            "object": "Inputs provided to the Services",
+            "trigger": "Whenever providing Inputs to or obtaining Outputs via the Services, if the Input material or information requires a license for release or export."
+          }
+        ]
+      },
+      {
+        "start_line": 440,
+        "end_line": 440,
+        "clause_label": "continued_use_accepts_revised_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "revised_terms_announced",
+          "requires": "acceptance_of_modified_terms_by_continued_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 11.1 says announced revisions replace the original terms and continued use is considered acceptance. This clause models continued use under announced revised terms, not the provider's revision power.",
+        "condition_explanation": "revised_terms_announced means DeepSeek has announced revised terms; acceptance_of_modified_terms_by_continued_use means the user continues using the Service after that announcement.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 440,
+        "end_line": 440,
+        "clause_label": "stop_use_if_modified_terms_rejected",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "revised_terms_announced",
+          "requires": "user_does_not_accept_modified_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 11.1 directs the user to stop using the Service immediately if the user does not accept modified terms.",
+        "condition_explanation": "revised_terms_announced means DeepSeek has announced revised terms; user_does_not_accept_modified_terms means the user rejects those modified terms.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Stop using the Service immediately if you do not accept the modified terms.",
+            "actor": "you",
+            "object": "DeepSeek Service",
+            "trigger": "Immediately after revised terms are announced, if you do not accept them."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Section 6.1 states DeepSeek's rights in the service subject to legally or contractually recognized rights, including rights in Inputs and Outputs, but does not itself grant the user a use permission; it is recorded as context rather than an inferred grant.",
+      "Sections 8.2 and 8.5 contain compensation and indemnification obligations that cannot be represented faithfully with the allowed activity set. The relevant paragraphs are marked UNRESOLVED.",
+      "Section 8.6 also requires the user to comply with applicable Export Control and Sanctions Laws. The specific service-use and Input restrictions are modeled, but the broader compliance obligation is not separately representable without an unsupported generic activity.",
+      "No external incorporated material was provided. The referenced laws and the separately mentioned service terms are not supplied."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0112",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section 6.1 describes DeepSeek's rights in the service and recognizes legally or contractually reserved rights, but does not state a user permission or behavioral duty."
+      },
+      {
+        "unit_id": "P0113",
+        "status": "MODELED",
+        "clause_labels": [
+          "brand_identifier_use_restriction"
+        ],
+        "reason": "Section 6.2's restriction on using the listed brand identifiers is modeled, including the law and license exceptions."
+      },
+      {
+        "unit_id": "P0114",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_use_of_feedback"
+        ],
+        "reason": "The paragraph provides feedback channels and states that DeepSeek may use submitted feedback without restriction or compensation."
+      },
+      {
+        "unit_id": "P0115",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Preserves statutory consumer rights; it imposes no activity constraint."
+      },
+      {
+        "unit_id": "P0116",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "provider_remedial_measures"
+        ],
+        "reason": "The provider's reserved remedial measures are modeled, but the paragraph also imposes liability and compensation obligations that cannot be represented with the allowed activity set."
+      },
+      {
+        "unit_id": "P0117",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer; no behavioral duty or activity permission is created."
+      },
+      {
+        "unit_id": "P0118",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer concerning service availability, security, and errors; no behavioral duty is created."
+      },
+      {
+        "unit_id": "P0119",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer concerning Output and other information; no behavioral duty is created."
+      },
+      {
+        "unit_id": "P0120",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer concerning correction of defects; no behavioral duty is created."
+      },
+      {
+        "unit_id": "P0121",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Third-party-offerings warranty disclaimer; no behavioral duty is created."
+      },
+      {
+        "unit_id": "P0122",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Limitation of liability, not an activity constraint."
+      },
+      {
+        "unit_id": "P0123",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Imposes indemnify, defend, and hold-harmless duties, which cannot be represented as an allowed activity; the paragraph is not fully modeled."
+      },
+      {
+        "unit_id": "P0124",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Identifies intended third-party beneficiaries; it creates no activity constraint."
+      },
+      {
+        "unit_id": "P0125",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0126",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "sanctions_restricted_service_use",
+          "export_control_input_content_restriction"
+        ],
+        "reason": "The service-use and Input-content restrictions are modeled. The broader express responsibility to comply with all applicable Export Control and Sanctions Laws is not separately representable with the allowed activities."
+      },
+      {
+        "unit_id": "P0127",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Governing-law provision; no activity constraint."
+      },
+      {
+        "unit_id": "P0128",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Dispute-resolution and jurisdiction provision; no activity constraint."
+      },
+      {
+        "unit_id": "P0129",
+        "status": "MODELED",
+        "clause_labels": [
+          "continued_use_accepts_revised_terms",
+          "stop_use_if_modified_terms_rejected"
+        ],
+        "reason": "Models the stated consequence of continued use after announced revisions and the direction to stop use if revisions are not accepted."
+      },
+      {
+        "unit_id": "P0130",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introduces contact methods; the contact details themselves do not impose a duty or grant an activity permission."
+      },
+      {
+        "unit_id": "P0131",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Provides a feedback portal contact method; it does not itself impose a duty or grant a use permission."
+      },
+      {
+        "unit_id": "P0132",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Provides a contact email; it does not itself impose a duty or grant an activity permission."
+      }
+    ]
+  },
+  "attempt": 3
+}

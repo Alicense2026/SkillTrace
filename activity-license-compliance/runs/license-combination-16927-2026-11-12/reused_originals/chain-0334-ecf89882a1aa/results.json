@@ -1,0 +1,161 @@
+{
+  "case_id": "chain-0334-ecf89882a1aa",
+  "status": "SUCCESS",
+  "request_sha256": "5c982da935a8ec4c26ada5c38b20bc4559ffcc6ca8125f2ec3577cc4d8167a79",
+  "analysis": {
+    "case_id": "chain-0334-ecf89882a1aa",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_laws_and_Llama_3_Acceptable_Use_Policy",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0334-ecf89882a1aa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_Llama_materials_or_outputs_to_improve_another_large_language_model",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0334-ecf89882a1aa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游来源为 Meta Llama 3 Community License Agreement；该许可证标签为 proprietary 不代表其他厂商许可。",
+      "ISC 原文所引许可副本及版权/许可通知条件针对 ISC 软件的复制、使用或分发；本记录未证明 downstream 对象的具体使用、复制或分发，也未证明与上游材料属于同一受约束对象，故不据此判定冲突或履行状态。",
+      "结构化条款标记 FIRST_PASS_REVIEW_REQUIRED。摘录显示上游使用须遵守适用法律及 Llama 3 AUP，并禁止用 Llama 材料或其输出改进其他大型语言模型；本记录未表明有训练或改进活动。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0334-ecf89882a1aa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守适用法律法规及 Llama 3 Acceptable Use Policy。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "AUP_and_applicable_law_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      },
+      {
+        "activity": "TrainModel",
+        "subject": {
+          "artifact": "chain-0334-ecf89882a1aa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得使用 Llama 材料或其输出改进其他大型语言模型（不包括 Meta Llama 3 或其衍生作品）。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "activity:TrainModel",
+            "uses_Llama_materials_or_outputs_to_improve_another_large_language_model"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:TrainModel",
+          "improvement_target_and_materials"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23101,
+    "input_tokens_details": {
+      "cached_tokens": 22912,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1255,
+    "output_tokens_details": {
+      "reasoning_tokens": 400
+    },
+    "total_tokens": 24356,
+    "attribution": {
+      "items": {
+        "msg_04cc2aff7a34494e016af305bc9e4487d29e9a6da43ce1cb8a": {
+          "input_tokens": 21069,
+          "cached_tokens": 20882,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21069,
+              "cached_tokens": 20882,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04cc2aff7a34494e016af305c8794887d2b9199413bbc5a111": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 855,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 855
+            }
+          ]
+        },
+        "rs_04cc2aff7a34494e016af305c85d9887d28969649c9fb8ad58": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 400
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 35.816,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

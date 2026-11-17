@@ -1,0 +1,108 @@
+{
+  "request_sha256": "1958b7453fb6ed2122653edbad6325adebc638da6bfb092792ba19b9459c8bc1",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 354,
+        "end_line": 354,
+        "clause_label": "publicity_and_trademark_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "Cohere",
+        "scope_note": "CLA §13, Publicity. Customer grants Cohere a limited, perpetual, fully paid-up, irrevocable, non-exclusive, non-transferable, non-sublicensable license to use Customer’s logo and trademarks in connection with Publicity. Cohere may also refer to Customer as a Cohere customer and disclose the existence of the Agreement, the Cohere API SaaS Services provided to Customer, and testimonials received from Customer in Publicity, without notice or prior written consent. OriginalArtifact here represents Customer’s name, logo, trademarks, and the specified publicity-related material.",
+        "condition_explanation": "Publicity means announcements, press or marketing releases, publications, presentations, case studies, other public statements, and Cohere’s Website and other online channels. The granted license to use the logo and trademarks is limited to Publicity.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 357,
+        "end_line": 357,
+        "clause_label": "export_law_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "complies_with_applicable_export_laws_and_regulations"
+        },
+        "actor_role": "Customer",
+        "scope_note": "CLA §13, Export Restrictions. The condition applies to Customer’s access to or use of the Cohere API SaaS Services. OriginalArtifact represents those services.",
+        "condition_explanation": "complies_with_applicable_export_laws_and_regulations means Customer complies with export laws and regulations that may apply to its access to or use of the Cohere API SaaS Services.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable export laws and regulations.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services",
+            "trigger": "Whenever Customer accesses or uses the Cohere API SaaS Services, to the extent export laws or regulations apply."
+          }
+        ]
+      },
+      {
+        "start_line": 364,
+        "end_line": 364,
+        "clause_label": "cohere_amendment_by_notice",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "prior_notice_of_amendment_provided_to_customer",
+              "notice_of_amendment_posted_on_website"
+            ]
+          }
+        },
+        "actor_role": "Cohere",
+        "scope_note": "CLA §13, Amendments. Cohere may unilaterally amend the Agreement, in whole or in part, by giving Customer prior notice or posting notice on the Website. OriginalArtifact represents the Agreement. Unless Cohere indicates otherwise, the amendment becomes effective on the earlier date the notice is provided or posted.",
+        "condition_explanation": "The notice alternatives are OR, not cumulative. The clause also states that an amendment, supplement, modification, waiver, or termination, and—unless otherwise expressly specified—Customer consent or approval, is not binding unless executed in writing by Cohere. The effective-date rule applies unless Cohere indicates otherwise.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give Customer prior notice of the amendment or post notice of the amendment on the Website.",
+            "actor": "Cohere",
+            "object": "Amendment to the Agreement",
+            "trigger": "When Cohere exercises its stated permission to amend the Agreement; either giving prior notice to Customer or posting notice on the Website suffices."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Customer’s restriction on assigning the Agreement to a third party without Cohere’s prior written consent, and Cohere’s permission to assign the Agreement or rights under it without Customer’s consent, concern contractual assignment and cannot be faithfully represented by the supplied activity and object categories; they are not treated as software sublicensing.",
+      "The clause requiring the Parties to initiate lawsuits in Toronto and attorn to exclusive jurisdiction is legal venue boilerplate excluded from this activity-constraint extraction.",
+      "The force-majeure, severability, written-waiver, entire-agreement, and English-language provisions do not supply an additional representable activity constraint here. The waiver’s writing requirement is procedural and its subject activity is not represented by the supplied categories.",
+      "The independent-contractor provision, including the restriction on either Party representing to a third party that it has authority to act for the other, is operative but cannot be faithfully encoded as one of the supplied activities and objects.",
+      "No external export-law text is supplied; applicable export requirements remain dependent on the laws and regulations that apply."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0099",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "publicity_and_trademark_use",
+          "export_law_compliance",
+          "cohere_amendment_by_notice"
+        ],
+        "reason": "The publicity permission, export-compliance duty, and Cohere’s notice-conditioned amendment permission are modeled. The paragraph also contains contractual assignment terms and an operative restriction on representing authority to act for the other Party, which cannot be faithfully represented using the supplied activity and object categories."
+      }
+    ]
+  },
+  "attempt": 2
+}

@@ -1,0 +1,142 @@
+{
+  "request_sha256": "7d582affd2aeecfeab8ee0d3c8fa2c51ebdcdd6cb3634b47872c572c90feefae",
+  "data": {
+    "decisions": [
+      {
+        "candidate_id": "C001",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section H.1 says Anthropic may require prepayment in credits or offer credits, subject to Supplemental Credits Terms (line 39). These are credit and payment arrangements, not an allowed activity involving an allowed artifact; representing them as Use of an OriginalArtifact would be a placeholder.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C002",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section H.1 permits Anthropic to update published rates, effective at the earlier of 30 days after posting or Customer otherwise receiving Notice (line 39). Rate-setting is not an allowed activity involving an allowed artifact, so Use of an OriginalArtifact is not a faithful representation.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C003",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section H.3 says failure to pay amounts owed when due may result in suspension or termination of Customer’s access (line 41). The current rule seg-829805e920cff0551c647902 addresses Customer’s prohibition on access during suspension or after termination (lines 50–52), not Anthropic’s conditional discretion to suspend or terminate access for nonpayment. The candidate faithfully captures that distinct permission.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C004",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [],
+        "reason": "Section H.3 reserves other collection rights Anthropic may have (line 41), but does not specify what those rights are. The candidate’s Use of an OriginalArtifact does not express a concrete allowed activity or duty, and the unspecified rights cannot be extracted from the supplied text.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C005",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [
+          "seg-3b391a8b5ea10b4ab3216dca"
+        ],
+        "reason": "Section I.2.a is a right to terminate the Terms for convenience by Notice, with 30 days’ prior Notice required only when Anthropic terminates (line 46). The existing rule covers the same termination-right terms (lines 46–48). Terminating a contract is not permission to use a service; the candidate’s Use action is therefore not a service-use clause to add.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C006",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [
+          "seg-3b391a8b5ea10b4ab3216dca"
+        ],
+        "reason": "Section I.2.b permits either party to terminate for the other party’s material breach after 30 days’ prior Notice detailing the breach, unless cured within that period (line 47). The existing rule covers this termination right and its conditions (lines 46–48). The candidate’s Use action misrepresents a contract-termination procedure as service use.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C007",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [
+          "seg-3b391a8b5ea10b4ab3216dca"
+        ],
+        "reason": "Section I.2.c permits Anthropic to terminate the Terms immediately with Notice if it reasonably believes or determines that providing Services to Customer is prohibited by applicable law (line 48). The existing rule includes this termination right (lines 46–48). This permission concerns termination of the Terms, not permission to use a service; the candidate’s Use action is inapposite.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C008",
+        "decision": "ADD",
+        "covered_rule_ids": [],
+        "reason": "Section I.3.a permits Anthropic to suspend access to any portion or all of the Services on the listed alternative grounds (line 50). The existing rule seg-829805e920cff0551c647902 addresses Customer’s resulting restriction on access while suspended, not Anthropic’s distinct conditional permission to suspend access (lines 50–52). The candidate preserves the separate grounds and their alternatives.",
+        "corrected_clause": null
+      }
+    ]
+  },
+  "additions": [
+    {
+      "rule_id": "gap-194bd451ceb3bb283bcb9f36",
+      "license_id": "ANTHROPIC.txt",
+      "source_aliases": [
+        "ANTHROPIC.txt"
+      ],
+      "source_sha256": "9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8",
+      "ASC": {
+        "A": "ProvideNetworkService",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "PERMITTED",
+          "when": "customer_fails_to_pay_all_amounts_owed_when_due",
+          "requires": true
+        }
+      },
+      "source_lines": [
+        41,
+        41
+      ],
+      "source_excerpt": "H.3. Billing. Failure to pay Anthropic all amounts owed when due may result in suspension or termination of Customer’s access to the Services. Anthropic reserves any other rights of collection it may have.",
+      "clause_label": "historical/9aad0d3a4b54a451-002/C003/anthropic_may_suspend_or_terminate_for_nonpayment",
+      "actor_role": "Anthropic",
+      "scope_note": "Section H.3; failure to pay all amounts owed when due may result in suspension or termination of Customer’s access to the Services. This is discretionary, not a mandatory suspension or termination.",
+      "condition_explanation": "customer_fails_to_pay_all_amounts_owed_when_due means any amounts owed to Anthropic are not paid when due.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "9aad0d3a4b54a451-002"
+    },
+    {
+      "rule_id": "gap-519ee8f1b90df2f702d14290",
+      "license_id": "ANTHROPIC.txt",
+      "source_aliases": [
+        "ANTHROPIC.txt"
+      ],
+      "source_sha256": "9aad0d3a4b54a45115654500b18bf1fcd76c34337471c99d4b55cbeb04c7cec8",
+      "ASC": {
+        "A": "ProvideNetworkService",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "PERMITTED",
+          "when": {
+            "any": [
+              "anthropic_reasonably_believes_or_determines_risk_to_or_attack_on_services",
+              "anthropic_reasonably_believes_or_determines_customer_or_user_violation_of_d1_compliance_d2_policies_and_service_terms_or_d4_use_restrictions",
+              "anthropic_reasonably_believes_or_determines_service_provision_prohibited_by_law_or_causes_material_cost_increase",
+              "vendor_suspends_or_terminates_third_party_services_or_products_required_for_customer_access"
+            ]
+          },
+          "requires": true
+        }
+      },
+      "source_lines": [
+        50,
+        50
+      ],
+      "source_excerpt": "I.3.a. Anthropic may suspend Customer’s access to any portion or all of the Services if: (a) Anthropic reasonably believes or determines that (i) there is a risk to or attack on any of the Services; (ii) Customer or any User is using the Services in violation of Sections D.1 (Compliance), D.2 (Policies and Service Terms) or D.4 (Use Restrictions); or (iii) Anthropic’s provision of the Services to Customer is prohibited by applicable law or would result in a material increase in the cost of providing the Services; or (b) any vendor suspends or terminates Anthropic’s use of any third‑party services or products required to enable Customer to access the Services (each, a “Service Suspension”).",
+      "clause_label": "historical/9aad0d3a4b54a451-002/C008/anthropic_may_suspend_access_on_specified_events",
+      "actor_role": "Anthropic",
+      "scope_note": "Section I.3.a; Anthropic may suspend access to any portion or all of the Services on any listed ground: its reasonable belief or determination of a Services risk or attack; Customer or User use it reasonably believes or determines violates D.1, D.2, or D.4; its reasonable belief or determination that provision is prohibited by law or would materially increase provision costs; or a vendor suspending or terminating required third-party services or products.",
+      "condition_explanation": "The any expression represents alternative, independently sufficient suspension grounds. Cross-references D.1, D.2, and D.4 are not reproduced in the target paragraph, so their substantive scope cannot be specified here.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "9aad0d3a4b54a451-002"
+    }
+  ]
+}

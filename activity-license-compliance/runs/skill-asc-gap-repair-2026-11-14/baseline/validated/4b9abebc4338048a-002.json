@@ -1,0 +1,627 @@
+{
+  "request_sha256": "682d780777ade16b5c91966dda4e288ad932dec09de765ced13b348167e1696d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 158,
+        "end_line": 161,
+        "clause_label": "source_access_distribution_equivalence",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "source_access_equivalent_to_object_code_access_from_same_designated_place"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 3 source-distribution rule: when executable or object code is distributed by offering access to copy it from a designated place, equivalent access to copy the source from that same place counts as distribution of source. This does not require third parties to copy the source along with the object code.",
+        "condition_explanation": "source_access_equivalent_to_object_code_access_from_same_designated_place means executable or object code is offered for copying from a designated place and source code is offered for copying from that same place with equivalent access.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 163,
+        "end_line": 168,
+        "clause_label": "unlicensed_program_actions_prohibited_and_termination",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_expressly_permitted_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 4 prohibits copying the Program except as expressly provided by the License. An attempted nonpermitted copy is void and automatically terminates the actor's license rights; recipients' licenses are not terminated so long as they remain in full compliance. The same prohibition and consequence separately apply to modification, sublicensing, and distribution.",
+        "condition_explanation": "not_expressly_permitted_by_license means the particular copying is not expressly permitted under the License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not copy the Program except as expressly provided under the License.",
+            "actor": "licensee",
+            "object": "Program",
+            "trigger": "Whenever the actor would copy the Program without express permission under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 163,
+        "end_line": 168,
+        "clause_label": "unlicensed_program_actions_prohibited_and_termination_modify",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_expressly_permitted_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 4 prohibits modifying the Program except as expressly provided by the License. An attempted nonpermitted modification is void and automatically terminates the actor's license rights; recipients' licenses are not terminated so long as they remain in full compliance. The same prohibition and consequence separately apply to copying, sublicensing, and distribution.",
+        "condition_explanation": "not_expressly_permitted_by_license means the particular modification is not expressly permitted under the License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify the Program except as expressly provided under the License.",
+            "actor": "licensee",
+            "object": "Program",
+            "trigger": "Whenever the actor would modify the Program without express permission under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 163,
+        "end_line": 168,
+        "clause_label": "unlicensed_program_actions_prohibited_and_termination_sublicense",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_expressly_permitted_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 4 prohibits sublicensing the Program except as expressly provided by the License. An attempted nonpermitted sublicense is void and automatically terminates the actor's license rights; recipients' licenses are not terminated so long as they remain in full compliance. Section 6 separately provides recipients an automatic license from the original licensor on the stated terms; that is not a licensee-imposed sublicense.",
+        "condition_explanation": "not_expressly_permitted_by_license means the particular sublicensing is not expressly permitted under the License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not sublicense the Program except as expressly provided under the License.",
+            "actor": "licensee",
+            "object": "Program",
+            "trigger": "Whenever the actor would sublicense the Program without express permission under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 163,
+        "end_line": 168,
+        "clause_label": "unlicensed_program_actions_prohibited_and_termination_distribute",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_expressly_permitted_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 4 prohibits distributing the Program except as expressly provided by the License. An attempted nonpermitted distribution is void and automatically terminates the actor's license rights; recipients' licenses are not terminated so long as they remain in full compliance. The same prohibition and consequence separately apply to copying, modification, and sublicensing.",
+        "condition_explanation": "not_expressly_permitted_by_license means the particular distribution is not expressly permitted under the License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute the Program except as expressly provided under the License.",
+            "actor": "licensee",
+            "object": "Program",
+            "trigger": "Whenever the actor would distribute the Program without express permission under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 170,
+        "end_line": 176,
+        "clause_label": "acceptance_indicated_by_modification_or_distribution",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "acceptance_of_license_by_modifying_or_distributing"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 5: modifying the Program or a work based on it indicates acceptance of the License and its terms for copying, distribution, or modification. Without acceptance, the text says no other permission grants modification or distribution of the Program or derivatives and those actions are prohibited by law. The separate distribution action is covered by clause acceptance_indicated_by_distribution.",
+        "condition_explanation": "acceptance_of_license_by_modifying_or_distributing means the actor accepts the License by undertaking modification or distribution; mere absence of signature does not require acceptance.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 170,
+        "end_line": 176,
+        "clause_label": "acceptance_indicated_by_distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "acceptance_of_license_by_modifying_or_distributing"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 5: distributing the Program or a work based on it indicates acceptance of the License and its terms for copying, distribution, or modification. Without acceptance, the text says no other permission grants modification or distribution of the Program or derivatives and those actions are prohibited by law. The separate modification action is covered by clause acceptance_indicated_by_modification_or_distribution.",
+        "condition_explanation": "acceptance_of_license_by_modifying_or_distributing means the actor accepts the License by undertaking modification or distribution; mere absence of signature does not require acceptance.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 178,
+        "end_line": 183,
+        "clause_label": "recipient_automatic_license",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "redistribution_of_program_or_work_based_on_program",
+          "requires": "recipient_automatically_receives_original_licensor_license_on_license_terms"
+        },
+        "actor_role": "recipient",
+        "scope_note": "GPL-2.0 section 6: each redistribution automatically gives the recipient a license from the original licensor to copy, distribute, or modify the Program subject to the License terms. The same grant separately covers distribution and modification. Redistributors may not impose further restrictions on recipients' exercise of the granted rights, but are not responsible for enforcing third-party compliance.",
+        "condition_explanation": "redistribution_of_program_or_work_based_on_program means the Program or a work based on it is redistributed; the recipient's license arises automatically and is subject to the License terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 178,
+        "end_line": 183,
+        "clause_label": "recipient_automatic_license_distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "redistribution_of_program_or_work_based_on_program",
+          "requires": "recipient_automatically_receives_original_licensor_license_on_license_terms"
+        },
+        "actor_role": "recipient",
+        "scope_note": "GPL-2.0 section 6: each redistribution automatically gives the recipient a license from the original licensor to copy, distribute, or modify the Program subject to the License terms. The same grant separately covers copying and modification. Redistributors may not impose further restrictions on recipients' exercise of the granted rights, but are not responsible for enforcing third-party compliance.",
+        "condition_explanation": "redistribution_of_program_or_work_based_on_program means the Program or a work based on it is redistributed; the recipient's license arises automatically and is subject to the License terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 178,
+        "end_line": 183,
+        "clause_label": "recipient_automatic_license_modify",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "redistribution_of_program_or_work_based_on_program",
+          "requires": "recipient_automatically_receives_original_licensor_license_on_license_terms"
+        },
+        "actor_role": "recipient",
+        "scope_note": "GPL-2.0 section 6: each redistribution automatically gives the recipient a license from the original licensor to copy, distribute, or modify the Program subject to the License terms. The same grant separately covers copying and distribution. Redistributors may not impose further restrictions on recipients' exercise of the granted rights, but are not responsible for enforcing third-party compliance.",
+        "condition_explanation": "redistribution_of_program_or_work_based_on_program means the Program or a work based on it is redistributed; the recipient's license arises automatically and is subject to the License terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 178,
+        "end_line": 183,
+        "clause_label": "no_further_recipient_restrictions",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "redistribution_of_program_or_work_under_license",
+          "requires": "impose_further_restrictions_on_recipient_exercise_of_granted_rights"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 6 bars imposing further restrictions on recipients' exercise of rights granted under the License. The licensee is not responsible for enforcing third-party compliance.",
+        "condition_explanation": "redistribution_of_program_or_work_under_license means the actor redistributes the Program or a work based on it under the License; impose_further_restrictions_on_recipient_exercise_of_granted_rights means adding restrictions beyond the License to the recipient's exercise of granted rights.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not impose further restrictions on recipients' exercise of rights granted under the License.",
+            "actor": "licensee",
+            "object": "recipient rights in Program or work based on Program",
+            "trigger": "When redistributing the Program or a work based on it under the License."
+          }
+        ]
+      },
+      {
+        "start_line": 185,
+        "end_line": 195,
+        "clause_label": "conflicting_obligations_bar_distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "external_conditions_imposed_on_licensee_contradict_license",
+          "requires": "cannot_satisfy_license_and_other_pertinent_obligations_simultaneously"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 7: conditions imposed on the licensee by judgment, allegation of patent infringement, or any other reason do not excuse License conditions. If the licensee cannot distribute while simultaneously satisfying the License and other pertinent obligations, the licensee may not distribute the Program at all. The patent-license royalty example illustrates this rule.",
+        "condition_explanation": "external_conditions_imposed_on_licensee_contradict_license means conditions are imposed by court order, agreement, or otherwise and contradict License conditions; cannot_satisfy_license_and_other_pertinent_obligations_simultaneously means no distribution can satisfy both sets of obligations.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute the Program when distribution cannot simultaneously satisfy the License and other pertinent obligations imposed on the licensee.",
+            "actor": "licensee",
+            "object": "Program",
+            "trigger": "When imposed conditions contradict License conditions and the licensee cannot distribute while satisfying both."
+          }
+        ]
+      },
+      {
+        "start_line": 197,
+        "end_line": 199,
+        "clause_label": "section_severability",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "section_7_portion_invalid_under_particular_circumstance"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 7 states that if a portion of the section is invalid or unenforceable in a particular circumstance, the balance is intended to apply and the section as a whole is intended to apply in other circumstances. This is a severability instruction, not a distinct activity permission or duty.",
+        "condition_explanation": "section_7_portion_invalid_under_particular_circumstance means any portion of section 7 is held invalid or unenforceable under a particular circumstance.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 201,
+        "end_line": 209,
+        "clause_label": "section_7_purpose_and_no_imposed_distribution_choice",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "licensee_attempts_to_impose_other_distribution_system_choice_on_author_or_donor",
+          "requires": "licensee_cannot_impose_author_or_donor_choice"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 7 explains that its purpose is not to induce patent or other property-right infringement or to contest claim validity; it protects the free-software distribution system. The operative boundary is that a licensee cannot impose on an author or donor the choice to distribute through another system. This does not create an affirmative patent license.",
+        "condition_explanation": "licensee_attempts_to_impose_other_distribution_system_choice_on_author_or_donor means the licensee seeks to compel the author or donor to distribute software through a different system.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not impose on an author or donor the choice to distribute software through another system.",
+            "actor": "licensee",
+            "object": "author_or_donor_distribution_choice",
+            "trigger": "When the licensee seeks to impose a choice of distribution system on an author or donor."
+          }
+        ]
+      },
+      {
+        "start_line": 214,
+        "end_line": 220,
+        "clause_label": "geographical_distribution_limitation",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "original_copyright_holder_adds_explicit_geographical_limitation",
+          "requires": "distribution_in_excluded_country"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 8 permits the original copyright holder who places the Program under the License to add an explicit geographical limitation if distribution or use is restricted in certain countries by patents or copyrighted interfaces. When added, distribution is permitted only in or among countries not excluded. The stated limitation is incorporated into the License.",
+        "condition_explanation": "original_copyright_holder_adds_explicit_geographical_limitation means the original copyright holder has added the explicit country exclusion described in section 8; distribution_in_excluded_country means the proposed distribution is in a country excluded by that limitation.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute the Program in a country excluded by an explicit geographical distribution limitation added under section 8.",
+            "actor": "licensee",
+            "object": "Program",
+            "trigger": "When the original copyright holder has added such a limitation and the proposed distribution is in an excluded country."
+          }
+        ]
+      },
+      {
+        "start_line": 227,
+        "end_line": 232,
+        "clause_label": "license_version_choice_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "select_a_version_authorized_by_program_notice"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 9 grants a version choice: if the Program specifies a version and 'any later version,' the licensee may follow that version or any later FSF-published version; if it specifies no version, the licensee may choose any FSF-published version. This is a permission, not a duty.",
+        "condition_explanation": "select_a_version_authorized_by_program_notice means either the Program specifies a version and 'any later version' and the selected version is that or a later FSF-published version, or the Program specifies no version and the selected version is any FSF-published version.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 234,
+        "end_line": 240,
+        "clause_label": "request_permission_for_different_free_program_terms",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "wish_to_incorporate_program_parts_into_other_free_program_with_different_distribution_conditions",
+          "requires": "obtain_permission_from_author_or_fsf_for_fsf_copyrighted_software"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-2.0 section 10 directs a person wishing to incorporate Program parts into other free programs with different distribution conditions to write to the author to ask permission; for FSF-copyrighted software, write to the FSF. The passage asks for permission and describes the FSF's decision criteria; it does not grant the requested permission automatically.",
+        "condition_explanation": "wish_to_incorporate_program_parts_into_other_free_program_with_different_distribution_conditions means the actor wants to incorporate Program parts into another free program whose distribution conditions differ; for FSF-copyrighted software, the permission request is directed to the FSF.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 270,
+        "end_line": 273,
+        "clause_label": "new_program_notice_recommendation",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "develop_new_program_and_wish_to_apply_these_terms",
+          "requires": "attach_recommended_notices"
+        },
+        "actor_role": "licensee",
+        "scope_note": "How-to-apply guidance recommends attaching notices to a new program and describes a safest placement; it is not an operative condition of the GPL-2.0 grant or an enforceable behavioral duty in the license terms.",
+        "condition_explanation": "develop_new_program_and_wish_to_apply_these_terms means the developer is following the license's guidance for applying terms to a new program.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Lines 148–156 are a definition of source code and complete source code, including the operating-system-component exception; retained as contextual scope, not an operative permission or duty.",
+      "Lines 170–176 say a person need not accept an unsigned license, but modifying or distributing indicates acceptance; the extracted clauses capture the behavioral consequence, not a separate obligation to accept.",
+      "Section 7's severability and explanatory purpose text do not establish a distinct license grant. The specific no-imposition boundary and conflict-of-obligations distribution bar are extracted separately.",
+      "Section 8's geographical exclusion operates only if the original copyright holder actually adds an explicit limitation; no particular excluded countries are supplied.",
+      "Sections 11–12 are warranty and liability disclaimers, not activity constraints. Lines 264–293 are application guidance/examples and do not create operative duties; the recommendation in lines 270–273 is recorded as nonoperative.",
+      "No source-code provision, fee, privacy, security, or network-service obligation is created by the target paragraphs. The adjacent-context excerpt is not citable evidence."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0030",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines source code and complete source code, including an exception for certain operating-system components; this is contextual scope, not an operative activity rule."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "MODELED",
+        "clause_labels": [
+          "source_access_distribution_equivalence"
+        ],
+        "reason": "Provides that equivalent access to source from the same designated place counts as source distribution when executable or object code is offered there."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "MODELED",
+        "clause_labels": [
+          "unlicensed_program_actions_prohibited_and_termination",
+          "unlicensed_program_actions_prohibited_and_termination_modify",
+          "unlicensed_program_actions_prohibited_and_termination_sublicense",
+          "unlicensed_program_actions_prohibited_and_termination_distribute"
+        ],
+        "reason": "Section 4 prohibits four specified actions except as expressly provided, makes attempted violations void and automatically terminating, and preserves compliant recipients' licenses; each action is represented separately."
+      },
+      {
+        "unit_id": "P0033",
+        "status": "MODELED",
+        "clause_labels": [
+          "acceptance_indicated_by_modification_or_distribution",
+          "acceptance_indicated_by_distribution"
+        ],
+        "reason": "Explains that signature is unnecessary but modification or distribution indicates acceptance, and that without acceptance there is no other permission for modification or distribution."
+      },
+      {
+        "unit_id": "P0034",
+        "status": "MODELED",
+        "clause_labels": [
+          "recipient_automatic_license",
+          "recipient_automatic_license_distribution",
+          "recipient_automatic_license_modify",
+          "no_further_recipient_restrictions"
+        ],
+        "reason": "Models recipients' automatic rights, the bar on further restrictions, and the express statement that redistributors need not enforce third-party compliance."
+      },
+      {
+        "unit_id": "P0035",
+        "status": "MODELED",
+        "clause_labels": [
+          "conflicting_obligations_bar_distribution"
+        ],
+        "reason": "Captures that conflicting external conditions do not excuse GPL obligations and that distribution is barred if simultaneous compliance is impossible, including the patent-royalty example."
+      },
+      {
+        "unit_id": "P0036",
+        "status": "MODELED",
+        "clause_labels": [
+          "section_severability"
+        ],
+        "reason": "Records the severability instruction as non-granting, non-duty operative interpretive material rather than inventing an activity constraint."
+      },
+      {
+        "unit_id": "P0037",
+        "status": "MODELED",
+        "clause_labels": [
+          "section_7_purpose_and_no_imposed_distribution_choice"
+        ],
+        "reason": "Captures the express boundary that a licensee cannot impose an author's or donor's choice to distribute through another system; the surrounding purpose explanation does not create a patent grant."
+      },
+      {
+        "unit_id": "P0038",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "States that section 7 clarifies consequences believed to follow from the rest of the License; it adds no distinct rule."
+      },
+      {
+        "unit_id": "P0039",
+        "status": "MODELED",
+        "clause_labels": [
+          "geographical_distribution_limitation"
+        ],
+        "reason": "Models the conditional authority to add an explicit country limitation and the resulting exclusion from permitted distribution."
+      },
+      {
+        "unit_id": "P0040",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "States that the FSF may publish later versions; the operative version-choice permission appears in the next paragraph."
+      },
+      {
+        "unit_id": "P0041",
+        "status": "MODELED",
+        "clause_labels": [
+          "license_version_choice_permission"
+        ],
+        "reason": "Captures the optional version selection and both alternatives depending on the Program's version notice."
+      },
+      {
+        "unit_id": "P0042",
+        "status": "MODELED",
+        "clause_labels": [
+          "request_permission_for_different_free_program_terms"
+        ],
+        "reason": "Captures the request-for-permission pathway, including the FSF recipient for FSF-copyrighted software, without treating the request as an automatic grant."
+      },
+      {
+        "unit_id": "P0043",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty heading only."
+      },
+      {
+        "unit_id": "P0044",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer and allocation of risk; pure warranty/liability disclaimer excluded from this activity-constraint extraction."
+      },
+      {
+        "unit_id": "P0045",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Liability disclaimer, with an applicable-law or written-agreement qualification; pure disclaimer excluded from this activity-constraint extraction."
+      },
+      {
+        "unit_id": "P0046",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "End-of-terms marker only."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "How-to-apply heading only."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Nonbinding recommendation about making a new program free software."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "NONOPERATIVE",
+        "clause_labels": [
+          "new_program_notice_recommendation"
+        ],
+        "reason": "Application guidance recommends attaching notices and describes placement as safest; it does not create an operative duty."
+      },
+      {
+        "unit_id": "P0050",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative program-description placeholder, not an operative license duty."
+      },
+      {
+        "unit_id": "P0051",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative copyright-line template, not an operative license duty."
+      },
+      {
+        "unit_id": "P0052",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative license-notice template and version option; not an operative rule for the licensee under the target terms."
+      },
+      {
+        "unit_id": "P0053",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative warranty notice template, not an operative license duty."
+      },
+      {
+        "unit_id": "P0054",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative instruction to include a license copy and contact address, presented as application guidance rather than an operative duty under these terms."
+      },
+      {
+        "unit_id": "P0055",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Application guidance recommending contact information for a new program, not an operative license duty."
+      }
+    ]
+  },
+  "attempt": 1
+}

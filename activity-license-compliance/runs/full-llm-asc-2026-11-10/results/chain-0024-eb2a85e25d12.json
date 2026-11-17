@@ -1,0 +1,134 @@
+{
+  "case_id": "chain-0024-eb2a85e25d12",
+  "status": "SUCCESS",
+  "request_sha256": "e0f99309d17959ce7be8427b3090552022965b6532c34ca9701bb05a62a80af8",
+  "analysis": {
+    "case_id": "chain-0024-eb2a85e25d12",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1421470b7f793552"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0024-eb2a85e25d12:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:973b8b66242baab5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0024-eb2a85e25d12:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0024-eb2a85e25d12:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若该使用涉及受 BSD-3-Clause 条款约束的下游原始作品，保留适用的版权声明、条件清单及免责声明；现有摘录未明确说明仅远程调用是否属于该条款所称的 use。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared"
+        ],
+        "source_refs": [
+          "license-text:downstream:973b8b66242baab5"
+        ]
+      }
+    ],
+    "limitations": [
+      "事实支持对 Apache-2.0 标记的上游模型进行远程调用及 API 链接，不支持模型权重转移、修改或分发；因此未触发分发相关条件。",
+      "BSD-3-Clause 原文将通知保留条件置于再分发条款中，结构化摘录也将其映射到 Use，但现有材料不足以确定该许可是否约束远程调用中使用的对象。对象图中的 scope_shared 未知；不据此认定许可冲突或违规。",
+      "上游 Apache-2.0 的许可授予适用于该许可覆盖的作品；现有证据不足以证明下游 BSD-3-Clause 许可约束同一作品或同一活动范围。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 28205,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 895,
+    "output_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "total_tokens": 29100,
+    "attribution": {
+      "items": {
+        "msg_0b7aecc6cf9ec5c8016af2e105277c87d2baeb5ec0e27b17ba": {
+          "input_tokens": 26257,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 26257,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b7aecc6cf9ec5c8016af2e10b805087d29941a391206323a9": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 633,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 633
+            }
+          ]
+        },
+        "rs_0b7aecc6cf9ec5c8016af2e10b647887d2be077aac9182dc16": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 262
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.469,
+  "auto_applied": false
+}

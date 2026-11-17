@@ -1,0 +1,110 @@
+{
+  "case_id": "chain-0185-6dee5744e339",
+  "status": "SUCCESS",
+  "request_sha256": "63789a2339ca4d63bdf2963280776fc3409c984933b4fd5f58d51aac46d2c74a",
+  "analysis": {
+    "case_id": "chain-0185-6dee5744e339",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0185-6dee5744e339:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "A/S：Use Gemini API 上游原始资产；摘录仅禁止使用服务开发与服务竞争的模型，且禁止逆向工程、提取或复制服务组件；事实仅确认远程调用和使用，未表明这些特定行为，因此该禁止条款在已知事实下不适用。来源：Gemini API Additional Terms，L31-L34。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "上游结构化抽取把 L31-L34 映射为对 Use 的无条件禁止，但原文摘录将禁止范围限定为开发竞争模型及逆向工程、提取或复制服务组件；因此未将该映射泛化为普通 API 调用禁令。",
+      "BSD-3-Clause 的许可授予映射针对 downstream 资产；现有事实仅确认调用/链接上游 API，未证明 BSD 资产被使用、复制、修改或分发，也未证明两许可约束同一对象。未据此推断许可冲突或通知义务。",
+      "关系记录明确代码修改不适用；分发、源代码提供、再许可及商业用途均无已知事实。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+  },
+  "usage": {
+    "input_tokens": 17727,
+    "input_tokens_details": {
+      "cached_tokens": 17536,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 762,
+    "output_tokens_details": {
+      "reasoning_tokens": 249
+    },
+    "total_tokens": 18489,
+    "attribution": {
+      "items": {
+        "msg_03d3be6dfb63066e016af2fea0e8a087d2bf22f9ca88b7747e": {
+          "input_tokens": 15695,
+          "cached_tokens": 15506,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15695,
+              "cached_tokens": 15506,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03d3be6dfb63066e016af2fea5f3c087d292339af1dfe22fdc": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 513,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 513
+            }
+          ]
+        },
+        "rs_03d3be6dfb63066e016af2fea5d81487d2a5cb858537c9385e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 249
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 16.544,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

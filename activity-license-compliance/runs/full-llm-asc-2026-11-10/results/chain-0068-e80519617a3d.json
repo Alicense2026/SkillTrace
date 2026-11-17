@@ -1,0 +1,146 @@
+{
+  "case_id": "chain-0068-e80519617a3d",
+  "status": "SUCCESS",
+  "request_sha256": "b37572968d14e26fdbb9a2c9c0f391dc79532405387d187a7f3115d421004d5d",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:692ca9107ec16560"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0068-e80519617a3d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c251a3fd373465c1"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0068-e80519617a3d:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对所给 Apache License 2.0 第2、4节及 AGPL-3.0 第13节。上游事实是 API 远程调用，未证明包含、修改或分发了上游模型权重；也未证明下游 AGPL 程序被修改并支持用户远程交互。",
+      "AGPL 第13节针对修改后的受覆盖程序及与该程序远程交互的用户。现有远程调用证据指向上游模型 API，不能单独证明该触发条件；因此不据此认定源码义务已触发或违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若下游 AGPL 受覆盖程序已被修改，且该修改版本支持用户通过计算机网络与其交互，则须显著提供获取该版本 Corresponding Source 的机会，并通过网络服务器免费提供访问。",
+        "source_refs": [
+          "license-text:downstream:c251a3fd373465c1"
+        ],
+        "subject": {
+          "artifact": "chain-0068-e80519617a3d:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "network_interaction"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "network_interaction"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0068-e80519617a3d"
+  },
+  "usage": {
+    "input_tokens": 33620,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1062,
+    "output_tokens_details": {
+      "reasoning_tokens": 410
+    },
+    "total_tokens": 34682,
+    "attribution": {
+      "items": {
+        "msg_012e86768f2a5450016af2e964e0fc87d19eb9467f6cdb2b0a": {
+          "input_tokens": 31672,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31672,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_012e86768f2a5450016af2e96d33fc87d1a59b589f3dcb03d0": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 652,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 652
+            }
+          ]
+        },
+        "rs_012e86768f2a5450016af2e96d186487d19c9e46ba811f8966": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 410
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 23.918,
+  "auto_applied": false
+}

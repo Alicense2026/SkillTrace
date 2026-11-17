@@ -1,0 +1,157 @@
+{
+  "case_id": "chain-0280-c1fcc0dac453",
+  "status": "SUCCESS",
+  "request_sha256": "2f6f2ae5d136b70d1ca31caeca854de444b980c97d92eeb53a8f6c41d605efd9",
+  "analysis": {
+    "case_id": "chain-0280-c1fcc0dac453",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0280-c1fcc0dac453:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ee0080bab816cc9f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0280-c1fcc0dac453:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI 条款摘录仅涉及服务费用及付款，未提供更广泛的 API 使用条件；费用金额、订单表适用性及付款履行情况未明。",
+      "BSD-2-Clause 摘录是再分发和使用许可条件的引言，未提供通知保留条件的具体文本。可信事实记录的是远程服务调用且修改不适用，未证明对下游 BSD 代码实施了 Use、复制或分发，因此不据此判断该条件已触发。",
+      "对象图中的上游/下游共享受约束对象范围为未知；无证据表明两项许可共同约束同一对象。远程调用和链接不单独证明许可对象相同或发生分发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "支付适用费用，并遵守适用订单表所列付款条款；费用及付款细节须依完整协议和订单表确定。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0280-c1fcc0dac453:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_fees",
+          "order_form_payment_terms",
+          "payment_fulfillment"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如对下游 BSD-2-Clause 许可材料行使使用权，须保留适用通知；摘录未具体说明通知内容。",
+        "source_refs": [
+          "license-text:downstream:ee0080bab816cc9f"
+        ],
+        "subject": {
+          "artifact": "chain-0280-c1fcc0dac453:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_artifact_use",
+          "applicable_notice_scope"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17525,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1133,
+    "output_tokens_details": {
+      "reasoning_tokens": 336
+    },
+    "total_tokens": 18658,
+    "attribution": {
+      "items": {
+        "msg_017a7d55728d4a76016af30349c36487d28cb41589926da451": {
+          "input_tokens": 15493,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15493,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_017a7d55728d4a76016af303505a4087d2aebaea5788aeeae8": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 797,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 797
+            }
+          ]
+        },
+        "rs_017a7d55728d4a76016af30350436c87d2a7e9f6d7c0f9a898": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 336
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 31.285,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

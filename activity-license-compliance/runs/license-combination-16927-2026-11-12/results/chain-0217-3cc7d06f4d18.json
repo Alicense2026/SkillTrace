@@ -1,0 +1,214 @@
+{
+  "case_id": "chain-0217-3cc7d06f4d18",
+  "input_group_row": 217,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0217-3cc7d06f4d18",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0217-3cc7d06f4d18:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": {
+              "all": [
+                "include_copy_of_Llama_agreement",
+                "prominently_display_Built_with_Llama"
+              ]
+            },
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0217-3cc7d06f4d18:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4e37eac7c9b0d9ac"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge_to_remote_users",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0217-3cc7d06f4d18:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：ProvideSource；AGPL第13条要求对支持远程交互的已修改程序向远程用户提供对应源码；可信记录为远程服务调用且“修改不适用”，没有已修改的受覆盖程序这一触发事实，API调用本身不触发该条款；来源为AGPL第13条摘录。",
+        "source_refs": [
+          "license-text:downstream:4e37eac7c9b0d9ac"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "上游Llama 3.2许可摘录的授予条款要求遵守协议，但本次提供的相关摘录不足以枚举协议全部使用条件；不据此补写其他义务。",
+      "分发事实未知；Llama协议副本及“Built with Llama”显示要求仅在适用的分发/提供情形触发。未将远程API调用推定为分发。",
+      "对象图未确认两许可共同约束同一对象；本次没有足以成立许可间冲突的相反条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用Llama Materials须遵守适用的Llama协议条款。",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "subject": {
+          "artifact": "chain-0217-3cc7d06f4d18:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发或提供包含Llama Materials的材料、衍生作品、产品或服务，须随附协议副本，并在相关网站、界面、博客、关于页面或产品文档显著显示“Built with Llama”。",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "subject": {
+          "artifact": "chain-0217-3cc7d06f4d18:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "scope_contains_Llama_Materials"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 21967,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1638,
+    "output_tokens_details": {
+      "reasoning_tokens": 513
+    },
+    "total_tokens": 23605,
+    "attribution": {
+      "items": {
+        "msg_084b1219c734b63d016af5300ded0487d08a9c43790ef368b8": {
+          "input_tokens": 19897,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19897,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_084b1219c734b63d016af5300ded0487d093866758b66fb5a9": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_084b1219c734b63d016af53017bad487d0b4ef777539269854": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1125,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1125
+            }
+          ]
+        },
+        "rs_084b1219c734b63d016af530179f5887d0bc13910a09c0c593": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 513
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "edb667a061cce356fa49123e524df6deada4c3640230152a024d8f2bad7ae323",
+  "elapsed_seconds": 37.34
+}

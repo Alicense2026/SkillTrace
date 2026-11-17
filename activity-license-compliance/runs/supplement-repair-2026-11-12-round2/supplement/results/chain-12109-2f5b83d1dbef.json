@@ -1,0 +1,258 @@
+{
+  "case_id": "chain-12109-2f5b83d1dbef",
+  "source_csv_line": 12110,
+  "row": {
+    "github_repo": "10x-n8n-skill",
+    "github_url": "https://github.com/openanalystinc/10x-n8n-skill",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "embed-english-v2.0",
+    "artifact_url": "https://docs.cohere.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: docs/nodes/n8n-repo/packages/@n8n/nodes-langchain/nodes/embeddings/EmbeddingsCohere/EmbeddingsCohere.node.ts:67 ｜ 调用原文: default: 'embed-english-v2.0',（引用处 第56行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: vendored n8n Cohere embedding 默认模型，未确认本 skill 实际调用",
+    "batch": "6001-6500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "openanalystinc/10x-n8n-skill",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112",
+    "filename": "_supplement_round2/ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 3; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:0a65e28c02ba8e62"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_and_incorporation_comply_with_agreement_and_related_documentation_and_application_interfaces_with_api_saas_services"
+          },
+          "S": {
+            "artifact": "chain-12109-2f5b83d1dbef:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:0a65e28c02ba8e62"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "accessed_as_directed_by_cohere"
+          },
+          "S": {
+            "artifact": "chain-12109-2f5b83d1dbef:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:0a65e28c02ba8e62"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+                "purpose_is_replicating_services_or_products_look_and_feel",
+                "purpose_is_benchmarking_or_competitive_analysis",
+                "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+              ]
+            },
+            "when": "access_or_use_services_or_products_or_output_or_develop_customer_application"
+          },
+          "S": {
+            "artifact": "chain-12109-2f5b83d1dbef:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:f7d00a823bd9250f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "user_is_not_authorized"
+          },
+          "S": {
+            "artifact": "chain-12109-2f5b83d1dbef:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文匹配到 Cohere API Commercial SaaS Agreement；适用期、Order Form、相关 Documentation、Permitted User 身份及具体使用目的未提供，不能据此认定违反或满足相关条件。",
+      "下游 LicenseRef-Custom 条款针对 10x-n8n-skill Software；当前证据确认的是远程 API 调用及链接关系，不证明 Cohere API 原件属于该 Software、被复制或与其构成受共同许可约束的产品。对象共同范围未知，不能判定许可冲突。",
+      "下游条款所称授权及与 10x.in 约定的条款未提供；条款没有给出授权机制或具体授权条件。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "按 Cohere 指示访问和使用 API，并确保使用及纳入产品或服务符合 Agreement、相关 Documentation，且应用与 Cohere API SaaS Services 接口。",
+        "source_refs": [
+          "license-text:upstream:0a65e28c02ba8e62"
+        ],
+        "subject": {
+          "artifact": "chain-12109-2f5b83d1dbef:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "accessed_as_directed_by_cohere",
+          "use_and_incorporation_comply_with_agreement_and_related_documentation_and_application_interfaces_with_api_saas_services"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 Cohere Services、Products 或 Output，或开发 Customer Application，应避免以构建或训练类似/竞争产品、复制其外观、基准测试或竞争分析为目的，以及避免为 Cohere 直接竞争者的使用或利益而使用。",
+        "source_refs": [
+          "license-text:upstream:0a65e28c02ba8e62"
+        ],
+        "subject": {
+          "artifact": "chain-12109-2f5b83d1dbef:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "access_or_use_services_or_products_or_output_or_develop_customer_application"
+          ]
+        },
+        "unresolved_predicates": [
+          "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+          "purpose_is_replicating_services_or_products_look_and_feel",
+          "purpose_is_benchmarking_or_competitive_analysis",
+          "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "访问 Cohere API SaaS Services 时，遵守适用于该访问或使用的出口法律法规。",
+        "source_refs": [
+          "license-text:upstream:0a65e28c02ba8e62"
+        ],
+        "subject": {
+          "artifact": "chain-12109-2f5b83d1dbef:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "comply_with_applicable_export_laws_and_regulations"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-12109-2f5b83d1dbef"
+  },
+  "usage": {
+    "input_tokens": 41542,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1659,
+    "output_tokens_details": {
+      "reasoning_tokens": 232
+    },
+    "total_tokens": 43201,
+    "attribution": {
+      "items": {
+        "msg_00851428549d4068016af586ae01d487d08db2b024bafc8d1f": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00851428549d4068016af586ae01d487d0a091a9b5ae39f3ef": {
+          "input_tokens": 39472,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 39472,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00851428549d4068016af586b2b2a487d09f145d97d3458786": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1427,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1427
+            }
+          ]
+        },
+        "rs_00851428549d4068016af586b297d887d097885997a984841b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 232
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 37.9
+}

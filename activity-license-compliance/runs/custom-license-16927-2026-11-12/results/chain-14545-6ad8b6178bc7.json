@@ -1,0 +1,195 @@
+{
+  "case_id": "chain-14545-6ad8b6178bc7",
+  "source_csv_line": 14546,
+  "row": {
+    "github_repo": "agentic-pkm-mvp",
+    "github_url": "https://github.com/RasmusTho/agentic-pkm-mvp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "io.github.mimersql/mimer-mcp",
+    "artifact_url": "https://github.com/mimersql/mimer-mcp",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: app/mimer_mcp/server.py:3 ｜ 调用原文: The implementation is packaged only in ``mimer-mcp-sidecar``. This module ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: AI 依赖中列出的 MCP 服务/客户端包",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "rasmustho/agentic-pkm-mvp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f",
+    "filename": "_licenseref_full/texts/e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:agentic-pkm-mvp-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14545-6ad8b6178bc7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:4327692a061e260c"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-14545-6ad8b6178bc7:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:545980b9a0f639d7"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "S": {
+            "artifact": "chain-14545-6ad8b6178bc7:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "no_direct_written_permission_from_rasmus_thornberg",
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-14545-6ad8b6178bc7:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "满足MIT许可使用条件；如该使用涉及复制软件或其实质部分，应随副本附上版权声明和许可声明。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:4327692a061e260c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-14545-6ad8b6178bc7:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若远程交互涉及该许可证所覆盖的下游仓库内容，且无Rasmus Thornberg的直接书面许可，则不得进行该交互。",
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "no_direct_written_permission_from_rasmus_thornberg"
+        ],
+        "source_refs": [
+          "license-text:downstream:545980b9a0f639d7"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的是对上游服务的远程调用及链接关系；这不证明下游仓库内容被复制、纳入或作为远程交互对象。因此，下游许可中针对其自有仓库内容的远程交互限制是否适用，取决于对象范围是否重合。",
+      "MIT结构化条款标记为FIRST_PASS_REVIEW_REQUIRED；其许可授予摘录允许使用，通知摘录明确要求在副本或软件实质部分中附带声明。当前没有复制事实，不能认定该通知义务已触发或未履行。",
+      "当前没有分发、修改、收费、商用、提供网络服务或取得书面许可的事实；不据此推定这些活动或许可状态。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23286,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1264,
+    "output_tokens_details": {
+      "reasoning_tokens": 441
+    },
+    "total_tokens": 24550,
+    "attribution": {
+      "items": {
+        "msg_08b49d8d4059e885016af53e1560c487d1a0764ca5349ec1ed": {
+          "input_tokens": 21216,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21216,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08b49d8d4059e885016af53e1560c487d1b153e7cf2202135a": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08b49d8d4059e885016af53e1ddb3487d18699f370042a241f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 823,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 823
+            }
+          ]
+        },
+        "rs_08b49d8d4059e885016af53e1dbf9887d190af0a5032515fa0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 441
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "7a01fddf1ac7c9ce3efeb5b043a35eb4083cb5631c8702489e787ae11a2873d9",
+  "elapsed_seconds": 29.88
+}

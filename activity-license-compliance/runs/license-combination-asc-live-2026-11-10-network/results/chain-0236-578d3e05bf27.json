@@ -1,0 +1,172 @@
+{
+  "case_id": "chain-0236-578d3e05bf27",
+  "status": "SUCCESS",
+  "request_sha256": "a195d3ef3a798aa94861a313961222c5d2e6a9193d8799866dcc790f6d4ac6db",
+  "analysis": {
+    "case_id": "chain-0236-578d3e05bf27",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0236-578d3e05bf27:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0236-578d3e05bf27:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d4ffe893e2b3d3f0"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0236-578d3e05bf27:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "可信记录确认对上游 Anthropic 服务进行 Use 和 RemoteInteraction；未提供服务条款履行情况，不能据此认定违规。",
+      "对象图确认 API 链接/远程调用，但 downstream 与 upstream 是否为共同受约束对象未知（scope_shared=null）。CC0 摘录中的许可对象是 downstream，不能仅凭 API 关系将其许可条款套用于 Anthropic 服务。",
+      "CC0 摘录是 Waiver 条款；不据此推断未提供的后备许可或其他条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 Anthropic 服务条款",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0236-578d3e05bf27:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 Anthropic 服务条款",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0236-578d3e05bf27:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17507,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 994,
+    "output_tokens_details": {
+      "reasoning_tokens": 161
+    },
+    "total_tokens": 18501,
+    "attribution": {
+      "items": {
+        "msg_0760b6cec386ca28016af30107c32c87d292366fe88d74c73f": {
+          "input_tokens": 15475,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15475,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0760b6cec386ca28016af3010b2de087d2a4851642b7c3df0e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 833,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 833
+            }
+          ]
+        },
+        "rs_0760b6cec386ca28016af3010b169c87d2934fc7cc535a7c73": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 161
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.07,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

@@ -1,0 +1,143 @@
+{
+  "case_id": "chain-0186-0d92389fcecf",
+  "status": "SUCCESS",
+  "request_sha256": "338201be8d3f6217edb1feacc552f56312a2dfa5a5eb93bfbd2c3b2d2a5f3966",
+  "analysis": {
+    "case_id": "chain-0186-0d92389fcecf",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0186-0d92389fcecf:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e1a893aab2025b79"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "exercising_licensed_rights_in_licensed_material",
+            "requires": "comply_with_CC_license_conditions"
+          },
+          "S": {
+            "artifact": "chain-0186-0d92389fcecf:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0186-0d92389fcecf:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "When exercising licensed rights in Licensed Material, comply with the CC-BY-NC-4.0 license conditions.",
+        "trigger": "exercising_licensed_rights_in_licensed_material",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "exercising_licensed_rights_in_licensed_material",
+          "within_license_scope",
+          "compliance_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:e1a893aab2025b79"
+        ]
+      }
+    ],
+    "limitations": [
+      "Gemini API Additional Terms 的 L31-L34 摘录禁止将服务用于开发竞争模型及逆向工程、提取或复制服务组件；已知事实仅确立远程服务调用和 Use，未说明是否实施这些受限目的，因此未认定违规。",
+      "CC-BY-NC-4.0 的已提供摘录涉及许可授予及许可权利范围，没有给出足以判定本次 API 调用是否属于对下游 Licensed Material 行使许可权利的完整对象信息；对象图中的 LINK/REMOTE_CALL 不证明两许可共同约束同一对象。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19887,
+    "input_tokens_details": {
+      "cached_tokens": 19712,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 992,
+    "output_tokens_details": {
+      "reasoning_tokens": 308
+    },
+    "total_tokens": 20879,
+    "attribution": {
+      "items": {
+        "msg_08c6e17408c24c7a016af2feb1847887d1ae7559a44de542d6": {
+          "input_tokens": 17855,
+          "cached_tokens": 17682,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17855,
+              "cached_tokens": 17682,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08c6e17408c24c7a016af2feb7842087d1b52de98f3536856f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 684,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 684
+            }
+          ]
+        },
+        "rs_08c6e17408c24c7a016af2feb7686087d1bd7b770ea0f657d8": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 308
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.781,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

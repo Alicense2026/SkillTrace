@@ -1,0 +1,252 @@
+{
+  "case_id": "chain-19905-8cee83dc0231",
+  "source_csv_line": 19906,
+  "row": {
+    "github_repo": "dsplab",
+    "github_url": "https://github.com/juandavidru4641/dsplab",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-2.0-flash",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/llmProviders.ts:9 ｜ 调用原文: { id: 'gemini', name: 'Google Gemini', endpoint: 'https://generativelanguage.googleapis.com', defaultModel: 'gemini-2.0-flash' },（引用处 第5行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 在 src/utils/llmProviders.ts 中，Google Gemini 提供商预设里的 defaultModel 就是它；该预设会被 LLMPane 读取，并用作实际请求的模型参数。",
+    "batch": "12201-14200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "juandavidru4641/dsplab",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "75c8a6756cdc92be5ff3d3ca65f2c7221906d3e6a10fd9a8d3c12ce6fda14b62",
+    "filename": "_licenseref_full/texts/75c8a6756cdc92be5ff3d3ca65f2c7221906d3e6a10fd9a8d3c12ce6fda14b62.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:dsplab-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-19905-8cee83dc0231",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a51787f7a62ccd5c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": {
+              "any": [
+                "use_to_develop_models_competing_with_the_services",
+                "attempt_to_reverse_engineer_extract_or_replicate_service_components"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-19905-8cee83dc0231:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "personal_educational_or_noncommercial_open_source_purpose"
+          },
+          "S": {
+            "artifact": "chain-19905-8cee83dc0231:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "commercial_use_without_separate_commercial_license"
+          },
+          "S": {
+            "artifact": "chain-19905-8cee83dc0231:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "prominent_author_attribution_and_link_to_original_vultlab_repository",
+            "when": "distribution_occurs_or_project_incorporates_significant_source_portions"
+          },
+          "S": {
+            "artifact": "chain-19905-8cee83dc0231:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游条款摘录限制的是以服务开发竞争模型、逆向工程、提取或复制服务组件；现有事实仅证实常规远程 API 调用，未证实这些触发行为，因此不据此认定违规。",
+      "对象图确认 API 链接和远程调用，但 scope_shared 未知；不据此认定下游代码属于上游服务材料或两许可共同约束同一对象。",
+      "下游分发、商业用途、用途类别及是否纳入大量源代码均未提供事实；许可文本的结构化抽取标记为首轮审查，按条件保留相关义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用下游软件须限于个人、教育或非商业开源目的。",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "subject": {
+          "artifact": "chain-19905-8cee83dc0231:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "personal_educational_or_noncommercial_open_source_purpose"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得在未取得单独商业许可时商业使用下游软件。",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "subject": {
+          "artifact": "chain-19905-8cee83dc0231:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "commercial_use",
+          "separate_commercial_license"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发软件或项目纳入其大量源代码，须显著标明原作者 syso 并链接原 VultLab 项目仓库。",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "subject": {
+          "artifact": "chain-19905-8cee83dc0231:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "activity:Distribute",
+            "project_incorporates_significant_source_portions"
+          ]
+        },
+        "unresolved_predicates": [
+          "distribution_occurs",
+          "project_incorporates_significant_source_portions",
+          "attribution_and_repository_link_provided"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19664,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1568,
+    "output_tokens_details": {
+      "reasoning_tokens": 338
+    },
+    "total_tokens": 21232,
+    "attribution": {
+      "items": {
+        "msg_0a584534f78a6b70016af53ea0c54c87d1a14ce7276fcfca3e": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a584534f78a6b70016af53ea0c54c87d1abafcd3583c77672": {
+          "input_tokens": 17594,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17594,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a584534f78a6b70016af53ea76ca487d1a9f407fe0cb96585": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1230,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1230
+            }
+          ]
+        },
+        "rs_0a584534f78a6b70016af53ea7555c87d185c0ddc5ea0e1b56": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 338
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "f83b058b563c8e985622df73cfda125546bf17f74db43105645bf2c3c13c1bbc",
+  "elapsed_seconds": 34.75
+}

@@ -1,0 +1,56 @@
+{
+  "case_id": "chain-4281-589c245a6717",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-4281-589c245a6717:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "在适用订阅期内、遵守协议及适用订单表单和文档，并仅为客户内部业务目的使用 Helix Platform。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "within_subscription_term",
+        "subject_to_agreement_and_applicable_order_form",
+        "in_accordance_with_applicable_documentation",
+        "for_customer_internal_business_purposes"
+      ],
+      "source_refs": [
+        "license-text:downstream:382e4ad6a22417ed"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "subject": {
+        "artifact": "chain-4281-589c245a6717:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "在适用订阅期内、遵守协议及适用订单表单和文档，并仅为客户内部业务目的进行远程交互；付款到期时按约支付款项及适用税费，并履行相关付款、税务凭证和 VAT 信息要求。",
+      "trigger": {
+        "any": [
+          "activity:RemoteInteraction",
+          "payment_due"
+        ]
+      },
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "within_subscription_term",
+        "subject_to_agreement_and_applicable_order_form",
+        "in_accordance_with_applicable_documentation",
+        "for_customer_internal_business_purposes",
+        "payment_due",
+        "pay_amounts_and_applicable_taxes_as_specified",
+        "pay_invoice_within_30_days_unless_order_form_specifies_otherwise",
+        "pay_late_interest_if_applicable",
+        "provide_tax_receipts_or_requested_evidence_if_applicable",
+        "provide_valid_vat_registration_number_if_applicable"
+      ],
+      "source_refs": [
+        "license-text:downstream:382e4ad6a22417ed"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-0304-d1265beae502",
+  "status": "SUCCESS",
+  "request_sha256": "a6cd2415ee593ca6fa18caed7e25dde9d82b5faba7bca266ff5d0f397c5f9a05",
+  "analysis": {
+    "case_id": "chain-0304-d1265beae502",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0304-d1265beae502:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:6d489b4466f0c383"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0304-d1265beae502:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:6d489b4466f0c383"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0304-d1265beae502:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0304-d1265beae502:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若该使用属于CC-BY-SA-4.0授予的许可权利范围，须在该许可范围内使用并遵守适用的CC许可条件。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:6d489b4466f0c383"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认对Apache-2.0资产进行远程服务调用，且修改不适用；未证明权重转移、分发或修改。API/代码纳入关系不证明两项许可约束同一对象。",
+      "CC-BY-SA摘录涉及Licensed Rights及Licensed Material，但现有材料不足以确定该远程调用是否行使下游许可权利，或该CC许可是否覆盖所调用资产；因此相关条件义务的适用性为未知。",
+      "所给Apache摘录仅为版权许可授予条款；未据此推断其他通知、网络服务或源代码义务。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 20510,
+    "input_tokens_details": {
+      "cached_tokens": 20352,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 933,
+    "output_tokens_details": {
+      "reasoning_tokens": 220
+    },
+    "total_tokens": 21443,
+    "attribution": {
+      "items": {
+        "msg_0a74b343fb64d350016af305010ee487d2a3ee1461c25acab8": {
+          "input_tokens": 18478,
+          "cached_tokens": 18322,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18478,
+              "cached_tokens": 18322,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a74b343fb64d350016af30506450887d2ae4a3fca5ebf3bee": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 713,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 713
+            }
+          ]
+        },
+        "rs_0a74b343fb64d350016af305062de887d28578ed1f425bd41e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 220
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.605,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

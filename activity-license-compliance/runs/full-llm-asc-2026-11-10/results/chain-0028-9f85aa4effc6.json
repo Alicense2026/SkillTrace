@@ -1,0 +1,165 @@
+{
+  "case_id": "chain-0028-9f85aa4effc6",
+  "status": "SUCCESS",
+  "request_sha256": "1965085db354af72758628cb68c3b13d1847c8e954c64b6316123f9928ee8946",
+  "analysis": {
+    "case_id": "chain-0028-9f85aa4effc6",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:da1f2c1d8d8f48eb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": {
+              "any": [
+                "use_services_to_develop_competing_models",
+                "attempt_reverse_engineer_extract_or_replicate_service_components"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0028-9f85aa4effc6:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:da1f2c1d8d8f48eb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": true,
+            "requires": {
+              "all": [
+                "professional_or_business_purpose",
+                "not_consumer_use"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0028-9f85aa4effc6:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0028-9f85aa4effc6:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the Gemini API Services for professional or business purposes, not consumer use.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "purpose_is_professional_or_business",
+          "consumer_use"
+        ],
+        "source_refs": [
+          "license-text:upstream:da1f2c1d8d8f48eb"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0028-9f85aa4effc6:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Services to develop models competing with the Services, or attempt to reverse engineer, extract, or replicate any component of the Services.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_services_to_develop_competing_models",
+          "attempt_reverse_engineer_extract_or_replicate_service_components"
+        ],
+        "source_refs": [
+          "license-text:upstream:da1f2c1d8d8f48eb"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的活动是对 Gemini API 的远程调用和使用；没有证据表明传递模型权重、分发、修改或训练模型，故未触发相应推断。",
+      "MIT 原文约束 downstream 软件，但对象图仅证明其与 upstream API 的链接/远程调用关系；未证明 MIT 软件与 Gemini 服务是同一受约束对象，或发生相关复制、分发等活动，因此未作许可间冲突判断。",
+      "上游原文版本标示生效日为 2026-03-23；本分析依据任务提供的该版本文本。使用区域、年龄及其他可能适用条件未纳入结构化 ASC 抽取，本结果不表示这些条件已核验。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 32181,
+    "input_tokens_details": {
+      "cached_tokens": 32000,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1178,
+    "output_tokens_details": {
+      "reasoning_tokens": 291
+    },
+    "total_tokens": 33359,
+    "attribution": {
+      "items": {
+        "msg_0fea52e30d7d0ad8016af2e2acba8887d29f1b9d91e5974399": {
+          "input_tokens": 30233,
+          "cached_tokens": 30054,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30233,
+              "cached_tokens": 30054,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0fea52e30d7d0ad8016af2e2b3624087d2847f1be1b7c7bb73": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 887,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 887
+            }
+          ]
+        },
+        "rs_0fea52e30d7d0ad8016af2e2b34b3487d2b8fe04fa444627bb": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 291
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 1946,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 77.633,
+  "auto_applied": false
+}

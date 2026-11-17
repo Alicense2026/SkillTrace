@@ -1,0 +1,1814 @@
+{
+  "version": "figure10-asc-1.0",
+  "source_file": "Figure 10.pdf",
+  "source_sha256": "011d74597c1b462fcbb1600882b16c87bfb38b08c4228690cec74601f6c637fe",
+  "scope": "Few-shot source-derived cases, NOT complete license rules or experiment labels.",
+  "warnings": [
+    "图中左右箭头仅按印刷顺序保存，不能自动分配供应链角色。",
+    "O/R 编号是图中分类编号，不是许可证正式条款编号。",
+    "occurrences 是图报告频次，不是本项目实验结果。",
+    "R4 与 O3 等争议摘要保留并标记；不得据此捏造精确法律文本。"
+  ],
+  "cases": [
+    {
+      "case_id": "figure10-01",
+      "source_page": 1,
+      "source_row": 1,
+      "type": "SPDX→AI",
+      "combination": {
+        "left": "Apache 2.0",
+        "right": "LLaMA3",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 14873,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O2",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "提供 LLaMA3 协议副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-01:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:LLaMA3"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-01-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-01:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O6",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "在相关数字资产上显著展示 Built with Meta Llama 3。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-01:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "display_notice:Built with Meta Llama 3"
+            }
+          },
+          "mapping_notes": "分发是本例采用的触发假设；图中文字的 all related digital assets 范围需原文判定。",
+          "id": "figure10-01-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-01:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "display_notice:Built with Meta Llama 3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R1",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "遵守所包含的可接受使用政策。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-01:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "comply_with_aup:LLaMA3"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-01-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-01:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "comply_with_aup:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R2",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "超过七亿月活跃用户时必须申请许可。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-01:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "monthly_active_users_gt_700m",
+              "requires": "special_license_requested:LLaMA3"
+            }
+          },
+          "mapping_notes": "申请不等于获准；阈值统计对象与时点图中未说明。",
+          "id": "figure10-01-term-4",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-01:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "monthly_active_users_gt_700m",
+                "requires": {
+                  "not": "special_license_requested:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R4",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "图称禁止用模型输出训练竞争性 AI 模型。",
+          "asc": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "figure10-01:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_outputs:LLaMA3",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "mapping_notes": "SOURCE_CLAIM_NOT_VERIFIED；特别是 LLaMA3.1 不将该图概括自动升级为已核实条款。",
+          "id": "figure10-01-term-5",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "TrainModel",
+              "S": {
+                "artifact": "figure10-01:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "all": [
+                    "uses_outputs:LLaMA3",
+                    "trains_competing_model"
+                  ]
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-02",
+      "source_page": 1,
+      "source_row": 2,
+      "type": "SPDX→AI",
+      "combination": {
+        "left": "Apache 2.0",
+        "right": "Gemma",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 5082,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O7",
+          "license_attribution": "Gemma",
+          "figure_clause_paraphrase": "将基于使用的限制传递到许可中。",
+          "asc": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "figure10-02:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "pass_through_use_restrictions:Gemma"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-02-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Sublicense",
+              "S": {
+                "artifact": "figure10-02:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "pass_through_use_restrictions:Gemma"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O2",
+          "license_attribution": "Gemma",
+          "figure_clause_paraphrase": "提供 Gemma 许可副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-02:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:Gemma"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-02-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-02:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:Gemma"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-03",
+      "source_page": 1,
+      "source_row": 3,
+      "type": "SPDX→AI",
+      "combination": {
+        "left": "CC-BY-NC-4.0",
+        "right": "LLaMA3.1",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 261,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O2",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "提供 LLaMA3.1 协议副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-03:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-03-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-03:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O6",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "在相关数字资产上显著展示 Built with Meta Llama。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-03:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "display_notice:Built with Meta Llama"
+            }
+          },
+          "mapping_notes": "分发是本例采用的触发假设；图中文字的 all related digital assets 范围需原文判定。",
+          "id": "figure10-03-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-03:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "display_notice:Built with Meta Llama"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R1",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "遵守所包含的可接受使用政策。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-03:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "comply_with_aup:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-03-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-03:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "comply_with_aup:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R2",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "超过七亿月活跃用户时必须申请许可。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-03:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "monthly_active_users_gt_700m",
+              "requires": "special_license_requested:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "申请不等于获准；阈值统计对象与时点图中未说明。",
+          "id": "figure10-03-term-4",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-03:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "monthly_active_users_gt_700m",
+                "requires": {
+                  "not": "special_license_requested:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R4",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "图称禁止用模型输出训练竞争性 AI 模型。",
+          "asc": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "figure10-03:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_outputs:LLaMA3.1",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "mapping_notes": "SOURCE_CLAIM_NOT_VERIFIED；特别是 LLaMA3.1 不将该图概括自动升级为已核实条款。",
+          "id": "figure10-03-term-5",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "TrainModel",
+              "S": {
+                "artifact": "figure10-03:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "all": [
+                    "uses_outputs:LLaMA3.1",
+                    "trains_competing_model"
+                  ]
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R2",
+          "license_attribution": "CC-BY-NC-4.0",
+          "figure_clause_paraphrase": "仅用于非商业目的。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-03:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "exercising_licensed_rights",
+              "requires": {
+                "not": "commercial_purpose"
+              }
+            }
+          },
+          "mapping_notes": "仅约束适用许可权利的行使，不泛化为用户所有经营或收费行为。",
+          "id": "figure10-03-term-6",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-03:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "exercising_licensed_rights",
+                "requires": {
+                  "not": {
+                    "not": "commercial_purpose"
+                  }
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-04",
+      "source_page": 1,
+      "source_row": 4,
+      "type": "AI→SPDX",
+      "combination": {
+        "left": "CreativeML-OpenRAIL-M",
+        "right": "CC-BY-NC-4.0",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 1569,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "R2",
+          "license_attribution": "CC-BY-NC-4.0",
+          "figure_clause_paraphrase": "仅用于非商业目的。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-04:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "exercising_licensed_rights",
+              "requires": {
+                "not": "commercial_purpose"
+              }
+            }
+          },
+          "mapping_notes": "仅约束适用许可权利的行使，不泛化为用户所有经营或收费行为。",
+          "id": "figure10-04-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-04:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "exercising_licensed_rights",
+                "requires": {
+                  "not": {
+                    "not": "commercial_purpose"
+                  }
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-05",
+      "source_page": 1,
+      "source_row": 5,
+      "type": "AI→SPDX",
+      "combination": {
+        "left": "LLaMA3.1",
+        "right": "(LLaMA3, CC-BY-NC-4.0)",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Merge",
+      "normalized_operation": "Combine",
+      "occurrences": 525,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "R2",
+          "license_attribution": "CC-BY-NC-4.0",
+          "figure_clause_paraphrase": "仅用于非商业目的。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-05:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "exercising_licensed_rights",
+              "requires": {
+                "not": "commercial_purpose"
+              }
+            }
+          },
+          "mapping_notes": "仅约束适用许可权利的行使，不泛化为用户所有经营或收费行为。",
+          "id": "figure10-05-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-05:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "exercising_licensed_rights",
+                "requires": {
+                  "not": {
+                    "not": "commercial_purpose"
+                  }
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R2",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "超过七亿月活跃用户时必须申请许可。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-05:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "monthly_active_users_gt_700m",
+              "requires": "special_license_requested:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "申请不等于获准；阈值统计对象与时点图中未说明。",
+          "id": "figure10-05-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-05:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "monthly_active_users_gt_700m",
+                "requires": {
+                  "not": "special_license_requested:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O2",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "提供 LLaMA3 协议副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-05:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:LLaMA3"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-05-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-05:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O6",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "在相关数字资产上显著展示 Built with Meta Llama 3。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-05:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "display_notice:Built with Meta Llama 3"
+            }
+          },
+          "mapping_notes": "分发是本例采用的触发假设；图中文字的 all related digital assets 范围需原文判定。",
+          "id": "figure10-05-term-4",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-05:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "display_notice:Built with Meta Llama 3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O6",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "在相关数字资产上显著展示 Built with Meta Llama。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-05:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "display_notice:Built with Meta Llama"
+            }
+          },
+          "mapping_notes": "分发是本例采用的触发假设；图中文字的 all related digital assets 范围需原文判定。",
+          "id": "figure10-05-term-5",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-05:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "display_notice:Built with Meta Llama"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-06",
+      "source_page": 1,
+      "source_row": 6,
+      "type": "AI→SPDX",
+      "combination": {
+        "left": "OpenRAIL",
+        "right": "GPL 3.0",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 111,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O2",
+          "license_attribution": "GPL-3.0",
+          "figure_clause_paraphrase": "提供 GPL 3.0 许可文本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-06:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:GPL-3.0"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-06-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-06:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:GPL-3.0"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O5",
+          "license_attribution": "GPL-3.0",
+          "figure_clause_paraphrase": "修改版本分发时沿用 GPL 3.0。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-06:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "outbound_license:GPL-3.0"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-06-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-06:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "outbound_license:GPL-3.0"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O3",
+          "license_attribution": "GPL-3.0",
+          "figure_clause_paraphrase": "图中文字为提供 Licensed Material 的链接。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-06:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "licensed_material_link"
+            }
+          },
+          "mapping_notes": "图的栏目名为 Source/Weights Disclosure，但正文只提链接；不将链接自动等同对应源码或权重披露。",
+          "id": "figure10-06-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-06:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "licensed_material_link"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-07",
+      "source_page": 1,
+      "source_row": 7,
+      "type": "AI→AI",
+      "combination": {
+        "left": "CreativeML-OpenRAIL-M",
+        "right": "LLaMA3",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 84,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O2",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "提供 LLaMA3 协议副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-07:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:LLaMA3"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-07-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-07:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O6",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "在相关数字资产上显著展示 Built with Meta Llama 3。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-07:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "display_notice:Built with Meta Llama 3"
+            }
+          },
+          "mapping_notes": "分发是本例采用的触发假设；图中文字的 all related digital assets 范围需原文判定。",
+          "id": "figure10-07-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-07:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "display_notice:Built with Meta Llama 3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R1",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "遵守所包含的可接受使用政策。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-07:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "comply_with_aup:LLaMA3"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-07-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-07:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "comply_with_aup:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R2",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "超过七亿月活跃用户时必须申请许可。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-07:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "monthly_active_users_gt_700m",
+              "requires": "special_license_requested:LLaMA3"
+            }
+          },
+          "mapping_notes": "申请不等于获准；阈值统计对象与时点图中未说明。",
+          "id": "figure10-07-term-4",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-07:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "monthly_active_users_gt_700m",
+                "requires": {
+                  "not": "special_license_requested:LLaMA3"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R4",
+          "license_attribution": "LLaMA3",
+          "figure_clause_paraphrase": "图称禁止用模型输出训练竞争性 AI 模型。",
+          "asc": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "figure10-07:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_outputs:LLaMA3",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "mapping_notes": "SOURCE_CLAIM_NOT_VERIFIED；特别是 LLaMA3.1 不将该图概括自动升级为已核实条款。",
+          "id": "figure10-07-term-5",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "TrainModel",
+              "S": {
+                "artifact": "figure10-07:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "all": [
+                    "uses_outputs:LLaMA3",
+                    "trains_competing_model"
+                  ]
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-08",
+      "source_page": 1,
+      "source_row": 8,
+      "type": "AI→AI",
+      "combination": {
+        "left": "CreativeML-OpenRAIL-M",
+        "right": "Gemma",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 37,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O7",
+          "license_attribution": "Gemma",
+          "figure_clause_paraphrase": "将基于使用的限制传递到许可中。",
+          "asc": {
+            "A": "Sublicense",
+            "S": {
+              "artifact": "figure10-08:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "pass_through_use_restrictions:Gemma"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-08-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Sublicense",
+              "S": {
+                "artifact": "figure10-08:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "pass_through_use_restrictions:Gemma"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O2",
+          "license_attribution": "Gemma",
+          "figure_clause_paraphrase": "提供 Gemma 许可副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-08:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:Gemma"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-08-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-08:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:Gemma"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-09",
+      "source_page": 1,
+      "source_row": 9,
+      "type": "AI→AI",
+      "combination": {
+        "left": "Gemma",
+        "right": "LLaMA3.1",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 34,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O2",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "提供 LLaMA3.1 协议副本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-09:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-09-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-09:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O6",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "在相关数字资产上显著展示 Built with Meta Llama。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-09:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "display_notice:Built with Meta Llama"
+            }
+          },
+          "mapping_notes": "分发是本例采用的触发假设；图中文字的 all related digital assets 范围需原文判定。",
+          "id": "figure10-09-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-09:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "display_notice:Built with Meta Llama"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R1",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "遵守所包含的可接受使用政策。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-09:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "comply_with_aup:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-09-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-09:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "comply_with_aup:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R2",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "超过七亿月活跃用户时必须申请许可。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-09:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "monthly_active_users_gt_700m",
+              "requires": "special_license_requested:LLaMA3.1"
+            }
+          },
+          "mapping_notes": "申请不等于获准；阈值统计对象与时点图中未说明。",
+          "id": "figure10-09-term-4",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-09:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "monthly_active_users_gt_700m",
+                "requires": {
+                  "not": "special_license_requested:LLaMA3.1"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "R4",
+          "license_attribution": "LLaMA3.1",
+          "figure_clause_paraphrase": "图称禁止用模型输出训练竞争性 AI 模型。",
+          "asc": {
+            "A": "TrainModel",
+            "S": {
+              "artifact": "figure10-09:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PROHIBITED",
+              "when": true,
+              "requires": {
+                "all": [
+                  "uses_outputs:LLaMA3.1",
+                  "trains_competing_model"
+                ]
+              }
+            }
+          },
+          "mapping_notes": "SOURCE_CLAIM_NOT_VERIFIED；特别是 LLaMA3.1 不将该图概括自动升级为已核实条款。",
+          "id": "figure10-09-term-5",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "TrainModel",
+              "S": {
+                "artifact": "figure10-09:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "all": [
+                    "uses_outputs:LLaMA3.1",
+                    "trains_competing_model"
+                  ]
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-10",
+      "source_page": 1,
+      "source_row": 10,
+      "type": "SPDX→SPDX",
+      "combination": {
+        "left": "Apache 2.0",
+        "right": "CC-BY-NC-4.0",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Main-Data",
+      "normalized_operation": "Use",
+      "occurrences": 2417,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "R2",
+          "license_attribution": "CC-BY-NC-4.0",
+          "figure_clause_paraphrase": "仅用于非商业目的。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-10:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "exercising_licensed_rights",
+              "requires": {
+                "not": "commercial_purpose"
+              }
+            }
+          },
+          "mapping_notes": "仅约束适用许可权利的行使，不泛化为用户所有经营或收费行为。",
+          "id": "figure10-10-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-10:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "exercising_licensed_rights",
+                "requires": {
+                  "not": {
+                    "not": "commercial_purpose"
+                  }
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-11",
+      "source_page": 1,
+      "source_row": 11,
+      "type": "SPDX→SPDX",
+      "combination": {
+        "left": "Apache 2.0",
+        "right": "CC-BY-NC-SA-4.0",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Quantize",
+      "normalized_operation": "Modify",
+      "occurrences": 465,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "R2",
+          "license_attribution": "CC-BY-NC-SA-4.0",
+          "figure_clause_paraphrase": "仅用于非商业目的。",
+          "asc": {
+            "A": "Use",
+            "S": {
+              "artifact": "figure10-11:covered-artifact",
+              "kind": "OriginalArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": "exercising_licensed_rights",
+              "requires": {
+                "not": "commercial_purpose"
+              }
+            }
+          },
+          "mapping_notes": "仅约束适用许可权利的行使，不泛化为用户所有经营或收费行为。",
+          "id": "figure10-11-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Use",
+              "S": {
+                "artifact": "figure10-11:covered-artifact",
+                "kind": "OriginalArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": "exercising_licensed_rights",
+                "requires": {
+                  "not": {
+                    "not": "commercial_purpose"
+                  }
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O5",
+          "license_attribution": "CC-BY-NC-SA-4.0",
+          "figure_clause_paraphrase": "修改版本分发时沿用 CC-BY-NC-SA-4.0。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-11:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "outbound_license:CC-BY-NC-SA-4.0"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-11-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-11:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "outbound_license:CC-BY-NC-SA-4.0"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    },
+    {
+      "case_id": "figure10-12",
+      "source_page": 1,
+      "source_row": 12,
+      "type": "SPDX→SPDX",
+      "combination": {
+        "left": "Apache 2.0",
+        "right": "GPL 3.0",
+        "arrow": "left_to_right_as_printed",
+        "upstream_downstream_assignment": "NOT_ESTABLISHED_BY_FIGURE_ALONE"
+      },
+      "operation": "Fine-tune",
+      "normalized_operation": "Modify",
+      "occurrences": 249,
+      "figure_classification": "common incompatible license combination (figure claim)",
+      "asc_terms": [
+        {
+          "term_code": "O2",
+          "license_attribution": "GPL-3.0",
+          "figure_clause_paraphrase": "提供 GPL 3.0 许可文本。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-12:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "include_license:GPL-3.0"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-12-term-1",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-12:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "include_license:GPL-3.0"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O5",
+          "license_attribution": "GPL-3.0",
+          "figure_clause_paraphrase": "修改版本分发时沿用 GPL 3.0。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-12:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "outbound_license:GPL-3.0"
+            }
+          },
+          "mapping_notes": "",
+          "id": "figure10-12-term-2",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-12:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "outbound_license:GPL-3.0"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        },
+        {
+          "term_code": "O3",
+          "license_attribution": "GPL-3.0",
+          "figure_clause_paraphrase": "图中文字为提供 Licensed Material 的链接。",
+          "asc": {
+            "A": "Distribute",
+            "S": {
+              "artifact": "figure10-12:covered-artifact",
+              "kind": "ModifiedArtifact"
+            },
+            "C": {
+              "kind": "CONDITIONALLY_PERMITTED",
+              "when": true,
+              "requires": "licensed_material_link"
+            }
+          },
+          "mapping_notes": "图的栏目名为 Source/Weights Disclosure，但正文只提链接；不将链接自动等同对应源码或权重披露。",
+          "id": "figure10-12-term-3",
+          "counterexample": {
+            "synthetic": true,
+            "description": "在相同适用对象/触发条件下，构造相反条件，验证不可同时允许该行为；不代表图中另一许可证实际写有此条件。",
+            "downstream_asc": {
+              "A": "Distribute",
+              "S": {
+                "artifact": "figure10-12:covered-artifact",
+                "kind": "ModifiedArtifact"
+              },
+              "C": {
+                "kind": "CONDITIONALLY_PERMITTED",
+                "when": true,
+                "requires": {
+                  "not": "licensed_material_link"
+                }
+              }
+            },
+            "expected": "ACTIVITY_CONSTRAINT_CONFLICT_WHEN_TRIGGER_APPLIES"
+          }
+        }
+      ],
+      "expected_analysis": "先确定许可范围与触发条件；缺失条件可继承时列义务，只有互斥/不履行有依据时才判冲突或违规。"
+    }
+  ]
+}

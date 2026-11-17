@@ -1,0 +1,136 @@
+{
+  "case_id": "chain-0206-9e1faa06a82e",
+  "status": "SUCCESS",
+  "request_sha256": "990d9946a043e7b5c4ab98831ba1a36b351cc43da87cc31f0c66a62f8534930f",
+  "analysis": {
+    "case_id": "chain-0206-9e1faa06a82e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0206-9e1faa06a82e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d5db762b3c8544c6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0206-9e1faa06a82e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0206-9e1faa06a82e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "支付适用费用；费用、币种及付款条件以适用的订单表为准。",
+        "trigger": "applicable_fees_under_order_form",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_under_order_form"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游摘录为 OpenAI Services Agreement 第6节付款条款；是否有适用费用及相应订单表条件，现有事实未说明。",
+      "MPL-2.0 摘录仅提供第2.1节许可授予的开头，且注明授权限于 Covered Software/Contribution 权利；未据此推断 API 调用、源码提供或分发义务。对象图只确认远程调用和链接，不确认共享许可适用对象或下游依赖。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 17446,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 856,
+    "output_tokens_details": {
+      "reasoning_tokens": 273
+    },
+    "total_tokens": 18302,
+    "attribution": {
+      "items": {
+        "msg_0bdb300b8feff235016af2ffbf734087d2b32c25db6b7b186d": {
+          "input_tokens": 15414,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15414,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bdb300b8feff235016af2ffc5d9f087d287f78a59ac5e9b9b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 583,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 583
+            }
+          ]
+        },
+        "rs_0bdb300b8feff235016af2ffc5be5087d28b17711c18cdb9b0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 273
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.278,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

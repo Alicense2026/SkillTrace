@@ -1,0 +1,321 @@
+{
+  "case_id": "skill-00697",
+  "csv_row": 698,
+  "source_excel_row": "984",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00697-1794597550016230000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方使用上游 Llama Materials 时，须遵守适用法律法规（包括贸易合规要求）及适用的可接受使用政策；该义务约束上游材料的使用，不因 API 调用转移给其他主体。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-00697:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "applicable_law_compliance",
+        "acceptable_use_policy_compliance"
+      ]
+    },
+    {
+      "activity": "TrainModel",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方不得使用 Llama Materials 或其输出、结果改进其他大型语言模型；Meta Llama 3 或其衍生作品例外。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-00697:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "TrainModel",
+          "uses_Llama_Materials_or_outputs_to_improve_large_language_model",
+          {
+            "not": "target_is_Meta_Llama_3_or_derivative"
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "TrainModel",
+        "uses_Llama_Materials_or_outputs_to_improve_large_language_model",
+        "target_is_Meta_Llama_3_or_derivative"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若被许可方或其关联方产品在 Llama 3 版本发布日期前一日历月的月活跃用户超过 7 亿，须向 Meta 申请许可；在 Meta 明确授予相关权利前，不得行使协议项下权利。仅提出申请不等于获准。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-00697:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "licensee_or_affiliate_products_exceeded_700m_mau_threshold_on_release_date",
+      "unresolved_predicates": [
+        "licensee_or_affiliate_products_exceeded_700m_mau_threshold_on_release_date",
+        "meta_expressly_grants_rights"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方及其允许使用 Llama 3 的人员，在使用涉及许可所列类别时不得将 Llama 3 用于相关禁止行为；敏感信息处理仅在缺少法律要求的权利和同意时受限，专业执业仅在未经授权或许可时受限。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-00697:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "Use",
+          "licensee_accesses_or_uses_meta_llama_3",
+          "any_prohibited_AUP_category_applies"
+        ]
+      },
+      "unresolved_predicates": [
+        "any_prohibited_AUP_category_applies"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方及其允许使用 Llama 3 的人员，不得使用 Llama 3 从事、促进、煽动、便利或协助计划、开发涉及死亡或身体伤害风险的受涵盖活动。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-00697:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "Use",
+          "licensee_accesses_or_uses_meta_llama_3",
+          "covered_activity_presenting_risk_of_death_or_bodily_harm"
+        ]
+      },
+      "unresolved_predicates": [
+        "covered_activity_presenting_risk_of_death_or_bodily_harm"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方及其允许使用 Llama 3 的人员不得故意欺骗或误导他人，包括以条款列举的方式实施；已知 AI 系统危险未向终端用户适当披露亦列为禁止行为。",
+      "source_refs": [
+        "license:6afe79695ec2b066faaacea47584f8581d5d1f2d0d8078970e52be699a383af5"
+      ],
+      "subject": {
+        "artifact": "skill-00697:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "Use",
+          "licensee_accesses_or_uses_meta_llama_3",
+          "listed_deception_or_misleading_conduct_applies"
+        ]
+      },
+      "unresolved_predicates": [
+        "listed_deception_or_misleading_conduct_applies"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知行为是下游对上游 Llama 3 的 API 链接、远程调用及使用；没有权重转移、源码纳入、修改、分发、收费或商用事实。上游模型与下游独立代码对象不同，MIT 条款不因此约束上游模型。",
+    "商业门槛是否触发、是否存在相关品牌使用、诉讼或协议终止均未知；本次未据此认定违规。AUP 的具体禁止类别也无对应行为事实。",
+    "未输出仅适用于模型/材料分发、复制、修改、再许可等未发生活动的条款。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "使用许可已明确；该授权条款无独立履行义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行未证明复制上游材料。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明分发或提供上游材料及其衍生物。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生创建衍生作品。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生修改上游材料。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明分发或提供使用上游材料的产品或服务；远程调用本身不等于该触发事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明创建、训练、微调模型并分发或提供该模型。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明分发上游材料副本。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "保留使用时适用法律与AUP义务；履行情况未知。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "保留改进其他大型语言模型时的禁止义务；未据此推定发生训练。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "保留MAU门槛及明确授权条件；门槛事实未知。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明触发模型命名规则或使用相关商标。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生衍生作品或修改，且该条款是权属安排。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供提起相关诉讼或程序的事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供协议已终止的事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供相关第三方索赔；该赔偿义务无忠实对应的活动词表项。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "保留AUP列举行为的条件性禁止义务；没有相应行为事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "保留涉及死亡或身体伤害风险活动的条件性禁止义务；没有相应行为事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "保留欺骗误导类别的条件性禁止义务；没有相应行为事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT明确许可下游独立软件的使用；未见与上游材料相同对象的许可冲突。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生复制下游MIT软件。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生修改下游MIT软件。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生合并下游MIT软件。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生发布下游MIT软件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生分发下游MIT软件。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生再许可或随之纳入下游MIT软件副本。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生出售下游MIT软件副本。"
+    }
+  ]
+}

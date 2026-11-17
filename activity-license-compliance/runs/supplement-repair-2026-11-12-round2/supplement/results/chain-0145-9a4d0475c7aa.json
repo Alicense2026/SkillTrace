@@ -1,0 +1,190 @@
+{
+  "case_id": "chain-0145-9a4d0475c7aa",
+  "source_csv_line": 146,
+  "row": {
+    "github_repo": "claude-code",
+    "github_url": "https://github.com/codeaashu/claude-code",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "zilliztech/claude-context",
+    "artifact_url": "https://github.com/zilliztech/claude-context",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/codeIndexing.ts:106 ｜ 调用原文: { pattern: /^claude[-_]?context$/i, tool: 'claude-context' }, ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: codeIndexing.ts 中正则匹配的工具名，可能是外部代码索引工具，需确认是否真实调用",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "codeaashu/claude-code",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "b1b2e7bb1fe7ea95cbf8254f4eb39020bb24fabaa9115d8eb14db3a85e349f19",
+    "filename": "_supplement_round2/b1b2e7bb1fe7ea95cbf8254f4eb39020bb24fabaa9115d8eb14db3a85e349f19.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 4; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-0145-9a4d0475c7aa",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bfe83eb6707fa286"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0145-9a4d0475c7aa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4175a20e75856158"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0145-9a4d0475c7aa:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的是对上游资产的远程调用/使用；未提供分发事实，故下游 LicenseRef-Custom 对仓库源代码的再分发禁令未触发。对象图未确认上下游许可约束同一对象，不据此认定许可冲突。",
+      "MIT摘录要求在软件副本或实质部分中包含版权和许可声明；当前未提供相关履行证据，亦未提供复制事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "包含版权声明及许可声明",
+        "source_refs": [
+          "license-text:upstream:bfe83eb6707fa286"
+        ],
+        "subject": {
+          "artifact": "chain-0145-9a4d0475c7aa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得分发受该声明覆盖的下游仓库源代码",
+        "source_refs": [
+          "license-text:downstream:4175a20e75856158"
+        ],
+        "subject": {
+          "artifact": "chain-0145-9a4d0475c7aa:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19275,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 911,
+    "output_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "total_tokens": 20186,
+    "attribution": {
+      "items": {
+        "msg_034f03aad8463b8b016af5851a228487d090fb3651b100abf1": {
+          "input_tokens": 17205,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17205,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_034f03aad8463b8b016af5851a228487d0bea01a4d75dccef3": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_034f03aad8463b8b016af5851eaf5087d09071aa5e7d51ece6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 681,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 681
+            }
+          ]
+        },
+        "rs_034f03aad8463b8b016af5851e939c87d0ab568275fde7f57f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 230
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 28.84
+}

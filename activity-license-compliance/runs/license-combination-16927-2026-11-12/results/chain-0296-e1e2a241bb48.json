@@ -1,0 +1,194 @@
+{
+  "case_id": "chain-0296-e1e2a241bb48",
+  "input_group_row": 296,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "BUSL-1.1",
+    "资产许可证原文标题/标签": "Mistral AI Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0296-e1e2a241bb48",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_fees_due_for_use_of_mistral_ai_products_within_30_days_of_invoice"
+          },
+          "S": {
+            "artifact": "chain-0296-e1e2a241bb48:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4fbc02d6fc831a83"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "non_production_use_and_compliance_with_current_license_requirements"
+          },
+          "S": {
+            "artifact": "chain-0296-e1e2a241bb48:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4fbc02d6fc831a83"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "production_use_permitted_by_applicable_additional_use_grant"
+          },
+          "S": {
+            "artifact": "chain-0296-e1e2a241bb48:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0296-e1e2a241bb48:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Pay fees due for use of Mistral AI Products within 30 days of invoice, subject to any applicable Order Form.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "fees_due",
+          "payment_made"
+        ],
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0296-e1e2a241bb48:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If using the BUSL Licensed Work, limit use to non-production use and comply with current License requirements; production use requires permission under an applicable Additional Use Grant.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_of_downstream_licensed_work",
+          "production_use",
+          "applicable_additional_use_grant",
+          "compliance_with_current_license_requirements"
+        ],
+        "source_refs": [
+          "license-text:downstream:4fbc02d6fc831a83"
+        ]
+      }
+    ],
+    "limitations": [
+      "The Mistral source has one mapped clause, concerning customer payment; no mapped upstream use, API, or network-service restriction is supplied.",
+      "The record establishes remote interaction and a link to the upstream asset, but does not establish that the downstream BUSL Licensed Work itself is used, that the use is production or non-production, or whether an Additional Use Grant applies.",
+      "No distribution, modification, sublicensing, or source provision is established. The BUSL clauses on those activities are therefore not findings here.",
+      "The local source identifies the upstream text as Mistral terms and the downstream text as BUSL-1.1; this analysis is limited to the supplied excerpts and mappings."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 24594,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1322,
+    "output_tokens_details": {
+      "reasoning_tokens": 407
+    },
+    "total_tokens": 25916,
+    "attribution": {
+      "items": {
+        "msg_075ef632babb23ed016af53119f59087d1961632cc04c0c69a": {
+          "input_tokens": 22524,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22524,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_075ef632babb23ed016af53119f59087d1a0adfda242343b49": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_075ef632babb23ed016af53121e55c87d18a4c7c72c0646c37": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 915,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 915
+            }
+          ]
+        },
+        "rs_075ef632babb23ed016af53121c98887d180a2347fda5c74d1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 407
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "40cf18733c3fdd3e1c80c788cf2ef4f4aaf81169d8a9a063aa9884a478b93841",
+  "elapsed_seconds": 70.27
+}

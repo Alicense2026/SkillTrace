@@ -1,0 +1,137 @@
+{
+  "case_id": "chain-0043-0adb66bc7daa",
+  "status": "SUCCESS",
+  "request_sha256": "fb32d6f63b7de3ba183cbb3b1ebfcfe849b8c26937de01c8e6a9920586b3e76a",
+  "analysis": {
+    "case_id": "chain-0043-0adb66bc7daa",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0043-0adb66bc7daa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:6c2c12920400fb15"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0043-0adb66bc7daa:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0043-0adb66bc7daa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_Llama_agreement",
+        "trigger": "true",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认对上游材料存在API链接、远程调用及Use，但不证明权重转移、代码修改、分发、捆绑或同一许可约束范围；上下游共享范围未知。",
+      "MIT文本的通知要求针对其Software的复制或实质部分；现有事实未确认下游软件被使用、复制或纳入调用链，故不据此认定触发或违规。",
+      "上游授权摘录要求遵守Llama协议，但未在已映射条款中展开全部协议条件；遵守状态未知，不能据此推定具体未满足义务。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23323,
+    "input_tokens_details": {
+      "cached_tokens": 23168,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 853,
+    "output_tokens_details": {
+      "reasoning_tokens": 267
+    },
+    "total_tokens": 24176,
+    "attribution": {
+      "items": {
+        "msg_087b9506f3c5c75c016af2f8d2efac87d19af7b9c1e03c9d28": {
+          "input_tokens": 21291,
+          "cached_tokens": 21138,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21291,
+              "cached_tokens": 21138,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_087b9506f3c5c75c016af2f8d8a8f487d1b1f288e698332b15": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 586,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 586
+            }
+          ]
+        },
+        "rs_087b9506f3c5c75c016af2f8d8920487d1a472ef2faebb969d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 267
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.596,
+  "auto_applied": false,
+  "aggregate_count": 40
+}

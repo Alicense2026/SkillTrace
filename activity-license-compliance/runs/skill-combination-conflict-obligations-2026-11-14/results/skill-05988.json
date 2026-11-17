@@ -1,0 +1,679 @@
+{
+  "case_id": "skill-05988",
+  "csv_row": 5989,
+  "source_excel_row": "8460",
+  "status": "SUCCESS",
+  "request_sha256": "8176448c7f6accde2067397668c2420a2113795bcafe94873daed68255494ebd",
+  "analysis": {
+    "case_id": "skill-05988",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "applicable_law_compliance_and_service_specific_duties",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05988:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "paid_feature_and_paid_under_platform_rules",
+                "other_written_authorization"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05988:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not (sanctioned_destination_or_person_or_prohibited_end_use_or_controlled_input)",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05988:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not expressly_permitted_by_agreement_or_authorized_in_writing",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05988:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": true,
+            "when": {
+              "not": "prior_written_authorization"
+            }
+          },
+          "S": {
+            "artifact": "skill-05988:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游为智谱远程 API 服务；已知 Use、RemoteInteraction 与 Link，不代表模型权重转移、分发、修改或捆绑。未发现本例已发生分发、修改、训练或转售的事实。",
+      "下游自定义许可禁止未经事先书面授权的若干软件行为，但当前事实未表明对下游软件实施复制、修改、合并、发布、分发、再许可或销售；对 Use 条款的具体对象范围及授权状态无事实依据，故保留条件义务而不判违规。",
+      "模型商用许可条款适用范围是特定模型及授权情形；现有材料不足以确认其适用于本次 GLM API 调用。收费、商业用途及特别授权状态未知。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "调用者须遵守适用法律及 API 服务的具体要求，包括在法律要求时完成备案、评估等程序；如将服务集成至自有产品供终端用户使用，须遵守协议及适用产品、订阅规则。",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "subject": {
+          "artifact": "skill-05988:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "applicable_filings_or_assessments_required",
+          "own_product_integration_and_end_user_service"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用非付费功能，仅可作个人非商业研究学习；如商业使用付费功能，须按平台规则支付对价或取得智谱授权，并遵守对应规则。",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "subject": {
+          "artifact": "skill-05988:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "commercial_or_nonpaid_feature_use",
+        "unresolved_predicates": [
+          "feature_paid_status",
+          "commercial_use",
+          "authorization_status"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得将服务提供给受制裁国家或名单内主体、用于禁止的最终用途，或在输入中包含需要出口管制许可的材料；须遵守适用出口管制及制裁规则。",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "subject": {
+          "artifact": "skill-05988:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "sanctioned_destination_or_person",
+          "prohibited_end_use",
+          "controlled_input"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如本次调用构成使用智谱提供的产品，未经协议明示许可或书面授权，不得修改其参数或代码。",
+        "source_refs": [
+          "license:dc1ad423faf6642469bc9d06e8e1b2e2caa7cc859a25b537a8b1f78d5207d0cc"
+        ],
+        "subject": {
+          "artifact": "skill-05988:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_of_zhipu_provided_product",
+        "unresolved_predicates": [
+          "product_scope",
+          "modification_of_product",
+          "express_permission_or_written_authorization"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如本次使用受下游自定义许可约束的软件，须事先取得版权持有人的书面授权。",
+        "source_refs": [
+          "license:2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4"
+        ],
+        "subject": {
+          "artifact": "skill-05988:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_of_covered_downstream_software",
+        "unresolved_predicates": [
+          "covered_software_use",
+          "prior_written_authorization"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "注册或实名认证状态未见事实，且与已证 API 调用活动无直接冲突发现。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "民事行为能力及注册事实未知。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "是否未登录及是否使用核心服务未知。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "用户身份、账户注册事实未知。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见第三方使用账户或访问账户信息的事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见信息核验请求或资料更新情形。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "服务范围背景条款，不产生本案独立义务。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无不当行为或扰乱平台秩序事实。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未提供输入或输出内容事实。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见所列禁止用途或相关对象行为。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实向第三方提供服务。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无海外使用或出口事实。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "API 服务使用触发适用法律及服务规则义务；具体备案、评估和自有产品集成条件保留为未决谓词。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无使用智谱标识、宣传或背书事实。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见新增数据训练事实。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见上传、存储或处理用户数据事实。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见导出数据使用事实。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无删除、到期或终止事实。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见违规上传数据事实。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "提供者义务，不转由调用者承担。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "付费服务及年龄事实未知。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认使用免费服务。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见处理生成内容标识的事实。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "提供者处理及广告条款，不适用于调用者行为。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无协议终止事实。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "注册联系信息事实未知。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "服务使用触发付费/非付费及商业用途条件；对应功能属性、商业用途和授权状态未知，按条件义务保留。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见删除或更改声明、链接的行为。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "产品代码或参数修改未证实；使用范围及授权状态未知，保留条件义务。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见相关索赔或损失事实。"
+      },
+      {
+        "rule_ref": "U031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "数据处理细节及隐私政策范围不构成本案已证活动义务。"
+      },
+      {
+        "rule_ref": "U032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "年龄及免费功能使用事实未知。"
+      },
+      {
+        "rule_ref": "U033",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "API 使用触发服务使用限制；受制裁对象、禁止用途及受控输入状态未知，条件保留。"
+      },
+      {
+        "rule_ref": "U034",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "平台处理及救济权利，不是调用者独立许可义务。"
+      },
+      {
+        "rule_ref": "U035",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "标题无独立行为义务。"
+      },
+      {
+        "rule_ref": "U036",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认调用模型属于模型商用授权协议范围。"
+      },
+      {
+        "rule_ref": "U037",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "模型商用协议适用范围未确认；该条款对象及授权条件不能直接套用于 API 调用。"
+      },
+      {
+        "rule_ref": "U038",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认生成内容及模型商用协议适用范围。"
+      },
+      {
+        "rule_ref": "U039",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认模型推理受该商用许可协议约束。"
+      },
+      {
+        "rule_ref": "U040",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见基于模型开发应用或产品的事实，且许可范围未确认。"
+      },
+      {
+        "rule_ref": "U041",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见分发衍生模型事实，许可范围亦未确认。"
+      },
+      {
+        "rule_ref": "U042",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见分发生成内容事实。"
+      },
+      {
+        "rule_ref": "U043",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见以发布者名义推广事实。"
+      },
+      {
+        "rule_ref": "U044",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认模型商用许可范围或商业使用。"
+      },
+      {
+        "rule_ref": "U045",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见复制模型事实。"
+      },
+      {
+        "rule_ref": "U046",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见转让、出租、出借或出售模型事实。"
+      },
+      {
+        "rule_ref": "U047",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见模型分许可或转许可事实。"
+      },
+      {
+        "rule_ref": "U048",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见竞争业务事实。"
+      },
+      {
+        "rule_ref": "U049",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见修改模型事实。"
+      },
+      {
+        "rule_ref": "U050",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见商业使用衍生作品事实。"
+      },
+      {
+        "rule_ref": "U051",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认使用受该模型商用协议约束的开源模型。"
+      },
+      {
+        "rule_ref": "U052",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见模型生成内容使用事实及协议适用范围依据。"
+      },
+      {
+        "rule_ref": "U053",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见反向工程或信息提取事实。"
+      },
+      {
+        "rule_ref": "U054",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见修订通知或拒绝接受新版本事实。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "下游软件使用是否落入该许可对象范围、是否获事先书面授权未知；保留条件义务，不据 API 调用认定违规。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见复制下游软件事实。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见修改下游软件事实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见合并下游软件事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见发布下游软件事实。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见分发下游软件事实。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见再许可下游软件事实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见销售下游软件事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05988-1794600698386271000-1.json",
+  "usage": {
+    "input_tokens": 47252,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 4030,
+    "output_tokens_details": {
+      "reasoning_tokens": 480
+    },
+    "total_tokens": 51282,
+    "attribution": {
+      "items": {
+        "msg_07489e2e4626ddd3016af76efeb73887d08aec2286421609ed": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07489e2e4626ddd3016af76efeb73887d0af9ec6a50c297825": {
+          "input_tokens": 44528,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 44528,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07489e2e4626ddd3016af76f080c6087d0a9a89df0d2dbdd6c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3550,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3550
+            }
+          ]
+        },
+        "rs_07489e2e4626ddd3016af76f066db887d087cbf164609db4be": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 396
+        },
+        "rs_07489e2e4626ddd3016af76f07f0c087d0bd0fe3e85ad39d2f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 84
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

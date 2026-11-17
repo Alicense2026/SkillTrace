@@ -1,0 +1,136 @@
+{
+  "case_id": "chain-0017-dd85d2a6378c",
+  "status": "SUCCESS",
+  "request_sha256": "bc15a6d08ab403e4c8e281fb9d87e8c7206e9b8b085c7c19e7121db499b5ee25",
+  "analysis": {
+    "case_id": "chain-0017-dd85d2a6378c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7e9751feba36f8be"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0017-dd85d2a6378c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7e9751feba36f8be"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0017-dd85d2a6378c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本地 MIT 原文匹配的是上游资产；调用事实证明远程调用及 API 链接，不证明复制、修改、分发或权重转移。MIT 通知条款明确针对副本或软件实质部分；当前无复制事实，因此不认定已触发通知义务。",
+      "下游 BUSL-1.1 是仓库标签；未提供对应许可证原文，不能据此推导下游限制或许可证冲突。上游 MIT 与下游对象是否有共同受约束范围亦未确定。",
+      "结构化 ASC 标记为 FIRST_PASS_REVIEW_REQUIRED；其 Use 条件与通知条款适用边界受原文“copies or substantial portions”限制。"
+    ],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "复制上游软件或其实质部分时，须在所有副本中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:7e9751feba36f8be"
+        ],
+        "subject": {
+          "artifact": "chain-0017-dd85d2a6378c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": [
+          "activity:Copy"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 24515,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 844,
+    "output_tokens_details": {
+      "reasoning_tokens": 224
+    },
+    "total_tokens": 25359,
+    "attribution": {
+      "items": {
+        "msg_01b4cd92c335dde3016af2e0019ae087d18a445b6d8fa9afbb": {
+          "input_tokens": 22567,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22567,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_01b4cd92c335dde3016af2e00640b887d185902acab09e0e43": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 620,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 620
+            }
+          ]
+        },
+        "rs_01b4cd92c335dde3016af2e006250887d1b25015482e776653": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 224
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.716,
+  "auto_applied": false
+}

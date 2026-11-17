@@ -1,0 +1,113 @@
+{
+  "case_id": "chain-0250-16736d1a930d",
+  "input_group_row": 250,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "阿里云百炼服务特别说明",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0250-16736d1a930d",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0250-16736d1a930d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0081c3feffb34520"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0250-16736d1a930d:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0250-16736d1a930d:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅为模型体验目的使用生成内容；不得将其用于其他目的，包括商业化，或以任何形式提供给第三方或在第三方平台使用、传播、分发。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt",
+          "use_purpose",
+          "third_party_provision_or_distribution"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0250-16736d1a930d:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在适用副本中保留版权声明和许可声明。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_use_scope",
+          "retain_applicable_notices"
+        ],
+        "source_refs": [
+          "license-text:downstream:0081c3feffb34520"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录确认对阿里云百炼服务的远程调用和使用，但未说明具体用途、生成内容用途或是否向第三方提供内容；不能据此认定违反上游禁止条款。",
+      "对象图确认API调用/链接关系，但未确认ISC软件与上游服务约束同一对象或存在依赖、合并、修改副本关系；未据此判定许可证冲突。",
+      "上游摘录标记为首轮抽取且注明需检查完整段落；具体功能范围及例外仍以完整文本为准。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0246-e0862d40d789.json",
+  "original_case_id": "chain-0246-e0862d40d789",
+  "original_request_sha256": "5c92b3a67026af70c4c65cf68f7b8870364b72d3bac0d992dd4facb0d2f841b2",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0246-e0862d40d789": "chain-0250-16736d1a930d",
+    "license-text:upstream:e0a6023d95b56568": "license-text:upstream:e0a6023d95b56568",
+    "license-text:downstream:0081c3feffb34520": "license-text:downstream:0081c3feffb34520",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/245": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/249"
+  }
+}

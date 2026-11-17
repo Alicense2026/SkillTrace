@@ -1,0 +1,369 @@
+{
+  "request_sha256": "7dc8731944444ab09aef6c06a1c4f9ef303e3c5df15acfae03078903563fd070",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 124,
+        "end_line": 124,
+        "clause_label": "termination_no_new_license",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "rights_terminated_and_not_permanently_reinstated"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §8: a person whose rights have been terminated and not permanently reinstated does not qualify to receive new licenses for the same material under §10. Existing licenses of parties who received copies or rights from that person are not terminated.",
+        "condition_explanation": "rights_terminated_and_not_permanently_reinstated means the person's rights under this section have been terminated and have not been permanently reinstated. The clause captures the stated bar on qualifying for a new license for the same material; it does not terminate downstream parties' licenses.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 127,
+        "end_line": 127,
+        "clause_label": "receive_or_run_without_acceptance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §9: receiving or running a Program copy does not require acceptance of the License.",
+        "condition_explanation": "This permission is limited to receiving or running a copy. It does not grant permission to modify or propagate a covered work without accepting the License.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 127,
+        "end_line": 127,
+        "clause_label": "peer_to_peer_receipt_ancillary_propagation",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "ancillary_propagation_occurs_solely_as_consequence_of_using_peer_to_peer_transmission_to_receive_copy",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §9: ancillary propagation occurring solely as a consequence of using peer-to-peer transmission to receive a copy does not require acceptance. This is not a general propagation permission without the License.",
+        "condition_explanation": "ancillary_propagation_occurs_solely_as_consequence_of_using_peer_to_peer_transmission_to_receive_copy means the propagation is incidental to peer-to-peer transmission used to receive the copy, and occurs solely as a consequence of that receipt.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 127,
+        "end_line": 127,
+        "clause_label": "modification_or_propagation_acceptance",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "license_accepted"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §9: modifying a covered work indicates acceptance of the License; nothing other than the License grants permission to modify a covered work. A separate clause below addresses propagation.",
+        "condition_explanation": "license_accepted means the actor accepts the AGPL-3.0 terms. The text treats modification without acceptance as copyright infringement.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 127,
+        "end_line": 127,
+        "clause_label": "propagation_acceptance",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "license_accepted"
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §9: nothing other than the License grants permission to propagate a covered work; propagating it indicates acceptance of the License.",
+        "condition_explanation": "license_accepted means the actor accepts the AGPL-3.0 terms. Propagate includes the forms of propagation defined in §0; mere network interaction without transfer of a copy is not conveying, and this clause does not equate such interaction with distribution.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 130,
+        "end_line": 130,
+        "clause_label": "automatic_downstream_license",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_conveys_covered_work",
+          "requires": "downstream_license_subject_to_this_license"
+        },
+        "actor_role": "original licensor",
+        "scope_note": "AGPL-3.0 §10: each conveyance automatically gives the recipient a license from the original licensors to run, modify, and propagate that work, subject to the License. This is an automatic license from the original licensors, not a separate downstream relicensing of upstream APIs.",
+        "condition_explanation": "licensee_conveys_covered_work means the actor conveys a covered work. downstream_license_subject_to_this_license means the recipient's automatic license is subject to the AGPL-3.0 terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 130,
+        "end_line": 130,
+        "clause_label": "no_third_party_compliance_enforcement_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §10 states that the conveying actor is not responsible for enforcing third-party compliance with the License. This is a limitation on responsibility, not an affirmative grant or duty to enforce.",
+        "condition_explanation": "Applies to third parties' compliance with the AGPL-3.0 License; it does not remove the actor's own license conditions.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 132,
+        "end_line": 132,
+        "clause_label": "entity_transaction_license_transfer",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "propagation_results_from_entity_transaction_and_party_receives_copy",
+          "requires": "predecessor_license_scope"
+        },
+        "actor_role": "entity-transaction recipient",
+        "scope_note": "AGPL-3.0 §10: a party receiving a copy through propagation resulting from an entity transaction receives the licenses to the work that its predecessor in interest had or could give under §10's preceding paragraph.",
+        "condition_explanation": "entity_transaction means a transaction transferring control of an organization, substantially all its assets, subdividing an organization, or merging organizations. propagation_results_from_entity_transaction_and_party_receives_copy means propagation of the covered work results from such a transaction and the party receives a copy. predecessor_license_scope is limited to licenses the predecessor had or could give under §10's preceding paragraph.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 132,
+        "end_line": 132,
+        "clause_label": "entity_transaction_corresponding_source_possession",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "propagation_results_from_entity_transaction_and_party_receives_copy",
+          "requires": "predecessor_has_or_can_obtain_corresponding_source_with_reasonable_efforts"
+        },
+        "actor_role": "predecessor in interest",
+        "scope_note": "AGPL-3.0 §10 gives the transaction recipient a right to possession of the work's Corresponding Source from the predecessor in interest, if the predecessor has it or can obtain it with reasonable efforts.",
+        "condition_explanation": "entity_transaction means a transaction transferring control of an organization, substantially all its assets, subdividing an organization, or merging organizations. propagation_results_from_entity_transaction_and_party_receives_copy means propagation results from such a transaction and the party receives a copy. The source-possession right is conditional on the predecessor having or being able to obtain the Corresponding Source with reasonable efforts.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 134,
+        "end_line": 134,
+        "clause_label": "no_further_restrictions_on_license_rights",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "actor_imposes_further_restriction_on_exercise_of_rights_granted_or_affirmed_by_license",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §10 prohibits imposing further restrictions on exercise of rights granted or affirmed under the License. The section gives license fees, royalties, other charges, and specified patent litigation as examples; they are separately modeled below.",
+        "condition_explanation": "actor_imposes_further_restriction_on_exercise_of_rights_granted_or_affirmed_by_license means the actor imposes a restriction on exercising rights granted or affirmed by the AGPL-3.0 License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not impose further restrictions on exercise of rights granted or affirmed under the AGPL-3.0 License.",
+            "actor": "licensee",
+            "object": "exercise of rights granted or affirmed under the AGPL-3.0 License",
+            "trigger": "Whenever the actor imposes terms or takes action affecting exercise of those rights."
+          }
+        ]
+      },
+      {
+        "start_line": 134,
+        "end_line": 134,
+        "clause_label": "no_fee_for_exercise_of_license_rights",
+        "activities": [
+          "Charge"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "charge_is_for_exercise_of_rights_granted_under_license",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §10 prohibits imposing a license fee, royalty, or other charge for exercise of rights granted under the License. Charge here means charging for those rights, not paying provider fees.",
+        "condition_explanation": "charge_is_for_exercise_of_rights_granted_under_license means the licensee charges a fee, royalty, or other amount for exercising rights granted under the AGPL-3.0 License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not impose a license fee, royalty, or other charge for exercise of rights granted under the AGPL-3.0 License.",
+            "actor": "licensee",
+            "object": "exercise of rights granted under the AGPL-3.0 License",
+            "trigger": "When a charge is imposed for exercise of those rights."
+          }
+        ]
+      },
+      {
+        "start_line": 134,
+        "end_line": 134,
+        "clause_label": "no_specified_patent_litigation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "actor_initiates_litigation_alleging_patent_claim_infringement_by_specified_program_activity",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "AGPL-3.0 §10 prohibits initiating litigation, including a cross-claim or counterclaim, alleging infringement of a patent claim by making, using, selling, offering for sale, or importing the Program or any portion of it.",
+        "condition_explanation": "actor_initiates_litigation_alleging_patent_claim_infringement_by_specified_program_activity means the actor initiates litigation alleging infringement by making, using, selling, offering for sale, or importing the Program or any portion of it. The cited activities are stated in the source but are not all separately modeled as litigation activities in the supplied activity vocabulary.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not initiate litigation, including a cross-claim or counterclaim, alleging patent infringement by making, using, selling, offering for sale, or importing the Program or any portion of it.",
+            "actor": "licensee",
+            "object": "Program or any portion of it",
+            "trigger": "When the actor would initiate litigation alleging such patent infringement."
+          }
+        ]
+      },
+      {
+        "start_line": 141,
+        "end_line": 141,
+        "clause_label": "contributor_essential_patent_license",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_uses_contributor_version",
+          "requires": "use_within_contributor_essential_patent_claims_and_license_scope"
+        },
+        "actor_role": "contributor",
+        "scope_note": "AGPL-3.0 §11 grants the licensee a non-exclusive, worldwide, royalty-free patent license under each contributor's essential patent claims to make, use, sell, offer for sale, import, otherwise run, modify, and propagate the contents of that contributor's contributor version. This clause models use; distinct enumerated activities are not inferred as separate rules here.",
+        "condition_explanation": "licensee_uses_contributor_version means the licensee exercises a stated patent-licensed activity with the contributor version. essential patent claims and contributor version have the definitions in §11. The grant covers only the stated claims and contents, and is subject to the License.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk covers portions of AGPL-3.0 §§8–11. The excerpt does not include all intervening license conditions, so no broader unconditional license is inferred.",
+      "The source files are identified as AGPL-3.0 and AGPL-3.0-or-later, but the supplied target text does not provide additional version-selection text for these paragraphs.",
+      "Section 11 expressly grants patent rights for several distinct activities. The supplied activity/object schema has no patent-right object or litigation activity, and the single-activity rule prevents bundling the enumerated patent grant; only Use is modeled above. The remaining enumerated patent-grant activities are not represented as separately modeled clauses."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0046",
+        "status": "MODELED",
+        "clause_labels": [
+          "termination_no_new_license"
+        ],
+        "reason": "Captures the new-license disqualification condition and identifies the separate preservation of downstream licenses in scope."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "MODELED",
+        "clause_labels": [
+          "receive_or_run_without_acceptance",
+          "peer_to_peer_receipt_ancillary_propagation",
+          "modification_or_propagation_acceptance",
+          "propagation_acceptance"
+        ],
+        "reason": "Models receipt/run without acceptance, the narrow peer-to-peer exception, and acceptance required for modification and propagation."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "MODELED",
+        "clause_labels": [
+          "automatic_downstream_license",
+          "no_third_party_compliance_enforcement_responsibility"
+        ],
+        "reason": "Captures the automatic recipient license and the separate statement that the conveying actor is not responsible for enforcing third-party compliance."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines entity transaction; the operative consequences for transaction recipients appear in the following paragraph."
+      },
+      {
+        "unit_id": "P0050",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_further_restrictions_on_license_rights",
+          "no_fee_for_exercise_of_license_rights",
+          "no_specified_patent_litigation"
+        ],
+        "reason": "Models the general no-further-restrictions rule and the expressly stated fee and patent-litigation examples."
+      },
+      {
+        "unit_id": "P0051",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Contains the section heading and contributor definition; the definition informs the following patent grant but does not itself grant rights or impose a behavioral duty."
+      },
+      {
+        "unit_id": "P0052",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines essential patent claims and control for the following patent grant; it does not itself grant a license or impose a behavioral duty."
+      },
+      {
+        "unit_id": "P0053",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "contributor_essential_patent_license"
+        ],
+        "reason": "The paragraph grants patent rights for multiple separately enumerated activities. Only Use is modeled; the remaining activities and complete grant are not represented."
+      },
+      {
+        "unit_id": "P0054",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines patent license and grant for the following paragraphs; it does not itself grant a patent license or impose a behavioral duty."
+      }
+    ]
+  },
+  "attempt": 2
+}

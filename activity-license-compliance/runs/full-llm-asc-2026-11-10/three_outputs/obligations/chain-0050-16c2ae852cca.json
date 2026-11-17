@@ -1,0 +1,47 @@
+{
+  "case_id": "chain-0050-16c2ae852cca",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若该调用受OpenAI Services Agreement约束，须依该协议使用服务，并遵守适用法律及OpenAI Policies；具体适用政策版本取决于有效协议及订单。",
+      "source_refs": [
+        "license-text:upstream:4554d130c48ad11f"
+      ],
+      "subject": {
+        "artifact": "chain-0050-16c2ae852cca:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "agreement_applicability",
+        "applicable_policy_version"
+      ]
+    },
+    {
+      "activity": "TrainModel",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用服务输出开发与OpenAI产品或服务竞争的AI模型，且不适用协议定义的Permitted Exception，则不得进行该用途。",
+      "source_refs": [
+        "license-text:upstream:4554d130c48ad11f"
+      ],
+      "subject": {
+        "artifact": "chain-0050-16c2ae852cca:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "uses_output",
+          "develops_competing_ai_model"
+        ]
+      },
+      "unresolved_predicates": [
+        "uses_output",
+        "develops_competing_ai_model",
+        "permitted_exception"
+      ]
+    }
+  ]
+}

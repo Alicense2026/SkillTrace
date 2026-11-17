@@ -1,0 +1,195 @@
+{
+  "case_id": "chain-0234-2b8e29d44164",
+  "status": "SUCCESS",
+  "request_sha256": "8ace6ec2217d91270b1ffdcaedec6a34a0b6491598864be248a96ad1de1247d8",
+  "analysis": {
+    "case_id": "chain-0234-2b8e29d44164",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0234-2b8e29d44164:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0234-2b8e29d44164:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:be595d2b59efd2ea"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0234-2b8e29d44164:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the Anthropic service terms when using the Services.",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0234-2b8e29d44164:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the Anthropic service terms when remotely interacting with the Services.",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0234-2b8e29d44164:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If exercising CC-BY-SA-4.0 Licensed Rights in covered material, remain within the license scope and comply with the applicable CC license conditions.",
+        "source_refs": [
+          "license-text:downstream:be595d2b59efd2ea"
+        ],
+        "subject": {
+          "artifact": "chain-0234-2b8e29d44164:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "within_license_scope"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Use",
+          "within_license_scope"
+        ]
+      }
+    ],
+    "limitations": [
+      "Anthropic 原文摘录中的服务许可明确限于 Services 访问，不是复制、修改或分发软件或模型权重的授权；本案记录为远程服务调用，未发现与 CC-BY-SA-4.0 条款相反的要求。",
+      "对象图仅确认下游与上游之间存在 API 链接/远程调用；依赖、修改副本、捆绑及共同产品关系均未知，因此不能确认 CC-BY-SA-4.0 条款与 Anthropic 服务条款共同约束同一对象。",
+      "CC-BY-SA-4.0 摘录只展示许可授予及范围，其他适用条件未在所引摘录中展开；不据此推断未提供的具体义务。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19597,
+    "input_tokens_details": {
+      "cached_tokens": 19456,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1234,
+    "output_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "total_tokens": 20831,
+    "attribution": {
+      "items": {
+        "msg_055dba8d48361ad3016af30127692c87d18728b48131e9d48f": {
+          "input_tokens": 17565,
+          "cached_tokens": 17426,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17565,
+              "cached_tokens": 17426,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_055dba8d48361ad3016af3012b4c1087d183fb3cb0ea738e4b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1049,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1049
+            }
+          ]
+        },
+        "rs_055dba8d48361ad3016af3012b34e887d1bd5a4a0144c98d1d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 185
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 30.777,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

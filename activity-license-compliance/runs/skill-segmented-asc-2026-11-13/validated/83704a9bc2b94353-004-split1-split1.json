@@ -1,0 +1,634 @@
+{
+  "request_sha256": "1a4d15c1603c0c2c68fb873bb967e3ab525285e0ccaac612ebea709bb98368d7",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 547,
+        "end_line": 547,
+        "clause_label": "sanctions_status_representation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "agreement_signing",
+          "requires": "company_not_on_sanctions_list_and_not_50_percent_or_more_owned_by_listed_party"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 4, paragraph 15: factual representation about the company's sanctions status when signing, not an activity permission or prohibition expressible with the available activities.",
+        "condition_explanation": "The company represents that it is not on a sanctions list and is not directly or indirectly at least 50% owned by one or more listed parties. The listed US, EU, and UK sanctions lists are examples.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 549,
+        "end_line": 549,
+        "clause_label": "restricted_end_uses",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "military_or_terrorist_or_prohibited_trade_control_end_use_or_wmd_related_activity"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 4, paragraph 16: restricts use of purchased products for the stated military, terrorist, prohibited end-use, or weapons-related purposes.",
+        "condition_explanation": "The restriction covers military or terrorist purposes, uses that disrupt international peace and security, other end uses prohibited by applicable trade-control law, and direct or end-user involvement in designing, researching, producing, storing, or otherwise using weapons of mass destruction or supporting missile technologies.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the purchased product for a military or terrorist purpose, a prohibited trade-control end use, or an activity involving weapons of mass destruction or supporting missile technologies.",
+            "actor": "licensee and its end users",
+            "object": "purchased product",
+            "trigger": "Whenever the product is used or supplied for an end use."
+          }
+        ]
+      },
+      {
+        "start_line": 551,
+        "end_line": 551,
+        "clause_label": "restricted_product_transfer",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "transfer_to_terrorist_or_specified_country_entity_or_person",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 4, paragraph 17: covers products delivered by Baidu and direct or indirect export, re-export, transfer, sale, license, disclosure, or other provision to specified recipients.",
+        "condition_explanation": "The recipients include terrorists and terrorist organizations and entities or persons in the named countries, including Cuba, Iran, North Korea, Sudan, Russia, and Syria. This restriction does not create permission to make other transfers.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not directly or indirectly export, re-export, transfer, sell, license, disclose, or otherwise provide Baidu-delivered products to the specified restricted recipients.",
+            "actor": "licensee",
+            "object": "Baidu-delivered product",
+            "trigger": "Whenever a direct or indirect transfer, sale, license, disclosure, or other provision is made to a terrorist, terrorist organization, or entity or person in a specified country."
+          }
+        ]
+      },
+      {
+        "start_line": 551,
+        "end_line": 551,
+        "clause_label": "export_resale_records",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "product_export_reexport_or_resale",
+          "requires": "records_kept_and_provided_on_reasonable_request"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 4, paragraph 17: the recordkeeping and production duties concern the product's export, re-export, and resale; they do not grant permission to make a restricted transfer.",
+        "condition_explanation": "product_export_reexport_or_resale means the product is exported, re-exported, or resold. The customer must continuously keep records of destination, end user, and end use as required by applicable law and provide that information when Baidu reasonably requests it.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Continuously record and retain, as required by applicable law, information about the product's destination, end user, and end use during export, re-export, and resale, and provide that information upon Baidu's reasonable request.",
+            "actor": "licensee",
+            "object": "Records about the destination, end user, and end use of the Baidu-delivered product",
+            "trigger": "During export, re-export, or resale of the product; production is additionally triggered by Baidu's reasonable request."
+          }
+        ]
+      },
+      {
+        "start_line": 553,
+        "end_line": 553,
+        "clause_label": "export_compliance_notice_and_remediation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "any_listed_export_compliance_problem",
+          "requires": "immediate_written_notice_and_best_efforts_remediation"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 4, paragraph 18: notice and remedial-effort duties are triggered by any of the three listed circumstances concerning the export-control and sanctions commitments in paragraphs 14–17.",
+        "condition_explanation": "any_listed_export_compliance_problem means (1) a circumstance makes a prior confirmation inconsistent, incomplete, inaccurate, or misleading; (2) the licensee, an affiliate, downstream customer, or end user fails or incompletely performs a prior commitment; or (3) any such person is subject to a penalty, claim, lawsuit, proceeding, or investigation under export-control or economic-sanctions laws.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Immediately notify Baidu in writing and use best efforts to take remedial measures.",
+            "actor": "licensee",
+            "object": "Baidu and the circumstances affecting the export-control or sanctions commitments",
+            "trigger": "Upon any listed inconsistency, incompleteness, inaccuracy, or misleading circumstance; nonperformance or incomplete performance by the licensee, an affiliate, downstream customer, or end user; or a listed penalty, claim, lawsuit, proceeding, or investigation involving any of them."
+          }
+        ]
+      },
+      {
+        "start_line": 555,
+        "end_line": 555,
+        "clause_label": "export_policy_change_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "applicable_export_control_policy_change_makes_contract_performance_impossible",
+          "requires": true
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 4, paragraph 19 grants Baidu a right to terminate the contract if specified jurisdictions' export-control policy changes make performance impossible. Termination is not an available activity, so the operative right cannot be faithfully represented as an activity rule.",
+        "condition_explanation": "The triggering policy change concerns export controls of China, the United States, the European Union or its member states, the United Kingdom, the United Nations, or another applicable jurisdiction, and must make the contract impossible to perform. The text says termination is without liability for breach.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 559,
+        "end_line": 559,
+        "clause_label": "ordered_service_provision",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "product_service_appears_in_order_or_console_order",
+          "requires": true
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 1: Baidu is to provide the product services ordered by the customer through an order or the official website console.",
+        "condition_explanation": "product_service_appears_in_order_or_console_order means the service is included in an order placed through the official website or console.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide the product services included in the applicable order.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Ordered product service",
+            "trigger": "When the product service is ordered through an order or the official website console."
+          }
+        ]
+      },
+      {
+        "start_line": 561,
+        "end_line": 561,
+        "clause_label": "provider_fee_collection_right",
+        "activities": [
+          "Charge"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "fees_are_due_under_agreement",
+          "requires": true
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 2: Baidu may collect fees according to the agreement and may require qualifications needed to issue invoices. This is the provider's fee-collection right, not a duty for the customer to pay.",
+        "condition_explanation": "fees_are_due_under_agreement means the agreement provides for the relevant fee.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 561,
+        "end_line": 561,
+        "clause_label": "invoice_qualification_submission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "Baidu_requests_invoice_qualifications",
+          "requires": "provide_qualifications_needed_for_invoice_issuance"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5, paragraph 2: Baidu has the right to request qualifications needed to issue an invoice. The stated consequence of customer-caused delay is a provider disclaimer.",
+        "condition_explanation": "The paragraph does not separately state a deadline for supplying the qualifications.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide qualifications needed for invoice issuance when requested by Baidu.",
+            "actor": "licensee",
+            "object": "Invoice-issuance qualifications",
+            "trigger": "Baidu requests the qualifications needed to issue an invoice."
+          }
+        ]
+      },
+      {
+        "start_line": 563,
+        "end_line": 563,
+        "clause_label": "service_continuity_during_provision",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "during_period_Baidu_provides_product_service",
+          "requires": true
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 3: Baidu must safeguard the service the customer is entitled to receive while providing it. The customer-caused interruption language allocates responsibility.",
+        "condition_explanation": "The duty applies during the period Baidu provides the product service and is limited to the service the customer is entitled to under the agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Safeguard the service the customer is entitled to receive.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Ordered product service",
+            "trigger": "During the period Baidu provides the product service."
+          }
+        ]
+      },
+      {
+        "start_line": 563,
+        "end_line": 563,
+        "clause_label": "customer_data_non_disclosure",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "disclosure_to_third_party",
+          "requires": "no_applicable_law_regulatory_audit_or_product_document_exception"
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 3: restricts disclosure to third parties of the customer's data, applications, and activity logs. Exceptions are provided for applicable law, governmental regulatory or audit requirements, and products expressly described in online agreements or product documents.",
+        "condition_explanation": "The restriction applies unless disclosure is required by applicable law or government regulatory or audit requirements, or the product is one for which online agreements or product documents expressly provide otherwise.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not provide the customer's data, applications, or activity logs to a third party.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Customer data, applications, and activity logs",
+            "trigger": "A disclosure to a third party is contemplated and none of the stated legal, regulatory, audit, or product-document exceptions applies."
+          }
+        ]
+      },
+      {
+        "start_line": 565,
+        "end_line": 565,
+        "clause_label": "provider_service_suspension_right",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "listed_compliance_or_authority_or_third_party_claim_trigger",
+          "requires": true
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 4: Baidu may suspend service or take other measures, including termination, in the specified circumstances.",
+        "condition_explanation": "The trigger is suspected agreement violation or illegal or irregular conduct; an authority's notice requesting measures or its having taken legal measures; or a third-party rights-holder claim. Baidu may notify the customer before suspension and may take measures it considers necessary. The clause contemplates resuming performance after the authorities resolve the issue or proposing termination.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 567,
+        "end_line": 567,
+        "clause_label": "free_service_notice_exception",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "free_network_service_is_changed_interrupted_or_terminated",
+          "requires": "no_separate_individual_notice_required"
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 5: this is a notice exception for changes, interruptions, or termination of free network services, not a general permission to terminate services.",
+        "condition_explanation": "The exception applies only when the changed, interrupted, or terminated network service is free; Baidu need not give the customer individual notice.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 569,
+        "end_line": 569,
+        "clause_label": "maintenance_and_advance_notice",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "platform_or_related_equipment_maintenance",
+          "requires": "interruption_limited_to_reasonable_time_and_advance_notice_where_possible"
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 6: maintenance may interrupt paid network service for a reasonable time. Baidu should notify the customer beforehand as far as possible; notice is not an absolute prerequisite.",
+        "condition_explanation": "Maintenance may be periodic or occasional and concern the network-service platform or related equipment. The interruption is limited to a reasonable time; advance notice is required only to the extent possible.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give the customer advance notice of the maintenance and resulting possible interruption to the extent possible.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Paid network service and its maintenance interruption",
+            "trigger": "Before platform or related-equipment maintenance that may interrupt paid network service, to the extent advance notice is possible."
+          }
+        ]
+      },
+      {
+        "start_line": 571,
+        "end_line": 571,
+        "clause_label": "customer_installed_application_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_or_installs_application_above_operating_system_layer",
+          "requires": "customer_manages_that_layer"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5, paragraph 7: the customer is responsible for the portion above the operating system, including applications installed on the system. The suggestion to exercise caution when upgrading the operating system is advisory.",
+        "condition_explanation": "customer_uses_or_installs_application_above_operating_system_layer means the customer operates or installs applications or other components above the operating system on the service.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Take responsibility for the portion above the operating system, including applications installed on the system.",
+            "actor": "licensee",
+            "object": "Customer-installed applications and other customer-managed components above the operating system",
+            "trigger": "When the customer installs or operates those components on the service."
+          }
+        ]
+      },
+      {
+        "start_line": 573,
+        "end_line": 573,
+        "clause_label": "customer_data_backup_duty",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_has_data_on_service",
+          "requires": "customer_performs_and_completes_own_backups"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5, paragraph 8: absent a separate written agreement, backup tools are not part of Baidu's service and the customer must handle and perform data backups.",
+        "condition_explanation": "The duty applies to the customer's data on the service. A separate written agreement is an exception to the statement that backup tools are not part of the service.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Be responsible for and complete the customer's own data-backup operations.",
+            "actor": "licensee",
+            "object": "Customer data stored on or used with the service",
+            "trigger": "When the customer has data for which it needs a backup, unless a separate written agreement provides otherwise."
+          }
+        ]
+      },
+      {
+        "start_line": 575,
+        "end_line": 575,
+        "clause_label": "over_spec_service_adjustment",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "customer_usage_exceeds_purchased_service_specification",
+          "requires": "true"
+        },
+        "actor_role": "Baidu Smart Cloud",
+        "scope_note": "Section 5, paragraph 9: Baidu may appropriately adjust or suspend service if usage exceeds the purchased specification.",
+        "condition_explanation": "customer_usage_exceeds_purchased_service_specification means the customer's use exceeds the specification purchased for the service. The text permits appropriate adjustment or suspension.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 575,
+        "end_line": 575,
+        "clause_label": "read_service_documentation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_service",
+          "requires": "customer_reads_applicable_use_documentation_and_descriptions"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5, paragraph 9: the customer is to read the applicable service use documents and descriptions; no deadline or additional consequence is specified.",
+        "condition_explanation": "The relevant documents and descriptions concern service functions provided according to service characteristics and purchased specifications.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Read the applicable use documents and descriptions for the service.",
+            "actor": "licensee",
+            "object": "Service use documents and descriptions",
+            "trigger": "When using the service."
+          }
+        ]
+      },
+      {
+        "start_line": 577,
+        "end_line": 577,
+        "clause_label": "stop_incompatible_or_erroneous_security_function",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "incompatibility_or_software_error_occurs",
+          "requires": {
+            "any": [
+              "stop_using_affected_function",
+              "contact_technical_support"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5, paragraph 10: if incompatibility or software errors occur while using the specified security, management, or monitoring services, the customer is directed to stop the relevant function or contact support. These responses are alternatives.",
+        "condition_explanation": "incompatibility_or_software_error_occurs means the relevant service is incompatible with the customer's hardware or software system or a software error occurs. The stated alternatives are to close or stop the affected function, or contact technical support.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Close or stop using the affected function, or contact Baidu technical support to obtain support.",
+            "actor": "licensee",
+            "object": "Affected security, management, or monitoring function",
+            "trigger": "An incompatibility or software error occurs while using the function."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Referenced orders, product-specific service rules, and online product documents are not included in the target chunk; service specifications, fees, and exceptions contained in them cannot be determined here.",
+      "The factual representation in paragraph 547 and the termination right in paragraph 555 are operative but cannot be faithfully represented as activity permissions or prohibitions with the available activity vocabulary; they are explicitly recorded as UNSPECIFIED.",
+      "The compatibility and error-free-service statements in paragraph 577 are warranty-type disclaimers and are not activity rules. No cure period is stated in the target paragraphs."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0236",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "sanctions_status_representation"
+        ],
+        "reason": "The paragraph makes a factual sanctions-status representation, which is not an activity permission or prohibition expressible with the available activities; it is recorded as UNSPECIFIED."
+      },
+      {
+        "unit_id": "P0237",
+        "status": "MODELED",
+        "clause_labels": [
+          "restricted_end_uses"
+        ],
+        "reason": "Models the stated restrictions on military, terrorist, prohibited trade-control, and weapons-related end uses."
+      },
+      {
+        "unit_id": "P0238",
+        "status": "MODELED",
+        "clause_labels": [
+          "restricted_product_transfer",
+          "export_resale_records"
+        ],
+        "reason": "Covers restricted-recipient transfers and the separate recordkeeping and production duties."
+      },
+      {
+        "unit_id": "P0239",
+        "status": "MODELED",
+        "clause_labels": [
+          "export_compliance_notice_and_remediation"
+        ],
+        "reason": "Models immediate written notice and best-efforts remedial measures, including the listed triggers."
+      },
+      {
+        "unit_id": "P0240",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "export_policy_change_termination"
+        ],
+        "reason": "The conditional contract-termination right is operative but termination is not an available activity; the clause is recorded as UNSPECIFIED."
+      },
+      {
+        "unit_id": "P0241",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0242",
+        "status": "MODELED",
+        "clause_labels": [
+          "ordered_service_provision"
+        ],
+        "reason": "Models Baidu's express obligation to provide services included in an order."
+      },
+      {
+        "unit_id": "P0243",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_fee_collection_right",
+          "invoice_qualification_submission"
+        ],
+        "reason": "Covers Baidu's fee-collection right and right to request invoice qualifications, with the customer's corresponding submission duty."
+      },
+      {
+        "unit_id": "P0244",
+        "status": "MODELED",
+        "clause_labels": [
+          "service_continuity_during_provision",
+          "customer_data_non_disclosure"
+        ],
+        "reason": "Covers Baidu's service-safeguarding duty and the qualified restriction on third-party disclosure of customer materials."
+      },
+      {
+        "unit_id": "P0245",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_service_suspension_right"
+        ],
+        "reason": "Models Baidu's right to suspend service or take other measures under the stated triggers."
+      },
+      {
+        "unit_id": "P0246",
+        "status": "MODELED",
+        "clause_labels": [
+          "free_service_notice_exception"
+        ],
+        "reason": "Captures the limited exception from individual notice for changes, interruptions, or termination of free network service."
+      },
+      {
+        "unit_id": "P0247",
+        "status": "MODELED",
+        "clause_labels": [
+          "maintenance_and_advance_notice"
+        ],
+        "reason": "Covers reasonable-time maintenance interruptions and advance notice to the extent possible."
+      },
+      {
+        "unit_id": "P0248",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_installed_application_responsibility"
+        ],
+        "reason": "Captures customer responsibility for applications and other components above the operating system; the upgrade caution is advisory."
+      },
+      {
+        "unit_id": "P0249",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_data_backup_duty"
+        ],
+        "reason": "Models the customer's duty to perform its own backups, subject to a separate written agreement."
+      },
+      {
+        "unit_id": "P0250",
+        "status": "MODELED",
+        "clause_labels": [
+          "over_spec_service_adjustment",
+          "read_service_documentation"
+        ],
+        "reason": "Covers the documentation-reading duty and Baidu's adjustment or suspension right when usage exceeds the purchased specification."
+      },
+      {
+        "unit_id": "P0251",
+        "status": "MODELED",
+        "clause_labels": [
+          "stop_incompatible_or_erroneous_security_function"
+        ],
+        "reason": "Captures the stated alternative responses if incompatibility or software errors occur; stopping the function and contacting support are not cumulative."
+      }
+    ]
+  },
+  "attempt": 2
+}

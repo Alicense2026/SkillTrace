@@ -1,0 +1,143 @@
+{
+  "case_id": "chain-0185-6dee5744e339",
+  "status": "SUCCESS",
+  "request_sha256": "63789a2339ca4d63bdf2963280776fc3409c984933b4fd5f58d51aac46d2c74a",
+  "analysis": {
+    "case_id": "chain-0185-6dee5744e339",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0185-6dee5744e339:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "activity:Use",
+            "requires": {
+              "any": [
+                "develop_model_competing_with_Gemini_API_or_Google_AI_Studio",
+                "reverse_engineer_extract_or_replicate_Service_component_including_data_or_model_weights"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2df6b5d5eb63f921"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0185-6dee5744e339:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "activity:Use",
+            "requires": "retain_applicable_notices"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0185-6dee5744e339:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Retain applicable notices when using the BSD-3-Clause-covered artifact.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "retain_applicable_notices"
+        ],
+        "source_refs": [
+          "license-text:downstream:2df6b5d5eb63f921"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "limitations": [
+      "记录确认的是对 Gemini API 的远程调用及 API 链接关系；未证明竞争模型开发、逆向工程、提取或复制服务组件，因此没有据此判定违规。",
+      "BSD-3-Clause摘录提供的是再分发和使用许可条件；本记录未证明下游BSD代码实际被使用、复制或分发，相关通知义务的触发与履行状态未知。",
+      "对象图未确认两项许可约束同一对象；API调用/链接本身不证明许可范围重叠。未据此推断许可冲突。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17727,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 921,
+    "output_tokens_details": {
+      "reasoning_tokens": 270
+    },
+    "total_tokens": 18648,
+    "attribution": {
+      "items": {
+        "msg_0304781565fda6ad016af2fe77249c87d2a2c65852c53a8fca": {
+          "input_tokens": 15695,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15695,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0304781565fda6ad016af2fe7cac5487d2a48c2870988b05b9": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 651,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 651
+            }
+          ]
+        },
+        "rs_0304781565fda6ad016af2fe7c90d087d2a87d918f695d3c03": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 270
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.688,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

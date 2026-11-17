@@ -1,0 +1,256 @@
+{
+  "case_id": "chain-4547-6bca096743be",
+  "source_csv_line": 4548,
+  "row": {
+    "github_repo": "neuraldeskapp",
+    "github_url": "https://github.com/vakovalskii/neuraldeskapp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "claude_code",
+    "artifact_url": "https://docs.anthropic.com/en/docs/about-claude/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/agent/libs/runner.ts:248 ｜ 调用原文: preset: 'claude_code',（引用处 第217行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: runner.ts 中作为 provider 类型分支，实际走 Claude Agent SDK 调用",
+    "batch": "2001-2500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "vakovalskii/neuraldeskapp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d",
+    "filename": "_licenseref_full/texts/73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:NeuralDeskApp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d919d7957a7c72ce"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4547-6bca096743be:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d919d7957a7c72ce"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4547-6bca096743be:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:15e785c2f659d324"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+                "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-4547-6bca096743be:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:15e785c2f659d324"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "purchase_commercial_license_from_licensor",
+            "when": "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd_and_uses_software"
+          },
+          "S": {
+            "artifact": "chain-4547-6bca096743be:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Anthropic摘录提供的是服务访问许可，且明确不授予复制、修改或分发服务软件或模型权重的权利；本案事实是远程API调用，不据此推定权重转移或分发。",
+      "下游许可证针对 ValeDesk Software；对象图仅确认其与上游服务存在 API 链接，依赖、打包、修改副本或共同许可范围均未确认。因此未认定两组 Use 条款约束同一对象，也未判定许可冲突。",
+      "Anthropic摘录仅要求遵守服务条款，未提供可具体映射的其他服务使用限制；下游使用、收入/资金门槛及竞争产品条件的事实也未提供。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Anthropic Services 时遵守适用的服务条款。",
+        "source_refs": [
+          "license-text:upstream:d919d7957a7c72ce"
+        ],
+        "subject": {
+          "artifact": "chain-4547-6bca096743be:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 ValeDesk Software，须在整个使用期间满足年总收入或等值资金低于 1,000,000 美元，并且不得将该软件用于创建、分发或托管与许可方竞争、且向第三方提供的实质相似产品或服务。",
+        "source_refs": [
+          "license-text:downstream:15e785c2f659d324"
+        ],
+        "subject": {
+          "artifact": "chain-4547-6bca096743be:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+          "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 ValeDesk Software 且年总收入或资金超过 1,000,000 美元，须向许可方购买商业许可证；该许可证的具体条款未提供。",
+        "source_refs": [
+          "license-text:downstream:15e785c2f659d324"
+        ],
+        "subject": {
+          "artifact": "chain-4547-6bca096743be:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Use",
+          "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+          "purchase_commercial_license_from_licensor"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-4547-6bca096743be"
+  },
+  "usage": {
+    "input_tokens": 17775,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1837,
+    "output_tokens_details": {
+      "reasoning_tokens": 385
+    },
+    "total_tokens": 19612,
+    "attribution": {
+      "items": {
+        "msg_0520b217e3fc2995016af53bb342f087d0b025ba03990a127e": {
+          "input_tokens": 15705,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15705,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0520b217e3fc2995016af53bb342f087d0bd8b982fe702a072": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0520b217e3fc2995016af53bbac99887d09aa4a4a774f26b08": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1452,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1452
+            }
+          ]
+        },
+        "rs_0520b217e3fc2995016af53bba9c7c87d0bef12f91f44da7a7": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 385
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "3581cf2792f8f1ef0e9371088c640a8f36a09b4a682b8d144f4d2750f1a2207f",
+  "elapsed_seconds": 40.94
+}

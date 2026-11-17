@@ -1,0 +1,272 @@
+{
+  "request_sha256": "4573381f1b49d2c89e98998304c4a6c620031f0333986df478549eef3468cc4d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 4,
+        "end_line": 4,
+        "clause_label": "view_evaluate_repository",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "use_is_for_viewing_or_evaluation"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Repository; viewing and evaluation only.",
+        "condition_explanation": "use_is_for_viewing_or_evaluation means the use is limited to viewing or evaluation.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 4,
+        "end_line": 7,
+        "clause_label": "other_use_without_consent",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "all": [
+              {
+                "not": "use_is_for_viewing_or_evaluation"
+              },
+              {
+                "not": "prior_written_consent_from_ai_shifu"
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any part of the repository; the viewing-and-evaluation-only scope and prior-written-consent exception apply.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent. This restriction concerns use outside viewing or evaluation absent that consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use repository material outside viewing or evaluation without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "use is outside viewing or evaluation and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      },
+      {
+        "start_line": 5,
+        "end_line": 7,
+        "clause_label": "copy_without_consent",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "prior_written_consent_from_ai_shifu"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any part of the repository; prior written consent from AI-Shifu is the stated exception.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not copy any part of the repository without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "copying is contemplated and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      },
+      {
+        "start_line": 5,
+        "end_line": 7,
+        "clause_label": "modify_without_consent",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "prior_written_consent_from_ai_shifu"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any part of the repository; prior written consent from AI-Shifu is the stated exception.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify any part of the repository without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "modification is contemplated and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      },
+      {
+        "start_line": 5,
+        "end_line": 5,
+        "clause_label": "combine_without_consent",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "prior_written_consent_from_ai_shifu"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Merging any part of the repository; prior written consent from AI-Shifu is the stated exception.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not merge any part of the repository without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "merging is contemplated and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      },
+      {
+        "start_line": 5,
+        "end_line": 6,
+        "clause_label": "distribute_without_consent",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "prior_written_consent_from_ai_shifu"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Publishing or distributing any part of the repository; prior written consent from AI-Shifu is the stated exception.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not publish or distribute any part of the repository without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "publishing or distributing is contemplated and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      },
+      {
+        "start_line": 6,
+        "end_line": 7,
+        "clause_label": "sublicense_without_consent",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "prior_written_consent_from_ai_shifu"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any part of the repository; prior written consent from AI-Shifu is the stated exception.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not sublicense any part of the repository without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "sublicensing is contemplated and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      },
+      {
+        "start_line": 6,
+        "end_line": 7,
+        "clause_label": "sell_without_consent",
+        "activities": [
+          "SellCopies"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "prior_written_consent_from_ai_shifu"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any part of the repository; prior written consent from AI-Shifu is the stated exception.",
+        "condition_explanation": "prior_written_consent_from_ai_shifu means AI-Shifu has given prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not sell any part of the repository without prior written consent from AI-Shifu.",
+            "actor": "licensee",
+            "object": "any part of the repository",
+            "trigger": "selling is contemplated and prior written consent from AI-Shifu has not been given"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The notice identifies AI-Shifu's copyright and reserves all rights; no behavioral duty is stated in that notice.",
+      "The text provides no further definitions or incorporated terms."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Copyright identification and all-rights-reserved notice; it states no behavioral duty for this extraction."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "MODELED",
+        "clause_labels": [
+          "view_evaluate_repository",
+          "other_use_without_consent",
+          "copy_without_consent",
+          "modify_without_consent",
+          "combine_without_consent",
+          "distribute_without_consent",
+          "sublicense_without_consent",
+          "sell_without_consent"
+        ],
+        "reason": "Models the viewing-and-evaluation scope and each enumerated restriction, including the prior-written-consent exception."
+      }
+    ]
+  },
+  "attempt": 1
+}

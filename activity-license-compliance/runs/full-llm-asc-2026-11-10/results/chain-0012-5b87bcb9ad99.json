@@ -1,0 +1,153 @@
+{
+  "case_id": "chain-0012-5b87bcb9ad99",
+  "status": "SUCCESS",
+  "request_sha256": "63411ec418e59a0561f7da111b309a35ed9152bf22964dcb0c361da9825b308f",
+  "analysis": {
+    "case_id": "chain-0012-5b87bcb9ad99",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:64c51adb4f9a9e52"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0012-5b87bcb9ad99:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:64c51adb4f9a9e52"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0012-5b87bcb9ad99:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0012-5b87bcb9ad99:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the applicable Anthropic service terms, including incorporated Usage Policy and other applicable policies.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:64c51adb4f9a9e52"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0012-5b87bcb9ad99:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the applicable Anthropic service terms, including incorporated Usage Policy and other applicable policies.",
+        "trigger": "activity:RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:64c51adb4f9a9e52"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "上游对象是通过 API 远程调用的服务；现有事实不证明服务源码或模型权重转移，也不证明下游修改、分发或再许可，因此未将这些活动纳入许可冲突判断。",
+      "条款将 Usage Policy 等文件纳入引用，但本任务未提供这些文件的内容；无法判断具体用途是否符合其要求。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 27259,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 983,
+    "output_tokens_details": {
+      "reasoning_tokens": 278
+    },
+    "total_tokens": 28242,
+    "attribution": {
+      "items": {
+        "msg_05f87fab4e5f65d8016af2dea407ac87d1860006fc717cfb0d": {
+          "input_tokens": 25311,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25311,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05f87fab4e5f65d8016af2dead201487d1adce71c5abf368f6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 705,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 705
+            }
+          ]
+        },
+        "rs_05f87fab4e5f65d8016af2dead048487d1a65c7b1a5e0178f2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 278
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.453,
+  "auto_applied": false,
+  "recovered_from_raw_response": true
+}

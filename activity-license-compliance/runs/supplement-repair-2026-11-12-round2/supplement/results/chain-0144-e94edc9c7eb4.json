@@ -1,0 +1,191 @@
+{
+  "case_id": "chain-0144-e94edc9c7eb4",
+  "source_csv_line": 145,
+  "row": {
+    "github_repo": "claude-code",
+    "github_url": "https://github.com/codeaashu/claude-code",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/codeIndexing.ts:66 ｜ 调用原文: gemini: 'gemini',（引用处 第98行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 出现在 codeIndexing.ts 中，可能是代码索引提供方标识，需确认是否真实调用",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "codeaashu/claude-code",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "b1b2e7bb1fe7ea95cbf8254f4eb39020bb24fabaa9115d8eb14db3a85e349f19",
+    "filename": "_supplement_round2/b1b2e7bb1fe7ea95cbf8254f4eb39020bb24fabaa9115d8eb14db3a85e349f19.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 4; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "requires": {
+              "any": [
+                "develop_competing_model",
+                "reverse_engineer_extract_or_replicate_service_component"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0144-e94edc9c7eb4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "case_id": "chain-0144-e94edc9c7eb4",
+    "license_behavior_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "A/S：Use Gemini Services，受约束对象为 upstream OriginalArtifact；上游条款禁止将 Services 用于开发竞争模型，或反向工程、提取、复制其组件；可信事实仅证明存在 Use 和 RemoteInteraction，未证明竞争模型开发或反向工程/提取行为；因此触发活动已发生但禁止成立所需目的/行为条件未知，不能判定已违反；来源为 Gemini API Additional Terms L31-L34 及链记录。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a",
+          "activity-license-compliance/aggregate_all_16927/result.csv#/rows/143"
+        ],
+        "status": "INCOMPLETE_ANALYSIS"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文条款的适用范围限定为 Gemini API Services；当前结构化抽取标记为 FIRST_PASS_REVIEW_REQUIRED，竞争模型定义及上下文仍需依据完整原文核对。",
+      "API Link/RemoteInteraction 不证明下游 CombinedProduct 与上游服务受同一许可约束，也不自动触发源码、权重或其他披露义务。",
+      "下游原文仅明确禁止分发其所描述的 repository source code，当前没有 Distribute 事实，且该条款对象为 downstream OriginalArtifact；因此未与当前 CombinedProduct 活动建立冲突。",
+      "当前没有提供竞争模型开发、反向工程、提取或复制服务组件的事实证据；缺少这些事实不等于其为 false。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Gemini Services 时，不得将其用于开发与 Services 竞争的模型，或反向工程、提取、复制其任何组件（包括底层数据或模型）。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0144-e94edc9c7eb4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            {
+              "any": [
+                "develop_competing_model",
+                "reverse_engineer_extract_or_replicate_service_component"
+              ]
+            }
+          ]
+        },
+        "unresolved_predicates": [
+          "develop_competing_model",
+          "reverse_engineer_extract_or_replicate_service_component"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 16732,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1625,
+    "output_tokens_details": {
+      "reasoning_tokens": 814
+    },
+    "total_tokens": 18357,
+    "attribution": {
+      "items": {
+        "msg_0a9ab5c244d6f7f6016af5851471e487d0a9736fd6b7c056ec": {
+          "input_tokens": 14662,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14662,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a9ab5c244d6f7f6016af5851471e487d0ac0caf3d147ee3b1": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a9ab5c244d6f7f6016af58540b15c87d081fd274b6a168dbf": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 811,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 811
+            }
+          ]
+        },
+        "rs_0a9ab5c244d6f7f6016af58534ca5887d09131a762f70c1419": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        },
+        "rs_0a9ab5c244d6f7f6016af5854099d487d0bd57e485fdafe5fe": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 298
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 74.95
+}

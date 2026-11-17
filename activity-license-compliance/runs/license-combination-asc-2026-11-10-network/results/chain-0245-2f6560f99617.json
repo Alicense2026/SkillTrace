@@ -1,0 +1,143 @@
+{
+  "case_id": "chain-0245-2f6560f99617",
+  "status": "SUCCESS",
+  "request_sha256": "50be76e1fd0ea628cc87861ba5fae0fcf506acb23d9ea3f9fe38a1019b01f9ea",
+  "analysis": {
+    "case_id": "chain-0245-2f6560f99617",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0245-2f6560f99617:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "activity:Use",
+            "requires": {
+              "any": [
+                "use_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_service_component_including_underlying_data_or_models"
+              ]
+            }
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a84b5844ce11531a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0245-2f6560f99617:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": "activity:Use",
+            "requires": "retain_applicable_notices"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0245-2f6560f99617:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Gemini API Services to develop models competing with the Services, or attempt to reverse engineer, extract, or replicate their components, including underlying data or models.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+          "attempt_to_reverse_engineer_extract_or_replicate_service_component_including_underlying_data_or_models"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "limitations": [
+      "本地 Gemini API Additional Terms 摘录（L31-L34）明确限制竞争模型开发及逆向工程、提取或复制服务组件；未提供事实表明这些行为已发生，因此不判违规。结构化条款将其抽取为一般 Use 禁止，但原文限定语控制本判断。",
+      "对象图确认下游 ISC 软件与上游 Gemini API 存在链接和远程调用，但依赖、捆绑、修改副本及共同产品范围均未知；不能据此认定两许可证约束同一对象或构成许可冲突。",
+      "ISC 摘录的通知条件仅在适用软件的复制或相关使用范围内评估；任务未证明这些活动发生，故不据此认定已违反通知条件。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17771,
+    "input_tokens_details": {
+      "cached_tokens": 17536,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1079,
+    "output_tokens_details": {
+      "reasoning_tokens": 326
+    },
+    "total_tokens": 18850,
+    "attribution": {
+      "items": {
+        "msg_0065c3c8616994fa016af301c972e487d19dabb2647f4133c1": {
+          "input_tokens": 15739,
+          "cached_tokens": 15506,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15739,
+              "cached_tokens": 15506,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0065c3c8616994fa016af301cfea3487d1afc06921aeddf38e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 753,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 753
+            }
+          ]
+        },
+        "rs_0065c3c8616994fa016af301cfceb487d180e256934a1ca554": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 326
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.433,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

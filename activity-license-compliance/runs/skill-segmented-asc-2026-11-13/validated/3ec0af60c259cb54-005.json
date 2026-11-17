@@ -1,0 +1,145 @@
+{
+  "request_sha256": "1df2e043753caf72b6755ae74edb2263c776877878eccb694e7072f994a70d58",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 106,
+        "end_line": 106,
+        "clause_label": "trade_controls_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "use_complies_with_applicable_trade_laws",
+              "customer_and_end_users_not_in_embargoed_countries_or_on_restricted_party_lists",
+              "use_not_in_or_for_benefit_of_embargoed_countries_or_restricted_parties"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 16.11 conditions Customer’s use of the Services. The location and restricted-party representation also concerns End Users.",
+        "condition_explanation": "use_complies_with_applicable_trade_laws includes applicable sanctions and export-control laws and applicable know-your-customer requirements or obligations concerning End Users. The contract separately states Customer represents that Customer and End Users are not located in U.S. embargoed countries and are not on a Restricted Party List, and prohibits use in or for the benefit of such countries or listed persons.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure that Customer’s use of the Services complies with applicable trade laws, including sanctions and export-control laws.",
+            "actor": "Customer",
+            "object": "Services",
+            "trigger": "Whenever Customer uses the Services."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services in or for the benefit of a U.S. embargoed country or anyone on a Restricted Party List.",
+            "actor": "Customer",
+            "object": "Services",
+            "trigger": "Whenever Customer uses the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 106,
+        "end_line": 106,
+        "clause_label": "trade_controlled_input_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "input_contains_material_or_information_requiring_government_license_for_release_or_export",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 16.11 prohibits including specified material or information in Customer’s Input to the Services.",
+        "condition_explanation": "The prohibition applies when Customer’s Input contains material or information that requires a government license for release or export.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not include material or information requiring a government license for release or export in Customer’s Input.",
+            "actor": "Customer",
+            "object": "Customer Input",
+            "trigger": "Whenever Customer provides Input to the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 107,
+        "end_line": 107,
+        "clause_label": "supported_territories_access_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "access_or_offer_of_access_occurs_outside_supported_countries_and_territories",
+          "requires": true
+        },
+        "actor_role": "Customer and End Users",
+        "scope_note": "Section 16.12 prohibits Customer and End Users from accessing or offering access to the Services outside Supported Countries and Territories. A violation may result in suspension under Section 8.",
+        "condition_explanation": "The condition is whether the access or offer of access occurs outside the contractually defined Supported Countries and Territories. The supplied text does not specify which countries and territories are supported.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or offer access to the Services outside Supported Countries and Territories.",
+            "actor": "Customer and End Users",
+            "object": "Services",
+            "trigger": "Whenever accessing or offering access to the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 109,
+        "end_line": 110,
+        "clause_label": "continued_use_after_update",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "an_agreement_or_policy_update_is_effective",
+          "requires": "customer_accepts_the_update_by_continued_use_or_access"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 16.13 provides that Customer’s continued use of or access to the Services after an update becomes effective constitutes acceptance of that update. Customer may instead stop using the Services or terminate under Section 11. Update exceptions and timing are set out in Section 16.13(b).",
+        "condition_explanation": "an_agreement_or_policy_update_is_effective depends on the notice and effective-date rules in Section 16.13(a). Material-impact updates generally require at least 30 days’ notice, except updates necessary to comply with law, for which OpenAI gives as much notice as reasonably possible; other updates generally take effect when posted. Except for updates to comply with law, updates do not apply to earlier-arising Disputes or qualifying signed Order Forms made before notice. An update relating to a later-launched Service or feature applies upon Customer’s first use of that Service or feature.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text does not define Supported Countries and Territories, Restricted Party List, or the applicable external trade-control details, and does not provide the incorporated Order Forms, Service-Specific Terms, OpenAI Policies, DPA, or Section 8 suspension terms. Their content is not inferred.",
+      "Section 16.7 imposes operative restrictions and conditions on assignment of the Agreement, including OpenAI’s Affiliate assignment permission and a 30-day prior written notice condition for either Party’s assignment to a successor to substantially all assets or business. Assignment of the Agreement is not faithfully expressible using the supplied activity and object categories.",
+      "Section 16.5 imposes operative notice-method, recipient, address, copy, and deemed-receipt rules. Sending contractual notices is not faithfully expressible using the supplied activity and object categories.",
+      "Section 16.13(a) also imposes update-notice duties on OpenAI. Those duties, and the full mechanics for OpenAI’s update action, are not represented as licensee activities; the customer’s continued-use acceptance mechanism is modeled separately.",
+      "Sections 16.1–16.4, 16.6, and 16.8–16.10 principally state agreement interpretation, severability, waiver, relationship, liability, or beneficiary terms rather than activity constraints in the supplied schema. Section 16.14 states the rights basis for Government Entity customers without creating a distinct additional activity permission in the supplied text."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0017",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "trade_controls_use",
+          "trade_controlled_input_prohibition",
+          "supported_territories_access_restriction",
+          "continued_use_after_update"
+        ],
+        "reason": "Modeled the trade-law use condition, the restriction on specified Input, the geographic access prohibition, and acceptance through continued use after an effective update. Section 16.7’s agreement-assignment conditions and Section 16.5’s contractual-notice requirements are operative but cannot be faithfully represented by the supplied activities and objects; OpenAI’s update-notice duties in Section 16.13(a) also remain unrepresented. Other portions are agreement mechanics or rights statements rather than distinct activity constraints."
+      }
+    ]
+  },
+  "attempt": 2
+}

@@ -1,0 +1,111 @@
+{
+  "request_sha256": "6b94704cf6d907e9233139bf77eafa0ccb8f68f72e8f3b549271ed50d3022733",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 5,
+        "end_line": 20,
+        "clause_label": "1. Commercial use; hosted or embedded service",
+        "activities": [
+          "CommercialUse",
+          "Use",
+          "ProvideNetworkService",
+          "RemoteInteraction",
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "any": [
+              {
+                "not": "hosted_or_embedded_commercial_use_for_third_parties"
+              },
+              {
+                "all": [
+                  "hosted_or_embedded_commercial_use_for_third_parties",
+                  "holaboss_written_authorization"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "holaOS may be used commercially, including as a backend service or enterprise agent-computing platform. Using its source code to provide a hosted service to third parties, or embedding it in a product or service commercially distributed to third parties (including as a SaaS platform, managed service, or integrated component) is prohibited absent Holaboss's written authorization; the text also says a commercial license must be obtained when those conditions are met. Internal use within one organization, including multiple workspaces, does not require a commercial license. This clause concerns holaOS and products or services incorporating it, not unrelated artifacts.",
+        "condition_explanation": "hosted_or_embedded_commercial_use_for_third_parties means holaOS source is used for a third-party hosted service or holaOS is embedded in a product or service sold, licensed, or otherwise commercially distributed to third parties. The stated permission condition reflects the express exception for written authorization; the text separately requires obtaining a commercial license when the listed conditions apply."
+      },
+      {
+        "start_line": 10,
+        "end_line": 20,
+        "clause_label": "1.a. Hosted or embedded service; commercial-license requirement",
+        "activities": [
+          "Use",
+          "ProvideNetworkService",
+          "RemoteInteraction",
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "hosted_or_embedded_commercial_use_for_third_parties",
+          "requires": "commercial_license_obtained"
+        },
+        "actor_role": "licensee",
+        "scope_note": "When the stated hosted-service or commercial-embedding conditions apply, a commercial license must be obtained from the producer. Internal use within a single organization, including multiple workspaces, is expressly outside the commercial-license requirement. The text separately says the use is not allowed absent Holaboss's written authorization; it does not specify whether obtaining a commercial license itself constitutes that authorization.",
+        "condition_explanation": "hosted_or_embedded_commercial_use_for_third_parties means using holaOS source code to provide a hosted service to third parties, or embedding holaOS as a component of a product or service sold, licensed, or otherwise commercially distributed to third parties. The condition includes offering holaOS in whole or substantial part as SaaS, a managed service, or an integrated component of another commercial offering."
+      },
+      {
+        "start_line": 22,
+        "end_line": 31,
+        "clause_label": "1.b. LOGO and copyright information",
+        "activities": [
+          "Use",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "using_holaos_frontend",
+          "requires": "remove_or_modify_logo_or_copyright_information"
+        },
+        "actor_role": "licensee",
+        "scope_note": "When using holaOS's frontend, the licensee may not remove or modify the LOGO or copyright information in the console or applications. This restriction does not apply to uses that do not involve the frontend. Frontend means components in the desktop/ directory when running from raw source, or the packaged desktop application when running a distributed build.",
+        "condition_explanation": "using_holaos_frontend means the use involves the specified holaOS frontend. remove_or_modify_logo_or_copyright_information means removing or changing the LOGO or copyright information in the holaOS console or applications."
+      },
+      {
+        "start_line": 38,
+        "end_line": 39,
+        "clause_label": "2.b. Contributor code use",
+        "activities": [
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED"
+        },
+        "actor_role": "producer",
+        "scope_note": "The text says contributed code may be used by the producer for commercial purposes, including its cloud business operations. This is a statement about contributor code and the producer's use, not a grant to downstream users.",
+        "condition_explanation": "No additional condition is stated in these lines; the scope is limited to code contributed to holaOS and the producer's commercial use."
+      }
+    ],
+    "coverage_notes": [
+      "The text identifies holaOS as licensed under a modified Apache License 2.0 and refers to the external Apache 2.0 text, but that full text is not supplied here; no additional Apache permissions or conditions are reconstructed.",
+      "The commercial-license requirement and written-authorization exception are stated separately; the text does not explain whether a commercial license itself supplies the required written authorization.",
+      "The statement that the producer may adjust the open-source agreement (lines 33-36) is not an operative activity permission, prohibition, or obligation for using, copying, modifying, or distributing the artifact. The contributor wording says contributors “should agree” and does not state a definite activity obligation.",
+      "No source-provision, attribution, copyleft, patent, termination, fees, or training terms are supplied in this text beyond the frontend logo and copyright restriction."
+    ]
+  }
+}

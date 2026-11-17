@@ -1,0 +1,186 @@
+{
+  "case_id": "chain-18180-729430b222ee",
+  "source_csv_line": 18181,
+  "row": {
+    "github_repo": "swiggy-builders-club---ai-agent-",
+    "github_url": "https://github.com/codeultr0n/swiggy-builders-club---ai-agent-",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "Qwen/Qwen3.6-27B",
+    "artifact_url": "https://huggingface.co/Qwen/Qwen3.6-27B",
+    "artifact_license": "apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: orchestrator/llm.py:36 ｜ 调用原文: return os.getenv(\"GROQ_MODEL\", \"qwen/qwen3.6-27b\") ｜ 证据等级: 已确认（强） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: LLMClient 与前端 groqChat 中作为 Groq 默认模型真实引用/调用",
+    "batch": "10201-12200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "codeultr0n/swiggy-builders-club---ai-agent-",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "dd57c16e24b648f1c1972e83903ed5effac04eb2ce6d73bb3660d464c05f2ac6",
+    "filename": "_licenseref_full/texts/dd57c16e24b648f1c1972e83903ed5effac04eb2ce6d73bb3660d464c05f2ac6.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:Swiggy-Builders-Club---Ai-agent--HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-18180-729430b222ee",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:df611725db93bc3b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-18180-729430b222ee:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c98d550489c396a9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED"
+          },
+          "S": {
+            "artifact": "chain-18180-729430b222ee:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c98d550489c396a9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_is_unauthorized"
+          },
+          "S": {
+            "artifact": "chain-18180-729430b222ee:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-18180-729430b222ee:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If the repository Software is used, do not use it without authorization; the license text does not define what use is authorized.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether the repository Software is used in the relevant sense",
+          "use_is_unauthorized"
+        ],
+        "source_refs": [
+          "license-text:downstream:c98d550489c396a9"
+        ]
+      }
+    ],
+    "limitations": [
+      "The confirmed activity is use of the upstream Qwen asset through a remote API call. The object graph identifies an API/link relation, not transfer of model weights or proof that the downstream repository Software itself was used as the licensed object.",
+      "The downstream text withholds permission for activities involving its Software, but the record does not establish shared license scope between that Software and the upstream model. Its separate unauthorized-use clause does not define authorization criteria.",
+      "The Apache excerpt grants use rights for the upstream Work, subject to license terms. This analysis does not infer additional conditions from unprovided text."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18490,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1185,
+    "output_tokens_details": {
+      "reasoning_tokens": 491
+    },
+    "total_tokens": 19675,
+    "attribution": {
+      "items": {
+        "msg_027594598a8497b4016af53e7edfc087d19721828aa3548fc7": {
+          "input_tokens": 16420,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16420,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_027594598a8497b4016af53e7edfc087d1a8e303339614f5a6": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_027594598a8497b4016af53e885a1487d1b8770ce540cd46ea": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 694,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 694
+            }
+          ]
+        },
+        "rs_027594598a8497b4016af53e8819e887d19398d952f13dc74e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 491
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "07916a92fa5438084b7f385134a7b08fb2d8a9bbb68634af372bb8eec40a6232",
+  "elapsed_seconds": 27.71
+}

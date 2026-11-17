@@ -1,0 +1,125 @@
+{
+  "request_sha256": "e35e82e9cccf457a3ce7601cf4850507b9fb4eb484b2ca7368cd79019badccef",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 67,
+        "end_line": 67,
+        "clause_label": "gap/gap_openai_may_share_abusive_content",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "customer_access_suspended_under_section_8",
+              "agreement_terminated_under_section_11"
+            ]
+          },
+          "requires": {
+            "any": [
+              "sharing_required_by_law",
+              "sharing_reasonably_necessary_to_protect_services_or_third_party_from_harm"
+            ]
+          }
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Section 11.3: OpenAI may share information related to Abusive Customer Content only in the stated suspension-or-termination circumstances and for the stated reasons. OriginalArtifact represents the information related to that content, not necessarily the content itself.",
+        "condition_explanation": "customer_access_suspended_under_section_8 means Customer's access is suspended via Section 8. agreement_terminated_under_section_11 means the Agreement is terminated via Section 11. sharing_required_by_law and sharing_reasonably_necessary_to_protect_services_or_third_party_from_harm are alternative grounds for sharing.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 67,
+        "end_line": 67,
+        "clause_label": "gap/gap_openai_may_retain_abusive_content",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "abusive_customer_content",
+          "requires": true
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Section 11.3: OpenAI may retain Abusive Customer Content despite the general deletion provision. OriginalArtifact represents the specified Customer Content.",
+        "condition_explanation": "abusive_customer_content means Input or Output that violates Section 3.3, as defined in Section 17.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 78,
+        "end_line": 78,
+        "clause_label": "gap/gap_customer_refrain_from_service_use_if_instructed_to_cease",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "openai_reasonably_believes_service_likely_subject_to_infringement_claim",
+          "requires": "openai_reasonable_instruction_to_cease_service_use"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 13.3: Customer must promptly comply with reasonable OpenAI instructions concerning mitigation, including an instruction to cease use of the Service. This clause covers only that instruction path.",
+        "condition_explanation": "openai_reasonably_believes_service_likely_subject_to_infringement_claim means OpenAI reasonably believes all or part of the Services is likely to become subject to an infringement Claim. openai_reasonable_instruction_to_cease_service_use means OpenAI provides a reasonable instruction to cease use as part of the mitigation measures.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Promptly cease use of the Service in accordance with OpenAI's reasonable instruction to cease use.",
+            "actor": "Customer",
+            "object": "OpenAI Service",
+            "trigger": "OpenAI reasonably believes all or part of the Service is likely to become the subject of an infringement Claim and gives Customer a reasonable instruction to cease use."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The agreement's local text supplies no activities for deleting stored content, paying accrued amounts or minimum commitments, indemnifying or defending a party, obtaining continued-use rights, replacing or modifying a Service, giving claim notice, cooperating in a defense or investigation, controlling a defense or settlement, or providing consent to settlement. Those actions are outside the fixed activity vocabulary; no placeholder rules are used.",
+      "Section 11.3's general deletion duty and its exceptions, and its accrued-payment and minimum-commitment consequences, remain unrepresented because no allowed activity faithfully captures them. Section 13.1–13.4's indemnity, mitigation, and claims-procedure duties likewise remain unrepresented except for Customer's express duty to cease Service use if reasonably instructed.",
+      "Section 13.1 also incorporates Service-Specific Terms Indemnity, but that text is not supplied; no terms or protections are inferred from it."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0012",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "customer_service_use_right_ends_on_termination",
+          "gap/gap_openai_may_share_abusive_content",
+          "gap/gap_openai_may_retain_abusive_content"
+        ],
+        "reason": "The immediate end of Customer's service-use rights and OpenAI's local permissions concerning abusive content are modeled. OpenAI's deletion duty and exceptions and the accrued-payment and minimum-commitment consequences have no faithful representation in the fixed activity vocabulary; the unmatched actions are deletion/retention handling and payment consequences."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "gap/gap_customer_refrain_from_service_use_if_instructed_to_cease"
+        ],
+        "reason": "Customer's duty to promptly comply with a reasonable instruction to cease Service use is modeled. The indemnity, defense, claim procedure, continued-use acquisition, replacement/modification, and other mitigation duties do not fit the fixed activity vocabulary; the unmatched actions are indemnifying/defending, claims administration, obtaining rights, and replacing or modifying Services."
+      }
+    ],
+    "anchor_review": [],
+    "additional_anchor_review": [
+      {
+        "clause_label": "customer_service_use_right_ends_on_termination",
+        "verdict": "SUPPORTED",
+        "reason": "Section 11.3(a) states that rights granted by OpenAI to Customer cease immediately upon termination; modeling that consequence as ending the Customer's permitted Service use is consistent with the text."
+      },
+      {
+        "clause_label": "customer_may_choose_beta_service_use",
+        "verdict": "SUPPORTED",
+        "reason": "Section 12.3(a) expressly says Customer may choose to use Beta Services in its sole discretion."
+      }
+    ]
+  },
+  "recovery": "mechanical label normalization of preserved raw response",
+  "origin_response": "activity-license-compliance/runs/skill-asc-gap-repair-2026-11-14/responses/3ec0af60c259cb54-003-1794587427427215000-2.json"
+}

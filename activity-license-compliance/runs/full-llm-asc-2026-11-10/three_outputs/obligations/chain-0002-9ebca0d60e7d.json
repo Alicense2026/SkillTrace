@@ -1,0 +1,68 @@
+{
+  "case_id": "chain-0002-9ebca0d60e7d",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Use the Anthropic Services in compliance with the Commercial Terms, including incorporated Usage Policy, Supported Regions Policy, and applicable Service Specific Terms.",
+      "source_refs": [
+        "license-text:upstream:18c6374f3e27bc88"
+      ],
+      "subject": {
+        "artifact": "chain-0002-9ebca0d60e7d:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "compliance_with_service_terms"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Do not access or use the Anthropic Services to build a competing product or service, including to train competing AI models, except as expressly approved by Anthropic.",
+      "source_refs": [
+        "license-text:upstream:18c6374f3e27bc88"
+      ],
+      "subject": {
+        "artifact": "chain-0002-9ebca0d60e7d:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "competing_product_or_service_development"
+        ]
+      },
+      "unresolved_predicates": [
+        "competing_product_or_service_development",
+        "express_approval"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If exercising rights in the downstream MIT-licensed software, include its copyright notice and permission notice in copies or substantial portions.",
+      "source_refs": [
+        "license-text:downstream:c5f89af14c7a656f"
+      ],
+      "subject": {
+        "artifact": "chain-0002-9ebca0d60e7d:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "downstream_software_rights_exercised"
+        ]
+      },
+      "unresolved_predicates": [
+        "downstream_software_rights_exercised",
+        "notice_fulfillment"
+      ]
+    }
+  ]
+}

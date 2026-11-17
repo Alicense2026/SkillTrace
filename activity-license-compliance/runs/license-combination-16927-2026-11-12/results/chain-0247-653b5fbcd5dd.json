@@ -1,0 +1,81 @@
+{
+  "case_id": "chain-0247-653b5fbcd5dd",
+  "input_group_row": 247,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0247-653b5fbcd5dd",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0247-653b5fbcd5dd:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本例确认的是对上游材料的API/远程调用及Use；材料称代码修改不适用，且无权重转移事实。Llama 3.2条款摘录不足以确定仅远程调用是否属于相关许可权利的使用范围，故未据此推断分发、源码提供或GPL传递义务。",
+      "对象图确认下游到上游的LINK/REMOTE_CALL，但两许可是否约束同一对象未知。GPL摘录中的义务针对复制、修改或分发等情形；这些活动未被确认发生，不能据此判定冲突或违规。",
+      "上游结构化条款标记FIRST_PASS_REVIEW_REQUIRED；本分析仅采用所给第1(a)节摘录及映射，不推断未提供的例外或其他条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如该远程调用属于对Llama Materials许可权利的使用，应遵守Llama 3.2 Community License Agreement。",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "subject": {
+          "artifact": "chain-0247-653b5fbcd5dd:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_of_remote_call_within_Llama_Materials_license"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_of_remote_call_within_Llama_Materials_license",
+          "agreement_compliance"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0328-6081050cb759.json",
+  "original_case_id": "chain-0328-6081050cb759",
+  "original_request_sha256": "448d54653bc7ee8266481531ad375cd79894e1df84b25b2adcc47ccbbd9c7a9c",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0328-6081050cb759": "chain-0247-653b5fbcd5dd",
+    "license-text:upstream:d3ae3cf95b4c9826": "license-text:upstream:d3ae3cf95b4c9826",
+    "license-text:downstream:54cf9d75683aef1d": "license-text:downstream:54cf9d75683aef1d",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/327": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/246"
+  }
+}

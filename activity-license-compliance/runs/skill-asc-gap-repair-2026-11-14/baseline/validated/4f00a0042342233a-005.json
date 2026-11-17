@@ -1,0 +1,364 @@
+{
+  "request_sha256": "084a1b60b734d413f9bdd26802440e3a65e3856b6913955b8336739470a257d1",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 166,
+        "end_line": 166,
+        "clause_label": "export_trade_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "complies_with_applicable_export_sanctions_and_trade_laws",
+              "customer_and_personnel_not_in_comprehensively_sanctioned_region",
+              "customer_and_personnel_not_on_applicable_restricted_party_list",
+              "does_not_use_reexport_transfer_or_disclose_products_output_or_technical_data_in_violation_of_law",
+              "does_not_permit_third_party_use_in_violation_of_law",
+              "obtains_required_government_authorizations_for_export_reexport_or_transfer",
+              "obtains_required_authorizations_before_using_regulated_information_as_input"
+            ]
+          }
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 14.13 applies to Customer's dealings with Mistral AI Products, Output, technical data, and regulated information used as inputs. The listed regions, agencies, laws, and regulations are examples or specified reference points in the clause.",
+        "condition_explanation": "Each atom represents a separate compliance commitment or representation in 14.13(a)-(f); the commitments apply cumulatively. The location and list-status representations concern both Customer and its personnel. The authorization-before-input requirement applies to information governed by the referenced export-control or sanctions rules.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with all applicable export control, economic sanctions, and trade compliance laws and regulations.",
+            "actor": "Customer",
+            "object": "Mistral AI Products, Output, technical data, and related activities",
+            "trigger": "Whenever Customer engages in activities governed by applicable export-control, sanctions, or trade-compliance laws."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use, re-export, transfer, or disclose Mistral AI Products, Output, or technical data in violation of applicable export-control or sanctions laws.",
+            "actor": "Customer",
+            "object": "Mistral AI Products, Output, or technical data",
+            "trigger": "Whenever Customer uses, re-exports, transfers, or discloses those materials."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not permit a third party to use Mistral AI Products or Output in violation of applicable export-control or sanctions laws.",
+            "actor": "Customer",
+            "object": "Mistral AI Products or Output",
+            "trigger": "Whenever Customer permits a third party to use them."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Obtain all government authorizations, licenses, or approvals required for export, re-export, or transfer.",
+            "actor": "Customer",
+            "object": "Mistral AI Products, Output, or technical data",
+            "trigger": "Before an export, re-export, or transfer for which government authorization, a license, or approval is required."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Obtain all necessary government authorizations, licenses, or approvals before using regulated information as an input.",
+            "actor": "Customer",
+            "object": "Information governed by the referenced export-control or sanctions laws, used as an input to Mistral AI Products",
+            "trigger": "Before using such information as an input."
+          }
+        ]
+      },
+      {
+        "start_line": 172,
+        "end_line": 172,
+        "clause_label": "usage_policy_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "complies_with_mistral_usage_policy"
+        },
+        "actor_role": "customer",
+        "scope_note": "Additional Product Terms, section 1, applies when Customer uses Mistral AI Products on Mistral AI Infrastructure. The incorporated Usage Policy is not supplied here.",
+        "condition_explanation": "The required predicate is compliance with Mistral AI's Usage Policy; its specific restrictions cannot be determined from this excerpt.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with Mistral AI's Usage Policy.",
+            "actor": "Customer",
+            "object": "Use of Mistral AI Products on Mistral AI Infrastructure",
+            "trigger": "Whenever Customer uses those products on that infrastructure."
+          }
+        ]
+      },
+      {
+        "start_line": 174,
+        "end_line": 174,
+        "clause_label": "account_creation_information_and_security",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "account_created_for_infrastructure_use",
+              "complete_accurate_account_information_provided",
+              "account_and_end_user_account_details_kept_accurate",
+              "account_credentials_kept_confidential"
+            ]
+          }
+        },
+        "actor_role": "customer",
+        "scope_note": "Additional Product Terms, section 2, concerns Customer Accounts and End User Accounts for access to Mistral AI Products on Mistral AI Infrastructure. Account information includes accurate billing information and a valid payment method.",
+        "condition_explanation": "Use on the specified infrastructure requires an account. Account information must be complete and accurate at setup, account and End User Account details must remain accurate, and credentials must remain confidential at all times.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide complete and accurate account information, including accurate billing information and a valid method of payment, when setting up the Customer Account.",
+            "actor": "Customer",
+            "object": "Customer Account information",
+            "trigger": "When setting up the Customer Account."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Keep Customer Account and End User Account details accurate and keep account credentials confidential.",
+            "actor": "Customer",
+            "object": "Customer Account and End User Account details and credentials",
+            "trigger": "At all times while the accounts and credentials are maintained."
+          }
+        ]
+      },
+      {
+        "start_line": 174,
+        "end_line": 174,
+        "clause_label": "end_user_account_sharing_restriction",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "customer",
+        "scope_note": "The restriction in Additional Product Terms, section 2, applies to End User Accounts: they may not be shared, sold, licensed, or otherwise made available outside Customer's entity or organization. The provision separately permits creation of End User Accounts for Affiliate End Users, subject to the governing access agreement.",
+        "condition_explanation": "The prohibition concerns making an End User Account available outside Customer's entity or organization. The stated Affiliate-account allowance remains subject to the agreement authorizing access and use.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not share, sell, license, or otherwise make an End User Account available outside Customer's entity or organization.",
+            "actor": "Customer",
+            "object": "End User Account",
+            "trigger": "Whenever an End User Account is shared, sold, licensed, or otherwise made available."
+          }
+        ]
+      },
+      {
+        "start_line": 174,
+        "end_line": 174,
+        "clause_label": "report_detected_account_or_offering_misuse",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "promptly_notifies_mistral_after_detecting_unauthorized_or_fraudulent_access_or_use"
+        },
+        "actor_role": "customer",
+        "scope_note": "Additional Product Terms, section 2, requires notification concerning unauthorized or fraudulent access to or use of the Customer Account, any End User Account, or any Customer Offering. Notification is to Mistral AI at the stated support address or through the Help Center.",
+        "condition_explanation": "The duty is triggered when Customer detects unauthorized or fraudulent access or use involving any of the three listed account or offering categories; notice must be prompt.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly notify Mistral AI at support@mistral.ai or through the Help Center.",
+            "actor": "Customer",
+            "object": "Detected unauthorized or fraudulent access or use of the Customer Account, an End User Account, or a Customer Offering",
+            "trigger": "When Customer detects such unauthorized or fraudulent access or use."
+          }
+        ]
+      },
+      {
+        "start_line": 176,
+        "end_line": 176,
+        "clause_label": "media_customer_verified_news_feature_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "customer_is_media_customer",
+          "requires": "verified_news_feature_used_for_editorial_purpose"
+        },
+        "actor_role": "customer",
+        "scope_note": "Additional Product Terms, section 3, bars a Media Customer from using a verified news feature, such as the AFP news feature, in Mistral AI Products for editorial use. The excerpt defines Media Customer as an entity regularly and professionally disseminating information for editorial purposes, whether to the public or professionals, even if that is only part of its business.",
+        "condition_explanation": "The prohibition applies only when the Customer meets the stated Media Customer definition and the verified news feature is used for editorial purposes. The text says the feature may be automatically blocked without refund and unauthorized use results in immediate account suspension.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use a verified news feature in Mistral AI Products for editorial use.",
+            "actor": "Customer that is a Media Customer",
+            "object": "Verified news feature, including the AFP news feature",
+            "trigger": "When the Customer is a Media Customer and the contemplated use is editorial."
+          }
+        ]
+      },
+      {
+        "start_line": 176,
+        "end_line": 176,
+        "clause_label": "media_customer_contact_for_editorial_news_feature",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_is_media_customer_and_wishes_to_use_verified_news_feature_for_editorial_purposes",
+          "requires": "contacts_mistral_at_legal_email"
+        },
+        "actor_role": "customer",
+        "scope_note": "Additional Product Terms, section 3, directs a Media Customer wishing to use the news feature for editorial purposes to contact Mistral AI at legal@mistral.ai. The text does not expressly state that contacting Mistral itself authorizes the otherwise unauthorized use.",
+        "condition_explanation": "The contact duty is triggered by the Media Customer's wish to use the news feature for editorial purposes; the provision does not specify that contact constitutes approval.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Contact Mistral AI at legal@mistral.ai.",
+            "actor": "Customer that is a Media Customer",
+            "object": "Proposed editorial use of the verified news feature",
+            "trigger": "When the Media Customer wishes to use the news feature for editorial purposes."
+          }
+        ]
+      },
+      {
+        "start_line": 178,
+        "end_line": 178,
+        "clause_label": "conversation_link_access_disclosure",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_or_end_user_creates_conversation_link",
+          "requires": "accepts_that_anyone_with_link_can_view_conversation_including_through_further_sharing"
+        },
+        "actor_role": "customer",
+        "scope_note": "Additional Product Terms, section 4, concerns sharing unique links to conversations. Anyone with the link can view the Customer's conversation, including a person to whom the intended recipient further shares it. Customer acknowledges Mistral does not monitor or control access through links created by Customer or an End User.",
+        "condition_explanation": "The provision states the access consequence of creating a Conversation Link and records Customer's acknowledgment of the absence of Mistral monitoring or control. It does not expressly impose a separate duty to restrict recipients or monitor access.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The Usage Policy is incorporated by reference but not provided, so its substantive conditions are unavailable.",
+      "The source states that Mistral AI is responsible for providing support described in Documentation or an Order Form (line 164), but the permitted activity and object vocabulary cannot faithfully express that support-service obligation; it is recorded as unresolved.",
+      "The Conversation Link provision describes access consequences and an acknowledgment, but does not impose an express behavioral duty beyond that acknowledgment.",
+      "Lines 153 and 155 concern entire-agreement and severability mechanics; lines 157-162 concern governing law, venue, and agreement priority. These are not activity constraints.",
+      "Line 166 includes representations about Customer and personnel location and list status; these are included as conditions, not treated as ongoing operational duties."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0070",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Entire-agreement and exclusion-of-prior-statements provisions do not regulate a listed activity."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Severability is a legal-effect provision, not an activity constraint."
+      },
+      {
+        "unit_id": "P0072",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Governing-law and venue heading contains no activity constraint."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Regional governing law, exclusive jurisdiction, and agreement-priority rules are legal venue and interpretation provisions, not activity constraints."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Mistral AI is expressly responsible for providing described support, but the supported service obligation cannot be faithfully represented with the supplied activity and object enums."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "MODELED",
+        "clause_labels": [
+          "export_trade_compliance"
+        ],
+        "reason": "The paragraph imposes customer trade-law compliance, restricted-use, third-party-use, and authorization requirements, modeled as conditions and specific duties."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "The product-terms heading and supplementation statement identify scope but impose no independent activity rule."
+      },
+      {
+        "unit_id": "P0077",
+        "status": "MODELED",
+        "clause_labels": [
+          "usage_policy_compliance"
+        ],
+        "reason": "Customer's use on Mistral AI Infrastructure is expressly conditioned on compliance with the Usage Policy."
+      },
+      {
+        "unit_id": "P0078",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_creation_information_and_security",
+          "end_user_account_sharing_restriction",
+          "report_detected_account_or_offering_misuse"
+        ],
+        "reason": "The paragraph's account requirement, account-information and credential duties, account-sharing prohibition, Affiliate qualification, and prompt reporting duty are represented. Creating End User Accounts is permitted subject to applicable limitations; the Affiliate allowance remains subject to the access agreement."
+      },
+      {
+        "unit_id": "P0079",
+        "status": "MODELED",
+        "clause_labels": [
+          "media_customer_verified_news_feature_restriction",
+          "media_customer_contact_for_editorial_news_feature"
+        ],
+        "reason": "The Media Customer definition scopes the editorial-use prohibition and contact duty; possible automatic blocking and immediate suspension are stated consequences, not permissions or duties imposed on Customer."
+      },
+      {
+        "unit_id": "P0080",
+        "status": "MODELED",
+        "clause_labels": [
+          "conversation_link_access_disclosure"
+        ],
+        "reason": "The provision discloses who can view a shared conversation and records Customer's acknowledgment that Mistral does not monitor or control link access; it does not impose an additional monitoring or access-control duty."
+      }
+    ]
+  },
+  "attempt": 2
+}

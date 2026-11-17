@@ -1,0 +1,296 @@
+{
+  "request_sha256": "0c3e13fe36db672589052e800a32fab67add5616b6510fc5018e2cc92b0e6800",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 34,
+        "end_line": 34,
+        "clause_label": "gap/customer_may_terminate_after_material_security_diminution",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "openai_materially_diminishes_security_features",
+          "requires": "written_termination_notice_within_five_business_days_of_update"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 5.1: Customer may elect to terminate the Agreement and associated Order Forms if OpenAI updates the Security Measures in a manner that materially diminishes the Services’ administrative, technical, or physical security features taken as a whole. The termination election must be made by written notice to OpenAI within five business days of the update. The activity schema has no termination action, so this models the option only as a condition on Use; it does not represent termination itself.",
+        "condition_explanation": "openai_materially_diminishes_security_features means an update to the Security Measures materially diminishes the administrative, technical, or physical security features of the Services taken as a whole. written_termination_notice_within_five_business_days_of_update means Customer provides OpenAI written notice electing termination within five business days of the update.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 34,
+        "end_line": 36,
+        "clause_label": "gap/openai_security_and_audit_obligations_outside_activity_scope",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Sections 5.1–5.2 expressly require OpenAI to comply with the Security Measures and, upon Customer’s written request no more than once per year, provide a copy of the most recent Audit Reports. The Security Measures are externally linked and absent from the supplied materials; their detailed contents cannot be inferred. The stated OpenAI actions are not faithfully expressible with the available activities: complying with security measures is not a listed action, and providing audit reports is not source provision of licensed material.",
+        "condition_explanation": "Customer’s audit-report request must be written and may be made no more than once per year. Security Measures are referenced at cdn.openai.com/osa/security-measures.pdf; their contents are unavailable here.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the Security Measures.",
+            "actor": "OpenAI",
+            "object": "Security Measures applicable to the Services",
+            "trigger": "During the Agreement, subject to any updates OpenAI makes to the Security Measures."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide Customer a copy of the most recent Audit Reports.",
+            "actor": "OpenAI",
+            "object": "Most recent Audit Reports for the Services",
+            "trigger": "Upon Customer’s written request, no more than once per year."
+          }
+        ]
+      },
+      {
+        "start_line": 36,
+        "end_line": 37,
+        "clause_label": "gap/personal_data_processing_requires_dpa_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_services_to_process_personal_data",
+          "requires": "comply_with_dpa"
+        },
+        "actor_role": "Customer and OpenAI",
+        "scope_note": "Section 5.3: if Customer uses the Services to process Personal Data, both Customer and OpenAI must comply with the incorporated DPA. The DPA is not supplied, so its detailed requirements are not extracted.",
+        "condition_explanation": "customer_uses_services_to_process_personal_data means Customer uses the Services to process Personal Data, as defined in the DPA. comply_with_dpa refers only to the express incorporation and compliance obligation in Section 5.3; the absent DPA’s contents are not inferred.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the DPA.",
+            "actor": "Customer and OpenAI",
+            "object": "Personal Data processed using the Services",
+            "trigger": "When Customer uses the Services to process Personal Data."
+          }
+        ]
+      },
+      {
+        "start_line": 37,
+        "end_line": 37,
+        "clause_label": "gap/protected_health_information_use_restricted",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "not_authorized_phhi_processing"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 5.4: Customer may not use the Services to create, receive, maintain, transmit, or otherwise process Protected Health Information unless it has signed the Healthcare Addendum. Even with that addendum, Customer may not store, transmit, or process Protected Health Information using a Service not designed for such processing. The Healthcare Addendum is referenced but not supplied; no further terms are inferred.",
+        "condition_explanation": "not_authorized_phhi_processing is false only when Customer has signed the Healthcare Addendum and the particular Service is designed for processing Protected Health Information, and the use is not otherwise barred by the stated restriction. Protected Health Information has the meaning stated in the Agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not create, receive, maintain, transmit, or otherwise process Protected Health Information using the Services unless Customer has signed the Healthcare Addendum; do not store, transmit, or process it using a Service not designed for that purpose.",
+            "actor": "Customer",
+            "object": "Protected Health Information processed using the Services",
+            "trigger": "Whenever Customer would use the Services to handle Protected Health Information; the addendum exception does not permit use of a Service not designed for such processing."
+          }
+        ]
+      },
+      {
+        "start_line": 40,
+        "end_line": 45,
+        "clause_label": "gap/payment_and_billing_duties_not_activity_expressible",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_applicable_payment_terms"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Sections 6.1–6.6: Customer must pay applicable Fees to OpenAI or its reseller in the currency and under the payment terms in the Order Form, pay invoices on the specified interval, provide complete and accurate billing and contact information, pay applicable taxes without deduction or withholding (increasing payment if legally required withholding would reduce the net amount), and pay undisputed invoice amounts. Invoice disputes must be raised by contacting ar-enterprise@openai.com within 30 days after issuance; undisputed amounts remain payable. Overdue undisputed amounts may bear a 1.5% monthly finance charge. Fees are non-refundable except as stated, minimum commitments are non-cancellable subject to the stated exceptions, and Service Credits are subject to separate referenced terms. The exact payment duties do not fit a listed activity: Charge means charging third parties, not paying the provider. This Use condition records the duties ancillary to service use without treating payment as Charge.",
+        "condition_explanation": "comply_with_applicable_payment_terms means satisfy the express payment, billing-information, tax, and invoice-dispute requirements in Sections 6.1–6.4, with amounts, currency, and intervals determined by the applicable Order Form and applicable law. Service Credit Terms are referenced in Section 6.5 but are not supplied; their contents are not inferred. Pricing-page changes and correction rights in Section 6.6 do not create additional Customer duties.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay applicable Fees to OpenAI or Customer’s reseller in the currency and pursuant to the payment terms on the Order Form.",
+            "actor": "Customer",
+            "object": "Fees for the Services",
+            "trigger": "As Fees become payable under the applicable Order Form."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay OpenAI invoices on the payment interval set forth in the Order Form.",
+            "actor": "Customer",
+            "object": "OpenAI invoices for the Services",
+            "trigger": "At the payment interval specified in the applicable Order Form."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide complete and accurate billing and contact information to OpenAI.",
+            "actor": "Customer",
+            "object": "Billing and contact information",
+            "trigger": "In connection with the Agreement and billing for the Services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Fees exclusive of applicable taxes and pay in full without deduction or withholding; if a deduction or withholding is legally required, increase the payment so the net amount received equals the amount invoiced.",
+            "actor": "Customer",
+            "object": "Fees and any required tax-related payment uplift",
+            "trigger": "When paying amounts due, with the uplift triggered if a legally required deduction or withholding would otherwise reduce the net amount received."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "To dispute an invoice, contact ar-enterprise@openai.com within 30 days after the invoice is issued and pay all undisputed amounts.",
+            "actor": "Customer",
+            "object": "Disputed invoice and its undisputed amounts",
+            "trigger": "When Customer disputes an invoice; the contact deadline is 30 days from issuance and undisputed amounts remain payable."
+          }
+        ]
+      },
+      {
+        "start_line": 40,
+        "end_line": 45,
+        "clause_label": "gap/provider_fee_charging_and_price_rights_outside_activity_scope",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "OpenAI or Customer’s reseller",
+        "scope_note": "Sections 6.1, 6.3, 6.5, and 6.6 state that OpenAI or a reseller may charge applicable Fees and taxes, that Service Credits may be prepaid and are subject to referenced terms, and that pricing changes and correction of pricing errors are addressed. These are provider-side billing or pricing actions, not licensee charges to third parties; they cannot be represented faithfully with the available activities. The Service Credit Terms are not supplied.",
+        "condition_explanation": "Fees are determined by the applicable Order Form or, absent one, the Pricing Page. Applicable taxes are charged as required by law. Section 6.6 states that Pricing Page changes take effect 14 days after posting and permits correction of pricing errors even after invoice or payment.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 54,
+        "end_line": 55,
+        "clause_label": "gap/provider_suspension_powers_and_related_duties_outside_activity_scope",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "OpenAI and Customer",
+        "scope_note": "Sections 8.1–8.2: OpenAI may request Customer to suspend or terminate a relevant End User account for an End User’s Agreement violation or actual or impending Security Emergency; if Customer fails promptly, OpenAI may suspend or terminate that account. OpenAI may limit or suspend Services access when required by law, for Customer’s Agreement or OpenAI Policies violation, or as necessary to prevent or terminate a Security Emergency. OpenAI must use reasonable efforts to provide prior notice, narrowly tailor a security-emergency restriction, and cooperate to restore access promptly after verifying resolution. These account/service suspension and restoration actions are not available activities; they are not modeled as Use permissions.",
+        "condition_explanation": "A Security Emergency is defined at line 157 as use that could reasonably result in a security risk, credible risk of harm, infringement of third-party rights, or liability to OpenAI, the Services, or a third party. Reasonable prior notice may be omitted to the extent reasonably necessary. Narrow tailoring and restoration cooperation apply to limitations or suspensions for a Security Emergency.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly suspend or terminate the relevant End User account when OpenAI requests it under Section 8.1.",
+            "actor": "Customer",
+            "object": "Relevant End User account",
+            "trigger": "OpenAI requests suspension or termination because an End User violated the Agreement or caused, or will cause, a Security Emergency."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Use reasonable efforts to notify Customer before limiting or suspending Services access, narrowly tailor a limitation or suspension to prevent or terminate a Security Emergency, and cooperate promptly to restore access once resolution is verified.",
+            "actor": "OpenAI",
+            "object": "Customer’s Services access",
+            "trigger": "When OpenAI limits or suspends access under Section 8.2; prior notice may be omitted to the extent reasonably necessary, and tailoring and restoration cooperation apply to Security Emergency suspensions."
+          }
+        ]
+      },
+      {
+        "start_line": 58,
+        "end_line": 58,
+        "clause_label": "gap/customer_limited_services_use_right",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "during_term",
+          "requires": "in_accordance_with_agreement"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Sections 2.1–2.2 and 9.1: Customer may access and use the Services during the Term, including using the API to integrate the Services into Customer Applications and making Customer Applications available to End Users. The Agreement grants only a limited right to use the Services and transfers no ownership rights in the Services to Customer or End Users.",
+        "condition_explanation": "during_term means during the Agreement Term. in_accordance_with_agreement means subject to the Agreement’s applicable terms and restrictions.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The externally referenced DPA, Healthcare Addendum, Security Measures, Service Credit Terms, Order Forms, and Pricing Page are not supplied in full; their unstated contents and values are not inferred.",
+      "Several expressly stated actions are outside the available activity vocabulary, including payment to the provider, provider-side fee charging, providing audit reports, and suspension or termination of access. The clauses identify these limits rather than substituting a fictitious activity.",
+      "Section 5.1’s Customer termination option is represented only as a Use condition because termination is not an available activity."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0006",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "gap/customer_may_terminate_after_material_security_diminution",
+          "gap/openai_security_and_audit_obligations_outside_activity_scope",
+          "gap/personal_data_processing_requires_dpa_compliance",
+          "gap/protected_health_information_use_restricted"
+        ],
+        "reason": "Extracts the stated termination option, OpenAI security and audit duties, conditional DPA obligation, and PHI restriction. Security Measures and DPA details are not supplied, and the termination, security-compliance, and audit-report actions cannot be faithfully represented by available activities."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "gap/payment_and_billing_duties_not_activity_expressible",
+          "gap/provider_fee_charging_and_price_rights_outside_activity_scope"
+        ],
+        "reason": "Extracts the express Customer payment, billing, tax, and invoice-dispute duties and the provider-side fee and pricing terms. Payment and provider charging are not faithfully representable with the available activities; referenced Service Credit Terms are absent."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "gap/provider_suspension_powers_and_related_duties_outside_activity_scope"
+        ],
+        "reason": "Extracts the account and service suspension conditions and related notice, tailoring, and restoration duties. Suspension, termination of an End User account, and restoration are not available activities."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_grants_openai_limited_content_use_permission",
+          "openai_feedback_use_permission",
+          "gap/customer_limited_services_use_right"
+        ],
+        "reason": "The existing anchors cover Sections 9.2–9.3, and the added clause captures the limited Customer Services-use right and the Section 9.1 reservation that no Services ownership transfers."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

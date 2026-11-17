@@ -1,0 +1,74 @@
+{
+  "request_sha256": "e785a3c4880feb8228c91386a90dee42b1d5f9c9efbf947aa50567256892524e",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 79,
+        "end_line": 79,
+        "clause_label": "gap/commercial_terms_customer_electronic_communications",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "customer_agrees_to_receive_electronic_communications_related_to_services_or_terms"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial Terms of Service, M.2. The object is the Anthropic Services and communications concerning Customer's use of them or these Terms. This clause models Customer's express agreement to receive such communications, not Anthropic's discretionary methods of sending them.",
+        "condition_explanation": "Customer agrees to receive electronic communications from Anthropic based on Customer's use of the Services and related to these Terms. Except where applicable law prohibits it, Anthropic may send them by email, through the Services or Customer's management dashboard, or by website posting; Anthropic may also use text or SMS. Customer may ask Anthropic to stop messages or reply STOP to texts.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Receive electronic communications from Anthropic based on Customer's use of the Services and related to these Terms, subject to applicable law.",
+            "actor": "Customer",
+            "object": "Electronic communications related to the Services or these Terms",
+            "trigger": "When Anthropic sends such communications; the agreement to receive is subject to any prohibition under applicable law."
+          }
+        ]
+      },
+      {
+        "start_line": 80,
+        "end_line": 80,
+        "clause_label": "gap/commercial_terms_continued_use_after_terms_update",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "continued_service_use_after_updated_terms_effective"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial Terms of Service, M.3. The object is the Services governed by the updated Terms. This models the stated effect of continued use after an update, not a duty to use the Services or a license-version choice.",
+        "condition_explanation": "Anthropic may update the Terms. Ordinarily an update takes effect 30 days after posting or Customer otherwise receives Notice; an update made in response to a change in law or regulation takes effect immediately upon posting or Notice. Changes do not apply retroactively. Continued access after notice or posting constitutes agreement to the updated Terms. Any other amendment or modification requires a writing signed by both parties.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The immutable anchor commercial_terms_provide_service_access_export_restriction remains the representation of the M.8 restriction; this repair does not regenerate it.",
+      "M.1 notice-form, delivery, and effectiveness requirements; M.3's requirement for other amendments to be written and signed; M.4 assignment and delegation restrictions and exceptions; and M.5 good-faith negotiation following an invalidity determination are operative but do not faithfully map to an allowed activity/object without inventing a Use permission or treating assignment as Sublicense. They remain OUTSIDE_ACTIVITY_SCOPE: the unmatched actions are giving or receiving contractual Notices, amending the agreement, assigning rights or delegating duties, and negotiating a severability modification.",
+      "M.6 interpretation and M.7 governing-law and venue provisions do not impose a relevant activity constraint. M.8's export prohibition is not separately modeled because export is not an allowed activity; the existing anchor models only its service-access restriction."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0014",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "commercial_terms_provide_service_access_export_restriction",
+          "gap/commercial_terms_customer_electronic_communications",
+          "gap/commercial_terms_continued_use_after_terms_update"
+        ],
+        "reason": "The cited clauses cover the M.8 service-access restriction and expressible customer rules for electronic communications and continued use after updated Terms. Other operative provisions in the target paragraph concern contractual notices, amendments, assignment/delegation, and severability negotiation, which do not fit the supplied activities and objects; export itself is also outside the activity schema."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

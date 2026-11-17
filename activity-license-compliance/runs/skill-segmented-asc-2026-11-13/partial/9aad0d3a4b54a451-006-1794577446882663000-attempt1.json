@@ -1,0 +1,94 @@
+{
+  "clauses": [
+    {
+      "start_line": 141,
+      "end_line": 143,
+      "clause_label": "service_access_fees",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "applicable_service_fees_paid",
+            "complete_accurate_billing_information_if_customer_purchases_access",
+            "applicable_taxes_paid"
+          ]
+        }
+      },
+      "actor_role": "Customer",
+      "scope_note": "Section 6: access to or use of Anthropic Services or features. Fees are those listed on the Model Pricing Page unless Anthropic communicates otherwise in writing. Where access is purchased through an App Distributor, payment is made to that distributor and its payment, billing, and refund terms apply instead. This rule does not characterize payment to Anthropic as the Customer charging third parties.",
+      "condition_explanation": "applicable_service_fees_paid means applicable fees for the Services or features have been paid. complete_accurate_billing_information_if_customer_purchases_access applies when Customer purchases access. applicable_taxes_paid means any applicable tax is paid. The text says Customer may be required to pay fees; it does not establish that every use requires a fee.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Pay applicable fees listed for the Services unless Anthropic communicates otherwise in writing.",
+          "actor": "Customer",
+          "object": "Anthropic Services or features accessed or used",
+          "trigger": "When applicable fees are listed for the Services and are not otherwise communicated in writing by Anthropic."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Provide complete and accurate billing information.",
+          "actor": "Customer",
+          "object": "Payment Method for purchased access to Services or features",
+          "trigger": "When Customer purchases access to Services or features."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Pay applicable taxes.",
+          "actor": "Customer",
+          "object": "Purchased access to Services or features",
+          "trigger": "When applicable taxes are charged for the purchase."
+        }
+      ]
+    },
+    {
+      "start_line": 151,
+      "end_line": 153,
+      "clause_label": "seven_day_cancellation_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": "customer_resident_of_brazil_mexico_south_korea_or_taiwan_and_within_seven_days_of_subscription_entry",
+        "requires": true
+      },
+      "actor_role": "Customer",
+      "scope_note": "Section 6(4): a qualifying resident may use the Services during the seven-day subscription cancellation period. The cited text also specifies cancellation and refund procedures, but cancellation and refund actions are not represented by the supplied activities.",
+      "condition_explanation": "customer_resident_of_brazil_mexico_south_korea_or_taiwan_and_within_seven_days_of_subscription_entry means the Customer resides in one of the four listed jurisdictions and the use occurs within seven days after entering into the Subscription.",
+      "obligation_items": []
+    }
+  ],
+  "coverage_notes": [
+    "The Model Pricing Page, App Distributor terms, referenced cancellation provisions, and Appendix 1 are not supplied; their contents are not inferred.",
+    "The supplied activities do not represent paying a provider, authorizing or making a provider's charge, cancelling a subscription, providing a refund, acknowledging cancellation, or changing subscription fees. The operative payment, recurring renewal, cancellation, refund, reimbursement, fee-change, advance-notice, and cancellation-deadline rules in Section 6 therefore remain unresolved; the extracted access-fee condition does not fully represent them.",
+    "Section 7 makes third-party content, services, and integration use subject to applicable third-party terms, conditions, and policies, including privacy policies. The text does not identify particular terms or establish that a specific action is prohibited or permitted by them."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0021",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "service_access_fees",
+        "seven_day_cancellation_use"
+      ],
+      "reason": "The clauses capture the service-access fee condition and express permission to use the Services during the specified cancellation period. Other operative material in the paragraph—including subscription payment and renewal duties, cancellation rights and deadlines, refunds and reimbursements, and fee-change notice and cancellation conditions—cannot be faithfully represented with the supplied activities. Referenced materials are also absent."
+    },
+    {
+      "unit_id": "P0022",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "The paragraph subjects third-party content, services, and integration use to applicable external terms, conditions, and policies, including privacy policies, but those materials are not supplied. Its risk allocation and disclaimer language does not itself specify an activity constraint. The operative dependency on missing third-party terms cannot be represented as a specific permission or prohibition."
+    }
+  ]
+}

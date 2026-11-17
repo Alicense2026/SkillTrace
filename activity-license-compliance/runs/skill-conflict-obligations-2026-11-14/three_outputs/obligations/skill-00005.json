@@ -1,0 +1,143 @@
+{
+  "case_id": "skill-00005",
+  "csv_row": 6,
+  "source_excel_row": "18",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00005-1794590239237573000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可方对软件的每一副本或实质部分均须包含原版权声明和MIT许可声明；此要求只涉及受该许可覆盖的软件，不自动扩展至独立下游产品。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00005:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "activity:Copy",
+          "activity:Modify",
+          "activity:Combine",
+          "activity:Distribute",
+          "activity:Sublicense",
+          "activity:SellCopies"
+        ]
+      },
+      "unresolved_predicates": [
+        "whether_copy_or_substantial_portion_created_or_distributed"
+      ]
+    }
+  ],
+  "limitations": [
+    "对象图仅确认远程调用/链接，未确认两许可约束同一对象；未将下游复制、修改或分发视为已发生。MIT通知义务仅在形成相关副本或实质部分时触发。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "使用许可无附加义务；与已知上游使用相关。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未有复制活动事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未有修改活动事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未有合并活动事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未有分发活动事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未有再许可活动事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未有销售副本活动事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "使用许可无附加义务；下游对象的使用情况未单独提供。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制产生副本或实质部分时须保留两项声明；履行情况未知，义务保留为条件义务。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "修改涉及受许可软件副本或实质部分时，同一声明义务适用。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "合并涉及受许可软件副本或实质部分时，同一声明义务适用。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "发布涉及受许可软件副本或实质部分时，同一声明义务适用。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发涉及受许可软件副本或实质部分时，同一声明义务适用。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "再许可包含受许可软件副本或实质部分时，同一声明义务适用。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "出售涉及受许可软件副本或实质部分时，同一声明义务适用。"
+    }
+  ]
+}

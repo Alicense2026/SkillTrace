@@ -1,0 +1,184 @@
+{
+  "case_id": "chain-0356-ea7bc2d4d75e",
+  "status": "SUCCESS",
+  "request_sha256": "d569bc747a1c8a6cbbe3e667b54adf9f8f98ff875fc89bb3dfae18ab918fa87c",
+  "analysis": {
+    "case_id": "chain-0356-ea7bc2d4d75e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_remote_users_access_to_corresponding_source_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "chain-0356-ea7bc2d4d75e:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the copyright notice and permission notice in copies or substantial portions of the software.",
+        "trigger": "activity:Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ]
+      },
+      {
+        "activity": "ProvideNetworkService",
+        "subject": {
+          "artifact": "chain-0356-ea7bc2d4d75e:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "If the modified version supports remote interaction and users interact with it remotely through a computer network, prominently offer those users access to the Corresponding Source at no charge.",
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "version_supports_remote_interaction",
+            "users_interact_remotely_through_computer_network"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether the upstream modified version supports remote interaction",
+          "whether users interact remotely with that version",
+          "whether the source offer is provided"
+        ],
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游 AGPL 第13条摘录针对被修改程序支持远程交互、且用户通过网络与该修改版本交互的情形。已知代码集成修改及远程调用，但现有事实不能确定下游是否向用户提供该修改版本作为网络服务，也不能确定条款的触发条件已成立；因此保留条件义务，不认定违反。",
+      "MIT 摘录支持复制、修改的许可及通知条件；通知是否已随副本保留未知。对象图中的代码纳入不等于已发布打包物，未推定发生分发。",
+      "结构化条款标记 FIRST_PASS_REVIEW_REQUIRED；结论仅覆盖所列条款及摘录，不推断未映射条款。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19743,
+    "input_tokens_details": {
+      "cached_tokens": 19584,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1306,
+    "output_tokens_details": {
+      "reasoning_tokens": 293
+    },
+    "total_tokens": 21049,
+    "attribution": {
+      "items": {
+        "msg_000f263d61ab0401016af3060759d487d195f80080e0b9e895": {
+          "input_tokens": 17711,
+          "cached_tokens": 17554,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17711,
+              "cached_tokens": 17554,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_000f263d61ab0401016af3060e5c9087d188ee4d3b26cf0746": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1013,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1013
+            }
+          ]
+        },
+        "rs_000f263d61ab0401016af3060e40f087d1b26b4245a58cf486": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 293
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 30.061,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

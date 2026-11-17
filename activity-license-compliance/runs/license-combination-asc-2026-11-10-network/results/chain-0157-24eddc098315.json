@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0157-24eddc098315",
+  "status": "SUCCESS",
+  "request_sha256": "bf2b9edb8d4f6501e50ec9c1aa98ed719f0ed3ca448b93fce9411cf9a02a6b23",
+  "analysis": {
+    "case_id": "chain-0157-24eddc098315",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "within_license_scope"
+          },
+          "S": {
+            "artifact": "chain-0157-24eddc098315:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b4c1aacb28693f0e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0157-24eddc098315:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查的相关原文摘录为 CC-BY-SA-4.0 第2(a)节授权片段及 MIT 授权、通知条款。CC 摘录指出授权限于 Licensed Rights，但未提供当前活动是否属于该范围所需的完整定义及具体条件；不能据此补写归属、相同方式共享或其他义务。",
+      "可信事实确认的是远程服务调用及 API/代码纳入关系，并未确认分发、复制、修改、组合或下游 MIT 软件本身的使用。对象图中的依赖、捆绑及修改副本范围均未知。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0157-24eddc098315:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用落入 CC-BY-SA-4.0 的 Licensed Rights 范围，须遵守该许可适用条件。",
+        "trigger": "all",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope",
+          "CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0157-24eddc098315:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用 MIT 许可的软件，须按 MIT 通知条款在所有副本或实质部分中包含版权声明及许可声明。",
+        "trigger": "all",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_software_use",
+          "copy_or_substantial_portion"
+        ],
+        "source_refs": [
+          "license-text:downstream:b4c1aacb28693f0e"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21988,
+    "input_tokens_details": {
+      "cached_tokens": 21760,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1007,
+    "output_tokens_details": {
+      "reasoning_tokens": 238
+    },
+    "total_tokens": 22995,
+    "attribution": {
+      "items": {
+        "msg_043b78669a27638d016af2fdc6e83487d2853e2783aee29364": {
+          "input_tokens": 19956,
+          "cached_tokens": 19730,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19956,
+              "cached_tokens": 19730,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_043b78669a27638d016af2fdcc386087d28d1f7205238b34fe": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 769,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 769
+            }
+          ]
+        },
+        "rs_043b78669a27638d016af2fdcc216087d2b39cacbf1b9bd575": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 238
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.109,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

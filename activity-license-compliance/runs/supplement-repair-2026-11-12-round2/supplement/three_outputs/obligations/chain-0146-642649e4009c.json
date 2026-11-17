@@ -1,0 +1,40 @@
+{
+  "case_id": "chain-0146-642649e4009c",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游MIT软件时包含版权声明和许可声明",
+      "source_refs": [
+        "license-text:upstream:bef591f1c28b6755"
+      ],
+      "subject": {
+        "artifact": "chain-0146-642649e4009c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "Use",
+      "unresolved_predicates": [
+        "include_copyright_and_permission_notice"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "不得分发下游LicenseRef-Custom原文所描述的仓库源代码",
+      "source_refs": [
+        "license-text:downstream:a53ccaf49d1cf3ce"
+      ],
+      "subject": {
+        "artifact": "chain-0146-642649e4009c:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "Distribute",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "scope_shared"
+      ]
+    }
+  ]
+}

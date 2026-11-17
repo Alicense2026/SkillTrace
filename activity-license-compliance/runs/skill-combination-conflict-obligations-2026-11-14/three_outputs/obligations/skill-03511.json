@@ -1,0 +1,461 @@
+{
+  "case_id": "skill-03511",
+  "csv_row": 3512,
+  "source_excel_row": "4856",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-03511-1794594056749662000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游被许可人使用数据库时，须遵守ODC-By许可条款；当前摘录未列全相关具体条件。",
+      "source_refs": [
+        "license:1f4b77eec815b0a3506bd47f5e755e56d4e20ef033780e061032fea2f720bf28"
+      ],
+      "subject": {
+        "artifact": "skill-03511:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "section_4_conditions_complied_with"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若上游被许可人公开传达数据库、衍生数据库或集体数据库中的数据库材料，须仅依ODC-By许可传达，并在材料及相关文档中附许可副本或URI、保留版权/数据库权/许可通知；因文件结构无法放入时，将通知置于用户可能查找的位置。",
+      "source_refs": [
+        "license:1f4b77eec815b0a3506bd47f5e755e56d4e20ef033780e061032fea2f720bf28"
+      ],
+      "subject": {
+        "artifact": "skill-03511:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "publicly_conveys_database_or_derivative_database_or_database_in_collective_database",
+      "unresolved_predicates": [
+        "publicly_conveys_database_or_derivative_database_or_database_in_collective_database",
+        "required_notices_cannot_be_placed_in_particular_file_due_to_structure"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若上游被许可人公开使用含受许可数据库内容的Produced Work，须附合理通知，说明内容来源于受许可数据库材料且依据ODC-By提供。",
+      "source_refs": [
+        "license:1f4b77eec815b0a3506bd47f5e755e56d4e20ef033780e061032fea2f720bf28"
+      ],
+      "subject": {
+        "artifact": "skill-03511:upstream",
+        "kind": "DerivativeWork"
+      },
+      "trigger": "publicly_uses_produced_work",
+      "unresolved_predicates": [
+        "publicly_uses_produced_work"
+      ]
+    },
+    {
+      "activity": "Sublicense",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游被许可人不得再许可该数据库；该限制针对数据库，不自动扩及远程服务或独立下游代码。",
+      "source_refs": [
+        "license:1f4b77eec815b0a3506bd47f5e755e56d4e20ef033780e061032fea2f720bf28"
+      ],
+      "subject": {
+        "artifact": "skill-03511:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "activity:Sublicense"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若下游被许可人依据Apache-2.0分发Work或Derivative Work副本，须向接收者提供许可副本；对已修改文件附醒目的修改声明；分发源代码形式的Derivative Work时保留适用源代码通知；若Work分发含NOTICE文件且分发Derivative Work，附相关归属通知的可读副本。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-03511:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Distribute",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "licensee_distributes_modified_file",
+        "licensee_distributes_derivative_in_source_form",
+        "work_includes_notice_file_as_part_of_distribution",
+        "licensee_distributes_derivative_work"
+      ]
+    }
+  ],
+  "limitations": [
+    "已确认的事实是下游通过远程服务调用并链接上游数据集；未证明传输数据库副本、捆绑、修改、分发、再许可或下游商用。远程交互本身不触发ODC-By公开传达条件。",
+    "对象图未确认两许可约束同一对象；ODC-By数据库材料与Apache下游Work/Derivative Work不能仅凭API调用视为同一对象，故无许可冲突结论。",
+    "结构化摘录未覆盖ODC-By及Apache-2.0全文所有条款；仅据所提供的原文及映射列示相关规则，不推断遗漏条款。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用上游数据库；许可授予受许可条款约束，具体条款覆盖不完整。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "商业使用权明确包含在许可授予内，仍受许可条款约束；无商业使用事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "该Use授予适用于数据库内容的提取/再利用，仍受许可条款约束；具体活动范围未知。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现创建衍生数据库事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现组合数据库事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现复制事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "远程调用不等于公开分发或传达副本。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条为许可方在特定司法辖区保留收费权，并非已确认的被许可人义务。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条为许可方放弃特定收费权，不产生本案被许可人义务。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "许可方放弃自愿许可计划下的收费权，无被许可人履行义务。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "替代许可仅在实际提供时可选；无其已提供的事实，且非强制义务。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用触发遵守许可条件的总要求；所给摘录未完整列明条件。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "公开传达时须仅依ODC-By；触发事实未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "公开传达时须附许可副本或URI；触发事实未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "公开传达时须保留指定通知；触发事实未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "仅在文件结构导致不能直接放置通知时适用替代位置要求。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "公开使用含受许可内容的Produced Work时须通知；是否发生未知。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "数据库再许可被禁止；无再许可事实，保留禁止条件。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条是许可方在特定沟通时向接收者提供许可的义务，不是被许可人的履行义务。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "条款明确无需负责执行第三方遵守许可；本案无相关执行要求。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无修改衍生数据库事实。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现向他人授予或确认许可权利、或附加限制的事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条为许可方道德权利放弃。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条为许可方不主张道德权利的承诺。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条说明作者可能保留权利，不规定本案被许可人行为义务。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供独立适用法律权利事实；该条不创设许可义务。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供适用数据库权利例外事实；该条不创设许可义务。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供独立法律限制或例外适用事实；该条不创设许可义务。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认对不实质内容的提取或再利用。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认许可违约或终止事实。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认违约或权利终止事实；该条为许可方的终止保护。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认许可终止或权利恢复事实。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认违约停止及权利恢复条件。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认许可终止；更改许可条件或停止提供亦无事实。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供相关司法辖区额外权利事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Apache复制授权针对下游Work；本案仅确认远程调用，未确认复制该Work。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认制作下游Work的衍生作品。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认对下游Work或其衍生作品再许可。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "若分发下游Work副本，Apache分发条件适用；当前分发及相关条件未知。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认专利权利要求或相关专利行为。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认出售副本或相关专利权利要求。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认发起针对Work或贡献的专利诉讼。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "若复制并分发下游Work，须依适用情形提供许可副本及修改声明；是否发生未知。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "分发Work或Derivative Work时适用许可副本、修改文件通知及相应源代码/NOTICE条件；触发事实未知。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认针对下游Work的修改或附加许可条款。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认对下游Derivative Work附加许可条款。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认使用Apache许可方商标或名称。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认使用Apache许可方商标或名称。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未确认分发时提供或收费承担支持、保证、赔偿或其他责任。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游Derivative Work分发。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "若分发修改文件，须附醒目的修改声明；触发事实未知。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "仅当以源代码形式分发Derivative Work时，保留适用源代码通知。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "仅当Work分发包含NOTICE文件且分发Derivative Work时，附适用归属通知。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认对下游Work的使用、复制或分发及其许可条件适用事实。"
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "case_id": "chain-0212-84e8e7f4bfc4",
+  "input_group_row": 212,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0212-84e8e7f4bfc4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0212-84e8e7f4bfc4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true,
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0212-84e8e7f4bfc4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0212-84e8e7f4bfc4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:406f33427c3fb7cd"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agree_to_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0212-84e8e7f4bfc4:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:406f33427c3fb7cd"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0212-84e8e7f4bfc4:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:406f33427c3fb7cd"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "when": true,
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0212-84e8e7f4bfc4:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实为远程API调用及LINK关系；没有证据表明上下游许可约束同一对象，因此不据此认定许可冲突。API调用不等同于权重转移、修改或分发。",
+      "上游结构化摘录同时包含一般商业使用禁止和付费功能/模型使用的条件许可，且注明付费功能授权另有规定。具体服务类型、适用产品规则及是否取得必要授权未明；不能据此将收费等同商用或认定违规。",
+      "上游使用禁止条款的摘录涉及多类具体行为，但现有事实未显示用户实施其中任一行为；禁止条款适用边界及例外仍以完整协议和相关平台规则为准。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0212-84e8e7f4bfc4:downstream",
+          "kind": "CombinedProduct"
+        },
+        "requirement": "同意PolyForm-Noncommercial-1.0.0条款，并确保用途属于许可允许的用途",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "agree_to_terms",
+          "permitted_purpose"
+        ],
+        "source_refs": [
+          "license-text:downstream:406f33427c3fb7cd"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-0212-84e8e7f4bfc4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若商业使用适用付费功能/模型条款，应支付必要费用并遵循产品规则；一般商业使用限制及其与该付费条款的适用关系尚待明确",
+        "trigger": "activity:CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "commercial_use",
+          "paid_feature_or_model",
+          "pay_required_fee_and_follow_product_rules"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 46407,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1694,
+    "output_tokens_details": {
+      "reasoning_tokens": 395
+    },
+    "total_tokens": 48101,
+    "attribution": {
+      "items": {
+        "msg_0ca5fc4059ebcc97016af52fef481487d08101f762cd95ba4c": {
+          "input_tokens": 44337,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 44337,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ca5fc4059ebcc97016af52fef481487d09434f63fbc75ec66": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ca5fc4059ebcc97016af52ff725b887d0a4add55a0022a325": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1299,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1299
+            }
+          ]
+        },
+        "rs_0ca5fc4059ebcc97016af52ff70a2887d0aca847f6d37dee70": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 395
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "8090ae3d1b6ba99647fc4d23e9d5423767db091b5fc557a338c3cb28fb01158a",
+  "elapsed_seconds": 40.5
+}

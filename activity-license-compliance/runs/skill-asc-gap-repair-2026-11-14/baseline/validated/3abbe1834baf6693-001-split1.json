@@ -1,0 +1,119 @@
+{
+  "request_sha256": "83adce9650bca5afcfe6684f406b1310a48d9dd5e7ad9bec50464b2a5348023b",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 9,
+        "end_line": 9,
+        "clause_label": "agreement_effect_and_new_features",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "agreement_effective"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The agreement applies to use of the Kimi 大模型（开放平台） service. It becomes effective upon the user's acceptance click or upon the user's use of the service. New features, products, and services added to the platform are also subject to the agreement, unless laws or regulations expressly provide otherwise.",
+        "condition_explanation": "agreement_effective means either the user clicked to accept the agreement or the user used the platform. The exception is an express contrary requirement of law or regulation.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 12,
+        "end_line": 17,
+        "clause_label": "use_prerequisites_and_legal_capacity",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "user_registered",
+              "user_real_name_authenticated",
+              "user_has_legally_appropriate_civil_capacity"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Before using the platform, the user must register and complete real-name authentication. Before beginning registration to use the service, the user must have civil capacity appropriate to the user's conduct under the laws of the People's Republic of China. The agreement states that registration by a person without or with limited civil capacity is void from the outset; upon discovery, the provider may immediately stop providing service or cancel the account. It also assigns resulting losses to the user or guardian and provides for compensation for losses caused to the provider or related parties.",
+        "condition_explanation": "user_registered means the user has completed the required registration. user_real_name_authenticated means the user has completed real-name authentication. user_has_legally_appropriate_civil_capacity means the user has the civil capacity appropriate to the user's conduct under PRC law. The voidness statement, provider's service/account measures, and loss and compensation allocations are described in scope but are not represented as additional activity rules because the supplied activity vocabulary does not faithfully express them.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Complete user registration before using the platform.",
+            "actor": "user",
+            "object": "Kimi 大模型（开放平台） service",
+            "trigger": "Before the user uses the platform."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Complete real-name authentication before using the platform.",
+            "actor": "user",
+            "object": "Kimi 大模型（开放平台） service",
+            "trigger": "Before the user uses the platform."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The excerpt does not specify the procedures or criteria for registration and real-name authentication.",
+      "The excerpt refers to applicable laws and regulations but does not reproduce them.",
+      "The stated voidness consequence, provider's ability to stop service or cancel an account, and loss and compensation allocations in P0005 cannot be faithfully represented using the supplied activities and modalities.",
+      "P0006 defines registration and describes provider measures for improper registration or use of multiple accounts, plus a compensation consequence. The provider measures and compensation consequence cannot be faithfully represented using the supplied activities and modalities; the definition alone does not create a separate behavioral rule."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "The title and agreement heading identify the document but impose no operative rule."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "The paragraph defines the provider, platform, and user; these definitions provide context but do not themselves grant or restrict an activity."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "agreement_effect_and_new_features"
+        ],
+        "reason": "The paragraph states when the agreement takes effect and that it applies to new platform features, products, and services, subject to the stated legal exception."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "MODELED",
+        "clause_labels": [
+          "use_prerequisites_and_legal_capacity"
+        ],
+        "reason": "The listed registration and real-name authentication steps are represented as prerequisites to use."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "use_prerequisites_and_legal_capacity"
+        ],
+        "reason": "The civil-capacity prerequisite is modeled, but the paragraph also states that an agreement may be void from the outset, permits the provider to stop service or cancel the account, and allocates losses and compensation. Those consequences cannot be faithfully represented with the supplied activities and modalities."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The paragraph defines registration and authorizes the provider to freeze or close accounts or refuse service for improper registration or use of multiple accounts, and states a compensation consequence. These provider actions and the liability allocation cannot be faithfully represented with the supplied activities and modalities."
+      }
+    ]
+  },
+  "attempt": 2
+}

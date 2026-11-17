@@ -1,0 +1,71 @@
+{
+  "case_id": "chain-0039-ed8c443cb138",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0039-ed8c443cb138:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "避免实施摘录所列不当使用行为；具体禁止范围以适用条款及其完整上下文为准。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "conduct_matches_prohibition_in_excerpt"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "subject": {
+        "artifact": "chain-0039-ed8c443cb138:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若适用付费功能/模型的商业使用路径，须支付所需费用并遵循产品规则；若适用免费功能限制，则不得商业使用。适用路径取决于功能及产品规则。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "commercial_use"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "commercial_use",
+        "feature_or_model_pricing_scope",
+        "pay_required_fee_and_follow_product_rules"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    },
+    {
+      "activity": "Charge",
+      "subject": {
+        "artifact": "chain-0039-ed8c443cb138:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若收费行为涉及适用的付费功能/模型，须支付所需费用并遵循产品规则；若适用免费功能限制，则不得实施该收费行为。",
+      "trigger": "activity:Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Charge",
+        "feature_or_model_pricing_scope",
+        "pay_required_fee_and_follow_product_rules"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    }
+  ],
+  "aggregate_count": 45
+}

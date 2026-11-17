@@ -1,0 +1,244 @@
+{
+  "case_id": "skill-00030",
+  "csv_row": 31,
+  "source_excel_row": "56",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00030-1794590652287808000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人就其制作或分发的软件副本或实质部分，在所有此类副本或实质部分中附上原版权声明和 MIT 许可声明；本义务仅及相关软件副本或实质部分，不因单纯远程 API 调用而触发。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00030:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          {
+            "all": [
+              "activity:Copy",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Modify",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Combine",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Distribute",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Sublicense",
+              "copy_or_substantial_portion_created"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Copy",
+        "activity:Modify",
+        "activity:Combine",
+        "activity:Distribute",
+        "activity:Sublicense",
+        "copy_or_substantial_portion_created"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人就其制作或分发的软件副本或实质部分，在所有此类副本或实质部分中附上原版权声明和 MIT 许可声明；本义务仅及相关软件副本或实质部分，不因单纯远程 API 调用而触发。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00030:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          {
+            "all": [
+              "activity:Copy",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Modify",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Combine",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Distribute",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Sublicense",
+              "copy_or_substantial_portion_created"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Copy",
+        "activity:Modify",
+        "activity:Combine",
+        "activity:Distribute",
+        "activity:Sublicense",
+        "copy_or_substantial_portion_created"
+      ]
+    }
+  ],
+  "limitations": [
+    "本地 MIT 文本仅明确规定：复制或实质部分须附版权声明和许可声明。事实显示的是远程 API 调用及链接，未显示复制、分发或修改；不能据此推定通知义务已触发或未履行。",
+    "上游与下游许可标签均为 MIT，匹配同一许可文本。对象图未确认许可约束同一对象；本次未发现相反条款或可确认的许可冲突。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "Use 已有许可；该条未规定独立附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制条件及通知义务合并保留。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "修改时如形成副本或实质部分，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "合并时如形成副本或实质部分，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "发布/分发时如涉及副本或实质部分，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发副本或实质部分时，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "再许可涉及副本或实质部分时，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 不在本任务 canonical_activities 中，且无该活动事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "Use 已有许可；该条未规定独立附加义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "复制条件及通知义务合并保留。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "修改时如形成副本或实质部分，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "合并时如形成副本或实质部分，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "发布/分发时如涉及副本或实质部分，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "分发副本或实质部分时，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "再许可涉及副本或实质部分时，通知义务合并保留。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies 不在本任务 canonical_activities 中，且无该活动事实。"
+    }
+  ]
+}

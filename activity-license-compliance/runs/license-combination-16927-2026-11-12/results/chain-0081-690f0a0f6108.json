@@ -1,0 +1,94 @@
+{
+  "case_id": "chain-0081-690f0a0f6108",
+  "input_group_row": 81,
+  "aggregate_count": 18,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "18"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0081-690f0a0f6108",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": "applicable_fees_due",
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0081-690f0a0f6108:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:34ba999b35311cab"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": true,
+            "requires": "retain_applicable_notices"
+          },
+          "S": {
+            "artifact": "chain-0081-690f0a0f6108:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0081-690f0a0f6108:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer pays applicable service fees according to the Order Form and payment terms.",
+        "trigger": "applicable_fees_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "fee_payment_status"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录证明的是对 OpenAI 服务的远程调用和链接；未证明下游 ISC 软件被使用、复制、修改或分发，也未证明两份许可约束同一对象。因此未据许可名称或链接关系认定许可冲突。",
+      "OpenAI 摘录涉及适用费用、订单表及付款条款；任务未提供费用是否到期或付款履行情况。该摘录不能证明用户向下游收费。",
+      "结构化条款标记为 FIRST_PASS_REVIEW_REQUIRED；当前提供的 OpenAI 摘录未覆盖完整协议，其他可能相关条款未据此推定。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0120-1191de8bccb8.json",
+  "original_case_id": "chain-0120-1191de8bccb8",
+  "original_request_sha256": "ac664dccda0fdae2c51879d4fd91cb0bd9bc110a15bf37a1219ec0dc713a9a86",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0120-1191de8bccb8": "chain-0081-690f0a0f6108",
+    "license-text:upstream:c9e0443a56323634": "license-text:upstream:c9e0443a56323634",
+    "license-text:downstream:34ba999b35311cab": "license-text:downstream:34ba999b35311cab",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/119": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/80"
+  }
+}

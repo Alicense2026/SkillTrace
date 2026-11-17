@@ -1,0 +1,942 @@
+{
+  "case_id": "skill-01645",
+  "csv_row": 1646,
+  "source_excel_row": "2272",
+  "status": "SUCCESS",
+  "request_sha256": "69e85d098533ccf39308452951aab1c88e771c1aeddf19ff7565dfb202f8df08",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agreement_effective",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "user_registered",
+                "user_real_name_authenticated",
+                "user_has_legally_appropriate_civil_capacity"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "use_is_not_improper_or_disruptive",
+                "use_does_not_infringe_third_party_rights"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_is_by_any_method_listed_in_lines_58_to_62",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "content_is_or_induces_platform_output_of_any_content_listed_in_lines_46_to_56",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "provider_and_relevant_rightsholders_gave_prior_written_consent"
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "noncommercial_personal_research_and_study",
+                "provider_and_relevant_rightsholders_gave_prior_written_consent"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "modified_program_supports_remote_computer_network_interaction",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01645:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "case_id": "skill-01645",
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查与已知Use及远程交互相关的本地条款；AGPL其他活动条款按已知活动及触发条件审计。",
+      "远程调用仅证实对上游服务的使用，不证明下游包含或修改AGPL覆盖程序；D050源码义务仅在修改AGPL覆盖程序且该版本支持远程交互时适用。相关谓词及覆盖范围未知，保留条件义务，不认定违规。",
+      "未提供注册、实名认证、民事行为能力、具体使用方式、商业使用或事先书面授权事实；按条件义务处理。proprietary条款仅约束其规定的服务、内容及相应主体。",
+      "AGPL第2节以外的传播条件在D005摘录中仅被引用，具体内容未在摘录给出；不推断缺失条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "用户使用Kimi开放平台前须完成注册和实名认证，并具备与行为相适应的法定民事行为能力。",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "subject": {
+          "artifact": "skill-01645:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "user_registered",
+          "user_real_name_authenticated",
+          "user_has_legally_appropriate_civil_capacity"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "用户不得不当使用、扰乱平台正常秩序或侵犯第三方权利；不得以协议所列方式使用平台，包括反向工程、开发或训练竞争性模型及用于须具备主体资格的服务；不得发送或诱导输出协议所列禁止内容。",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "subject": {
+          "artifact": "skill-01645:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "use_is_not_improper_or_disruptive",
+          "use_does_not_infringe_third_party_rights",
+          "use_is_by_any_method_listed_in_lines_58_to_62",
+          "content_is_or_induces_platform_output_of_any_content_listed_in_lines_46_to_56"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "用户不得未经服务提供者及相关权利人事先书面同意，以商业化方式使用Kimi开放平台或其生成内容。",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "subject": {
+          "artifact": "skill-01645:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "commercial_use",
+          "provider_and_relevant_rightsholders_gave_prior_written_consent"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "用户仅以非商业的个人研究学习方式使用Kimi开放平台；如服务提供者及相关权利人事先书面同意另行授权，按该授权范围适用。",
+        "source_refs": [
+          "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+        ],
+        "subject": {
+          "artifact": "skill-01645:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "commercial_use",
+          "provider_and_relevant_rightsholders_gave_prior_written_consent"
+        ]
+      },
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若下游主体修改AGPL覆盖程序且修改版本支持远程网络交互，须向远程交互用户显著提供免费获取该修改版本对应源码的机会；对象是AGPL覆盖程序的修改版本，不是被调用的上游API。",
+        "source_refs": [
+          "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+        ],
+        "subject": {
+          "artifact": "skill-01645:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_AGPL_covered_program",
+            "modified_program_supports_remote_computer_network_interaction"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_AGPL_covered_program",
+          "modified_program_supports_remote_computer_network_interaction",
+          "scope_shared"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "协议生效条件，无独立履行义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "注册、实名认证及法定民事行为能力要求已保留。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "登录许可，无当前活动相关独立义务。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "账户转让许可；无转让事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "账户转让限制；无转让事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "信息更新及依法核验无已知相关事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务主体为服务提供者。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "属于服务提供者处置权限。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对服务提供者使用内容训练。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "义务主体为服务提供者。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "涉及服务提供者调整免费服务。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无已知修改输出标识活动。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "服务使用许可，无独立履行要求。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "使用行为限制已合并保留。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "协议所列内容限制已保留为Use条件。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "协议所列不当使用限制已保留为Use条件。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无向第三方提供服务事实；该条为责任分配。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无海外使用事实。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "协议终止权与当前活动无关。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "涉及服务提供者终止服务权限。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "涉及终止后服务提供者处理信息。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2,
+          3
+        ],
+        "reason": "商业化限制与非商业个人研究学习条件均保留。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "竞争性开发限制并入Use条件。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "权属与风险分配未形成当前活动的独立履行要求。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "许可授予服务提供者，针对非个人信息。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "服务提供者审查及处置权限。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "服务提供者公示权限。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "服务提供者信息处置权限。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "服务提供者停止服务或注销账户权限。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "服务提供者账户处置权限。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "许可文件原样复制许可；无该复制事实。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无修改许可文件事实。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "API调用不证明运行AGPL覆盖作品；该许可无额外履行义务。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无为专属修改或运行设施目的转交覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无已知转交活动；摘录仅引用未提供的后续条件，不据此生成义务。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无再许可活动事实。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转交覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无原样源码副本转交事实。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转交副本并收费事实。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无源码形式转交事实。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无组合活动事实。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无目标代码转交事实。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无实体产品目标代码转交事实。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无实体产品目标代码转交事实。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无符合该条的目标代码转交事实。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无指定地点提供目标代码事实。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无点对点转交目标代码事实。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无目标代码转交事实。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无用户产品交易或目标代码转交事实。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无接收者修改或安装后请求网络访问事实。"
+      },
+      {
+        "rule_ref": "D021",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无第6节对应源码或安装信息提供事实。"
+      },
+      {
+        "rule_ref": "D022",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "额外许可适用规则，无已知额外许可事实。"
+      },
+      {
+        "rule_ref": "D023",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "可选移除额外许可，不是强制义务。"
+      },
+      {
+        "rule_ref": "D024",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无组合活动事实。"
+      },
+      {
+        "rule_ref": "D025",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无向新增材料附加条款事实。"
+      },
+      {
+        "rule_ref": "D026",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无相关修改或组合材料事实。"
+      },
+      {
+        "rule_ref": "D027",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无依第7节添加条款事实。"
+      },
+      {
+        "rule_ref": "D028",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无传播覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D029",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无修改AGPL覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D030",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无既往违约或权利恢复事实。"
+      },
+      {
+        "rule_ref": "D031",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无通知后补救事实。"
+      },
+      {
+        "rule_ref": "D032",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无权利终止事实。"
+      },
+      {
+        "rule_ref": "D033",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "接收或运行许可不形成额外履行义务。"
+      },
+      {
+        "rule_ref": "D034",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无点对点接收副本的附带传播事实。"
+      },
+      {
+        "rule_ref": "D035",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无修改覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D036",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无传播覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D037",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转交覆盖作品事实。"
+      },
+      {
+        "rule_ref": "D038",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "第三方合规责任限制，不构成当前履行义务。"
+      },
+      {
+        "rule_ref": "D039",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无实体交易传播事实。"
+      },
+      {
+        "rule_ref": "D040",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无实体交易传播事实。"
+      },
+      {
+        "rule_ref": "D041",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无对AGPL权利施加限制事实。"
+      },
+      {
+        "rule_ref": "D042",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无对AGPL权利收费事实。"
+      },
+      {
+        "rule_ref": "D043",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无相关专利诉讼事实。"
+      },
+      {
+        "rule_ref": "D044",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "贡献者专利许可，无当前履行义务。"
+      },
+      {
+        "rule_ref": "D045",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无明知依赖专利许可并转交作品事实。"
+      },
+      {
+        "rule_ref": "D046",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转交并授予专利许可事实。"
+      },
+      {
+        "rule_ref": "D047",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无所述第三方专利安排事实。"
+      },
+      {
+        "rule_ref": "D048",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "保留既有抗辩，不构成履行义务。"
+      },
+      {
+        "rule_ref": "D049",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无转交及无法同时履行的事实。"
+      },
+      {
+        "rule_ref": "D050",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "修改AGPL覆盖程序且该版本支持远程交互时的源码义务已条件保留；API调用不证明触发。"
+      },
+      {
+        "rule_ref": "D051",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无AGPL与GPLv3作品组合事实。"
+      },
+      {
+        "rule_ref": "D052",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "无该组合作品或转交事实。"
+      },
+      {
+        "rule_ref": "D053",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "选择后续版本为可选权利，不是义务。"
+      },
+      {
+        "rule_ref": "D054",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "选择版本为可选权利，不是义务。"
+      },
+      {
+        "rule_ref": "D055",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "代理接受版本所产生的是可选权利。"
+      },
+      {
+        "rule_ref": "D056",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "版本选择规则不构成当前履行义务。"
+      },
+      {
+        "rule_ref": "D057",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "贡献者专利许可，无当前履行义务。"
+      },
+      {
+        "rule_ref": "D058",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "贡献者专利许可，无当前履行义务。"
+      },
+      {
+        "rule_ref": "D059",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "贡献者专利许可，无当前履行义务。"
+      },
+      {
+        "rule_ref": "D060",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "贡献者专利许可，无当前履行义务。"
+      },
+      {
+        "rule_ref": "D061",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "贡献者专利许可，无当前履行义务。"
+      },
+      {
+        "rule_ref": "D062",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "支持或保修收费许可，不是强制义务。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01645-1794599240066588000-3.json",
+  "usage": {
+    "input_tokens": 60937,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 5424,
+    "output_tokens_details": {
+      "reasoning_tokens": 623
+    },
+    "total_tokens": 66361,
+    "attribution": {
+      "items": {
+        "msg_0b7b47a8f4cb3728016af76a25e52487d08211af0860e68f55": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b7b47a8f4cb3728016af76a25e52487d0a19da19269fd1daa": {
+          "input_tokens": 58213,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 58213,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b7b47a8f4cb3728016af76a31e25887d0a65d70644a685f52": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 4801,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 4801
+            }
+          ]
+        },
+        "rs_0b7b47a8f4cb3728016af76a2f6b3487d0ab1208f14b86495a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 492
+        },
+        "rs_0b7b47a8f4cb3728016af76a310e8487d0b192dd7a83d6bb76": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 91
+        },
+        "rs_0b7b47a8f4cb3728016af76a31c6b487d0b16e7d077de6cc17": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 40
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 3,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

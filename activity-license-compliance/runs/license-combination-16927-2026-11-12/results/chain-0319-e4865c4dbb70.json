@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0319-e4865c4dbb70",
+  "input_group_row": 319,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0319-e4865c4dbb70",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0319-e4865c4dbb70:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "可信记录确认对 Llama 3.2 材料进行远程服务调用及 Use，但不证明权重转移、修改、分发或 Elastic 软件被托管并向第三方提供实质功能。Elastic 的托管服务限制因此不能仅凭远程 API 调用认定已触发。",
+      "Llama 3.2 授权摘录概括要求遵守协议；未提供足以判断远程调用适用的其他具体条件。相关结构化抽取标记 FIRST_PASS_REVIEW_REQUIRED，结论限于所列授权条件，不推断未提供的条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Llama Materials 时遵守 Llama 3.2 Community License Agreement。",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "subject": {
+          "artifact": "chain-0319-e4865c4dbb70:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 31625,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 781,
+    "output_tokens_details": {
+      "reasoning_tokens": 291
+    },
+    "total_tokens": 32406,
+    "attribution": {
+      "items": {
+        "msg_0e9f8e08ed065e0c016af531aaebd487d194400ca880ecec20": {
+          "input_tokens": 29555,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29555,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e9f8e08ed065e0c016af531aaebd487d198ebcfc2f1c4193a": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e9f8e08ed065e0c016af531b0c3b887d1b22bd661011bae0f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 490,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 490
+            }
+          ]
+        },
+        "rs_0e9f8e08ed065e0c016af531b0a81887d18a51e6c3f16336db": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 291
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "2b3df06643f16fa1f65142e086ca3b199820f18ca7e0d7224dcd0952e0112b16",
+  "elapsed_seconds": 22.68
+}

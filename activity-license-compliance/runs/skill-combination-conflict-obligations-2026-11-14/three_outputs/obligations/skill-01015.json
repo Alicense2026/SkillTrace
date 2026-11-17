@@ -1,0 +1,149 @@
+{
+  "case_id": "skill-01015",
+  "csv_row": 1016,
+  "source_excel_row": "1405",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01015-1794598207902476000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人对上游 Software 的每份副本或实质部分，须包含该 Software 的版权声明及 MIT 许可声明；若未制作副本或实质部分，则无需履行该通知条件。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-01015:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Copy",
+      "unresolved_predicates": [
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如被许可人复制下游所许可的 Software 并形成副本或实质部分，须在每份副本或实质部分中包含该 Software 的版权声明及 MIT 许可声明；如未形成副本或实质部分，则无需履行该通知条件。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-01015:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Copy",
+      "unresolved_predicates": [
+        "downstream_copy_activity",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    }
+  ],
+  "limitations": [
+    "已检查本地 MIT 原文摘录及其映射条款。记录确认上游 Use 与 Copy；未确认下游是否发生 Copy，也未提供通知实际包含情况，故保留相应条件义务，不认定违规。",
+    "对象图中的调用、链接、打包及修改状态不能单独证明已分发或已将同一许可对象复制到下游；本结论限于已提供事实和条款范围。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游 Use 已确认；该许可摘录对单独使用未规定附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游 Copy 已确认；通知条件已作为条件义务保留。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认上游 Modify 活动；本项修改许可的通知条件不属于已确认活动。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认上游 Combine 活动。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认上游 Distribute 活动。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认上游 Distribute 活动。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认上游 Sublicense 活动。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认上游 SellCopies 活动。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该下游许可摘录对单独 Use 未规定附加义务；下游 Use 事实未单独确认。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游 Copy 是否发生未知；保留该活动发生时适用的通知条件义务。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游 Modify 活动。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游 Combine 活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游 Distribute 活动。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游 Distribute 活动。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游 Sublicense 活动。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认下游 SellCopies 活动。"
+    }
+  ]
+}

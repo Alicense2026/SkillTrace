@@ -1,0 +1,87 @@
+{
+  "case_id": "chain-0908-97b510933483",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Comply with the applicable DeepSeek service terms.",
+      "source_refs": [
+        "license-text:upstream:cb12cac8a1098bfb"
+      ],
+      "subject": {
+        "artifact": "chain-0908-97b510933483:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "Use",
+      "unresolved_predicates": [
+        "service_terms_compliance"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If output is supplied to end users, clearly disclose that it is AI-generated, may contain errors or omissions, and is for reference only.",
+      "source_refs": [
+        "license-text:upstream:cb12cac8a1098bfb"
+      ],
+      "subject": {
+        "artifact": "chain-0908-97b510933483:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "RemoteInteraction",
+          "output_supplied_to_end_users"
+        ]
+      },
+      "unresolved_predicates": [
+        "output_supplied_to_end_users",
+        "disclosure_fulfillment"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If using Yao Engine, preserve the certificate verification logic, processes, and related pages, and maintain the complete verification system.",
+      "source_refs": [
+        "license-text:downstream:661d8444038009fb"
+      ],
+      "subject": {
+        "artifact": "chain-0908-97b510933483:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "using_yao_engine",
+      "unresolved_predicates": [
+        "using_yao_engine",
+        "verification_system_fulfillment"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If the organization has 50 or more employees or annual revenue exceeding USD 1,000,000, obtain a commercial license from Infinite Wisdom Software.",
+      "source_refs": [
+        "license-text:downstream:661d8444038009fb"
+      ],
+      "subject": {
+        "artifact": "chain-0908-97b510933483:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "organization_has_50_or_more_employees",
+          "organization_has_annual_revenue_exceeding_usd_1000000"
+        ]
+      },
+      "unresolved_predicates": [
+        "organization_has_50_or_more_employees",
+        "organization_has_annual_revenue_exceeding_usd_1000000",
+        "commercial_license_obtained"
+      ]
+    }
+  ]
+}

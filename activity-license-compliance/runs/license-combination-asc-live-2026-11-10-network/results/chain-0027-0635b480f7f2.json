@@ -1,0 +1,172 @@
+{
+  "case_id": "chain-0027-0635b480f7f2",
+  "status": "SUCCESS",
+  "request_sha256": "be32dd3556f9c4d94da6d947368b557c961812a0ab45600cdfd70d23432a42de",
+  "analysis": {
+    "case_id": "chain-0027-0635b480f7f2",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0027-0635b480f7f2:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7be5013ab6e5c066"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0027-0635b480f7f2:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0027-0635b480f7f2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not engage in conduct matching the prohibitions in the cited excerpt; whether the actual API use falls within a prohibited category is not established.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0027-0635b480f7f2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Where use is subject to the free-feature limitation, do not make commercial use; commercial use is permitted only subject to payment of any required fee and compliance with product rules for paid features.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "feature_or_model_classification",
+          "commercial_use",
+          "pay_required_fee_and_follow_product_rules"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0027-0635b480f7f2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If the MIT-licensed software or a copy or substantial portion of it is used, include its copyright notice and permission notice.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "MIT_software_or_substantial_portion_used"
+        ],
+        "source_refs": [
+          "license-text:downstream:7be5013ab6e5c066"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录确认的是远程 API 调用及关联关系，不证明 MIT 代码被复制、纳入、修改或分发；因此不能据此认定 MIT 通知义务已触发，也不能推定上游与下游许可约束同一对象。",
+      "智谱协议摘录标注为 FIRST_PASS_REVIEW_REQUIRED，且文本提示另有产品规则、接口文档和订阅规则；具体功能是否属于免费或付费范围、实际使用是否落入摘录中的禁止行为，现有事实不足以判断。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33051,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1146,
+    "output_tokens_details": {
+      "reasoning_tokens": 184
+    },
+    "total_tokens": 34197,
+    "attribution": {
+      "items": {
+        "msg_0e00d7fae2564fcd016af2f7b038b487d2876f7b9fc8c3695c": {
+          "input_tokens": 31019,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31019,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e00d7fae2564fcd016af2f7b42c2487d281717a5c00648c94": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 962,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 962
+            }
+          ]
+        },
+        "rs_0e00d7fae2564fcd016af2f7b4105487d2a18bb49903194f77": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 184
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 23.954,
+  "auto_applied": false,
+  "aggregate_count": 88
+}

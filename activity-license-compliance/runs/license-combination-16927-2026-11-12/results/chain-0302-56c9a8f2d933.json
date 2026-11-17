@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-0302-56c9a8f2d933",
+  "input_group_row": 302,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "CC-BY-4.0",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0302-56c9a8f2d933",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0302-56c9a8f2d933:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": "activity:CommercialUse"
+          },
+          "S": {
+            "artifact": "chain-0302-56c9a8f2d933:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:8d016c6c579b5658"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0302-56c9a8f2d933:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0302-56c9a8f2d933:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Ensure the use does not match a prohibited form of conduct in the cited agreement excerpt.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-0302-56c9a8f2d933:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If commercial use applies to the relevant paid feature/model, pay any required fee and follow applicable product rules.",
+        "trigger": "activity:CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "commercial_use",
+          "paid_feature_or_model",
+          "required_fee_and_product_rules_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0302-56c9a8f2d933:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "When exercising licensed rights in the CC-BY-4.0 material, comply with applicable CC license conditions.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "applicable_CC_license_conditions",
+          "CC_conditions_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:downstream:8d016c6c579b5658"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游协议摘录涵盖平台服务/API调用及若干禁止使用情形，但现有事实只确认远程调用和Use，未证明调用行为属于摘录中的任何具体禁止情形；不得将API调用本身视为违规。",
+      "CC-BY-4.0授予条款适用于其Licensed Material；对象图仅确认下游与上游存在API调用/链接关系，依赖及共同受约束范围未知，不能据此认定两许可共同约束同一对象或构成冲突。",
+      "上游本地文本标示生效日为2026年9月4日；具体适用版本及用户/服务范围仍需结合完整协议和实际订阅情形判断。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0296-82af913efec9.json",
+  "original_case_id": "chain-0296-82af913efec9",
+  "original_request_sha256": "6666f16d4d59217a3e359136673afb974bbd6a17e20392cf839c13c793f6f0a0",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0296-82af913efec9": "chain-0302-56c9a8f2d933",
+    "license-text:upstream:1092ebce191fce09": "license-text:upstream:1092ebce191fce09",
+    "license-text:downstream:8d016c6c579b5658": "license-text:downstream:8d016c6c579b5658",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/295": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/301"
+  }
+}

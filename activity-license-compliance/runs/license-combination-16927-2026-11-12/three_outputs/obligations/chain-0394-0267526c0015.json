@@ -1,0 +1,63 @@
+{
+  "case_id": "chain-0394-0267526c0015",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如有适用费用到期，向 OpenAI 或客户的转售商支付该费用。",
+      "source_refs": [
+        "license-text:upstream:c9e0443a56323634"
+      ],
+      "subject": {
+        "artifact": "chain-0394-0267526c0015:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "applicable_fees_due",
+      "unresolved_predicates": [
+        "applicable_fees_due",
+        "fee_payment_made"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用 PolyForm 所覆盖的 downstream 软件，须同意该许可条款。",
+      "source_refs": [
+        "license-text:downstream:c2435668b4481fe1"
+      ],
+      "subject": {
+        "artifact": "chain-0394-0267526c0015:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "downstream_software_use",
+        "agree_to_license_terms"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用 PolyForm 所覆盖的 downstream 软件，该用途须为许可条款允许的目的；以公司利益为目的使用时，须满足条款规定的员工/独立承包人数量及收入门槛。",
+      "source_refs": [
+        "license-text:downstream:c2435668b4481fe1"
+      ],
+      "subject": {
+        "artifact": "chain-0394-0267526c0015:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "downstream_software_use",
+        "permitted_purpose",
+        "company_benefit_use",
+        "company_size",
+        "company_revenue_threshold"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

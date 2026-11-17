@@ -1,0 +1,189 @@
+{
+  "case_id": "chain-0014-62f3eb208d17",
+  "status": "SUCCESS",
+  "request_sha256": "87048140caa16d371514ea2c2a8e3babcde64ccfc075c8768f8d591822feb34f",
+  "analysis": {
+    "case_id": "chain-0014-62f3eb208d17",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0014-62f3eb208d17:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0014-62f3eb208d17:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY"
+          },
+          "S": {
+            "artifact": "chain-0014-62f3eb208d17:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0014-62f3eb208d17:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the DeepSeek Open Platform service terms.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0014-62f3eb208d17:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the DeepSeek Open Platform service terms.",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0014-62f3eb208d17:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Clearly disclose to end users that service outputs are AI-generated, may contain errors or omissions, and are for reference only.",
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "outputs_provided_to_end_users"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "outputs_provided_to_end_users",
+          "disclosure_provided"
+        ],
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ]
+      }
+    ],
+    "limitations": [
+      "DeepSeek clauses L20-L21 and L175-L176 are marked FIRST_PASS_REVIEW_REQUIRED; the available excerpts establish service access subject to the terms and the end-user disclosure text, but do not establish that outputs were provided to end users or whether disclosure was made.",
+      "The MIT text excerpt concerns the downstream software. The recorded remote API call does not establish copying, modification, distribution, or another activity bringing that software’s notice conditions into play; no MIT conflict is inferred.",
+      "The object graph does not establish that both licenses govern the same artifact. No license-license conflict is supported by the checked facts and excerpts."
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19220,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1254,
+    "output_tokens_details": {
+      "reasoning_tokens": 269
+    },
+    "total_tokens": 20474,
+    "attribution": {
+      "items": {
+        "msg_05b1ad1dfbd63e8f016af2f70493e887d28d91dcb7429d0e08": {
+          "input_tokens": 17188,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17188,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05b1ad1dfbd63e8f016af2f709fbe887d2b366447617d179c8": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 985,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 985
+            }
+          ]
+        },
+        "rs_05b1ad1dfbd63e8f016af2f709e4e487d28f2aa8c4ee3314a7": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 269
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.519,
+  "auto_applied": false,
+  "aggregate_count": 226
+}

@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0165-aa730527bb6a",
+  "status": "SUCCESS",
+  "request_sha256": "474547107dd8bd413f48d94f2382dbe8abf72920931d59c06252477aee1093ab",
+  "analysis": {
+    "case_id": "chain-0165-aa730527bb6a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_to_OpenAI_or_reseller",
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0165-aa730527bb6a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:45cda7ce9015c7b5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0165-aa730527bb6a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI 原文匹配条款仅覆盖费用支付；它不证明客户可向下游收费，也未提供与 CC-BY-NC-SA-4.0 使用许可相反的要求。",
+      "已知的是对上游资产的 API/远程调用及链接关系；这不证明下游组合产品包含上游材料、构成分发或与上游许可约束同一对象。对象图中的共同范围未知。",
+      "CC-BY-NC-SA-4.0 的摘录仅支持在许可范围内行使授权权利；具体活动是否落入该许可范围未明。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0165-aa730527bb6a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "适用费用到期时，向 OpenAI 或其经销商支付适用费用。",
+        "trigger": "applicable_fees_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "fee_payment_status"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19558,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 996,
+    "output_tokens_details": {
+      "reasoning_tokens": 361
+    },
+    "total_tokens": 20554,
+    "attribution": {
+      "items": {
+        "msg_090b5c4e09ba471c016af2fddee13087d2bc672647e19b7cf3": {
+          "input_tokens": 17526,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17526,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_090b5c4e09ba471c016af2fde5dce887d2a2102e6e3347c013": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 635,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 635
+            }
+          ]
+        },
+        "rs_090b5c4e09ba471c016af2fde5c10c87d2ae13672c52658acf": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 361
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.783,
+  "auto_applied": false,
+  "aggregate_count": 4
+}

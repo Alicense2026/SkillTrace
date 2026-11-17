@@ -1,0 +1,176 @@
+{
+  "case_id": "chain-0397-d202ab1ac01f",
+  "input_group_row": 397,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Sustainable-Use",
+    "资产许可证原文标题/标签": "MPL-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "elapsed_seconds": 25.09,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/license-combination-16927-2026-11-12",
+  "relationship_weight": 1,
+  "original_error": "Invalid obligation values",
+  "analysis": {
+    "case_id": "chain-0397-d202ab1ac01f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:52d28b23f3b28aa4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0397-d202ab1ac01f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:43235aa3d040f420"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "internal_business_purpose",
+                "non_commercial_use",
+                "personal_use"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0397-d202ab1ac01f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "供应链记录确认远程服务调用和API/链接关系，但没有证明两份许可约束同一对象；对象图中的依赖、修改副本、组合产品关系均未知。因此，未将下游许可对其软件使用的限制扩展到对上游MPL软件的API调用，也未判定许可冲突。",
+      "本地原文标识及哈希已提供；本次结论仅基于结构化摘录。Sustainable-Use使用限制摘录包含“or”替代选项，且相关摘录在“non-commercial or”处截断；按结构化注释保留内部业务目的、非商业使用或个人使用的替代条件，不推断其他未提供语言。",
+      "现有摘录未映射出仅因远程交互/API调用而触发的网络服务或源码提供义务；不据此推断存在或不存在未摘录条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用受Sustainable-Use许可约束的软件时，须将用途限于以下至少一种：被许可人自己的内部业务目的、非商业使用，或个人使用。",
+        "source_refs": [
+          "license-text:downstream:43235aa3d040f420"
+        ],
+        "subject": {
+          "artifact": "chain-0397-d202ab1ac01f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "internal_business_purpose",
+          "non_commercial_use",
+          "personal_use"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 26890,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 959,
+    "output_tokens_details": {
+      "reasoning_tokens": 218
+    },
+    "total_tokens": 27849,
+    "attribution": {
+      "items": {
+        "msg_00f0da1286493c83016af583b255a887d08ca24480842e9eac": {
+          "input_tokens": 23485,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23485,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00f0da1286493c83016af583b255a887d09983f526b35b386e": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00f0da1286493c83016af583b6e39887d0b06d1db5a4fdbd21": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 741,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 741
+            }
+          ]
+        },
+        "rs_00f0da1286493c83016af583b6c7f887d0aaf7dbdde8162055": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 218
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3365,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

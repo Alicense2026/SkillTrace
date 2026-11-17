@@ -1,0 +1,435 @@
+{
+  "request_sha256": "7dcc7b39f820bee06afcc7509b34ef4052ff730440fde5139e1cb9548c7bdc42",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 90,
+        "end_line": 90,
+        "clause_label": "cohere_suspend_access_for_breach_or_unauthorized_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "cohere_determines_client_breached_section_2_or_engaged_in_unauthorized_or_illegal_use"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may suspend Client’s access to Cohere Products, or require Partner to suspend it, upon the stated determination.",
+        "condition_explanation": "The predicate is Cohere’s determination that Client breached Section 2 or engaged in unauthorized or illegal use.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 92,
+        "end_line": 92,
+        "clause_label": "cohere_termination_after_uncured_material_breach_or_insolvency",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "client_materially_breaches_or_defaults_on_cla_terms",
+                  "client_fails_to_correct_breach_within_14_calendar_days_after_receiving_notice"
+                ]
+              },
+              "client_insolvency_or_specified_business_closure_or_insolvency_proceeding"
+            ]
+          }
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may terminate the CLA for either an uncured material breach/default or a listed insolvency-related event.",
+        "condition_explanation": "The breach path requires both a material breach/default and failure to correct within 14 calendar days after notice. The alternative path covers becoming insolvent, ceasing ordinary-course business, taking an available step or proceeding for insolvent debtors, or being subject to liquidation, dissolution, winding-up, or specified receivership or bankruptcy proceedings.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 96,
+        "end_line": 96,
+        "clause_label": "cease_use_after_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "subscription_or_license_expires_or_terminates",
+          "requires": "immediately_cease_using_cohere_products_and_other_cohere_property"
+        },
+        "actor_role": "Client",
+        "scope_note": "Upon expiration or earlier termination of Client’s subscription or license under the CLA, Client must cease use immediately; all Cohere-granted licenses terminate.",
+        "condition_explanation": "The trigger is expiration or earlier termination of Client’s subscription or license to the Cohere Products under the CLA. The cessation is an express duty associated with that termination event.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Immediately cease using the Cohere Products and any other Cohere property.",
+            "actor": "Client",
+            "object": "Cohere Products and other Cohere property",
+            "trigger": "Upon expiration or earlier termination of Client’s subscription or license to the Cohere Products under the CLA."
+          }
+        ]
+      },
+      {
+        "start_line": 96,
+        "end_line": 96,
+        "clause_label": "delete_products_within_five_days_after_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "subscription_or_license_expires_or_terminates",
+          "requires": "remove_or_delete_cohere_products_from_client_environment_within_5_calendar_days"
+        },
+        "actor_role": "Client",
+        "scope_note": "The post-termination removal/deletion duty concerns Cohere Products in the Client Environment; certification is required only at Cohere’s request.",
+        "condition_explanation": "Expiration or earlier termination triggers removal or deletion within five calendar days. A separate certification duty applies only if Cohere requests it.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Remove or delete the Cohere Products from the Client Environment within five calendar days following termination.",
+            "actor": "Client",
+            "object": "Cohere Products in the Client Environment",
+            "trigger": "Within five calendar days following termination."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Certify the removal or deletion.",
+            "actor": "Client",
+            "object": "Removal or deletion of the Cohere Products from the Client Environment",
+            "trigger": "At Cohere’s request following termination."
+          }
+        ]
+      },
+      {
+        "start_line": 99,
+        "end_line": 99,
+        "clause_label": "partner_provides_support_services",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "support_services_are_provided_to_client",
+          "requires": "partner_provides_technical_support_and_training_for_cohere_solution"
+        },
+        "actor_role": "Partner",
+        "scope_note": "Partner, not Cohere, is responsible for technical support and training to Clients for the Cohere Solution; those Support Services are not Cohere Products.",
+        "condition_explanation": "The paragraph assigns responsibility for providing technical support and training to Partner. It does not say that support must be provided in every circumstance.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide technical support and training to Clients for the Cohere Solution.",
+            "actor": "Partner",
+            "object": "Support Services for the Cohere Solution",
+            "trigger": "When providing Support Services to Clients."
+          }
+        ]
+      },
+      {
+        "start_line": 101,
+        "end_line": 101,
+        "clause_label": "client_update_testing_duty",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "client_receives_an_update_from_cohere",
+          "requires": "update_testing_performed_in_accordance_with_documentation_and_partners_written_instructions"
+        },
+        "actor_role": "Client",
+        "scope_note": "For Cohere Product Updates delivered by Partner, Client is responsible for testing each received Update, and all such testing must follow the Documentation and Partner’s written instructions. Partner is not bound to provide Support Services when Client operates on a release more than two Updates behind the most recent Update made available to Client by Cohere.",
+        "condition_explanation": "Receiving an Update triggers Client’s testing responsibility and the specified testing constraint. The support limitation applies when the release in use is more than two Updates behind the most recent Update made available to Client by Cohere.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Test the Update in accordance with the Documentation and Partner’s written instructions.",
+            "actor": "Client",
+            "object": "Update to the Cohere Products received from Cohere",
+            "trigger": "Upon receiving an Update from Cohere."
+          }
+        ]
+      },
+      {
+        "start_line": 112,
+        "end_line": 112,
+        "clause_label": "client_assignment_restricted",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "client_assigns_cla_to_third_party_without_coheres_prior_written_consent"
+        },
+        "actor_role": "Client",
+        "scope_note": "Client may not assign the CLA to a third party without Cohere’s prior written consent. The clause separately permits Cohere to assign the CLA or rights under it without Client’s consent.",
+        "condition_explanation": "The restriction concerns Client’s assignment of the CLA to a third party and is lifted by Cohere’s prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not assign the CLA to a third party without Cohere’s prior written consent.",
+            "actor": "Client",
+            "object": "CLA",
+            "trigger": "Whenever Client proposes to assign the CLA to a third party; the restriction does not apply if Cohere has given prior written consent."
+          }
+        ]
+      },
+      {
+        "start_line": 112,
+        "end_line": 112,
+        "clause_label": "cohere_assignment_permitted",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "cohere_assigns_cla_or_rights_under_it_to_third_party"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may assign the CLA or any rights under it to a third party without Client’s consent.",
+        "condition_explanation": "No consent condition is stated for Cohere’s assignment.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 116,
+        "end_line": 116,
+        "clause_label": "client_export_compliance_and_transfer_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "client_accesses_or_uses_cohere_products_or_exports_reexports_transfers_or_makes_them_available",
+          "requires": {
+            "all": [
+              "comply_with_applicable_export_control_sanctions_and_trade_laws",
+              "not_export_reexport_transfer_or_make_products_available_to_restricted_locations",
+              "not_make_products_available_to_sanctioned_or_restricted_parties",
+              "not_make_products_available_for_prohibited_end_uses",
+              "not_cause_unauthorized_export_or_disclosure_of_controlled_technical_information"
+            ]
+          }
+        },
+        "actor_role": "Client",
+        "scope_note": "Applies to access to or use of the Cohere Products and to exporting, re-exporting, transferring, or otherwise making them available. Cohere may suspend or terminate access if it reasonably determines access or use may violate applicable export-control or sanctions laws.",
+        "condition_explanation": "Client must comply with applicable export-control, sanctions, and trade laws, including those of the named jurisdictions where applicable. The distinct transfer prohibitions cover Restricted Locations, sanctioned or restricted parties, and prohibited end uses; a further prohibition concerns unauthorized export or disclosure of controlled technical information.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable export control, sanctions, and trade laws and regulations, including applicable laws of the United States, Canada, the United Kingdom, the European Union, and other applicable jurisdictions.",
+            "actor": "Client",
+            "object": "Client’s access to or use of the Cohere Products",
+            "trigger": "Whenever Client accesses or uses the Cohere Products."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not export, re-export, transfer, or otherwise make the Cohere Products available to a Restricted Location, a person or entity subject to applicable sanctions or restricted-party lists, or for an end use prohibited by applicable export-control or sanctions laws.",
+            "actor": "Client",
+            "object": "Cohere Products",
+            "trigger": "Whenever Client exports, re-exports, transfers, or otherwise makes the Cohere Products available."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use the Cohere Products in a manner that results in unauthorized export or disclosure of controlled technical information.",
+            "actor": "Client",
+            "object": "Cohere Products and controlled technical information",
+            "trigger": "Whenever Client accesses or uses the Cohere Products."
+          }
+        ]
+      },
+      {
+        "start_line": 116,
+        "end_line": 116,
+        "clause_label": "cohere_export_law_access_suspension",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "cohere_reasonably_determines_access_or_use_may_violate_export_control_or_sanctions_laws"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Cohere may suspend or terminate access to the Cohere Products based on its reasonable determination of a possible applicable export-control or sanctions-law violation.",
+        "condition_explanation": "The trigger is Cohere’s reasonable determination that the access or use may violate applicable export-control or sanctions laws.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Paragraph 78 concerns an exception to Cohere’s indemnity, not an activity constraint; the indemnity cross-reference is not included in the target chunk.",
+      "Paragraph 80 defines Third-Party Products in a carve-out to the indemnity; the definition is context, not a license rule.",
+      "Paragraph 82 states exclusive-remedy allocation, and paragraphs 85 and 88–94 concern liability, term, survival, or remedies; they do not impose an activity constraint modeled here.",
+      "The CLA’s references to Partner Terms, the Usage Policy, Documentation, Restricted Locations, and other defined terms depend on materials or definitions not fully reproduced in this target chunk; their precise contents cannot be inferred here.",
+      "Paragraphs 103–110 set out notice mechanics and contact details; paragraph 114 concerns governing law and venue; paragraph 118 allocates force-majeure liability; paragraph 120 concerns severability. These do not create an activity constraint in this extraction."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0035",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "This is an indemnity exception tied to continued use after actual or constructive knowledge or notice of potentially infringing output; it limits indemnity coverage rather than stating an activity permission or prohibition."
+      },
+      {
+        "unit_id": "P0036",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Third-Party Products within an indemnity carve-out; it does not itself impose an activity constraint."
+      },
+      {
+        "unit_id": "P0037",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Exclusive-remedy and liability allocation language, not an activity constraint."
+      },
+      {
+        "unit_id": "P0038",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Limitation-of-liability disclaimer; it does not create an activity duty."
+      },
+      {
+        "unit_id": "P0039",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "States the CLA term and cross-references termination provisions; no independent activity constraint."
+      },
+      {
+        "unit_id": "P0040",
+        "status": "MODELED",
+        "clause_labels": [
+          "cohere_suspend_access_for_breach_or_unauthorized_use"
+        ],
+        "reason": "Expressly permits Cohere to suspend access, or require Partner to do so, upon the specified determination."
+      },
+      {
+        "unit_id": "P0041",
+        "status": "MODELED",
+        "clause_labels": [
+          "cohere_termination_after_uncured_material_breach_or_insolvency"
+        ],
+        "reason": "Expressly permits termination on either the uncured material-breach path or the specified insolvency-related path, including the 14-calendar-day cure period after notice."
+      },
+      {
+        "unit_id": "P0042",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Identifies provisions that survive termination; it does not independently impose an activity constraint."
+      },
+      {
+        "unit_id": "P0043",
+        "status": "MODELED",
+        "clause_labels": [
+          "cease_use_after_termination",
+          "delete_products_within_five_days_after_termination"
+        ],
+        "reason": "Requires immediate cessation of use and removal or deletion within five calendar days after termination, with certification if Cohere requests it."
+      },
+      {
+        "unit_id": "P0044",
+        "status": "MODELED",
+        "clause_labels": [
+          "partner_provides_support_services"
+        ],
+        "reason": "Expressly assigns Partner responsibility for providing technical support and training to Clients."
+      },
+      {
+        "unit_id": "P0045",
+        "status": "MODELED",
+        "clause_labels": [
+          "client_update_testing_duty"
+        ],
+        "reason": "Requires Client to test received Updates in accordance with the Documentation and Partner’s written instructions, and states a specific limit on Partner’s support obligation."
+      },
+      {
+        "unit_id": "P0046",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Notice delivery and effectiveness mechanics; they do not create an activity constraint."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Postal and email contact details for contractual notices, not an activity rule."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Specifies the notice destination for Client; it does not itself create an activity constraint."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "MODELED",
+        "clause_labels": [
+          "client_assignment_restricted",
+          "cohere_assignment_permitted"
+        ],
+        "reason": "States a consent-conditioned restriction on Client’s assignment and a separate permission for Cohere’s assignment without Client consent."
+      },
+      {
+        "unit_id": "P0050",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Governing-law and forum provisions are excluded legal venue terms, not activity constraints."
+      },
+      {
+        "unit_id": "P0051",
+        "status": "MODELED",
+        "clause_labels": [
+          "client_export_compliance_and_transfer_restrictions",
+          "cohere_export_law_access_suspension"
+        ],
+        "reason": "Imposes export-law compliance and specific transfer/use restrictions on Client and permits Cohere to suspend or terminate access on the stated reasonable determination."
+      },
+      {
+        "unit_id": "P0052",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Force-majeure liability allocation, including the payment exception; it does not impose an activity constraint."
+      },
+      {
+        "unit_id": "P0053",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Severability boilerplate does not impose an activity constraint."
+      }
+    ]
+  },
+  "attempt": 3
+}

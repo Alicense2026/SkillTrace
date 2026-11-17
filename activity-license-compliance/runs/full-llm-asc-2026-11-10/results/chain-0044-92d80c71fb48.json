@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-0044-92d80c71fb48",
+  "status": "SUCCESS",
+  "request_sha256": "44de13c74e9a5e1ab1d05951c951f29a33812cb6e0399ebdaaf682bea6217ebf",
+  "analysis": {
+    "case_id": "chain-0044-92d80c71fb48",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b5ad4ff0b869cdb5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0044-92d80c71fb48:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b5ad4ff0b869cdb5"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0044-92d80c71fb48:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文列有 Commercial Terms（含 API key）及 Consumer Terms，并说明各自服务范围；当前记录确认远程调用，但未确定具体适用条款版本、客户身份或是否已接受相关条款。因此仅保留遵守适用服务条款的条件义务。",
+      "对象图确认的是 API/代码纳入关系，不证明 MIT 许可的软件与 Anthropic 服务属于同一许可对象；未发现可据此成立的许可证冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Anthropic 服务时遵守适用的服务条款及其纳入的 Usage Policy、Supported Regions Policy 和 Service Specific Terms。",
+        "source_refs": [
+          "license-text:upstream:b5ad4ff0b869cdb5"
+        ],
+        "subject": {
+          "artifact": "chain-0044-92d80c71fb48:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_service_terms",
+          "compliance_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "远程交互使用 Anthropic 服务时遵守适用的服务条款及其纳入的 Usage Policy、Supported Regions Policy 和 Service Specific Terms。",
+        "source_refs": [
+          "license-text:upstream:b5ad4ff0b869cdb5"
+        ],
+        "subject": {
+          "artifact": "chain-0044-92d80c71fb48:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "applicable_service_terms",
+          "compliance_with_service_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 36807,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1016,
+    "output_tokens_details": {
+      "reasoning_tokens": 253
+    },
+    "total_tokens": 37823,
+    "attribution": {
+      "items": {
+        "msg_04c5297179bedd46016af2e74aa66887d1a502f0b9e45b4398": {
+          "input_tokens": 34859,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 34859,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04c5297179bedd46016af2e750d8e487d1b09f91891dec9933": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 763,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 763
+            }
+          ]
+        },
+        "rs_04c5297179bedd46016af2e750c1d487d19cfa64cebdfa5ed6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 253
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.229,
+  "auto_applied": false
+}

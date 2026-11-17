@@ -1,0 +1,509 @@
+{
+  "request_sha256": "ac3d27ada804e3611ab0470b427212cdcb2ef0f38e5da9f1e08c5f873b93d5ae",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "bsl_nonproduction_copy",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "BSL 1.1, Terms: grants copying of the Licensed Work, subject to the License and the changeover in line 8.",
+        "condition_explanation": "No additional condition is stated in this grant.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "bsl_nonproduction_modify",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission to modify the Licensed Work, subject to the License and the changeover in line 8.",
+        "condition_explanation": "The grant ends when the changeover described in line 8 takes effect.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "bsl_nonproduction_derivative",
+        "activities": [
+          "CreateDerivative"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission to create derivative works of the Licensed Work, subject to the License and the changeover in line 8.",
+        "condition_explanation": "The grant ends when the changeover described in line 8 takes effect.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "bsl_nonproduction_redistribute",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission to redistribute the Licensed Work, subject to the License and the changeover in line 8.",
+        "condition_explanation": "The grant ends when the changeover described in line 8 takes effect.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "bsl_nonproduction_and_limited_production_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "use_is_non_production",
+              "production_use_permitted_by_additional_use_grant"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Non-production use is granted. Production use is permitted only to the extent allowed by an Additional Use Grant, if made. The grant ends at the changeover described in line 8.",
+        "condition_explanation": "use_is_non_production means the use is non-production. production_use_permitted_by_additional_use_grant means the Licensor has made an Additional Use Grant allowing the relevant limited production use; its terms are not supplied.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 8,
+        "end_line": 8,
+        "clause_label": "bsl_changeover_grant",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": {
+            "any": [
+              "change_date_has_taken_effect",
+              "fourth_anniversary_of_first_publicly_available_distribution_for_this_version_has_arrived"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "From the earlier applicable trigger, rights are granted under the Change License. Its specific rights and conditions are not supplied.",
+        "condition_explanation": "The trigger is the earlier of the Change Date applicable to this version and the fourth anniversary of this version's first publicly available distribution under this License.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 8,
+        "end_line": 8,
+        "clause_label": "bsl_original_grant_ends_at_changeover",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": {
+            "any": [
+              "change_date_has_taken_effect",
+              "fourth_anniversary_of_first_publicly_available_distribution_for_this_version_has_arrived"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "The rights granted in line 6 terminate at the same earlier changeover trigger. This does not restrict rights independently available under the Change License.",
+        "condition_explanation": "The trigger is the earlier of the applicable Change Date and the fourth anniversary of this version's first publicly available distribution under this License.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 10,
+        "end_line": 10,
+        "clause_label": "bsl_noncompliant_use_purchase_or_refrain",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "use_does_not_comply_with_requirements_currently_in_effect",
+          "requires": {
+            "any": [
+              "commercial_license_purchased_from_licensor_affiliate_or_authorized_reseller",
+              "refrain_from_using_licensed_work"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "If use does not comply with currently effective requirements, the user must purchase a commercial license from the Licensor, its affiliated entities, or authorized resellers, or refrain from using the Licensed Work. The alternatives are disjunctive; purchase is not a charge to a third party.",
+        "condition_explanation": "use_does_not_comply_with_requirements_currently_in_effect refers to requirements of this License applicable at the time of use.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Purchase a commercial license",
+            "actor": "licensee",
+            "object": "Licensed Work",
+            "trigger": "The licensee's use does not comply with currently effective requirements and the licensee chooses the purchase alternative; the license must be purchased from the Licensor, an affiliated entity, or an authorized reseller."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Refrain from using the Licensed Work",
+            "actor": "licensee",
+            "object": "Licensed Work",
+            "trigger": "The licensee's use does not comply with currently effective requirements and the licensee chooses the refrain alternative."
+          }
+        ]
+      },
+      {
+        "start_line": 12,
+        "end_line": 12,
+        "clause_label": "bsl_scope_by_work_and_version",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_applicable_license_for_relevant_version"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The License applies to all copies of the original and modified Licensed Work and derivative works of the Licensed Work. It applies separately to each version, and the Change Date may vary by version. This is an applicability rule, not an independent grant.",
+        "condition_explanation": "comply_with_applicable_license_for_relevant_version means comply with the terms applicable to the particular version.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 14,
+        "end_line": 14,
+        "clause_label": "bsl_display_license_on_each_copy",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "license_conspicuously_displayed_on_each_original_or_modified_copy"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The License must be conspicuously displayed on each original or modified copy of the Licensed Work. This duty attaches to copies, not a mere remote API call.",
+        "condition_explanation": "license_conspicuously_displayed_on_each_original_or_modified_copy means the License is prominently shown on every original or modified copy.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Conspicuously display this License on each original or modified copy",
+            "actor": "licensee",
+            "object": "Each original or modified copy of the Licensed Work",
+            "trigger": "The licensee makes or has an original or modified copy of the Licensed Work."
+          }
+        ]
+      },
+      {
+        "start_line": 14,
+        "end_line": 14,
+        "clause_label": "bsl_third_party_received_work_use_subject_to_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensed_work_received_from_third_party_in_original_or_modified_form",
+          "requires": "comply_with_this_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "If the Licensed Work is received from a third party in original or modified form, this License's terms and conditions apply to the recipient's use.",
+        "condition_explanation": "licensed_work_received_from_third_party_in_original_or_modified_form is the stated trigger; comply_with_this_license means follow the applicable terms and conditions.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 16,
+        "end_line": 16,
+        "clause_label": "bsl_automatic_termination_for_violation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "any_use_of_licensed_work_violates_this_license",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Any use in violation automatically terminates the user's rights under this License for the current and all other versions. No cure period or reinstatement mechanism is stated.",
+        "condition_explanation": "any_use_of_licensed_work_violates_this_license means a use of the Licensed Work breaches this License.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 18,
+        "end_line": 18,
+        "clause_label": "bsl_no_trademark_or_logo_right",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "use_is_expressly_required_by_this_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "No right to use a Licensor or affiliate trademark or logo is granted, except where this License expressly requires that use.",
+        "condition_explanation": "use_is_expressly_required_by_this_license means the particular trademark or logo use is expressly required by this License.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use a Licensor or affiliate trademark or logo unless this License expressly requires that use",
+            "actor": "licensee",
+            "object": "Licensor or affiliate trademark or logo",
+            "trigger": "A proposed trademark or logo use is not expressly required by this License."
+          }
+        ]
+      },
+      {
+        "start_line": 22,
+        "end_line": 22,
+        "clause_label": "bsl_permission_to_reuse_license_text_and_name",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_covenants_of_licensor"
+        },
+        "actor_role": "licensee",
+        "scope_note": "MariaDB permits use of the License text to license the user's works and reference to it using the Business Source License trademark, conditional on compliance with the Covenants of Licensor. The supplied covenant text states duties of the Licensor, leaving the recipient's compliance condition unclear.",
+        "condition_explanation": "comply_with_covenants_of_licensor refers to the covenants identified in the License; the supplied text does not explain how a user complies with those Licensor covenants.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 28,
+        "end_line": 31,
+        "clause_label": "bsl_licensor_covenants",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensor",
+        "scope_note": "Operative Licensor covenants: specify a Change License meeting the stated GPL compatibility criterion (additional Change Licenses are allowed); either specify an Additional Use Grant imposing no additional restriction or insert 'None'; specify a Change Date; and do not otherwise modify the License. These duties cannot be faithfully represented as a licensee activity/object constraint.",
+        "condition_explanation": "The covenant specifies the GPL compatibility criterion and alternatives for the Additional Use Grant. Actual Change License, Additional Use Grant, and Change Date values are not supplied.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 38,
+        "end_line": 38,
+        "clause_label": "bsl_changeover_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "date_above",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Template statement that, on the date above, use will be governed by the open source license specified in LICENSE.TXT. The date and referenced license are not supplied.",
+        "condition_explanation": "date_above refers to the Change Date field; the content of LICENSE.TXT is unavailable.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The Change License, any Additional Use Grant, Change Date, and referenced LICENSE.TXT contents are not supplied. Rights after changeover cannot be characterized beyond the stated grant under the Change License.",
+      "The Licensor covenants at lines 28–31 are operative but cannot be faithfully represented with the allowed activity/object schema; they are recorded as unresolved.",
+      "The line 22 permission is conditional on compliance with Licensor covenants, but the supplied text does not explain how the user complies with them.",
+      "No patent grant, sublicensing permission, output/data rights, privacy duty, security duty, or fee amount is stated."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The license title and copyright/trademark identification in lines 1–2 create no activity constraint."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 4 is the Terms heading."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "bsl_nonproduction_copy",
+          "bsl_nonproduction_modify",
+          "bsl_nonproduction_derivative",
+          "bsl_nonproduction_redistribute",
+          "bsl_nonproduction_and_limited_production_use"
+        ],
+        "reason": "Line 6 grants copying, modification, derivative creation, redistribution, and non-production use, with possible limited production use under an Additional Use Grant."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "bsl_changeover_grant",
+          "bsl_original_grant_ends_at_changeover"
+        ],
+        "reason": "Line 8 establishes the earlier-of changeover triggers and ends the prior grant, but the applicable Change License and its terms are missing."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "MODELED",
+        "clause_labels": [
+          "bsl_noncompliant_use_purchase_or_refrain"
+        ],
+        "reason": "Line 10 states the noncompliance trigger and the disjunctive purchase-or-refrain alternatives, including the permitted commercial-license sources."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "MODELED",
+        "clause_labels": [
+          "bsl_scope_by_work_and_version"
+        ],
+        "reason": "Line 12 applies the License to copies of original and modified work and derivative works, separately by version, with potentially varying Change Dates."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "MODELED",
+        "clause_labels": [
+          "bsl_display_license_on_each_copy",
+          "bsl_third_party_received_work_use_subject_to_terms"
+        ],
+        "reason": "Line 14 requires conspicuous display on each original or modified copy and applies the License to use of work received from a third party in original or modified form."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "MODELED",
+        "clause_labels": [
+          "bsl_automatic_termination_for_violation"
+        ],
+        "reason": "Line 16 provides for automatic termination of rights for the current and all other versions upon violating use."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "bsl_no_trademark_or_logo_right"
+        ],
+        "reason": "Line 18 denies trademark and logo rights, except for use expressly required by the License."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Line 20 is a warranty and condition disclaimer, not a behavioral duty."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "bsl_permission_to_reuse_license_text_and_name"
+        ],
+        "reason": "Line 22 grants conditional permission to reuse the License text and name, but the referenced covenants do not explain how the recipient satisfies the condition."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 24 is a heading introducing the Licensor covenants."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 26 introduces the covenants and their beneficiaries; the operative covenant duties are in the following paragraph."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "bsl_licensor_covenants"
+        ],
+        "reason": "Lines 28–31 contain operative Licensor covenants that cannot be faithfully represented with the allowed activity/object schema. The standard header text in lines 32–34 adds no separate behavioral duty."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Line 36 is the Change Date field label; no value is supplied."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "bsl_changeover_notice"
+        ],
+        "reason": "Line 38 states that use changes to the open source license specified in LICENSE.TXT on the date above, but the Change Date and referenced license are not supplied."
+      }
+    ]
+  },
+  "attempt": 3
+}

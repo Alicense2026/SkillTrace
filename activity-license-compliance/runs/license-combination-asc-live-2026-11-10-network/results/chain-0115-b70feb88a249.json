@@ -1,0 +1,144 @@
+{
+  "case_id": "chain-0115-b70feb88a249",
+  "status": "SUCCESS",
+  "request_sha256": "3cb3a8388fd1318a785d505972d9a92306bdd2f9cf0166de266713083c3c9951",
+  "analysis": {
+    "case_id": "chain-0115-b70feb88a249",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0115-b70feb88a249:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:dee9e80a9bde0a71"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0115-b70feb88a249:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本地原文匹配为 Apache-2.0 与 CC-BY-4.0；结构化摘录标记 FIRST_PASS_REVIEW_REQUIRED。Apache 摘录覆盖著作权许可，未表示专利权。",
+      "可信事实确认对上游资产的 Use、Link 和 RemoteInteraction；对象图未确认两份许可约束同一对象（scope_shared=null），也未确认对下游资产发生 Use。未据此推断分发、修改、组合或权重转移。",
+      "CC-BY-4.0 摘录仅能支持遵守 CC 许可条件的概括要求，未在所给结构化条款中展开具体条件；不推断缺失语言。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如对下游原始资产行使许可权利，须遵守适用的 CC 许可条件。",
+        "source_refs": [
+          "license-text:downstream:dee9e80a9bde0a71"
+        ],
+        "subject": {
+          "artifact": "chain-0115-b70feb88a249:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Use",
+          "scope_shared",
+          "适用的 CC 许可条件及其履行情况"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18617,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 896,
+    "output_tokens_details": {
+      "reasoning_tokens": 220
+    },
+    "total_tokens": 19513,
+    "attribution": {
+      "items": {
+        "msg_0c1382622c2a744c016af2fbcfa5ec87d1a846739dd87b8eff": {
+          "input_tokens": 16585,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16585,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c1382622c2a744c016af2fbd49be087d19b98487d1faf1c51": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 676,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 676
+            }
+          ]
+        },
+        "rs_0c1382622c2a744c016af2fbd4804487d19dc555255fb8f623": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 220
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.531,
+  "auto_applied": false,
+  "aggregate_count": 8
+}

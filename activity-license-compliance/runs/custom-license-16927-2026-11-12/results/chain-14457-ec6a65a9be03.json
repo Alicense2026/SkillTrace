@@ -1,0 +1,173 @@
+{
+  "case_id": "chain-14457-ec6a65a9be03",
+  "source_csv_line": 14458,
+  "row": {
+    "github_repo": "yaswarm-agency",
+    "github_url": "https://github.com/YaRepo/yaswarm-agency",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-3-pro-image-preview",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: skills/yaswarm-nano-banana-pro/scripts/generate_image.py:129 ｜ 调用原文: response = client.models.generate_content( ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: generate_image.py 中作为图像生成模型 ID 被调用",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "yarepo/yaswarm-agency",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4",
+    "filename": "_licenseref_full/texts/2d59c812fc1be7168888b01455e9fe8a1e12feb5d5fc869cd4804f55fbd753f4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:yaswarm-agency-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14457-ec6a65a9be03",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1af8b8e098b77e96"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "develop_models_competing_with_Gemini_API_or_Google_AI_Studio"
+          },
+          "S": {
+            "artifact": "chain-14457-ec6a65a9be03:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "prior_written_authorization_from_copyright_holder"
+            },
+            "when": "use_downstream_software"
+          },
+          "S": {
+            "artifact": "chain-14457-ec6a65a9be03:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-14457-ec6a65a9be03:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Obtain prior written authorization from the copyright holder before using the downstream software.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "prior_written_authorization_from_copyright_holder"
+        ],
+        "source_refs": [
+          "license-text:downstream:39b959f3c62e4292"
+        ]
+      }
+    ],
+    "limitations": [
+      "Upstream L31-L34 excerpt prohibits using the Services to develop models competing with Gemini API or Google AI Studio, and reverse engineering/extracting/replicating service components. The structured Use triples omit this scope condition; the recorded API image-generation call does not establish competing-model development or reverse engineering.",
+      "Downstream L5 applies to YaSwarm software, but the supplied facts do not establish whether the downstream OriginalArtifact was used as software or whether prior written authorization exists. The local license text is identified by hash; clause analysis is limited to the provided excerpt and structured mapping."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17247,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 975,
+    "output_tokens_details": {
+      "reasoning_tokens": 366
+    },
+    "total_tokens": 18222,
+    "attribution": {
+      "items": {
+        "msg_0b1ace4b3d59f444016af53dc731f087d2a72eb05d3db176f5": {
+          "input_tokens": 15177,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15177,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b1ace4b3d59f444016af53dc731f087d2b5ceeabf2c18c5d9": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b1ace4b3d59f444016af53dce40c887d2a3b513bf9450e776": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 609,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 609
+            }
+          ]
+        },
+        "rs_0b1ace4b3d59f444016af53dce252887d2b829a4aee433af7c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 366
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "db5575384d71c7011b3cfb14adfa9bd52df739127d973cd1c30cad793d37c1fd",
+  "elapsed_seconds": 25.65
+}

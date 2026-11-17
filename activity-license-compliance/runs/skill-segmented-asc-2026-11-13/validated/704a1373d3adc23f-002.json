@@ -1,0 +1,554 @@
+{
+  "request_sha256": "d0df3477579f0b58563ed2a315f8c9574dfb2f8cc3fcfd43becf742470350410",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 186,
+        "end_line": 192,
+        "clause_label": "split1/continued_paid_service_use_accepts_pricing_changes",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "continued_use_of_paid_services_after_pricing_change",
+          "requires": "continued_use_constitutes_consent_to_pricing_changes_effective_on_their_applicable_effective_date"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to continued use of Paid Services after Google posts a pricing change. Pricing changes generally take effect 30 days after posting unless otherwise specified; pricing for new Paid Services takes effect immediately unless otherwise specified. The actual prices and any alternative effective dates are not supplied.",
+        "condition_explanation": "continued_use_of_paid_services_after_pricing_change means the licensee continues using Paid Services after Google posts a pricing change. The clause records the stated consent consequence, not a separate duty to continue using the services.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 200,
+        "end_line": 206,
+        "clause_label": "split1/agentic_service_use_responsibility_and_supervision",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_agentic_services",
+          "requires": "assess_suitability_and_authorize_access_and_connections_and_exercise_judgment_and_supervision_and_not_automatically_bypass_human_confirmation_requests"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies when using agentic services, including the Computer Use API. The licensee is assigned responsibility for actions and tasks performed by the service, including the listed suitability, authorization, judgment, and supervision matters; automatic bypass of human-confirmation requests is prohibited.",
+        "condition_explanation": "using_agentic_services means using an agentic service, including the Computer Use API. The positive requirements are conjunctive; the prohibition on automatically bypassing confirmation requests applies whenever the service is used.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Determine whether the agentic service is appropriate for the licensee's use case.",
+            "actor": "licensee",
+            "object": "agentic service use",
+            "trigger": "when using an agentic service"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Authorize the agentic service's access and connection to data, applications, and systems.",
+            "actor": "licensee",
+            "object": "data, applications, and systems accessed or connected by the agentic service",
+            "trigger": "when the agentic service is given access to or connected with data, applications, or systems"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Exercise judgment and supervision when and if the agentic service is used in production environments.",
+            "actor": "licensee",
+            "object": "agentic service in production environments",
+            "trigger": "when and if the agentic service is used in a production environment"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not automatically bypass any request for human confirmation.",
+            "actor": "licensee",
+            "object": "human-confirmation requests encountered by the agentic service",
+            "trigger": "when using an agentic service and a human-confirmation request is presented"
+          }
+        ]
+      },
+      {
+        "start_line": 230,
+        "end_line": 232,
+        "clause_label": "split1/search_grounding_application_and_display_scope",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "using_grounding_with_google_search",
+          "requires": {
+            "all": [
+              "application_owned_and_operated_by_licensee",
+              "display_grounded_results_with_associated_search_suggestions_only_to_end_user_who_submitted_prompt"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to use of Grounding with Google Search. Use is limited to an application owned and operated by the licensee, and display of Grounded Results with associated Search Suggestions is limited to the end user who submitted the prompt.",
+        "condition_explanation": "using_grounding_with_google_search means using the Grounding with Google Search service. Both the application-ownership condition and the specified display-recipient restriction apply.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Grounding with Google Search in an application that is not owned and operated by the licensee.",
+            "actor": "licensee",
+            "object": "Grounding with Google Search service",
+            "trigger": "whenever the licensee uses Grounding with Google Search"
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not display Grounded Results or their associated Search Suggestions to anyone other than the end user who submitted the prompt.",
+            "actor": "licensee",
+            "object": "Grounded Results and associated Search Suggestions",
+            "trigger": "when displaying Grounded Results and associated Search Suggestions"
+          }
+        ]
+      },
+      {
+        "start_line": 234,
+        "end_line": 242,
+        "clause_label": "split2/search_grounded_content_restricted_uses",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "grounded_results_or_search_suggestions_or_links"
+        },
+        "actor_role": "licensee, end users, and third parties whom the licensee allows",
+        "scope_note": "Grounding with Google Search: Grounded Results, Search Suggestions, and Links. Prohibits caching, framing, syndicating, reselling, analyzing, training on, or otherwise learning from Grounded Results or Search Suggestions; also prohibits extracting or collecting any of those components for another purpose, including the specified automated collection, indexing, crawling, or scraping examples.",
+        "condition_explanation": "grounded_results_or_search_suggestions_or_links means the identified Search grounding components; the specific extraction prohibition also covers Links.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not cache, frame, syndicate, resell, analyze, train on, or otherwise learn from Grounded Results or Search Suggestions, or extract or collect any identified component for another purpose.",
+            "actor": "licensee; end users and third parties whom the licensee allows",
+            "object": "Grounded Results, Search Suggestions, or Links",
+            "trigger": "Whenever using Grounding with Google Search, except where a specific permission in lines 249–276 applies to the particular action and material."
+          }
+        ]
+      },
+      {
+        "start_line": 244,
+        "end_line": 247,
+        "clause_label": "split2/search_copy_store_monitoring_default_prohibition",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "grounded_results_or_search_suggestions"
+        },
+        "actor_role": "licensee, end users, and third parties whom the licensee allows",
+        "scope_note": "Grounding with Google Search: default prohibition on copying or storing Grounded Results or Search Suggestions, subject to the specific permissions in lines 249–271; line 244 also prohibits implementing click tracking, Link-tracking, or other monitoring, subject to the interface-monitoring permission in lines 273–276.",
+        "condition_explanation": "grounded_results_or_search_suggestions means the identified Search grounding content. The separately stated tracking/monitoring prohibition is limited by its exception at lines 273–276.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not copy or store Grounded Results or Search Suggestions except as permitted by the specific exceptions in lines 249–271; do not implement click tracking, Link-tracking, or other monitoring except as permitted by lines 273–276.",
+            "actor": "licensee; end users and third parties whom the licensee allows",
+            "object": "Grounded Results or Search Suggestions",
+            "trigger": "Whenever using Grounding with Google Search; the specified copy/store and interface-monitoring exceptions apply on their stated terms."
+          }
+        ]
+      },
+      {
+        "start_line": 249,
+        "end_line": 262,
+        "clause_label": "split2/search_developer_limited_copy_store",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "text_of_grounded_result",
+                  "displayed_by_developer",
+                  "solely_evaluate_and_optimize_display_in_application",
+                  "retention_no_longer_than_two_years"
+                ]
+              },
+              {
+                "all": [
+                  "text_of_grounded_result",
+                  "in_end_user_chat_history",
+                  "solely_allow_that_user_to_view_chat_history",
+                  "retention_no_longer_than_two_years"
+                ]
+              },
+              {
+                "all": [
+                  "text_of_grounded_result",
+                  "temporarily_resubmitted_to_google_via_function_call_for_refined_or_improved_result",
+                  "interim_result_used_for_no_other_purpose",
+                  "delete_interim_result_if_not_displayed_once_final_result_generated",
+                  "display_associated_search_suggestions_or_other_links_with_final_result_as_applicable",
+                  "no_more_than_five_search_suggestions_displayed"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee/developer",
+        "scope_note": "Grounding with Google Search: permission to copy and store the specified text of Grounded Results for one of the listed purposes. The two-year limit applies to the listed storage permission; the function-call path is temporary and subject to its distinct conditions.",
+        "condition_explanation": "The three purposes are alternatives, not cumulative requirements. For the function-call alternative, all stated interim-use, deletion, and final-display conditions apply.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 264,
+        "end_line": 266,
+        "clause_label": "split2/search_legal_compliance_copy_store",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "grounded_result_or_search_suggestion",
+              "solely_comply_with_applicable_law_or_regulations",
+              "retention_no_longer_than_minimum_time_necessary_for_compliance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Grounding with Google Search: permission to copy and store Grounded Results and Search Suggestions solely to comply with applicable law or regulations, for the minimum time necessary.",
+        "condition_explanation": "Both the exclusive compliance purpose and minimum-necessary retention limit are required.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 268,
+        "end_line": 271,
+        "clause_label": "split2/search_end_user_copy_store_individual_displayed_result",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "individual_grounded_result_displayed_to_end_user_through_application",
+              "copied_or_stored_by_end_user",
+              "not_accessible_or_collectible_by_automated_or_programmatic_means",
+              "not_used_to_create_database"
+            ]
+          }
+        },
+        "actor_role": "licensee permitting end users to copy and store",
+        "scope_note": "Grounding with Google Search: permission concerns individual Grounded Results displayed to end users through the application, subject to both access/collection and database restrictions.",
+        "condition_explanation": "All listed conditions apply to the end-user copy-and-store permission.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure permitted end-user copies and stored results are not accessible or collected by automated or programmatic means and are not used to create a database.",
+            "actor": "licensee",
+            "object": "individual Grounded Results displayed to end users through the application",
+            "trigger": "When allowing end users to copy or store those results."
+          }
+        ]
+      },
+      {
+        "start_line": 273,
+        "end_line": 276,
+        "clause_label": "split2/search_general_interface_monitoring_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "monitor_end_user_interactions_with_application_interface",
+              "not_track_interaction_with_specific_search_suggestion_grounded_result_or_link"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Grounding with Google Search: permits monitoring interactions with the application interface but not tracking whether interactions were specifically with a given Grounded Result, Search Suggestion, or Link, in whole or part.",
+        "condition_explanation": "The permission is for general interface interaction monitoring; the specific-content tracking exclusion applies to each identified content item or Link.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not track whether end-user interactions were specifically with a given Grounded Result, Search Suggestion, or Link, in whole or part.",
+            "actor": "licensee",
+            "object": "end-user interactions with Grounded Results, Search Suggestions, or Links",
+            "trigger": "When monitoring end-user interactions with the application interface."
+          }
+        ]
+      },
+      {
+        "start_line": 279,
+        "end_line": 284,
+        "clause_label": "split2/search_content_and_destination_presentation_restrictions",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "google_has_not_permitted_in_writing",
+          "requires": "grounded_results_or_search_suggestions_or_associated_links"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Grounding with Google Search: absent Google's written permission, prohibits modifying or interspersing other content with Grounded Results or Search Suggestions, and prohibits specified interference with presentation or navigation from Links or Search Suggestions to associated destination pages.",
+        "condition_explanation": "google_has_not_permitted_in_writing is false if Google has given written permission. The restrictions concerning interstitial content, redirects, and inhibited destination-page display concern Links or Search Suggestions and associated destination pages.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify or intersperse other content with Grounded Results or Search Suggestions; do not place interstitial content between a Link or Search Suggestion and its associated destination page, redirect end users away from that page, or minimize, remove, or otherwise inhibit its full and complete display.",
+            "actor": "licensee",
+            "object": "Grounded Results, Search Suggestions, Links, and associated destination pages",
+            "trigger": "Unless Google has permitted the conduct in writing."
+          }
+        ]
+      },
+      {
+        "start_line": 289,
+        "end_line": 298,
+        "clause_label": "split2/google_search_service_data_processing",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "grounding_with_google_search_is_used",
+          "requires": {
+            "all": [
+              "store_prompts_contextual_information_and_output_for_thirty_days",
+              "use_stored_information_for_creating_grounded_results_and_search_suggestions",
+              "stored_information_may_be_used_for_debugging_and_testing_of_supporting_systems",
+              "paid_quota_debugging_and_testing_processing_in_accordance_with_data_processing_addendum"
+            ]
+          }
+        },
+        "actor_role": "Google",
+        "scope_note": "Grounding with Google Search data-use provision: Google states it will store prompts, provided contextual information, and output for 30 days to create Grounded Results and Search Suggestions; stored information can be used for debugging and testing. For use via paid Gemini API quota, debugging/testing processing is in accordance with the identified Data Processing Addendum. This records Google's stated service processing, not a grant of data rights to the licensee.",
+        "condition_explanation": "The 30-day storage and stated purposes apply when using Grounding with Google Search. The Data Processing Addendum qualification applies to debugging and testing processing when using paid Gemini API quota. The referenced addendum is not supplied, so its terms cannot be specified.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Store prompts, provided contextual information, and output for 30 days for creation of Grounded Results and Search Suggestions; stored information may be used for debugging and testing of supporting systems, with paid-quota debugging/testing processing governed by the referenced Data Processing Addendum.",
+            "actor": "Google",
+            "object": "prompts, contextual information provided, and output associated with Grounding with Google Search",
+            "trigger": "When Grounding with Google Search is used; the Data Processing Addendum qualification applies to debugging and testing via paid Gemini API quota."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The incorporated Google Cloud Terms of Service sections, Service Specific Terms, Supplemental Paid Credit Terms, and pricing page are not supplied in full. Their payment, invoicing, billing, dispute, regional-modification, pricing, and supplemental-credit provisions cannot be extracted in detail.",
+      "The actual Paid Services prices and any pricing-change effective dates specified differently from the stated defaults are unavailable.",
+      "The Grounding with Google Search definitions and destination-page term references provide context; they do not create additional behavioral duties in these target paragraphs.",
+      "The exclusion of direct Google Cloud Platform service use identifies a scope boundary, not a rule governing use of the Gemini Paid Services.",
+      "The Google APIs Terms, API Terms, applicable Google Cloud payment terms, Documentation, Data Processing Addendum, and Client Application Guidelines are incorporated or referenced but not supplied here; their contents are not inferred.",
+      "Line 287 is a heading and provides context only. Line 309 begins the Grounding with Google Maps section; no Maps operative terms from that section are included in the target paragraphs.",
+      "The Google data-use paragraph states Google's storage and processing practices; it does not establish broader ownership, output, or licensee data rights."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0033",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "This paragraph assigns payment, invoicing, billing, payment disputes, and related matters to incorporated Google Cloud Terms provisions whose operative text is not supplied."
+      },
+      {
+        "unit_id": "P0034",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "This paragraph incorporates payment, miscellaneous, and regional-modification provisions, including listed subject areas, but their operative terms are unavailable."
+      },
+      {
+        "unit_id": "P0035",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "This paragraph incorporates external pricing, billing, and supplemental paid-credit terms that are not supplied; their duties and conditions cannot be determined."
+      },
+      {
+        "unit_id": "P0036",
+        "status": "MODELED",
+        "clause_labels": [
+          "split1/continued_paid_service_use_accepts_pricing_changes"
+        ],
+        "reason": "Models the stated consequence that continued Paid Services use constitutes consent to pricing changes. Actual prices and any separately specified effective dates remain unavailable."
+      },
+      {
+        "unit_id": "P0037",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "This paragraph draws a scope boundary: these Terms do not govern direct use of Google Cloud Platform services. It does not impose an activity constraint on use of the services governed here."
+      },
+      {
+        "unit_id": "P0038",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0039",
+        "status": "MODELED",
+        "clause_labels": [
+          "split1/agentic_service_use_responsibility_and_supervision"
+        ],
+        "reason": "Models the licensee's assigned responsibility, suitability assessment, authorization of access and connections, production judgment and supervision, and prohibition on automatically bypassing human-confirmation requests."
+      },
+      {
+        "unit_id": "P0040",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0041",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Grounding with Google Search-related terms and identifies separate destination-page terms; it supplies context but creates no separate behavioral rule."
+      },
+      {
+        "unit_id": "P0042",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Use-restrictions heading only."
+      },
+      {
+        "unit_id": "P0043",
+        "status": "MODELED",
+        "clause_labels": [
+          "split1/search_grounding_application_and_display_scope"
+        ],
+        "reason": "Models the application ownership and operation restriction and limits display of Grounded Results with associated Search Suggestions to the end user who submitted the prompt."
+      },
+      {
+        "unit_id": "P0044",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_grounded_content_restricted_uses"
+        ],
+        "reason": "Captures the prohibitions on caching, framing, syndicating, reselling, analyzing, training on, learning from, and extracting or collecting the specified Search grounding components."
+      },
+      {
+        "unit_id": "P0045",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_copy_store_monitoring_default_prohibition"
+        ],
+        "reason": "Captures the default copy, storage, and tracking/monitoring prohibitions, with the exceptions addressed in the following paragraphs."
+      },
+      {
+        "unit_id": "P0046",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_developer_limited_copy_store"
+        ],
+        "reason": "Captures the three alternative developer copy-and-store purposes, the two-year limit, and the distinct function-call conditions."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_legal_compliance_copy_store"
+        ],
+        "reason": "Captures the exclusive legal-compliance purpose and minimum-time retention limit."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_end_user_copy_store_individual_displayed_result"
+        ],
+        "reason": "Captures the end-user permission and both restrictions on automated/programmatic access or collection and database creation."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_general_interface_monitoring_permission"
+        ],
+        "reason": "Captures permitted general interface monitoring and the prohibition on tracking interactions with specific grounding content or Links."
+      },
+      {
+        "unit_id": "P0050",
+        "status": "MODELED",
+        "clause_labels": [
+          "split2/search_content_and_destination_presentation_restrictions"
+        ],
+        "reason": "Captures the written-permission exception and each restriction on altering Search content or interfering with associated destination-page access or display."
+      },
+      {
+        "unit_id": "P0051",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only; used to identify the following data-collection subsection."
+      },
+      {
+        "unit_id": "P0052",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "split2/google_search_service_data_processing"
+        ],
+        "reason": "Models Google's stated storage and processing terms, but the referenced Data Processing Addendum is absent, so its applicable processing conditions cannot be extracted."
+      },
+      {
+        "unit_id": "P0053",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "States survival of the subsection, as applicable, after termination; it does not create a distinct activity rule in the supplied activity model."
+      },
+      {
+        "unit_id": "P0054",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Makes the external Client Application Guidelines applicable and deems Search-grounding applications approved for those Guidelines; the Guidelines are not supplied, so their operative requirements cannot be extracted."
+      },
+      {
+        "unit_id": "P0055",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only; it introduces the Google Maps section, whose operative terms are outside the target paragraphs."
+      }
+    ]
+  },
+  "recovery": "validated child-segment composition",
+  "children": [
+    "704a1373d3adc23f-002-split1",
+    "704a1373d3adc23f-002-split2"
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "case_id": "chain-0166-271225a41a4a",
+  "input_group_row": 166,
+  "aggregate_count": 5,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "CC-BY-4.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "5"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0166-271225a41a4a",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions"
+          },
+          "S": {
+            "artifact": "chain-0166-271225a41a4a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "RemoteInteraction",
+        "figure_case_refs": [],
+        "reason": "A/S：上游 CC-BY-4.0 原始资产与下游 GPL-3.0 资产；上游所给条款摘录授予在遵守许可条件下行使权利，下游 GPL 摘录中的副本、修改版本及对应源码条件针对复制、修改或传递受覆盖作品。已知事实为远程服务调用且修改不适用，未证明发生复制、修改或分发，也未证明两许可共同约束同一作品；因此没有可确认的相反要求或冲突对。CC-BY-4.0 第2(a)(1)节摘录及 GPL-3.0 第4、5、6节摘录。",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711",
+          "license-text:downstream:58ae540904cddd04"
+        ],
+        "status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+      }
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 CC-BY-4.0 原始资产时遵守该许可条件。",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ],
+        "subject": {
+          "artifact": "chain-0166-271225a41a4a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_CC_license_conditions"
+        ]
+      }
+    ],
+    "limitations": [
+      "CC-BY-4.0 来源摘录仅提供许可授予的概括性条文，未包含具体归属、署名或其他适用条件的条文摘录；未推断其细节。",
+      "对象图中下游与上游的依赖及合并关系未知；本判断仅基于已知远程调用和链接关系。未发现仅由 API 调用触发的 GPL 源码提供义务。",
+      "未据此认定发生分发、复制或修改。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0166-4d4cc0b65fd6.json",
+  "original_case_id": "chain-0166-4d4cc0b65fd6",
+  "original_request_sha256": "6fc01b6a42b34f28a30db32bd007cf54d03c5f58b13c26b346f2b61596908548",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0166-4d4cc0b65fd6": "chain-0166-271225a41a4a",
+    "license-text:upstream:6c58d51d2054a711": "license-text:upstream:6c58d51d2054a711",
+    "license-text:downstream:58ae540904cddd04": "license-text:downstream:58ae540904cddd04",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/165": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/165"
+  }
+}

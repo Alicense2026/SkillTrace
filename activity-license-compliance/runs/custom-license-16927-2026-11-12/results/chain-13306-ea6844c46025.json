@@ -1,0 +1,242 @@
+{
+  "case_id": "chain-13306-ea6844c46025",
+  "source_csv_line": 13307,
+  "row": {
+    "github_repo": "jarvis-voice",
+    "github_url": "https://github.com/bigsk1/jarvis-voice",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-4o-mini-tts",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: jarvis-web/server/routes/api.py:3051 ｜ 调用原文: model = get_jarvis_setting('TTS_MODEL', 'gpt-4o-mini-tts') ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: jarvis-web API 中作为 TTS 模型使用",
+    "batch": "6501-7000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "bigsk1/jarvis-voice",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8",
+    "filename": "_licenseref_full/texts/7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:jarvis-voice-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-13306-ea6844c46025",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:37fead0f6ff828aa"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-13306-ea6844c46025:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:92a3715ee21f39fd"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "educational_purpose",
+                "noncommercial_purpose"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-13306-ea6844c46025:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:92a3715ee21f39fd"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": {
+              "all": [
+                "credit_original_author_bigsk1",
+                "link_to_original_repository",
+                "indicate_changes_if_made",
+                "no_suggestion_of_author_endorsement"
+              ]
+            },
+            "when": "use_occurs"
+          },
+          "S": {
+            "artifact": "chain-13306-ea6844c46025:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:92a3715ee21f39fd"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "commercial_purpose_without_explicit_written_permission_from_copyright_holder",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-13306-ea6844c46025:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI.txt 的相关结构化摘录仅涉及客户向 OpenAI 或 reseller 支付服务费用；未提供与本次远程调用相关的使用授权或其他服务条件条款，不能据此补写许可要求。",
+      "对象图确认下游代码链接并远程调用上游服务，但 scope_shared 未知，且未证实两份许可条款共同约束同一对象；未据此认定许可冲突。",
+      "下游许可证的商业用途限制适用与否，取决于用途是否为商业目的及是否有版权持有人的明确书面许可；当前事实未说明这些事项。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用下游软件，须给予 BigSk1 适当署名、链接原始仓库、在有修改时说明修改，且不得暗示作者背书。",
+        "source_refs": [
+          "license-text:downstream:92a3715ee21f39fd"
+        ],
+        "subject": {
+          "artifact": "chain-13306-ea6844c46025:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_occurs",
+        "unresolved_predicates": [
+          "downstream_software_use_occurs",
+          "attribution_requirements_satisfied"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用下游软件须为教育目的或非商业目的；商业目的使用须先取得版权持有人的明确书面许可。",
+        "source_refs": [
+          "license-text:downstream:92a3715ee21f39fd"
+        ],
+        "subject": {
+          "artifact": "chain-13306-ea6844c46025:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_occurs",
+        "unresolved_predicates": [
+          "downstream_software_use_occurs",
+          "educational_purpose",
+          "noncommercial_purpose",
+          "commercial_purpose",
+          "explicit_written_permission_from_copyright_holder"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 24325,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1445,
+    "output_tokens_details": {
+      "reasoning_tokens": 344
+    },
+    "total_tokens": 25770,
+    "attribution": {
+      "items": {
+        "msg_045d784d0a8ba3af016af53d1c6b1087d2a8df0a1a23be7ff0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_045d784d0a8ba3af016af53d1c6b1087d2b5c5930fe3276cce": {
+          "input_tokens": 22255,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22255,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_045d784d0a8ba3af016af53d232dd087d2b830eb61046c94b4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1101,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1101
+            }
+          ]
+        },
+        "rs_045d784d0a8ba3af016af53d23121487d2a1721d4f6b681f55": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 344
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "1ecf4360d33cdd3533adf5ac80ad9d57bdfe2f449b0ac06e33f265b1c2a39448",
+  "elapsed_seconds": 35.03
+}

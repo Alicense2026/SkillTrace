@@ -1,0 +1,44 @@
+{
+  "case_id": "chain-0296-e1e2a241bb48",
+  "output": [
+    {
+      "activity": "Charge",
+      "subject": {
+        "artifact": "chain-0296-e1e2a241bb48:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Pay fees due for use of Mistral AI Products within 30 days of invoice, subject to any applicable Order Form.",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "fees_due",
+        "payment_made"
+      ],
+      "source_refs": [
+        "license-text:upstream:282b79bf9fcbaf7a"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0296-e1e2a241bb48:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If using the BUSL Licensed Work, limit use to non-production use and comply with current License requirements; production use requires permission under an applicable Additional Use Grant.",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "use_of_downstream_licensed_work",
+        "production_use",
+        "applicable_additional_use_grant",
+        "compliance_with_current_license_requirements"
+      ],
+      "source_refs": [
+        "license-text:downstream:4fbc02d6fc831a83"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

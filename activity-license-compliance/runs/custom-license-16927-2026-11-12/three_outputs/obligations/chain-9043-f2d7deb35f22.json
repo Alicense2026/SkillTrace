@@ -1,0 +1,157 @@
+{
+  "case_id": "chain-9043-f2d7deb35f22",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游服务时遵守适用的服务条款。",
+      "source_refs": [
+        "license-text:upstream:fae380c757cebfef"
+      ],
+      "subject": {
+        "artifact": "chain-9043-f2d7deb35f22:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "适用服务条款的具体要求及履行情况"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "进行远程服务交互时遵守适用的服务条款。",
+      "source_refs": [
+        "license-text:upstream:fae380c757cebfef"
+      ],
+      "subject": {
+        "artifact": "chain-9043-f2d7deb35f22:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:RemoteInteraction",
+      "unresolved_predicates": [
+        "适用服务条款的具体要求及履行情况"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若技能目录含原始许可或来源说明，优先遵守该许可或说明。",
+      "source_refs": [
+        "license-text:downstream:9b6049479255b0b6"
+      ],
+      "subject": {
+        "artifact": "chain-9043-f2d7deb35f22:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "skill_directory_contains_original_license_or_source_notice"
+        ]
+      },
+      "unresolved_predicates": [
+        "skill_directory_contains_original_license_or_source_notice"
+      ]
+    },
+    {
+      "activity": "Modify",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若发生商用、再分发或大规模改造，确认相关技能的来源和许可边界。",
+      "source_refs": [
+        "license-text:downstream:9b6049479255b0b6"
+      ],
+      "subject": {
+        "artifact": "chain-9043-f2d7deb35f22:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Modify",
+          {
+            "any": [
+              "commercial_use",
+              "redistribution",
+              "large_scale_modification"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Modify",
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification",
+        "confirm_relevant_skill_source_and_license_boundaries"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若发生商用、再分发或大规模改造，确认相关技能的来源和许可边界。",
+      "source_refs": [
+        "license-text:downstream:9b6049479255b0b6"
+      ],
+      "subject": {
+        "artifact": "chain-9043-f2d7deb35f22:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          {
+            "any": [
+              "commercial_use",
+              "redistribution",
+              "large_scale_modification"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification",
+        "confirm_relevant_skill_source_and_license_boundaries"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若发生商用、再分发或大规模改造，确认相关技能的来源和许可边界。",
+      "source_refs": [
+        "license-text:downstream:9b6049479255b0b6"
+      ],
+      "subject": {
+        "artifact": "chain-9043-f2d7deb35f22:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:CommercialUse",
+          {
+            "any": [
+              "commercial_use",
+              "redistribution",
+              "large_scale_modification"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:CommercialUse",
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification",
+        "confirm_relevant_skill_source_and_license_boundaries"
+      ]
+    }
+  ]
+}

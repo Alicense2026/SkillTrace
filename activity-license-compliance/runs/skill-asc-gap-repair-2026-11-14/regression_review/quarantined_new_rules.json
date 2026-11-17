@@ -1,0 +1,135 @@
+{
+  "rules": [
+    {
+      "rule_id": "gap-6fdede86cc94042760b5dcab",
+      "license_id": "mistral+license.txt",
+      "source_aliases": [
+        "mistral+license.txt"
+      ],
+      "source_sha256": "4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "customer_is_organization_or_entity_it_represents"
+        }
+      },
+      "source_lines": [
+        3,
+        3
+      ],
+      "source_excerpt": "These Terms of Service for Commercial Users (“Terms”), together with the additional terms and policies referenced herein (“Additional Terms”), govern the use of Mistral AI Studio, Vibe, and the other websites, products, software, services, and technologies we offer (collectively, the “Mistral AI Products”) by the organization, company, or other entity that you represent (“Customer”). The Mistral AI Products are provided by Mistral AI, a French limited joint-stock corporation, incorporated in Paris, under number 952 418 325, having its registered offices at 15 rue des Halles, 75001 Paris, France, or its affiliate as specified in an Order Form (“Mistral AI”). Customer and Mistral AI are individually referred to herein as a “Party”, and collectively as the “Parties”.",
+      "clause_label": "recovered/commercial_terms_scope",
+      "actor_role": "customer",
+      "scope_note": "Commercial Terms scope Mistral AI Products; excludes individual consumers, addressed to separate consumer terms.",
+      "condition_explanation": "Mistral AI Products covers the listed websites, products, software, services, and technologies offered by Mistral AI.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "4f00a0042342233a-001"
+    },
+    {
+      "rule_id": "gap-93f6e5a2cdead49c79e9c73c",
+      "license_id": "mistral+license.txt",
+      "source_aliases": [
+        "mistral+license.txt"
+      ],
+      "source_sha256": "4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "individual_consumer",
+          "requires": true
+        }
+      },
+      "source_lines": [
+        5,
+        5
+      ],
+      "source_excerpt": "If you are an individual consumer, please reference the Terms of Service (EU Consumer) or Terms of Service (Consumers Outside of the EU) (based on where you reside), for the general terms applicable to your personal use of the Mistral AI Products. ",
+      "clause_label": "recovered/consumer_terms_boundary",
+      "actor_role": "individual_consumer",
+      "scope_note": "Directs individual consumers to other terms; does not state those terms’ rules.",
+      "condition_explanation": "The applicable consumer terms depend on where the individual resides.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "4f00a0042342233a-001"
+    },
+    {
+      "rule_id": "gap-5c8c8d445a50924b21bd153a",
+      "license_id": "mistral+license.txt",
+      "source_aliases": [
+        "mistral+license.txt"
+      ],
+      "source_sha256": "4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "terms_accepted_by_click_order_form_or_access_on_customer_behalf",
+          "requires": "acceptor_has_legal_authority_to_bind_customer_and_accepts_terms_and_applicable_additional_terms"
+        }
+      },
+      "source_lines": [
+        7,
+        7
+      ],
+      "source_excerpt": "By (a) clicking on “I agree” (or any similar button or checkbox) at the time you sign up for a Mistral AI Product, (b) executing an Order Form referencing these Terms, or (c) otherwise accessing or using any of the Mistral AI Products on behalf of Customer, you represent that you have the legal authority to bind Customer and are agreeing to these Terms (including our Usage Policy, applicable Additional Terms post at https://www.legal.mistral.ai/terms/additional-terms, and other applicable terms posted at https://legal.mistral.ai/terms), which constitute a binding agreement between Customer and Mistral AI as of the date of such acceptance.",
+      "clause_label": "recovered/acceptance_binds_customer",
+      "actor_role": "customer",
+      "scope_note": "Acceptance of these Terms and referenced policies/terms forms a binding agreement as of acceptance.",
+      "condition_explanation": "Acceptance occurs by clicking an agreement control, executing a referencing Order Form, or otherwise accessing or using Products on Customer’s behalf. Referenced terms are not supplied in full.",
+      "obligation_items": [],
+      "supporting_source_ranges": [],
+      "repair_chunk": "4f00a0042342233a-001"
+    }
+  ],
+  "concerns": [
+    {
+      "chunk": "4f00a0042342233a-001",
+      "candidate_id": "C001",
+      "decision": "EXCLUDE",
+      "covered_rule_ids": [],
+      "reason": "Section 1 (line 3) identifies the commercial Customer and the Products governed by these Terms, but does not grant or condition an activity permission; it is scope context, not a Use rule.",
+      "corrected_clause": null,
+      "existing_rule_concerns": [
+        "gap-6fdede86cc94042760b5dcab"
+      ]
+    },
+    {
+      "chunk": "4f00a0042342233a-001",
+      "candidate_id": "C002",
+      "decision": "EXCLUDE",
+      "covered_rule_ids": [],
+      "reason": "Section 1 (line 5) directs individual consumers to separate terms but does not state those terms’ rules. The historical UNSPECIFIED Use clause is nonoperative as to an activity.",
+      "corrected_clause": null,
+      "existing_rule_concerns": [
+        "gap-93f6e5a2cdead49c79e9c73c"
+      ]
+    },
+    {
+      "chunk": "4f00a0042342233a-001",
+      "candidate_id": "C003",
+      "decision": "EXCLUDE",
+      "covered_rule_ids": [],
+      "reason": "Section 1 (line 7) specifies how acceptance forms a binding agreement and the acceptor’s authority representation; it does not itself state a permission or restriction on an allowed activity.",
+      "corrected_clause": null,
+      "existing_rule_concerns": [
+        "gap-5c8c8d445a50924b21bd153a"
+      ]
+    }
+  ]
+}

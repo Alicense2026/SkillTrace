@@ -1,0 +1,121 @@
+{
+  "case_id": "chain-0120-1191de8bccb8",
+  "status": "SUCCESS",
+  "request_sha256": "ac664dccda0fdae2c51879d4fd91cb0bd9bc110a15bf37a1219ec0dc713a9a86",
+  "analysis": {
+    "case_id": "chain-0120-1191de8bccb8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_to_provider",
+            "when": "fees_due_under_order_form"
+          },
+          "S": {
+            "artifact": "chain-0120-1191de8bccb8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本次调用被确认是远程服务调用，且代码修改不适用；未据此推断分发、源码/权重提供或模型权重转移。",
+      "对象图仅确认下游到上游的链接/API调用关系，依赖及共同许可范围未知；ISC条款针对下游软件对象，现有事实不足以确认其与上游服务条款共同约束同一活动或对象。",
+      "OpenAI摘录仅支持费用支付条款；Order Form、费用是否到期及具体服务范围未知。未发现可据以判断其他上游服务限制的结构化条款。",
+      "ISC摘录为宽泛许可及保留通知条件，但没有证据表明本次远程调用涉及对ISC软件的Use、Copy、Modify或Distribute；不将其套用于API调用。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0120-1191de8bccb8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在Order Form项下适用费用到期时，向OpenAI或适用的转售商支付费用。",
+        "trigger": "fees_due_under_order_form",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "fees_due_under_order_form",
+          "payment_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17603,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 877,
+    "output_tokens_details": {
+      "reasoning_tokens": 319
+    },
+    "total_tokens": 18480,
+    "attribution": {
+      "items": {
+        "msg_009d26b9840980d0016af2fbf87cd487d2a7727a975d5a2442": {
+          "input_tokens": 15571,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15571,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_009d26b9840980d0016af2fbfeba7887d2bf2826530b090f94": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 558,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 558
+            }
+          ]
+        },
+        "rs_009d26b9840980d0016af2fbfea37087d29fe5509616dbc8f9": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 319
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.329,
+  "auto_applied": false,
+  "aggregate_count": 8
+}

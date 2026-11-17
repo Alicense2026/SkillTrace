@@ -1,0 +1,615 @@
+{
+  "case_id": "skill-00016",
+  "csv_row": 17,
+  "source_excel_row": "30",
+  "status": "SUCCESS",
+  "request_sha256": "ef002cdda15011cb65d2c50b4e483aab6199c0d22547c0f5ae785f577159b7f0",
+  "analysis": {
+    "case_id": "skill-00016",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00016:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00016:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "modified_program_supports_remote_computer_network_interaction",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00016:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实是下游远程调用并链接上游模型；没有证据表明模型权重、源码或副本被纳入下游、修改、分发或再许可。API调用不等于上述行为。",
+      "AGPL远程交互源码提供条款针对修改程序并提供该修改版本的一方；现有事实不证明调用者是该义务承担者或触发条件已满足。",
+      "MIT与AGPL的相关许可文本已按各自对象范围检查；未发现本例活动及对象范围内的相反约束。未将其他活动条件推断为已发生。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游调用者可在AGPL许可持续有效的条件下使用下游原始对象；现无违反事实。",
+        "source_refs": [
+          "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+        ],
+        "subject": {
+          "artifact": "skill-00016:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": []
+      },
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "仅当承担者修改AGPL覆盖程序且该修改版本支持远程网络交互时，修改者须向远程交互用户显著提供免费获取该版本对应源码的机会；该服务提供者义务不自动转给API调用者。",
+        "source_refs": [
+          "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+        ],
+        "subject": {
+          "artifact": "skill-00016:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_program_supports_remote_computer_network_interaction",
+            "actor_is_modifier_and_provider_of_modified_version"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_program_supports_remote_computer_network_interaction",
+          "actor_is_modifier_and_provider_of_modified_version"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "MIT对上游原始对象的使用为无附加条件许可；未规定本活动义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对复制上游软件；本例仅证实远程调用。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对修改上游软件；无修改事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对合并上游软件；无合并事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对发布上游软件；无分发事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对分发上游软件；无分发事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对再许可上游软件；无再许可事实。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对出售上游软件副本；无此事实。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对逐字复制AGPL许可证文件。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对修改许可证文件，不是程序。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "AGPL允许在许可有效时使用下游原始对象；许可持续有效情况未知，但该条无独立履行义务。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对为专属修改或运行设施目的转交覆盖作品；无此事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对特定情形下转交覆盖作品；无此事实，且摘录未给出后续条款条件。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对再许可覆盖作品；无此事实。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对转交覆盖作品及相关反规避行为；无此事实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对逐字转交程序源代码；无此事实。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对按§4转交逐字副本时收费；无此事实。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对以源代码形式转交修改作品；无此事实。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对聚合及组合活动；本例仅证实API调用关系。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对转交目标代码形式的覆盖作品；无此事实。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对实体产品中的目标代码转交。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对实体产品目标代码转交及书面源码要约。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对符合特定条件的目标代码副本转交。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对从指定地点提供目标代码访问。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对点对点转交目标代码。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅为目标代码转交的系统库例外。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对用户产品交易中的目标代码转交。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对接收者修改或安装产品后寻求网络访问；非一般API调用规则。"
+      },
+      {
+        "rule_ref": "D021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对依据§6转交对应源码或提供安装信息。"
+      },
+      {
+        "rule_ref": "D022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对适用于程序或其可分割部分的附加许可。"
+      },
+      {
+        "rule_ref": "D023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对转交覆盖作品时可选择移除附加许可。"
+      },
+      {
+        "rule_ref": "D024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对向组合作品添加材料及附加许可。"
+      },
+      {
+        "rule_ref": "D025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对经权利人授权的新增材料补充条款。"
+      },
+      {
+        "rule_ref": "D026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对含进一步限制的材料及特定再许可条件。"
+      },
+      {
+        "rule_ref": "D027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对依§7向覆盖作品添加条款；无此事实。"
+      },
+      {
+        "rule_ref": "D028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对未获AGPL明确许可的传播；无传播事实。"
+      },
+      {
+        "rule_ref": "D029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对未获AGPL明确许可的修改；无修改事实。"
+      },
+      {
+        "rule_ref": "D030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对停止许可违规后的权利恢复；无相关事实。"
+      },
+      {
+        "rule_ref": "D031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对收到侵权通知后的权利恢复；无相关事实。"
+      },
+      {
+        "rule_ref": "D032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对权利已终止且未永久恢复的情形；无相关事实。"
+      },
+      {
+        "rule_ref": "D033",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "接收或运行副本不要求接受许可；本条没有额外履行义务。"
+      },
+      {
+        "rule_ref": "D034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对通过点对点接收副本产生的附带传播；无此事实。"
+      },
+      {
+        "rule_ref": "D035",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对修改AGPL覆盖作品；无修改事实。"
+      },
+      {
+        "rule_ref": "D036",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对传播AGPL覆盖作品；无传播事实。"
+      },
+      {
+        "rule_ref": "D037",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对转交覆盖作品时原许可方自动授予接收者许可；无转交事实。"
+      },
+      {
+        "rule_ref": "D038",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "本条仅说明无需负责执行第三方遵守许可，不产生本例义务。"
+      },
+      {
+        "rule_ref": "D039",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对实体交易中接收覆盖作品。"
+      },
+      {
+        "rule_ref": "D040",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对实体交易接收者取得对应源码。"
+      },
+      {
+        "rule_ref": "D041",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对限制AGPL授予或确认权利；无相关行为事实。"
+      },
+      {
+        "rule_ref": "D042",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对就行使AGPL权利收费；本例无该收费事实。"
+      },
+      {
+        "rule_ref": "D043",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对特定专利诉讼行为；无此事实。"
+      },
+      {
+        "rule_ref": "D044",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对贡献者版本的特定专利权利范围。"
+      },
+      {
+        "rule_ref": "D045",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对明知依赖专利许可并转交覆盖作品；无此事实。"
+      },
+      {
+        "rule_ref": "D046",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对转交作品并授予专利许可的特定安排。"
+      },
+      {
+        "rule_ref": "D047",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对规定的第三方歧视性专利许可安排；无此事实。"
+      },
+      {
+        "rule_ref": "D048",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "保留可能存在的法定抗辩，不产生本例履行义务。"
+      },
+      {
+        "rule_ref": "D049",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对因其他义务导致无法同时合规转交作品；无转交或冲突事实。"
+      },
+      {
+        "rule_ref": "D050",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "源码提供义务针对修改并提供支持远程交互的覆盖程序的一方；触发事实与承担者身份未知，故保留条件义务，不转嫁给远程调用者。"
+      },
+      {
+        "rule_ref": "D051",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对将AGPL覆盖作品与GPLv3作品组合；无此事实。"
+      },
+      {
+        "rule_ref": "D052",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对转交特定AGPL与GPLv3组合作品；无此事实。"
+      },
+      {
+        "rule_ref": "D053",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对程序指定“3.0或更高版本”时的版本选择；无相关事实。"
+      },
+      {
+        "rule_ref": "D054",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对程序未指定版本时的选择；无相关事实。"
+      },
+      {
+        "rule_ref": "D055",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对程序授权代理选择未来版本；无相关事实。"
+      },
+      {
+        "rule_ref": "D056",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "选择较新版本本身不增加作者或版权持有人的义务；无本例履行义务。"
+      },
+      {
+        "rule_ref": "D057",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对贡献者必要专利权下的制作活动。"
+      },
+      {
+        "rule_ref": "D058",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对贡献者必要专利权下的出售副本活动。"
+      },
+      {
+        "rule_ref": "D059",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对贡献者必要专利权下的销售要约活动。"
+      },
+      {
+        "rule_ref": "D060",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对贡献者必要专利权下的修改活动。"
+      },
+      {
+        "rule_ref": "D061",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对贡献者必要专利权下的传播活动。"
+      },
+      {
+        "rule_ref": "D062",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "针对收费提供支持或保修；无此事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00016-1794590352253890000-1.json",
+  "usage": {
+    "input_tokens": 42431,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3547,
+    "output_tokens_details": {
+      "reasoning_tokens": 302
+    },
+    "total_tokens": 45978,
+    "attribution": {
+      "items": {
+        "msg_0e8bca26a6d823ee016af74694d9f487d184a26c63675cb0fc": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e8bca26a6d823ee016af74694d9f487d1869945523cb12f54": {
+          "input_tokens": 39707,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 39707,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e8bca26a6d823ee016af7469ae4b087d1a137eb8e8dbd935c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3245,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3245
+            }
+          ]
+        },
+        "rs_0e8bca26a6d823ee016af7469ac8fc87d1bcd2a80b2e61be7e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 302
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

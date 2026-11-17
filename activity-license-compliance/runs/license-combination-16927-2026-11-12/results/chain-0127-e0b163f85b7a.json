@@ -1,0 +1,212 @@
+{
+  "case_id": "chain-0127-e0b163f85b7a",
+  "input_group_row": 127,
+  "aggregate_count": 8,
+  "combination": {
+    "GitHub许可证": "BUSL-1.1",
+    "资产许可证原文标题/标签": "Anthropic Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "8"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0127-e0b163f85b7a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0127-e0b163f85b7a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0127-e0b163f85b7a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:f7fb1e17ce90e3f8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "non_production_use_and_compliance_with_current_license_requirements",
+            "when": "use_of_downstream_BUSL_Licensed_Work"
+          },
+          "S": {
+            "artifact": "chain-0127-e0b163f85b7a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游服务条款摘录仅授予使用 Services 的权限并要求遵守服务条款；未提供所引用的完整服务条款内容，故不推断其他义务。",
+      "BUSL 摘录约束 Licensed Work，但任务事实仅确认远程服务调用且修改不适用；对象图中的 API 链接不证明下游 CombinedProduct 包含、复制或使用 BUSL Licensed Work。BUSL 使用条件义务仅在实际使用该 Licensed Work 时适用。",
+      "BUSL 版本、Applicable Additional Use Grant 及 Change Date 等信息未提供；本次没有事实表明生产用途、分发或相关日期触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Anthropic Services 时遵守适用服务条款。",
+        "trigger": true,
+        "subject": {
+          "artifact": "chain-0127-e0b163f85b7a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "远程交互使用 Anthropic Services 时遵守适用服务条款。",
+        "trigger": true,
+        "subject": {
+          "artifact": "chain-0127-e0b163f85b7a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用下游 BUSL Licensed Work，须限于非生产用途并遵守当时有效的 BUSL 要求；生产用途仅在适用 Additional Use Grant 明确允许的范围内进行。",
+        "trigger": "use_of_downstream_BUSL_Licensed_Work",
+        "subject": {
+          "artifact": "chain-0127-e0b163f85b7a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "unresolved_predicates": [
+          "use_of_downstream_BUSL_Licensed_Work",
+          "production_use",
+          "applicable_additional_use_grant",
+          "compliance_with_current_license_requirements"
+        ],
+        "source_refs": [
+          "license-text:downstream:f7fb1e17ce90e3f8"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 24912,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1380,
+    "output_tokens_details": {
+      "reasoning_tokens": 289
+    },
+    "total_tokens": 26292,
+    "attribution": {
+      "items": {
+        "msg_017b5f4de1332b70016af52f3469c087d0842be8ea82de9d19": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_017b5f4de1332b70016af52f3469c087d0986d97bb70a7e2ad": {
+          "input_tokens": 22842,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22842,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_017b5f4de1332b70016af52f3a44d487d09328e9d187e6fd29": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1091,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1091
+            }
+          ]
+        },
+        "rs_017b5f4de1332b70016af52f3a2da487d09e48a759f9f8c199": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 289
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "c1f767511cfb10b2e15fc9d6e796c4abeb595229edbf89b6ef3f402ecbf5ac49",
+  "elapsed_seconds": 36.73
+}

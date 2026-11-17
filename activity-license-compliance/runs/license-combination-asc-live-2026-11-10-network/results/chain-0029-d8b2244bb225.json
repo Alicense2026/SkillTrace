@@ -1,0 +1,142 @@
+{
+  "case_id": "chain-0029-d8b2244bb225",
+  "status": "SUCCESS",
+  "request_sha256": "21cae8b1e2d832d9bf71980a43399e73bf860c2a375451ca9b4ae31669840ed6",
+  "analysis": {
+    "case_id": "chain-0029-d8b2244bb225",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0029-d8b2244bb225:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ea4c887805d7254c"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge",
+            "when": {
+              "all": [
+                "modified_program",
+                "supports_remote_network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0029-d8b2244bb225:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "AGPL-3.0 原文第13条的源码提供义务以修改程序且该版本支持网络远程交互为条件；可信记录说明本案为远程服务调用且代码修改不适用，因此该义务在已知事实下未触发。API调用本身不证明修改或分发。",
+      "OpenAI.txt仅映射到费用支付条款；现有摘录不能据此确定其他服务使用限制或与AGPL条款的冲突。API链接关系也不能证明两许可约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "按订单表及协议支付适用服务费用。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0029-d8b2244bb225:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "applicable_fees_due",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_made"
+        ]
+      }
+    ],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 16951,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1089,
+    "output_tokens_details": {
+      "reasoning_tokens": 476
+    },
+    "total_tokens": 18040,
+    "attribution": {
+      "items": {
+        "msg_00628692d2fe7f33016af2f7c7f43487d189b9beabcdf9be08": {
+          "input_tokens": 14919,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14919,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00628692d2fe7f33016af2f7d1067487d18b8621de22af9aee": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 613,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 613
+            }
+          ]
+        },
+        "rs_00628692d2fe7f33016af2f7d0eaa087d1bf3ed0b178221f5e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 476
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.765,
+  "auto_applied": false,
+  "aggregate_count": 78
+}

@@ -1,0 +1,223 @@
+{
+  "case_id": "chain-0136-e5fcaad7c2cc",
+  "input_group_row": 136,
+  "aggregate_count": 7,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "7"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0136-e5fcaad7c2cc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": "true",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-0136-e5fcaad7c2cc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c058c2144efca191"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_license_limitations_and_conditions",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-0136-e5fcaad7c2cc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c058c2144efca191"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-0136-e5fcaad7c2cc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c058c2144efca191"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-0136-e5fcaad7c2cc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If Elastic-licensed software is within the scope of this use, comply with the applicable Elastic License limitations and conditions.",
+        "source_refs": [
+          "license-text:downstream:c058c2144efca191"
+        ],
+        "subject": {
+          "artifact": "chain-0136-e5fcaad7c2cc:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "comply_with_license_limitations_and_conditions"
+        ]
+      },
+      {
+        "activity": "ProvideNetworkService",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Do not provide the software to third parties as a hosted or managed service if users thereby receive access to any substantial set of its features or functionality.",
+        "source_refs": [
+          "license-text:downstream:c058c2144efca191"
+        ],
+        "subject": {
+          "artifact": "chain-0136-e5fcaad7c2cc:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:ProvideNetworkService",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:ProvideNetworkService",
+          "scope_shared",
+          "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+        ]
+      }
+    ],
+    "limitations": [
+      "本记录确认的是对 Apache-2.0 资产的远程服务调用及 API 链接，不证明 Elastic-2.0 软件被修改、复制、分发、托管，或与 Apache 资产构成受两份许可共同约束的对象；对象图中的 scope_shared 未知。",
+      "Elastic-2.0 第18–20行的限制针对向第三方提供托管或管理服务且用户获得软件实质性功能访问的情形。现有事实仅确认远程调用，未确认该服务提供方、服务性质或功能访问程度，因此不能据此判定违规。",
+      "Elastic-2.0 许可证文本已匹配并有本地哈希标识；本次仅依据提供的相关结构化摘录分析。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 28189,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1395,
+    "output_tokens_details": {
+      "reasoning_tokens": 334
+    },
+    "total_tokens": 29584,
+    "attribution": {
+      "items": {
+        "msg_07515c8cc8b96560016af52f59c07087d085900d7ecd4cb348": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07515c8cc8b96560016af52f59c07087d0b750c151843ef23a": {
+          "input_tokens": 26119,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 26119,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07515c8cc8b96560016af52f60ac5087d0b5a78c85b2c1306d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1061,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1061
+            }
+          ]
+        },
+        "rs_07515c8cc8b96560016af52f6090b087d0b6861e46066c6196": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 334
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "fc706680373cbee40b446188bd2866e236556b97e72f9af096cc63ac1103d775",
+  "elapsed_seconds": 37.42
+}

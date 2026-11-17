@@ -1,0 +1,195 @@
+{
+  "case_id": "chain-0045-831c3f170f13",
+  "status": "SUCCESS",
+  "request_sha256": "32446255a6a27a78474875f147bb2d2d7b0efe01c2b35cf594241e1d3d56edb2",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:78854561225c11f5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "develop_model_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_reverse_engineer_extract_or_replicate_Service_component"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0045-831c3f170f13:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:78854561225c11f5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "professional_or_business_purpose",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0045-831c3f170f13:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本次核对的是提供的 Gemini API Additional Terms 文本（标注生效日为 2026-03-23）；其适用于相关 Gemini API 服务。未取得其所引用的 Google APIs Terms、Prohibited Use Policy、可用地区清单及其他外链内容，故未展开这些材料中的要求。",
+      "对象图将 downstream 与 upstream 的关系标为 API 链接/远程调用，且未确认共享许可对象；MIT 文本针对 downstream 软件，不能据此认定其与 Gemini 服务条款约束同一对象。",
+      "条款候选标记为 FIRST_PASS_REVIEW_REQUIRED；竞争模型的具体边界仍由原文语境定义。本记录未证明存在开发竞争模型、逆向工程、提取或复制服务组件的行为。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0045-831c3f170f13:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "将 Gemini API 服务用于专业或商业目的，而非消费者用途。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "professional_or_business_purpose"
+        ],
+        "source_refs": [
+          "license-text:upstream:78854561225c11f5"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0045-831c3f170f13:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得使用服务开发与 Gemini API 或 Google AI Studio 竞争的模型；不得尝试逆向工程、提取或复制服务组件（包括底层数据或模型参数权重）。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "develop_model_competing_with_Gemini_API_or_Google_AI_Studio",
+          "attempt_reverse_engineer_extract_or_replicate_Service_component"
+        ],
+        "source_refs": [
+          "license-text:upstream:78854561225c11f5"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0045-831c3f170f13:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅在服务提供的可用地区访问；如向欧洲经济区、瑞士或英国用户提供 API 客户端，则只能使用付费服务。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "access_region_is_available",
+          "api_client_users_in_eea_switzerland_or_uk",
+          "paid_service_when_required"
+        ],
+        "source_refs": [
+          "license-text:upstream:78854561225c11f5"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0045-831c3f170f13:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守适用的 Prohibited Use Policy。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_prohibited_use_policy"
+        ],
+        "source_refs": [
+          "license-text:upstream:78854561225c11f5"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0045-831c3f170f13"
+  },
+  "usage": {
+    "input_tokens": 32050,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1384,
+    "output_tokens_details": {
+      "reasoning_tokens": 258
+    },
+    "total_tokens": 33434,
+    "attribution": {
+      "items": {
+        "msg_091944b0df12f5c0016af2e765993c87d1a74664d2c65c03a1": {
+          "input_tokens": 30102,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30102,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_091944b0df12f5c0016af2e76aca9887d1b5ee00bc5d451587": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1126,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1126
+            }
+          ]
+        },
+        "rs_091944b0df12f5c0016af2e76ab38487d1b84a2c1ed82dd26c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 258
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 31.249,
+  "auto_applied": false
+}

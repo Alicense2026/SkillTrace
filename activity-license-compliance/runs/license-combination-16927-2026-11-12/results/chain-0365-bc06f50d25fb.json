@@ -1,0 +1,156 @@
+{
+  "case_id": "chain-0365-bc06f50d25fb",
+  "input_group_row": 365,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MIT OR Apache-2.0",
+    "资产许可证原文标题/标签": "Anthropic Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0365-bc06f50d25fb",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0365-bc06f50d25fb:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0365-bc06f50d25fb:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the applicable Anthropic service terms when using the Services.",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0365-bc06f50d25fb:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游条款摘录仅说明服务使用须遵守服务条款，未提供相关具体条款内容或履行证据；因此保留条件义务，不判定违规。",
+      "下游标签为 MIT OR Apache-2.0，但记录仅确认远程服务调用、未确认下游材料被使用、复制、修改或分发。现有下游许可摘录针对下游软件对象，不能据此认定其与上游服务条款共同约束同一对象；对象图中的依赖及合并关系亦未确定。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 20793,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 865,
+    "output_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "total_tokens": 21658,
+    "attribution": {
+      "items": {
+        "msg_0a8280b0b8b47da6016af5323bebdc87d091e7d219da61684b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a8280b0b8b47da6016af5323bebdc87d0963f232f17e67999": {
+          "input_tokens": 18723,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18723,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a8280b0b8b47da6016af53242562c87d08d73fe059414001d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 577,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 577
+            }
+          ]
+        },
+        "rs_0a8280b0b8b47da6016af53242268c87d0807edf2be9a24ca7": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 288
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "7a6041064b98bb1282447ba3c54f39efb6ce1108d13406cd6a4cce9c8eaf7112",
+  "elapsed_seconds": 30.91
+}

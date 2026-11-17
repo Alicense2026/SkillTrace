@@ -1,0 +1,93 @@
+{
+  "case_id": "chain-0243-3bca86867f09",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0243-3bca86867f09:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Comply with the applicable Llama agreement, including applicable law and the incorporated Acceptable Use Policy; do not use Llama Materials or their outputs to improve another large language model, except Meta Llama 3 or its derivatives.",
+      "trigger": true,
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "compliance_with_Llama_agreement",
+        "use_of_outputs_to_improve_other_large_language_model"
+      ],
+      "source_refs": [
+        "license-text:upstream:b7874099eaa0bc72"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "chain-0243-3bca86867f09:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If distributing or making available Llama Materials, derivative works, or a product or service that uses them, provide a copy of the agreement and prominently display “Built with Meta Llama 3” in a related location; retain the specified attribution notice in distributed copies of Llama Materials.",
+      "trigger": "activity:Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "agreement_copy_provided",
+        "required_notice_displayed",
+        "attribution_notice_retained"
+      ],
+      "source_refs": [
+        "license-text:upstream:b7874099eaa0bc72"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "chain-0243-3bca86867f09:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If conveying the GPL Program, provide recipients a copy of the GPL license and preserve the required copyright, license, non-permissive-term, and warranty notices.",
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "scope_shared"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "scope_shared",
+        "provide_license_and_notices"
+      ],
+      "source_refs": [
+        "license-text:downstream:d785af2ff5ee3c07"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "chain-0243-3bca86867f09:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "If conveying a covered modified work based on the GPL Program, license the whole work under GPL and provide source as required by the applicable GPL conveying terms.",
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "scope_shared"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "scope_shared",
+        "covered_modified_work",
+        "GPL_compliant_licensing_and_source"
+      ],
+      "source_refs": [
+        "license-text:downstream:d785af2ff5ee3c07"
+      ]
+    }
+  ],
+  "aggregate_count": 2
+}

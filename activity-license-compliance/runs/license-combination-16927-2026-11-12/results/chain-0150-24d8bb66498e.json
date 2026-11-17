@@ -1,0 +1,117 @@
+{
+  "case_id": "chain-0150-24d8bb66498e",
+  "input_group_row": 150,
+  "aggregate_count": 6,
+  "combination": {
+    "GitHub许可证": "CC-BY-NC-4.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "6"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "S": {
+            "artifact": "chain-0150-24d8bb66498e:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ed42a8e402a278f2"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0150-24d8bb66498e:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI 原文摘录仅涉及客户向 OpenAI 或转售方支付适用费用；其范围说明明确这不是客户可向下游收费的依据。未提供订单、适用费用或付款履行事实，因此不能判定是否有欠费或违约。",
+      "CC-BY-NC-4.0 摘录说明许可授予限于 Licensed Rights 和 Licensed Material，但未提供足以确定本例 API 调用关系是否涉及该材料或许可权利的事实。对象图仅确认链接/远程调用，scope_shared 未知；不能据此认定两份许可约束同一对象或发生许可冲突。",
+      "CC-BY-NC-4.0 的首轮结构化条款未在所给相关摘录中明确呈现非商业限制等具体条件；不据此补写或推断本例的额外义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0150-24d8bb66498e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "客户须按订单表约定的币种和付款条款向 OpenAI 或适用的转售方支付适用费用。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees",
+          "payment_due_or_performed"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0150-24d8bb66498e:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若该使用涉及 CC-BY-NC-4.0 所授 Licensed Rights 和受其覆盖的材料，须在该许可范围内使用。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_within_CC_license"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "scope_within_CC_license"
+        ],
+        "source_refs": [
+          "license-text:downstream:ed42a8e402a278f2"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0150-24d8bb66498e"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0150-4a38e0966eec.json",
+  "original_case_id": "chain-0150-4a38e0966eec",
+  "original_request_sha256": "d0629ccf579d1cd411b9842b8f53fa84ec0a0913b440c1440b807edfd192b2c2",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0150-4a38e0966eec": "chain-0150-24d8bb66498e",
+    "license-text:upstream:c9e0443a56323634": "license-text:upstream:c9e0443a56323634",
+    "license-text:downstream:ed42a8e402a278f2": "license-text:downstream:ed42a8e402a278f2",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/149": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/149"
+  }
+}

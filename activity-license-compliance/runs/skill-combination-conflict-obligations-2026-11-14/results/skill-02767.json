@@ -1,0 +1,475 @@
+{
+  "case_id": "skill-02767",
+  "csv_row": 2768,
+  "source_excel_row": "3795",
+  "status": "SUCCESS",
+  "request_sha256": "4d23bba15fd2bb81d7dc243a5bedfeb627cd2ed7a1d2e7e98878a509f7e66084",
+  "analysis": {
+    "case_id": "skill-02767",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02767:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_is_public_reading_or_evaluation",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02767:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_performs_ordinary_productive_work_for_self_or_another_person_or_organization",
+            "when": "action_is_evaluation"
+          },
+          "S": {
+            "artifact": "skill-02767:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "UNSPECIFIED",
+            "requires": "use_is_for_producing_useful_work_or_outputs_beyond_evaluation",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02767:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "no_separate_paid_operational_license",
+            "when": "action_is_operational_use_under_section_3_definition"
+          },
+          "S": {
+            "artifact": "skill-02767:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "separate_paid_license_not_obtained",
+            "when": "action_is_operational_use_under_section_3_definition"
+          },
+          "S": {
+            "artifact": "skill-02767:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游许可证持有人仅可为善意评估、安全审查、互操作测试、学术研究或决定是否取得运营许可证而使用 Licensed Material；评估不得用于为自己或他人/组织完成普通生产性工作。",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "subject": {
+          "artifact": "skill-02767:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "action_is_evaluation"
+          ]
+        },
+        "unresolved_predicates": [
+          "purpose_is_good_faith_evaluation_security_review_interoperability_testing_academic_study_or_deciding_whether_to_obtain_operational_license",
+          "use_performs_ordinary_productive_work_for_self_or_another_person_or_organization"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游许可证持有人对 Licensed Material 作运营使用前，须取得许可方单独授予的付费运营许可证；该要求针对运营使用，不因远程调用本身或收费事实自动成立。",
+        "source_refs": [
+          "license:3b1a43d3887a55a83b592fd86f037e4b1c983c55abdcf4dc243a912c48fa0f95"
+        ],
+        "subject": {
+          "artifact": "skill-02767:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "action_is_operational_use_under_section_3_definition"
+          ]
+        },
+        "unresolved_predicates": [
+          "action_is_operational_use_under_section_3_definition",
+          "separate_paid_license_obtained"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图确认下游通过远程调用链接上游，未证明复制、修改、分发、合并或再许可上游软件；MIT复制/实质部分通知条件因此不作为已触发义务。",
+      "下游许可证的运营使用定义要求在系统中使用、加载、适配、嵌入、调用或实质纳入材料，并以产生评估以外的有用工作或输出为目的；现有事实未说明目的或是否属于评估，故保留条件义务，不认定违规。",
+      "未提供的外部许可引用材料按政策排除；仅依据本地摘录判断。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "上游软件的Use获许可；无附带履行条件。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "已知为远程调用，未证明对上游软件Copy。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Modify上游软件。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Combine上游软件。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Publish上游软件。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Distribute上游软件。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Sublicense上游软件。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明SellCopies上游软件。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "下游材料Use已发生；评估用途及相应限制是否适用尚未知，保留条件要求。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明该对象属于另有许可证或通知的第三方材料。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "范围与既有许可的保留条款，不产生本案已触发的独立履行义务。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Copy下游材料。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明以检查方式Use。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明加载下游材料。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明Modify下游材料。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明运行下游材料。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "评估使用与普通生产性工作限制相关；是否属于评估及生产性工作均未知，条件义务已合并保留。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "该定义用于判断已发生Use是否构成运营使用；有用工作或输出目的尚未知。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "运营使用且无单独付费运营许可证时受禁止；运营使用与许可取得情况未知，条件义务已保留。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "运营使用前取得单独付费许可证的要求，与D011去重合并保留。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "仅列举运营许可证的可能证据形式，不独立要求特定证据。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明使用许可证执行技能、引用资料或机器可读政策。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明复制上述合规材料。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明使用合规技能处理无关作品。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明分发未修改的下游材料副本。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明向接收者分发材料副本。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "仅说明书面运营许可证可能授予更广分发权；未证明相关分发活动。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明根据该许可证制作下游材料副本。"
+      },
+      {
+        "rule_ref": "D021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明改编下游 Licensed Material。"
+      },
+      {
+        "rule_ref": "D022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明已发生书面通知后的首次识别违规及补救场景。"
+      },
+      {
+        "rule_ref": "D023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明合规工作流以相似性作为调查证据。"
+      },
+      {
+        "rule_ref": "D024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明使用名称、商标、标志或商业外观。"
+      },
+      {
+        "rule_ref": "D025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明复制许可证文本本身。"
+      },
+      {
+        "rule_ref": "D026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明分发许可证文本本身。"
+      },
+      {
+        "rule_ref": "D027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明改编许可证文本本身。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-02767-1794593663422261000-1.json",
+  "usage": {
+    "input_tokens": 26633,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2820,
+    "output_tokens_details": {
+      "reasoning_tokens": 403
+    },
+    "total_tokens": 29453,
+    "attribution": {
+      "items": {
+        "msg_045b37c8a4fd416e016af75384bae087d1927630caa6886442": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_045b37c8a4fd416e016af75384bae087d1b966a29b6be680ab": {
+          "input_tokens": 23909,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23909,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_045b37c8a4fd416e016af7538c79bc87d1af738ca9d3e5c0d8": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2417,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2417
+            }
+          ]
+        },
+        "rs_045b37c8a4fd416e016af7538c62c087d192d3866e6cc233e8": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 403
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

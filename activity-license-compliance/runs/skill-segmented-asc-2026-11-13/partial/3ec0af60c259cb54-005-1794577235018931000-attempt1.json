@@ -1,0 +1,117 @@
+{
+  "clauses": [
+    {
+      "start_line": 106,
+      "end_line": 106,
+      "clause_label": "trade_controls_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "use_complies_with_applicable_trade_laws",
+            "customer_and_end_users_not_in_embargoed_countries_or_on_restricted_party_lists",
+            "use_not_in_or_for_benefit_of_embargoed_countries_or_restricted_parties"
+          ]
+        }
+      },
+      "actor_role": "Customer",
+      "scope_note": "Section 16.11 conditions Customer’s use of the Services. Customer is solely responsible for applicable trade-law compliance; the clause also states Customer’s representation about Customer and End Users’ locations and listing status.",
+      "condition_explanation": "use_complies_with_applicable_trade_laws includes applicable sanctions and export-control laws and applicable know-your-customer requirements or obligations concerning End Users. The prohibition on use in or for the benefit of embargoed countries or Restricted Party List persons is separate from the general compliance condition.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Ensure that Customer’s use of the Services complies with applicable trade laws, including sanctions and export-control laws.",
+          "actor": "Customer",
+          "object": "Services",
+          "trigger": "Whenever Customer uses the Services."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use the Services in or for the benefit of a U.S. embargoed country or anyone on a Restricted Party List.",
+          "actor": "Customer",
+          "object": "Services",
+          "trigger": "Whenever Customer uses the Services."
+        }
+      ]
+    },
+    {
+      "start_line": 106,
+      "end_line": 106,
+      "clause_label": "trade_controlled_input_prohibition",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PROHIBITED",
+        "when": "input_contains_material_or_information_requiring_government_license_for_release_or_export",
+        "requires": true
+      },
+      "actor_role": "Customer",
+      "scope_note": "Section 16.11 prohibits including specified material or information in Customer’s Input to the Services.",
+      "condition_explanation": "The prohibition applies when the Input contains material or information that requires a government license for release or export.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not include material or information requiring a government license for release or export in Customer’s Input.",
+          "actor": "Customer",
+          "object": "Input",
+          "trigger": "Whenever Customer provides Input to the Services."
+        }
+      ]
+    },
+    {
+      "start_line": 107,
+      "end_line": 107,
+      "clause_label": "supported_territories_access",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": "customer_or_end_user_is_outside_supported_countries_and_territories",
+        "requires": true
+      },
+      "actor_role": "Customer and End Users",
+      "scope_note": "Section 16.12 prohibits Customer and End Users from accessing or offering access to the Services outside Supported Countries and Territories. A violation may result in suspension under Section 8.",
+      "condition_explanation": "The geographic condition is whether the access or offer of access occurs outside the contractually defined Supported Countries and Territories; their values are not supplied here.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not access or offer access to the Services outside Supported Countries and Territories.",
+          "actor": "Customer and End Users",
+          "object": "Services",
+          "trigger": "Whenever accessing or offering access to the Services."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The supplied material does not define Supported Countries and Territories or provide the incorporated Order Forms, Service-Specific Terms, OpenAI Policies, or Section 8 suspension terms; their content is not inferred.",
+    "Sections 16.7 and 16.13 contain operative contract-assignment and update mechanics, but the permitted activity/object schema cannot faithfully represent those agreement-level actions or the update-acceptance mechanism. Those portions are identified as unresolved in the paragraph audit."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0017",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "trade_controls_use",
+        "trade_controlled_input_prohibition",
+        "supported_territories_access"
+      ],
+      "reason": "Modeled the trade-control use condition, prohibition on specified Input, and geographic access restriction. The paragraph also contains operative assignment terms (16.7) and update, notice, acceptance, and exception mechanics (16.13) that cannot be faithfully represented with the supplied activity/object schema; these remain uncovered."
+    }
+  ]
+}

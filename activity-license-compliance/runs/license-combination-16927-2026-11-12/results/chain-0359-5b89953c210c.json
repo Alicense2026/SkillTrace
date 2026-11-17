@@ -1,0 +1,140 @@
+{
+  "case_id": "chain-0359-5b89953c210c",
+  "input_group_row": 359,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "AGPL-3.0",
+    "调用方式（代码修改）": "代码层面集成（修改：是）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0359-5b89953c210c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_remote_users_access_to_corresponding_source_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0359-5b89953c210c:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0359-5b89953c210c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0359-5b89953c210c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "chain-0359-5b89953c210c:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the copyright notice and permission notice in copies or substantial portions of the software.",
+        "trigger": "activity:Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ]
+      },
+      {
+        "activity": "ProvideNetworkService",
+        "subject": {
+          "artifact": "chain-0359-5b89953c210c:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "If the modified version supports remote interaction and users interact with it remotely through a computer network, prominently offer those users access to the Corresponding Source at no charge.",
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "version_supports_remote_interaction",
+            "users_interact_remotely_through_computer_network"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether the upstream modified version supports remote interaction",
+          "whether users interact remotely with that version",
+          "whether the source offer is provided"
+        ],
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游 AGPL 第13条摘录针对被修改程序支持远程交互、且用户通过网络与该修改版本交互的情形。已知代码集成修改及远程调用，但现有事实不能确定下游是否向用户提供该修改版本作为网络服务，也不能确定条款的触发条件已成立；因此保留条件义务，不认定违反。",
+      "MIT 摘录支持复制、修改的许可及通知条件；通知是否已随副本保留未知。对象图中的代码纳入不等于已发布打包物，未推定发生分发。",
+      "结构化条款标记 FIRST_PASS_REVIEW_REQUIRED；结论仅覆盖所列条款及摘录，不推断未映射条款。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0356-ea7bc2d4d75e.json",
+  "original_case_id": "chain-0356-ea7bc2d4d75e",
+  "original_request_sha256": "d569bc747a1c8a6cbbe3e667b54adf9f8f98ff875fc89bb3dfae18ab918fa87c",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0356-ea7bc2d4d75e": "chain-0359-5b89953c210c",
+    "license-text:upstream:5b08064288d26a33": "license-text:upstream:5b08064288d26a33",
+    "license-text:downstream:246613076f619962": "license-text:downstream:246613076f619962",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/355": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/358"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "case_id": "chain-0314-79adbd091808",
+  "input_group_row": 314,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "CDLA-Permissive-2.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0314-79adbd091808",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0314-79adbd091808:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a8826160228dfd53"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "follow_agreement_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0314-79adbd091808:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "支付适用费用，并遵守订单表规定的币种和付款条款。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0314-79adbd091808:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "applicable_fees",
+          "payment_terms",
+          "payment_fulfillment"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI.txt 匹配到的结构化条款仅为费用与付款条款摘录；不足以判断该协议对已发生的 API 使用或远程调用规定了哪些许可条件。",
+      "CDLA-Permissive-2.0 的分享条款仅在分享其所涵盖的 Data 时适用。现有事实证明远程调用和 API 链接，但未证明分享了该 Data；不得据此推定分享、修改、分发或源码/权重披露义务。",
+      "对象图未确认两许可约束共同适用于同一对象；现有摘录也未显示相反要求，故不据此认定许可冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 17463,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 942,
+    "output_tokens_details": {
+      "reasoning_tokens": 343
+    },
+    "total_tokens": 18405,
+    "attribution": {
+      "items": {
+        "msg_0a36abcde79397ac016af5316dfa3c87d18e317433350b8d6b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a36abcde79397ac016af5316dfa3c87d1beb9309eaedec354": {
+          "input_tokens": 15393,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15393,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a36abcde79397ac016af53174d64887d1ba50c7f32f1ed788": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 599,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 599
+            }
+          ]
+        },
+        "rs_0a36abcde79397ac016af53174bf4087d1b98ae1e67aea1530": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 343
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "653ba9e9af2d211ed4a86f1eb8b658c285087a7eecd135f40ba061763a6a1261",
+  "elapsed_seconds": 24.59
+}

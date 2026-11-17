@@ -1,0 +1,476 @@
+{
+  "case_id": "skill-05573",
+  "csv_row": 5574,
+  "source_excel_row": "7883",
+  "status": "SUCCESS",
+  "request_sha256": "3db91343245c7d5ed279af341015fbd397f21551921a68b8782e7e13f3ff84f6",
+  "analysis": {
+    "case_id": "skill-05573",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:44d7e0864961810610881896c7397fba654b40a48bf6bbf364aebdb958a25f96"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05573:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not_use_xiaobei_for_unlawful_or_unauthorized_scraping",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05573:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "use_xiaobei_to_obtain_protected_content",
+                {
+                  "not": "prior_explicit_authorization_from_rightsholder"
+                }
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05573:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对本地 MPL-2.0 与 LicenseRef-Custom 摘录。事实确认的是远程调用及 API/代码链接；没有分发、修改、副本捆绑或源码提供事实，因此未触发 MPL 分发条件。",
+      "远程调用不证明多租户服务、前端使用、抓取、获取受保护内容或相关授权情况。Custom 许可中这些限制仅按各自触发条件列为义务；未将远程调用视为分发或模型权重转移。",
+      "MPL §2.3 摘录说明许可不暗示额外权利，并非禁止已明确授予的使用权；本案没有将其解释为与 §2.1 使用许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可方不得将 xiaobei 用于违法或未经授权的抓取，包括违反适用法律、网站服务条款或 robots 排除指令的抓取。",
+        "source_refs": [
+          "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+        ],
+        "subject": {
+          "artifact": "skill-05573:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_xiaobei_for_scraping"
+          ]
+        },
+        "unresolved_predicates": [
+          "use_xiaobei_for_scraping",
+          "scraping_unlawful_or_unauthorized"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可方使用 xiaobei 获取媒体平台、交易平台内容或其他受第三方知识产权保护的材料时，须事先取得权利人的明确授权；否则不得获取。",
+        "source_refs": [
+          "license:8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f"
+        ],
+        "subject": {
+          "artifact": "skill-05573:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_xiaobei_to_obtain_protected_content"
+          ]
+        },
+        "unresolved_predicates": [
+          "use_xiaobei_to_obtain_protected_content",
+          "prior_explicit_authorization_from_rightsholder"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "上游原件的使用许可；已确认使用，无附加义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅涉及复制，当前无复制事实。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅涉及修改，当前无修改事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅涉及分发，当前无分发事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅涉及组合，当前无组合事实。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条件涉及专利许可排除，未确认相关专利权利行使。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅涉及出售，当前无出售事实。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅涉及要约出售，当前无此事实。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "§2.2规定许可生效时间，不产生本案需履行的独立义务。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "§2.3 不暗示额外权利，并未禁止明确授予的使用权。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见使用贡献者商标、服务标志或标识的事实。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见选择后续版本或次级许可分发的事实。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无须据此认定本次使用依赖公平使用等独立权利。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅对分发适用，当前无分发事实。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅对源码形式分发适用。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅对可执行形式分发适用。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅对可执行形式分发适用。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅对可执行形式再许可适用。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认创建包含上游软件的较大作品。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发包含上游软件的较大作品。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认按次级许可分发。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认修改源码形式中的许可通知。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认向接收方提供保证、支持、赔偿或责任承诺。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认对相关承诺收费。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认添加特定司法管辖区的免责声明或责任限制。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认法律原因导致许可履行不可能。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认法律原因导致许可履行不可能。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认许可不合规导致权利终止。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认触发 §5.2 的专利诉讼。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认终止前授予的终端用户许可。"
+      },
+      {
+        "rule_ref": "U031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发。"
+      },
+      {
+        "rule_ref": "U032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认创建或使用修改版 MPL 作为新许可。"
+      },
+      {
+        "rule_ref": "U033",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认相关源码形式分发。"
+      },
+      {
+        "rule_ref": "U034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认安放通知不可能或不适宜。"
+      },
+      {
+        "rule_ref": "U035",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认添加版权归属声明。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认下游商业使用；商业许可条件及其触发子项均未知。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "远程调用本身不证明使用 xiaobei 源码运营多租户环境。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认使用前端或修改标识。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认商业网络爬取或数据采集。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留 xiaobei 用于抓取时适用的禁止条件；抓取及其合法性/授权状态未知。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "保留使用 xiaobei 获取受保护内容时须事先取得明确授权的条件。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认使用 xiaobei 复制受保护内容。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认使用 xiaobei 分发受保护内容。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该许可仅涉及贡献代码的商业使用；未确认此对象或商业使用事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05573-1794600471777274000-2.json",
+  "usage": {
+    "input_tokens": 33610,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2871,
+    "output_tokens_details": {
+      "reasoning_tokens": 277
+    },
+    "total_tokens": 36481,
+    "attribution": {
+      "items": {
+        "msg_02d99ee2f5233f50016af76e6f645887d0837bdc1acd47c91c": {
+          "input_tokens": 30886,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30886,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02d99ee2f5233f50016af76e6f645887d09aa7049ae1427c11": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02d99ee2f5233f50016af76e75b12c87d0b36b1950399e15b9": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2594,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2594
+            }
+          ]
+        },
+        "rs_02d99ee2f5233f50016af76e75959c87d0a56ffebd3719f83c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 277
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

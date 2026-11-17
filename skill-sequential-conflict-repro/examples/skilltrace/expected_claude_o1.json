@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "path": "examples/skilltrace/sample_claude_o1.json",
+      "events": 2
+    }
+  ],
+  "events": 2,
+  "detected_skills": [
+    {
+      "id": "license-philosopher",
+      "name": "license-philosopher",
+      "license": "CC-BY-SA-4.0",
+      "repository": "freeasinbird/free-skills",
+      "commit": "9afb62a650d4235a0edbdf59fec00fe165a1e291",
+      "first_event": 0,
+      "source_file": "examples/skilltrace/sample_claude_o1.json",
+      "matched_text": "skills/license-philosopher/skill.md",
+      "evidence": "{\"normalized\": {\"args\": {\"file_path\": \"repos/license-philosopher/skills/license-philosopher/SKILL.md\"}, \"result\": \"Loaded license-philosopher instructions.\", \"source\": \"claude_code\", \"timestamp\": \"2026-11-16T20:10:00+08:"
+    },
+    {
+      "id": "ritual-document",
+      "name": "Ritual document",
+      "license": "Apache-2.0 OR MIT",
+      "repository": "2Tricky4u/Ritual",
+      "commit": "152877377562ce42a2a8a94a2b73b1100f5ecdbc",
+      "first_event": 1,
+      "source_file": "examples/skilltrace/sample_claude_o1.json",
+      "matched_text": "workbench/skills/document/skill.md",
+      "evidence": "{\"normalized\": {\"args\": {\"file_path\": \"repos/Ritual/workbench/skills/document/SKILL.md\"}, \"result\": \"Loaded Ritual document instructions.\", \"source\": \"claude_code\", \"timestamp\": \"2026-11-16T20:10:01+08:00\","
+    }
+  ],
+  "license_sequence": [
+    {
+      "id": "license-philosopher",
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "id": "ritual-document",
+      "license": "Apache-2.0 OR MIT"
+    }
+  ],
+  "matched_chains": [
+    {
+      "scenario": "O1",
+      "conflict_type": "output_content",
+      "call_order": [
+        "license-philosopher",
+        "Ritual document"
+      ],
+      "detected_order": [
+        "license-philosopher",
+        "ritual-document"
+      ]
+    }
+  ],
+  "errors": []
+}

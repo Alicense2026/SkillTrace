@@ -1,0 +1,41 @@
+{
+  "case_id": "chain-13198-25dd71f998d7",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "客户应按订单约定支付适用服务费。",
+      "source_refs": [
+        "license-text:upstream:944e8627d927d51c"
+      ],
+      "subject": {
+        "artifact": "chain-13198-25dd71f998d7:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "applicable_service_fees_due",
+      "unresolved_predicates": [
+        "applicable_service_fees_due",
+        "payment_made"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若在评估后将 Official App 用于例行或持续生产性工作，须购买许可证。",
+      "source_refs": [
+        "license-text:downstream:12242dd1da9c7f2b"
+      ],
+      "subject": {
+        "artifact": "chain-13198-25dd71f998d7:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "routine_or_ongoing_productive_use_after_evaluation",
+      "unresolved_predicates": [
+        "routine_or_ongoing_productive_use_after_evaluation",
+        "payment_due_paid"
+      ]
+    }
+  ]
+}

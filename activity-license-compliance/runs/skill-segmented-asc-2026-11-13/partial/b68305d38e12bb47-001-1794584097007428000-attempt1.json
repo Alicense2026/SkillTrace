@@ -1,0 +1,177 @@
+{
+  "clauses": [
+    {
+      "start_line": 6,
+      "end_line": 7,
+      "clause_label": "bsd_source_binary_use_permission",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "licensee",
+      "scope_note": "BSD-3-Clause grant: use of the software in source or binary form, whether modified or unmodified.",
+      "condition_explanation": "The grant states no condition on use.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 6,
+      "end_line": 7,
+      "clause_label": "bsd_source_binary_modification_permission",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "licensee",
+      "scope_note": "BSD-3-Clause grant: modification of the software in source or binary form.",
+      "condition_explanation": "The grant states no condition on modification.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 6,
+      "end_line": 7,
+      "clause_label": "bsd_source_binary_redistribution_permission",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "applicable_redistribution_conditions_satisfied"
+      },
+      "actor_role": "licensee",
+      "scope_note": "BSD-3-Clause grant: redistribution of the software in source or binary form, subject to the source-form or binary-form conditions in clauses 1 or 2, respectively.",
+      "condition_explanation": "applicable_redistribution_conditions_satisfied means the condition for the form distributed is met: source-form redistribution requires retaining the copyright notice, conditions list, and disclaimer; binary-form redistribution requires reproducing those items in the documentation and/or other materials provided with the distribution. The alternatives are form-specific, not cumulative.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 9,
+      "end_line": 10,
+      "clause_label": "bsd_source_redistribution_notices",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "redistributing_in_source_code_form",
+        "requires": "source_notice_conditions_satisfied"
+      },
+      "actor_role": "licensee",
+      "scope_note": "BSD-3-Clause clause 1: source-code redistribution of the software.",
+      "condition_explanation": "source_notice_conditions_satisfied means the source-code redistribution retains the copyright notice, the list of conditions, and the disclaimer.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Retain the above copyright notice, the list of conditions, and the disclaimer in the source-code redistribution.",
+          "actor": "licensee making the source-code redistribution",
+          "object": "source-code form of the licensed software",
+          "trigger": "when redistributing the software in source-code form"
+        }
+      ]
+    },
+    {
+      "start_line": 12,
+      "end_line": 14,
+      "clause_label": "bsd_binary_redistribution_notices",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "redistributing_in_binary_form",
+        "requires": "binary_notice_conditions_satisfied"
+      },
+      "actor_role": "licensee",
+      "scope_note": "BSD-3-Clause clause 2: binary-form redistribution of the software.",
+      "condition_explanation": "binary_notice_conditions_satisfied means reproducing the copyright notice, list of conditions, and disclaimer in the documentation and/or other materials provided with the distribution.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Reproduce the copyright notice, the list of conditions, and the disclaimer in the documentation and/or other materials provided with the binary-form distribution.",
+          "actor": "licensee making the binary-form distribution",
+          "object": "documentation and/or other materials provided with the binary-form distribution of the licensed software",
+          "trigger": "when distributing the software in binary form"
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "Clause 3's restriction on using the copyright holder's or contributors' names to endorse or promote products derived from the software without specific prior written permission is operative but cannot be represented faithfully using the supplied activities; it is identified as UNRESOLVED in the paragraph audit.",
+    "The copyright year and owner are symbolic template parameters and have not been filled in.",
+    "No external documents are supplied or required by the excerpt."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0001",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "License title only."
+    },
+    {
+      "unit_id": "P0002",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Copyright attribution and reservation statement; no operative activity constraint under this extraction task."
+    },
+    {
+      "unit_id": "P0003",
+      "status": "MODELED",
+      "clause_labels": [
+        "bsd_source_binary_use_permission",
+        "bsd_source_binary_modification_permission",
+        "bsd_source_binary_redistribution_permission"
+      ],
+      "reason": "Expressly permits use and modification in source and binary forms and redistribution subject to the form-specific conditions modeled separately."
+    },
+    {
+      "unit_id": "P0004",
+      "status": "MODELED",
+      "clause_labels": [
+        "bsd_source_redistribution_notices"
+      ],
+      "reason": "Requires retaining the specified notices and disclaimer when redistributing source code."
+    },
+    {
+      "unit_id": "P0005",
+      "status": "MODELED",
+      "clause_labels": [
+        "bsd_binary_redistribution_notices"
+      ],
+      "reason": "Requires reproducing the specified notices and disclaimer in documentation and/or other materials with a binary distribution."
+    },
+    {
+      "unit_id": "P0006",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "Operative restriction on using holder or contributor names to endorse or promote products derived from the software without specific prior written permission; no supplied activity represents endorsement or promotion."
+    },
+    {
+      "unit_id": "P0007",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Warranty disclaimer and limitation of liability; excluded by the extraction instructions."
+    }
+  ]
+}

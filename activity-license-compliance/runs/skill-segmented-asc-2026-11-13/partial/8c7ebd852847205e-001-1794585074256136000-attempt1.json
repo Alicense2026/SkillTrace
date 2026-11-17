@@ -1,0 +1,376 @@
+{
+  "clauses": [
+    {
+      "start_line": 5,
+      "end_line": 5,
+      "clause_label": "commercial_use_subject_to_license_conditions",
+      "activities": [
+        "CommercialUse"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "no_condition_below_met"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1 permits commercial utilization of xiaobei, but says a commercial license must be obtained from the producer should the conditions below be met.",
+      "condition_explanation": "no_condition_below_met means none of the conditions in section 1(a)-(e) applies. The text does not specify how commercial-license procurement relates to the individual restrictions, and no allowed activity represents obtaining a license.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 7,
+      "end_line": 7,
+      "clause_label": "no_multitenant_source_code_without_written_authorization",
+      "activities": [
+        "ProvideNetworkService"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "all": [
+            "using_xiaobei_source_code",
+            "operating_multi_tenant_environment",
+            {
+              "not": "explicit_written_authorization_by_xiaobei"
+            }
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(a) restricts using xiaobei source code to operate a multi-tenant environment, unless xiaobei explicitly authorizes it in writing. Tenant definition in section 1(a) is cited separately as context.",
+      "condition_explanation": "multi_tenant_environment has the meaning supplied by the tenant and workspace explanation in section 1(a): one tenant corresponds to one workspace, with a separated area for each tenant's data and configurations.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use xiaobei source code to operate a multi-tenant environment without xiaobei's explicit written authorization.",
+          "actor": "licensee",
+          "object": "xiaobei source code used to operate a multi-tenant environment",
+          "trigger": "The licensee uses xiaobei source code to operate an environment with multiple tenants, and xiaobei has not explicitly authorized that use in writing."
+        }
+      ]
+    },
+    {
+      "start_line": 11,
+      "end_line": 11,
+      "clause_label": "retain_frontend_logo_and_copyright_information",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": "using_xiaobei_frontend",
+        "requires": "not_remove_or_modify_logo_or_copyright_information"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(b) prohibits removing or modifying the LOGO or copyright information in the xiaobei console or applications when using xiaobei's frontend. The restriction expressly does not apply to uses that do not involve the frontend.",
+      "condition_explanation": "using_xiaobei_frontend means use involves the frontend as identified in section 1(b); the frontend's components are specified in the definition at section 1(b), cited separately as context.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not remove or modify the LOGO or copyright information in the xiaobei console or applications.",
+          "actor": "licensee",
+          "object": "LOGO and copyright information in the xiaobei console or applications",
+          "trigger": "The licensee uses xiaobei's frontend; the restriction does not apply to uses of xiaobei that do not involve its frontend."
+        }
+      ]
+    },
+    {
+      "start_line": 15,
+      "end_line": 15,
+      "clause_label": "no_commercial_crawling_or_harvesting",
+      "activities": [
+        "CommercialUse"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "not_use_xiaobei_for_commercial_web_crawling_or_data_harvesting"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(c) prohibits using xiaobei for commercial web crawling or data harvesting operations.",
+      "condition_explanation": "commercial_web_crawling_or_data_harvesting means a commercial web crawling or data harvesting operation for which xiaobei is used.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use xiaobei for commercial web crawling or data harvesting operations.",
+          "actor": "licensee",
+          "object": "xiaobei used in a commercial web crawling or data harvesting operation",
+          "trigger": "The licensee uses xiaobei for a commercial web crawling or data harvesting operation."
+        }
+      ]
+    },
+    {
+      "start_line": 17,
+      "end_line": 17,
+      "clause_label": "no_unlawful_or_unauthorized_scraping",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "not_use_xiaobei_for_unlawful_or_unauthorized_scraping"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(d) prohibits using xiaobei for unlawful or unauthorized scraping, including scraping that violates applicable laws, website terms of service, or robots exclusion directives.",
+      "condition_explanation": "unlawful_or_unauthorized_scraping includes, but is not limited to, scraping that violates applicable laws, website terms of service, or robots exclusion directives.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use xiaobei for unlawful or unauthorized scraping.",
+          "actor": "licensee",
+          "object": "xiaobei used for scraping",
+          "trigger": "The licensee uses xiaobei for scraping that is unlawful or unauthorized, including scraping violating applicable laws, website terms of service, or robots exclusion directives."
+        }
+      ]
+    },
+    {
+      "start_line": 19,
+      "end_line": 19,
+      "clause_label": "no_third_party_protected_content_without_rightsholder_authorization",
+      "activities": [
+        "Copy"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "all": [
+            "use_xiaobei_to_obtain_copy_or_distribute_protected_content",
+            {
+              "not": "prior_explicit_authorization_from_rightsholder"
+            }
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(e) prohibits using xiaobei to obtain, copy, or distribute content from media platforms, trading platforms, or other material protected by third-party intellectual property rights, unless the rights holder gave prior explicit authorization. The selected activity is Copy; the clause also covers distinct actions that are not represented by this clause.",
+      "condition_explanation": "protected_content includes content from media platforms and trading platforms and other materials protected by third-party intellectual property rights. The exception requires prior explicit authorization from the rights holder.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use xiaobei to copy protected content without prior explicit authorization from the rights holder.",
+          "actor": "licensee",
+          "object": "Content from media platforms or trading platforms, or other material protected by third-party intellectual property rights",
+          "trigger": "The licensee uses xiaobei to copy the material and has not obtained prior explicit authorization from the rights holder."
+        }
+      ]
+    },
+    {
+      "start_line": 19,
+      "end_line": 19,
+      "clause_label": "no_obtaining_protected_content_without_rightsholder_authorization",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "all": [
+            "use_xiaobei_to_obtain_protected_content",
+            {
+              "not": "prior_explicit_authorization_from_rightsholder"
+            }
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(e) prohibits using xiaobei to obtain protected content unless the rights holder gave prior explicit authorization. This clause models obtaining, separately from copying and distributing.",
+      "condition_explanation": "protected_content includes content from media platforms and trading platforms and other materials protected by third-party intellectual property rights. The exception requires prior explicit authorization from the rights holder.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use xiaobei to obtain protected content without prior explicit authorization from the rights holder.",
+          "actor": "licensee",
+          "object": "Content from media platforms or trading platforms, or other material protected by third-party intellectual property rights",
+          "trigger": "The licensee uses xiaobei to obtain the material and has not obtained prior explicit authorization from the rights holder."
+        }
+      ]
+    },
+    {
+      "start_line": 19,
+      "end_line": 19,
+      "clause_label": "no_distribution_of_protected_content_without_rightsholder_authorization",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "all": [
+            "use_xiaobei_to_distribute_protected_content",
+            {
+              "not": "prior_explicit_authorization_from_rightsholder"
+            }
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 1(e) prohibits using xiaobei to distribute protected content unless the rights holder gave prior explicit authorization. This clause models distribution, separately from obtaining and copying.",
+      "condition_explanation": "protected_content includes content from media platforms and trading platforms and other materials protected by third-party intellectual property rights. The exception requires prior explicit authorization from the rights holder.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use xiaobei to distribute protected content without prior explicit authorization from the rights holder.",
+          "actor": "licensee",
+          "object": "Content from media platforms or trading platforms, or other material protected by third-party intellectual property rights",
+          "trigger": "The licensee uses xiaobei to distribute the material and has not obtained prior explicit authorization from the rights holder."
+        }
+      ]
+    },
+    {
+      "start_line": 24,
+      "end_line": 24,
+      "clause_label": "contributed_code_commercial_use",
+      "activities": [
+        "CommercialUse"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 2(b) says contributed code may be used for commercial purposes, including cloud business operations. This is a permission concerning contributed code, not a broader relicensing of upstream APIs or other material.",
+      "condition_explanation": "Commercial purposes include, but are not limited to, cloud business operations.",
+      "obligation_items": []
+    }
+  ],
+  "coverage_notes": [
+    "Section 1 says commercial use is permitted but requires a commercial license from the producer if the conditions below are met. The text does not define the relationship between that requirement and the specific restrictions, and the allowed activities do not include obtaining a license; that operative licensing requirement is therefore not fully representable.",
+    "Section 2(a) gives the producer the ability to make the open-source agreement stricter or more relaxed. The allowed activities do not represent changing license terms, so this operative provision is unresolved.",
+    "Section 3 incorporates Apache License 2.0, but its full terms are not included in the supplied chunk. Apache-derived permissions, duties, exceptions, and patent provisions cannot be extracted from this excerpt alone."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0001",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Document heading only."
+    },
+    {
+      "unit_id": "P0002",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Identifies the license as modified MIT and signals additional conditions, but does not itself state an operative permission or restriction."
+    },
+    {
+      "unit_id": "P0003",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "commercial_use_subject_to_license_conditions"
+      ],
+      "reason": "Commercial-use permission is modeled, but the conditional commercial-license procurement requirement cannot be represented as an allowed activity and its trigger is unclear."
+    },
+    {
+      "unit_id": "P0004",
+      "status": "MODELED",
+      "clause_labels": [
+        "no_multitenant_source_code_without_written_authorization"
+      ],
+      "reason": "Models the prohibition and written-authorization exception; the tenant/workspace definition in this paragraph is used to explain the scope."
+    },
+    {
+      "unit_id": "P0005",
+      "status": "MODELED",
+      "clause_labels": [
+        "retain_frontend_logo_and_copyright_information"
+      ],
+      "reason": "Models the restriction and its express non-frontend exception."
+    },
+    {
+      "unit_id": "P0006",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines which components count as the frontend for the restriction in section 1(b); it does not independently impose a duty."
+    },
+    {
+      "unit_id": "P0007",
+      "status": "MODELED",
+      "clause_labels": [
+        "no_commercial_crawling_or_harvesting"
+      ],
+      "reason": "Models the prohibition on commercial web crawling and data harvesting."
+    },
+    {
+      "unit_id": "P0008",
+      "status": "MODELED",
+      "clause_labels": [
+        "no_unlawful_or_unauthorized_scraping"
+      ],
+      "reason": "Models the scraping prohibition and the examples of unlawful or unauthorized conduct."
+    },
+    {
+      "unit_id": "P0009",
+      "status": "MODELED",
+      "clause_labels": [
+        "no_obtaining_protected_content_without_rightsholder_authorization",
+        "no_third_party_protected_content_without_rightsholder_authorization",
+        "no_distribution_of_protected_content_without_rightsholder_authorization"
+      ],
+      "reason": "Separately models obtaining, copying, and distributing protected material, preserving the prior explicit rights-holder authorization exception."
+    },
+    {
+      "unit_id": "P0010",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "The producer's authority to adjust the agreement is operative, but cannot be represented with the allowed activities."
+    },
+    {
+      "unit_id": "P0011",
+      "status": "MODELED",
+      "clause_labels": [
+        "contributed_code_commercial_use"
+      ],
+      "reason": "Models the permission to use contributed code commercially, including cloud business operations."
+    },
+    {
+      "unit_id": "P0012",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Incorporates Apache License 2.0 for other rights and restrictions; the referenced license is not supplied, so its operative terms cannot be extracted here."
+    },
+    {
+      "unit_id": "P0013",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "States that the product's interactive design is protected by an appearance patent but imposes no behavioral duty or express patent license."
+    },
+    {
+      "unit_id": "P0014",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Copyright notice only."
+    }
+  ]
+}

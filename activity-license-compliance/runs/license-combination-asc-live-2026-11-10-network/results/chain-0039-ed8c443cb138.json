@@ -1,0 +1,268 @@
+{
+  "case_id": "chain-0039-ed8c443cb138",
+  "status": "SUCCESS",
+  "request_sha256": "b054ba05f5fc1b71337b33ddd0d00a65b68b786d5148c688d0b7b1b80da677f5",
+  "analysis": {
+    "case_id": "chain-0039-ed8c443cb138",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0039-ed8c443cb138:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true,
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0039-ed8c443cb138:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0039-ed8c443cb138:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true,
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0039-ed8c443cb138:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0039-ed8c443cb138:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:8836ec6090701e59"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "when": true,
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0039-ed8c443cb138:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use/API远程调用；智谱用户协议对特定不当使用设条件禁止，但本例未证明该禁止行为；Apache版权许可允许下游对象的Use。对象图仅证实API调用/链接，未证实两项许可约束同一对象，因此不构成已确认冲突。来源：智谱用户协议L6-L235、Apache-2.0第2节。",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09",
+          "license-text:downstream:8836ec6090701e59"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0039-ed8c443cb138:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "避免实施摘录所列不当使用行为；具体禁止范围以适用条款及其完整上下文为准。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "conduct_matches_prohibition_in_excerpt"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-0039-ed8c443cb138:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若适用付费功能/模型的商业使用路径，须支付所需费用并遵循产品规则；若适用免费功能限制，则不得商业使用。适用路径取决于功能及产品规则。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "commercial_use"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "commercial_use",
+          "feature_or_model_pricing_scope",
+          "pay_required_fee_and_follow_product_rules"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0039-ed8c443cb138:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若收费行为涉及适用的付费功能/模型，须支付所需费用并遵循产品规则；若适用免费功能限制，则不得实施该收费行为。",
+        "trigger": "activity:Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Charge",
+          "feature_or_model_pricing_scope",
+          "pay_required_fee_and_follow_product_rules"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      }
+    ],
+    "limitations": [
+      "证据仅确认使用智谱开放平台API、远程调用及链接关系；未证明修改、分发、提供源码、收费或商业使用。API调用不等同于模型权重或代码转移。",
+      "智谱协议摘录同时呈现免费功能限制与付费功能/模型的有条件商业使用路径；具体功能、产品规则及适用范围需结合完整条款和实际服务确定，不能据此认定已违规。",
+      "结构化ASC为首轮抽取且标记FIRST_PASS_REVIEW_REQUIRED；有关不当使用的概括性禁止及其例外须结合完整上下文判断。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 31216,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1927,
+    "output_tokens_details": {
+      "reasoning_tokens": 310
+    },
+    "total_tokens": 33143,
+    "attribution": {
+      "items": {
+        "msg_0c90fbd4fc2b8074016af2f86e4d0c87d282b45beeed663a99": {
+          "input_tokens": 29184,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29184,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c90fbd4fc2b8074016af2f8747ea887d285dc0d15f39194a2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1617,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1617
+            }
+          ]
+        },
+        "rs_0c90fbd4fc2b8074016af2f87467a887d28925b4ad7bb81a2a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 310
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 38.195,
+  "auto_applied": false,
+  "aggregate_count": 45
+}

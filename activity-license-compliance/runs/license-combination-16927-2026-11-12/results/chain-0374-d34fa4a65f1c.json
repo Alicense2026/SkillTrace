@@ -1,0 +1,159 @@
+{
+  "case_id": "chain-0374-d34fa4a65f1c",
+  "input_group_row": 374,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MPL-2.0",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0374-d34fa4a65f1c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt"
+          },
+          "S": {
+            "artifact": "chain-0374-d34fa4a65f1c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c94562bea9b11aa9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0374-d34fa4a65f1c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "智谱协议摘录涵盖多个不同情形的使用限制，并注明需结合完整段落、产品规则及付费功能授权判断。现有事实仅确认远程服务调用，未证明调用属于摘录中的禁止行为、涉及受限第三方服务提供，或适用何种付费功能条件；不据此推定违规。",
+      "MPL-2.0 的许可授予摘录针对下游 Covered Software/Contribution 权利；本例确认的是 API 调用/链接，未确认 MPL 代码或对象与上游模型共同适用。故不据两侧一般使用许可认定冲突。",
+      "本次未发现与已知远程调用相对应的网络触发义务条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用智谱开放平台服务时，避免实施摘录所列不当使用行为；是否适用具体禁止项取决于调用行为是否符合该项描述。",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "subject": {
+          "artifact": "chain-0374-d34fa4a65f1c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "conduct_matches_prohibition_in_excerpt"
+          ]
+        },
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 31633,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 845,
+    "output_tokens_details": {
+      "reasoning_tokens": 193
+    },
+    "total_tokens": 32478,
+    "attribution": {
+      "items": {
+        "msg_055b1fafcf9bf660016af53293cb2c87d187249ab097c56005": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_055b1fafcf9bf660016af53293cb2c87d1b68e9967cf3405d8": {
+          "input_tokens": 29563,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29563,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_055b1fafcf9bf660016af53298e5c887d1ab8b832c18da9fa0": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 652,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 652
+            }
+          ]
+        },
+        "rs_055b1fafcf9bf660016af53298ca4487d1ae810e7f017ddc0f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 193
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "8c5d59004a20fedbd358fa6445858873f05bb64e26d62f488f2ad40588d263db",
+  "elapsed_seconds": 28.03
+}

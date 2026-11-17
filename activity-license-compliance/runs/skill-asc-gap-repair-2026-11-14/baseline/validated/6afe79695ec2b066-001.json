@@ -1,0 +1,595 @@
+{
+  "request_sha256": "a237e88d86595d0ab6feaabff1b37fd3c5b1e7bc41980d4a1b5a386d31c4a4c8",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "grant_use_materials",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(a) grants a limited, non-exclusive, worldwide, non-transferable, royalty-free license under Meta rights embodied in Llama Materials to use them.",
+        "condition_explanation": "The grant is subject to the Agreement's terms; separate restrictions and conditions are modeled separately.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "grant_copy_materials",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(a) expressly licenses copying Llama Materials under the stated limited license.",
+        "condition_explanation": "The grant is subject to the Agreement's terms; redistribution conditions are separately modeled.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "grant_distribute_materials",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "agreement_copy_provided_with_materials",
+              "prominent_built_with_meta_llama_3_display_on_related_site_or_interface_or_publication_or_documentation",
+              "applicable_law_compliance",
+              "acceptable_use_policy_compliance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(a) licenses distribution; Section 1(b)(i), (iv) conditions distribution or making available of Llama Materials on supplying the Agreement and the stated prominent display, and on legal and AUP compliance. Section 1(b)(iii) adds the copy-specific notice duty below.",
+        "condition_explanation": "agreement_copy_provided_with_materials means a copy of the Agreement accompanies the distributed or made-available Llama Materials. prominent_built_with_meta_llama_3_display_on_related_site_or_interface_or_publication_or_documentation means the exact phrase is prominently displayed on a related website, user interface, blogpost, about page, or product documentation. applicable_law_compliance includes trade compliance. acceptable_use_policy_compliance depends on the incorporated external AUP, whose full terms are not supplied.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide a copy of the Agreement with the Llama Materials being distributed or made available.",
+            "actor": "licensee",
+            "object": "distributed or made-available Llama Materials",
+            "trigger": "Whenever the licensee distributes or makes available Llama Materials or a derivative thereof."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Prominently display “Built with Meta Llama 3” on a related website, user interface, blogpost, about page, or product documentation.",
+            "actor": "licensee",
+            "object": "related website, user interface, blogpost, about page, or product documentation",
+            "trigger": "Whenever the licensee distributes or makes available Llama Materials or a derivative thereof."
+          }
+        ]
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "grant_create_derivative",
+        "activities": [
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(a) expressly licenses creating derivative works of Llama Materials.",
+        "condition_explanation": "The grant is subject to the Agreement's terms, including the separately stated use restrictions.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "grant_modify_materials",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(a) expressly licenses making modifications to Llama Materials.",
+        "condition_explanation": "The grant is subject to the Agreement's terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 22,
+        "end_line": 22,
+        "clause_label": "distribute_product_using_materials",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "agreement_copy_provided_with_materials",
+              "prominent_built_with_meta_llama_3_display_on_related_site_or_interface_or_publication_or_documentation",
+              "applicable_law_compliance",
+              "acceptable_use_policy_compliance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(b)(i) applies when distributing or making available a product or service using Llama Materials, including another AI model. It requires the stated Agreement copy and prominent display. The text does not state that this product/service distribution is itself a license to third-party components.",
+        "condition_explanation": "The predicates have the meanings described in grant_distribute_materials; applicable_law_compliance includes trade compliance and acceptable_use_policy_compliance depends on the incorporated AUP.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide a copy of the Agreement with the Llama Materials being distributed or made available.",
+            "actor": "licensee",
+            "object": "Llama Materials included in or associated with the product or service",
+            "trigger": "Whenever the licensee distributes or makes available a product or service that uses any Llama Materials."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Prominently display “Built with Meta Llama 3” on a related website, user interface, blogpost, about page, or product documentation.",
+            "actor": "licensee",
+            "object": "related website, user interface, blogpost, about page, or product documentation",
+            "trigger": "Whenever the licensee distributes or makes available a product or service that uses any Llama Materials."
+          }
+        ]
+      },
+      {
+        "start_line": 22,
+        "end_line": 22,
+        "clause_label": "name_distributed_improved_model",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "agreement_copy_provided_with_materials",
+              "prominent_built_with_meta_llama_3_display_on_related_site_or_interface_or_publication_or_documentation",
+              "model_name_begins_with_llama_3",
+              "applicable_law_compliance",
+              "acceptable_use_policy_compliance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(b)(i) concerns an AI model the licensee created, trained, fine-tuned, or otherwise improved using Llama Materials, if that model is distributed or made available.",
+        "condition_explanation": "The general distribution predicates are defined in grant_distribute_materials. model_name_begins_with_llama_3 means “Llama 3” appears at the beginning of the model name.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Include “Llama 3” at the beginning of the name of the AI model.",
+            "actor": "licensee",
+            "object": "AI model created, trained, fine-tuned, or otherwise improved using Llama Materials",
+            "trigger": "If the licensee uses Llama Materials to create, train, fine-tune, or otherwise improve an AI model and that model is distributed or made available."
+          }
+        ]
+      },
+      {
+        "start_line": 24,
+        "end_line": 24,
+        "clause_label": "retain_attribution_in_distributed_copies",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "attribution_notice_retained_in_notice_file"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(b)(iii) applies to copies of Llama Materials that the licensee distributes; it does not attach merely to remote API calls.",
+        "condition_explanation": "attribution_notice_retained_in_notice_file means retaining the exact stated Meta Llama 3 attribution in a Notice text file distributed as part of each such copy.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Retain the exact attribution notice specified in Section 1(b)(iii) within a Notice text file distributed as part of the copies.",
+            "actor": "licensee",
+            "object": "each distributed copy of Llama Materials",
+            "trigger": "Whenever the licensee distributes a copy of Llama Materials."
+          }
+        ]
+      },
+      {
+        "start_line": 25,
+        "end_line": 25,
+        "clause_label": "use_materials_law_and_aup",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "applicable_law_compliance",
+              "acceptable_use_policy_compliance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(b)(iv) requires uses of Llama Materials to comply with applicable laws and regulations, including trade compliance, and the incorporated Acceptable Use Policy.",
+        "condition_explanation": "acceptable_use_policy_compliance refers to the external AUP incorporated by reference; its full text is absent from the supplied target chunk and must not be inferred from fragments in context.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable laws and regulations, including trade compliance laws and regulations, when using Llama Materials.",
+            "actor": "licensee",
+            "object": "use of Llama Materials",
+            "trigger": "Whenever the licensee uses Llama Materials."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Adhere to the Acceptable Use Policy applicable to Llama Materials.",
+            "actor": "licensee",
+            "object": "use of Llama Materials",
+            "trigger": "Whenever the licensee uses Llama Materials."
+          }
+        ]
+      },
+      {
+        "start_line": 26,
+        "end_line": 26,
+        "clause_label": "prohibit_improving_other_llm",
+        "activities": [
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 1(b)(v) prohibits using Llama Materials or their outputs or results to improve any other large language model; the exception is Meta Llama 3 and its derivative works.",
+        "condition_explanation": "The prohibition covers improvement of another large language model using either Llama Materials or their outputs or results. The exception excludes Meta Llama 3 and derivative works thereof.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Llama Materials, or any output or results of Llama Materials, to improve another large language model.",
+            "actor": "licensee",
+            "object": "other large language model",
+            "trigger": "Whenever the licensee uses Llama Materials or their outputs or results to improve a large language model, except where that model is Meta Llama 3 or a derivative work thereof."
+          }
+        ]
+      },
+      {
+        "start_line": 28,
+        "end_line": 28,
+        "clause_label": "high_mau_no_rights_without_express_grant",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "licensee_or_affiliate_products_exceeded_700m_mau_threshold_on_release_date",
+          "requires": "meta_expressly_grants_rights"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 2 applies if, on the version release date, monthly active users of products or services made available by or for the licensee or its affiliates exceeded 700 million in the preceding calendar month. The licensee must request a license; absent Meta's express grant, no Agreement rights may be exercised.",
+        "condition_explanation": "licensee_or_affiliate_products_exceeded_700m_mau_threshold_on_release_date means the stated MAU figure exceeded 700 million, not merely equaled it. meta_expressly_grants_rights means Meta expressly grants the rights; a request alone is insufficient.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Request a license from Meta.",
+            "actor": "licensee",
+            "object": "license to exercise Agreement rights",
+            "trigger": "If the Section 2 release-date MAU threshold is exceeded."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not exercise any rights under the Agreement without Meta's express grant.",
+            "actor": "licensee",
+            "object": "Llama Materials",
+            "trigger": "If the Section 2 release-date MAU threshold is exceeded, until Meta expressly grants the relevant rights."
+          }
+        ]
+      },
+      {
+        "start_line": 35,
+        "end_line": 35,
+        "clause_label": "limited_llama3_mark_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "required_to_comply_with_section_1_b_i_model_naming",
+          "requires": "brand_guidelines_complied_with"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5(a) grants a license to use the “Llama 3” mark solely as required by Section 1(b)(i)'s model-naming rule. Licensee must comply with Meta brand guidelines. Other trademark licenses are not granted; the clause allows reasonable and customary use in describing and redistributing the Materials, but does not supply a broader trademark grant.",
+        "condition_explanation": "required_to_comply_with_section_1_b_i_model_naming means use of the Mark is necessary to include “Llama 3” at the beginning of a qualifying distributed or made-available model name. brand_guidelines_complied_with refers to the guidelines identified by URL in the clause.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with Meta’s brand guidelines when using the Mark.",
+            "actor": "licensee",
+            "object": "use of the “Llama 3” Mark",
+            "trigger": "Whenever the licensee uses the Mark under the limited license."
+          }
+        ]
+      },
+      {
+        "start_line": 36,
+        "end_line": 36,
+        "clause_label": "licensee_owns_own_derivatives",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "derivative_or_modification_made_by_licensee",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5(b) states, as between Meta and Licensee, Licensee owns derivative works and modifications made by Licensee, subject to Meta's ownership of Llama Materials and derivatives made by or for Meta. This ownership allocation is not an additional license or a transfer of Meta's ownership.",
+        "condition_explanation": "derivative_or_modification_made_by_licensee means the relevant derivative work or modification was made by the licensee.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 37,
+        "end_line": 37,
+        "clause_label": "license_termination_on_ip_claim",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "licensee_institutes_claim_alleging_materials_or_outputs_infringe_licensee_rights",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5(c) terminates all licenses granted under the Agreement as of the date Licensee institutes litigation or other proceedings against Meta or any entity alleging that Llama Materials, Meta Llama 3 outputs/results, or any portion infringes rights owned or licensable by Licensee.",
+        "condition_explanation": "licensee_institutes_claim_alleging_materials_or_outputs_infringe_licensee_rights includes litigation or other proceedings, including a cross-claim or counterclaim, against Meta or any entity, asserting the specified infringement allegation.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 39,
+        "end_line": 39,
+        "clause_label": "delete_and_cease_use_after_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "agreement_terminated",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 6 requires deletion and cessation of use of Llama Materials upon termination. Meta may terminate for breach of any Agreement term or condition; no cure period is specified in this clause.",
+        "condition_explanation": "agreement_terminated means termination under the Agreement, including termination by Meta for breach. The clause states no cure prerequisite or cure period.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Delete the Llama Materials.",
+            "actor": "licensee",
+            "object": "Llama Materials",
+            "trigger": "Upon termination of the Agreement."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Cease use of the Llama Materials.",
+            "actor": "licensee",
+            "object": "Llama Materials",
+            "trigger": "Upon termination of the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 37,
+        "end_line": 37,
+        "clause_label": "indemnify_meta_third_party_claims",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 5(c) states a standalone indemnity and hold-harmless duty for third-party claims arising out of or related to Licensee's use or distribution. The supplied activity/object schema has no faithful activity for indemnifying or defending claims; this proxy does not make indemnification a condition of permission.",
+        "condition_explanation": "The trigger is a third-party claim arising out of or related to Licensee's use or distribution of Llama Materials.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Indemnify and hold Meta harmless from and against the third-party claim.",
+            "actor": "licensee",
+            "object": "Meta, with respect to a third-party claim arising out of or related to licensee's use or distribution of Llama Materials",
+            "trigger": "When such a third-party claim arises."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The acceptance-by-clicking, using, or distributing provision on line 16 makes the Agreement binding, but does not itself state a specific activity permission or prohibition that can be faithfully represented using the supplied activity modalities; its binding-effect mechanism is identified as unresolved in paragraph audit.",
+      "The incorporated Acceptable Use Policy and brand guidelines are external documents not supplied in full; their contents are not inferred.",
+      "Section 5(c)'s indemnification is a standalone duty with no faithful activity in the permitted activity vocabulary; it is recorded as a proxy clause and must be treated as unrepresentable operative material.",
+      "Section 2's license-request duty is captured as a factual obligation; the supplied activities do not include requesting a license.",
+      "No cure period is stated for breach termination. The Section 6 survival sentence identifies Sections 3, 4, and 7; it does not create an activity constraint."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Agreement title; heading only."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Release-date and Agreement definitions; contextual, not operative grant language."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Documentation definition."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Licensee definition."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Meta Llama 3 definition."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Llama Materials definition."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Meta identity definition."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Line 16 makes the Agreement binding upon clicking acceptance or using or distributing any portion or element of Llama Materials. This operative assent/binding-effect mechanism is not itself a specific permission, prohibition, or duty representable as a supplied activity constraint, and is not modeled as a grant."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "grant_use_materials",
+          "grant_copy_materials",
+          "grant_distribute_materials",
+          "grant_create_derivative",
+          "grant_modify_materials",
+          "distribute_product_using_materials",
+          "name_distributed_improved_model",
+          "retain_attribution_in_distributed_copies",
+          "use_materials_law_and_aup",
+          "prohibit_improving_other_llm"
+        ],
+        "reason": "License grant, redistribution duties, integrated-product exception to Section 2, copy attribution, legal/AUP compliance, and prohibition on improving other LLMs are extracted. The incorporated AUP's detailed rules are not present in the supplied chunk and are noted as missing."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "MODELED",
+        "clause_labels": [
+          "high_mau_no_rights_without_express_grant"
+        ],
+        "reason": "Captures the threshold condition, license-request duty, and absence of authority to exercise rights absent Meta's express grant."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer and allocation of risk; excluded by the extraction instructions."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Liability limitation; excluded by the extraction instructions."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "MODELED",
+        "clause_labels": [
+          "limited_llama3_mark_use",
+          "licensee_owns_own_derivatives",
+          "license_termination_on_ip_claim",
+          "indemnify_meta_third_party_claims"
+        ],
+        "reason": "Models the limited mark license and brand-guideline duty, derivative ownership allocation, automatic license termination on specified claims, and records the standalone indemnity duty using a proxy while identifying its activity-schema limitation."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "MODELED",
+        "clause_labels": [
+          "delete_and_cease_use_after_termination"
+        ],
+        "reason": "Captures term/termination-related deletion and cessation duties; Meta's breach termination right has no cure period stated."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Governing law and forum-selection provisions do not impose an activity constraint."
+      }
+    ]
+  },
+  "attempt": 2
+}

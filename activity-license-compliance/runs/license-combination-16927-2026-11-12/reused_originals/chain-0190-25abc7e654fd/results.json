@@ -1,0 +1,134 @@
+{
+  "case_id": "chain-0190-25abc7e654fd",
+  "status": "SUCCESS",
+  "request_sha256": "34e95fedeaced4f786a6db9d2a2f622c76913c7100dda7c855d02fb9a12d9e30",
+  "analysis": {
+    "case_id": "chain-0190-25abc7e654fd",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge_through_network_server",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0190-25abc7e654fd:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若上游材料构成已修改且支持远程交互的受覆盖程序，应显著向通过计算机网络远程交互的用户提供免费获取该版本对应源码的机会，可通过网络服务器提供。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "subject": {
+          "artifact": "chain-0190-25abc7e654fd:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "version_supports_remote_interaction",
+            "users_interact_remotely_through_computer_network"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "version_supports_remote_interaction",
+          "users_interact_remotely_through_computer_network",
+          "network_source_offer_available"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认的是对上游原始资产的远程服务调用及API/链接关系，并标明代码修改不适用；不能据此认定上游程序已被修改、支持远程交互或构成触发第13条的受覆盖版本。",
+      "对象图中的依赖、修改副本及组合产品关系均未知；API调用不自动证明GPL下游资产纳入上游程序或形成共同受约束对象。因此未判定AGPL与GPL之间存在许可冲突。",
+      "下游GPL摘录中的修改、分发和源码提供条件，仅在相应活动及覆盖范围成立时相关；当前没有此类活动事实，故不据此生成已触发义务或违规结论。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18231,
+    "input_tokens_details": {
+      "cached_tokens": 18048,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 894,
+    "output_tokens_details": {
+      "reasoning_tokens": 237
+    },
+    "total_tokens": 19125,
+    "attribution": {
+      "items": {
+        "msg_0e99f4f13be0149e016af2fee2e91487d186286a9d67188870": {
+          "input_tokens": 16199,
+          "cached_tokens": 16018,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16199,
+              "cached_tokens": 16018,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e99f4f13be0149e016af2fee7d22487d1966fa2f7390c5904": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 657,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 657
+            }
+          ]
+        },
+        "rs_0e99f4f13be0149e016af2fee7b68087d1988f8ea7ab9e6d18": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 237
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.383,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

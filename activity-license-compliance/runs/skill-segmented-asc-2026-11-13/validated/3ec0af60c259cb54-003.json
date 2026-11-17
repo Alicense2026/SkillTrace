@@ -1,0 +1,93 @@
+{
+  "request_sha256": "3eb63ff0d4b2a763978f8b87cda14949cfa6482e71db3061963ca2d47815fbb7",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 67,
+        "end_line": 67,
+        "clause_label": "customer_service_use_right_ends_on_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "agreement_terminated",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 11.3: OpenAI-granted Customer rights cease immediately upon termination. OriginalArtifact represents the Services; this clause captures the resulting end of the Customer’s right to use them.",
+        "condition_explanation": "agreement_terminated means the Agreement has terminated. The Agreement’s term and termination triggers are described in Sections 11.1–11.2.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services under rights granted by OpenAI after the Agreement terminates.",
+            "actor": "Customer",
+            "object": "OpenAI Services",
+            "trigger": "Immediately upon termination; this restriction concerns rights granted by OpenAI under the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 73,
+        "end_line": 73,
+        "clause_label": "customer_may_choose_beta_service_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "beta_service",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 12.3(a): Customer may choose to use Beta Services in its sole discretion. OriginalArtifact represents the Beta Service.",
+        "condition_explanation": "beta_service means a service or feature identified as alpha, beta, preview, early access, evaluation, or a similar term, as defined in Section 17.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Section 11.3 also requires OpenAI to delete Customer Content within 30 days after termination, subject to legal-retention and written-agreement exceptions, and permits retention of Abusive Customer Content and certain sharing related to it. These deletion, retention, and sharing provisions cannot be faithfully expressed with the available activities; accrued-payment and minimum-commitment consequences are likewise outside the activity vocabulary.",
+      "Section 13 includes indemnification obligations, mitigation duties, and claim-handling procedures that cannot be faithfully represented as the available activities. Section 13.3 also requires Customer to comply promptly with reasonable instructions, including instructions to replace, modify, or cease use of a Service; the general instruction-following duty and replacement/modification paths are not fully representable here.",
+      "Section 13.1 incorporates Service-Specific Terms Indemnity as of the Effective Date, but that external text is not supplied and is not inferred.",
+      "Section 12.1–12.2 and Sections 12.3(b)–(e) contain warranties, disclaimers, and descriptions of Beta Service characteristics or risks, which are not activity constraints for this extraction.",
+      "Section 14 limits liability and specifies exceptions; it does not grant, prohibit, or require an activity."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0012",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "customer_service_use_right_ends_on_termination"
+        ],
+        "reason": "The immediate cessation of Customer’s service-use rights is modeled. The paragraph also contains OpenAI’s Customer Content deletion duty and retention/sharing provisions, plus accrued-payment and minimum-commitment consequences, which are not fully representable by the available activities."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_may_choose_beta_service_use"
+        ],
+        "reason": "Section 12.3(a)’s permission for Customer to choose Beta Service use is modeled. The remaining statements in the paragraph are warranty/disclaimer language or descriptions of Beta Service characteristics and risks, not additional activity constraints."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "The paragraph imposes indemnification duties, mitigation actions, Customer compliance with reasonable instructions, and claim-notice, cooperation, defense-control, and settlement duties. These obligations cannot be faithfully represented by the available activities; external Service-Specific Terms Indemnity text is also not supplied."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The paragraph limits liability and specifies exceptions; it does not grant, prohibit, or require an activity."
+      }
+    ]
+  },
+  "attempt": 2
+}

@@ -1,0 +1,158 @@
+{
+  "case_id": "chain-0268-8cd4ee4ad513",
+  "status": "SUCCESS",
+  "request_sha256": "1816d6e42201fdfb9300c97a5fd08f3be6314945cf615f85f52857750467f969",
+  "analysis": {
+    "case_id": "chain-0268-8cd4ee4ad513",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0268-8cd4ee4ad513:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9f3cf60346c0894d"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0268-8cd4ee4ad513:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use/上游 OriginalArtifact；摘录仅允许生成内容用于体验模型效果，禁止其他用途（含商业用途及向第三方提供、传播或分发）；已知发生远程调用，但未说明是否属于该模型体验、生成内容用途或上述被禁止行为，故不能认定实际违反。来源为阿里云百炼特别说明 L42-L45。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "status": "OBLIGATIONS_OPEN"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用该模型体验生成内容，须仅用于体验模型效果；不得用于其他用途，包括商业化目的，亦不得以任何形式提供给第三方或在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "subject": {
+          "artifact": "chain-0268-8cd4ee4ad513:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "generated_content_from_model_experience"
+          ]
+        },
+        "unresolved_predicates": [
+          "generated_content_from_model_experience",
+          "purpose_and_subsequent_use_of_generated_content"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "AGPL 第13节摘录规定的网络源码提供义务以修改了受覆盖程序且该版本支持网络交互为前提。可信记录明确为“远程服务调用（修改不适用）”；因此该修改触发条件未满足，单有远程调用不产生该项义务。",
+      "对象图中的 API 链接不证明两许可证约束同一对象；scope_shared 未知。没有证据显示下游代码被修改、分发或与上游服务构成受共同约束的组合产品，故不作许可证间冲突结论。",
+      "阿里云条款摘录覆盖模型体验功能及生成内容用途；记录未明确本次调用是否属于该体验功能，也未给出生成内容的用途或对第三方提供情况。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 19056,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1201,
+    "output_tokens_details": {
+      "reasoning_tokens": 331
+    },
+    "total_tokens": 20257,
+    "attribution": {
+      "items": {
+        "msg_0c84f6c0804e41e2016af30294f19887d2b899989e6e3421fc": {
+          "input_tokens": 17024,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17024,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c84f6c0804e41e2016af3029cc50887d29d75fcaeccbe175e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 870,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 870
+            }
+          ]
+        },
+        "rs_0c84f6c0804e41e2016af3029ca00887d28f65d8de903289a9": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 331
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.871,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

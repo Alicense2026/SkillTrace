@@ -1,0 +1,184 @@
+{
+  "case_id": "chain-0057-3dbc4856d788",
+  "input_group_row": 57,
+  "aggregate_count": 35,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "DeepSeek Open Platform Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "35"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0057-3dbc4856d788",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "service_access"
+          },
+          "S": {
+            "artifact": "chain-0057-3dbc4856d788:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "service_access"
+          },
+          "S": {
+            "artifact": "chain-0057-3dbc4856d788:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "clearly_disclose_to_end_users_that_output_is_ai_generated_may_contain_errors_or_omissions_and_is_for_reference_only",
+            "when": "outputs_provided_to_end_users"
+          },
+          "S": {
+            "artifact": "chain-0057-3dbc4856d788:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d1bdfda347634501"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_to_remote_users_at_no_charge_via_network_server",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0057-3dbc4856d788:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：ProvideSource/下游 ModifiedArtifact；AGPL第13节要求在修改程序且该版本支持网络交互时向远程用户提供对应源码；可信记录明确代码修改不适用，因此该触发条件未成立；未见违反事实。来源：AGPL-3.0第13节。",
+        "source_refs": [
+          "license-text:downstream:d1bdfda347634501"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "向服务终端用户清楚披露输出由AI生成、可能含错误或遗漏且仅供参考",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0057-3dbc4856d788:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:RemoteInteraction",
+            "outputs_provided_to_end_users"
+          ]
+        },
+        "unresolved_predicates": [
+          "outputs_provided_to_end_users",
+          "disclosure_fulfilled"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 DeepSeek Open Platform 服务条款",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0057-3dbc4856d788:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "遵守 DeepSeek Open Platform 服务条款",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0057-3dbc4856d788:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      }
+    ],
+    "limitations": [
+      "DeepSeek条款摘录支持API服务访问、使用及输出披露要求；记录未说明是否向终端用户提供输出，因此披露义务的适用性保留条件。",
+      "对象图确认API链接和远程调用，但未确认下游对象与上游许可材料的共同范围；本次不据此推导许可冲突。",
+      "AGPL第13节要求以修改程序且版本支持网络交互为触发条件；记录说明修改不适用，故该网络源码提供条款在本案不触发。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0053-4ff2a500ac7c.json",
+  "original_case_id": "chain-0053-4ff2a500ac7c",
+  "original_request_sha256": "b2530cd28f9477e7b4e2f38d237aada9073205e24510bd9b9e8028a885ef7496",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0053-4ff2a500ac7c": "chain-0057-3dbc4856d788",
+    "license-text:upstream:b2a3e7ddf565746c": "license-text:upstream:b2a3e7ddf565746c",
+    "license-text:downstream:d1bdfda347634501": "license-text:downstream:d1bdfda347634501",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/52": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/56"
+  }
+}

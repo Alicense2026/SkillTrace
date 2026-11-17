@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0094-61a83d8b27aa",
+  "status": "SUCCESS",
+  "request_sha256": "cfd11c7e9fbd16c878f277d7248c0e945befdfaf89d0e01c618c2e2ffa05d642",
+  "analysis": {
+    "case_id": "chain-0094-61a83d8b27aa",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0094-61a83d8b27aa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0f39ee2f96ff5482"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0094-61a83d8b27aa:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0094-61a83d8b27aa:upstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "事实支持对上游 Llama 3.1 材料进行远程调用及 API/代码链接关系；不支持模型权重转移、修改、分发、捆绑或向下游产品纳入材料的结论。",
+      "对象图中两侧依赖、捆绑、修改副本及组合产品范围共享均未确定；Apache-2.0 的许可对象与上游 Llama Materials 不因此自动成为同一受约束对象。",
+      "Llama 3.1 许可摘录标记为 FIRST_PASS_REVIEW_REQUIRED；分发条款只在实际分发或提供可用时触发，本案没有该活动事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Llama Materials 时须遵守 Llama Agreement。",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "subject": {
+          "artifact": "chain-0094-61a83d8b27aa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_Llama_agreement"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22137,
+    "input_tokens_details": {
+      "cached_tokens": 22016,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 948,
+    "output_tokens_details": {
+      "reasoning_tokens": 201
+    },
+    "total_tokens": 23085,
+    "attribution": {
+      "items": {
+        "msg_01eec14c7cb19d81016af2fb13292887d1adadf07314ef76a0": {
+          "input_tokens": 20105,
+          "cached_tokens": 19986,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20105,
+              "cached_tokens": 19986,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_01eec14c7cb19d81016af2fb18d0dc87d1a04a592dd9976ea3": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 747,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 747
+            }
+          ]
+        },
+        "rs_01eec14c7cb19d81016af2fb18b51c87d1b0a21ea5be553f74": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 201
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.123,
+  "auto_applied": false,
+  "aggregate_count": 11
+}

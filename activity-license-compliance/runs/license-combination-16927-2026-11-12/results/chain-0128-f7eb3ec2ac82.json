@@ -1,0 +1,89 @@
+{
+  "case_id": "chain-0128-f7eb3ec2ac82",
+  "input_group_row": 128,
+  "aggregate_count": 8,
+  "combination": {
+    "GitHub许可证": "CC-BY-4.0",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "8"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0128-f7eb3ec2ac82",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0128-f7eb3ec2ac82:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:dee9e80a9bde0a71"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions"
+          },
+          "S": {
+            "artifact": "chain-0128-f7eb3ec2ac82:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0128-f7eb3ec2ac82:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with applicable CC-BY-4.0 license conditions when exercising Licensed Rights in the Licensed Material.",
+        "trigger": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether_use_exercises_CC_B Y_licensed_rights"
+        ],
+        "source_refs": [
+          "license-text:downstream:dee9e80a9bde0a71"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图确认的是API调用/加载关系；未证明Apache许可的上游对象与CC许可的下游对象为同一受约束对象，也未证明权重或副本转移。因此未据此认定许可冲突。",
+      "CC-BY-4.0摘录仅包含授权引言，未提供具体许可条件的完整条款；不推断未提供的条件或其适用范围。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0115-b70feb88a249.json",
+  "original_case_id": "chain-0115-b70feb88a249",
+  "original_request_sha256": "3cb3a8388fd1318a785d505972d9a92306bdd2f9cf0166de266713083c3c9951",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0115-b70feb88a249": "chain-0128-f7eb3ec2ac82",
+    "license-text:upstream:f442ffb3b75c892c": "license-text:upstream:f442ffb3b75c892c",
+    "license-text:downstream:dee9e80a9bde0a71": "license-text:downstream:dee9e80a9bde0a71",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/114": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/127"
+  }
+}

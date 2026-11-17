@@ -1,0 +1,116 @@
+{
+  "case_id": "chain-0117-28abffdb595b",
+  "input_group_row": 117,
+  "aggregate_count": 9,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "9"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0117-28abffdb595b",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0117-28abffdb595b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0117-28abffdb595b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0117-28abffdb595b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ffbe7139ea4d5b24"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "network_source_offer_available",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0117-28abffdb595b:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "The record establishes API use, remote interaction, and a LINK relation, but does not establish that the downstream artifact contains, modifies, or is a derivative of the upstream service or program; the object graph marks dependency and modified-copy relations unknown.",
+      "The AGPL-3.0 section 13 excerpt conditions its source-offer duty on modifying the Program and remote interaction with that modified version. The trusted record says code modification is not applicable; an API call alone does not establish the modification trigger or transfer model weights. No source-offer duty or violation is therefore inferred.",
+      "The upstream excerpt’s prohibitions address specified conduct (including extraction, reverse engineering, and certain uses); the supplied facts do not establish such conduct. The excerpt also distinguishes free-feature limitations from paid-feature authorization, but the record does not establish the applicable product tier or relevant commercial-use facts. No commercial-use violation is inferred.",
+      "Both local license texts are identified by hash, but the excerpts are marked FIRST_PASS_REVIEW_REQUIRED. Conclusions are limited to the cited excerpts and mapped activities."
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0104-831da48134f7.json",
+  "original_case_id": "chain-0104-831da48134f7",
+  "original_request_sha256": "4bc66695035f50ce1b970594c948878624a225acf0d9cce3ac4dba0cf2221a98",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0104-831da48134f7": "chain-0117-28abffdb595b",
+    "license-text:upstream:1092ebce191fce09": "license-text:upstream:1092ebce191fce09",
+    "license-text:downstream:ffbe7139ea4d5b24": "license-text:downstream:ffbe7139ea4d5b24",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/103": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/116"
+  }
+}

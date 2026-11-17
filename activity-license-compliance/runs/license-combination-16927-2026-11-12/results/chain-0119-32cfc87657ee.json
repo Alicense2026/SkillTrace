@@ -1,0 +1,176 @@
+{
+  "case_id": "chain-0119-32cfc87657ee",
+  "input_group_row": 119,
+  "aggregate_count": 9,
+  "combination": {
+    "GitHub许可证": "BUSL-1.1",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "9"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_of_services_to_develop_competing_models_or_attempt_to_reverse_engineer_extract_or_replicate_service_components",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0119-32cfc87657ee:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:84682285cec7cefc"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "non_production_use_and_compliance_with_current_license_requirements",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0119-32cfc87657ee:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:84682285cec7cefc"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "production_use_permitted_by_applicable_additional_use_grant",
+            "when": "production_use"
+          },
+          "S": {
+            "artifact": "chain-0119-32cfc87657ee:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认的是对 Gemini API 的远程调用及链接关系；未证明 BUSL 下游作品被使用、并入或与 Gemini 服务许可约束同一对象，因此不能据此认定许可冲突。",
+      "Gemini API 条款摘录禁止使用服务开发竞争模型及逆向工程、提取或复制服务组件；现有事实未说明是否实施这些行为。该摘录首轮结构化抽取标记为 FIRST_PASS_REVIEW_REQUIRED，相关定义和上下文未据此扩展推断。",
+      "BUSL 条款摘录未提供适用的 Additional Use Grant、生产用途状态或具体版本转换日期；是否适用相应条件尚不能确定。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得使用 Gemini API 服务开发与该服务竞争的模型，或尝试逆向工程、提取或复制服务组件（包括底层数据或模型）。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0119-32cfc87657ee:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "use_of_services_to_develop_competing_models",
+          "attempt_to_reverse_engineer_extract_or_replicate_service_components"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0119-32cfc87657ee"
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 24916,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1228,
+    "output_tokens_details": {
+      "reasoning_tokens": 424
+    },
+    "total_tokens": 26144,
+    "attribution": {
+      "items": {
+        "msg_0bf0702e7ba55ae9016af52f124ba887d09c5124af33cd972f": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bf0702e7ba55ae9016af52f124ba887d0b66ef4ead8888e33": {
+          "input_tokens": 22846,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22846,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bf0702e7ba55ae9016af52f1acf7487d0b675ecb717e47b67": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 804,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 804
+            }
+          ]
+        },
+        "rs_0bf0702e7ba55ae9016af52f1ab3b887d0b9825bae192db61a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 424
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "fcc900783e7b1d249525e73a873609922ae511145d925a3a080a01b4e52639d0",
+  "elapsed_seconds": 32.98
+}

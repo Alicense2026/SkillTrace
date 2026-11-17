@@ -1,0 +1,166 @@
+{
+  "case_id": "chain-0080-9df6b606c0dc",
+  "status": "SUCCESS",
+  "request_sha256": "c5d21af4a7908d2e0b6fa4c1bb795019ced7b9750830c6bcff24712373023c34",
+  "analysis": {
+    "case_id": "chain-0080-9df6b606c0dc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0080-9df6b606c0dc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9c5bdb0c62f65653"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0080-9df6b606c0dc:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0080-9df6b606c0dc:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在软件副本或实质部分中包含版权声明和许可声明。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0080-9df6b606c0dc:downstream",
+          "kind": "CombinedProduct"
+        },
+        "requirement": "在行使适用许可权利时遵守 CC-BY-4.0 许可条件。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:9c5bdb0c62f65653"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录表明发生远程服务调用/链接，且代码修改不适用；这不证明下游产品包含、复制、修改或分发上游软件，也不证明两份许可约束同一对象。",
+      "CC-BY-4.0 摘录提供许可授予条款，但未提供足以细化各项许可条件的摘录；因此仅保留条件性义务，不推断缺失条款。",
+      "两份本地许可证文本的版本和条款映射以所给 source_ref、文件名及哈希为限；相关义务的对象范围及履行情况未提供。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20372,
+    "input_tokens_details": {
+      "cached_tokens": 20224,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1031,
+    "output_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "total_tokens": 21403,
+    "attribution": {
+      "items": {
+        "msg_079f54f743cdf529016af2fa81767487d2b64703f6fb582149": {
+          "input_tokens": 18340,
+          "cached_tokens": 18194,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18340,
+              "cached_tokens": 18194,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_079f54f743cdf529016af2fa85b81c87d29ae553c763585573": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 832,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 832
+            }
+          ]
+        },
+        "rs_079f54f743cdf529016af2fa85a0f887d2a5336c3a6e18a446": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 199
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.572,
+  "auto_applied": false,
+  "aggregate_count": 15
+}

@@ -1,0 +1,261 @@
+{
+  "case_id": "chain-19906-f72f02d7cdf4",
+  "source_csv_line": 19907,
+  "row": {
+    "github_repo": "dsplab",
+    "github_url": "https://github.com/juandavidru4641/dsplab",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-4o",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/llmProviders.ts:10 ｜ 调用原文: { id: 'openai', name: 'OpenAI', endpoint: 'https://api.openai.com', defaultModel: 'gpt-4o' }, ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/utils/llmProviders.ts 中 OpenAI 提供商预设的 defaultModel，用于实际请求。",
+    "batch": "12201-14200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "juandavidru4641/dsplab",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "75c8a6756cdc92be5ff3d3ca65f2c7221906d3e6a10fd9a8d3c12ce6fda14b62",
+    "filename": "_licenseref_full/texts/75c8a6756cdc92be5ff3d3ca65f2c7221906d3e6a10fd9a8d3c12ce6fda14b62.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:dsplab-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-19906-f72f02d7cdf4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_to_openai_or_reseller"
+          },
+          "S": {
+            "artifact": "chain-19906-f72f02d7cdf4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "personal_educational_or_noncommercial_open_source_purpose"
+          },
+          "S": {
+            "artifact": "chain-19906-f72f02d7cdf4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "commercial_use_without_separate_commercial_license"
+          },
+          "S": {
+            "artifact": "chain-19906-f72f02d7cdf4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "prominent_author_attribution_and_link_to_original_vultlab_repository",
+            "when": "distribution_occurs_or_project_incorporates_significant_source_portions"
+          },
+          "S": {
+            "artifact": "chain-19906-f72f02d7cdf4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Use the downstream Software only for personal, educational, or non-commercial open-source purposes.",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-19906-f72f02d7cdf4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "personal_educational_or_noncommercial_open_source_purpose"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Do not make commercial use of the downstream Software unless a separate commercial license has been obtained.",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-19906-f72f02d7cdf4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "commercial_use",
+          "separate_commercial_license"
+        ]
+      },
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Pay OpenAI or its reseller applicable fees under the applicable order and payment terms.",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "subject": {
+          "artifact": "chain-19906-f72f02d7cdf4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "all",
+        "unresolved_predicates": [
+          "applicable_fees",
+          "payment_due"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If distributing the Software or a project incorporating significant portions of its source code, include prominent attribution to syso and a link to the original VultLab project repository.",
+        "source_refs": [
+          "license-text:downstream:793e3d047b79b356"
+        ],
+        "subject": {
+          "artifact": "chain-19906-f72f02d7cdf4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "any",
+        "unresolved_predicates": [
+          "distribution_occurs",
+          "project_incorporates_significant_source_portions",
+          "attribution_and_repository_link_included"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图确认下游通过 API 远程调用上游服务并存在链接关系，但共享许可约束范围未知；远程调用本身不证明模型权重转移、分发、修改或源码披露。",
+      "下游许可条款涉及用途限制、商业使用限制及分发归属要求；相关用途分类、商业使用、分发和履行事实均未提供，故保留条件义务，不判定违规。",
+      "上游 OpenAI 条款摘录仅规定客户向 OpenAI 或转售方支付适用费用；它不证明下游收费行为受该义务约束，也未提供费用适用或到期事实。",
+      "结构化条款标记为首轮抽取；本分析仅依据所给摘录及范围注释，不推断未提供的许可语言或服务条款。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19495,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1661,
+    "output_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "total_tokens": 21156,
+    "attribution": {
+      "items": {
+        "msg_039c117c7bbb18c0016af53eb54fc087d2a655ce212049702c": {
+          "input_tokens": 17425,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17425,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_039c117c7bbb18c0016af53eb54fc087d2b6d763ab87643b88": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_039c117c7bbb18c0016af53eba8e9487d2958e9c4d4f9bf2c3": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1399,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1399
+            }
+          ]
+        },
+        "rs_039c117c7bbb18c0016af53eba776487d292a8aa01eb6a9f34": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 262
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "a8843df30680f6f475402bb797e18c0d4a4c7aa0b0d5ad7f8183200ea0a6ab50",
+  "elapsed_seconds": 41.28
+}

@@ -1,0 +1,108 @@
+{
+  "case_id": "chain-0270-5fe719eed00f",
+  "input_group_row": 270,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "CC-BY-SA-4.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0270-5fe719eed00f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0270-5fe719eed00f:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0e9bc07c2948df4d"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "S": {
+            "artifact": "chain-0270-5fe719eed00f:downstream",
+            "kind": "ModifiedArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：对 downstream 的修改程序提供源码；AGPL第13条要求在修改程序且其支持网络交互时，向远程交互用户提供相应源码获取机会。事实确认远程调用，但记录明确为“修改不适用”，故修改程序触发条件未成立，本项不适用；没有源码未提供的事实。来源：AGPL第13条。",
+        "source_refs": [
+          "license-text:downstream:0e9bc07c2948df4d"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在 CC-BY-SA-4.0 许可范围内使用上游原始材料（within_license_scope）。",
+        "source_refs": [
+          "license-text:upstream:37a2df393b20197f"
+        ],
+        "subject": {
+          "artifact": "chain-0270-5fe719eed00f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "within_license_scope"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录确认了上游材料与下游服务之间的 API 调用/链接关系，但对象图未确认许可条款是否共同覆盖同一对象；没有据此认定许可冲突。",
+      "CC-BY-SA-4.0 的许可授予摘录限于 Licensed Rights 及受版权或类似权利覆盖的材料。当前材料是否落入该范围未明确，故仅保留条件义务。",
+      "AGPL第13条摘录的网络源码提供义务以修改程序且该版本支持网络交互为触发条件；记录明确修改不适用，因此未将普通远程 API 调用等同于修改或分发。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0264-e93a57ed4351.json",
+  "original_case_id": "chain-0264-e93a57ed4351",
+  "original_request_sha256": "2800a01f9aebe82bb934eab95b9990fcffb612b962dfcb6aa0f91137a6ee3f8a",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0264-e93a57ed4351": "chain-0270-5fe719eed00f",
+    "license-text:upstream:37a2df393b20197f": "license-text:upstream:37a2df393b20197f",
+    "license-text:downstream:0e9bc07c2948df4d": "license-text:downstream:0e9bc07c2948df4d",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/263": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/269"
+  }
+}

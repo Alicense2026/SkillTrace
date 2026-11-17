@@ -1,0 +1,118 @@
+{
+  "case_id": "chain-0254-875d45a59908",
+  "status": "SUCCESS",
+  "request_sha256": "607cc2f6eecc9982ee6accd37c7728bd088eba7554e265088047bb368e486ab0",
+  "analysis": {
+    "case_id": "chain-0254-875d45a59908",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0254-875d45a59908:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对的 Llama 2 摘录仅呈现许可授予条款，未提供 comply_with_Llama_agreement 所涵盖的完整条件；不据此推断具体履行要求。",
+      "对象图确认下游通过链接/远程调用上游，但依赖、修改副本或组合产品关系未知。MIT 条款不能仅因该调用关系自动适用于上游材料；目前也没有下游活动事实可将 MIT 通知义务判定为已触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0254-875d45a59908:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守 Llama 2 Community License Agreement 中适用的要求（具体要求以完整条款为准）。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20260,
+    "input_tokens_details": {
+      "cached_tokens": 20096,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 769,
+    "output_tokens_details": {
+      "reasoning_tokens": 289
+    },
+    "total_tokens": 21029,
+    "attribution": {
+      "items": {
+        "msg_089e93a947d8c17f016af3021c1d5487d287cad37557b5c082": {
+          "input_tokens": 18228,
+          "cached_tokens": 18066,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18228,
+              "cached_tokens": 18066,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_089e93a947d8c17f016af30222215487d29d7b2c81873b59dd": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 480,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 480
+            }
+          ]
+        },
+        "rs_089e93a947d8c17f016af3022205c887d29320c42bfa043df3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 289
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.711,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

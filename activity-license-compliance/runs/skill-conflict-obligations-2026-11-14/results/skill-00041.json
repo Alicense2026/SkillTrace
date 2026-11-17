@@ -1,0 +1,502 @@
+{
+  "case_id": "skill-00041",
+  "csv_row": 42,
+  "source_excel_row": "72",
+  "status": "SUCCESS",
+  "request_sha256": "7bdac2be497871d9538467403e65b653cee3dc5329c5b281b0640d913ef79f72",
+  "analysis": {
+    "case_id": "skill-00041",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00041:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00041:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本地 MIT 文本摘录包含无额外限制的使用许可，以及对副本或实质部分的版权与许可通知条件；两侧许可文本及哈希一致。远程调用和链接事实不证明复制、修改、分发或双方许可约束同一对象。",
+      "未发现远程调用专属条款；未列为已发生的复制、修改、分发或其他行为。相关条件义务保留为条件项，不据缺少履行证据推定违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如复制上游软件或其任何副本、实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Copy",
+            "copy_or_substantial_portion_created"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Copy",
+          "copy_or_substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如复制下游软件或其任何副本、实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Copy",
+            "copy_or_substantial_portion_created"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Copy",
+          "copy_or_substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如修改上游软件并由此产生副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Modify",
+            "copy_or_substantial_portion_created"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Modify",
+          "copy_or_substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如修改下游软件并由此产生副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Modify",
+            "copy_or_substantial_portion_created"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Modify",
+          "copy_or_substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Combine",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如合并上游软件并由此产生副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明；该要求针对上游软件，不当然涵盖独立组合产品整体。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Combine",
+            "copy_or_substantial_portion_created"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Combine",
+          "copy_or_substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Combine",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如合并下游软件并由此产生副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明；该要求针对下游软件，不当然涵盖独立组合产品整体。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Combine",
+            "copy_or_substantial_portion_created"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Combine",
+          "copy_or_substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如发布或分发上游软件的副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "copy_or_substantial_portion_distributed"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "copy_or_substantial_portion_distributed",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如发布或分发下游软件的副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "copy_or_substantial_portion_distributed"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "copy_or_substantial_portion_distributed",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Sublicense",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如再许可并在其中包含上游软件的副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Sublicense",
+            "copy_or_substantial_portion_included"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Sublicense",
+          "copy_or_substantial_portion_included",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      },
+      {
+        "activity": "Sublicense",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人如再许可并在其中包含下游软件的副本或实质部分，须在每份副本或实质部分中包含版权声明和 MIT 许可声明。",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "subject": {
+          "artifact": "skill-00041:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Sublicense",
+            "copy_or_substantial_portion_included"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Sublicense",
+          "copy_or_substantial_portion_included",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "使用许可无附加义务；已知使用属于许可范围。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "复制时的通知条件保留为条件义务。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "修改产生副本或实质部分时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "合并产生副本或实质部分时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          6
+        ],
+        "reason": "发布或分发副本时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          6
+        ],
+        "reason": "分发副本时的相同通知条件已与 U005 合并。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          8
+        ],
+        "reason": "再许可包含副本时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款涉及出售副本，活动词表无对应活动，不强行映射。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "下游使用许可无附加义务；已知使用属于许可范围。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "复制时的通知条件保留为条件义务。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "修改产生副本或实质部分时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          5
+        ],
+        "reason": "合并产生副本或实质部分时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          7
+        ],
+        "reason": "发布或分发副本时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          7
+        ],
+        "reason": "分发副本时的相同通知条件已与 D005 合并。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          9
+        ],
+        "reason": "再许可包含副本时的通知条件已保留。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款涉及出售副本，活动词表无对应活动，不强行映射。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00041-1794590857404487000-1.json",
+  "usage": {
+    "input_tokens": 18211,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3715,
+    "output_tokens_details": {
+      "reasoning_tokens": 481
+    },
+    "total_tokens": 21926,
+    "attribution": {
+      "items": {
+        "msg_08ec1a2a265a35c2016af7488dcfb887d0b879b6fbc9da5320": {
+          "input_tokens": 15487,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15487,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08ec1a2a265a35c2016af7488dcfb887d0b991d282f747cb87": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08ec1a2a265a35c2016af74897048887d0878b00244c10c9d5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3234,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3234
+            }
+          ]
+        },
+        "rs_08ec1a2a265a35c2016af748947ad487d09daf2341c1a6a8ba": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 346
+        },
+        "rs_08ec1a2a265a35c2016af74896e8f087d0b4e5cec92ce48d8f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 135
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

@@ -1,0 +1,244 @@
+{
+  "case_id": "skill-01398",
+  "csv_row": 1399,
+  "source_excel_row": "1924",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01398-1794599041593215000-2.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "作为被许可人，对上游 Software 的每份副本或实质部分，纳入上述版权声明和 MIT 许可声明。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+        "license:14150b29e8ba3e96ecadd093d54a7c9681ae598ce01b2ec1d6a4776a3765ff2f"
+      ],
+      "subject": {
+        "artifact": "skill-01398:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Copy",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "Modify",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "作为被许可人，若修改涉及制作上游 Software 的副本或实质部分，对每份副本或实质部分纳入上述版权声明和 MIT 许可声明；修改本身不另行触发声明义务。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+        "license:14150b29e8ba3e96ecadd093d54a7c9681ae598ce01b2ec1d6a4776a3765ff2f"
+      ],
+      "subject": {
+        "artifact": "skill-01398:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Modify",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "Combine",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "作为被许可人，若合并涉及制作上游 Software 的副本或实质部分，对每份副本或实质部分纳入上述版权声明和 MIT 许可声明；独立组合产品不因此整体成为 Software。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+        "license:14150b29e8ba3e96ecadd093d54a7c9681ae598ce01b2ec1d6a4776a3765ff2f"
+      ],
+      "subject": {
+        "artifact": "skill-01398:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Combine",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "作为被许可人，分发上游 Software 的副本或实质部分时，对每份副本或实质部分纳入上述版权声明和 MIT 许可声明。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+        "license:14150b29e8ba3e96ecadd093d54a7c9681ae598ce01b2ec1d6a4776a3765ff2f"
+      ],
+      "subject": {
+        "artifact": "skill-01398:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Distribute",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_distributed",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "Sublicense",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "作为被许可人，再许可上游 Software 的副本或实质部分时，对相关每份副本或实质部分纳入上述版权声明和 MIT 许可声明。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+        "license:14150b29e8ba3e96ecadd093d54a7c9681ae598ce01b2ec1d6a4776a3765ff2f"
+      ],
+      "subject": {
+        "artifact": "skill-01398:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Sublicense",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_included",
+        "notices_included"
+      ]
+    },
+    {
+      "activity": "SellCopies",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "作为被许可人，出售上游 Software 的副本或实质部分时，对每份售出副本或实质部分纳入上述版权声明和 MIT 许可声明。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9",
+        "license:14150b29e8ba3e96ecadd093d54a7c9681ae598ce01b2ec1d6a4776a3765ff2f"
+      ],
+      "subject": {
+        "artifact": "skill-01398:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:SellCopies",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_sold",
+        "notices_included"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知下游使用上游软件并通过 API 远程调用；对象图确认链接/调用，但未确认代码副本、实质部分、修改、组合或分发。",
+    "MIT 通知义务仅针对软件副本或实质部分；远程调用本身不证明复制或分发。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "摘录允许单纯使用，未规定附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制副本或实质部分时的声明义务保留为条件义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "修改本身无独立声明义务；若涉及制作副本或实质部分，适用声明义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "合并本身无独立声明义务；若涉及制作副本或实质部分，适用声明义务。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "发布副本或实质部分时的声明义务保留为条件义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "分发副本或实质部分时的声明义务保留为条件义务。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "再许可涉及副本或实质部分时的声明义务保留为条件义务。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "出售副本或实质部分时的声明义务保留为条件义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "摘录允许单纯使用，未规定附加义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制副本或实质部分时的声明义务与上游同项合并保留。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "修改本身无独立声明义务；若涉及制作副本或实质部分，适用声明义务。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "合并本身无独立声明义务；若涉及制作副本或实质部分，适用声明义务。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "分发副本或实质部分时的声明义务与上游同项合并保留。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "再许可涉及副本或实质部分时的声明义务与上游同项合并保留。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "出售副本或实质部分时的声明义务与上游同项合并保留。"
+    }
+  ]
+}

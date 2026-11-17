@@ -1,0 +1,311 @@
+{
+  "case_id": "chain-2251-c50e14d5efa9",
+  "source_csv_line": 2252,
+  "row": {
+    "github_repo": "5ire",
+    "github_url": "https://github.com/nanbingxyz/5ire",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ai.hashgrid/sdk",
+    "artifact_url": "https://github.com/hashgrid-labs/sdk",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/intellichat/types.ts:2 ｜ 调用原文: import { ContentBlock } from '@modelcontextprotocol/sdk/types.js'; ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 多处导入 MCP SDK 类型与客户端，实际用于 MCP 连接",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "nanbingxyz/5ire",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "84f520494c227243304a7d22ffdbb16f516586252e40a56c641cc26e7bafcff4",
+    "filename": "_licenseref_full/texts/84f520494c227243304a7d22ffdbb16f516586252e40a56c641cc26e7bafcff4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:5ire-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "elapsed_seconds": 46.25,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/custom-license-16927-2026-11-12",
+  "relationship_weight": 1,
+  "original_error": "Invalid obligation applicability",
+  "analysis": {
+    "case_id": "chain-2251-c50e14d5efa9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-2251-c50e14d5efa9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "no_5ire_brand_used_in_modified_versions",
+                "prominent_required_statement_present"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-2251-c50e14d5efa9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "serves_enterprise_clients_over_10_users"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "integrates_into_hardware_or_products_for_sale"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "government_or_education_procurement_involves_sensitive_data"
+                  ]
+                },
+                "uses_5ire_brand_in_product_service_or_promotion"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-2251-c50e14d5efa9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-2251-c50e14d5efa9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If a copy or substantial portion of the Software is made or provided, include the copyright notice and permission notice in that copy or substantial portion.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "copy_or_substantial_portion"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "copy_or_substantial_portion",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-2251-c50e14d5efa9:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If the used asset is the Community Edition, do not use the 5ire Brand in modified versions and prominently state: “This product is based on 5ire Community Edition and is not affiliated with 5ire.”",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_is_community_edition"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_is_community_edition",
+          "no_5ire_brand_used_in_modified_versions",
+          "prominent_required_statement_present"
+        ],
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-2251-c50e14d5efa9:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If using the Community Edition, do not engage in a use that triggers the commercial-license requirement: the specified modified-code distribution or SaaS cases, or use of the 5ire Brand in a product, service, or promotion. The terms of any separate commercial license are not specified in the supplied excerpt.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_is_community_edition",
+            {
+              "any": [
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "serves_enterprise_clients_over_10_users"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "integrates_into_hardware_or_products_for_sale"
+                  ]
+                },
+                {
+                  "all": [
+                    "modified_code",
+                    "distribution_directly_or_as_saas",
+                    "government_or_education_procurement_involves_sensitive_data"
+                  ]
+                },
+                "uses_5ire_brand_in_product_service_or_promotion"
+              ]
+            }
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_is_community_edition",
+          "modified_code",
+          "distribution_directly_or_as_saas",
+          "serves_enterprise_clients_over_10_users",
+          "integrates_into_hardware_or_products_for_sale",
+          "government_or_education_procurement_involves_sensitive_data",
+          "uses_5ire_brand_in_product_service_or_promotion"
+        ],
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游 MIT 摘录要求在软件的所有副本或实质部分中包含版权及许可通知；已知事实证明的是远程调用和 API 链接，并未证明复制或提供副本。因此，通知义务仅按原文的复制范围作条件表达，不能据此认定已触发或未履行。",
+      "下游条款明确限于 Community Edition；现有资料未确认被调用的下游资产是否属于该版本，也未说明品牌使用、显著声明或商业许可触发事实。",
+      "下游商业许可条款的触发包括特定的修改代码分发或 SaaS 情形，以及独立的品牌使用情形。现有远程调用事实本身不能证明这些条件。",
+      "对象图将两项资产关系标为 API 链接/远程调用，scope_shared 未知；这不足以证明两份许可共同约束同一对象。没有已证实的修改或分发事实，故不作许可冲突或违规判断。",
+      "结构化 MIT 使用规则映射了通知条件，但所引通知原文限定于副本或实质部分；本分析据此将通知义务限于该原文范围，而不将远程使用本身视为复制。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 24653,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1956,
+    "output_tokens_details": {
+      "reasoning_tokens": 288
+    },
+    "total_tokens": 26609,
+    "attribution": {
+      "items": {
+        "msg_095c3f9e57f50abf016af583e8489087d0b2bce66d026ff0b4": {
+          "input_tokens": 20756,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20756,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_095c3f9e57f50abf016af583e8489087d0b8648d51897ee6d2": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_095c3f9e57f50abf016af583ee69a487d0858ccf87fe1ed622": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1668,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1668
+            }
+          ]
+        },
+        "rs_095c3f9e57f50abf016af583ee52a887d094a9392cf73c05ad": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 288
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3857,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

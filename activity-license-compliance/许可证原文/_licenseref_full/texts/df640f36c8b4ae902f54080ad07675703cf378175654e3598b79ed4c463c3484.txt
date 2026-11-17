@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "taskloom"
+version = "1.0.0"
+description = "Deterministic, auditable multi-agent orchestration — register tools, run a fixed or rule-driven plan, get a fully-traced, reproducible result. Zero deps, offline."
+authors = [{name = "Cognis Digital", email = "suite@cognis.digital"}]
+license = {text = "LicenseRef-COCL-1.0"}
+requires-python = ">=3.10"
+readme = "README.md"
+keywords = ["agent","orchestration","multi-agent","deterministic","tool-calling","llm","workflow","audit","reproducible","ai"]
+classifiers = ["Development Status :: 5 - Production/Stable","Environment :: Console","License :: Other/Proprietary License","Programming Language :: Python :: 3.10","Programming Language :: Python :: 3.11","Programming Language :: Python :: 3.12"]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://cognis.digital"
+Repository = "https://github.com/cognis-digital/taskloom"
+Discussions = "https://github.com/cognis-digital/taskloom/discussions"
+
+[project.scripts]
+taskloom = "taskloom.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["taskloom"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

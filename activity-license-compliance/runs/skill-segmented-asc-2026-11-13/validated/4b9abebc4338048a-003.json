@@ -1,0 +1,209 @@
+{
+  "request_sha256": "37d0e2f09cc978c678bc20c59e208c468aa2ad922aa6d8532e27697b57dcace9",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 319,
+        "end_line": 323,
+        "clause_label": "gpl_no_proprietary_incorporation",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL statement concerning incorporating the licensed program into proprietary programs; the library-linking exception in lines 328–347 may alter this result for files that satisfy its stated scope.",
+        "condition_explanation": "The prohibition concerns incorporation of the GPL-covered program into a proprietary program. The text separately suggests using the GNU Library General Public License if a library author wants to permit proprietary applications to link.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not incorporate the GPL-covered program into a proprietary program.",
+            "actor": "licensee",
+            "object": "the GPL-covered program",
+            "trigger": "when incorporating the program into a proprietary program, except to the extent an applicable exception permits the combination"
+          }
+        ]
+      },
+      {
+        "start_line": 338,
+        "end_line": 344,
+        "clause_label": "classpath_exception_link_independent_modules",
+        "activities": [
+          "Link"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "classpath_exception_applies",
+          "requires": "linked_modules_are_independent"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Special exception for a library file expressly designated as subject to the Classpath exception in its header as specified in the accompanying LICENSE file (lines 328–332). Permits linking with independent modules to produce an executable. An independent module is not derived from or based on the library.",
+        "condition_explanation": "classpath_exception_applies means the particular source file bears the specified Oracle designation. linked_modules_are_independent means each linked module is not derived from or based on the library.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 338,
+        "end_line": 344,
+        "clause_label": "classpath_exception_distribute_executable",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "classpath_exception_applies",
+          "requires": {
+            "all": [
+              "resulting_executable_links_library_with_independent_modules",
+              "each_independent_module_license_terms_met"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Special exception for a library file expressly designated as subject to the Classpath exception in its header as specified in the accompanying LICENSE file (lines 328–332). Applies to the resulting executable and allows distribution under terms of the distributor's choice, subject to the terms of each linked independent module's license.",
+        "condition_explanation": "classpath_exception_applies means the particular source file bears the specified Oracle designation. The independent-module and module-license conditions apply to each module linked into the executable.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Meet the terms and conditions of the license of each linked independent module.",
+            "actor": "licensee distributing the resulting executable",
+            "object": "each linked independent module",
+            "trigger": "when distributing the resulting executable under the Classpath exception"
+          }
+        ]
+      },
+      {
+        "start_line": 345,
+        "end_line": 347,
+        "clause_label": "classpath_exception_extend_or_remove",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "licensee_modifies_library",
+          "requires": {
+            "any": [
+              "retain_exception_without_extension",
+              "extend_exception_to_modified_version",
+              "delete_exception_statement_from_modified_version"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies when the licensee modifies the library file carrying the Classpath exception. The text permits extending the exception to the modified version but says there is no obligation to extend it; it also says to delete the exception statement if the licensee does not wish to extend it.",
+        "condition_explanation": "licensee_modifies_library means the licensee modifies the library. The stated alternatives distinguish extending the exception from not extending it; if not extending, the exception statement is to be deleted from the modified version.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Delete the Classpath exception statement from the modified version if the licensee does not extend the exception to that version.",
+            "actor": "licensee modifying the library",
+            "object": "the exception statement in the modified library version",
+            "trigger": "when the licensee modifies the library and chooses not to extend the exception to the modified version"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Lines 328–332 limit the Classpath exception to particular source files bearing the specified designation; the accompanying LICENSE file is referenced but not separately supplied.",
+      "The interactive-program notice and command descriptions are presented as application guidance/examples; they are not treated here as an independent operative license condition.",
+      "The employer or school copyright-disclaimer passage is framed as a recommendation and sample, not an operative duty.",
+      "The statement in lines 334–336 that linking makes a combined work is captured as scope context for the exception, not as a separate permission or prohibition."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0056",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Example notice for an interactive program; in this application-guidance passage it is not treated as an independent operative license duty."
+      },
+      {
+        "unit_id": "P0057",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Illustrative sample notice text, not an independent operative license rule."
+      },
+      {
+        "unit_id": "P0058",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Explains hypothetical command or interface examples for showing license text; it does not impose a separate operative duty."
+      },
+      {
+        "unit_id": "P0059",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Recommendation and sample concerning an employer or school copyright disclaimer; not an operative license duty."
+      },
+      {
+        "unit_id": "P0060",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Sample copyright-disclaimer text, not an operative license rule."
+      },
+      {
+        "unit_id": "P0061",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Signature placeholder in the sample disclaimer."
+      },
+      {
+        "unit_id": "P0062",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Sample signatory title, not an operative license rule."
+      },
+      {
+        "unit_id": "P0063",
+        "status": "MODELED",
+        "clause_labels": [
+          "gpl_no_proprietary_incorporation"
+        ],
+        "reason": "States that the GPL does not permit incorporating the program into proprietary programs and identifies the separate library-license alternative."
+      },
+      {
+        "unit_id": "P0064",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the Classpath exception; its scope and operative terms are modeled from the surrounding text."
+      },
+      {
+        "unit_id": "P0065",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Specifies which source files qualify for the Classpath exception and the required designation; used as scope context for the exception clauses."
+      },
+      {
+        "unit_id": "P0066",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Describes the combined-work consequence of linking and the ordinary GPL coverage of the combination; used as context for the special exception."
+      },
+      {
+        "unit_id": "P0067",
+        "status": "MODELED",
+        "clause_labels": [
+          "classpath_exception_link_independent_modules",
+          "classpath_exception_distribute_executable",
+          "classpath_exception_extend_or_remove"
+        ],
+        "reason": "The paragraph grants conditional linking and distribution permissions subject to independent-module license terms, and specifies the modification choice concerning extension or deletion of the exception."
+      }
+    ]
+  },
+  "attempt": 1
+}

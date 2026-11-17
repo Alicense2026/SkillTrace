@@ -1,0 +1,151 @@
+{
+  "case_id": "chain-0291-efa3b2f6e135",
+  "status": "SUCCESS",
+  "request_sha256": "027dd358c3a77e93b6a12f798572c51ef68defcde0b7340124da37d745cc4f98",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0291-efa3b2f6e135:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c45f65cecc107355"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0291-efa3b2f6e135:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use/两份原始材料；BSD 许可摘录允许使用并要求保留适用通知；CC-BY-4.0 授予对许可材料行使权利的许可，但要求遵守该许可条件。已知事实仅为远程服务调用及API关联，未证明两份许可约束同一对象或下游产品包含上游材料；若范围重合，保留通知与遵守CC许可条件可共同履行，未见相反要求。来源：两份本地许可文本的结构化条款摘录及可信链记录。",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80",
+          "license-text:downstream:c45f65cecc107355",
+          "../aggregate_all_10200/许可证组合统计.csv#/rows/290"
+        ],
+        "status": "POTENTIAL_CONFLICT"
+      }
+    ],
+    "limitations": [
+      "条款结构化抽取标记为FIRST_PASS_REVIEW_REQUIRED；现有摘录仅涵盖许可授予/使用条件及BSD通知要求，未提供完整条件、例外或完整上下游范围映射。",
+      "对象图确认API链接和远程调用，但依赖、打包、修改副本及合并产品关系均未知；因此不能将两份许可确定为共同约束同一对象。",
+      "未提供活动履行证据；未知不代表未履行。仅据现有摘录未发现远程调用本身触发分发、源码提供或模型权重转移义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若两许可共同适用于所使用的材料或产品，应保留BSD适用通知并遵守CC-BY-4.0许可条件。",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80",
+          "license-text:downstream:c45f65cecc107355"
+        ],
+        "subject": {
+          "artifact": "chain-0291-efa3b2f6e135:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "retain_applicable_notices",
+          "comply_with_CC_license_conditions"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0291-efa3b2f6e135"
+  },
+  "usage": {
+    "input_tokens": 19067,
+    "input_tokens_details": {
+      "cached_tokens": 18944,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 907,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 19974,
+    "attribution": {
+      "items": {
+        "msg_091e14e5baa9c87c016af3041487f087d18683504a80eda615": {
+          "input_tokens": 17035,
+          "cached_tokens": 16914,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17035,
+              "cached_tokens": 16914,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_091e14e5baa9c87c016af30414f23487d19d077845a0c2aef3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 907,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 907
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 26.373,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

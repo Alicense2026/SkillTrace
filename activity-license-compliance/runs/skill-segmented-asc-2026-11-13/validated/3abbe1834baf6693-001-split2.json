@@ -1,0 +1,773 @@
+{
+  "request_sha256": "6a1d3d1727d0c412c5b76395318c00fe41525d4e3c76168a20e8ed0d206bd7da",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 22,
+        "end_line": 23,
+        "clause_label": "account_login_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Account security; OriginalArtifact is the user's Kimi Open Platform account and login credentials. Permission covers logging in with the phone number and password the user set or confirmed.",
+        "condition_explanation": "The stated login method is use of the user's set or confirmed phone number and set password.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 25,
+        "end_line": 26,
+        "clause_label": "account_transfer_exception",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "transfer_authorized_by_law_or_judicial_decision_or_provider_consent",
+              "transfer_follows_platform_account_transfer_process"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Account transfer; OriginalArtifact is the user's account. Upon transfer, rights and obligations under the account transfer with it. Other transfers are prohibited and may result in service cessation, account cancellation, and contractual liability.",
+        "condition_explanation": "Transfer is permitted only where expressly provided by law, ordered by a judicial decision, or consented to by the provider, and the platform's transfer process is followed.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 25,
+        "end_line": 26,
+        "clause_label": "unauthorized_account_transfer_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": {
+              "any": [
+                "transfer_authorized_by_law_or_judicial_decision_or_provider_consent",
+                "transfer_follows_platform_account_transfer_process"
+              ]
+            }
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Account transfer; OriginalArtifact is the user's account. The agreement prohibits transfer outside the stated authorized-and-process-compliant exception.",
+        "condition_explanation": "The prohibition applies to a transfer that does not satisfy both the authorization and process requirements.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not transfer the account except where authorized by law, judicial decision, or provider consent and in compliance with the platform transfer process.",
+            "actor": "user",
+            "object": "Kimi Open Platform account",
+            "trigger": "Any proposed account transfer outside the stated exception."
+          }
+        ]
+      },
+      {
+        "start_line": 28,
+        "end_line": 33,
+        "clause_label": "user_update_and_verification_duties",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "user_provided_information_is_kept_current",
+              "when_law_requires_provider_verification_user_cooperates_and_provides_latest_true_complete_valid_information"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Information maintenance and verification; OriginalArtifact is the user's information supplied in connection with the service. Provider may ask questions, require rectification or recertification, and suspend or terminate some or all services in the listed circumstances.",
+        "condition_explanation": "The user must update information promptly. The duty to cooperate with verification and provide latest, true, complete, valid information applies when law expressly requires the provider, as platform operator, to verify some user information. Provider contact failure using the last information, failure to timely supply requested information, or information that is obviously untrue or verified invalid may lead to the stated consequences.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Timely update information provided to the service.",
+            "actor": "user",
+            "object": "Information the user provided to the provider",
+            "trigger": "Whenever the user's provided information requires updating."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Cooperate with verification and provide the latest, true, complete, and valid information.",
+            "actor": "user",
+            "object": "User information subject to legally required platform verification",
+            "trigger": "When law expressly requires the provider to verify that information."
+          }
+        ]
+      },
+      {
+        "start_line": 35,
+        "end_line": 36,
+        "clause_label": "provider_service_maintenance_and_response",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Platform rights and obligations; OriginalArtifact is the Kimi Open Platform service. Provider undertakes to maintain normal operation using existing technology, strive to improve technology, and respond within the legally prescribed period to service-related problems and reports encountered or made by users.",
+        "condition_explanation": "The maintenance undertaking is framed by existing technological capability; the response undertaking applies to relevant user problems and reports and is subject to the legally prescribed response period.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Maintain normal operation of the platform using existing technology and strive to improve technology and user experience.",
+            "actor": "service provider",
+            "object": "Kimi Open Platform service",
+            "trigger": "While providing the platform service, subject to existing technological capability."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Respond within the legally prescribed period to user problems and reports concerning the product or service.",
+            "actor": "service provider",
+            "object": "User reports and problems concerning Kimi Open Platform",
+            "trigger": "When a user encounters or reports a relevant problem or situation."
+          }
+        ]
+      },
+      {
+        "start_line": 37,
+        "end_line": 37,
+        "clause_label": "provider_enforcement_permission",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "user_engages_in_improper_conduct",
+              "other_circumstances_provider_considers_service_should_be_terminated"
+            ]
+          }
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider enforcement; OriginalArtifact is the platform service and relevant information. Provider may block information, terminate service, notify the user and inform relevant authorities; if verification establishes breach or illegality, provider may terminate service and take other legally permitted measures. User may submit evidence disputing a measure.",
+        "condition_explanation": "Initial measures apply to improper conduct or other circumstances the provider considers grounds for termination. The further termination and other-measures path applies when verification establishes violation of the agreement or law.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 38,
+        "end_line": 38,
+        "clause_label": "provider_training_use_of_inputs_and_outputs",
+        "activities": [
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "content_was_input_to_or_output_by_kimi_open_platform"
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider training use; OriginalArtifact is the user's content input to Kimi Open Platform or content output by it. The agreement states the user authorizes this use for training Kimi Open Platform and other related products and waives claims against the provider arising from that use, including intellectual-property and revenue claims.",
+        "condition_explanation": "The stated purpose is improving the platform's technical capability and service quality. The content must be content the user input or the platform output. The clause is an authorization and waiver, not a duty on the user to provide content.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 39,
+        "end_line": 39,
+        "clause_label": "provider_network_security_duty",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider duty concerning the network security and stable operation of Kimi Open Platform.",
+        "condition_explanation": "The provider must take necessary and reasonable measures to safeguard network security and stable operation.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Take necessary and reasonable measures to safeguard network security and stable operation.",
+            "actor": "service provider",
+            "object": "Kimi Open Platform network and service",
+            "trigger": "While operating the platform."
+          }
+        ]
+      },
+      {
+        "start_line": 40,
+        "end_line": 40,
+        "clause_label": "free_service_adjustment_permission",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_is_providing_free_service",
+          "requires": "adjustment_is_based_on_research_progress_or_industry_environment_or_operating_costs_or_compute_capacity_constraints"
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Free-service adjustment; OriginalArtifact is free Kimi Open Platform service. Provider may adjust it from time to time in the listed circumstances. The user agrees not to pursue provider liability solely because of an adjustment or loss of free-use benefits.",
+        "condition_explanation": "The adjustment grounds are research progress, changes in industry conditions, increased operating costs, or compute-capacity constraints.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 41,
+        "end_line": 41,
+        "clause_label": "deep_synthesis_label_prohibition",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "label_was_generated_in_platform_output",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Output label; OriginalArtifact is the deep-synthesis service identifier generated in Kimi Open Platform output.",
+        "condition_explanation": "The user must not delete, tamper with, or conceal the identifier when it is generated in output.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not delete, alter, or conceal a deep-synthesis service identifier generated in platform output.",
+            "actor": "user",
+            "object": "Deep-synthesis service identifier in Kimi Open Platform output",
+            "trigger": "Whenever platform output contains such an identifier."
+          }
+        ]
+      },
+      {
+        "start_line": 43,
+        "end_line": 43,
+        "clause_label": "question_answer_service_entitlement",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "User service entitlement; OriginalArtifact is Kimi Open Platform's question-and-answer generation service. Provider may increase or reduce service content based on business needs, bandwidth, computing capacity, and other factors.",
+        "condition_explanation": "The user may enjoy the question-and-answer generation service subject to the agreement; the provider reserves the stated ability to change service content.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 44,
+        "end_line": 44,
+        "clause_label": "proper_noninfringing_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "use_is_not_improper_or_disruptive",
+              "use_does_not_infringe_third_party_rights"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "General user conduct; OriginalArtifact is Kimi Open Platform and its normal operating order.",
+        "condition_explanation": "Use must not be improper, disrupt normal platform order, or infringe any third party's rights.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the platform improperly, disrupt its normal order, or infringe any third party's rights.",
+            "actor": "user",
+            "object": "Kimi Open Platform and third-party rights implicated by its use",
+            "trigger": "Whenever using Kimi Open Platform."
+          }
+        ]
+      },
+      {
+        "start_line": 45,
+        "end_line": 56,
+        "clause_label": "prohibited_illegal_or_harmful_content",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "content_is_or_induces_platform_output_of_any_content_listed_in_lines_46_to_56"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Content restrictions; OriginalArtifact is content the user sends to the platform or induces the platform to output. The listed categories include incitement against the Constitution or laws; subversion or separatism; ethnic hatred or discrimination; discrimination based on race, sex, religion, or region; fabricated or distorted facts or rumors disrupting public order; superstition, obscenity, pornography, gambling, violence, murder, terror, or criminal incitement; insult, defamation, or other malicious attack; damage to state-organ reputations; content contrary to public interest or morals or unsuitable under the agreement or other platform rules; and other content violating the Constitution, laws, or administrative regulations. Provider may delete or block information and report it to authorities.",
+        "condition_explanation": "The restriction applies if the user sends or induces output containing any one of the listed content categories; the list is disjunctive.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not send or induce platform output of content in any category listed in lines 46–56.",
+            "actor": "user",
+            "object": "Content sent to or generated by Kimi Open Platform at the user's inducement",
+            "trigger": "Whenever sending content to the platform or inducing it to output content."
+          }
+        ]
+      },
+      {
+        "start_line": 57,
+        "end_line": 62,
+        "clause_label": "prohibited_platform_uses",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "use_is_by_any_method_listed_in_lines_58_to_62"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Improper-use restrictions; OriginalArtifact is the Kimi Open Platform service. Prohibited uses include infringing anyone's rights; reverse engineering any algorithm, source code, or mechanism; developing, training, or improving algorithms or models directly or indirectly competitive with platform or provider/affiliate products; use in services requiring professional qualifications, including medical, legal, psychological counseling, and infrastructure services; and other use that may harm provider interests.",
+        "condition_explanation": "Any one listed method triggers the restriction. The competitive restriction covers direct or indirect competition and development, training, or improvement.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the platform in any manner listed in lines 58–62, including reverse engineering, competitive algorithm or model development/training/improvement, or use in a service requiring professional qualifications.",
+            "actor": "user",
+            "object": "Kimi Open Platform service, its algorithms, source code, and mechanisms",
+            "trigger": "Whenever using the platform."
+          }
+        ]
+      },
+      {
+        "start_line": 63,
+        "end_line": 63,
+        "clause_label": "third_party_service_responsibility",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_uses_platform_to_provide_service_to_third_party",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Third-party service; OriginalArtifact is a service the user provides to a third party using Kimi Open Platform. The user bears the corresponding rights, obligations, and responsibilities; the provider disclaims responsibility for resulting losses.",
+        "condition_explanation": "This clause allocates responsibility when the user uses the platform to provide a service to any third party; it does not expressly prohibit that activity.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 64,
+        "end_line": 64,
+        "clause_label": "overseas_law_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "use_occurs_outside_china",
+          "requires": "comply_with_all_applicable_laws_regulations_and_policies_of_relevant_jurisdiction"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Overseas use; OriginalArtifact is Kimi Open Platform. Applicable restrictions and supervision include those of the relevant country or jurisdiction, with the United States and European Union given as examples.",
+        "condition_explanation": "The compliance condition applies to use overseas and covers all applicable laws, regulations, and policies of the relevant jurisdiction.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with all applicable laws, regulations, and policies of the relevant jurisdiction.",
+            "actor": "user",
+            "object": "Overseas use of Kimi Open Platform",
+            "trigger": "Whenever using Kimi Open Platform overseas."
+          }
+        ]
+      },
+      {
+        "start_line": 66,
+        "end_line": 69,
+        "clause_label": "user_termination_paths",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "user_cancels_account",
+              "before_change_takes_effect_user_stops_use_and_expressly_rejects_change",
+              "user_expressly_refuses_continued_use_and_submits_account_cancellation_application_through_required_process"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "User termination rights; OriginalArtifact is the agreement and Kimi Open Platform service. In the third path, the agreement terminates immediately when the provider cancels the registered user account following the user's application.",
+        "condition_explanation": "The three termination paths are alternatives, not cumulative requirements.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 70,
+        "end_line": 77,
+        "clause_label": "provider_termination_paths",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "user_breaches_agreement_and_provider_terminates_under_breach_terms",
+              "after_termination_user_again_registers_directly_or_indirectly_in_another_name",
+              "user_contact_details_unusable_and_fails_to_update_within_three_working_days_after_notice_or_provider_cannot_contact_using_reserved_information",
+              "main_registration_information_is_false",
+              "agreement_terminates_or_updates_and_user_expressly_rejects_new_agreement",
+              "user_posts_illegal_information_infringes_others_rights_or_commits_other_serious_illegal_or_breach_conduct",
+              "repeated_serious_platform_rule_violations_and_account_sealed_under_platform_rules",
+              "other_circumstance_provider_considers_requires_termination"
+            ]
+          }
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider may terminate service by cancelling the user account in any stated alternative circumstance. For breach-based termination the provider will notify the user; after such termination, direct or indirect re-registration under another person's name permits further unilateral termination. The contact-details path includes a three-working-day period after notice to update details.",
+        "condition_explanation": "The listed grounds are alternatives. The three-working-day deadline applies where the user's registered email or phone is unavailable, the provider notifies the user through another registered contact to update it, and the user fails to provide updated details within that period. Other grounds include inability to contact through reserved information, false main registration information, rejection of a new agreement, serious misconduct, or the provider's other termination circumstances.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 78,
+        "end_line": 80,
+        "clause_label": "post_termination_information_retention",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "agreement_has_terminated",
+          "requires": "user_information_is_anonymized"
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Post-termination handling; OriginalArtifact is information retained on Kimi Open Platform. Provider may continue retaining the information if anonymized. The agreement also says, subject to express legal requirements, provider has no duty to disclose account information to the user or a designated third party and preserves claims for prior breaches; those statements are not additional use permissions.",
+        "condition_explanation": "Continued retention is expressly conditioned on anonymization of user information.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 82,
+        "end_line": 85,
+        "clause_label": "noncommercial_personal_research_use",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "provider_and_relevant_rightsholders_gave_prior_written_consent"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Intellectual-property section; OriginalArtifact includes Kimi Open Platform and its program, software, information, data, development documentation, related elements and components, and platform-generated content. User use is limited to noncommercial personal research and study; commercialized use of the platform or generated content, and development of competing products or services, require prior written consent. The agreement identifies provider and relevant rightsholders as owners of platform-related intellectual property.",
+        "condition_explanation": "The commercial-use prohibition applies absent prior written consent from the provider and relevant rightsholders. The stated noncommercial personal research/study limitation applies to use of the platform. The separate competition restriction is modeled below.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Kimi Open Platform or its generated content in a commercialized manner without prior written consent from the provider and relevant rightsholders.",
+            "actor": "user",
+            "object": "Kimi Open Platform and its generated content",
+            "trigger": "Any commercialized use without the required prior written consent."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Limit use of Kimi Open Platform to noncommercial personal research and study.",
+            "actor": "user",
+            "object": "Kimi Open Platform",
+            "trigger": "Whenever using Kimi Open Platform, except to the extent prior written consent authorizes otherwise."
+          }
+        ]
+      },
+      {
+        "start_line": 83,
+        "end_line": 85,
+        "clause_label": "competitive_product_development_restriction",
+        "activities": [
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "not": "provider_and_relevant_rightsholders_gave_prior_written_consent"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Competitive product restriction; OriginalArtifact is Kimi Open Platform and products or services developed by the provider or its affiliates. Development of a competing product or service is restricted absent prior written consent.",
+        "condition_explanation": "Competition includes products or services competing with Kimi Open Platform or other products developed by the provider or its affiliates. The text requires written consent from the provider and relevant rightsholders for the stated commercial/IP restrictions.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not develop a product or service competing with Kimi Open Platform or provider/affiliate products without prior written consent from the provider and relevant rightsholders.",
+            "actor": "user",
+            "object": "Competing product or service developed using or in relation to Kimi Open Platform",
+            "trigger": "Any such development without the required prior written consent."
+          }
+        ]
+      },
+      {
+        "start_line": 86,
+        "end_line": 87,
+        "clause_label": "input_content_rights_and_generated_content_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Content rights; OriginalArtifact is content the user inputs or content generated based on Kimi Open Platform. Input copyright remains with its original author, subject to any copyright statement attached to the original work or source-site repost. User maintains generated-content copyright and must independently judge its use and handle resulting intellectual-property issues; user may be liable to provider for resulting losses caused to it. No transfer of input copyright is stated.",
+        "condition_explanation": "Input rights follow the original author or applicable attached copyright notice. Generated-content copyright is maintained by the user; the user is responsible for independently assessing and using it and handling resulting IP issues.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 98,
+        "end_line": 98,
+        "clause_label": "provider_license_to_nonpersonal_information",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "information_is_nonpersonal_information_provided_or_published_by_user_or_generated_in_service_use",
+          "requires": true
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Information license; OriginalArtifact is non-personal information the user provides, publishes, or that is formed in use of Kimi Open Platform. The license is non-exclusive, worldwide, perpetual, royalty-free, and includes sublicensing to third parties. It also authorizes the provider or designee to take evidence of and sue third-party infringers in its own name. The clause says upload or publication does not itself transfer intellectual-property, portrait, or similar rights.",
+        "condition_explanation": "The grant excludes personal information and applies to the specified other information. It is a license and enforcement authorization, not a transfer of ownership.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 103,
+        "end_line": 103,
+        "clause_label": "provider_review_and_moderation_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_finds_or_suspects_problem_in_registration_data_or_product_service_use",
+          "requires": {
+            "not": "user_makes_reasonable_response_within_reasonable_period_after_inquiry_or_correction_notice"
+          }
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider review and moderation; OriginalArtifact is user registration data or product/service use. Provider may inspect these materials, inquire or require correction, and, if no reasonable response is given within a reasonable period, block or delete relevant data or use.",
+        "condition_explanation": "Inspection and inquiry/correction notices may follow discovery or suspicion of a problem. Blocking or deletion is conditional on the user failing to make a reasonable response within a reasonable period.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 104,
+        "end_line": 105,
+        "clause_label": "provider_publication_of_user_violation",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "violation_confirmed_by_effective_state_legal_document_or_administrative_penalty_decision",
+              "provider_has_sufficient_factual_basis_to_determine_illegal_or_agreement_violating_conduct"
+            ]
+          }
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider may lawfully publicize the user's illegal conduct on its website, including by online publication, on either stated evidentiary basis.",
+        "condition_explanation": "The two qualifying bases are alternatives: confirmation by an effective state legal instrument or administrative penalty decision, or sufficient factual basis for the provider's determination.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 106,
+        "end_line": 106,
+        "clause_label": "provider_content_removal_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "information_was_published_by_user_on_platform",
+          "requires": {
+            "any": [
+              "provider_has_reason_to_believe_information_is_fraudulent_malicious_or_false",
+              "provider_has_reason_to_believe_information_may_disrupt_normal_platform_order",
+              "provider_has_reason_to_believe_information_violates_public_interest_or_may_seriously_harm_platform_or_other_users_legal_interests"
+            ]
+          }
+        },
+        "actor_role": "service_provider",
+        "scope_note": "Provider may delete or otherwise restrict the specified user-published information without prior notice.",
+        "condition_explanation": "Any one of the listed provider-reason-to-believe grounds suffices; notice to the user is not required.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk does not include any external platform rules or transfer-process details incorporated by reference; their contents are not inferred.",
+      "The agreement's disclaimers, liability allocations, governing-law and venue clauses, severability, and contact/how-to-contact information are not modeled as activity constraints.",
+      "No separate privacy-policy terms are supplied; the information license is modeled only to the extent stated in line 98.",
+      "Account suspension, service termination, content moderation, public disclosure, and retention are represented only as expressly stated permissions; no additional cure rights or conditions are inferred."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0007",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_login_permission"
+        ],
+        "reason": "Models the stated permission to log in using the user's set or confirmed phone number and set password; the remaining loss and recovery language is a liability allocation."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_transfer_exception",
+          "unauthorized_account_transfer_prohibition"
+        ],
+        "reason": "Captures the authorized transfer exception, process condition, transfer of account rights and obligations, and prohibition outside the exception."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "user_update_and_verification_duties"
+        ],
+        "reason": "Captures the ongoing update duty, legally conditioned verification cooperation duty, provider inquiry/recertification and suspension discretion, and listed factual circumstances."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_service_maintenance_and_response",
+          "provider_enforcement_permission",
+          "provider_training_use_of_inputs_and_outputs",
+          "provider_network_security_duty",
+          "free_service_adjustment_permission",
+          "deep_synthesis_label_prohibition",
+          "question_answer_service_entitlement",
+          "proper_noninfringing_use",
+          "prohibited_illegal_or_harmful_content",
+          "prohibited_platform_uses",
+          "third_party_service_responsibility",
+          "overseas_law_compliance",
+          "user_termination_paths",
+          "provider_termination_paths",
+          "post_termination_information_retention",
+          "noncommercial_personal_research_use",
+          "competitive_product_development_restriction",
+          "input_content_rights_and_generated_content_responsibility",
+          "provider_license_to_nonpersonal_information"
+        ],
+        "reason": "Models the operative service, provider, user conduct, content, use, termination, intellectual-property, and information-license provisions in lines 31–98. Warranty/liability language and the statement that generated-content copyright is maintained by the user do not create additional grants or duties."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Heading and introductory statement that violations listed below constitute breach and may be handled; the specific operative handling measures appear in the following paragraph."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_review_and_moderation_permission",
+          "provider_publication_of_user_violation",
+          "provider_content_removal_permission"
+        ],
+        "reason": "Captures provider inspection and conditional moderation, public disclosure grounds, and removal/restriction grounds. Lines 107–110 are governing-law, venue, and severability boilerplate, not activity constraints; line 112 is contact guidance."
+      }
+    ]
+  },
+  "attempt": 3
+}

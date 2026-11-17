@@ -1,0 +1,227 @@
+{
+  "request_sha256": "c275b71ea997fafb3d15d29d281c1054ad2df19ba60c90c8a6b0f1a5d249b5c6",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 18,
+        "end_line": 18,
+        "clause_label": "PERMITIDO — estudo pessoal e aprendizado",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "personal_study_or_learning"
+        },
+        "actor_role": "user",
+        "scope_note": "Permits using the material for personal study and learning; does not state a broader use grant.",
+        "condition_explanation": "The permitted purpose must be personal study or learning."
+      },
+      {
+        "start_line": 19,
+        "end_line": 19,
+        "clause_label": "PERMITIDO — referência para projetos próprios",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "use_as_reference_for_own_projects"
+        },
+        "actor_role": "user",
+        "scope_note": "Permits using the material as a reference for the user's own projects, not expressly incorporating or distributing it as part of those projects.",
+        "condition_explanation": "The material is used as a reference for the user's own projects."
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "PERMITIDO — execução não comercial",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "executing_scripts_or_tools",
+              "noncommercial_purpose"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Permits executing the scripts and tools for non-commercial purposes.",
+        "condition_explanation": "Both predicates apply: the activity is execution of scripts or tools, and its purpose is non-commercial."
+      },
+      {
+        "start_line": 21,
+        "end_line": 21,
+        "clause_label": "PERMITIDO — modificação local para uso pessoal",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "modification_is_local",
+              "personal_use"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Permits local modification of the code for the user's personal use; does not grant permission to share adaptations.",
+        "condition_explanation": "Both predicates apply: modification is local and the modified code is for personal use."
+      },
+      {
+        "start_line": 27,
+        "end_line": 28,
+        "clause_label": "PROIBIDO — redistribuição e compartilhamento público",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "user",
+        "scope_note": "Prohibits redistributing the material, in whole or in part, by any means, and publicly sharing it in repositories, websites, social networks, or forums. The clause does not state an exception for private sharing.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 29,
+        "end_line": 29,
+        "clause_label": "PROIBIDO — venda e uso comercial",
+        "activities": [
+          "SellCopies",
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "user",
+        "scope_note": "Prohibits selling the material or using it commercially. The text does not specify whether this prohibition reaches independently created works that merely reference the material.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 30,
+        "end_line": 30,
+        "clause_label": "PROIBIDO — remoção ou alteração de avisos",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "user",
+        "scope_note": "Prohibits removing or altering the authorship and license notices.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 31,
+        "end_line": 31,
+        "clause_label": "PROIBIDO — distribuição pública de obras derivadas",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "public_distribution"
+        },
+        "actor_role": "user",
+        "scope_note": "Prohibits creating derivative works for public distribution. Read with the permission for local modification for personal use: it does not prohibit that private modification, but does prohibit making derivative works for public distribution.",
+        "condition_explanation": "The prohibition applies when the derivative work is for public distribution."
+      },
+      {
+        "start_line": 32,
+        "end_line": 33,
+        "clause_label": "PROIBIDO — inclusão em cursos, treinamentos ou materiais didáticos",
+        "activities": [
+          "Use",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "inclusion_in_courses_training_or_educational_materials",
+          "requires": {
+            "not": "express_written_authorization_from_author"
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Prohibits including the material in courses, training, or educational materials unless the author gives express written authorization.",
+        "condition_explanation": "The prohibition applies to such inclusion when express written authorization from the author is absent."
+      },
+      {
+        "start_line": 37,
+        "end_line": 42,
+        "clause_label": "ATRIBUIÇÃO OBRIGATÓRIA",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute",
+          "Combine",
+          "Link",
+          "ProvideNetworkService",
+          "RemoteInteraction",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "authorized_use_occurs",
+          "requires": "visible_attribution_preserved"
+        },
+        "actor_role": "user",
+        "scope_note": "Any authorized use must keep the specified attribution visible: “Sistema Marmelstein” - George Marmelstein; “Todos os direitos reservados.” This is an attribution condition, not a grant of the listed activities.",
+        "condition_explanation": "When a use is authorized, the specified attribution must remain visible. The clause does not independently authorize any activity."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a restricted-use terms document for “Sistema Marmelstein”; it does not specify in detail whether every term applies identically to the material, scripts, tools, and code. The scope descriptions retain the document's wording without treating it as a general software license.",
+      "The permission to use the material as a reference for the user's own projects does not expressly grant permission to incorporate, distribute, sublicense, host, or commercially exploit the material or resulting projects.",
+      "No express grant is stated for copying, combining, linking, sublicensing, charging, offering paid access, providing a network service, training a model, or providing source. Their absence is not treated as a prohibition except where the stated redistribution or commercial-use prohibitions apply.",
+      "The document says to contact the author to request permission beyond its terms, but does not itself grant that additional permission. The warranty disclaimer and statement about possible legal measures are omitted as not operative activity permissions or constraints."
+    ]
+  }
+}

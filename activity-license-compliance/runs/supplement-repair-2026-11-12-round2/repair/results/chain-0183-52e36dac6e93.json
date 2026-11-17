@@ -1,0 +1,222 @@
+{
+  "case_id": "chain-0183-52e36dac6e93",
+  "input_group_row": 183,
+  "aggregate_count": 4,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "4"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "elapsed_seconds": 37.79,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/license-combination-16927-2026-11-12",
+  "relationship_weight": 4,
+  "original_error": "Unknown evidence reference",
+  "analysis": {
+    "case_id": "chain-0183-52e36dac6e93",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_to_provider_according_to_order_form_and_payment_terms",
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0183-52e36dac6e93:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:90f14d1a95666069"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agree_to_terms",
+            "when": "scope_shared"
+          },
+          "S": {
+            "artifact": "chain-0183-52e36dac6e93:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:90f14d1a95666069"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose",
+            "when": "scope_shared"
+          },
+          "S": {
+            "artifact": "chain-0183-52e36dac6e93:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:90f14d1a95666069"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "noncommercial_purpose"
+          },
+          "S": {
+            "artifact": "chain-0183-52e36dac6e93:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI.txt 的相关摘录是客户向 OpenAI 或其经销商支付适用费用的条款；未提供证据证明费用已到期。该条款不构成客户可向下游收费的许可或限制。",
+      "PolyForm 条款摘录要求接受条款，并将许可权利限于 permitted purpose；摘录列明非商业目的属于 permitted purpose，但没有证据确定本次活动的具体目的或是否接受条款。",
+      "事实确认发生对 OpenAI API 的远程调用，但没有证明该调用属于受 PolyForm 许可的软件之使用，或两项许可约束同一对象。API 调用或链接本身不证明代码纳入、分发或权重转移，因此没有据此认定许可冲突或违规。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如有适用费用到期，应按 Order Form 规定的币种和付款条款向 OpenAI 或适用的经销商支付。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0183-52e36dac6e93:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "applicable_fees_due",
+        "unresolved_predicates": [
+          "applicable_fees_due"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如 PolyForm 许可的软件属于本次使用范围，应同意该条款，并仅为 permitted purpose 使用该软件。",
+        "source_refs": [
+          "license-text:downstream:90f14d1a95666069"
+        ],
+        "subject": {
+          "artifact": "chain-0183-52e36dac6e93:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "agree_to_terms",
+          "permitted_purpose"
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "input_tokens": 33569,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1386,
+    "output_tokens_details": {
+      "reasoning_tokens": 290
+    },
+    "total_tokens": 34955,
+    "attribution": {
+      "items": {
+        "msg_0d985319b488100e016af583aa4d8487d08ca5284b9db1ae0b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d985319b488100e016af583aa4d8487d0bcd5049ad23b5597": {
+          "input_tokens": 29628,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29628,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d985319b488100e016af583b0285887d09be2304bf080507f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1096,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1096
+            }
+          ]
+        },
+        "rs_0d985319b488100e016af583b0112487d0aad4cfe7870d4c86": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 290
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3901,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

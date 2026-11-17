@@ -1,0 +1,221 @@
+{
+  "request_sha256": "05d19de0d8106cd251b4e24bb83668739879022f93d52562998a5dc98aad96dd",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 141,
+        "end_line": 143,
+        "clause_label": "service_access_and_billing",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "applicable_fees_and_taxes_paid_and_billing_information_provided_when_required"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6: Customer’s access to or use of Anthropic Services or features. Fees are those listed on the Model Pricing Page unless Anthropic communicates otherwise in writing. The text says fees may be required, rather than imposing a fee for every use. For access purchased through an App Distributor, payment is made to that distributor and its payment, billing, and refund terms apply instead of these Terms.",
+        "condition_explanation": "applicable_fees_and_taxes_paid means applicable fees and taxes for the purchased access have been paid. billing_information_provided_when_required means Customer provides complete and accurate billing information when purchasing access. These conditions apply only where the fee, tax, or purchase circumstance described in the Terms applies.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay applicable fees listed for the Services unless Anthropic communicates otherwise in writing.",
+            "actor": "Customer",
+            "object": "Access to or use of the applicable Anthropic Services or features",
+            "trigger": "When fees are applicable to the Services or features, subject to any different written communication from Anthropic and the App Distributor payment path where applicable."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide complete and accurate billing information.",
+            "actor": "Customer",
+            "object": "Payment Method for purchased access to Services or features",
+            "trigger": "When Customer purchases access to Services or features."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay applicable taxes.",
+            "actor": "Customer",
+            "object": "Purchased access to Services or features",
+            "trigger": "When applicable taxes are charged for the purchase."
+          }
+        ]
+      },
+      {
+        "start_line": 146,
+        "end_line": 148,
+        "clause_label": "subscription_access_and_recurring_payment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_accesses_a_subscription_service",
+          "requires": {
+            "all": [
+              "subscription_signed_up_for_as_described",
+              "subscription_fees_paid_when_due"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6: access to Claude Pro and other subscription services made available to individuals. Subscription content, features, services, and duration are described in the order process and may change. Paid subscriptions are automatically charged on agreed periodic renewal dates until cancellation; where there is an Initial Term, the subscription automatically renews for successive terms of equal duration until cancellation.",
+        "condition_explanation": "customer_accesses_a_subscription_service means Customer accesses a service as part of a Subscription. subscription_signed_up_for_as_described means Customer first creates an Account and follows the subscription procedure. subscription_fees_paid_when_due means the applicable subscription charges are paid on the agreed renewal dates and, if an Initial Term applies, at the start of each successive term. The terms do not establish a particular subscription price or duration here.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Sign up for the Subscription by first creating an Account and then following the subscription procedure on the Services.",
+            "actor": "Customer",
+            "object": "Subscription access to Claude Pro or another subscription service offered to individuals",
+            "trigger": "Before accessing the subscription service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay subscription fees for the Initial Term and each Renewal Term up front at the start of the applicable term.",
+            "actor": "Customer",
+            "object": "Subscription",
+            "trigger": "At the start of each applicable Initial Term or Renewal Term, subject to the App Distributor payment path where applicable."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the recurring subscription charge on each agreed periodic renewal date until the Subscription is cancelled.",
+            "actor": "Customer",
+            "object": "Paid Subscription",
+            "trigger": "On each agreed periodic renewal date while the paid Subscription remains uncancelled."
+          }
+        ]
+      },
+      {
+        "start_line": 149,
+        "end_line": 149,
+        "clause_label": "subscription_cancellation_right",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_has_paid_subscription",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6: a website subscriber may cancel for any reason using a method provided through the products or by notifying Anthropic; an app subscriber must cancel through the App Distributor under its terms. Cancellation at least 24 hours before the last day of the Initial Term or Renewal Term avoids renewal and charges for the next Renewal Term. Cancellation does not refund fees already paid, and access continues through the end of the paid term.",
+        "condition_explanation": "customer_has_paid_subscription means Customer has a Subscription. The cancellation methods and 24-hour deadline depend on whether the Subscription was made through the website or an app, and on the applicable term. The supplied activities do not represent cancelling a Subscription.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 150,
+        "end_line": 154,
+        "clause_label": "seven_day_cancellation_period_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "customer_resident_of_brazil_mexico_south_korea_or_taiwan_and_within_seven_days_of_subscription_entry",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6(4): a Customer residing in Brazil, Mexico, South Korea, or Taiwan may cancel a Subscription within seven days of entering it without giving a reason, by clearly informing Anthropic of the decision before the period expires. Customer may use the Services during that period and may still cancel; if Customer used the Services, Anthropic may retain an amount proportionate to what was provided before withdrawal compared with full Subscription coverage. Changing tiers or cancelling and resubscribing does not reset the seven-day period. The clause separately permits use during the cancellation period.",
+        "condition_explanation": "customer_resident_of_brazil_mexico_south_korea_or_taiwan_and_within_seven_days_of_subscription_entry means Customer resides in one of the listed jurisdictions and use occurs within seven days after entering into the Subscription. Cancellation, notice, and retention/refund actions are not represented by the supplied activities.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 155,
+        "end_line": 155,
+        "clause_label": "subscription_fee_changes_and_advance_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_continues_subscription_into_renewal_term",
+          "requires": "increased_fee_notified_at_least_30_days_in_advance_or_customer_cancels_before_affected_renewal_term"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6: Subscription fees are paid up front for each Initial Term and Renewal Term. Fees may change, but not during the current term. If a change increases the fees payable, Anthropic must inform Customer at least 30 days in advance; Customer agrees to the increase unless Customer cancels before the Renewal Term to which it applies. The supplied activities do not represent fee payment, fee changes, notice, or cancellation.",
+        "condition_explanation": "customer_continues_subscription_into_renewal_term means the Subscription proceeds into a Renewal Term to which a fee increase applies. increased_fee_notified_at_least_30_days_in_advance_or_customer_cancels_before_affected_renewal_term preserves the stated alternatives: advance notice of at least 30 days, or cancellation before the affected Renewal Term.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Inform Customer at least 30 days in advance of an increase in Subscription fees payable.",
+            "actor": "Anthropic",
+            "object": "Increased Subscription fees payable for a Renewal Term",
+            "trigger": "When a fee change increases the fees payable for a Subscription."
+          }
+        ]
+      },
+      {
+        "start_line": 157,
+        "end_line": 158,
+        "clause_label": "third_party_terms_condition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_third_party_content_services_or_integrations_in_connection_with_anthropic_services",
+          "requires": "comply_with_applicable_third_party_terms_conditions_and_policies_including_privacy_policies"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 7: applies to Customer’s use of third-party content, services, or integrations in connection with Anthropic Services. It does not state that all Anthropic Service use is subject to third-party terms. The paragraph also allocates risk and disclaims responsibility and representations; those statements do not establish additional activity constraints.",
+        "condition_explanation": "customer_uses_third_party_content_services_or_integrations_in_connection_with_anthropic_services identifies the stated scope. comply_with_applicable_third_party_terms_conditions_and_policies_including_privacy_policies means follow the terms, conditions, or policies that actually apply to the particular third-party content, service, or integration. Their contents are not supplied and are not inferred.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the terms, conditions, and policies applicable to the third-party content, services, or integrations, including applicable privacy policies.",
+            "actor": "Customer",
+            "object": "Third-party content, services, or integrations used in connection with Anthropic Services",
+            "trigger": "When Customer uses such third-party content, services, or integrations; the specific applicable terms, conditions, and policies depend on the third party and are not supplied."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The Model Pricing Page, App Distributor terms, and referenced cancellation procedure and Appendix 1 are not supplied; their contents are not inferred.",
+      "The supplied activities do not directly represent payment to a provider, recurring provider charges, cancelling a Subscription, issuing a refund or reimbursement, or providing a cancellation acknowledgement. Section 6 contains operative provisions concerning those actions; any such details not captured in the clauses remain unresolved.",
+      "Section 6(4) refers to a specific cancellation subsection whose full referenced text is not supplied in the target chunk. Section 7's applicable third-party terms, conditions, and privacy policies are external and not supplied.",
+      "The clause about Subscription content, features, service availability, and duration changing (line 147) does not establish an action constraint on Customer and is not modeled as a license rule."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0021",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "service_access_and_billing",
+          "subscription_access_and_recurring_payment",
+          "subscription_cancellation_right",
+          "seven_day_cancellation_period_use",
+          "subscription_fee_changes_and_advance_notice"
+        ],
+        "reason": "The clauses capture fee and billing conditions, subscription sign-up and recurring-payment duties, cancellation timing and effects, the seven-day use permission, and the fee-increase notice condition. Full coverage is not representable with the supplied activities: payment, cancellation, refund or reimbursement, and acknowledgement actions cannot be expressed directly, and referenced cancellation details are absent."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "MODELED",
+        "clause_labels": [
+          "third_party_terms_condition"
+        ],
+        "reason": "The operative condition that Customer's use of third-party content, services, or integrations is subject to applicable third-party terms, conditions, and policies, including privacy policies, is modeled. The external terms are not supplied and are not inferred; the paragraph's risk allocation and disclaimer statements do not create additional activity constraints."
+      }
+    ]
+  },
+  "attempt": 2
+}

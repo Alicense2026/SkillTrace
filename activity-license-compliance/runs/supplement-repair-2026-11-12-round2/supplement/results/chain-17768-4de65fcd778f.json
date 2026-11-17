@@ -1,0 +1,251 @@
+{
+  "case_id": "chain-17768-4de65fcd778f",
+  "source_csv_line": 17769,
+  "row": {
+    "github_repo": "taskloom",
+    "github_url": "https://github.com/cognis-digital/taskloom",
+    "github_license": "LicenseRef-COCL-1.0",
+    "artifact_name": "llama3",
+    "artifact_url": "https://www.llama.com/models/",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: taskloom/llm.py:34 ｜ 调用原文: self.model = model or os.environ.get(\"TASKLOOM_MODEL\", \"llama3\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 在 LocalModel 中，它是默认模型（可用 TASKLOOM_MODEL 覆盖）。代码会真实调用 POST {host}/api/generate，请求体为 {\"model\": self.model, ...}，并解析返回的 response 字段；它并非 mock 值或测试假数据。",
+    "batch": "10201-12200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "cognis-digital/taskloom",
+    "license_label": "LicenseRef-COCL-1.0",
+    "sha256": "9766dbaebb2a627049817396f9934e57035bf4501a4627deddaefe2648d76978",
+    "filename": "COCL-1.0.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User explicitly confirmed cognis-digital may reuse supplied COCL fulltext",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-17768-4de65fcd778f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:982ff5da11854c68"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-17768-4de65fcd778f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2a5468c230491b4f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "non_commercial_use",
+                "license_compliance",
+                "license_notice_and_attribution_notices_retained_in_all_copies_and_derivative_works",
+                "modified_files_clearly_marked_as_changed"
+              ]
+            },
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-17768-4de65fcd778f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2a5468c230491b4f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "no_separately_negotiated_written_commercial_rights",
+            "when": {
+              "all": [
+                "activity:Use",
+                "activity_constitutes_commercial_use_under_section_1_2"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-17768-4de65fcd778f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-17768-4de65fcd778f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the Llama agreement, including applicable law and the incorporated Acceptable Use Policy; do not use Llama Materials or their outputs/results to improve another large language model, except Meta Llama 3 or its derivatives.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement",
+          "aup_compliance",
+          "use_of_outputs_to_improve_another_large_language_model"
+        ],
+        "source_refs": [
+          "license-text:upstream:982ff5da11854c68"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-17768-4de65fcd778f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If the COCL-licensed software is used, satisfy the non-commercial-use grant conditions, including license compliance, retaining license/NOTICE/copyright/attribution/license notices in copies and derivative works, and clearly marking modified files as changed.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether_downstream_software_use_is_in_scope",
+          "non_commercial_use",
+          "license_compliance",
+          "license_notice_and_attribution_notices_retained_in_all_copies_and_derivative_works",
+          "modified_files_clearly_marked_as_changed"
+        ],
+        "source_refs": [
+          "license-text:downstream:2a5468c230491b4f"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-17768-4de65fcd778f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If the use constitutes Commercial Use under COCL section 1.2, obtain separately negotiated written commercial rights; this License itself grants no Commercial Use.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "activity_constitutes_commercial_use_under_section_1_2"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity_constitutes_commercial_use_under_section_1_2",
+          "separately_negotiated_written_commercial_rights"
+        ],
+        "source_refs": [
+          "license-text:downstream:2a5468c230491b4f"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的事实是对 Llama 3 的远程 API 调用及 Use；没有证据表明 Llama 权重被转移、修改或分发，因此不据此触发相关分发义务。",
+      "对象图将下游与上游标为 LINK/REMOTE_CALL，但 scope_shared 未知；不能仅凭 API 调用认定 COCL 软件与 Llama 材料是同一受约束对象。下游使用及其商业性质亦未明确。",
+      "上游条款摘录明确提及遵守 AUP及不得以输出改进其他大语言模型；具体 AUP适用内容与履行情况未提供。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33960,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1557,
+    "output_tokens_details": {
+      "reasoning_tokens": 285
+    },
+    "total_tokens": 35517,
+    "attribution": {
+      "items": {
+        "msg_043ed49ff0ed8432016af586d4248487d0ae713353df5aa2b7": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_043ed49ff0ed8432016af586d4248487d0b9df8f48cb4e3761": {
+          "input_tokens": 31890,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31890,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_043ed49ff0ed8432016af586da1d3087d09c370570d97b4ad2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1272,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1272
+            }
+          ]
+        },
+        "rs_043ed49ff0ed8432016af586da017887d090ed22ae8bb25e31": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 285
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 39.16
+}

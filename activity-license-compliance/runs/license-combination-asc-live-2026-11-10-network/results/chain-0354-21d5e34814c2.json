@@ -1,0 +1,135 @@
+{
+  "case_id": "chain-0354-21d5e34814c2",
+  "status": "SUCCESS",
+  "request_sha256": "15ec28f0a24c92f57530dba92d05b1c9fbcea1a974da380485f832025e8f2660",
+  "analysis": {
+    "case_id": "chain-0354-21d5e34814c2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6598e5b50bd85c06"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0354-21d5e34814c2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b4408a636b544295"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0354-21d5e34814c2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查的原文摘录支持 0BSD 对上游原始软件的 Use 许可，以及 MIT 对下游软件的 Use 条件；对象图显示 API 调用/链接，但不证明两许可约束同一对象。",
+      "事实记录为远程服务调用且修改不适用；未证明分发、复制、下游使用或权重转移，因此不据此触发分发、复制或源码提供要求。",
+      "结构化条款标记 FIRST_PASS_REVIEW_REQUIRED；MIT 使用条件的具体适用范围需结合完整条文上下文判断。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用下游 MIT 软件，包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:b4408a636b544295"
+        ],
+        "subject": {
+          "artifact": "chain-0354-21d5e34814c2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20071,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 766,
+    "output_tokens_details": {
+      "reasoning_tokens": 224
+    },
+    "total_tokens": 20837,
+    "attribution": {
+      "items": {
+        "msg_0370fbbda7075511016af305a090c087d29dab17347217be15": {
+          "input_tokens": 18039,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18039,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0370fbbda7075511016af305a5350487d2b120c053885c2692": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 542,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 542
+            }
+          ]
+        },
+        "rs_0370fbbda7075511016af305a5195487d2a33298681c2a5d48": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 224
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 16.701,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

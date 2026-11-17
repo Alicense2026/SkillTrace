@@ -1,0 +1,90 @@
+{
+  "request_sha256": "955cd722967f0bafa7bb49e1db99bd4bdb4501606777db04d8cab4450fb2f876",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 8,
+        "end_line": 9,
+        "clause_label": "gap/license_document_verbatim_copy",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "license_document_copied_verbatim"
+        },
+        "actor_role": "any person",
+        "scope_note": "GPL-2.0, introductory permission: verbatim copies of the license document may be copied. This concerns the license text itself, not a Program licensed under it.",
+        "condition_explanation": "The copy must be verbatim; changing the license document is not allowed.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 8,
+        "end_line": 9,
+        "clause_label": "gap/license_document_verbatim_distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "license_document_distributed_verbatim"
+        },
+        "actor_role": "any person",
+        "scope_note": "GPL-2.0, introductory permission: verbatim copies of the license document may be distributed. This concerns the license text itself, not a Program licensed under it.",
+        "condition_explanation": "The distributed copy must be verbatim; changing the license document is not allowed.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 8,
+        "end_line": 9,
+        "clause_label": "gap/no_changing_license_document",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "any person",
+        "scope_note": "GPL-2.0, introductory restriction on changing the license document itself; it does not state a restriction on modifying a Program under the GPL.",
+        "condition_explanation": "The text expressly says changing the license document is not allowed.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not change the GPL license document.",
+            "actor": "any person",
+            "object": "the GPL license document",
+            "trigger": "when acting on a copy of the license document"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0004",
+        "status": "MODELED",
+        "clause_labels": [
+          "gap/license_document_verbatim_copy",
+          "gap/license_document_verbatim_distribution",
+          "gap/no_changing_license_document"
+        ],
+        "reason": "The paragraph permits copying and distributing verbatim copies of the license document and prohibits changing that document."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

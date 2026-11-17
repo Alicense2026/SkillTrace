@@ -1,0 +1,297 @@
+{
+  "request_sha256": "38385bac4cbd8a9642b6dc05135626bd720907266278c1e4ae2401c0a6be629a",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 13,
+        "end_line": 23,
+        "clause_label": "Acceptance; Copyright License",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "CreateDerivative",
+          "Combine",
+          "Link",
+          "Bundle",
+          "CommercialUse",
+          "RemoteInteraction",
+          "ProvideNetworkService",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensor grants the licensee copyright rights in the software only for a permitted purpose. Distribution and making changes or new works are subject to their separate license sections; this grant does not independently authorize those activities. The listed activities reflect potentially copyright-infringing acts covered by the grant, not separate express service, training, or commercial-use terms.",
+        "condition_explanation": "permitted_purpose means a purpose allowed by the license’s Noncommercial Purposes, Personal Uses, or Noncommercial Organizations sections."
+      },
+      {
+        "start_line": 27,
+        "end_line": 30,
+        "clause_label": "Distribution License",
+        "activities": [
+          "Distribute",
+          "Bundle"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The additional copyright license covers distribution of software copies, including software with changes and new works permitted under the Changes and New Works License. The notice requirements in lines 34–37 also apply to distribution.",
+        "condition_explanation": "permitted_purpose is defined by the license’s permitted-purpose provisions. Distribution must also satisfy the separate notice requirement."
+      },
+      {
+        "start_line": 34,
+        "end_line": 37,
+        "clause_label": "Notices",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "a_copy_of_any_part_of_the_software_is_given_to_another_person",
+          "requires": "provide_license_terms_or_url_and_licensor_required_notice_lines"
+        },
+        "actor_role": "licensee",
+        "scope_note": "When the licensee gives anyone a copy of any part of the software, the recipient must also get either a copy of these terms or their stated URL, and copies of any plain-text lines beginning `Required Notice:` that the licensor provided with the software.",
+        "condition_explanation": "The duty is triggered by giving another person a copy of any part of the software; the required materials are the terms or URL and any licensor-provided Required Notice lines."
+      },
+      {
+        "start_line": 41,
+        "end_line": 42,
+        "clause_label": "Changes and New Works License",
+        "activities": [
+          "Modify",
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "permitted_purpose"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensor grants an additional copyright license to make changes and new works based on the software, for a permitted purpose. Distribution of those changes or works remains subject to the Distribution License and notice requirement.",
+        "condition_explanation": "permitted_purpose is defined by the license’s Noncommercial Purposes, Personal Uses, or Noncommercial Organizations provisions."
+      },
+      {
+        "start_line": 46,
+        "end_line": 48,
+        "clause_label": "Patent License",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "patent_claim_is_licensable_by_licensor_and_would_be_infringed_by_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The patent license covers only patent claims the licensor can license, or becomes able to license, that the licensee would infringe by using the software. It is subject to the patent-defense termination provision in lines 82–86.",
+        "condition_explanation": "Both that the claim is licensable by the licensor and that using the software would infringe the claim delimit the covered patent claims."
+      },
+      {
+        "start_line": 52,
+        "end_line": 52,
+        "clause_label": "Noncommercial Purposes",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "CreateDerivative",
+          "Distribute",
+          "CommercialUse",
+          "RemoteInteraction",
+          "ProvideNetworkService",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "purpose_is_noncommercial"
+        },
+        "actor_role": "licensee",
+        "scope_note": "A noncommercial purpose is expressly a permitted purpose under the software license; the applicable copyright grants and their separate distribution and modification terms still govern.",
+        "condition_explanation": "purpose_is_noncommercial means the purpose is noncommercial; this is a permitted-purpose category, not an unrestricted grant for every activity."
+      },
+      {
+        "start_line": 56,
+        "end_line": 59,
+        "clause_label": "Personal Uses",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "CreateDerivative",
+          "CommercialUse",
+          "RemoteInteraction",
+          "ProvideNetworkService",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": {
+            "all": [
+              "personal_use",
+              "purpose_is_research_experiment_testing_for_public_knowledge_or_personal_study_or_private_entertainment_or_hobby_project_or_amateur_pursuit_or_religious_observance",
+              "no_anticipated_commercial_application"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "These listed personal uses are permitted purposes only when the personal-use and no-anticipated-commercial-application qualifications are met. Distribution remains subject to its separate license and notice terms.",
+        "condition_explanation": "All listed predicates must hold: the use is personal, falls within at least one of the specified purposes, and has no anticipated commercial application."
+      },
+      {
+        "start_line": 63,
+        "end_line": 67,
+        "clause_label": "Noncommercial Organizations",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "CreateDerivative",
+          "Distribute",
+          "CommercialUse",
+          "RemoteInteraction",
+          "ProvideNetworkService",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "user_is_charitable_educational_public_research_public_safety_or_health_environmental_protection_or_government_institution"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Use by the specified organizations is a permitted purpose regardless of funding source or funding-related obligations. Distribution and modification remain subject to their separate license terms.",
+        "condition_explanation": "The user must be one of the enumerated organization types; funding source and resulting funding obligations do not disqualify the use."
+      },
+      {
+        "start_line": 76,
+        "end_line": 78,
+        "clause_label": "No Other Rights",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The terms do not allow the licensee to sublicense or transfer any license granted under these terms. This does not restrict the licensor from granting licenses to others and does not imply other licenses.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 82,
+        "end_line": 86,
+        "clause_label": "Patent Defense",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "licensee_or_covered_company_makes_written_patent_infringement_or_contributory_infringement_claim",
+          "requires": "patent_license_ends_immediately"
+        },
+        "actor_role": "licensee",
+        "scope_note": "A written claim by the licensee that the software infringes or contributes to infringement of any patent immediately ends that licensee’s patent license. If the licensee’s company makes such a claim, the patent license ends immediately for work on behalf of that company; the text does not state that all copyright licenses end.",
+        "condition_explanation": "The patent license ends upon the specified written claim; for a company claim, the stated scope is work on behalf of that company."
+      },
+      {
+        "start_line": 90,
+        "end_line": 95,
+        "clause_label": "Violations",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "CreateDerivative",
+          "Distribute",
+          "Sublicense",
+          "CommercialUse",
+          "RemoteInteraction",
+          "ProvideNetworkService",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "first_written_notice_of_violation_or_unlicensed_activity_received",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "full_compliance_with_terms_within_32_days_of_notice",
+                  "practical_steps_taken_to_correct_past_violations_within_32_days_of_notice"
+                ]
+              },
+              "otherwise_all_licenses_end_immediately"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "After the first written notice of a violation or activity not covered by the licenses, the licenses can continue if the licensee achieves full compliance and takes practical steps to correct past violations within 32 days after receiving notice. Otherwise all licenses end immediately.",
+        "condition_explanation": "The 32-day cure and corrective steps are both required for continued licenses; if that cure does not occur, all licenses end immediately."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied material is a PolyForm Noncommercial license text applied to the licensor’s software, not evidence of terms for unrelated artifacts. Activities listed for broad copyright grants identify potential covered acts and do not create independent express grants for model training, hosting, network service, or commercial activity.",
+      "Commercial use is not generally granted by the supplied text. It says noncommercial purposes are permitted and directs commercial-use inquiries to the licensor (lines 127–130); that contact language does not itself grant commercial rights. The referenced LICENSE-SMALL-BUSINESS.md is not supplied, so its additional permission and applicability cannot be determined.",
+      "The patent-defense clause concerns termination of patent-license rights, not a general prohibition on software use. The violations clause provides a first-notice cure route and otherwise ends all licenses.",
+      "Fair-use language (lines 69–72) preserves rights that may exist under law but does not supply a license grant. Warranty/liability disclaimers and definitions do not add activity permissions.",
+      "The license’s exact treatment of combinations, outputs, data, fees, and service/network access is not specified. No independent permission or restriction on those matters is inferred."
+    ]
+  }
+}

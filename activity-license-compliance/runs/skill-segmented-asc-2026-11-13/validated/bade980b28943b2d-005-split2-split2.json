@@ -1,0 +1,247 @@
+{
+  "request_sha256": "16c1383915bd475e159ae63f38ebcdce0c9dc23ee4272c1e21f719bdf061dbbd",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 347,
+        "end_line": 347,
+        "clause_label": "deepseek_limited_input_output_processing",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "secure_encryption_technology_processing",
+              "strict_de_identification_rendering",
+              "irreversible_to_identifying_specific_individuals",
+              "minimal_extent",
+              {
+                "any": [
+                  "provide_services",
+                  "maintain_services",
+                  "operate_services",
+                  "develop_services",
+                  "improve_services",
+                  "supporting_technologies_for_services"
+                ]
+              },
+              {
+                "not": "user_has_opted_out_by_turning_off_improve_the_model_for_everyone"
+              }
+            ]
+          }
+        },
+        "actor_role": "DeepSeek",
+        "scope_note": "Terms 4.3: DeepSeek may process Inputs and Outputs to provide, maintain, operate, develop, or improve the Services or underlying supporting technologies. This permission is limited by the stated processing safeguards and minimal-extent limit, and the user may opt out by turning off “Improve the model for everyone.”",
+        "condition_explanation": "secure_encryption_technology_processing, strict_de_identification_rendering, irreversible_to_identifying_specific_individuals, and minimal_extent mean the processing must meet each stated safeguard and scope limit. The purpose must be at least one of the listed Service or supporting-technology purposes. The permission does not apply after the user opts out using the specified setting.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 351,
+        "end_line": 351,
+        "clause_label": "user_safeguards_for_linked_external_resources",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_engages_with_external_resource_linked_in_output",
+          "requires": {
+            "all": [
+              "evaluate_third_party_terms",
+              "protect_user_data",
+              "secure_user_property"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Terms 4.4: the stated user responsibilities apply when engaging with third-party external resources, including resources reached through links provided in Outputs. They do not impose duties merely because a link appears in an Output.",
+        "condition_explanation": "user_engages_with_external_resource_linked_in_output means the user engages with an external resource reached through a link provided in an Output. The user is responsible for evaluating that third party's terms, protecting their data, and securing their property in that engagement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Evaluate the third party's terms.",
+            "actor": "user",
+            "object": "Third-party external resource linked in an Output",
+            "trigger": "When the user engages with that external resource."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Protect the user's data.",
+            "actor": "user",
+            "object": "User data",
+            "trigger": "When the user engages with a third-party external resource linked in an Output."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Secure the user's property.",
+            "actor": "user",
+            "object": "User property",
+            "trigger": "When the user engages with a third-party external resource linked in an Output."
+          }
+        ]
+      },
+      {
+        "start_line": 364,
+        "end_line": 364,
+        "clause_label": "do_not_tamper_with_ai_generated_labels",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "ai_generated_label_added_within_platform",
+          "requires": true
+        },
+        "actor_role": "user",
+        "scope_note": "Terms 5.3: prohibits deleting, altering, forging, concealing, or attempting to circumvent labels added within the platform to identify content as AI generated.",
+        "condition_explanation": "ai_generated_label_added_within_platform means the label was added within the platform to identify content as AI generated. The prohibition applies to each listed act, including attempts to circumvent the label.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not delete, alter, forge, conceal, or attempt to circumvent an AI-generated-content label added within the platform.",
+            "actor": "user",
+            "object": "AI-generated-content label added within the platform",
+            "trigger": "Whenever such a label is present."
+          }
+        ]
+      },
+      {
+        "start_line": 364,
+        "end_line": 364,
+        "clause_label": "do_not_use_service_for_prohibited_purposes",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "purpose_is_to_produce_false_information",
+              "purpose_is_to_produce_infringing_information",
+              "purpose_is_to_disseminate_false_information",
+              "purpose_is_to_disseminate_infringing_information",
+              "purpose_is_to_engage_in_illegal_activity",
+              "purpose_is_to_engage_in_non_compliant_activity"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "Terms 5.3: prohibits use of the Service to produce or disseminate false or infringing information, or to engage in illegal or non-compliant activities.",
+        "condition_explanation": "Each predicate identifies one of the purposes expressly listed in Terms 5.3. The prohibition applies if any listed purpose is present.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Service to produce or disseminate false information or infringing information, or to engage in illegal or non-compliant activities.",
+            "actor": "user",
+            "object": "Service",
+            "trigger": "Whenever the use is for any purpose listed in Terms 5.3."
+          }
+        ]
+      },
+      {
+        "start_line": 368,
+        "end_line": 368,
+        "clause_label": "human_review_before_high_impact_output_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "output_used_for_purpose_that_could_have_legal_or_material_impact_on_natural_person",
+          "requires": "human_review_of_output"
+        },
+        "actor_role": "user",
+        "scope_note": "Terms 5.4: applies when Outputs are used for purposes that could have a legal or material impact on natural persons, including credit, educational, employment, housing, insurance, legal, medical, or other important decisions about them.",
+        "condition_explanation": "output_used_for_purpose_that_could_have_legal_or_material_impact_on_natural_person includes the listed decisions and other important decisions about a natural person. Before such use, the Output must undergo human review.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure the Output undergoes human review.",
+            "actor": "user",
+            "object": "Output",
+            "trigger": "Before using the Output for a purpose that could have a legal or material impact on a natural person."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Terms 5.5 refers to the separately published “Model Principles and Training Methods Explanation”; its text is not supplied, so no obligations or permissions from that document are inferred.",
+      "Terms 5.1 states that the user is solely and independently responsible for decisions or actions based on Outputs and their consequences. The supplied text does not specify a separately checkable activity condition or conduct for this allocation, so that material remains unresolved.",
+      "Terms 4.4's statements disclaiming responsibility for third-party content and links are warranty/liability disclaimers and are not modeled as activity constraints."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0105",
+        "status": "MODELED",
+        "clause_labels": [
+          "deepseek_limited_input_output_processing"
+        ],
+        "reason": "Terms 4.3 grants DeepSeek a limited, safeguarded permission to process Inputs and Outputs for stated Service purposes and provides a user opt-out."
+      },
+      {
+        "unit_id": "P0106",
+        "status": "MODELED",
+        "clause_labels": [
+          "user_safeguards_for_linked_external_resources"
+        ],
+        "reason": "Terms 4.4 states user responsibilities to evaluate third-party terms, protect data, and secure property when engaging with external resources."
+      },
+      {
+        "unit_id": "P0107",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Terms 5.1 allocates responsibility for decisions and actions based on Outputs to the user, but the supplied text does not specify a distinct activity condition or checkable conduct that can be faithfully modeled as an activity constraint."
+      },
+      {
+        "unit_id": "P0108",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Terms 5.2 describes accuracy limitations and advises rational use of the Services but states no specific activity constraint."
+      },
+      {
+        "unit_id": "P0109",
+        "status": "MODELED",
+        "clause_labels": [
+          "do_not_tamper_with_ai_generated_labels",
+          "do_not_use_service_for_prohibited_purposes"
+        ],
+        "reason": "Terms 5.3 conditionally prohibits tampering with platform AI-generated labels and using the Service for the listed purposes."
+      },
+      {
+        "unit_id": "P0110",
+        "status": "MODELED",
+        "clause_labels": [
+          "human_review_before_high_impact_output_use"
+        ],
+        "reason": "Terms 5.4 expressly requires human review before covered high-impact uses of Outputs."
+      },
+      {
+        "unit_id": "P0111",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Terms 5.5 describes the purpose of a separately published explanatory document but imposes no operative activity constraint in the supplied text."
+      }
+    ]
+  },
+  "attempt": 3
+}

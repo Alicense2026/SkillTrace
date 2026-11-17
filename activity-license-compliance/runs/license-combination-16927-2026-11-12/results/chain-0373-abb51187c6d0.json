@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0373-abb51187c6d0",
+  "input_group_row": 373,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MPL-2.0",
+    "资产许可证原文标题/标签": "llama3.1",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0373-abb51187c6d0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0373-abb51187c6d0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "供应链记录确认的是对上游 Llama 3.1 的远程调用和链接关系，且标记代码修改不适用；这不证明下游材料包含、修改或分发上游材料。",
+      "对象图未确定两份许可的约束范围是否重合。MPL 摘录仅显示许可授予引言，未提供足以判定与本次 API 调用相关的完整条款；因此不据此推断许可冲突或附加义务。",
+      "Llama 3.1 的已映射使用条款要求遵守协议，但该摘录未细化远程调用的其他适用条件；条款映射标记为 FIRST_PASS_REVIEW_REQUIRED。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 Llama 3.1 材料时遵守适用的 Llama 协议条款。",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "subject": {
+          "artifact": "chain-0373-abb51187c6d0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 22116,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 710,
+    "output_tokens_details": {
+      "reasoning_tokens": 200
+    },
+    "total_tokens": 22826,
+    "attribution": {
+      "items": {
+        "msg_076e22eabe935dff016af532781ff087d0852e3e93e0e17493": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_076e22eabe935dff016af532781ff087d09475ca949597b6c1": {
+          "input_tokens": 20046,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20046,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_076e22eabe935dff016af5327d31c087d08d33ef26e3eda2e6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 510,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 510
+            }
+          ]
+        },
+        "rs_076e22eabe935dff016af5327d160c87d09f8600a879c722ba": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 200
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "ad6c908937985b356105044bc2ca5d26926c916595e49efc6850d2033d09d15a",
+  "elapsed_seconds": 26.55
+}

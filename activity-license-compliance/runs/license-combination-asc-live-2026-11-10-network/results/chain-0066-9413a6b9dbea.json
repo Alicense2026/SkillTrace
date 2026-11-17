@@ -1,0 +1,119 @@
+{
+  "case_id": "chain-0066-9413a6b9dbea",
+  "status": "SUCCESS",
+  "request_sha256": "0f2b760e8d49b99ad4a91ecc2dd98349fd7555859e56ee38b4c3c7c737b06611",
+  "analysis": {
+    "case_id": "chain-0066-9413a6b9dbea",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0066-9413a6b9dbea:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "activity:Use",
+            "requires": "conduct_matches_prohibition_in_excerpt"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0066-9413a6b9dbea:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用模型体验等相关功能生成内容，应仅将生成内容用于体验模型效果；不得用于其他用途或商业化目的，也不得以任何形式提供给第三方或在第三方平台使用、传播或分发。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游摘录将限制指向模型体验及其生成内容；已知发生的是远程服务调用，但事实未说明是否属于该摘录所述体验功能、是否生成或使用输出，也未说明用途及是否向第三方提供。故保留条件义务，不判定实际违规。",
+      "AGPL-3.0 第13条摘录的网络源代码提供义务以修改 Program 且该版本支持远程交互为条件。本任务记录明确为远程服务调用、修改不适用，未发现该义务触发。API调用本身不证明下游修改或分发。",
+      "上下游许可约束是否共同适用于同一对象未知；现有事实未显示下游修改、分发或其他触发许可兼容性比较的活动。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 19118,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 900,
+    "output_tokens_details": {
+      "reasoning_tokens": 320
+    },
+    "total_tokens": 20018,
+    "attribution": {
+      "items": {
+        "msg_0eadb97e09a4b14d016af2f9b3aa9887d1876d2cd43aec563a": {
+          "input_tokens": 17086,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17086,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0eadb97e09a4b14d016af2f9bab8e887d18f1dbada62c30731": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 580,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 580
+            }
+          ]
+        },
+        "rs_0eadb97e09a4b14d016af2f9baa1cc87d1bb4b655becf68fa6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 320
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.798,
+  "auto_applied": false,
+  "aggregate_count": 17
+}

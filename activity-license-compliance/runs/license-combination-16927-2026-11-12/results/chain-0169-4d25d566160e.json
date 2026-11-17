@@ -1,0 +1,74 @@
+{
+  "case_id": "chain-0169-4d25d566160e",
+  "input_group_row": 169,
+  "aggregate_count": 5,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "LLAMA 2 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "5"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0169-4d25d566160e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0169-4d25d566160e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对的 Llama 2 摘录仅呈现许可授予条款，未提供 comply_with_Llama_agreement 所涵盖的完整条件；不据此推断具体履行要求。",
+      "对象图确认下游通过链接/远程调用上游，但依赖、修改副本或组合产品关系未知。MIT 条款不能仅因该调用关系自动适用于上游材料；目前也没有下游活动事实可将 MIT 通知义务判定为已触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0169-4d25d566160e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守 Llama 2 Community License Agreement 中适用的要求（具体要求以完整条款为准）。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0254-875d45a59908.json",
+  "original_case_id": "chain-0254-875d45a59908",
+  "original_request_sha256": "607cc2f6eecc9982ee6accd37c7728bd088eba7554e265088047bb368e486ab0",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0254-875d45a59908": "chain-0169-4d25d566160e",
+    "license-text:upstream:2537dca3832f1e4d": "license-text:upstream:2537dca3832f1e4d",
+    "license-text:downstream:0c7d5fe08471bec7": "license-text:downstream:0c7d5fe08471bec7",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/253": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/168"
+  }
+}

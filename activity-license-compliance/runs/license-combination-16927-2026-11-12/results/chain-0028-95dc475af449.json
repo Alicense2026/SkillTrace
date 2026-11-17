@@ -1,0 +1,94 @@
+{
+  "case_id": "chain-0028-95dc475af449",
+  "input_group_row": 28,
+  "aggregate_count": 106,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "106"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0028-95dc475af449",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0028-95dc475af449:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": "activity:CommercialUse"
+          },
+          "S": {
+            "artifact": "chain-0028-95dc475af449:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的是对智谱开放平台的 API 远程调用及链接关系；未确认下游 MIT 代码被复制、修改、合并或纳入智谱服务，也未确认两组许可对同一对象共同适用，因此没有据此认定许可冲突或套用 MIT 通知条件。",
+      "智谱条款摘录覆盖用户协议较大范围且标记 FIRST_PASS_REVIEW_REQUIRED；通用“行为符合摘录中禁止事项”不能仅凭 API 调用判真。摘录中另有具体限制，但现有事实未证明调用涉及该等受限用途。",
+      "结构化非商业使用条款的范围注释指向免费功能，但所附摘录未呈现可核验的具体非商业条文；不据此推定收费或商业使用限制。"
+    ],
+    "obligations": [
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若对智谱开放平台服务进行商业使用，应支付所需费用并遵守适用产品规则。",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "subject": {
+          "artifact": "chain-0028-95dc475af449:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "pay_required_fee_and_follow_product_rules"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0027-0635b480f7f2.json",
+  "original_case_id": "chain-0027-0635b480f7f2",
+  "original_request_sha256": "be32dd3556f9c4d94da6d947368b557c961812a0ab45600cdfd70d23432a42de",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0027-0635b480f7f2": "chain-0028-95dc475af449",
+    "license-text:upstream:1092ebce191fce09": "license-text:upstream:1092ebce191fce09",
+    "license-text:downstream:7be5013ab6e5c066": "license-text:downstream:7be5013ab6e5c066",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/26": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/27"
+  }
+}

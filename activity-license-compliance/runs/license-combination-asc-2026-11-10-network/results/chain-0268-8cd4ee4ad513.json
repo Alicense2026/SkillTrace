@@ -1,0 +1,142 @@
+{
+  "case_id": "chain-0268-8cd4ee4ad513",
+  "status": "SUCCESS",
+  "request_sha256": "1816d6e42201fdfb9300c97a5fd08f3be6314945cf615f85f52857750467f969",
+  "analysis": {
+    "case_id": "chain-0268-8cd4ee4ad513",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0268-8cd4ee4ad513:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9f3cf60346c0894d"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0268-8cd4ee4ad513:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用百炼模型体验生成的内容仅限体验模型效果；不得作其他用途、商业化使用，或提供给第三方及在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "subject": {
+          "artifact": "chain-0268-8cd4ee4ad513:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "百炼摘录含对生成内容用途、商业化及向第三方提供的限制；已知 Use 和远程调用，但未提供生成内容的具体用途或是否涉及摘录所禁行为，故不能判定违反。",
+      "AGPL-3.0-or-later 第13节摘录要求在修改程序且支持远程交互时提供对应源码机会。记录明确为“远程服务调用（修改不适用）”，不触发该条件；远程调用本身不证明修改了受覆盖程序。",
+      "两项许可的约束对象关系未确定（scope_shared 为 null）；没有足够依据认定双方条款共同适用于同一对象或存在许可间冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 19056,
+    "input_tokens_details": {
+      "cached_tokens": 18816,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1030,
+    "output_tokens_details": {
+      "reasoning_tokens": 344
+    },
+    "total_tokens": 20086,
+    "attribution": {
+      "items": {
+        "msg_0a56ae4e3fe31b16016af302dc80b487d18b3e7cbec567246d": {
+          "input_tokens": 17024,
+          "cached_tokens": 16786,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17024,
+              "cached_tokens": 16786,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a56ae4e3fe31b16016af302e3385887d1a1a0e789a59d8fb1": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 686,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 686
+            }
+          ]
+        },
+        "rs_0a56ae4e3fe31b16016af302e3218087d1a382fd677d58e918": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 344
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.208,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

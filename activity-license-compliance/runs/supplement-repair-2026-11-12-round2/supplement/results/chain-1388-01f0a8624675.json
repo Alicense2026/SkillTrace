@@ -1,0 +1,211 @@
+{
+  "case_id": "chain-1388-01f0a8624675",
+  "source_csv_line": 1389,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "claude-sonnet-5",
+    "artifact_url": "https://docs.anthropic.com/en/docs/about-claude/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: packages/ai-gateway/src/index.ts:1144 ｜ 调用原文: let ocModel = 'claude-sonnet-5';（引用处 第1144行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: ai-gateway index.ts 中作为模型路由/默认模型引用",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1388-01f0a8624675:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1388-01f0a8624675:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1388-01f0a8624675:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "case_id": "chain-1388-01f0a8624675",
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游条款明确授予的是服务访问/使用权限，不是复制、修改或分发提供方软件或模型权重的许可；本案事实仅证明通过 ai-gateway 进行远程调用，未证明权重或软件发生转移。",
+      "object_graph.scope_shared 为 null；因此未将上下游许可证视为共同约束同一对象，也未作许可证间静态冲突结论。",
+      "上游服务条款全文未随结构化摘录提供，当前仅依据 L8-L11 摘录判断为须遵守服务条款的条件许可；服务条款中的具体履行要求未展开。",
+      "下游 LicenseRef-Custom 的使用、商业使用、分发及网络服务条款未因当前事实自动适用于上游远程服务调用；未发现下游活动已发生的事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "comply_with_service_terms",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "subject": {
+          "artifact": "chain-1388-01f0a8624675:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "comply_with_service_terms",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "subject": {
+          "artifact": "chain-1388-01f0a8624675:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20677,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1436,
+    "output_tokens_details": {
+      "reasoning_tokens": 516
+    },
+    "total_tokens": 22113,
+    "attribution": {
+      "items": {
+        "msg_07b219c7e6e37acf016af58583383887d188954d823449eb46": {
+          "input_tokens": 18607,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18607,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07b219c7e6e37acf016af58583383887d1a9b51eb1b5278b38": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07b219c7e6e37acf016af585a2aa4087d1ba455f86b1b09d2f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 920,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 920
+            }
+          ]
+        },
+        "rs_07b219c7e6e37acf016af585a279f887d18671d8e0db4aad5d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 64.53
+}

@@ -1,0 +1,134 @@
+{
+  "case_id": "chain-0215-62e0d76d1e11",
+  "status": "SUCCESS",
+  "request_sha256": "332afd8a8643c311ca8b8e7334b88083158f2efc581d021a3136ada7c5c01d28",
+  "analysis": {
+    "case_id": "chain-0215-62e0d76d1e11",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c2f47a4e8b18a63d"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0215-62e0d76d1e11:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:bdbf04db3081cf4d"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "S": {
+            "artifact": "chain-0215-62e0d76d1e11:downstream",
+            "kind": "ModifiedArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S: ProvideSource of the downstream modified program; AGPL §13 requires a no-charge network opportunity to obtain Corresponding Source if the program is modified and supports remote interaction. Remote interaction is recorded, but the trusted chain record says code modification is not applicable, so the excerpt’s modification trigger is not established and this source-offer duty is not applicable on the provided facts. Source: AGPL-3.0 §13.",
+        "source_refs": [
+          "license-text:downstream:bdbf04db3081cf4d"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "The upstream asset is identified only as Llama with version unknown; the matched local text is the Llama 4 Community License Agreement. Its version-specific terms cannot be assumed to govern this asset. The excerpted grant is conditioned on compliance with that agreement, but the applicable agreement terms cannot be established from the supplied asset identity.",
+      "Distribution, sublicensing, bundling, modification, and source-provision activity for the downstream artifact is not established. No distribution duties are inferred from the remote API call.",
+      "The object graph records an API link/remote call, not transfer of model weights or proof that upstream and downstream licenses govern the same artifact. No license-license conflict is established."
+    ],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21698,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 928,
+    "output_tokens_details": {
+      "reasoning_tokens": 276
+    },
+    "total_tokens": 22626,
+    "attribution": {
+      "items": {
+        "msg_0cc54ea18868594a016af2ffe87dd087d194b0e9020dae2307": {
+          "input_tokens": 19666,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19666,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0cc54ea18868594a016af2ffee6c0887d1b3f6f26737754960": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 652,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 652
+            }
+          ]
+        },
+        "rs_0cc54ea18868594a016af2ffee506087d187faba77b20369c2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 276
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.972,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

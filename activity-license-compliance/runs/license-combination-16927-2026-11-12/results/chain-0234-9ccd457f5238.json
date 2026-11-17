@@ -1,0 +1,197 @@
+{
+  "case_id": "chain-0234-9ccd457f5238",
+  "input_group_row": 234,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "CC-BY-NC-ND-4.0",
+    "资产许可证原文标题/标签": "MIT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0234-9ccd457f5238",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0234-9ccd457f5238:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e88a660a1df06406"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "necessary_to_exercise_licensed_rights"
+          },
+          "S": {
+            "artifact": "chain-0234-9ccd457f5238:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e88a660a1df06406"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "noncommercial_purpose",
+                "comply_with_other_applicable_public_license_conditions"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0234-9ccd457f5238:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图确认的是下游到上游的API链接/远程调用；未证明两份许可共同约束同一对象，也未证明修改、复制或分发。不得据此推断适用分发、改编材料共享或网络源码提供条款。",
+      "下游材料的使用活动及CC许可范围是否覆盖该API调用均未确定；其非商业用途及许可条件仅作为条件性要求保留。",
+      "结构化MIT条款仅显示许可副本/版权及许可声明条件；当前摘录不足以确认使用时的具体履行方式。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在上游MIT软件的副本或实质部分中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "subject": {
+          "artifact": "chain-0234-9ccd457f5238:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如该使用属于行使下游CC许可权利，须为非商业目的，并遵守其他适用的公共许可条件。",
+        "source_refs": [
+          "license-text:downstream:e88a660a1df06406"
+        ],
+        "subject": {
+          "artifact": "chain-0234-9ccd457f5238:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_use",
+          "scope_shared",
+          "noncommercial_purpose",
+          "comply_with_other_applicable_public_license_conditions"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 25501,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1214,
+    "output_tokens_details": {
+      "reasoning_tokens": 338
+    },
+    "total_tokens": 26715,
+    "attribution": {
+      "items": {
+        "msg_03e2d0856d0cad57016af530355bdc87d08f33da5bdf4fed71": {
+          "input_tokens": 23431,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23431,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03e2d0856d0cad57016af530355bdc87d0aa2f0d8db12a5022": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03e2d0856d0cad57016af5303c6e4c87d0890061a196baa014": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 876,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 876
+            }
+          ]
+        },
+        "rs_03e2d0856d0cad57016af5303be43087d0b9ffea248bf79eda": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 338
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "40e684bec975cf3806843edb414f2fa66e8b3345bde353d5b54c641ce0058e32",
+  "elapsed_seconds": 38.77
+}

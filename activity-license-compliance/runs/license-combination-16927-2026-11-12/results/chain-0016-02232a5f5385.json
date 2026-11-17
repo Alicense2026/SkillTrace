@@ -1,0 +1,123 @@
+{
+  "case_id": "chain-0016-02232a5f5385",
+  "input_group_row": 16,
+  "aggregate_count": 298,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "DeepSeek Open Platform Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "298"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0016-02232a5f5385",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0016-02232a5f5385:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0016-02232a5f5385:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0016-02232a5f5385:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0016-02232a5f5385:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the DeepSeek Open Platform service terms applicable to use of the API service.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0016-02232a5f5385:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Clearly disclose to end users that service Outputs are AI-generated, may contain errors or omissions, and are for reference only.",
+        "trigger": "activity:RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ]
+      }
+    ],
+    "limitations": [
+      "DeepSeek 条款摘录明确针对 Open Platform API 服务访问及其输出；已知远程调用适用，但未提供服务条款遵守情况或面向终端用户的披露履行证据，故仅列条件义务，不认定违规。",
+      "对象图未确认 MIT 代码与 DeepSeek 服务所约束对象范围相同；事实也未表明发生代码修改、复制或分发。MIT 摘录中的通知条件不据此扩展为本次 API 调用义务。"
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0014-62f3eb208d17.json",
+  "original_case_id": "chain-0014-62f3eb208d17",
+  "original_request_sha256": "87048140caa16d371514ea2c2a8e3babcde64ccfc075c8768f8d591822feb34f",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0014-62f3eb208d17": "chain-0016-02232a5f5385",
+    "license-text:upstream:b2a3e7ddf565746c": "license-text:upstream:b2a3e7ddf565746c",
+    "license-text:downstream:4f24e65625d9318a": "license-text:downstream:4f24e65625d9318a",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/13": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/15"
+  }
+}

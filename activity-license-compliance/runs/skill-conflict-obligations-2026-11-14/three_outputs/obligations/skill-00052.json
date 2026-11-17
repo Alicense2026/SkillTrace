@@ -1,0 +1,256 @@
+{
+  "case_id": "skill-00052",
+  "csv_row": 53,
+  "source_excel_row": "85",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00052-1794591095998632000-3.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游Work时，Apache专利许可仅覆盖由许可Contributor授权且其Contribution单独或与提交的Work组合必然侵犯的专利权利。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00052:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若对Work或其中纳入的Contribution提起所述专利诉讼，相关Work的Apache专利许可自诉讼提交日起终止；不得将已终止的该专利许可作为使用依据。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00052:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+      "unresolved_predicates": [
+        "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+        "patent_license_for_that_work_has_terminated"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游Work须符合Apache许可；本项仅保留原文明确的整体合规条件。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00052:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用许可人的商号、商标、服务标记或产品名称时，仅限合理且惯常地描述Work来源或复现NOTICE内容；其他使用不由本许可授权。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00052:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "use_of_licensor_names_or_marks",
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+      ]
+    }
+  ],
+  "limitations": [
+    "可信事实证明下游代码远程调用、链接并使用上游模型；未证明模型权重复制、修改、分发，或上游模型与MIT许可的下游Software属于同一对象。MIT条款不因远程调用而自动适用于上游模型。",
+    "Apache专利条件、专利诉讼、商标使用及相关履行事实未知；不据此认定冲突或违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及复制上游Work；无复制事实。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及创作衍生作品；未证明修改或衍生。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及再许可上游Work；未证明再许可。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及分发上游Work；未证明分发。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用上游Work；已保留专利权利范围条件。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及出售上游副本；未证明出售。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "使用活动已知；诉讼及专利许可终止条件未知，已保留条件。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及复制及其附带条件；未证明复制。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及分发及通知条件；未证明分发。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "适用于上游Work使用；已保留整体合规条件。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及衍生作品使用；未证明衍生作品。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "已保留商标名称使用的明确许可范围；具体使用情况未知。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "与U012针对同一商标使用及例外，合并保留来源。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及再分发时收费提供额外责任；无相关活动事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及分发衍生作品；未证明分发。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅适用于分发已修改文件；未证明修改或分发。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅适用于以源码形式分发衍生作品；无此事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅在NOTICE文件随Work分发且分发衍生作品时适用；无此事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及上游Work修改后的使用；未证明修改。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "本行使用事实指向上游模型；未证明使用MIT许可的下游Software对象。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅在复制MIT Software或其实质部分时触发；未证明复制。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及修改MIT Software及其副本；未证明修改或复制。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及合并MIT Software；未证明合并。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及发布MIT Software副本；未证明发布。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及分发MIT Software副本；未证明分发。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及再许可MIT Software及其副本；未证明再许可。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及出售MIT Software副本；未证明出售。"
+    }
+  ]
+}

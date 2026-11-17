@@ -1,0 +1,304 @@
+{
+  "case_id": "chain-0317-77a8ae258d3a",
+  "input_group_row": 317,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "Kimi 模型服务协议（用户协议）",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0317-77a8ae258d3a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_agreement"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "noncommercial_personal_research_or_study"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "noncommercial_personal_research_or_study"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_agreement"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "user_outputs_or_induces_platform_to_output_prohibited_speech"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "user_assumes_corresponding_rights_obligations_and_responsibilities",
+            "when": "user_uses_platform_to_provide_service_to_third_party"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d50b7d38dc017fa1"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+          },
+          "S": {
+            "artifact": "chain-0317-77a8ae258d3a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对的 Kimi 条款涉及服务使用及其非商业、个人研究或学习限制；没有证据表明调用行为涉及 Elastic 软件的复制、修改、分发或再许可。",
+      "Elastic 对托管或管理服务的限制仅在向第三方提供 Elastic 软件且用户可访问其任何实质性功能时触发。现有远程调用事实未证明该触发条件；API 调用本身不等于提供 Elastic 软件服务。",
+      "未见用户实际商业使用、竞争性产品开发、向第三方提供服务或输出受禁言论的事实；不据此认定违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0317-77a8ae258d3a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用 Kimi 开放平台须遵守协议，并限于非商业的个人研究或学习；如需商业化使用，须先取得协议所要求的书面同意。",
+        "trigger": "use_occurs",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "commercial_use",
+          "personal_research_or_study",
+          "written_consent_if_required"
+        ],
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0317-77a8ae258d3a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "远程使用 Kimi 服务须遵守协议，包括不得输出或诱导平台输出协议列明的受禁内容。",
+        "trigger": "remote_interaction_occurs",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "user_outputs_or_induces_platform_to_output_prohibited_speech",
+          "agreement_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0317-77a8ae258d3a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用 Kimi 平台向第三方提供服务，承担相应的权利、义务和责任。",
+        "trigger": "user_uses_platform_to_provide_service_to_third_party",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "user_uses_platform_to_provide_service_to_third_party"
+        ],
+        "source_refs": [
+          "license-text:upstream:7b5cfb30c976fc2c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0317-77a8ae258d3a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "避免将 Elastic 软件作为托管或管理服务提供给第三方，且该服务向用户开放 Elastic 软件任何实质性功能；仅在该触发条件成立时适用。",
+        "trigger": {
+          "all": [
+            "remote_interaction_occurs",
+            "hosted_or_managed_service_provided_to_third_parties",
+            "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "hosted_or_managed_service_provided_to_third_parties",
+          "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality",
+          "scope_shared"
+        ],
+        "source_refs": [
+          "license-text:downstream:d50b7d38dc017fa1"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 32574,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2134,
+    "output_tokens_details": {
+      "reasoning_tokens": 295
+    },
+    "total_tokens": 34708,
+    "attribution": {
+      "items": {
+        "msg_0ec24a7785fdb89c016af53188935087d19b2989f470d11fa4": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ec24a7785fdb89c016af53188935487d1a61b049f3328142a": {
+          "input_tokens": 30504,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30504,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ec24a7785fdb89c016af5318e959c87d194e70de7e6c94101": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1839,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1839
+            }
+          ]
+        },
+        "rs_0ec24a7785fdb89c016af5318e79f087d1a26ead3f3e163790": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 295
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "2df10632814d7abc63d8a1e671d6ba855f6247718becdfdd4de2e8ea3f3fd3b2",
+  "elapsed_seconds": 48.11
+}

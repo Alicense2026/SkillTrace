@@ -1,0 +1,163 @@
+{
+  "case_id": "chain-0357-a58560fdb3f2",
+  "status": "SUCCESS",
+  "request_sha256": "d4dcae58bf5d63af697f73ad8c5c4913eb77997dd68d1eacb8977f81eb0a4c4e",
+  "analysis": {
+    "case_id": "chain-0357-a58560fdb3f2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8af3a43ffe063382"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_license_and_notices"
+          },
+          "S": {
+            "artifact": "chain-0357-a58560fdb3f2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8af3a43ffe063382"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "UNSPECIFIED"
+          },
+          "S": {
+            "artifact": "chain-0357-a58560fdb3f2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:29448145b4a98515"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0357-a58560fdb3f2:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0357-a58560fdb3f2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用BSL软件时，按适用许可条款纳入许可及通知；现有摘录未编码Change License、其他条款及适用例外。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "include_license_and_notices"
+        ],
+        "source_refs": [
+          "license-text:upstream:8af3a43ffe063382"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0357-a58560fdb3f2:downstream",
+          "kind": "CombinedProduct"
+        },
+        "requirement": "若MIT软件被纳入所使用对象，按MIT许可要求在副本或实质部分中保留版权声明和许可声明；链路记录不足以确认该范围及履行情况。",
+        "trigger": true,
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "MIT条款是否覆盖该使用对象",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:downstream:29448145b4a98515"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游BSL-1.0、下游MIT原文均有本地匹配文本；结构化规则标记FIRST_PASS_REVIEW_REQUIRED。BSL摘录说明许可受Change License及其他条款约束，但未提供其完整条件、过渡日期或Additional Use Grant，故不推断这些条件。",
+      "可信事实只确认对上游资产的Use、Link及RemoteInteraction，并说明代码修改不适用；未确认下游软件是否复制、依赖、组合或分发，也未确认两许可是否共同约束同一对象。API调用和链接本身不证明许可对象范围重合。",
+      "未提供许可/通知实际履行证据；这不构成未履行事实。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20835,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 885,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 21720,
+    "attribution": {
+      "items": {
+        "msg_04404a1e19049a62016af3060326bc87d19e72df504d41f392": {
+          "input_tokens": 18803,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18803,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04404a1e19049a62016af30603dbdc87d1ac8c2fbf8b723692": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 885,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 885
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.012,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

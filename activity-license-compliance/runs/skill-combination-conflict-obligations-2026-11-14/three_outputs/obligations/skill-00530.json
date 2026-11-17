@@ -1,0 +1,492 @@
+{
+  "case_id": "skill-00530",
+  "csv_row": 531,
+  "source_excel_row": "756",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00530-1794597053284751000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游 AGPL 原始程序须以许可证仍有效为条件；不得将该条件扩张为下游仓库或 API 调用的额外许可义务。",
+      "source_refs": [
+        "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+      ],
+      "subject": {
+        "artifact": "skill-00530:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "license_remains_in_force"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若上游程序由行为人修改且修改版本支持远程网络交互，修改者须向所有远程交互用户显著提供免费获取该版本对应源码的机会；本项只约束修改者及该修改版本。",
+      "source_refs": [
+        "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+      ],
+      "subject": {
+        "artifact": "skill-00530:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "modified_program",
+          "modified_version_supports_remote_computer_network_interaction"
+        ]
+      },
+      "unresolved_predicates": [
+        "modified_program",
+        "modified_version_supports_remote_computer_network_interaction"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用下游仓库所指软件，须先取得版权持有人的书面同意；该下游许可条件不自动适用于上游 API 服务或其程序。",
+      "source_refs": [
+        "license:69c47aaf2aed12f6a00cff4e243745147af982a9d70d7676ce07ef70782a8fb2"
+      ],
+      "subject": {
+        "artifact": "skill-00530:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "prior_written_consent_from_copyright_holder"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知事实是下游远程调用并链接上游；对象图未确认依赖、打包、修改副本或合并产品。远程调用本身不证明修改了 AGPL 程序，故不据此认定第13节源码义务已触发。",
+    "任务未给出下游对其自有软件的使用事实或书面同意状态；LicenseRef-Custom 的使用限制仅作条件义务，不判违规。",
+    "AGPL 其他分发、源码提供、再许可等条款虽已核对，但对应活动及适用对象未由本行事实建立；不据此推断已发生或未发生。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅许可文件逐字复制；无此活动事实。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅禁止修改许可文件；无此活动事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用上游原始程序，保留许可证有效这一条件。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实为专为修改或运行设施而向他人传递覆盖作品。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实发生传递覆盖作品。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实再许可。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递覆盖作品。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递程序原样源码副本。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实收费传递原样副本。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实以源码形式传递修改作品。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实聚合或组合产品。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递目标代码覆盖作品。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实采用物理产品方式传递目标代码。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实采用书面要约方式传递目标代码。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递带书面源码要约的目标代码副本。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实以指定地点提供目标代码。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实点对点传递目标代码。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实目标代码传递及系统库分离部分。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实用户产品交易及目标代码传递。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实接收方修改或安装作品后请求网络访问。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实按第6节传递对应源码或提供安装信息。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无适用额外许可事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递覆盖作品副本。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实向覆盖作品添加材料。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实添加材料及其权利人授权。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实相关进一步限制或再许可路径。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实依第7节添加条款。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传播覆盖作品。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改覆盖作品。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供许可证违规停止或恢复事实。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供权利人通知及补救事实。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供权利终止事实。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "运行副本的许可；不产生本行所需的独立履行义务。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实接收副本时点对点传输引起的附带传播。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改上游程序。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅网络交互不等同传播覆盖作品；未证实传播。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递覆盖作品并发生相应自动许可情形。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅说明无需负责执行第三方合规，不产生履行义务。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实实体交易及收件。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实实体交易或源码请求情形。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实对 AGPL 权利施加进一步限制。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实对 AGPL 许可权利收费。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实相关专利诉讼行为。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实贡献者版本及专利权利范围内的使用。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递、明知依赖专利许可及源码未公开等触发事实。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传递并向部分收件人授予专利许可。"
+    },
+    {
+      "rule_ref": "U047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实所述第三方歧视性专利许可安排。"
+    },
+    {
+      "rule_ref": "U048",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "保留既有抗辩或默示许可，不产生履行义务。"
+    },
+    {
+      "rule_ref": "U049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实与其他义务无法同时履行的传递情形。"
+    },
+    {
+      "rule_ref": "U050",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "远程交互事实不足以单独触发；仍保留修改且修改版本支持网络交互时的源码提供条件义务。"
+    },
+    {
+      "rule_ref": "U051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 AGPL 与 GPLv3 作品组合。"
+    },
+    {
+      "rule_ref": "U052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实可传递的 AGPL/GPLv3 组合作品。"
+    },
+    {
+      "rule_ref": "U053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "版本选择条件未知，且无版本选择活动事实。"
+    },
+    {
+      "rule_ref": "U054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实程序未指定 AGPL 版本或发生版本选择。"
+    },
+    {
+      "rule_ref": "U055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实代理选择版本及公开接受。"
+    },
+    {
+      "rule_ref": "U056",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "版本选择不额外加诸作者或权利人义务。"
+    },
+    {
+      "rule_ref": "U057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实相关专利范围内创作衍生作品。"
+    },
+    {
+      "rule_ref": "U058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实出售副本。"
+    },
+    {
+      "rule_ref": "U059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实付费提供访问。"
+    },
+    {
+      "rule_ref": "U060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改贡献者版本。"
+    },
+    {
+      "rule_ref": "U061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实传播贡献者版本。"
+    },
+    {
+      "rule_ref": "U062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实付费提供支持或保修。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "该限制仅针对下游软件；使用事实指向上游原始程序，故仅保留下游软件若被使用时须先获书面同意的条件。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实复制下游软件。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改下游软件。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实合并下游软件。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实发布或分发下游软件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实再许可下游软件。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实出售下游软件副本。"
+    }
+  ]
+}

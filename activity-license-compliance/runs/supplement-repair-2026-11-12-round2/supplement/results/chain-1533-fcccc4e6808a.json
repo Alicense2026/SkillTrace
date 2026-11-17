@@ -1,0 +1,275 @@
+{
+  "case_id": "chain-1533-fcccc4e6808a",
+  "source_csv_line": 1534,
+  "row": {
+    "github_repo": "genai_agents",
+    "github_url": "https://github.com/nirdiamant/genai_agents",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "davila7/langgraph",
+    "artifact_url": "https://github.com/davila7/claude-code-templates/tree/main/cli-tool/components/skills/ai-research/langgraph",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: tests/test_hitl_approval_agent.py:11 ｜ 调用原文: TUTORIAL_LANGGRAPH_VERSION = \"0.2.76\" ｜ 证据等级: 待复核（中） ｜ 解析: skillsmp → skillsmp ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 测试与 notebook 中真实导入使用的 Agent 编排框架",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "nirdiamant/genai_agents",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "c9877e4d8788a0bb97502348dca8fbd78a6eaa73db0638221b3cb67422d30177",
+    "filename": "_supplement_round2/c9877e4d8788a0bb97502348dca8fbd78a6eaa73db0638221b3cb67422d30177.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 7; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-1533-fcccc4e6808a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8475209038fea1a2"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1533-fcccc4e6808a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8475209038fea1a2"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1533-fcccc4e6808a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:62a5352c8b46c986"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "non_commercial_purpose",
+                "credit_licensor_name",
+                "include_repository_link",
+                "indicate_changes_made"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1533-fcccc4e6808a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:62a5352c8b46c986"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "commercial_purpose",
+                "no_prior_explicit_written_consent_from_licensor"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1533-fcccc4e6808a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:62a5352c8b46c986"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "commercial_purpose",
+                "actor_is_licensee_or_contributor"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1533-fcccc4e6808a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认对上游 MIT 资产的 Use/RemoteInteraction，并确认没有 vendor；这不证明复制、分发、修改或权重转移。",
+      "对象图将关系标为 API 调用/链接，scope_shared 未知；现有证据不足以认定下游 LicenseRef-Custom 对上游 LangGraph 材料适用，亦不足以把两许可条款视为共同约束同一对象。",
+      "MIT 原文摘录将许可授予列为受条件约束，但通知条款明确针对副本或软件实质部分；本案未证实发生复制。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该次使用涉及下游许可覆盖的 Repository 内容，须限于非商业目的，并提供许可要求的许可方署名、Repository 链接及变更说明；商业目的使用须先取得许可方明确书面同意，且不得违反适用的商业使用限制。",
+        "source_refs": [
+          "license-text:downstream:62a5352c8b46c986"
+        ],
+        "subject": {
+          "artifact": "chain-1533-fcccc4e6808a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "non_commercial_purpose",
+          "credit_licensor_name",
+          "include_repository_link",
+          "indicate_changes_made",
+          "commercial_purpose",
+          "no_prior_explicit_written_consent_from_licensor"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在复制上游软件或其实质部分时，随副本包含版权声明及许可声明。",
+        "source_refs": [
+          "license-text:upstream:8475209038fea1a2"
+        ],
+        "subject": {
+          "artifact": "chain-1533-fcccc4e6808a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": [
+          "activity:Copy",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 26214,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1813,
+    "output_tokens_details": {
+      "reasoning_tokens": 516
+    },
+    "total_tokens": 28027,
+    "attribution": {
+      "items": {
+        "msg_0c583a4b342d8f53016af5861fe88087d08bf9cdbe2f90c055": {
+          "input_tokens": 24144,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 24144,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c583a4b342d8f53016af5861fe88087d090c861e2b1dc082c": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c583a4b342d8f53016af58629b31487d0a16762b8c807ecc1": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1297,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1297
+            }
+          ]
+        },
+        "rs_0c583a4b342d8f53016af58629974c87d093ad4c63a8fd5b40": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 40.53
+}

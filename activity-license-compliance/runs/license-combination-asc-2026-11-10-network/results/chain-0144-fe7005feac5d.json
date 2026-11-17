@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-0144-fe7005feac5d",
+  "status": "SUCCESS",
+  "request_sha256": "cd503d955757dfc3a759f06fa0e5ade67dd6d8bc2b42afc61fbbf0643ce7edff",
+  "analysis": {
+    "case_id": "chain-0144-fe7005feac5d",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0144-fe7005feac5d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a4beeb71537e5f69"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices"
+          },
+          "S": {
+            "artifact": "chain-0144-fe7005feac5d:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图确认的是 downstream 到 upstream 的 API 链接/远程调用；共享受许可对象的依赖、修改副本或组合产品关系均未确认。因此不能据此认定两许可条款共同约束同一对象，也不构成许可冲突。",
+      "可信记录确认对 upstream 的 Use 与 RemoteInteraction；未说明是否对 downstream BSD 许可材料实施 Use。BSD 条件条款的完整适用范围及相关通知履行证据未提供，故仅将其作为条件义务保留。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用受 BSD-2-Clause 条款约束的 downstream 材料时，保留适用通知。",
+        "source_refs": [
+          "license-text:downstream:a4beeb71537e5f69"
+        ],
+        "subject": {
+          "artifact": "chain-0144-fe7005feac5d:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_material_used"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18648,
+    "input_tokens_details": {
+      "cached_tokens": 18432,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 780,
+    "output_tokens_details": {
+      "reasoning_tokens": 234
+    },
+    "total_tokens": 19428,
+    "attribution": {
+      "items": {
+        "msg_0235f782700832b9016af2fcdaa97487d2b709ce3f5c2eb604": {
+          "input_tokens": 16616,
+          "cached_tokens": 16402,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16616,
+              "cached_tokens": 16402,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0235f782700832b9016af2fcdf7ca887d2bf518cc64f1e7f68": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 546,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 546
+            }
+          ]
+        },
+        "rs_0235f782700832b9016af2fcdf65a487d28bf48ad538d59f78": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 234
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 17.099,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

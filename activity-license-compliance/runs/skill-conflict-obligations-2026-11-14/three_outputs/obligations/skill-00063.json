@@ -1,0 +1,258 @@
+{
+  "case_id": "skill-00063",
+  "csv_row": 64,
+  "source_excel_row": "105",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00063-1794591619358460000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "许可方/被许可方对上游 Software 的每份复制件或实质部分，须同时纳入版权声明及 MIT 许可声明；如未产生复制件或实质部分，则无需此项通知。仅远程 API 调用不触发该义务。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00063:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          {
+            "all": [
+              "activity:Copy",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Modify",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Combine",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Distribute",
+              "copy_or_substantial_portion_distributed"
+            ]
+          },
+          {
+            "all": [
+              "activity:Sublicense",
+              "copy_or_substantial_portion_included"
+            ]
+          },
+          {
+            "all": [
+              "activity:SellCopies",
+              "copy_or_substantial_portion_sold"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "copy_or_substantial_portion_distributed",
+        "copy_or_substantial_portion_included",
+        "copy_or_substantial_portion_sold",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "许可方/被许可方对下游 Software 的每份复制件或实质部分，须同时纳入版权声明及 MIT 许可声明；如未产生复制件或实质部分，则无需此项通知。仅远程 API 调用不触发该义务。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00063:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          {
+            "all": [
+              "activity:Copy",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Modify",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Combine",
+              "copy_or_substantial_portion_created"
+            ]
+          },
+          {
+            "all": [
+              "activity:Distribute",
+              "copy_or_substantial_portion_distributed"
+            ]
+          },
+          {
+            "all": [
+              "activity:Sublicense",
+              "copy_or_substantial_portion_included"
+            ]
+          },
+          {
+            "all": [
+              "activity:SellCopies",
+              "copy_or_substantial_portion_sold"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created",
+        "copy_or_substantial_portion_distributed",
+        "copy_or_substantial_portion_included",
+        "copy_or_substantial_portion_sold",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    }
+  ],
+  "limitations": [
+    "可信事实表明下游仅以远程服务调用方式链接并使用上游资产，未发现纳入源码或修改；API调用本身不证明复制、分发或通知义务已触发。其他复制、分发、再许可及通知履行事实未知，故保留条件义务，不认定违规。",
+    "对象图未确认两侧许可约束同一对象；即使比较 MIT 条款，其允许状态和通知条件亦无相反要求，未发现许可证冲突。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "上游 Software 的使用条款无附加义务；已知使用获许可。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游复制许可的通知条件以复制件或实质部分产生为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游修改许可的通知条件以复制件或实质部分产生为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游合并许可的通知条件以复制件或实质部分产生为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游发布许可的通知条件以分发复制件或实质部分为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游分发许可要求对分发的复制件或实质部分保留两项声明，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游再许可条件所涉复制件或实质部分通知义务已纳入条件义务。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "上游出售复制件条件所涉通知义务已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "下游 Software 的使用条款无附加义务；已知使用获许可。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游复制许可的通知条件以复制件或实质部分产生为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游修改许可的通知条件以复制件或实质部分产生为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游合并许可的通知条件以复制件或实质部分产生为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游发布许可的通知条件以分发复制件或实质部分为限，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游分发许可要求对分发的复制件或实质部分保留两项声明，已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游再许可条件所涉复制件或实质部分通知义务已纳入条件义务。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游出售复制件条件所涉通知义务已纳入条件义务。"
+    }
+  ]
+}

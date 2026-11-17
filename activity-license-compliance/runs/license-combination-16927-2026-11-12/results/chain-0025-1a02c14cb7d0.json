@@ -1,0 +1,144 @@
+{
+  "case_id": "chain-0025-1a02c14cb7d0",
+  "input_group_row": 25,
+  "aggregate_count": 118,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "DeepSeek Open Platform Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "118"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0025-1a02c14cb7d0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0025-1a02c14cb7d0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0025-1a02c14cb7d0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0025-1a02c14cb7d0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "DeepSeek Open Platform Terms of Service 原文摘录仅支持 API 服务访问/使用及输出披露条款；未提供足以判定其他条款的映射。披露义务的履行状态没有证据，不能据此认定未履行。",
+      "下游 Apache-2.0 许可摘录涉及下游软件对象；已知活动是对上游 API 的远程调用，且无修改、分发或对象依赖证据，因此不据此认定双方许可共同约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 DeepSeek Open Platform API 服务须遵守服务条款。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0025-1a02c14cb7d0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "远程使用服务时须遵守服务条款。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0025-1a02c14cb7d0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "向终端用户明确披露输出由 AI 生成，可能含错误或遗漏，且仅供参考。",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0025-1a02c14cb7d0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "end_user_disclosure_fulfilled"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0022-57725afd83ed.json",
+  "original_case_id": "chain-0022-57725afd83ed",
+  "original_request_sha256": "21048020199176f18d929a849b734687475d289b0d971f9e14f9f9cc8324886e",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0022-57725afd83ed": "chain-0025-1a02c14cb7d0",
+    "license-text:upstream:b2a3e7ddf565746c": "license-text:upstream:b2a3e7ddf565746c",
+    "license-text:downstream:e013673ad1656c20": "license-text:downstream:e013673ad1656c20",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/21": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/24"
+  }
+}

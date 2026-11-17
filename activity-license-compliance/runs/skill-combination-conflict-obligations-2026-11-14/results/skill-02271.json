@@ -1,0 +1,538 @@
+{
+  "case_id": "skill-02271",
+  "csv_row": 2272,
+  "source_excel_row": "3190",
+  "status": "SUCCESS",
+  "request_sha256": "bdaad6f91a551ef3d7b529171dd8dad07ce647ef9a183ead1c919c21c0249d75",
+  "analysis": {
+    "case_id": "skill-02271",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02271:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "patent_license_for_that_work_has_terminated",
+            "when": "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+          },
+          "S": {
+            "artifact": "skill-02271:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02271:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02271:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:6bcadbd42fe75b568dc54f3e89bc346516b313d5cce26e7f57e0c80caf1ce410"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "use_is_non_production",
+                "production_use_permitted_by_additional_use_grant"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02271:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:6bcadbd42fe75b568dc54f3e89bc346516b313d5cce26e7f57e0c80caf1ce410"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_license_for_relevant_version",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02271:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:6bcadbd42fe75b568dc54f3e89bc346516b313d5cce26e7f57e0c80caf1ce410"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "commercial_license_purchased_from_licensor_affiliate_or_authorized_reseller",
+                "refrain_from_using_licensed_work"
+              ]
+            },
+            "when": "use_does_not_comply_with_requirements_currently_in_effect"
+          },
+          "S": {
+            "artifact": "skill-02271:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人对其 BUSL-1.1 Licensed Work 的使用，仅在非生产用途或该具体生产用途已由 Additional Use Grant 允许时获准；远程调用上游模型本身不证明使用了下游 Licensed Work。",
+        "source_refs": [
+          "license:6bcadbd42fe75b568dc54f3e89bc346516b313d5cce26e7f57e0c80caf1ce410"
+        ],
+        "subject": {
+          "artifact": "skill-02271:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_use_of_licensed_work",
+          "use_is_non_production",
+          "production_use_permitted_by_additional_use_grant"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人使用其 BUSL-1.1 Licensed Work 时，须遵守该具体版本当时适用的许可条款；不合规时须购买许可人、关联实体或授权经销商提供的商业许可，或停止该 Licensed Work 的使用（二选一）。",
+        "source_refs": [
+          "license:6bcadbd42fe75b568dc54f3e89bc346516b313d5cce26e7f57e0c80caf1ce410"
+        ],
+        "subject": {
+          "artifact": "skill-02271:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_use_of_licensed_work",
+          "use_does_not_comply_with_requirements_currently_in_effect",
+          "relevant_version_requirements"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游被许可人对 Apache Work 的使用、复制及分发须遵守 Apache-2.0；该概括性条件不将下游 BUSL-1.1 的对象或义务转移至上游模型。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-02271:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "scope_of_apache_work_use"
+        ]
+      }
+    ],
+    "limitations": [
+      "已知事实仅证明对上游 Qwen 模型进行远程调用及 API/代码链接；不证明模型权重、源码或副本被下游取得、复制、修改、分发或合并，也不证明下游技能本身被使用或其版本的 BUSL Change Date 已到。",
+      "BUSL 文本所引用的 Change License、LICENSE.TXT、Change Date 及 Additional Use Grant 具体内容未提供；不得据此推断其许可条件或已发生变更。",
+      "Apache 专利条款、商标条款及分发通知条款仅在各自触发事实成立时适用；本行未提供相应触发事实。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "复制许可与授予权利条款；未见复制事实。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见制作衍生作品事实。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见再许可事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见分发上游 Work 的事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "上游存在 Use；专利授予范围受专利权利条件限制，履行要求由一般合规义务保留。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见出售上游副本事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见许可人提起所述专利诉讼的事实。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "复制/分发及通知条件均无事实触发。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见分发事实；各项通知义务仍由条款触发条件限定。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "上游 Use 已发生；条款要求底层 Work 的使用等遵守许可证条件。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见对上游衍生作品的使用事实。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未见使用许可人商标或名称的事实。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未见使用许可人商标或名称的事实。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未见分发时收费提供支持、保证或责任承诺的事实。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见分发衍生作品事实。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见分发修改文件事实。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见以源码形式分发衍生作品事实。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见 NOTICE 文件及分发衍生作品事实。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "上游 Use 已发生；与 U010 同一底层合规要求，已合并保留。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "复制下游 Licensed Work 的许可授予；未见复制事实。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见修改下游 Licensed Work 事实。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见制作下游衍生作品事实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未见分发下游 Licensed Work 事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留下游 Licensed Work 使用时的非生产/获准生产条件；实际下游使用及用途性质未知。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "Change License 的具体权利条件未提供，且未证明变更触发。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "原许可变更后使用限制未触发；不推断 Change License 权利。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "保留仅在使用不符合当时有效要求时适用的商业许可或停止使用二选一条件；不据收费推断不合规。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "适用版本及其条款合规要求已与 D008 合并保留。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "该许可副本展示义务针对下游原件或修改件副本；仅远程调用不触发。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未证明收到下游 Licensed Work 的原件或修改件。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未证明存在违反 BUSL 的使用；不据此认定权利终止。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未见使用许可人或关联方商标、标识事实。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条件涉及许可人 Covenants，摘录不足以形成可执行的被许可人义务。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "条款规定许可人职责，不属于本例被许可人的活动义务。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "Change Date 与 LICENSE.TXT 指定许可内容未提供，无法确定变更后的条件。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "复制事实及版本变更触发均未证实。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "修改事实及版本变更触发均未证实。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "制作衍生作品事实及版本变更触发均未证实。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "分发事实及版本变更触发均未证实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-02271-1794603314391688000-1.json",
+  "usage": {
+    "input_tokens": 27818,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3850,
+    "output_tokens_details": {
+      "reasoning_tokens": 390
+    },
+    "total_tokens": 31668,
+    "attribution": {
+      "items": {
+        "msg_03eba0c42f696ed4016af77936661c87d1b21886200fed647b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03eba0c42f696ed4016af77936661c87d1b978546d42b76f49": {
+          "input_tokens": 25094,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25094,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03eba0c42f696ed4016af7793e30e887d1b950245e4a689a6d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3460,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3460
+            }
+          ]
+        },
+        "rs_03eba0c42f696ed4016af7793e155087d18a472f9758d5929c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 390
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

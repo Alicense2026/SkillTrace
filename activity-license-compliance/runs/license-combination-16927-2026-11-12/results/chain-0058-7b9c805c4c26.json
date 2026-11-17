@@ -1,0 +1,143 @@
+{
+  "case_id": "chain-0058-7b9c805c4c26",
+  "input_group_row": 58,
+  "aggregate_count": 31,
+  "combination": {
+    "GitHub许可证": "GPL-3.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "31"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not_develop_models_competing_with_the_Services",
+            "when": "using_the_Services"
+          },
+          "S": {
+            "artifact": "chain-0058-7b9c805c4c26:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API Additional Terms clause L31-L34 (source hash 704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138) restricts using the Services to develop competing models; its full definition and context are not included in the excerpt. The structured extraction marks Use as prohibited, but the excerpt supports retaining the specific development-of-competing-model condition, not treating ordinary API use as prohibited.",
+      "The record establishes remote API use and a link, not copying, modifying, distributing, or sublicensing the GPL-3.0 artifact. No GPL conveyance condition is triggered on the provided facts; whether the upstream and downstream terms govern a shared object is also unknown."
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Do not use the Services to develop models that compete with the Services.",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0058-7b9c805c4c26:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "developing_models_competing_with_the_Services"
+          ]
+        },
+        "unresolved_predicates": [
+          "developing_models_competing_with_the_Services"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0058-7b9c805c4c26"
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 17992,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 786,
+    "output_tokens_details": {
+      "reasoning_tokens": 251
+    },
+    "total_tokens": 18778,
+    "attribution": {
+      "items": {
+        "msg_02da496a0c381988016af52ea4bb3c87d09eb0a35b7946cc63": {
+          "input_tokens": 15922,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15922,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02da496a0c381988016af52ea4bb3c87d0b722cf49cf4c0a9b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02da496a0c381988016af52ea9e9e487d0a57c2207512ce76a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 535,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 535
+            }
+          ]
+        },
+        "rs_02da496a0c381988016af52ea9ce4487d0a07366d05df438f3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 251
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "3e0415e7b66cd11125b63d6da528284b287d3479d2ab2659168a541b706c9cb6",
+  "elapsed_seconds": 28.15
+}

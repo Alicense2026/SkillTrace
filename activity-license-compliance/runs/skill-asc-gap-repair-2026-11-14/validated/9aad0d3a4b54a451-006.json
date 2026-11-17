@@ -1,0 +1,49 @@
+{
+  "request_sha256": "c38feac582803fcc351d26653509b3044cf74638540526b1e3c572d85615d243",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 144,
+        "end_line": 144,
+        "clause_label": "gap/additional_fees_acceptance_before_charge",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_services_or_features_with_additional_fees",
+          "requires": "customer_given_opportunity_to_review_and_accept_additional_fees_before_charge"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Commercial Terms of Service, Section 6: applies to Customer’s use of Services or features when additional fees apply. If Customer does not accept the additional fees, Anthropic may discontinue access to the Services or features.",
+        "condition_explanation": "customer_uses_services_or_features_with_additional_fees means Customer uses Services or features for which additional fees apply. customer_given_opportunity_to_review_and_accept_additional_fees_before_charge means Customer has been given an opportunity to review and accept those fees before being charged. The Terms state that Anthropic may discontinue access if Customer does not accept; that provider option is not a Customer activity permission or duty represented here.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Section 6 also addresses payment-method charges, distributor payment and refund terms, nonrefundability, cancellation, reimbursement, and fee payment. The supplied activities do not faithfully represent paying, charging a payment method, cancelling a subscription, or making a refund or reimbursement; those actions are not converted into fictitious Use rules.",
+      "The seven-day cancellation right and related reimbursement provisions are locally stated in lines 150–153; no external cancellation document is needed to identify those terms. The optional model cancellation form is not supplied, but the Terms state it is not obligatory.",
+      "The anchor clauses cover the identified access, billing, subscription, cancellation, seven-day-use, and fee-change provisions. This addition separately captures the express additional-fee review-and-acceptance condition on continued use."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0021",
+        "status": "MODELED",
+        "clause_labels": [
+          "service_access_and_billing",
+          "subscription_access_and_recurring_payment",
+          "subscription_cancellation_right",
+          "seven_day_cancellation_period_use",
+          "subscription_fee_changes_and_advance_notice",
+          "gap/additional_fees_acceptance_before_charge"
+        ],
+        "reason": "The anchors and added clause cover the express use conditions and duties in the target, including applicable service fees and billing information, subscription sign-up and recurring fees, cancellation timing and effects, seven-day-period use and exceptions, advance notice of fee increases, and review and acceptance of additional fees before charging. Payment, cancellation, and refund actions that do not fit the activity vocabulary are identified in coverage_notes rather than represented as Use."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

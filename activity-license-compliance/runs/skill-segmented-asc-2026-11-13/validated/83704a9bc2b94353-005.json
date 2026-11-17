@@ -1,0 +1,141 @@
+{
+  "request_sha256": "f79b6a830f05b1c4c0d7a8e4de7614b7f6226bb687e2ef3b294cd1908ad07c94",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 691,
+        "end_line": 691,
+        "clause_label": "provider_service_suspension_or_termination_for_security_harm",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "customer_website_experiences_network_security_attack_or_harmful_event",
+          "requires": "event_harms_baidu_or_other_networks_servers_or_impairs_network_connectivity"
+        },
+        "actor_role": "provider",
+        "scope_note": "Baidu intelligent cloud service under the agreement; the provider may suspend or terminate service when the specified security event involving the customer's website causes the stated harm or impairment. If service is terminated, unused remaining fees, if any, are to be returned.",
+        "condition_explanation": "customer_website_experiences_network_security_attack_or_harmful_event means the customer's website encounters the described virus, network intrusion, attack, or other network-security harm. event_harms_baidu_or_other_networks_servers_or_impairs_network_connectivity requires harm to Baidu or other networks or servers, or impaired connectivity with the international internet or a specified network, server, or internal network. Service cessation is permitted only under that stated condition; the return duty applies only if service is terminated.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Return any remaining fees after calculating the customer's used service fees based on the service actually provided.",
+            "actor": "Baidu intelligent cloud",
+            "object": "Unused service fees paid by the customer",
+            "trigger": "Baidu terminates service under this security-event clause and a remaining amount is due."
+          }
+        ]
+      },
+      {
+        "start_line": 693,
+        "end_line": 693,
+        "clause_label": "provider_service_termination_for_business_reasons",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "provider_needs_service_change_for_technical_upgrade_service_system_adjustment_or_business_strategy",
+          "requires": "customer_given_at_least_30_days_notice_by_website_announcement_in_site_notice_or_email"
+        },
+        "actor_role": "provider",
+        "scope_note": "Baidu intelligent cloud may temporarily stop or terminate the service, or part of its functions, for the listed reasons after the specified notice. If it does so, it must return amounts already paid for service not consumed.",
+        "condition_explanation": "provider_needs_service_change_for_technical_upgrade_service_system_adjustment_or_business_strategy means the provider considers a temporary or permanent service change necessary for one of those reasons. customer_given_at_least_30_days_notice_by_website_announcement_in_site_notice_or_email requires notice at least 30 days in advance through a listed channel. The refund duty is triggered by the provider taking the stated service-stopping action.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Return amounts the customer has paid for service not yet consumed.",
+            "actor": "Baidu intelligent cloud",
+            "object": "Paid but unconsumed service fees",
+            "trigger": "Baidu temporarily stops or terminates the service or any part of its functions under this clause."
+          }
+        ]
+      },
+      {
+        "start_line": 695,
+        "end_line": 695,
+        "clause_label": "regulatory_conflict_severance_and_agreement_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "law_policy_or_regulatory_requirement_prevents_agreement_performance",
+          "requires": "provider_terminates_agreement_in_advance"
+        },
+        "actor_role": "provider",
+        "scope_note": "Agreement-level provision: conflicting terms automatically cease to apply without affecting the remaining terms; the parties agree that Baidu may terminate the agreement in advance if legal, policy, or regulatory reasons make it impossible to proceed. The parties also agree to re-agree affected content according to law and business needs.",
+        "condition_explanation": "law_policy_or_regulatory_requirement_prevents_agreement_performance means legal, policy, or regulatory reasons prevent the agreement from proceeding. provider_terminates_agreement_in_advance identifies the stated advance-termination path. The clause also states automatic severance of conflicting provisions and an agreement to re-agree affected content; these effects and the negotiation obligation cannot be faithfully represented by the available activity/object schema.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The source is an agreement governing cloud services, not a conventional software license. Service suspension, termination, and fee-return provisions are represented with the available service activity and identified as agreement-level scope.",
+      "P0303's return-of-fees duty is extracted, but the available activities do not express the provider's separate act of refunding money.",
+      "P0305 includes automatic severance of terms conflicting with law, policy, or regulatory requirements, and an agreement to re-agree affected content according to law and business needs. These effects cannot be faithfully represented as activity constraints; P0305 remains UNRESOLVED despite modeling the conditional termination path.",
+      "P0309 refers generally to continuing to exercise rights and perform obligations outside disputed matters, without identifying a particular action or obligation that can be faithfully represented by the available activities and objects; it remains UNRESOLVED.",
+      "Choice of law, negotiation/litigation forum, and venue are not modeled as activity constraints."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0303",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "provider_service_suspension_or_termination_for_security_harm"
+        ],
+        "reason": "Models the conditional service suspension or termination and post-termination return duty, but the available activities do not represent the provider's refund action itself."
+      },
+      {
+        "unit_id": "P0304",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_service_termination_for_business_reasons"
+        ],
+        "reason": "Models the provider's conditional service-stopping action, advance-notice condition, and return of paid but unconsumed fees."
+      },
+      {
+        "unit_id": "P0305",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "regulatory_conflict_severance_and_agreement_termination"
+        ],
+        "reason": "Models the conditional advance-termination path, but cannot represent the automatic severance effect or the parties' agreement to re-agree affected content."
+      },
+      {
+        "unit_id": "P0306",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the dispute-resolution section; it creates no operative activity constraint."
+      },
+      {
+        "unit_id": "P0307",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Choice-of-law provision, outside the activity-constraint extraction scope."
+      },
+      {
+        "unit_id": "P0308",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Negotiation and litigation forum provisions concern dispute resolution and venue, not an activity constraint."
+      },
+      {
+        "unit_id": "P0309",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Requires the parties to continue exercising rights and performing obligations outside the disputed matter, but identifies no specific action that can be faithfully represented with the allowed activities and objects."
+      }
+    ]
+  },
+  "attempt": 2
+}

@@ -1,0 +1,119 @@
+{
+  "case_id": "chain-0007-84d4fec45ca9",
+  "status": "SUCCESS",
+  "request_sha256": "3719850899c18394128bd38a2d99abd917b25d8c0e17287d94acf7821d365947",
+  "analysis": {
+    "case_id": "chain-0007-84d4fec45ca9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:7d9f4a60e6bb5d63"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0007-84d4fec45ca9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:06dab3e991486bd6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0007-84d4fec45ca9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查范围限于可信记录表明的对 Qwen/Qwen2.5-1.5B-Instruct 的远程调用及本地 Apache 2.0、MIT 文本。远程调用不证明模型权重转移、分发或与下游软件许可范围重合；对象图中的 scope_shared 未知。",
+      "本地 Apache 文本未匹配到具体提供方（provider_match 为 null）。此处未据此推断超出摘录及结构化规则的厂商特定义务；Apache 分发条件因分发未被证实而不构成当前活动的行为结论。",
+      "MIT 通知条件针对 MIT 软件副本或其实质部分；现有事实未证明对下游 MIT 软件实施 Copy 或 Distribute，也未证明该条件适用于所调用的上游模型。"
+    ],
+    "obligations": [],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 32716,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 759,
+    "output_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "total_tokens": 33475,
+    "attribution": {
+      "items": {
+        "msg_0576701442b4f651016af2de3dd63c87d296ddfc29856240b3": {
+          "input_tokens": 30768,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30768,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0576701442b4f651016af2de46ed7887d2b06a96346f0f7efb": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 529,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 529
+            }
+          ]
+        },
+        "rs_0576701442b4f651016af2de46d67c87d282d74d01f37e5e93": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 230
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 26.175,
+  "auto_applied": false,
+  "recovered_from_raw_response": true
+}

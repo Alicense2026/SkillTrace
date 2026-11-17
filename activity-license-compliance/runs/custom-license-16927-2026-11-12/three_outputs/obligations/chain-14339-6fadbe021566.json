@@ -1,0 +1,47 @@
+{
+  "case_id": "chain-14339-6fadbe021566",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Include the copyright notice and permission notice with copies or substantial portions of the upstream Software.",
+      "source_refs": [
+        "license-text:upstream:bef591f1c28b6755"
+      ],
+      "subject": {
+        "artifact": "chain-14339-6fadbe021566:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "all of [activity:Use, copy_or_substantial_portion_included]",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_included",
+        "notice_inclusion"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If the use concerns content covered by the downstream LicenseRef-Custom, it is limited to viewing or forking on GitHub within the applicable public-repository terms; other use requires the owner's prior written permission.",
+      "source_refs": [
+        "license-text:downstream:a53ccaf49d1cf3ce"
+      ],
+      "subject": {
+        "artifact": "chain-14339-6fadbe021566:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_shared"
+        ]
+      },
+      "unresolved_predicates": [
+        "scope_shared",
+        "within_github_public_repository_terms",
+        "owner_prior_written_permission"
+      ]
+    }
+  ]
+}

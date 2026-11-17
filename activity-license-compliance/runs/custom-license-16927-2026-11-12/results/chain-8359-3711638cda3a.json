@@ -1,0 +1,161 @@
+{
+  "case_id": "chain-8359-3711638cda3a",
+  "source_csv_line": 8360,
+  "row": {
+    "github_repo": "osgpt",
+    "github_url": "https://github.com/ravi-teja-konda/osgpt",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "NousResearch/chroma",
+    "artifact_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/mlops/chroma",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: main.py:15 ｜ 调用原文: from langchain.vectorstores import Chroma ｜ 证据等级: 待复核（中） ｜ 解析: skillsmp → skillsmp ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: langchain 的向量数据库，在 main.py 中导入并用于存储嵌入",
+    "batch": "4001-4500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "ravi-teja-konda/osgpt",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "6ffed7d492b0e1a175175540c2f4aaf48f3e73fa592ac11593afddf8e1bad0ef",
+    "filename": "_licenseref_full/texts/6ffed7d492b0e1a175175540c2f4aaf48f3e73fa592ac11593afddf8e1bad0ef.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:OSGPT-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:06110722ad7ba88e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-8359-3711638cda3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 MIT 原文的许可授予摘录将 use 列为受条件约束的活动；但紧邻的通知条款明确针对副本或软件实质部分。现有证据未显示复制或分发，通知条件对本次远程调用的具体适用范围不能据摘录确定，因此保留条件义务，不认定违规。",
+      "下游 LicenseRef-Custom 摘录允许使用项目，但本例确认的 Use 对象是上游资产；对象图只确认 API 调用/链接，不证明下游项目与上游资产属于共同许可范围。scope_shared 未知，且没有相反条款支持许可证冲突结论。",
+      "下游原文只提供已摘录的许可授予条款；不据此推断未提供的其他条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若 MIT 通知条件适用于本次对上游软件的使用，则包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:06110722ad7ba88e"
+        ],
+        "subject": {
+          "artifact": "chain-8359-3711638cda3a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "notice_condition_applies_to_remote_use",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-8359-3711638cda3a"
+  },
+  "usage": {
+    "input_tokens": 19686,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1085,
+    "output_tokens_details": {
+      "reasoning_tokens": 544
+    },
+    "total_tokens": 20771,
+    "attribution": {
+      "items": {
+        "msg_002f8c6c4381c969016af53c0f174c87d18d2137cc462c91fe": {
+          "input_tokens": 17616,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17616,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_002f8c6c4381c969016af53c0f174c87d1b27684e5b2406f36": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_002f8c6c4381c969016af53c1a4c5c87d1af1c144bf997fd25": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 541,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 541
+            }
+          ]
+        },
+        "rs_002f8c6c4381c969016af53c17925887d18ba49c4938a6ddbc": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 422
+        },
+        "rs_002f8c6c4381c969016af53c1a33bc87d18beda5cb67cc55f5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 122
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "4c019196bd9f65b8bbe6ecf5b62bc0919e404e35da18c2bff2505607ad844768",
+  "elapsed_seconds": 26.5
+}

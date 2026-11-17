@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-4290-cf362fe680ce",
+  "source_csv_line": 4291,
+  "row": {
+    "github_repo": "helix",
+    "github_url": "https://github.com/helixml/helix",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "openai/gpt-oss-20b",
+    "artifact_url": "https://huggingface.co/openai/gpt-oss-20b",
+    "artifact_license": "apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: api/pkg/controller/knowledge/query/query.go:18 ｜ 调用原文: var model = \"openai/gpt-oss-20b\" ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: query.go 中引用的模型，属于知识查询实际使用的模型",
+    "batch": "1501-2000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "helixml/helix",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e",
+    "filename": "_licenseref_full/texts/051df0adaf9c13dea6e0cc41764a5f9dc5d7b26fed38e3f29203a9fbb6a8336e.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:helix-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-4290-cf362fe680ce",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ef7d26326a401fc1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-4290-cf362fe680ce:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "已核对的 Apache 2.0 摘录明确授予对上游原始作品的 Use 权；该摘录未覆盖其他可能适用的条款，不能据此推断未摘录条款的要求。",
+      "下游 LicenseRef-Custom 文本是 Helix Platform 服务协议，所列许可和限制针对 Helix Platform 组件。现有事实证明通过远程调用使用上游模型，但未证明该模型是 Helix Platform 组件，也未证明对下游对象实施了该协议所列的相关活动；因此不将这些条款套用于模型调用。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 29890,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 698,
+    "output_tokens_details": {
+      "reasoning_tokens": 373
+    },
+    "total_tokens": 30588,
+    "attribution": {
+      "items": {
+        "msg_007a9c3eb0aaf554016af53b9ec4b887d190071926fb8b9fb9": {
+          "input_tokens": 27820,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 27820,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_007a9c3eb0aaf554016af53b9ec4b887d1b4e85436835f5c8b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_007a9c3eb0aaf554016af53ba6260087d19f9bdb043fffbf95": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 325,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 325
+            }
+          ]
+        },
+        "rs_007a9c3eb0aaf554016af53ba60a2887d1ab9e950a61937329": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 373
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "af4626cb2565bd4b11576d1a94a1dbe7b598e992f220ad705b70e11c78aeb8e0",
+  "elapsed_seconds": 19.96
+}

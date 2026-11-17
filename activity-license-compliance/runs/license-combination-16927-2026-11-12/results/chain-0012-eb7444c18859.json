@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-0012-eb7444c18859",
+  "input_group_row": 12,
+  "aggregate_count": 447,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "447"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0012-eb7444c18859",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_under_order_form",
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0012-eb7444c18859:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0012-eb7444c18859:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer must pay OpenAI or its reseller applicable fees in the currency and according to the payment terms on the Order Form.",
+        "trigger": "applicable_fees_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_made"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI.txt 的已映射条款仅涉及客户向 OpenAI 或其转售方支付适用费用；Order Form、费用是否到期及支付履行情况未提供。",
+      "事实确认的是远程服务调用及 API 关联，不是代码修改或模型权重转移。现有 OpenAI 条款摘录未映射可据以判断远程调用限制的条款；不得将其 proprietary 标签推作通用许可条件。",
+      "Apache-2.0 摘录的授权针对 downstream 原始、修改或衍生作品；对象图只确认 API 调用/链接关系，未确认这些对象与 upstream 服务共享受约束范围。因此不据此认定许可冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0011-de3bd535bed6.json",
+  "original_case_id": "chain-0011-de3bd535bed6",
+  "original_request_sha256": "c035d7faee7a4c5cd01b9b1a917e2e74d00c22e48941cdffe50e9615428ec3f5",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0011-de3bd535bed6": "chain-0012-eb7444c18859",
+    "license-text:upstream:c9e0443a56323634": "license-text:upstream:c9e0443a56323634",
+    "license-text:downstream:2a07d0faff95278c": "license-text:downstream:2a07d0faff95278c",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/10": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/11"
+  }
+}

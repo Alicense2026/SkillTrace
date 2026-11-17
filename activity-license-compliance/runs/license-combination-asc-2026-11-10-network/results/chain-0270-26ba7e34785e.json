@@ -1,0 +1,178 @@
+{
+  "case_id": "chain-0270-26ba7e34785e",
+  "status": "SUCCESS",
+  "request_sha256": "e590316a61e85c42e74ea602bd9db39c9febebb689fa81a28fe6f87db3996faf",
+  "analysis": {
+    "case_id": "chain-0270-26ba7e34785e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices"
+          },
+          "S": {
+            "artifact": "chain-0270-26ba7e34785e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices"
+          },
+          "S": {
+            "artifact": "chain-0270-26ba7e34785e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:5dd080570db8ab13"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0270-26ba7e34785e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "A/S：Use upstream OriginalArtifact；BSD-2-Clause摘录以保留适用通知为条件；Apache-2.0授予下游Work的Use权但未否定该条件。已知发生Use；对象图未确立两许可对同一对象共同适用，故无相反要求或冲突对。来源：BSD条款L6-L7及Apache条款L66-L71。",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b",
+          "license-text:downstream:5dd080570db8ab13"
+        ],
+        "status": "CONDITIONS_TO_INHERIT"
+      }
+    ],
+    "limitations": [
+      "对象图标注代码纳入关系不等于已发布打包物；两许可的共同适用范围未知，未据此推定冲突。",
+      "BSD结构化规则要求保留适用通知，但所引摘录未给出通知的具体内容或完整履行条件；依赖具体分发行为的其他条款未在本次相关规则中建立。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对上游原始作品的使用保留适用通知。",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b"
+        ],
+        "subject": {
+          "artifact": "chain-0270-26ba7e34785e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "通知保留情况"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对上游原始作品的复制保留适用通知。",
+        "source_refs": [
+          "license-text:upstream:53ebd4ce8407108b"
+        ],
+        "subject": {
+          "artifact": "chain-0270-26ba7e34785e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": [
+          "通知保留情况"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18712,
+    "input_tokens_details": {
+      "cached_tokens": 18560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1168,
+    "output_tokens_details": {
+      "reasoning_tokens": 228
+    },
+    "total_tokens": 19880,
+    "attribution": {
+      "items": {
+        "msg_0345ba46bb0ef8c3016af30316355c87d196824bdd1cdc0ea9": {
+          "input_tokens": 16680,
+          "cached_tokens": 16530,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16680,
+              "cached_tokens": 16530,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0345ba46bb0ef8c3016af3031b2d4087d1a654448dcdfd3e17": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 940,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 940
+            }
+          ]
+        },
+        "rs_0345ba46bb0ef8c3016af3031b163c87d1a8e4fd34fd86e299": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 228
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.066,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

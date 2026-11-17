@@ -1,0 +1,237 @@
+{
+  "case_id": "chain-18434-43205f79590e",
+  "source_csv_line": 18435,
+  "row": {
+    "github_repo": "kawa.mcp",
+    "github_url": "https://github.com/codeawareness/kawa.mcp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ai.hashgrid/sdk",
+    "artifact_url": "https://github.com/hashgrid-labs/sdk",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/index.ts:3 ｜ 调用原文: import { Server } from '@modelcontextprotocol/sdk/server/index.js' ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/index.ts 真实 import 的 MCP SDK（Server、StdioServerTransport、各类 Schema），用于实现 MCP 服务器。",
+    "batch": "10201-12200",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "codeawareness/kawa.mcp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "9a18b8c81d537efb49be034e068a900d6f03d0203d9b77f1a4c31185c21450ed",
+    "filename": "_licenseref_full/texts/9a18b8c81d537efb49be034e068a900d6f03d0203d9b77f1a4c31185c21450ed.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:kawa.mcp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-18434-43205f79590e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-18434-43205f79590e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                {
+                  "any": [
+                    "personal_use",
+                    "research_use",
+                    "internal_organizational_use"
+                  ]
+                },
+                "interacting_with_Code_Awareness_tools"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-18434-43205f79590e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "offering_software_or_derivatives_as_a_hosted_service"
+          },
+          "S": {
+            "artifact": "chain-18434-43205f79590e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "offering_software_or_derivatives_as_a_hosted_service"
+          },
+          "S": {
+            "artifact": "chain-18434-43205f79590e:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "MIT文本摘录将许可授予置于“subject to the following conditions”之下，并另述版权及许可声明应包含于软件副本或实质部分；当前活动事实只明确上游Use和远程调用，未证明Copy或需传递副本的活动。不能据此认定通知义务已触发或未履行。",
+      "对象图确认API链接及远程调用，但scope_shared为未知；未证明两份许可约束同一对象。下游许可的托管服务限制针对提供软件或其衍生物作为托管服务，不能仅凭远程API调用判定触发。",
+      "下游许可用途许可条件涉及个人、研究或内部组织用途及与Code Awareness工具交互；这些用途事实未提供，且未明确下游Use活动是否发生。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用下游软件，须属于个人用途、研究用途或内部组织用途之一，并在与Code Awareness工具交互时进行。",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "subject": {
+          "artifact": "chain-18434-43205f79590e:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "personal_use",
+          "research_use",
+          "internal_organizational_use",
+          "interacting_with_Code_Awareness_tools"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若发生上游软件的复制，须在所有副本或实质部分中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "subject": {
+          "artifact": "chain-18434-43205f79590e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": [
+          "activity:Copy",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21719,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1590,
+    "output_tokens_details": {
+      "reasoning_tokens": 495
+    },
+    "total_tokens": 23309,
+    "attribution": {
+      "items": {
+        "msg_0b97497e8975dd13016af53e94ced087d1853235fc835bbca4": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b97497e8975dd13016af53e94ced087d1b7137314f41cba3c": {
+          "input_tokens": 19649,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19649,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b97497e8975dd13016af53e9e46e487d1b852204e7544665c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1095,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1095
+            }
+          ]
+        },
+        "rs_0b97497e8975dd13016af53e9e2b4087d1aabcda4ce5743e3c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 495
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "f3df9ff38ecb43c32f5c63f08c6271f69a24c04dfbafdf52e86961e6db40759f",
+  "elapsed_seconds": 35.26
+}

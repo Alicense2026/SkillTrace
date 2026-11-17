@@ -1,0 +1,98 @@
+{
+  "case_id": "chain-0068-16d7fabd7f41",
+  "input_group_row": 68,
+  "aggregate_count": 20,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "阿里云百炼服务特别说明",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "20"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0068-16d7fabd7f41",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "use_of_model_experience_generated_content"
+          },
+          "S": {
+            "artifact": "chain-0068-16d7fabd7f41:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e3ad1d1e0b6d0561"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_AGPL_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0068-16d7fabd7f41:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "A/S：Use / upstream 原始服务；摘录限制模型体验生成内容的商业化使用及向第三方提供、使用、传播或分发；事实仅确认远程服务调用和使用，未说明使用或传播生成内容，也未证明发生摘录所指行为，因此不构成已确认违反。来源：aliyun.txt L42-L45。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "status": "NOT_APPLICABLE"
+      },
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：ProvideSource / 下游修改版；AGPL第13条要求在修改了受覆盖程序且该版本支持网络交互、用户通过网络远程交互时提供对应源码获取机会；记录确认的是远程API服务调用且代码修改不适用，不是该修改版的网络交互，触发条件未成立。来源：LICENSE-AGPL-3.0-only.txt §13。",
+        "source_refs": [
+          "license-text:downstream:e3ad1d1e0b6d0561"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "阿里云摘录中的使用限制针对模型体验生成内容；本记录未说明是否生成或如何使用、提供输出，故仅能判断已知远程调用事实，不能进一步认定相关限制已触发或被违反。",
+      "AGPL §13摘录以修改受覆盖程序为前提；记录称代码修改不适用。若实际另有被修改的AGPL程序并由用户通过网络远程交互，需按该事实重新评估。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0066-9413a6b9dbea.json",
+  "original_case_id": "chain-0066-9413a6b9dbea",
+  "original_request_sha256": "0f2b760e8d49b99ad4a91ecc2dd98349fd7555859e56ee38b4c3c7c737b06611",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0066-9413a6b9dbea": "chain-0068-16d7fabd7f41",
+    "license-text:upstream:e0a6023d95b56568": "license-text:upstream:e0a6023d95b56568",
+    "license-text:downstream:e3ad1d1e0b6d0561": "license-text:downstream:e3ad1d1e0b6d0561",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/65": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/67"
+  }
+}

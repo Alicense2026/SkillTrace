@@ -1,0 +1,157 @@
+{
+  "case_id": "chain-0266-5cd53bb2d8af",
+  "status": "SUCCESS",
+  "request_sha256": "9680d1e78f3808faa41221a321533497a2fd81f72bb5adb785156d3a56e56453",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge_through_network_server",
+            "when": {
+              "all": [
+                "modified_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0266-5cd53bb2d8af:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:363cd04a67aff871"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "offer_corresponding_source_at_no_charge_through_network_server",
+            "when": {
+              "all": [
+                "modified_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_computer_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0266-5cd53bb2d8af:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "结构化规则对应 AGPL 第13节，原文将源码提供义务限定于修改后的程序支持远程交互且用户通过网络远程交互的情形。任务事实称调用为远程服务调用、代码修改不适用；这不证明上游程序已修改。",
+      "下游资产是否为修改后的程序、是否支持远程交互以及源码提供情况均未确定。API调用/链接关系本身不证明修改、分发或许可范围重叠；因此不据此认定冲突或违规。",
+      "许可证来源记录均匹配12条结构化规则，但本次仅采用与AGPL第13节网络源码提供相关的摘录。"
+    ],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该资产属于修改后的程序、该版本支持远程交互且用户通过计算机网络远程交互，须显著提供免费获取该版本对应源码的机会，并通过网络服务器提供源码访问。",
+        "source_refs": [
+          "license-text:downstream:363cd04a67aff871"
+        ],
+        "subject": {
+          "artifact": "chain-0266-5cd53bb2d8af:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_program",
+            "version_supports_remote_interaction",
+            "users_interact_remotely_through_computer_network"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_program",
+          "version_supports_remote_interaction",
+          "source_offer_fulfilled"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0266-5cd53bb2d8af"
+  },
+  "usage": {
+    "input_tokens": 17746,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1053,
+    "output_tokens_details": {
+      "reasoning_tokens": 304
+    },
+    "total_tokens": 18799,
+    "attribution": {
+      "items": {
+        "msg_08c8468e9d5275f0016af3026019b087d2abfa464ee41798f8": {
+          "input_tokens": 15714,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15714,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08c8468e9d5275f0016af30266113c87d2a374accee6f26cb5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 749,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 749
+            }
+          ]
+        },
+        "rs_08c8468e9d5275f0016af30265f5b487d28a69356d8394d024": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 304
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.018,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

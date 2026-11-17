@@ -1,0 +1,73 @@
+{
+  "case_id": "chain-0022-9b5c15090737",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 Gemini API 应限于专业或商业目的，不得作为消费用途。",
+      "source_refs": [
+        "license-text:upstream:fbac7b871a535a8b"
+      ],
+      "subject": {
+        "artifact": "chain-0022-9b5c15090737:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "professional_or_business_purpose",
+        "consumer_use"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "仅在服务可用地区访问；如向欧洲经济区、瑞士或英国用户提供 API 客户端，应仅使用付费服务。",
+      "source_refs": [
+        "license-text:upstream:fbac7b871a535a8b"
+      ],
+      "subject": {
+        "artifact": "chain-0022-9b5c15090737:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          {
+            "any": [
+              "access_service",
+              "make_api_client_available_to_users"
+            ]
+          }
+        ]
+      },
+      "unresolved_predicates": [
+        "available_region",
+        "api_client_available_to_users",
+        "users_in_eea_switzerland_or_uk",
+        "paid_service"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "不得利用服务开发与 Gemini API 或 Google AI Studio 竞争的模型，也不得尝试逆向工程、提取或复制服务组件（包括底层数据或模型参数权重）。",
+      "source_refs": [
+        "license-text:upstream:fbac7b871a535a8b"
+      ],
+      "subject": {
+        "artifact": "chain-0022-9b5c15090737:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "develop_competing_model",
+        "attempt_reverse_engineering",
+        "attempt_extract_service_component",
+        "attempt_replicate_service_component"
+      ]
+    }
+  ]
+}

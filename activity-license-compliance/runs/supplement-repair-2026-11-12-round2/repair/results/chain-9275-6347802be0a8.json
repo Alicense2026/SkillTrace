@@ -1,0 +1,203 @@
+{
+  "case_id": "chain-9275-6347802be0a8",
+  "source_csv_line": 9276,
+  "row": {
+    "github_repo": "autorocq",
+    "github_url": "https://github.com/nus-program-verification/autorocq",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "sr-lab/coqpyt",
+    "artifact_url": "https://github.com/sr-lab/coqpyt",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: proof-search/main.py:435 ｜ 调用原文: append Admitted. so CoqPyt can register it as an unproven proof. ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: vendored 源码，用于与 coq-lsp 交互的库",
+    "batch": "4001-4500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "nus-program-verification/autorocq",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "e5970a97108ff3e16ecd7cb693f71bc79fd104a7670d3a6dc8001146e48063e2",
+    "filename": "_licenseref_full/texts/e5970a97108ff3e16ecd7cb693f71bc79fd104a7670d3a6dc8001146e48063e2.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:AutoRocq-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "elapsed_seconds": 28.67,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/custom-license-16927-2026-11-12",
+  "relationship_weight": 1,
+  "original_error": "Invalid obligation values",
+  "analysis": {
+    "case_id": "chain-9275-6347802be0a8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:58ee529aad671b73"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-9275-6347802be0a8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:92cd041e74f471d9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "noncommercial_use",
+                "comply_with_GPLv3_terms"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-9275-6347802be0a8:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:92cd041e74f471d9"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "commercial_license_obtained",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-9275-6347802be0a8:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "For use of the downstream material, either the use must be non-commercial and comply with GPLv3 terms, or a commercial license must be obtained for commercial use.",
+        "source_refs": [
+          "license-text:downstream:92cd041e74f471d9"
+        ],
+        "subject": {
+          "artifact": "chain-9275-6347802be0a8:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "scope_shared",
+          "commercial_use",
+          "comply_with_GPLv3_terms",
+          "commercial_license_obtained"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图确认的是 API 链接及远程调用，不证明下游仓库源码被纳入、复制或使用；下游许可是否约束该调用仍不明确。",
+      "MIT摘录的通知条件要求在软件副本或实质部分中包含版权和许可通知。现有事实未确认相关复制或分发；结构化映射将 Use 许可条件关联到通知，但摘录本身不足以证明单纯 Use 即触发该通知义务，因此不据此认定违规。",
+      "下游非商业选项引用的 GPLv3 条款未随文本提供，商业许可的具体条件亦未提供；义务保留文本明确给出的替代路径，不推断缺失条款。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20958,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1167,
+    "output_tokens_details": {
+      "reasoning_tokens": 350
+    },
+    "total_tokens": 22125,
+    "attribution": {
+      "items": {
+        "msg_00b568a4afb90aec016af5842869f087d0a6849693cd7af520": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00b568a4afb90aec016af5842869f087d0b2ca236905328b5c": {
+          "input_tokens": 17482,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17482,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00b568a4afb90aec016af5842f52d487d0b6dd70092fb98d87": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 817,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 817
+            }
+          ]
+        },
+        "rs_00b568a4afb90aec016af5842f372887d0ac346e70bbdf18b0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 350
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3436,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

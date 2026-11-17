@@ -1,0 +1,219 @@
+{
+  "case_id": "chain-3182-2ee0a9f39fe2",
+  "source_csv_line": 3183,
+  "row": {
+    "github_repo": "fim-one",
+    "github_url": "https://github.com/fim-ai/fim-one",
+    "github_license": "LicenseRef-FIM-One",
+    "artifact_name": "rerank-multilingual-v3.0",
+    "artifact_url": "https://docs.cohere.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/fim_one/web/deps.py:868 ｜ 调用原文: model = os.environ.get(\"COHERE_RERANKER_MODEL\", \"rerank-multilingual-v3.0\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/fim_one/web/deps.py 中作为 rerank 模型默认值实际使用",
+    "batch": "1001-1500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "fim-ai/fim-one",
+    "license_label": "LicenseRef-FIM-One",
+    "sha256": "529097c20018019e691dd5775dc90e2c41646d6acaee4ef8c67b3e4020588a99",
+    "filename": "FIM+One+Source+Available+License.txt",
+    "evidence_file": "FIM+One+Source+Available+License.txt",
+    "acquisition": "User-supplied local original; RNA repository spelling resolved against dataset",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-3182-2ee0a9f39fe2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ba30ba10244f4ff5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_and_incorporation_comply_with_agreement_and_related_documentation_and_application_interfaces_with_api_saas_services"
+          },
+          "S": {
+            "artifact": "chain-3182-2ee0a9f39fe2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ba30ba10244f4ff5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+                "purpose_is_replicating_services_or_products_look_and_feel",
+                "purpose_is_benchmarking_or_competitive_analysis",
+                "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+              ]
+            },
+            "when": "access_or_use_services_or_products_or_output_or_develop_customer_application"
+          },
+          "S": {
+            "artifact": "chain-3182-2ee0a9f39fe2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b82e5b9ef12c03b2"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "internal_purposes_within_licensee_organization_or_affiliates"
+          },
+          "S": {
+            "artifact": "chain-3182-2ee0a9f39fe2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Cohere 的匹配原文限于 Commercial SaaS Agreement；当前事实确认的是 API 远程调用，但未提供访问用途、使用主体是否为 Cohere 直接竞争者、用户及协议合规情况，因此相关禁止条件不能判定已触发或已违反。",
+      "对象图确认 API 链接和远程调用，但 dependency、bundle、修改副本及共同产品范围均未知；API 调用不证明两份许可对同一对象适用，亦不证明代码或模型权重转移。",
+      "FIM One 对 Hosted Service 和 Competing Product 的限制并未由单纯调用 Cohere API 触发；没有提供 downstream 的网络服务、分发或竞争产品活动事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Cohere API 的使用及其在产品或服务中的纳入须符合协议和相关文档，并限于促进与 Cohere API SaaS Services 接口的应用；避免以服务、产品或输出构建或训练类似/竞争产品、复制其外观或进行基准测试/竞争分析，或使 Cohere 直接竞争者受益。",
+        "source_refs": [
+          "license-text:upstream:ba30ba10244f4ff5"
+        ],
+        "subject": {
+          "artifact": "chain-3182-2ee0a9f39fe2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "use_and_incorporation_comply_with_agreement_and_related_documentation_and_application_interfaces_with_api_saas_services",
+          "purpose_is_building_or_training_similar_or_competitive_product_or_service",
+          "purpose_is_replicating_services_or_products_look_and_feel",
+          "purpose_is_benchmarking_or_competitive_analysis",
+          "use_or_benefit_of_direct_cohere_competitor_as_reasonably_determined_by_cohere"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "FIM One 软件的使用须限于被许可人组织或其关联方内部目的。",
+        "source_refs": [
+          "license-text:downstream:b82e5b9ef12c03b2"
+        ],
+        "subject": {
+          "artifact": "chain-3182-2ee0a9f39fe2:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "internal_purposes_within_licensee_organization_or_affiliates"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 50625,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1486,
+    "output_tokens_details": {
+      "reasoning_tokens": 322
+    },
+    "total_tokens": 52111,
+    "attribution": {
+      "items": {
+        "msg_04b22197262ab637016af5864baa5087d08cb1bc8d78fed868": {
+          "input_tokens": 48555,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 48555,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04b22197262ab637016af5864baa5087d0abbc950f14e46e81": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04b22197262ab637016af58652418487d0b53366f5ca920a4d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1164,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1164
+            }
+          ]
+        },
+        "rs_04b22197262ab637016af5865225f087d094b81852695285a6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 322
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 43.54
+}

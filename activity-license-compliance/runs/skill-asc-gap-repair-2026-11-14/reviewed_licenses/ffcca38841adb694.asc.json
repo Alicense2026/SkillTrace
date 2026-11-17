@@ -1,0 +1,526 @@
+{
+  "sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+  "files": [
+    "PolyForm+NonCommercial+1.0.0.txt"
+  ],
+  "labels": [
+    "PolyForm-Noncommercial-1.0.0"
+  ],
+  "relationship_sides": 29,
+  "status": "EXTRACTED_SELF_CHECKED",
+  "chunks": 1,
+  "pending_chunks": [],
+  "coverage_notes": [
+    {
+      "chunk": "ffcca38841adb694-001",
+      "note": "The source identifies the licensed material as software; no service, input/output, privacy, security, or fee obligations are stated in the target text."
+    },
+    {
+      "chunk": "ffcca38841adb694-001",
+      "note": "The Noncommercial Purposes section does not define what counts as noncommercial; no additional test has been inferred."
+    },
+    {
+      "chunk": "ffcca38841adb694-001",
+      "note": "Fair-use rights depend on law and are not defined by the license."
+    },
+    {
+      "chunk": "ffcca38841adb694-001",
+      "note": "The statement that these terms imply no other licenses is recorded as a scope boundary, not as a prohibition on conduct or a grant of additional rights."
+    },
+    {
+      "chunk": "ffcca38841adb694-001",
+      "note": "The supplied chunk contains the target text; no external incorporated document is needed to model the extracted clauses."
+    }
+  ],
+  "baseline_status": "EXTRACTED_SELF_CHECKED",
+  "baseline_paragraph_status_counts": {
+    "CONTEXT": 22,
+    "MODELED": 13,
+    "NONOPERATIVE": 2
+  },
+  "pending_repair_chunks": [],
+  "repair_dispositions": {},
+  "rules": [
+    {
+      "rule_id": "seg-b4f30fa3585fe249b387e358",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "agreed_to_terms"
+        }
+      },
+      "source_lines": [
+        7,
+        9
+      ],
+      "source_excerpt": "In order to get any license under these terms, you must agree\nto them as both strict obligations and conditions to all\nyour licenses.",
+      "clause_label": "license_access_requires_acceptance",
+      "actor_role": "licensee",
+      "scope_note": "Acceptance section: agreement to the terms is a strict obligation and condition of all licenses under them.",
+      "condition_explanation": "agreed_to_terms means the licensee agrees to these terms; this is a condition of obtaining any license.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-58477a12feb98dbded6864e0",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "permitted_purpose"
+        }
+      },
+      "source_lines": [
+        13,
+        20
+      ],
+      "source_excerpt": "The licensor grants you a copyright license for the\nsoftware to do everything you might do with the software\nthat would otherwise infringe the licensor's copyright\nin it for any permitted purpose.  However, you may\nonly distribute the software according to [Distribution\nLicense](#distribution-license) and make changes or new works\nbased on the software according to [Changes and New Works\nLicense](#changes-and-new-works-license).",
+      "clause_label": "copyright_use_for_permitted_purpose",
+      "actor_role": "licensee",
+      "scope_note": "Copyright License grants use of the software for any permitted purpose. Distribution and making changes or new works are separately governed by their respective sections.",
+      "condition_explanation": "permitted_purpose is determined by the Noncommercial Purposes, Personal Uses, and Noncommercial Organizations sections. This clause does not independently authorize distribution or making changes or new works.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-6ed1c7a10850d18afd7eb566",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "permitted_purpose",
+              "notices_provided_to_recipients"
+            ]
+          }
+        }
+      },
+      "source_lines": [
+        24,
+        28
+      ],
+      "source_excerpt": "The licensor grants you an additional copyright license\nto distribute copies of the software.  Your license\nto distribute covers distributing the software with\nchanges and new works permitted by [Changes and New Works\nLicense](#changes-and-new-works-license).",
+      "clause_label": "distribute_software_copies",
+      "actor_role": "licensee",
+      "scope_note": "Distribution License grants distribution of copies of the software, including changes and new works permitted by the Changes and New Works License. The Notices section imposes recipient notice duties when a copy is provided.",
+      "condition_explanation": "permitted_purpose is determined by the purpose sections. notices_provided_to_recipients means each recipient of a copy of any part receives a copy of these terms or their URL and copies of any licensor-provided plain-text lines beginning `Required Notice:`.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Provide each recipient of a copy of any part of the software a copy of these terms or their URL, and copies of any licensor-provided plain-text lines beginning `Required Notice:`.",
+          "actor": "licensee distributing the copy",
+          "object": "copy of the software and accompanying terms and required-notice material",
+          "trigger": "Whenever the licensee provides anyone a copy of any part of the software."
+        }
+      ]
+    },
+    {
+      "rule_id": "seg-84e900b02133680eecf6b85b",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Distribute",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "notices_provided_to_recipients"
+        }
+      },
+      "source_lines": [
+        32,
+        36
+      ],
+      "source_excerpt": "You must ensure that anyone who gets a copy of any part of\nthe software from you also gets a copy of these terms or the\nURL for them above, as well as copies of any plain-text lines\nbeginning with `Required Notice:` that the licensor provided\nwith the software.  For example:",
+      "clause_label": "recipient_notice_delivery_duty",
+      "actor_role": "licensee",
+      "scope_note": "Notices section requires notice material when the licensee provides someone a copy of any part of the software; this duty is a condition on that distribution.",
+      "condition_explanation": "notices_provided_to_recipients means the recipient gets a copy of these terms or their URL and copies of any licensor-provided plain-text lines beginning `Required Notice:`.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Give the recipient a copy of these terms or their URL, and copies of any licensor-provided plain-text lines beginning `Required Notice:`.",
+          "actor": "licensee providing the copy",
+          "object": "copy of any part of the software and accompanying terms and required notices",
+          "trigger": "Whenever anyone gets a copy of any part of the software from the licensee."
+        }
+      ]
+    },
+    {
+      "rule_id": "seg-f7535ccab12e69becdb2c9f3",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Modify",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "permitted_purpose"
+        }
+      },
+      "source_lines": [
+        42,
+        44
+      ],
+      "source_excerpt": "The licensor grants you an additional copyright license to\nmake changes and new works based on the software for any\npermitted purpose.",
+      "clause_label": "modify_software",
+      "actor_role": "licensee",
+      "scope_note": "Changes and New Works License grants making changes to the software for any permitted purpose.",
+      "condition_explanation": "permitted_purpose is determined by the Noncommercial Purposes, Personal Uses, and Noncommercial Organizations sections.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-e5f6b82a9bb1ec7c835c6fcb",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "CreateDerivative",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "permitted_purpose"
+        }
+      },
+      "source_lines": [
+        42,
+        44
+      ],
+      "source_excerpt": "The licensor grants you an additional copyright license to\nmake changes and new works based on the software for any\npermitted purpose.",
+      "clause_label": "create_new_work_based_on_software",
+      "actor_role": "licensee",
+      "scope_note": "Changes and New Works License grants making new works based on the software for any permitted purpose.",
+      "condition_explanation": "permitted_purpose is determined by the Noncommercial Purposes, Personal Uses, and Noncommercial Organizations sections.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-95d137a62199d20e28cad8fe",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "patent_claim_licensable_by_licensor_and_infringed_by_use"
+        }
+      },
+      "source_lines": [
+        48,
+        50
+      ],
+      "source_excerpt": "The licensor grants you a patent license for the software that\ncovers patent claims the licensor can license, or becomes able\nto license, that you would infringe by using the software.",
+      "clause_label": "patent_license_for_covered_use",
+      "actor_role": "licensee",
+      "scope_note": "Patent License covers patent claims the licensor can license, or becomes able to license, that the licensee would infringe by using the software. Patent Defense separately provides for termination in specified circumstances.",
+      "condition_explanation": "patent_claim_licensable_by_licensor_and_infringed_by_use means the claim is licensable by the licensor and would be infringed by the licensee's use of the software.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-de6422811802ebc33ffd04f4",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "purpose_is_noncommercial"
+        }
+      },
+      "source_lines": [
+        54,
+        54
+      ],
+      "source_excerpt": "Any noncommercial purpose is a permitted purpose.",
+      "clause_label": "noncommercial_purpose_is_permitted",
+      "actor_role": "licensee",
+      "scope_note": "Noncommercial Purposes section makes any noncommercial purpose a permitted purpose for the licensed software.",
+      "condition_explanation": "purpose_is_noncommercial means the purpose is noncommercial; the text supplies no further test.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-c389500486f8d963d0ccd394",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "personal_use_for_listed_purpose",
+              "benefits_public_knowledge_if_research_experiment_or_testing",
+              "no_anticipated_commercial_application"
+            ]
+          }
+        }
+      },
+      "source_lines": [
+        58,
+        62
+      ],
+      "source_excerpt": "Personal use for research, experiment, and testing for\nthe benefit of public knowledge, personal study, private\nentertainment, hobby projects, amateur pursuits, or religious\nobservance, without any anticipated commercial application,\nis use for a permitted purpose.",
+      "clause_label": "specified_personal_uses_permitted",
+      "actor_role": "licensee",
+      "scope_note": "Personal Uses section treats the specified personal uses as permitted purposes, subject to its stated qualifications.",
+      "condition_explanation": "personal_use_for_listed_purpose means personal research, experiment, testing, personal study, private entertainment, hobby projects, amateur pursuits, or religious observance. For research, experiment, and testing, the use must benefit public knowledge. no_anticipated_commercial_application means there is no anticipated commercial application.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-df0f8dd1be7e771afbfb4d67",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "user_is_listed_organization_type"
+        }
+      },
+      "source_lines": [
+        66,
+        71
+      ],
+      "source_excerpt": "Use by any charitable organization, educational institution,\npublic research organization, public safety or health\norganization, environmental protection organization,\nor government institution is use for a permitted purpose\nregardless of the source of funding or obligations resulting\nfrom the funding.",
+      "clause_label": "specified_organizations_permitted",
+      "actor_role": "licensee",
+      "scope_note": "Noncommercial Organizations section makes use by the listed organization types a permitted purpose regardless of the source of funding or obligations resulting from funding.",
+      "condition_explanation": "user_is_listed_organization_type means the user is a charitable organization, educational institution, public research organization, public safety or health organization, environmental protection organization, or government institution. Funding source and obligations resulting from funding do not defeat this condition.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-f38b7589cd635e0b5c506b9e",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "PERMITTED",
+          "when": "use_is_fair_use_under_law",
+          "requires": true
+        }
+      },
+      "source_lines": [
+        75,
+        76
+      ],
+      "source_excerpt": "You may have \"fair use\" rights for the software under the\nlaw. These terms do not limit them.",
+      "clause_label": "fair_use_not_limited",
+      "actor_role": "licensee",
+      "scope_note": "Fair Use section states that the terms do not limit fair-use rights the licensee may have under law; it does not define or expand those rights.",
+      "condition_explanation": "use_is_fair_use_under_law means the use qualifies as fair use under applicable law.",
+      "obligation_items": []
+    },
+    {
+      "rule_id": "seg-5071b9f85b48783ea640a6f9",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Sublicense",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        }
+      },
+      "source_lines": [
+        80,
+        83
+      ],
+      "source_excerpt": "These terms do not allow you to sublicense or transfer any of\nyour licenses to anyone else, or prevent the licensor from\ngranting licenses to anyone else.  These terms do not imply\nany other licenses.",
+      "clause_label": "no_sublicensing_or_transfer",
+      "actor_role": "licensee",
+      "scope_note": "No Other Rights section prohibits sublicensing or transferring any license granted to the licensee. The section also says that it does not prevent the licensor from granting licenses to others and that these terms imply no other licenses.",
+      "condition_explanation": "The restriction applies to any license granted to the licensee for the software.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not sublicense or transfer any license granted to the licensee under these terms.",
+          "actor": "licensee",
+          "object": "licensee's licenses for the software",
+          "trigger": "At all times under these terms."
+        }
+      ]
+    },
+    {
+      "rule_id": "seg-10c388099a2464b05d5ec213",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "patent_license_terminated_by_patent_claim",
+          "requires": true
+        }
+      },
+      "source_lines": [
+        87,
+        91
+      ],
+      "source_excerpt": "If you make any written claim that the software infringes or\ncontributes to infringement of any patent, your patent license\nfor the software granted under these terms ends immediately. If\nyour company makes such a claim, your patent license ends\nimmediately for work on behalf of your company.",
+      "clause_label": "patent_license_ends_on_patent_claim",
+      "actor_role": "licensee",
+      "scope_note": "Patent Defense terminates the licensee's patent license immediately after the licensee makes a written claim that the software infringes or contributes to infringement of any patent. If the licensee's company makes such a claim, the patent license ends immediately for work on behalf of that company.",
+      "condition_explanation": "patent_license_terminated_by_patent_claim means either the licensee made the specified written patent claim, terminating the licensee's patent license, or the licensee's company made such a claim, terminating that license for work on behalf of the company. Company has the definition supplied in the license.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not rely on the terminated patent license for covered use.",
+          "actor": "licensee",
+          "object": "software and the terminated patent license",
+          "trigger": "Immediately after the licensee makes the specified written patent claim; for a claim by the licensee's company, only for work on behalf of that company."
+        }
+      ]
+    },
+    {
+      "rule_id": "seg-d2d7d34bfc7b92547d0078b0",
+      "license_id": "PolyForm+NonCommercial+1.0.0.txt",
+      "source_aliases": [
+        "PolyForm+NonCommercial+1.0.0.txt"
+      ],
+      "source_sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "first_written_notice_of_violation_or_unlicensed_action",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "full_compliance_with_terms_within_32_days_of_receiving_notice",
+                  "practical_steps_taken_to_correct_past_violations_within_32_days_of_receiving_notice"
+                ]
+              },
+              "not_first_written_notice_of_violation_or_unlicensed_action"
+            ]
+          }
+        }
+      },
+      "source_lines": [
+        95,
+        101
+      ],
+      "source_excerpt": "The first time you are notified in writing that you have\nviolated any of these terms, or done anything with the software\nnot covered by your licenses, your licenses can nonetheless\ncontinue if you come into full compliance with these terms,\nand take practical steps to correct past violations, within\n32 days of receiving notice.  Otherwise, all your licenses\nend immediately.",
+      "clause_label": "violation_cure_or_license_termination",
+      "actor_role": "licensee",
+      "scope_note": "Violations section provides a cure path after the first written notice. The licenses can continue if both stated cure steps occur within 32 days after receipt; otherwise all licenses end immediately.",
+      "condition_explanation": "first_written_notice_of_violation_or_unlicensed_action means the first written notification that the licensee violated a term or did something with the software not covered by its licenses. The cure requires both full compliance and practical steps to correct past violations within 32 days of receiving notice. Without that timely cure, all licenses end immediately.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Come into full compliance with the terms and take practical steps to correct past violations.",
+          "actor": "licensee",
+          "object": "licensee's conduct involving the software and past violations",
+          "trigger": "After the first written notice of a violation or unlicensed action; both steps must be completed within 32 days of receiving notice to preserve continuation of the licenses."
+        }
+      ]
+    }
+  ]
+}

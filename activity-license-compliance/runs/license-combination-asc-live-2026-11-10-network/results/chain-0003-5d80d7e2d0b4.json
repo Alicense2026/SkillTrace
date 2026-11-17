@@ -1,0 +1,216 @@
+{
+  "case_id": "chain-0003-5d80d7e2d0b4",
+  "status": "SUCCESS",
+  "request_sha256": "6d84d39a1516b05ec85f07478c857bbf70123786dea0cb97f1dd16586c31b7dd",
+  "analysis": {
+    "case_id": "chain-0003-5d80d7e2d0b4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+            "kind": "DerivativeWork"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use；Apache-2.0 对上游原始作品授予许可；MIT 对下游原始作品的使用以保留版权及许可声明为条件；事实仅确认远程调用及使用，API链接不证明许可范围重叠或下游作品包含上游作品。两项条件可并行履行，无相反约束；来源为对应许可摘录。",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c",
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "status": "CONDITIONS_TO_INHERIT"
+      }
+    ],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用对象属于 MIT 许可的软件或其适用部分，保留版权声明及许可声明。",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "subject": {
+          "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "复制 MIT 许可软件或其适用实质部分时，随副本包含版权声明及许可声明。",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "subject": {
+          "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Copy",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:Copy",
+          "scope_shared",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "记录确认的是远程服务调用（修改不适用）及 API 链接关系；不证明下游包含、修改或分发上游作品，也不证明两许可约束同一对象。",
+      "结构化候选摘录未显示 Apache-2.0 的通知/分发条件或 MIT 对远程调用、提供网络服务的特定条款；不据此推断其不存在。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 20377,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1284,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 21661,
+    "attribution": {
+      "items": {
+        "msg_082b147b90d85e7c016af2f66a820087d186395875293a924d": {
+          "input_tokens": 18345,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18345,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_082b147b90d85e7c016af2f66b6c9487d18bfa3d8e8eec3df4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1284,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1284
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 26.497,
+  "auto_applied": false,
+  "aggregate_count": 1215
+}

@@ -1,0 +1,505 @@
+{
+  "case_id": "skill-00123",
+  "csv_row": 124,
+  "source_excel_row": "213",
+  "status": "SUCCESS",
+  "request_sha256": "a1b38ef6979c2480421af7314d5722c06eeb305d41ac7f6ebb837c3f8dafe55d",
+  "analysis": {
+    "case_id": "skill-00123",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00123:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00123:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "patent_license_for_that_work_has_terminated",
+            "when": "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+          },
+          "S": {
+            "artifact": "skill-00123:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": true,
+            "when": "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+          },
+          "S": {
+            "artifact": "skill-00123:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00123:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00123:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_reproduction_and_distribution_of_work_otherwise_complies_with_license",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-00123:downstream",
+            "kind": "DerivativeWork"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "可信记录表明下游通过远程服务调用上游；未证明复制、分发、修改、合并或再许可，也未证明上游材料与下游代码属于同一许可对象。",
+      "MIT摘录中的通知条件限于复制或实质部分；单纯远程调用不触发。Apache相关条件性使用规则保留其条款触发条件；没有事实表明发生专利诉讼、专利权利要求适用或商标使用。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人仅在相关贡献者专利权利要求适用于该贡献及其与提交作品的组合范围内，享有该专利许可。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-00123:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人不得在该作品专利许可因条款所述专利诉讼而终止后，依赖该专利许可使用该作品。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-00123:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "all",
+        "unresolved_predicates": [
+          "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+          "patent_license_for_that_work_has_terminated"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人使用许可方商标、商品名或产品名时，仅限合理且惯常地说明作品来源，或复现NOTICE文件内容。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-00123:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人不得将许可方商标、商品名、服务标志或产品名用于合理且惯常地说明作品来源或复现NOTICE文件内容以外的用途。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-00123:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "use_of_licensor_names_or_marks"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人使用下游修改对象时，须遵守Apache许可对底层作品适用的条件。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-00123:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人使用下游衍生作品时，须遵守Apache许可对底层作品适用的条件。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-00123:downstream",
+          "kind": "DerivativeWork"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "MIT允许使用；此项未规定单独使用义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明复制；通知条件仅适用于副本或实质部分。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明修改上游软件或形成其副本。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明合并上游软件。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明发布上游软件副本或实质部分。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明分发上游软件副本或实质部分。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明再许可上游软件。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明出售上游软件副本。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明复制下游许可对象。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明创作下游许可对象的衍生作品。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明再许可下游许可对象。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明分发下游许可对象。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "专利许可范围条件作为使用时的条件义务保留；适用专利权利要求未知。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明出售下游许可对象。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "专利诉讼导致许可终止的条件保留；未证明发生该诉讼或终止。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明复制下游许可对象或向接收者分发副本。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明分发下游许可对象或衍生作品。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "修改对象使用所须遵守的Apache条件已保留为条件义务。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          5
+        ],
+        "reason": "衍生作品使用所须遵守的Apache条件已保留为条件义务。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "商标使用许可范围及例外条件作为条件义务保留。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "对商标等名称标志的限制已保留；是否使用未知。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明分发时收费提供支持、保证、赔偿或其他责任义务。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明分发下游衍生作品。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明分发修改文件。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明以源码形式分发衍生作品。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证明NOTICE文件随作品分发或分发衍生作品。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "修改对象使用时遵守Apache许可条件的义务与D010合并保留。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00123-1794596347636082000-2.json",
+  "usage": {
+    "input_tokens": 26566,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3683,
+    "output_tokens_details": {
+      "reasoning_tokens": 282
+    },
+    "total_tokens": 30249,
+    "attribution": {
+      "items": {
+        "msg_09a6aa2a6a440d8d016af75e3ddf3887d0a6ff0f58e94475e9": {
+          "input_tokens": 23842,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23842,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09a6aa2a6a440d8d016af75e3ddf3887d0b96d9b78e6585d4f": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09a6aa2a6a440d8d016af75e437c0087d0ac5be6b14eb59c33": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 3401,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 3401
+            }
+          ]
+        },
+        "rs_09a6aa2a6a440d8d016af75e43603c87d0a366a704483c7c65": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 282
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

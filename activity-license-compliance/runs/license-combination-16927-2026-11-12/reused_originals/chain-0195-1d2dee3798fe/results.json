@@ -1,0 +1,190 @@
+{
+  "case_id": "chain-0195-1d2dee3798fe",
+  "status": "SUCCESS",
+  "request_sha256": "d9ba2bf371b7b07219ab256e4e389e159f85ef743de62be9f37cc870609b0502",
+  "analysis": {
+    "case_id": "chain-0195-1d2dee3798fe",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0195-1d2dee3798fe:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-0195-1d2dee3798fe:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:43c0428247497593"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0195-1d2dee3798fe:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0195-1d2dee3798fe:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the applicable Anthropic service terms when using the Services.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0195-1d2dee3798fe:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Comply with the applicable Anthropic service terms when remotely interacting with the Services.",
+        "trigger": "activity:RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0195-1d2dee3798fe:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Retain applicable copyright and permission notices in copies, if the ISC-licensed software is used.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_use",
+          "retain_applicable_notices"
+        ],
+        "source_refs": [
+          "license-text:downstream:43c0428247497593"
+        ]
+      }
+    ],
+    "limitations": [
+      "The upstream excerpt grants permission to use Anthropic Services subject to the Terms; it does not establish a grant to copy, modify, or distribute provider software or model weights.",
+      "The ISC excerpt conditions specified permissions on retaining notices. The record establishes remote service use and an API/link relation, but does not establish use of the downstream ISC software or that both licenses govern the same object; no license-license conflict is supported.",
+      "The service-terms excerpt does not provide the full set of terms needed to assess whether the applicable conditions have been fulfilled."
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 17493,
+    "input_tokens_details": {
+      "cached_tokens": 17280,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1158,
+    "output_tokens_details": {
+      "reasoning_tokens": 179
+    },
+    "total_tokens": 18651,
+    "attribution": {
+      "items": {
+        "msg_0568509f858a7f5b016af2ff532ebc87d2af37a2faa021c647": {
+          "input_tokens": 15461,
+          "cached_tokens": 15250,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15461,
+              "cached_tokens": 15250,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0568509f858a7f5b016af2ff56f60087d286ca5b9c800a4dcf": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 979,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 979
+            }
+          ]
+        },
+        "rs_0568509f858a7f5b016af2ff56df1087d2a3b8ea73f8476499": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 179
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 23.812,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

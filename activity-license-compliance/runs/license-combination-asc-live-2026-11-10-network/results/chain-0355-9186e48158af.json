@@ -1,0 +1,221 @@
+{
+  "case_id": "chain-0355-9186e48158af",
+  "status": "SUCCESS",
+  "request_sha256": "dba9dcdd00ea6ae893731ff6efae2bd0a7eb791ea5f357a0d7cbd18cfeaa0bf7",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modify_upstream_program",
+                "remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0355-9186e48158af:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modify_upstream_program",
+                "remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0355-9186e48158af:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": "copy_downstream_software_or_substantial_portion"
+          },
+          "S": {
+            "artifact": "chain-0355-9186e48158af:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": "distribute_downstream_software_or_substantial_portion"
+          },
+          "S": {
+            "artifact": "chain-0355-9186e48158af:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "AGPL-3.0第13条摘录将网络源代码提供义务限定于修改后的程序支持远程交互；可信记录注明未修改，故该触发条件目前不成立。代码纳入或远程调用关系本身不证明对上游程序作了修改。",
+      "MIT条款要求在软件副本或实质部分中包含版权及许可通知；现有事实未确认复制、分发了下游MIT软件或其副本/实质部分。不得将上游组件的复制事实直接归给下游MIT对象。",
+      "仅据已提供的结构化摘录和对象图判断；未据此认定分发、网络服务、源代码提供或相应通知已发生。"
+    ],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若修改的上游程序支持远程交互，须向通过计算机网络远程交互的用户显著提供免费获取该版本对应源代码的机会。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "subject": {
+          "artifact": "chain-0355-9186e48158af:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modify_upstream_program",
+            "remote_interaction"
+          ]
+        },
+        "unresolved_predicates": [
+          "modify_upstream_program",
+          "remote_interaction"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "复制下游MIT软件或其实质部分时，在副本中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "subject": {
+          "artifact": "chain-0355-9186e48158af:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "copy_downstream_software_or_substantial_portion",
+        "unresolved_predicates": [
+          "copy_downstream_software_or_substantial_portion",
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "分发下游MIT软件或其实质部分时，在副本中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "subject": {
+          "artifact": "chain-0355-9186e48158af:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "distribute_downstream_software_or_substantial_portion",
+        "unresolved_predicates": [
+          "distribute_downstream_software_or_substantial_portion",
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0355-9186e48158af"
+  },
+  "usage": {
+    "input_tokens": 19481,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1476,
+    "output_tokens_details": {
+      "reasoning_tokens": 277
+    },
+    "total_tokens": 20957,
+    "attribution": {
+      "items": {
+        "msg_040d029d876c5642016af305b49df487d2b81441797d6abdd3": {
+          "input_tokens": 17449,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17449,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_040d029d876c5642016af305ba1b2487d294552998b1294587": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1199,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1199
+            }
+          ]
+        },
+        "rs_040d029d876c5642016af305ba040487d290282c1233d39b5b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 277
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 32.827,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

@@ -1,0 +1,60 @@
+{
+  "request_sha256": "15e09ef043e229bd7b4a81968c3216c1956a9e605a4d5112fde1f2420987ae29",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 56,
+        "end_line": 58,
+        "clause_label": "GitHub public-repository use; limited platform permission",
+        "activities": [
+          "Use",
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "within_github_public_repository_terms"
+        },
+        "actor_role": "GitHub public-repository user",
+        "scope_note": "The text recognizes only the viewing and forking that GitHub's Terms of Service provide for a public repository, and only on the GitHub platform. This concerns the educational content, generation skills, studies, and historical forms described in the license; it does not grant rights beyond the applicable GitHub terms.",
+        "condition_explanation": "within_github_public_repository_terms means the activity is within the permissions and conditions supplied by GitHub's Terms of Service for a public repository. Those terms are not included here; no broader permission is stated."
+      },
+      {
+        "start_line": 60,
+        "end_line": 66,
+        "clause_label": "Uses prohibited without prior written permission",
+        "activities": [
+          "Copy",
+          "Distribute",
+          "Use",
+          "Combine",
+          "ProvideNetworkService",
+          "CreateDerivative",
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "owner_prior_written_permission"
+          }
+        },
+        "actor_role": "recipient or other user of the covered content",
+        "scope_note": "Without the owner's prior written permission, the text forbids reproducing, redistributing, or republishing the content; using it in another product, service, or website; deploying it to another instance or database; creating derivative works (including translations, adaptations, and extracted question banks or answer keys); using it as machine-learning training data; and extracting it from git history, a fork, or an earlier repository copy. Covered content includes the educational content and compiled SQL forms, generation skills, studies, and historical forms identified in the text. The listed activity mappings reflect those express restrictions; they do not create separate grants or reach unrelated artifacts.",
+        "condition_explanation": "owner_prior_written_permission means the owner has given prior written permission. The prohibition applies when that permission is absent; the text does not specify what permission would authorize."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a content-specific all-rights-reserved notice, not a general software license. It expressly distinguishes this material from generic engine source code, which it says is covered by a separate PolyForm license; that separate license is not supplied here.",
+      "The text names GitHub's Terms of Service but does not include them. The scope and conditions of viewing and forking therefore cannot be determined beyond the stated public-repository, GitHub-platform limitation.",
+      "No permission to charge, sell, sublicense, provide source, or otherwise exploit the content is granted by silence. The express restrictions on use in another product, service, or website do not state a general rule for other unlisted activities.",
+      "The French and English passages state corresponding restrictions; the English passage is cited."
+    ]
+  }
+}

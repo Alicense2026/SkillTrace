@@ -1,0 +1,141 @@
+{
+  "case_id": "chain-0233-1af07f83dd9b",
+  "status": "SUCCESS",
+  "request_sha256": "feecf3d5749aea1d4da4cd9bd9eb8e459fba73f1cfb64b983a67f1ece5c09521",
+  "analysis": {
+    "case_id": "chain-0233-1af07f83dd9b",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1af07f83dd9b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:716d8b602d8c0b68"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1af07f83dd9b:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "阿里云摘录将限制关联至模型体验等功能中的生成内容；虽已确认远程服务调用和使用，但事实未说明是否属于该功能或是否涉及生成内容，以及是否发生摘录所列的非体验用途、商业化使用或向第三方提供/传播/分发。因此保留条件，不认定违规。",
+      "对象图仅确认下游与上游存在API链接/调用关系；是否为许可共同约束的同一对象或落入CC许可范围未知。CC摘录仅提供授权范围及条件概述，未提供足以判定该调用行为受其约束的具体条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0233-1af07f83dd9b:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若该使用属于摘录所述模型体验等功能并涉及生成内容，仅将生成内容用于体验模型效果；不得用于其他目的或商业化，不得以任何形式提供给第三方或在第三方平台使用、传播或分发。",
+        "trigger": {
+          "all": [
+            true,
+            "conduct_matches_prohibition_in_excerpt"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21862,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 948,
+    "output_tokens_details": {
+      "reasoning_tokens": 271
+    },
+    "total_tokens": 22810,
+    "attribution": {
+      "items": {
+        "msg_0df9edabc94e5d4b016af300d6557c87d1aeed658fc63aab92": {
+          "input_tokens": 19830,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19830,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0df9edabc94e5d4b016af300dbb3e887d1b1b433506e007429": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 677,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 677
+            }
+          ]
+        },
+        "rs_0df9edabc94e5d4b016af300db982c87d1ba8e4fc95ec57c4c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 271
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.05,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

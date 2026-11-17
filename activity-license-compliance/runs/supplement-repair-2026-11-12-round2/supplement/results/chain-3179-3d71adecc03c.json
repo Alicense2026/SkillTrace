@@ -1,0 +1,195 @@
+{
+  "case_id": "chain-3179-3d71adecc03c",
+  "source_csv_line": 3180,
+  "row": {
+    "github_repo": "fim-one",
+    "github_url": "https://github.com/fim-ai/fim-one",
+    "github_license": "LicenseRef-FIM-One",
+    "artifact_name": "gpt-4o",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: evals/harness.py:455 ｜ 调用原文: model=os.environ.get(\"LLM_MODEL\", \"gpt-4o\"), ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: examples/quickstart.py 中作为 LLM_MODEL 默认值，实际传给 OpenAICompatibleLLM 调用",
+    "batch": "1001-1500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "fim-ai/fim-one",
+    "license_label": "LicenseRef-FIM-One",
+    "sha256": "529097c20018019e691dd5775dc90e2c41646d6acaee4ef8c67b3e4020588a99",
+    "filename": "FIM+One+Source+Available+License.txt",
+    "evidence_file": "FIM+One+Source+Available+License.txt",
+    "acquisition": "User-supplied local original; RNA repository spelling resolved against dataset",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-3179-3d71adecc03c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_under_order_form",
+            "when": "applicable_fees_are_due"
+          },
+          "S": {
+            "artifact": "chain-3179-3d71adecc03c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:56e89a9a29abb6ee"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "internal_purposes_within_licensee_organization_or_affiliates",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-3179-3d71adecc03c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-3179-3d71adecc03c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Pay applicable fees under the Order Form when due.",
+        "trigger": "applicable_fees_are_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_are_due",
+          "fee_payment"
+        ],
+        "source_refs": [
+          "license-text:upstream:cfcfd21e4b98f830"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-3179-3d71adecc03c:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the FIM One Software only for internal purposes within the licensee’s organization or its Affiliates.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "internal_purposes_within_licensee_organization_or_affiliates"
+        ],
+        "source_refs": [
+          "license-text:downstream:56e89a9a29abb6ee"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游 OpenAI 原文摘录仅涵盖费用与付款；未提供足以判定 API 使用许可范围或用途限制的条款，故不推断此类义务。",
+      "可信事实确认对 gpt-4o 的远程调用及 API 链接，但对象图未确认 FIM One 软件被使用、修改、分发、组合或用于提供托管服务。下游许可证对相关活动的适用性因此未确定。",
+      "已提供的 FIM One 托管服务限制以向第三方提供该软件托管服务等条件为触发；远程调用 OpenAI API 本身不能证明该触发条件成立。",
+      "OpenAI 费用条款规定客户支付适用费用，但未提供订单表或费用到期、支付情况；未据此认定收费行为或违规。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 26833,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1219,
+    "output_tokens_details": {
+      "reasoning_tokens": 407
+    },
+    "total_tokens": 28052,
+    "attribution": {
+      "items": {
+        "msg_0056677ff8e0ee41016af58620c44487d08d6d5c6411c26e68": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0056677ff8e0ee41016af58620c44487d09d12410b2e9c1d8a": {
+          "input_tokens": 24763,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 24763,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0056677ff8e0ee41016af586289a6887d0bfea9454838f8d22": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 812,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 812
+            }
+          ]
+        },
+        "rs_0056677ff8e0ee41016af586287e8c87d0ae0b341c181efd7c": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 407
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 32.12
+}

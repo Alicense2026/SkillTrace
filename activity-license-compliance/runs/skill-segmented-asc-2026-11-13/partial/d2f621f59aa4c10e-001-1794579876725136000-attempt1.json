@@ -1,0 +1,775 @@
+{
+  "clauses": [
+    {
+      "start_line": 22,
+      "end_line": 22,
+      "clause_label": "acceptance_by_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "acceptance_of_all_license_terms"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Sustainable Use License v1.0; using software constitutes agreement to the terms.",
+      "condition_explanation": "acceptance_of_all_license_terms means the user agrees to all terms and conditions by using the software.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 26,
+      "end_line": 28,
+      "clause_label": "copyright_grant_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "within_granted_copyright_scope",
+            "complies_with_license_limitations"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Copyright license for software; subject to the limitations below. The grant is non-exclusive, royalty-free, worldwide, non-sublicensable, and non-transferable.",
+      "condition_explanation": "within_granted_copyright_scope means the action is use of software covered by the grant. The grant's stated non-sublicensable and non-transferable terms limit the license; the limitations include the internal-business/non-commercial/personal-use restrictions in section Limitations.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 26,
+      "end_line": 28,
+      "clause_label": "copyright_grant_copy",
+      "activities": [
+        "Copy"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "within_granted_copyright_scope",
+            "complies_with_license_limitations"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Copyright license for software; subject to the limitations below. Non-exclusive, royalty-free, worldwide, non-sublicensable, and non-transferable.",
+      "condition_explanation": "within_granted_copyright_scope means copying software covered by the grant. The limitations include the restrictions in section Limitations.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 26,
+      "end_line": 28,
+      "clause_label": "copyright_grant_distribute",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "within_granted_copyright_scope",
+            "complies_with_license_limitations",
+            "distribution_free_of_charge",
+            "distribution_for_non_commercial_purposes",
+            "recipients_get_license_terms"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Copyright license to distribute software, subject to the limitations below; the grant is non-sublicensable and non-transferable. Distribution limitations and terms-delivery duty are specified in sections Limitations and Notices.",
+      "condition_explanation": "distribution_free_of_charge and distribution_for_non_commercial_purposes are required by section Limitations. recipients_get_license_terms means anyone who gets a copy of any part from the licensee also gets a copy of these terms, as required by section Notices.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Provide a copy of these license terms to anyone who gets a copy of any part of the software from the licensee.",
+          "actor": "licensee",
+          "object": "copy of the license terms",
+          "trigger": "Whenever someone gets a copy of any part of the software from the licensee."
+        }
+      ]
+    },
+    {
+      "start_line": 26,
+      "end_line": 28,
+      "clause_label": "copyright_grant_derivative",
+      "activities": [
+        "CreateDerivative"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "within_granted_copyright_scope",
+            "complies_with_license_limitations",
+            "internal_business_purpose_or_non_commercial_or_personal_use"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Copyright grant to prepare derivative works of software, subject to the limitations below. Non-exclusive, royalty-free, worldwide, non-sublicensable, and non-transferable.",
+      "condition_explanation": "internal_business_purpose_or_non_commercial_or_personal_use is the limitation imposed on use or modification by section Limitations; this clause records the grant to prepare derivatives subject to that limitation.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 32,
+      "end_line": 32,
+      "clause_label": "use_purpose_limit",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "any": [
+            "own_internal_business_purpose",
+            "non_commercial_use",
+            "personal_use"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Limitations applies to use of the software; use outside the stated purposes is not permitted.",
+      "condition_explanation": "own_internal_business_purpose, non_commercial_use, and personal_use are alternative permitted purpose conditions; use is prohibited unless at least one applies.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Refrain from using the software for a purpose other than the licensee's own internal business purposes, non-commercial purposes, or personal use.",
+          "actor": "licensee",
+          "object": "software",
+          "trigger": "Whenever using the software."
+        }
+      ]
+    },
+    {
+      "start_line": 32,
+      "end_line": 32,
+      "clause_label": "modify_purpose_limit",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "any": [
+            "own_internal_business_purpose",
+            "non_commercial_use",
+            "personal_use"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Limitations applies to modifying the software; modification outside the stated purposes is not permitted.",
+      "condition_explanation": "own_internal_business_purpose, non_commercial_use, and personal_use are alternative permitted purpose conditions; modification is prohibited unless at least one applies. A modified copy must also carry the notice required by section Notices.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Refrain from modifying the software for a purpose other than the licensee's own internal business purposes, non-commercial purposes, or personal use.",
+          "actor": "licensee",
+          "object": "software",
+          "trigger": "Whenever modifying the software."
+        }
+      ]
+    },
+    {
+      "start_line": 33,
+      "end_line": 33,
+      "clause_label": "distribution_limit",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "all": [
+            "distribution_free_of_charge",
+            "distribution_for_non_commercial_purposes"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Limitations permits distribution only free of charge and for non-commercial purposes.",
+      "condition_explanation": "Both distribution_free_of_charge and distribution_for_non_commercial_purposes must hold; otherwise distribution is prohibited. The separate terms-delivery duty applies when distributing copies.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Refrain from distributing the software for a charge or for commercial purposes.",
+          "actor": "licensee",
+          "object": "software",
+          "trigger": "Whenever distributing the software; distribution is allowed only if free of charge and for non-commercial purposes."
+        }
+      ]
+    },
+    {
+      "start_line": 33,
+      "end_line": 33,
+      "clause_label": "provide_to_others_limit",
+      "activities": [
+        "ProvideSource"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "all": [
+            "provision_free_of_charge",
+            "provision_for_non_commercial_purposes"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Limitations says the licensee may provide the software to others only free of charge for non-commercial purposes. This models provision of the software, not a general source-publication obligation.",
+      "condition_explanation": "Both provision_free_of_charge and provision_for_non_commercial_purposes must hold; otherwise providing the software to others is prohibited.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Refrain from providing the software to others for a charge or for commercial purposes.",
+          "actor": "licensee",
+          "object": "software",
+          "trigger": "Whenever providing the software to others; provision is allowed only if free of charge and for non-commercial purposes."
+        }
+      ]
+    },
+    {
+      "start_line": 34,
+      "end_line": 34,
+      "clause_label": "preserve_licensor_notices",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "ModifiedArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "licensor_licensing_copyright_and_other_notices_not_altered_removed_or_obscured"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Limitations prohibits altering, removing, or obscuring licensor notices in the software; section Notices separately requires a prominent modification notice in modified copies.",
+      "condition_explanation": "licensor_licensing_copyright_and_other_notices_not_altered_removed_or_obscured means all licensing, copyright, and other notices of the licensor in the software remain unaltered, present, and unobscured.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not alter, remove, or obscure any licensing, copyright, or other licensor notice in the software.",
+          "actor": "licensee",
+          "object": "licensor notices in the software",
+          "trigger": "Whenever modifying the software."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Include a prominent notice stating that the licensee modified the software in any modified copy.",
+          "actor": "licensee",
+          "object": "modified copy of the software",
+          "trigger": "Whenever the licensee modifies the software and makes a modified copy."
+        }
+      ]
+    },
+    {
+      "start_line": 39,
+      "end_line": 41,
+      "clause_label": "patent_grant_make",
+      "activities": [
+        "Copy"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "patent_claim_licensable_by_licensor",
+            "complies_with_license_limitations",
+            "not_patent_claim_caused_to_be_infringed_by_modifications_or_additions"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Patent license to make the software under patent claims the licensor can license or becomes able to license; subject to license limitations and conditions. Patent claims caused to be infringed by modifications or additions are excluded. Copy is the closest available activity for the granted act of making software.",
+      "condition_explanation": "patent_claim_licensable_by_licensor limits the grant to claims the licensor can license or becomes able to license. not_patent_claim_caused_to_be_infringed_by_modifications_or_additions excludes claims the licensee causes to be infringed by modifications or additions. The source specifies making but the canonical activity list has no Make activity; Copy is an imperfect proxy.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 39,
+      "end_line": 41,
+      "clause_label": "patent_grant_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "patent_claim_licensable_by_licensor",
+            "complies_with_license_limitations",
+            "not_patent_claim_caused_to_be_infringed_by_modifications_or_additions"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Patent license to use software under licensable licensor patent claims, subject to license limitations and conditions and the exclusion for claims caused to be infringed by modifications or additions.",
+      "condition_explanation": "patent_claim_licensable_by_licensor means the licensor can license or becomes able to license the patent claim. not_patent_claim_caused_to_be_infringed_by_modifications_or_additions excludes claims caused to be infringed by modifications or additions.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 39,
+      "end_line": 41,
+      "clause_label": "patent_grant_sell",
+      "activities": [
+        "SellCopies"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "patent_claim_licensable_by_licensor",
+            "complies_with_license_limitations",
+            "not_patent_claim_caused_to_be_infringed_by_modifications_or_additions"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Patent license includes selling the software under licensable licensor patent claims, subject to license limitations and conditions and the stated patent-claim exclusion. The copyright section's free-of-charge/non-commercial distribution restriction remains applicable to distribution.",
+      "condition_explanation": "patent_claim_licensable_by_licensor means the licensor can license or becomes able to license the claim. not_patent_claim_caused_to_be_infringed_by_modifications_or_additions excludes claims caused to be infringed by modifications or additions. This patent permission does not override the separate copyright limitations.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 39,
+      "end_line": 41,
+      "clause_label": "patent_grant_offer_for_sale",
+      "activities": [
+        "OfferPaidAccess"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "patent_claim_licensable_by_licensor",
+            "complies_with_license_limitations",
+            "not_patent_claim_caused_to_be_infringed_by_modifications_or_additions"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Patent license includes offering the software for sale under licensable licensor patent claims, subject to license limitations and conditions and the stated patent-claim exclusion. This is not a grant to charge for distribution contrary to the copyright limitations.",
+      "condition_explanation": "patent_claim_licensable_by_licensor means the licensor can license or becomes able to license the claim. not_patent_claim_caused_to_be_infringed_by_modifications_or_additions excludes claims caused to be infringed by modifications or additions. OfferPaidAccess is the closest available activity for offering for sale.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 39,
+      "end_line": 41,
+      "clause_label": "patent_grant_import",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "patent_claim_licensable_by_licensor",
+            "complies_with_license_limitations",
+            "not_patent_claim_caused_to_be_infringed_by_modifications_or_additions"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Patent license expressly includes importing and having imported the software, subject to license limitations and conditions and the stated patent-claim exclusion. No import activity is available in the canonical activity list; Use is only a proxy, so this grant is not faithfully represented by the activity field.",
+      "condition_explanation": "patent_claim_licensable_by_licensor means the licensor can license or becomes able to license the claim. not_patent_claim_caused_to_be_infringed_by_modifications_or_additions excludes claims caused to be infringed by modifications or additions.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 43,
+      "end_line": 45,
+      "clause_label": "patent_license_termination_on_claim",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "not": {
+            "any": [
+              "licensee_makes_written_patent_infringement_claim_about_software",
+              "licensee_makes_written_claim_software_contributes_to_patent_infringement",
+              "licensee_company_makes_such_written_claim_for_work_on_behalf_of_company"
+            ]
+          }
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "A written patent claim by the licensee ends the patent license immediately. A claim by the licensee's company ends the patent license immediately for work on behalf of that company. This termination applies to the patent license described in section Patents, not necessarily the entire copyright license.",
+      "condition_explanation": "The patent permission remains available only absent the specified written claim. For a company claim, the termination scope is work on behalf of that company. The definition of company is provided in the supplied definitions context.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not make a written claim that the software infringes or contributes to infringement of any patent if retaining the patent license is desired.",
+          "actor": "licensee or licensee's company",
+          "object": "patent license for the software",
+          "trigger": "A written claim by the licensee terminates the patent license immediately; a claim by the company terminates it immediately for work on behalf of the company."
+        }
+      ]
+    },
+    {
+      "start_line": 49,
+      "end_line": 49,
+      "clause_label": "deliver_terms_with_copy",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "recipient_gets_copy_of_license_terms"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Notices requires the licensee to ensure that anyone who gets a copy of any part of the software from the licensee also gets a copy of these terms. This applies to copies, not merely remote API calls.",
+      "condition_explanation": "recipient_gets_copy_of_license_terms means the recipient receives a copy of the license terms whenever they get a copy of any part of the software from the licensee.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Ensure anyone who gets a copy of any part of the software from the licensee also gets a copy of these terms.",
+          "actor": "licensee",
+          "object": "copy of the license terms",
+          "trigger": "Whenever anyone gets a copy of any part of the software from the licensee."
+        }
+      ]
+    },
+    {
+      "start_line": 50,
+      "end_line": 51,
+      "clause_label": "modified_copy_notice",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "ModifiedArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "prominent_notice_of_modification_in_modified_copy"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section Notices requires a prominent notice stating that the licensee modified the software in any modified copy.",
+      "condition_explanation": "prominent_notice_of_modification_in_modified_copy means the modified copy includes a prominent statement that the licensee has modified the software.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Include a prominent notice stating that the licensee modified the software in any modified copy.",
+          "actor": "licensee",
+          "object": "modified copy of the software",
+          "trigger": "Whenever the licensee modifies the software and makes a modified copy."
+        }
+      ]
+    },
+    {
+      "start_line": 59,
+      "end_line": 63,
+      "clause_label": "termination_and_cure",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": {
+          "any": [
+            "license_terminated_by_violation",
+            "post_reinstatement_violation_causes_permanent_termination"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Use in violation is unlicensed and automatically terminates the license. If the licensor gives notice and the licensee ceases all violations within 30 days after receipt, the license is reinstated retroactively. A violation after reinstatement causes automatic and permanent termination.",
+      "condition_explanation": "license_terminated_by_violation applies upon use in violation. timely_complete_cure means ceasing all violations no later than 30 days after receiving notice from the licensor and results in retroactive reinstatement. post_reinstatement_violation_causes_permanent_termination applies to any later violation.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Cease all violations of the license no later than 30 days after receiving the licensor's notice to qualify for retroactive reinstatement.",
+          "actor": "licensee",
+          "object": "use of the software under the license",
+          "trigger": "The licensor has provided notice of a violation; cure must cease all violations within 30 days after receipt."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Refrain from further violations after retroactive reinstatement, because any additional violation causes automatic and permanent termination.",
+          "actor": "licensee",
+          "object": "license to use the software",
+          "trigger": "A violation occurs after license reinstatement following timely cure."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The license text only covers content within the stated scope. The supplied definitions context identifies non-main branches, .ee files/directories, and third-party components as excluded or separately licensed; the applicable LICENSE_EE.md and third-party licenses are not supplied, so their terms cannot be extracted.",
+    "Patent text grants make, have made, and import/have imported rights, but the canonical activity list lacks exact activities for those actions. Proxy activity mappings do not faithfully encode them; these grants remain partly unrepresentable.",
+    "No sublicensing grant is made: the copyright license is expressly non-sublicensable. No source-publication duty, network-service rule, output/data right, or privacy/security obligation is stated in the supplied target text.",
+    "Use of trademarks is stated to be subject to applicable law, but no specific behavioral rule is supplied beyond that reference. The definition of Trademark is context only.",
+    "The patent grant's patent-claim exception and immediate termination provisions are distinct from the copyright-license termination provision."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0001",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Document heading only."
+    },
+    {
+      "unit_id": "P0002",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Introduces the licensing breakdown; no operative rule."
+    },
+    {
+      "unit_id": "P0003",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "Scope exclusions and separate third-party licensing are stated, but the omitted Enterprise License and third-party license terms are unavailable; exact operative access conditions cannot be fully extracted."
+    },
+    {
+      "unit_id": "P0004",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0005",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Version identifier; no operative rule."
+    },
+    {
+      "unit_id": "P0006",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0007",
+      "status": "MODELED",
+      "clause_labels": [
+        "acceptance_by_use"
+      ],
+      "reason": "Use is expressly the act that constitutes agreement to all terms."
+    },
+    {
+      "unit_id": "P0008",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0009",
+      "status": "MODELED",
+      "clause_labels": [
+        "copyright_grant_use",
+        "copyright_grant_copy",
+        "copyright_grant_distribute",
+        "copyright_grant_derivative"
+      ],
+      "reason": "Extracts the express copyright permissions and records the grant's stated non-sublicensable and non-transferable scope and limitations dependency."
+    },
+    {
+      "unit_id": "P0010",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0011",
+      "status": "MODELED",
+      "clause_labels": [
+        "use_purpose_limit",
+        "modify_purpose_limit",
+        "distribution_limit",
+        "provide_to_others_limit",
+        "preserve_licensor_notices"
+      ],
+      "reason": "Models purpose limits, free/non-commercial distribution and provision restrictions, notice preservation, and the prominent modified-copy notice duty."
+    },
+    {
+      "unit_id": "P0012",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0013",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "patent_grant_make",
+        "patent_grant_use",
+        "patent_grant_sell",
+        "patent_grant_offer_for_sale",
+        "patent_grant_import",
+        "patent_license_termination_on_claim"
+      ],
+      "reason": "Models patent use/sale/offer permissions, the patent-claim exclusion, and claim-triggered termination. The canonical activities cannot exactly express make, have made, import, or have imported; proxy mappings leave those permissions unrepresented faithfully."
+    },
+    {
+      "unit_id": "P0014",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0015",
+      "status": "MODELED",
+      "clause_labels": [
+        "deliver_terms_with_copy",
+        "modified_copy_notice"
+      ],
+      "reason": "Models terms delivery with copies and the prominent modification notice; the notice condition is tied to making a modified copy."
+    },
+    {
+      "unit_id": "P0016",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0017",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Negative statement that no additional licenses are implied; it does not itself create a behavioral duty or an affirmative permission."
+    },
+    {
+      "unit_id": "P0018",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0019",
+      "status": "MODELED",
+      "clause_labels": [
+        "termination_and_cure"
+      ],
+      "reason": "Models automatic termination for violating use, 30-day notice-and-cure reinstatement, and permanent termination for a later violation."
+    },
+    {
+      "unit_id": "P0020",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0021",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Warranty and liability disclaimers; excluded from this activity-constraint extraction."
+    },
+    {
+      "unit_id": "P0022",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0023",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines licensor; contextual only."
+    },
+    {
+      "unit_id": "P0024",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines software; contextual only and incorporated into the scope of modeled rules."
+    },
+    {
+      "unit_id": "P0025",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines You; contextual only."
+    },
+    {
+      "unit_id": "P0026",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines company and control; contextual dependency for the company-triggered patent termination rule."
+    },
+    {
+      "unit_id": "P0027",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines your license; contextual only."
+    },
+    {
+      "unit_id": "P0028",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines Use; contextual only."
+    },
+    {
+      "unit_id": "P0029",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Defines Trademark; contextual only."
+    }
+  ]
+}

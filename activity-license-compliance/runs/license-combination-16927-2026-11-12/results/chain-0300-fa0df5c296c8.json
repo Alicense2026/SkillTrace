@@ -1,0 +1,117 @@
+{
+  "case_id": "chain-0300-fa0df5c296c8",
+  "input_group_row": 300,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "CC-BY-4.0",
+    "资产许可证原文标题/标签": "LLAMA 3 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0300-fa0df5c296c8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0300-fa0df5c296c8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4e91471e3f39a84b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0300-fa0df5c296c8:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the Llama agreement, including applicable law and the incorporated Acceptable Use Policy; do not use Llama Materials or their outputs/results to improve another large language model, except Meta Llama 3 or its derivatives.",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "subject": {
+          "artifact": "chain-0300-fa0df5c296c8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement",
+          "use_of_outputs_to_improve_other_LLM"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If distributing or making available Llama Materials, derivatives, or a product or service that uses them, provide a copy of the Llama agreement with the applicable materials and prominently display “Built with Meta Llama 3” on a related website, user interface, blogpost, about page, or product documentation.",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "subject": {
+          "artifact": "chain-0300-fa0df5c296c8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "activity:Distribute_Llama_Materials_or_derivatives",
+            "activity:Make_Available_Llama_Materials_or_derivatives",
+            "activity:Distribute_or_Make_Available_Product_or_Service_Using_Llama"
+          ]
+        },
+        "unresolved_predicates": [
+          "distribution_or_make_available"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的事实是对上游 Llama 材料进行远程服务调用及 API/代码链接；这不证明权重转移、修改、分发、结合产品或商业使用。相关活动的分发触发条件尚未证实。",
+      "CC-BY-4.0 摘录仅提供许可授权语句，未提供其具体条件条款；且现有事实不能确定该许可是否适用于此次远程调用所涉及的对象。不得据此补写归属等义务。",
+      "结构化规则标记为 FIRST_PASS_REVIEW_REQUIRED；本次结论仅限提供的条款摘录与已确认活动。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0294-dcc471712dae.json",
+  "original_case_id": "chain-0294-dcc471712dae",
+  "original_request_sha256": "94d6b65396b0b17ba1a7e81720c643302df0fc4fef9ef8e2cc5c8f088d438457",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0294-dcc471712dae": "chain-0300-fa0df5c296c8",
+    "license-text:upstream:b7874099eaa0bc72": "license-text:upstream:b7874099eaa0bc72",
+    "license-text:downstream:4e91471e3f39a84b": "license-text:downstream:4e91471e3f39a84b",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/293": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/299"
+  }
+}

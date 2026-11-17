@@ -1,0 +1,132 @@
+{
+  "request_sha256": "6a002085ef05e5234a112d83a1c3b51eaed2ac007db948d518743f23076edf27",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 5,
+        "end_line": 7,
+        "clause_label": "Permission to use, copy, modify, and run",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              {
+                "any": [
+                  "personal_use",
+                  "research_use",
+                  "internal_organizational_use"
+                ]
+              },
+              "interacting_with_Code_Awareness_tools"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission covers the software for the listed purposes when interacting with Code Awareness tools; it is not an unrestricted grant for other purposes.",
+        "condition_explanation": "At least one of personal use, research use, or internal organizational use must apply, and the use must involve interaction with Code Awareness tools."
+      },
+      {
+        "start_line": 11,
+        "end_line": 13,
+        "clause_label": "You may: local run, internal modification, and source study",
+        "activities": [
+          "Use",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "any": [
+              "run_software_locally",
+              "modify_software_for_internal_purposes",
+              "study_source_code"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "The listed permissions are local running, modification for internal purposes, and study of the source code. The text does not grant a general right to distribute modifications.",
+        "condition_explanation": "Permission applies to the listed activity: running locally, modifying for internal purposes, or studying the source code."
+      },
+      {
+        "start_line": 18,
+        "end_line": 19,
+        "clause_label": "You may NOT: competing systems",
+        "activities": [
+          "Use",
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "building_or_operating_a_competing_ai_memory_intent_tracking_or_development_governance_system"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits using the software to build or operate the specified competing systems.",
+        "condition_explanation": "The prohibition applies when the software is used to build or operate a competing AI memory, intent-tracking, or development governance system."
+      },
+      {
+        "start_line": 21,
+        "end_line": 21,
+        "clause_label": "You may NOT: hosted service",
+        "activities": [
+          "ProvideNetworkService",
+          "RemoteInteraction"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "offering_software_or_derivatives_as_a_hosted_service"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits offering the software or its derivatives as a hosted service.",
+        "condition_explanation": "The prohibition applies when the software or a derivative is offered as a hosted service."
+      },
+      {
+        "start_line": 23,
+        "end_line": 24,
+        "clause_label": "You may NOT: redistribution in commercial product",
+        "activities": [
+          "Distribute",
+          "Bundle"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "written_permission_from_Code_Awareness_LLC"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits redistributing the software as part of a commercial product unless Code Awareness LLC gives written permission; the text does not specify permission terms.",
+        "condition_explanation": "The prohibition applies if written permission from Code Awareness LLC has not been obtained."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a source-available license, not a conventional open-source grant. No general permission to distribute, sublicense, charge for, sell, or provide network access is stated; absence of a grant is not treated as a prohibition beyond the express hosted-service and commercial-product restrictions.",
+      "The contribution statement on line 14 does not specify a licensee activity or terms for contributions and is not extracted as an operative ASC clause.",
+      "Lines 28–30 state that no patent rights are granted except as necessary to use the software under the license; they do not supply a separate patent grant. The warranty disclaimer is unrelated to the requested activities."
+    ]
+  }
+}

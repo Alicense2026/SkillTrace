@@ -1,0 +1,182 @@
+{
+  "case_id": "chain-0091-30f569b147d0",
+  "status": "SUCCESS",
+  "request_sha256": "42918daa7354964fdcc1214a3e6bf5339263ef192b55c755af124aa3a2eb1b36",
+  "analysis": {
+    "case_id": "chain-0091-30f569b147d0",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_license_and_notices",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-0091-30f569b147d0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "license_whole_work_under_GPL_and_provide_source",
+            "when": "true"
+          },
+          "S": {
+            "artifact": "chain-0091-30f569b147d0:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:02457be324fbab5e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0091-30f569b147d0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0091-30f569b147d0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If conveying verbatim copies of the upstream Program, provide a copy of the GPL license and preserve the specified copyright, license, and warranty notices.",
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "scope_shared"
+        ],
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0091-30f569b147d0:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "If conveying a covered modified work, license the whole work under GPL and provide source as required by the applicable GPL terms.",
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "scope_shared"
+        ],
+        "source_refs": [
+          "license-text:upstream:515d434cad2d4fc5"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes use, a link, and remote service calls involving the upstream GPL-3.0 asset; it states code modification is not applicable. It does not establish distribution, copying, a modified copy, or that the downstream Apache-2.0 artifact is a GPL-covered work.",
+      "The object graph does not establish a dependency or shared license scope. The provided GPL excerpts address conveyance, not ordinary use or remote interaction; no conclusion about additional GPL terms for those activities is drawn.",
+      "The Apache-2.0 grant excerpt concerns the downstream artifact. No conflict with GPL conveyance conditions is established for the recorded API/link relationship."
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18680,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1205,
+    "output_tokens_details": {
+      "reasoning_tokens": 308
+    },
+    "total_tokens": 19885,
+    "attribution": {
+      "items": {
+        "msg_098c6881f855b879016af2faa30fb887d291197f9cc4de104e": {
+          "input_tokens": 16648,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16648,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_098c6881f855b879016af2faaa0d4887d2a20688c28a6aba96": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 897,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 897
+            }
+          ]
+        },
+        "rs_098c6881f855b879016af2faa9f61887d2983f8583c1ffd726": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 308
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.897,
+  "auto_applied": false,
+  "aggregate_count": 12
+}

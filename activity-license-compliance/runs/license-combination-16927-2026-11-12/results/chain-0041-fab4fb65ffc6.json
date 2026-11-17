@@ -1,0 +1,93 @@
+{
+  "case_id": "chain-0041-fab4fb65ffc6",
+  "input_group_row": 41,
+  "aggregate_count": 55,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "55"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0041-fab4fb65ffc6",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": true,
+            "when": "using_services_to_develop_competing_models_or_to_reverse_engineer_extract_or_replicate_service_components"
+          },
+          "S": {
+            "artifact": "chain-0041-fab4fb65ffc6:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b2a9412c1561cfb2"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_at_no_charge_through_network_server"
+          },
+          "S": {
+            "artifact": "chain-0041-fab4fb65ffc6:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API Additional Terms of Service 的 L31-L34 摘录禁止使用服务开发与其竞争的模型，以及逆向工程、提取或复制服务组件；当前事实仅确认 API 使用和远程调用，未表明存在上述目的或行为。",
+      "AGPL-3.0 第13条摘录仅在修改了受涵盖程序且该版本支持网络远程交互时要求提供对应源码。记录说明代码修改不适用；远程调用的是 Gemini API，不能据此认定下游 AGPL 程序提供网络服务或触发该条义务。",
+      "上游服务与下游 AGPL 对象的共同适用范围未建立；没有依据认定许可条款存在冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得使用 Gemini API 服务开发与该服务竞争的模型，也不得尝试逆向工程、提取或复制服务组件（包括底层数据或模型）。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0041-fab4fb65ffc6:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_services_to_develop_competing_models_or_to_reverse_engineer_extract_or_replicate_service_components",
+        "unresolved_predicates": [
+          "competing_model_development",
+          "reverse_engineering_extraction_or_replication"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0038-c9cb3ca4b86e.json",
+  "original_case_id": "chain-0038-c9cb3ca4b86e",
+  "original_request_sha256": "736efb6b0b638ce79a8130de4761b65f69bcf0781893c27e6a339a375bcd0533",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0038-c9cb3ca4b86e": "chain-0041-fab4fb65ffc6",
+    "license-text:upstream:ffe5b0021e0b945a": "license-text:upstream:ffe5b0021e0b945a",
+    "license-text:downstream:b2a9412c1561cfb2": "license-text:downstream:b2a9412c1561cfb2",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/37": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/40"
+  }
+}

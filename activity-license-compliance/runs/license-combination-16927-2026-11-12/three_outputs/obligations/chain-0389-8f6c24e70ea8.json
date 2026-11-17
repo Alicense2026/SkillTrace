@@ -1,0 +1,48 @@
+{
+  "case_id": "chain-0389-8f6c24e70ea8",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 MIT 上游软件时，满足许可条件并包含版权及许可通知；通知的具体适用对象以 MIT 原文为准。",
+      "source_refs": [
+        "license-text:upstream:04de8583241775d8"
+      ],
+      "subject": {
+        "artifact": "chain-0389-8f6c24e70ea8:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "include_copyright_and_permission_notice"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若向他人提供的产品与 PolyForm 软件竞争，则不得在该受限目的下使用相关软件；现有事实不证明竞争或该条款的共享适用范围。",
+      "source_refs": [
+        "license-text:downstream:d4f39d33c5ca7efe"
+      ],
+      "subject": {
+        "artifact": "chain-0389-8f6c24e70ea8:downstream",
+        "kind": "CombinedProduct"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "providing_to_others",
+          "scope_shared"
+        ]
+      },
+      "unresolved_predicates": [
+        "providing_to_others",
+        "product_competes_with_software",
+        "scope_shared"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

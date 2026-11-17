@@ -1,0 +1,125 @@
+{
+  "case_id": "chain-0224-3a049a9e540c",
+  "status": "SUCCESS",
+  "request_sha256": "30ddb5e99dc8286f3a698db48044e36eb8df51a72b4dc3eb2fae3a27c8cb43cb",
+  "analysis": {
+    "case_id": "chain-0224-3a049a9e540c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": {
+              "any": [
+                "develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_reverse_engineer_extract_or_replicate_services_components_underlying_data_or_models"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0224-3a049a9e540c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0224-3a049a9e540c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Services to develop models that compete with the Services, or attempt to reverse engineer, extract, or replicate any component of the Services, including underlying data or models (for example, parameter weights).",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "competing_model_development",
+          "reverse_engineering_or_extraction_or_replication"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "Gemini API Additional Terms excerpt is marked FIRST_PASS_REVIEW_REQUIRED; the full definitions and context for competing models and the scope of the restriction are not included here.",
+      "The record establishes API use, remote interaction, and a link relation, but not model competition, reverse engineering, extraction, or replication. No violation is established.",
+      "The BSD-2-Clause grant excerpt applies to the downstream artifact; the record does not establish use of that artifact or a shared scope with the Gemini API service. No license-to-license conflict is established."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 17873,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 777,
+    "output_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "total_tokens": 18650,
+    "attribution": {
+      "items": {
+        "msg_054c68c16df85319016af30085b66c87d184f82867e2a65a1a": {
+          "input_tokens": 15841,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15841,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_054c68c16df85319016af3008ba6ec87d1b76a7c0f9a589d91": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 547,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 547
+            }
+          ]
+        },
+        "rs_054c68c16df85319016af3008b8b6087d18513ee3f95aabd72": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 230
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.556,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

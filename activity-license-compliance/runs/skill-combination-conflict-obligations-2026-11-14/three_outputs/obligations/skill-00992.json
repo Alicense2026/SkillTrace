@@ -1,0 +1,591 @@
+{
+  "case_id": "skill-00992",
+  "csv_row": 993,
+  "source_excel_row": "1379",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00992-1794598161900381000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer使用OpenAI服务须依协议进行；协议接受方式包括使用服务。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "agreement_terms_compliance",
+        "term_in_effect"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer及终端用户不得实施协议第3.3条列举的禁止行为；竞争模型限制受Permitted Exception约束。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "listed_prohibited_conduct"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer须具备提供Input所需权利、许可和权限，并对Output使用及评估负责。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "input_provided",
+        "output_used"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer使用服务须遵守适用贸易法律及协议所列禁运地区、受限制方条件；不得在Input中提供需政府许可方可发布或出口的材料。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "trade_law_compliance",
+        "restricted_party_or_location",
+        "input_requires_government_license"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "不得使用服务处理受保护健康信息，除非已签署Healthcare Addendum；未设计用于PHI的服务不得用于存储、传输或处理PHI。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "phi_processed",
+        "healthcare_addendum_signed",
+        "service_designed_for_phi"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如实际使用受CC-BY-NC-4.0许可的材料行使许可权利，应遵守许可条件；若适用例外或限制，或该使用无需许可即可合法进行，则相应许可条件不适用。",
+      "source_refs": [
+        "license:43a372304b1da21ff143b9dd10424d93dc193073aecd5984a6b3872416dc7acd"
+      ],
+      "subject": {
+        "artifact": "skill-00992:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "within_term_of_licensed_copyright_and_similar_rights",
+          "applicable_exception_or_limitation",
+          "use_could_lawfully_be_made_without_permission_under_public_license"
+        ]
+      },
+      "unresolved_predicates": [
+        "licensed_material_used",
+        "license_scope_applies",
+        "applicable_exception_or_limitation"
+      ]
+    }
+  ],
+  "limitations": [
+    "上游OpenAI服务的远程调用、API链接和下游仓库标注的CC-BY-NC-4.0对应不同对象；没有证据表明CC许可材料被复制、修改、分发或与服务组合，也没有共同适用对象的确认，故不据许可标签认定冲突。",
+    "仅按已提供摘录判断。CC许可分享条件的适用前提是分享许可材料；API调用本身不证明分享或模型权重转移。OpenAI协议中涉及授权期限、许可政策、服务范围等事项以协议及订单表为准，相关事实未提供。",
+    "未发现已发生的违反事实。未提供的信息按未知处理；不据此推定商用、履行失败或服务提供者义务由调用者承担。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用是协议接受方式；已保留依协议使用条件。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "服务交付方OpenAI的义务，不转由调用者承担。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "续约或缩减范围通知事项与已知活动无关。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见额外服务购买事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见关联方使用事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见关联方单独购买事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供按用量购买这一适用事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用服务；保留期限及依协议使用条件。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "应用集成和向终端用户提供应用不属于已知活动。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见服务功能更新或终止选择事实。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "账户资料、凭据分享及账户转售行为未列为已知活动。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供终端用户账户及同意事项事实。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "服务使用限制与已知使用活动相关，禁止行为及例外条件已合并保留。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "仅在选择使用第三方服务时适用；当前使用义务已保留协议条件，未推定触发第三方服务条款。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "所有权及权利转让声明，不产生本案活动义务。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条约束OpenAI使用Customer Content，不是调用者义务。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "输入权利及输出使用责任与服务使用相关，已合并保留。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "保密信息用途限制；无相关保密信息事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见披露保密信息活动。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见持有或处理保密信息的相关事实。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "限定OpenAI及分包方权限范围，不转给调用者。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见提供Feedback事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见公开使用对方名称、标志或关系声明。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供协议终止事实。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供Beta服务事实。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "服务使用受贸易及地点条件约束；未提供适用事实，故保留条件。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "已合并Input需政府许可材料的禁止条件。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "服务使用受支持地区限制；适用地区事实未知，条件已保留。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供协议或政策更新事实。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "已保留PHI处理禁限条件及例外。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "订单付款和账单义务非本案已知活动；未将收费推定为调用者商业用途。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有逾期未付账款事实；条款仅允许可能收取费用。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有逾期账款或收取财务费用事实。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "税费付款事项与已知活动无关。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见OpenAI要求暂停或终止终端用户账户。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该许可涉及OpenAI披露信息的权限；未见相关披露活动。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该许可涉及OpenAI保留内容的权限；未见相关事实。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见OpenAI提出停止使用服务的指示。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "安全措施合规义务承担方为OpenAI。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条款为OpenAI逾期费用时可能暂停服务的权限。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "税务供应地登记义务承担方为OpenAI或转售方。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见逾期账款或收取费用事实。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供需要Service Credits预付的事实。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见披露保密信息活动。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见终端用户违规或安全事件事实。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "服务限制、暂停及恢复义务由OpenAI承担。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见复制下游CC许可材料的活动。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分享下游CC许可材料的活动。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见创作CC许可材料衍生作品的活动。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见复制衍生材料的活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分享衍生材料的活动。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见再许可CC许可权利的活动。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "已知Use活动，但未证实使用对象为许可材料；保留例外适用及许可范围条件。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见修改下游许可材料的活动。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见对许可材料施加限制性条款或技术措施的分发活动。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "Use相关限制仅在许可材料及相关主张行为成立时适用；未推定发生，已保留适用边界。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分享许可材料。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见权利人要求移除标识或分享材料。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分享衍生材料。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见相关数据库权利及数据库内容复制活动。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见数据库内容纳入其他数据库事实。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未见分享相关数据库内容。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "仅在许可权利期限内且许可范围适用时保留遵守许可条件的义务。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "及时补救后的自动恢复权利效果，不构成独立履行义务。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "权利人明确恢复许可的效果，不构成独立履行义务。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "许可终止后的条款存续规则，不新增本案使用义务。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "规定未获同意的附加条款不约束许可人，不构成本案行为义务。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "关于独立协议的效力说明，不产生本案行为义务。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "保留依法可无需许可使用的例外边界。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "可执行性条款属于解释规则，不产生本案履行义务。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "关于许可弃权或同意的规则已并入适用边界条件。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "特权豁免保留条款不产生本案活动义务。"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "case_id": "chain-0206-9e1faa06a82e",
+  "status": "SUCCESS",
+  "request_sha256": "990d9946a043e7b5c4ab98831ba1a36b351cc43da87cc31f0c66a62f8534930f",
+  "analysis": {
+    "case_id": "chain-0206-9e1faa06a82e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "S": {
+            "artifact": "chain-0206-9e1faa06a82e:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_fees_due_under_order_form"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:d5db762b3c8544c6"
+        ],
+        "triple": {
+          "A": "Charge",
+          "S": {
+            "artifact": "chain-0206-9e1faa06a82e:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0206-9e1faa06a82e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer must pay applicable fees in accordance with the Order Form.",
+        "trigger": "applicable_fees_due_under_order_form",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due_under_order_form"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "上游摘录为费用支付条款，具体适用费用及Order Form内容未提供；未据此推断下游收费或商业使用限制。",
+      "MPL摘录的许可授予范围限于Covered Software/Contribution相关权利；对象图仅确证API链接和远程调用，未确证下游对象属于该范围，也未确证MPL权利与OpenAI服务条款共同约束同一对象。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 17446,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 802,
+    "output_tokens_details": {
+      "reasoning_tokens": 231
+    },
+    "total_tokens": 18248,
+    "attribution": {
+      "items": {
+        "msg_06fc37350ec2b0e6016af2ff9d1d3887d28e3d81b408fe6a18": {
+          "input_tokens": 15414,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15414,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06fc37350ec2b0e6016af2ffa1ed3c87d2a8480e2aace60954": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 571,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 571
+            }
+          ]
+        },
+        "rs_06fc37350ec2b0e6016af2ffa1d64487d28ee801bc7601aa4e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 231
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 17.507,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

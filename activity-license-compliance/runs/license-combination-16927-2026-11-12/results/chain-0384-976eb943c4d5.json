@@ -1,0 +1,254 @@
+{
+  "case_id": "chain-0384-976eb943c4d5",
+  "input_group_row": 384,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "MIT",
+    "调用方式（代码修改）": "代码层面集成（修改：是）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0384-976eb943c4d5",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true
+          },
+          "S": {
+            "artifact": "chain-0384-976eb943c4d5:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0384-976eb943c4d5:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a5d8f6a075599b7d"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose"
+          },
+          "S": {
+            "artifact": "chain-0384-976eb943c4d5:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a5d8f6a075599b7d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agree_to_terms"
+          },
+          "S": {
+            "artifact": "chain-0384-976eb943c4d5:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a5d8f6a075599b7d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose"
+          },
+          "S": {
+            "artifact": "chain-0384-976eb943c4d5:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "chain-0384-976eb943c4d5:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the upstream copyright notice and permission notice in copies or substantial portions of the software.",
+        "trigger": "activity:Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "subject": {
+          "artifact": "chain-0384-976eb943c4d5:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "For the upstream MIT permission to apply, include the copyright and permission notices.",
+        "trigger": "activity:Modify",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "subject": {
+          "artifact": "chain-0384-976eb943c4d5:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "Make changes only for a permitted purpose under the downstream license.",
+        "trigger": "activity:Modify",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "permitted_purpose"
+        ],
+        "source_refs": [
+          "license-text:downstream:a5d8f6a075599b7d"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0384-976eb943c4d5:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "Agree to the downstream license terms and use the software for a permitted purpose.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "agree_to_terms",
+          "permitted_purpose"
+        ],
+        "source_refs": [
+          "license-text:downstream:a5d8f6a075599b7d"
+        ]
+      }
+    ],
+    "limitations": [
+      "已检查的条款摘录显示，上游 MIT 允许修改并要求保留通知；下游 PolyForm 条款限制其软件的修改和使用为 permitted purpose。现有证据未表明两者在共同适用范围内存在相反约束，故未判定许可冲突。",
+      "未提供商业用途、用户类别或其他 permitted purpose 条件的事实；收费本身不据此推定为商业用途。",
+      "未提供通知保留、条款同意或用途合规的履行证据；这些未知事项作为义务处理，而非认定违规。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 34322,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1439,
+    "output_tokens_details": {
+      "reasoning_tokens": 199
+    },
+    "total_tokens": 35761,
+    "attribution": {
+      "items": {
+        "msg_09bf18bb448d7aec016af532fdb05087d184127d33f9cc3ffa": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09bf18bb448d7aec016af532fdb05087d18af108c6f9f137f5": {
+          "input_tokens": 32252,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32252,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09bf18bb448d7aec016af53301f8cc87d185225856d7aab095": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1240,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1240
+            }
+          ]
+        },
+        "rs_09bf18bb448d7aec016af53301dd3087d198f9e558bcd6a4fe": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 199
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "449653c9f47d6bd777f434813fcea8b41c019221ebfe06bf851116a2c9cf3d63",
+  "elapsed_seconds": 46.19
+}

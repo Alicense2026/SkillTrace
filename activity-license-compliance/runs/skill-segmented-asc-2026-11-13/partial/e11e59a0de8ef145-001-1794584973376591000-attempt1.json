@@ -1,0 +1,480 @@
+{
+  "clauses": [
+    {
+      "start_line": 12,
+      "end_line": 12,
+      "clause_label": "read_study_repository_material",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": "owned_repository_content"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What You May Do; permission to read and study code, documentation, examples, and architecture owned by Rasmus Thornberg.",
+      "condition_explanation": "owned_repository_content means repository content owned by Rasmus Thornberg; third-party and separately licensed materials are excluded.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 13,
+      "end_line": 13,
+      "clause_label": "reference_project_ideas",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": "reference_ideas_patterns_or_approaches"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What You May Do; permission concerns ideas, patterns, and approaches from the project, not a grant over separately licensed materials.",
+      "condition_explanation": "reference_ideas_patterns_or_approaches means referring to project ideas, patterns, or approaches.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 14,
+      "end_line": 14,
+      "clause_label": "public_discussion_with_attribution",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "attribution_included"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What You May Do; permission to discuss the project publicly is conditioned on attribution.",
+      "condition_explanation": "attribution_included means attribution is included in the public discussion. This is a condition on the permitted discussion, not an independently imposed duty to discuss.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Include attribution to the project when discussing it publicly.",
+          "actor": "licensee",
+          "object": "public discussion of the project",
+          "trigger": "when the licensee discusses the project publicly"
+        }
+      ]
+    },
+    {
+      "start_line": 15,
+      "end_line": 17,
+      "clause_label": "copy_small_isolated_excerpts",
+      "activities": [
+        "Copy"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "excerpt_is_small_and_isolated",
+            {
+              "any": [
+                "personal_use",
+                "educational_use",
+                "non_commercial_use"
+              ]
+            },
+            "attribution_included",
+            "not_presented_as_licensee_original_work"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What You May Do; applies to copying small, isolated excerpts of repository content owned by Rasmus Thornberg.",
+      "condition_explanation": "small_and_isolated refers to the excerpt's size and separation; the text supplies no numerical threshold. The permitted purpose may be personal, educational, or non-commercial. Attribution must be included, and the excerpt must not be presented as the licensee's original work.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Include attribution with the copied excerpt.",
+          "actor": "licensee",
+          "object": "copied small, isolated excerpt",
+          "trigger": "when copying an excerpt under the personal, educational, or non-commercial permission"
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not present the excerpt as the licensee's own original work.",
+          "actor": "licensee",
+          "object": "copied small, isolated excerpt",
+          "trigger": "when copying or using an excerpt under this permission"
+        }
+      ]
+    },
+    {
+      "start_line": 21,
+      "end_line": 21,
+      "clause_label": "unpermitted_actions_require_permission",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; this introduces the following listed restrictions, each of which is prohibited unless direct written permission is obtained.",
+      "condition_explanation": "direct_written_permission_from_rasmus_thornberg means permission directly from Rasmus Thornberg in writing. The permission exception applies to the specific restricted actions in lines 23–28.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 23,
+      "end_line": 23,
+      "clause_label": "redistribute_substantial_portions",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; redistribution of substantial portions of repository content owned by Rasmus Thornberg is restricted absent direct written permission.",
+      "condition_explanation": "direct_written_permission_from_rasmus_thornberg is an exception permitting the action; without it, redistribution of substantial portions is prohibited. The text does not quantify substantial portions.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 24,
+      "end_line": 24,
+      "clause_label": "publish_competing_modified_version_or_fork",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "ModifiedArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; applies to publishing a modified version or fork as a competing distribution.",
+      "condition_explanation": "The restriction applies when a modified version or fork is published as a competing distribution. Direct written permission from Rasmus Thornberg is the exception.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 25,
+      "end_line": 25,
+      "clause_label": "commercially_exploit_repository_content",
+      "activities": [
+        "CommercialUse"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; the restriction covers packaging, selling, sublicensing, or commercially exploiting repository content owned by Rasmus Thornberg.",
+      "condition_explanation": "The listed commercial exploitation actions are prohibited absent direct written permission. The permission exception is not a general grant for other uses.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 26,
+      "end_line": 26,
+      "clause_label": "offer_project_as_hosted_service",
+      "activities": [
+        "ProvideNetworkService"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; covers offering the project, or a substantial derivative of it, as a hosted service.",
+      "condition_explanation": "The restriction applies to a hosted service based on the project itself or a substantial derivative. Direct written permission from Rasmus Thornberg is the exception.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 27,
+      "end_line": 27,
+      "clause_label": "incorporate_substantial_portions_into_commercial_product",
+      "activities": [
+        "Combine"
+      ],
+      "objects": [
+        "CombinedProduct"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; covers incorporation of substantial portions of repository content into a commercial product.",
+      "condition_explanation": "The restriction applies when substantial portions are incorporated into a commercial product. The text does not quantify substantial portions. Direct written permission is the exception.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 28,
+      "end_line": 28,
+      "clause_label": "remove_or_obscure_notices",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "direct_written_permission_from_rasmus_thornberg"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, What Requires Prior Written Permission; prohibits removing or obscuring copyright, license, attribution, or provenance notices on covered repository content absent direct written permission.",
+      "condition_explanation": "The restriction covers removal or obscuring of any listed notice. Direct written permission from Rasmus Thornberg is the exception.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 32,
+      "end_line": 34,
+      "clause_label": "case_by_case_written_permission",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": "permission_granted_case_by_case_in_writing"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, Direct Permission and Collaboration; expresses openness to broader arrangements and says permission may be granted case by case in writing. It does not itself grant those broader permissions.",
+      "condition_explanation": "permission_granted_case_by_case_in_writing means the rights holder separately grants permission in writing for the particular broader use or arrangement.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 36,
+      "end_line": 37,
+      "clause_label": "contribution_terms_external_reference",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "UNSPECIFIED",
+        "when": true,
+        "requires": "contribution_terms_in_contributing_md"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, Direct Permission and Collaboration; contributions are welcomed only by prior discussion, while their terms are referred to an unavailable CONTRIBUTING.md.",
+      "condition_explanation": "The text does not state the contribution terms. Prior discussion is required before contributing; the incorporated terms cannot be extracted from the supplied chunk.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Discuss the contribution in advance.",
+          "actor": "prospective contributor",
+          "object": "proposed contribution to the repository",
+          "trigger": "before making a contribution"
+        }
+      ]
+    },
+    {
+      "start_line": 41,
+      "end_line": 44,
+      "clause_label": "third_party_materials_excluded",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "UNSPECIFIED",
+        "when": true,
+        "requires": "separate_materials_follow_own_licenses"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, Third-Party Materials; this license applies only to content owned by Rasmus Thornberg. Third-party dependencies, externally licensed fixtures, generated materials with their own notices, and other separately licensed content remain under their own licenses.",
+      "condition_explanation": "The applicable terms for separately licensed materials are not supplied; see the referenced THIRD_PARTY_NOTICES.md. No permission or restriction under this license is inferred for those materials.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 48,
+      "end_line": 50,
+      "clause_label": "version_scope_and_future_terms",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": "repository_version_where_notice_appears"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Limited Preview License, Future Licensing; the stated permission applies only to the repository version bearing the notice. Future versions may have different, more or less permissive terms.",
+      "condition_explanation": "repository_version_where_notice_appears identifies the version to which this notice applies. The statement about possible future terms does not itself grant or impose terms for future versions.",
+      "obligation_items": []
+    }
+  ],
+  "coverage_notes": [
+    "The license is limited to repository content owned by Rasmus Thornberg; separately licensed third-party materials are excluded and their terms are not supplied.",
+    "CONTRIBUTING.md and THIRD_PARTY_NOTICES.md are referenced but absent, so their terms cannot be extracted.",
+    "The substantial-portion threshold and the scope of qualifying attribution are not further defined.",
+    "The license text states that no trademark, patent, or other unstated rights are granted; this is not an affirmative grant or behavioral duty. The as-is warranty disclaimer is nonoperative for activity constraints."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0001",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Document heading; it creates no behavioral rule."
+    },
+    {
+      "unit_id": "P0002",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Copyright notice alone does not impose an activity constraint."
+    },
+    {
+      "unit_id": "P0003",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Describes preview and source availability and states it is not currently open source; it does not grant or prohibit an activity."
+    },
+    {
+      "unit_id": "P0004",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0005",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Introduces the ownership-scoped permissions modeled in the following clauses."
+    },
+    {
+      "unit_id": "P0006",
+      "status": "MODELED",
+      "clause_labels": [
+        "read_study_repository_material",
+        "reference_project_ideas",
+        "public_discussion_with_attribution",
+        "copy_small_isolated_excerpts"
+      ],
+      "reason": "Each listed permission and its attribution, purpose, size, and presentation conditions is represented."
+    },
+    {
+      "unit_id": "P0007",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0008",
+      "status": "MODELED",
+      "clause_labels": [
+        "unpermitted_actions_require_permission"
+      ],
+      "reason": "Introduces the prior-written-permission exception applied to the following specifically modeled restrictions."
+    },
+    {
+      "unit_id": "P0009",
+      "status": "MODELED",
+      "clause_labels": [
+        "redistribute_substantial_portions",
+        "publish_competing_modified_version_or_fork",
+        "commercially_exploit_repository_content",
+        "offer_project_as_hosted_service",
+        "incorporate_substantial_portions_into_commercial_product",
+        "remove_or_obscure_notices"
+      ],
+      "reason": "All six restricted action categories and their written-permission exception are represented separately."
+    },
+    {
+      "unit_id": "P0010",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0011",
+      "status": "CONTEXT",
+      "clause_labels": [
+        "case_by_case_written_permission"
+      ],
+      "reason": "Describes willingness to consider arrangements and the case-by-case process; it does not itself grant broader rights."
+    },
+    {
+      "unit_id": "P0012",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "contribution_terms_external_reference"
+      ],
+      "reason": "Prior discussion is modeled, but the operative contribution terms referenced in the unavailable CONTRIBUTING.md are missing."
+    },
+    {
+      "unit_id": "P0013",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0014",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "third_party_materials_excluded"
+      ],
+      "reason": "The scope exclusion is represented, but the applicable separate terms and notices referenced in THIRD_PARTY_NOTICES.md are unavailable."
+    },
+    {
+      "unit_id": "P0015",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0016",
+      "status": "CONTEXT",
+      "clause_labels": [
+        "version_scope_and_future_terms"
+      ],
+      "reason": "Limits the notice's version scope and notes future terms may differ; it does not create a behavioral duty."
+    },
+    {
+      "unit_id": "P0017",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Denial of unstated trademark, patent, and other rights is not an affirmative activity rule; the as-is warranty disclaimer is nonoperative for this extraction."
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "case_id": "chain-0322-102baf321d44",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游 Llama Materials 时遵守适用的 Llama agreement 条件。",
+      "source_refs": [
+        "license-text:upstream:3801d78c611c8093"
+      ],
+      "subject": {
+        "artifact": "chain-0322-102baf321d44:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_Llama_agreement"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用下游 Elastic 软件时遵守适用的 Elastic License limitations and conditions。",
+      "source_refs": [
+        "license-text:downstream:204770e63f15adbc"
+      ],
+      "subject": {
+        "artifact": "chain-0322-102baf321d44:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use:downstream",
+      "unresolved_predicates": [
+        "comply_with_license_limitations_and_conditions"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若远程交互所涉及的服务属于向第三方提供的 Elastic 软件托管或管理服务，且用户可访问该软件任何实质性功能集合，则不得提供该服务。",
+      "source_refs": [
+        "license-text:downstream:204770e63f15adbc"
+      ],
+      "subject": {
+        "artifact": "chain-0322-102baf321d44:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction:downstream",
+          "hosted_or_managed_service_provides_software_to_third_parties",
+          "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+        ]
+      },
+      "unresolved_predicates": [
+        "hosted_or_managed_service_provides_software_to_third_parties",
+        "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

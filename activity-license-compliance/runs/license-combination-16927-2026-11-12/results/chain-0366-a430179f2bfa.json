@@ -1,0 +1,140 @@
+{
+  "case_id": "chain-0366-a430179f2bfa",
+  "input_group_row": 366,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MIT OR Apache-2.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0366-a430179f2bfa",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_services_to_develop_models_that_compete_with_Gemini_API_or_Google_AI_Studio",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0366-a430179f2bfa:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API Additional Terms of Service 的 L31-L34 摘录涉及开发竞争服务的模型及反向工程、提取或复制服务组件；结构化抽取将该组部分映射为笼统的 Use/Modify/CreateDerivative 禁止，不能据此认定普通 API 远程调用本身被禁止。当前仅对可由摘录支持的竞争模型用途保留条件限制。",
+      "记录标示 MIT OR Apache-2.0，但未确定实际适用的许可路径；代码与 API 服务材料的共同受约束范围亦未确定。没有已证实的代码修改、分发或其他触发下游通知条件的活动，因此不据此作冲突结论。",
+      "摘录未提供竞争模型定义及完整上下文；本分析不推断其范围。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得将 Gemini API 服务用于开发与 Gemini API 或 Google AI Studio 竞争的模型；不得尝试对服务组件（包括底层数据或模型）进行反向工程、提取或复制。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0366-a430179f2bfa:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "use_services_to_develop_models_that_compete_with_Gemini_API_or_Google_AI_Studio",
+          "attempt_reverse_engineer_extract_or_replicate_service_component"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 20972,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1037,
+    "output_tokens_details": {
+      "reasoning_tokens": 445
+    },
+    "total_tokens": 22009,
+    "attribution": {
+      "items": {
+        "msg_0dca9a7a775bbf53016af5323ba73c87d097e289fc9f3e9ecd": {
+          "input_tokens": 18902,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18902,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0dca9a7a775bbf53016af5323ba73c87d0b843737b240e4c29": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0dca9a7a775bbf53016af532443f6487d0846342e61aef1313": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 592,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 592
+            }
+          ]
+        },
+        "rs_0dca9a7a775bbf53016af5324423e887d0b0dabc98522498ad": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 445
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "7f7ee54e9be3bcc33fddd9ba2e3584b91bd73a8df233c5c82ab0744a87242366",
+  "elapsed_seconds": 32.35
+}

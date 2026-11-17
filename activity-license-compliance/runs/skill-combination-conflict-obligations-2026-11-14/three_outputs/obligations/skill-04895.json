@@ -1,0 +1,193 @@
+{
+  "case_id": "skill-04895",
+  "csv_row": 4896,
+  "source_excel_row": "6928",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-04895-1794599857781250000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人仅在已取得10x.in明确书面许可时，方可使用下游软件；现有事实未证明该许可已取得或未取得。",
+      "source_refs": [
+        "license:ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112"
+      ],
+      "subject": {
+        "artifact": "skill-04895:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "Use",
+      "unresolved_predicates": [
+        "explicit_written_permission_from_10x_in"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "用户仅在其为获授权用户且已与10x.in同意适用条款时，方可使用下游软件；摘录未说明这些条款的内容。",
+      "source_refs": [
+        "license:ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112"
+      ],
+      "subject": {
+        "artifact": "skill-04895:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "Use",
+      "unresolved_predicates": [
+        "user_is_authorized",
+        "terms_agreed_with_10x_in"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人不得未经授权对下游软件作商业使用；是否发生商业使用及是否获授权均未知。",
+      "source_refs": [
+        "license:ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112"
+      ],
+      "subject": {
+        "artifact": "skill-04895:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "CommercialUse",
+      "unresolved_predicates": [
+        "commercial_use",
+        "commercial_use_is_authorized"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知事实确认下游通过远程服务调用并使用上游资产；这不证明模型权重或上游副本转移，也不证明下游软件与上游模型是同一受约束对象。MIT的通知条件仅针对上游软件副本或实质部分，现有事实未显示此类复制或分发。",
+    "自定义许可证摘录未说明书面许可、授权用户及约定条款的取得情况；相关条件保留为义务，不能据此认定实际违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT明确允许对上游软件的使用；该条无附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知上游软件复制活动。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知上游软件修改活动。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知上游软件合并活动。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知上游软件发布活动。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知上游软件分发活动。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知上游软件再许可活动。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知出售上游软件副本的活动。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "下游软件使用受到明确书面许可条件约束；履行状态未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件复制活动。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件修改活动。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件合并活动。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件发布活动。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件分发活动。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件再许可活动。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知出售下游软件副本的活动。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件复制活动。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无已知下游软件分发活动。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "条款明确限制未经授权的商业使用；商业使用及授权情况未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "下游软件使用受授权用户及与10x.in约定条款的条件约束；相关履行事实未知。"
+    }
+  ]
+}

@@ -1,0 +1,823 @@
+{
+  "case_id": "skill-05491",
+  "csv_row": 5492,
+  "source_excel_row": "7756",
+  "status": "SUCCESS",
+  "request_sha256": "af9874611b61d05438bb1039d28e5f7581e1f8ba4f54a8ad5925681c4fed51af",
+  "analysis": {
+    "case_id": "skill-05491",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agreement_assent_by_acceptance_or_use_or_distribution",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05491:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05491:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "distribute_or_make_available_llama_materials_or_derivative_or_product_or_service_containing_them",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05491:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_applicable_laws_and_regulations_and_acceptable_use_policy",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05491:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "meta_has_expressly_granted_rights_after_licensee_requests_license",
+            "when": "on_llama_version_release_date_licensee_or_affiliates_products_or_services_exceeded_700_million_monthly_active_users_in_preceding_calendar_month"
+          },
+          "S": {
+            "artifact": "skill-05491:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "skill-05491:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "上游被许可人使用Llama Materials时须遵守适用法律法规及该材料的可接受使用政策。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "遵守适用法律法规及AUP的履行情况未知"
+        ],
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "skill-05491:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若被许可人分发或提供Llama Materials、其衍生物，或包含它们的产品/服务，须随材料提供协议副本，并在相关网站、界面、博客、关于页或产品文档显著展示“Built with Llama”。",
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "distribute_or_make_available_llama_materials_or_derivative_or_product_or_service_containing_them"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "distribute_or_make_available_llama_materials_or_derivative_or_product_or_service_containing_them"
+        ],
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "skill-05491:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "若使用Llama材料或其输出创建、训练、微调或改进的AI模型被分发或提供，模型名称须以“Llama”开头。",
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "use_llama_materials_or_outputs_or_results_to_create_train_fine_tune_or_otherwise_improve_ai_model",
+            "improved_ai_model_is_distributed_or_made_available"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "use_llama_materials_or_outputs_or_results_to_create_train_fine_tune_or_otherwise_improve_ai_model",
+          "improved_ai_model_is_distributed_or_made_available"
+        ],
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "skill-05491:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "分发Llama Materials副本时，在随副本分发的Notice文本文件中保留许可规定的完整归属声明。",
+        "trigger": {
+          "all": [
+            "activity:Distribute",
+            "distribute_copies_of_llama_materials"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "distribute_copies_of_llama_materials"
+        ],
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "skill-05491:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若规定统计时点前一日历月内，被许可人或关联方提供的产品/服务月活超过7亿，须向Meta申请许可，并在Meta明确授予权利前不得行使协议项下权利。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "on_llama_version_release_date_licensee_or_affiliates_products_or_services_exceeded_700_million_monthly_active_users_in_preceding_calendar_month"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "on_llama_version_release_date_licensee_or_affiliates_products_or_services_exceeded_700_million_monthly_active_users_in_preceding_calendar_month",
+          "meta_has_expressly_granted_rights_after_licensee_requests_license"
+        ],
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "skill-05491:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "上游被许可人使用Llama Materials即受协议约束；须以接受协议、使用或分发Llama Materials的方式同意受其条款约束。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "agreement_assent_by_acceptance_or_use_or_distribution"
+        ],
+        "source_refs": [
+          "license:8cc15535a8a34b41888f644b339a1a9eb428af793a4f5e24df58a3e5b1487d74"
+        ]
+      }
+    ],
+    "limitations": [
+      "事实确认的是远程服务调用及API链接，没有权重转移、源码纳入、修改或分发事实；不将服务提供者义务转给调用者。",
+      "GPL条款约束下游GPL许可对象；现有事实未证明该对象与被远程调用的上游Llama材料是同一对象，也未证明下游活动触发相应GPL义务，故未据此认定许可冲突。",
+      "上游许可将AUP纳入协议，但本次未提供AUP全文；仅保留遵守该政策的原文义务，不推断政策的具体禁止事项。",
+      "许可证文本中其他仅在分发、诉讼、终止、特定产品或其他未证事实下适用的条件，未视为已触发或违规。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          5
+        ],
+        "reason": "实际Use触发接受协议条款；接受事实未知，保留条件义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "许可授权，不含独立履行义务。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "复制授权；无独立履行义务。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "分发授权；无独立履行义务。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "衍生创作授权；无独立履行义务。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "修改授权；无独立履行义务。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "条件性分发要求及副本、展示义务均保留。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "模型改进且分发触发时的命名义务保留为条件义务。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "本条为Section 2例外；未证明集成终端产品接收情形。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "分发上游材料副本时的归属声明义务已保留。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已知上游材料被Use，适用法律及AUP义务已保留。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "阈值事实未知，保留申请及获明确授权前不得使用的条件。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实使用Llama商标。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实提起条款所述诉讼。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实相关第三方索赔。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "NOT_APPLICABLE",
+        "obligation_indices": [],
+        "reason": "未证实协议终止。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅许可文件副本；与已知调用活动无关。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅许可文件副本；与已知调用活动无关。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "GPL对象的运行许可；已知活动是上游API调用。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实GPL程序运行产生的输出。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实下游GPL对象的非分发使用。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实替他人运行或传递GPL对象。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分发GPL覆盖作品。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实相关反规避法律情形。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分发GPL覆盖作品。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分发原样源代码副本。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "收费许可不是履行义务；未证实销售GPL副本。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实以源代码形式分发GPL修改作品。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实以源代码形式分发修改作品。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实以源代码形式分发修改作品。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分发基于GPL程序的修改作品。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分发具有交互界面的GPL修改作品。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实与GPL覆盖作品形成汇编。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分发GPL对象代码。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实采用实体介质方式分发对象代码。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实采用实体产品书面要约方式分发对象代码。"
+      },
+      {
+        "rule_ref": "D021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实该特定偶发、非商业对象代码分发方式。"
+      },
+      {
+        "rule_ref": "D022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实指定地点提供对象代码。"
+      },
+      {
+        "rule_ref": "D023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实点对点分发对象代码。"
+      },
+      {
+        "rule_ref": "D024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实对象代码分发中存在系统库部分。"
+      },
+      {
+        "rule_ref": "D025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实用户产品对象代码分发及相应交易。"
+      },
+      {
+        "rule_ref": "D026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实对修改作品或用户产品拒绝网络访问。"
+      },
+      {
+        "rule_ref": "D027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实提供对应源码或安装信息。"
+      },
+      {
+        "rule_ref": "D028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实GPL附加许可适用于该对象。"
+      },
+      {
+        "rule_ref": "D029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实传递附加许可或GPL作品副本。"
+      },
+      {
+        "rule_ref": "D030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实向GPL作品添加材料。"
+      },
+      {
+        "rule_ref": "D031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实向GPL作品添加材料或相关额外条款。"
+      },
+      {
+        "rule_ref": "D032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实进一步限制及GPL再许可情形。"
+      },
+      {
+        "rule_ref": "D033",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实按GPL第7节向覆盖作品添加条款。"
+      },
+      {
+        "rule_ref": "D034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实修改GPL覆盖作品。"
+      },
+      {
+        "rule_ref": "D035",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实传播GPL覆盖作品。"
+      },
+      {
+        "rule_ref": "D036",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实违反后停止行为。"
+      },
+      {
+        "rule_ref": "D037",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实收到侵权通知或补救。"
+      },
+      {
+        "rule_ref": "D038",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实下游接收GPL副本或权利。"
+      },
+      {
+        "rule_ref": "D039",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实许可终止且未永久恢复。"
+      },
+      {
+        "rule_ref": "D040",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实接收或运行GPL程序副本。"
+      },
+      {
+        "rule_ref": "D041",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实接收副本时的点对点附带传播。"
+      },
+      {
+        "rule_ref": "D042",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实传递GPL覆盖作品。"
+      },
+      {
+        "rule_ref": "D043",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实第三方收到GPL覆盖作品。"
+      },
+      {
+        "rule_ref": "D044",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实实体交易及相应传播。"
+      },
+      {
+        "rule_ref": "D045",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实对GPL权利施加进一步限制或相关专利诉讼。"
+      },
+      {
+        "rule_ref": "D046",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实行使GPL贡献者专利许可。"
+      },
+      {
+        "rule_ref": "D047",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实修改GPL贡献版本。"
+      },
+      {
+        "rule_ref": "D048",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实销售GPL贡献版本。"
+      },
+      {
+        "rule_ref": "D049",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实要约销售GPL贡献版本。"
+      },
+      {
+        "rule_ref": "D050",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实传播GPL贡献版本。"
+      },
+      {
+        "rule_ref": "D051",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实依赖专利许可而传递覆盖作品。"
+      },
+      {
+        "rule_ref": "D052",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实特定交易下向部分接收者授予专利许可。"
+      },
+      {
+        "rule_ref": "D053",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实条款所述第三方安排及歧视性专利许可。"
+      },
+      {
+        "rule_ref": "D054",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实依赖另行存在的默示专利许可或抗辩。"
+      },
+      {
+        "rule_ref": "D055",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实存在无法与GPL同时履行的其他条件。"
+      },
+      {
+        "rule_ref": "D056",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实与AGPLv3作品链接。"
+      },
+      {
+        "rule_ref": "D057",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实与AGPLv3作品合并。"
+      },
+      {
+        "rule_ref": "D058",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实传递AGPLv3与GPL组合作品。"
+      },
+      {
+        "rule_ref": "D059",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "GPL版本选择与已知API调用无关。"
+      },
+      {
+        "rule_ref": "D060",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实代理指定及其公开接受版本。"
+      },
+      {
+        "rule_ref": "D061",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "示例通知中的许可选择与已知活动无关。"
+      },
+      {
+        "rule_ref": "D062",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "示例通知中的修改许可与已知活动无关。"
+      },
+      {
+        "rule_ref": "D063",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实采用示例通知。"
+      },
+      {
+        "rule_ref": "D064",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实程序具有终端交互或采用示例通知。"
+      },
+      {
+        "rule_ref": "D065",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实将GPL程序并入专有程序；API调用不等于合并。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05491-1794600438565722000-2.json",
+  "usage": {
+    "input_tokens": 53377,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 4776,
+    "output_tokens_details": {
+      "reasoning_tokens": 207
+    },
+    "total_tokens": 58153,
+    "attribution": {
+      "items": {
+        "msg_07580d13bd9e44b5016af76e5b225487d0a76518642970bef2": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07580d13bd9e44b5016af76e5b225487d0ade319a76e3e3760": {
+          "input_tokens": 50653,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 50653,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07580d13bd9e44b5016af76e5fa12487d0986fdecaafb34317": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 4569,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 4569
+            }
+          ]
+        },
+        "rs_07580d13bd9e44b5016af76e5e75bc87d0afc4ffe8de9741ec": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 148
+        },
+        "rs_07580d13bd9e44b5016af76e5f8a2887d08f3d0c8b615285e3": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 59
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

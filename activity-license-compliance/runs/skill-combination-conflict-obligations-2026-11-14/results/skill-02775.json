@@ -1,0 +1,368 @@
+{
+  "case_id": "skill-02775",
+  "csv_row": 2776,
+  "source_excel_row": "3804",
+  "status": "SUCCESS",
+  "request_sha256": "5ec16c49529454612a1cc8fbd038b5073c6c9484f922cf46da29ab4cb9db759b",
+  "analysis": {
+    "case_id": "skill-02775",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02775:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "patent_license_for_that_work_has_terminated",
+            "when": "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+          },
+          "S": {
+            "artifact": "skill-02775:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": true,
+            "when": "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+          },
+          "S": {
+            "artifact": "skill-02775:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02775:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "copyright_and_permission_notices_appear_in_all_copies",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02775:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对本地 Apache-2.0 与 ISC 摘录及其结构化规则。事实确认对上游 diffusers 的 Use、Link 和 RemoteInteraction；未确认复制、分发、修改、捆绑或向下游提供副本。",
+      "远程调用和链接不证明上游原件与下游制品属于同一许可对象；没有据此套用分发条件或认定冲突。",
+      "专利权利仅在摘录所述专利主张范围内适用；是否存在该类主张、专利诉讼或商标使用均未知。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游被许可人使用 ISC 软件时，应在所有副本中包含该软件的版权声明和许可声明；不得据现有事实推定相关副本已有或没有这些声明。",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "subject": {
+          "artifact": "skill-02775:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "copyright_and_permission_notices_appear_in_all_copies"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游被许可人使用 Apache-2.0 许可人的商号、商标、服务标志或产品名称时，除为描述作品来源或重现 NOTICE 内容而作合理且惯常的使用外，应避免该等使用；例外是否适用及是否发生相关使用未知。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-02775:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "use_of_licensor_names_or_marks",
+          "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Copy 活动。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 CreateDerivative 活动。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Sublicense 活动。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Distribute 活动。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "专利许可范围受特定专利主张条件限制；未发现由已知 Use 事实触发的独立履行义务。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 SellCopies 活动。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "专利许可终止以特定专利诉讼为条件；没有诉讼事实或已触发的义务。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Copy 或分发副本；其副本许可和修改文件通知条件未触发。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Distribute 活动；分发条件未触发。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认对上游材料的修改或相关 ModifiedArtifact 使用。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认相关 DerivativeWork 使用。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "该条仅明确许可为描述作品来源或重现 NOTICE 内容而作的合理且惯常使用；限制性要求由 U013 的条件义务保留。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "已知上游 Use；保留对非例外商标等使用的避免义务，是否发生该使用及例外是否适用未知。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发中提供或收费接受支持、保证或其他责任义务。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Distribute 活动。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认分发修改文件。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认以源码形式分发 DerivativeWork。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认包含 NOTICE 文件的分发及 DerivativeWork 分发。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认对上游材料的修改或相关 ModifiedArtifact 使用。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已知对 ISC 软件进行 Use；保留在所有副本中包含版权和许可声明的条件义务，履行状态未知。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Copy 活动。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Modify 活动。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认 Distribute 活动。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-02775-1794593698073540000-2.json",
+  "usage": {
+    "input_tokens": 24769,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2587,
+    "output_tokens_details": {
+      "reasoning_tokens": 243
+    },
+    "total_tokens": 27356,
+    "attribution": {
+      "items": {
+        "msg_063db2ba3f5f1cf1016af753e3a33487d1a378b6e2ca712a77": {
+          "input_tokens": 22045,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 22045,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_063db2ba3f5f1cf1016af753e3a33487d1b604bfa06ee1cdf3": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_063db2ba3f5f1cf1016af753e8ca6c87d181fde40cfdc5003d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2344,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2344
+            }
+          ]
+        },
+        "rs_063db2ba3f5f1cf1016af753e8aea887d1a7c2fda60cc28804": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 243
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

@@ -1,0 +1,112 @@
+{
+  "case_id": "chain-0036-a8e985a4d261",
+  "input_group_row": 36,
+  "aggregate_count": 66,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "Mistral AI Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "66"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0036-a8e985a4d261:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e6be310d0e62b47f"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0036-a8e985a4d261:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "case_id": "chain-0036-a8e985a4d261",
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的关系是下游经API链接并远程调用上游；不据此推断代码修改、复制、分发、依赖或共享对象范围。",
+      "上游原文摘录涉及客户对Mistral AI Products使用所产生费用的支付，但未提供订单、账单或付款履行情况；不据此推断下游收费或商业用途。",
+      "MIT摘录规定在软件副本或实质部分的所有副本中包含版权及许可声明；当前事实未证明下游材料被复制或分发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "按适用订单或订单确认支付因使用Mistral AI Products而到期的费用。",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "subject": {
+          "artifact": "chain-0036-a8e985a4d261:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "fees_due",
+          "payment_fulfilled"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如复制或分发MIT软件的副本或实质部分，在相关副本中包含版权声明及许可声明。",
+        "source_refs": [
+          "license-text:downstream:e6be310d0e62b47f"
+        ],
+        "subject": {
+          "artifact": "chain-0036-a8e985a4d261:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "distribution",
+          "copy_or_substantial_portion"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0034-1d85a5ee571c.json",
+  "original_case_id": "chain-0034-1d85a5ee571c",
+  "original_request_sha256": "2376a32a4cd8a197a419981477ac88d4116b3770b8121be732bbf22a375a23b9",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0034-1d85a5ee571c": "chain-0036-a8e985a4d261",
+    "license-text:upstream:282b79bf9fcbaf7a": "license-text:upstream:282b79bf9fcbaf7a",
+    "license-text:downstream:e6be310d0e62b47f": "license-text:downstream:e6be310d0e62b47f",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/33": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/35"
+  }
+}

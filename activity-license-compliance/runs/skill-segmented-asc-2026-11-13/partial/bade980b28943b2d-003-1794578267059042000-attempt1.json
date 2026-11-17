@@ -1,0 +1,254 @@
+{
+  "clauses": [
+    {
+      "start_line": 176,
+      "end_line": 176,
+      "clause_label": "output_ai_disclosure",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "end_users_clearly_informed_of_ai_generation_and_possible_errors_or_omissions_and_reference_only_status"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 8.1; applies when the licensee uses Service Outputs with its end users. The identified material is the Output, not the model.",
+      "condition_explanation": "end_users_clearly_informed_of_ai_generation_and_possible_errors_or_omissions_and_reference_only_status means the licensee clearly discloses to its end users that Output content is AI-generated, may contain errors or omissions, and is for reference only.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Clearly disclose to end users that Output content is AI-generated, may contain errors or omissions, and is for reference only.",
+          "actor": "licensee",
+          "object": "Service Output provided to end users",
+          "trigger": "Whenever the licensee uses the Service Output with end users."
+        }
+      ]
+    },
+    {
+      "start_line": 185,
+      "end_line": 185,
+      "clause_label": "export_sanctions_compliant_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": {
+          "all": [
+            "export_sanctions_laws_complied_with",
+            "no_comprehensive_sanctions_country_or_restricted_party_use",
+            "no_prohibited_end_use",
+            "inputs_do_not_require_release_or_export_license"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Export Control and Sanctions section; covers access to and use of Services by the licensee and its end users, including providing Inputs and obtaining Outputs. The agreement makes the licensee solely responsible for compliance related to its and its end users’ access and use.",
+      "condition_explanation": "export_sanctions_laws_complied_with means compliance with applicable export-control and sanctions laws related to the access and use of the Services by the licensee and its end users. no_comprehensive_sanctions_country_or_restricted_party_use means the Services are not used in or for the benefit of, or exported, re-exported, or transferred to or within a comprehensively sanctioned country, or to a restricted party where the applicable laws prohibit use. no_prohibited_end_use means the Services are not used for an end use prohibited by applicable export-control and sanctions laws. inputs_do_not_require_release_or_export_license means neither the licensee’s nor its end users’ Inputs contain material or information requiring a license for release or export. These requirements apply together.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Comply with applicable Export Control and Sanctions Laws related to the licensee’s and its end users’ access to and use of the Services.",
+          "actor": "licensee",
+          "object": "access to and use of the Services",
+          "trigger": "Whenever the licensee or its end users access or use the Services, including providing Inputs or obtaining Outputs."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use the Services in or for the benefit of, or export, re-export, or transfer them to or within, a comprehensively sanctioned country or to a restricted party where applicable law prohibits use.",
+          "actor": "licensee",
+          "object": "Services",
+          "trigger": "Whenever Services are used, exported, re-exported, or transferred."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use the Services for an end use prohibited by applicable Export Control and Sanctions Laws.",
+          "actor": "licensee",
+          "object": "Services",
+          "trigger": "Whenever the Services are used."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not provide Inputs containing material or information that requires a license for release or export.",
+          "actor": "licensee and its end users",
+          "object": "Inputs",
+          "trigger": "Whenever Inputs are provided to the Services."
+        }
+      ]
+    },
+    {
+      "start_line": 199,
+      "end_line": 199,
+      "clause_label": "continued_use_after_terms_revision",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "revised_terms_released_and_seven_days_elapsed",
+        "requires": {
+          "any": [
+            "accept_modified_terms",
+            "cease_using_service"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Section 11.1; applies to continued use after revised Terms take effect. DeepSeek may revise the Terms; revisions take effect seven days after release. If the user does not accept them, the text directs the user to stop using the Service.",
+      "condition_explanation": "revised_terms_released_and_seven_days_elapsed means revised Terms have been released and their stated seven-day effective period has elapsed. accept_modified_terms means the user accepts the revisions; continued use is treated as acceptance. The alternative cease_using_service is the stated course if the user does not accept the revisions.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Stop using the Service if the user does not accept the modified Terms.",
+          "actor": "licensee",
+          "object": "Service",
+          "trigger": "When revised Terms have taken effect and the user does not accept them."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The cited warranty, availability, accuracy, correction, third-party-offering, testing-feature, and force-majeure statements are disclaimers or liability limitations, not behavioral duties for this activity-constraint extraction.",
+    "Section 7.1 contains an operative indemnify/defend/hold-harmless obligation, but the allowed activities and objects do not represent indemnification or payment of third-party claims; it is identified as unresolved below.",
+    "Section 8.1 also allocates responsibility for decisions based on Outputs, but does not state a specific allowed activity that faithfully represents that allocation; it is identified as unresolved below.",
+    "The Privacy Policy and Model Mechanism and Training Methods document are cross-referenced but not supplied, so their substantive terms cannot be extracted.",
+    "Section 11.1 refers to appropriate channels for announcing revisions without specifying a fixed notice channel. No additional notice duty is inferred."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0046",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Warranty disclaimer concerning uninterrupted, timely, secure, or error-free Service operation; it imposes no user activity duty."
+    },
+    {
+      "unit_id": "P0047",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Warranty disclaimer concerning Output or other information accuracy, reliability, non-infringement, and security; it imposes no user activity duty."
+    },
+    {
+      "unit_id": "P0048",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Disclaimer of a guarantee to correct Service defects; it imposes no user activity duty."
+    },
+    {
+      "unit_id": "P0049",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Disclaimer concerning third-party offerings; it imposes no user activity duty."
+    },
+    {
+      "unit_id": "P0050",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Liability limitation for enumerated disruptions and causes beyond reasonable control; it imposes no user activity duty."
+    },
+    {
+      "unit_id": "P0051",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Advisory and warranty disclaimer concerning testing-phase features; it imposes no user activity duty."
+    },
+    {
+      "unit_id": "P0052",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "Section 7.7 imposes an operative obligation to indemnify, defend, and hold DeepSeek and specified related parties harmless for qualifying third-party claims, subject to the stated triggers and applicable law. No permitted activity/object combination faithfully represents that obligation."
+    },
+    {
+      "unit_id": "P0053",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "Section 8.1 includes an operative duty to clearly disclose specified AI-generated-content qualifications to end users, extracted in output_ai_disclosure. It also assigns responsibility for decisions and consequences based on Outputs to the user and/or end users, which is not faithfully represented by the available activity/object schema."
+    },
+    {
+      "unit_id": "P0054",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Describes a published explanatory document; it does not impose a behavioral duty in this paragraph."
+    },
+    {
+      "unit_id": "P0055",
+      "status": "MODELED",
+      "clause_labels": [
+        "export_sanctions_compliant_use"
+      ],
+      "reason": "The paragraph states applicable-law compliance responsibility and operative restrictions on sanctioned destinations and parties, prohibited end uses, and Inputs requiring release or export licenses."
+    },
+    {
+      "unit_id": "P0056",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Heading and governing-law rule; legal venue and governing law are outside this activity-constraint extraction."
+    },
+    {
+      "unit_id": "P0057",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Dispute negotiation and forum-selection provision; it does not regulate an allowed licensee activity."
+    },
+    {
+      "unit_id": "P0058",
+      "status": "MODELED",
+      "clause_labels": [
+        "continued_use_after_terms_revision"
+      ],
+      "reason": "Section 11.1 gives DeepSeek a revision right, sets the seven-day effective period, and directs users who reject revisions to stop using the Service; continued use is stated to constitute acceptance."
+    },
+    {
+      "unit_id": "P0059",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Feedback and contact information is an invitation to report or provide suggestions, not an obligation."
+    },
+    {
+      "unit_id": "P0060",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Document title only."
+    },
+    {
+      "unit_id": "P0061",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Update date only."
+    },
+    {
+      "unit_id": "P0062",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Welcome text only."
+    },
+    {
+      "unit_id": "P0063",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Identifies the provider and establishes that specific-function terms prevail over conflicting general terms; the specific terms are not supplied."
+    },
+    {
+      "unit_id": "P0064",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Refers to the separate Privacy Policy and model-mechanism document. Their contents are not supplied, so no privacy or training duties are inferred."
+    },
+    {
+      "unit_id": "P0065",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Acceptance and assent language is outside the requested substantive activity-constraint extraction; the cited definition-context copy is not citable."
+    }
+  ]
+}

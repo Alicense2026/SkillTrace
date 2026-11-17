@@ -1,0 +1,217 @@
+{
+  "case_id": "chain-0229-b5a25e94d3b2",
+  "input_group_row": 229,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "BUSL-1.1",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0229-b5a25e94d3b2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0229-b5a25e94d3b2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "pay_required_fee_and_follow_product_rules",
+            "when": "activity:CommercialUse"
+          },
+          "S": {
+            "artifact": "chain-0229-b5a25e94d3b2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:6ad078e9b6239c91"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "non_production_use_and_compliance_with_current_license_requirements",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0229-b5a25e94d3b2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:6ad078e9b6239c91"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "production_use_permitted_by_applicable_additional_use_grant",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0229-b5a25e94d3b2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "智谱用户协议摘录列有多种受限使用行为，但当前事实仅确认远程API调用及Use，未证明调用符合其中任一具体禁止行为；故不据此认定违规。",
+      "BUSL条款适用于其Licensed Work及相关副本、衍生作品；对象图仅确认API调用/链接关系，未确认下游产品包含、依赖或使用该Licensed Work，不能据此认定BUSL条款与智谱协议在同一对象范围适用。",
+      "BUSL摘录未提供适用的Additional Use Grant、生产用途范围或该特定版本的Change Date；且本任务未确认下游Use或生产用途。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用智谱开放平台时避免摘录所列禁止行为，包括未经授权使用第三方软件接入或使用平台；仅在实际行为符合该禁止条款时适用。",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "subject": {
+          "artifact": "chain-0229-b5a25e94d3b2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如对智谱平台或其服务进行商业使用，应支付适用费用并遵循产品规则。",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "subject": {
+          "artifact": "chain-0229-b5a25e94d3b2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "pay_required_fee_and_follow_product_rules"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 39232,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1634,
+    "output_tokens_details": {
+      "reasoning_tokens": 555
+    },
+    "total_tokens": 40866,
+    "attribution": {
+      "items": {
+        "msg_0a0974e9bf35a9cb016af53031b61487d0986addf942e48ee0": {
+          "input_tokens": 37162,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 37162,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a0974e9bf35a9cb016af53031b61487d0af833c252c659bd9": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a0974e9bf35a9cb016af5303c621087d0b4e4610817838a8c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1079,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1079
+            }
+          ]
+        },
+        "rs_0a0974e9bf35a9cb016af5303b9cb887d097fa983a293b8a42": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 513
+        },
+        "rs_0a0974e9bf35a9cb016af5303c4afc87d08a313e970adf4111": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 42
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "c45a8936ba54db7de65a4353dc3aef6e75c9e71f1960d5e1d74eb169e7e76b4f",
+  "elapsed_seconds": 50.07
+}

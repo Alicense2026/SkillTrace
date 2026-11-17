@@ -1,0 +1,41 @@
+{
+  "case_id": "chain-13605-70667195689f",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游服务时，不得用于开发与该服务竞争的模型，也不得尝试逆向工程、提取或复制服务组件（包括底层数据或模型参数）。",
+      "source_refs": [
+        "license-text:upstream:b1953e4d51c49b91"
+      ],
+      "subject": {
+        "artifact": "chain-13605-70667195689f:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "develop_competing_models",
+        "reverse_engineer_extract_or_replicate_service_components"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如使用下游仓库材料，须先取得作者明确的书面许可；条款未说明许可获准后的具体条件。",
+      "source_refs": [
+        "license-text:downstream:75830fe363edf8d0"
+      ],
+      "subject": {
+        "artifact": "chain-13605-70667195689f:downstream",
+        "kind": "CombinedProduct"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "explicit_prior_written_permission"
+      ]
+    }
+  ]
+}

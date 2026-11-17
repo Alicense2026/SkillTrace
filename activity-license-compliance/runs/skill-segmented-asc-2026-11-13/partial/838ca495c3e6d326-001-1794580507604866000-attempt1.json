@@ -1,0 +1,744 @@
+{
+  "clauses": [
+    {
+      "start_line": 9,
+      "end_line": 9,
+      "clause_label": "preamble_use_limit",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "use_within_express_license_permissions_or_written_permission"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Preamble; applies to Covered Software as defined in context. Uses beyond permissions expressly stated require Written Permission.",
+      "condition_explanation": "written_permission means signed written authorization from Kjell Hedström expressly allowing the specific use; see definition at line 29.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 11,
+      "end_line": 11,
+      "clause_label": "official_app_evaluation_use",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "official_app_unregistered",
+        "requires": {
+          "any": [
+            {
+              "all": [
+                "good_faith_evaluation",
+                "not_routine_or_ongoing_productive_use_after_evaluation"
+              ]
+            },
+            {
+              "all": [
+                "routine_or_ongoing_productive_use_after_evaluation",
+                "license_purchased"
+              ]
+            }
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Official App only; unregistered good-faith evaluation has no fixed trial period. Keeping or using it for routine or ongoing productive work after evaluation requires purchase.",
+      "condition_explanation": "official_app is a build distributed or expressly authorized by the copyright holder. productive_use and purchase conditions are further described at lines 47 and 51. The rule does not grant redistribution rights.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Purchase a license before continuing routine or ongoing productive use of the Official App after evaluation.",
+          "actor": "licensee using the Official App",
+          "object": "Official App",
+          "trigger": "The user decides to keep using the Official App, or uses it for routine or ongoing productive work after evaluation."
+        }
+      ]
+    },
+    {
+      "start_line": 33,
+      "end_line": 33,
+      "clause_label": "covered_software_scope",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "material_is_covered_software"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Scope boundary: this license applies only to Covered Software; the sentence does not itself grant an activity permission.",
+      "condition_explanation": "Covered Software is defined in the supplied definition context at line 15.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 35,
+      "end_line": 35,
+      "clause_label": "mit_components_independent_rights",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": "material_is_mit_component",
+        "requires": true
+      },
+      "actor_role": "licensee",
+      "scope_note": "MIT Components are outside this license and remain subject to their own MIT or other stated open-source license. The paragraph expressly preserves independent rights to use, copy, modify, merge, publish, distribute, sublicense, or sell those components.",
+      "condition_explanation": "mit_component is defined in the supplied definition context at line 23; the permission is limited to the component, not Covered Software merely because it is used with or bundled with it.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 37,
+      "end_line": 37,
+      "clause_label": "version_and_release_boundary",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "release_is_before_2_2_0",
+        "requires": "prior_repo_wide_mit_license_permissions_remain_available"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Version boundary: releases before 2.2.0 retain prior repo-wide MIT permissions. This license applies to Covered Software in releases tagged 2.2.0 beginning at the specified commit and later, until a later release states a different boundary in release notes and license files.",
+      "condition_explanation": "The applicable terms depend on release version, commit, and any later release notes and license files; no later materials are supplied.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 39,
+      "end_line": 39,
+      "clause_label": "unclear_file_notice_boundary",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "file_has_desktop_specific_and_mit_covered_content",
+        "requires": {
+          "any": [
+            "file_stated_license_notice_controls",
+            "clear_notice_absent_and_no_assumed_open_source_rights_for_desktop_specific_mac_app_code"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Mixed-content file boundary. The paragraph directs reliance on the file's stated notice; absent a clear notice, this license does not imply open-source rights for desktop-specific Mac app code.",
+      "condition_explanation": "The two alternatives are notice controls the file's stated license, or—if no clear notice exists—do not assume this license grants open-source rights to desktop-specific code.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 43,
+      "end_line": 43,
+      "clause_label": "official_app_download_install_evaluation",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "official_app_unregistered",
+        "requires": "evaluation_use"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Free Official-App Evaluation section; permission to download, install, and use the unregistered Official App for evaluation. Separate from productive-use license requirements at lines 47 and 51.",
+      "condition_explanation": "official_app is defined in the supplied definition context at line 19; evaluation scope is elaborated at lines 45 and 51.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 45,
+      "end_line": 45,
+      "clause_label": "evaluation_business_workflows",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "evaluating_whether_official_app_meets_user_needs",
+        "requires": "use_is_for_evaluation_including_personal_use_or_real_business_workflow_evaluation"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Evaluation may include real business workflows when the purpose is deciding whether the Official App meets the user's needs; no fixed trial period.",
+      "condition_explanation": "This is evaluation, not authorization for routine or ongoing productive work after evaluation, which requires purchase under lines 47 and 51.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 47,
+      "end_line": 47,
+      "clause_label": "productive_use_requires_purchase",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "official_app_used_for_routine_or_ongoing_productive_work_after_evaluation",
+        "requires": "license_purchased"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Official App productive use after evaluation, including work for an employer, client, customer, or paid commercial purpose.",
+      "condition_explanation": "The purchase condition applies to routine or ongoing productive work after evaluation; commercial productive-use examples appear at line 51.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Purchase a license for routine or ongoing productive use of the Official App after evaluation.",
+          "actor": "licensee using the Official App",
+          "object": "Official App",
+          "trigger": "The Official App is used for routine or ongoing productive work after evaluation, including work for an employer, client, customer, or other paid commercial purpose."
+        }
+      ]
+    },
+    {
+      "start_line": 51,
+      "end_line": 51,
+      "clause_label": "commercial_productive_use_definition",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "official_app_used_to_create_convert_prepare_review_or_deliver_materials_as_part_of_specified_work",
+        "requires": "license_purchased"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Defines commercial productive use for the purchase requirement; includes paid employment, contract work, consulting, client services, business operations, or other work yielding compensation or business value.",
+      "condition_explanation": "The examples explain when the productive-use purchase condition applies; they do not independently extend the license to redistribution or other commercialization.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Purchase a license for commercial productive use of the Official App.",
+          "actor": "licensee using the Official App",
+          "object": "Official App",
+          "trigger": "The Official App is used to create, convert, prepare, review, or deliver materials as part of paid employment, contract work, consulting, client services, business operations, or other work for which the user or organization receives compensation or business value."
+        }
+      ]
+    },
+    {
+      "start_line": 53,
+      "end_line": 53,
+      "clause_label": "evaluation_no_software_commercialization",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PROHIBITED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "licensee",
+      "scope_note": "Evaluation permission does not authorize redistribution, resale, sublicensing, public derivative apps, marketplace listings, hosted-service bundling, client redistribution, managed third-party conversion services, or other commercialization of Covered Software itself.",
+      "condition_explanation": "The restriction concerns Covered Software itself; it does not negate independent MIT Component rights under line 35.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not redistribute, resell, sublicense, publish derivative desktop apps, list on marketplaces, bundle in hosted services, redistribute to clients, or commercialize Covered Software itself under the evaluation permission.",
+          "actor": "licensee",
+          "object": "Covered Software",
+          "trigger": "At all times when relying only on the free Official-App evaluation permission; no exception is stated in this paragraph."
+        }
+      ]
+    },
+    {
+      "start_line": 57,
+      "end_line": 57,
+      "clause_label": "inspect_covered_source",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": "material_is_covered_source"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Source Visibility section; permission to inspect Covered Source only.",
+      "condition_explanation": "Covered Source is defined in the supplied definition context at line 21.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 59,
+      "end_line": 59,
+      "clause_label": "local_build_for_evaluation",
+      "activities": [
+        "CreateDerivative"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "build_is_local",
+        "requires": "own_personal_or_internal_evaluation"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Permission to build Covered Software locally for personal or internal evaluation; it does not authorize productive use or distribution of the build.",
+      "condition_explanation": "For an organization, internal evaluation means evaluation by that organization and its employees or contractors for that organization's own use, per definition context at line 61.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 61,
+      "end_line": 61,
+      "clause_label": "private_changes_and_patches",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "changes_remain_private_and_local",
+        "requires": "own_personal_or_internal_evaluation"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Private local changes and personal patches to Covered Source are allowed for personal or internal evaluation. Distribution and specified third-party uses require Written Permission.",
+      "condition_explanation": "Internal evaluation for an organization is evaluation by that organization and its employees or contractors for that organization's own use. Without Written Permission, the changed source/build may not be distributed, published, sold, sublicensed, rented, leased, hosted, bundled, provided to clients or other third parties, or used to offer a public or third-party service.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 61,
+      "end_line": 61,
+      "clause_label": "private_changes_no_third_party_distribution",
+      "activities": [
+        "Distribute"
+      ],
+      "objects": [
+        "ModifiedArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "written_permission"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Applies to private local changes or builds of Covered Source; Written Permission is required for the listed distribution and third-party activities.",
+      "condition_explanation": "The definition of Redistribution at line 27 includes providing, publishing, transferring, selling, sublicensing, renting, leasing, hosting, and bundling copies for others. This clause captures the express prohibition and its permission exception.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 63,
+      "end_line": 63,
+      "clause_label": "self_built_productive_use_requires_permission",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "ModifiedArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "copy_is_not_the_official_app_and_use_is_productive",
+        "requires": "written_permission"
+      },
+      "actor_role": "licensee",
+      "scope_note": "A purchased Official App license does not authorize productive use of any self-built or modified copy, including a self-built copy from unmodified source.",
+      "condition_explanation": "The restriction applies to any copy other than the Official App; Written Permission is required for productive use.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 67,
+      "end_line": 67,
+      "clause_label": "unregistered_app_reminders",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": "official_app_is_unregistered",
+        "requires": "evaluation_reminders_may_be_shown"
+      },
+      "actor_role": "licensee",
+      "scope_note": "States that evaluation reminders may appear in the unregistered Official App; no user duty is imposed.",
+      "condition_explanation": "Applies while the Official App is unregistered.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 69,
+      "end_line": 69,
+      "clause_label": "registered_license_reminders_removed",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "license_purchased_and_applied",
+        "requires": "use_within_licensed_user_or_scope"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Purchasing and applying a registered license removes evaluation reminders for the licensed user or licensed scope.",
+      "condition_explanation": "The benefit is limited to the user or scope licensed; purchase terms are not supplied.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 73,
+      "end_line": 73,
+      "clause_label": "conversion_features_remain_available",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": "official_app_unregistered_and_used_for_evaluation",
+        "requires": "conversion_features_not_artificially_disabled_solely_due_to_unregistered_status"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Describes intended full usability of conversion during evaluation; it does not create a separate user obligation.",
+      "condition_explanation": "The stated limitation is that features are not artificially disabled solely because the Official App is unregistered.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 75,
+      "end_line": 75,
+      "clause_label": "no_alteration_of_notices_in_provided_copies",
+      "activities": [
+        "Modify"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "copy_is_distributed_or_provided_to_others",
+        "requires": "written_permission"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Without Written Permission, do not remove, bypass, disable, alter, or misrepresent evaluation reminders, payment prompts, license checks, update notices, copyright notices, license notices, or third-party notices in a copy distributed or provided to others.",
+      "condition_explanation": "The restriction is limited to copies distributed or provided to others; Written Permission is the stated exception.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not remove, bypass, disable, alter, or misrepresent evaluation reminders, payment prompts, license checks, update notices, copyright notices, license notices, or third-party notices in a copy distributed or provided to others.",
+          "actor": "licensee",
+          "object": "Covered Software copy distributed or provided to others",
+          "trigger": "Whenever distributing or providing a copy to others, unless Written Permission authorizes the specific conduct."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The supplied chunk ends at the introductory sentence of section 7 (line 79); the listed acts requiring Written Permission are only adjacent context, not citable target text, so their operative details are not extracted here.",
+    "Purchase terms and any later release-specific license-boundary materials are not supplied. The Written Permission definition is supplied as non-citable context and is used only to explain dependencies.",
+    "The scope-only statement at line 33 is represented as a boundary, not as a grant. Definitions and section headings are audited as context."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0001",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "License title and version identify the document but impose no operative rule."
+    },
+    {
+      "unit_id": "P0002",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Copyright and reservation statement is not an activity-specific operative permission or duty for this extraction."
+    },
+    {
+      "unit_id": "P0003",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0004",
+      "status": "MODELED",
+      "clause_labels": [
+        "preamble_use_limit"
+      ],
+      "reason": "States that use beyond expressly granted permissions requires Written Permission."
+    },
+    {
+      "unit_id": "P0005",
+      "status": "MODELED",
+      "clause_labels": [
+        "official_app_evaluation_use"
+      ],
+      "reason": "Allows unregistered evaluation without a fixed trial period and requires purchase for continued or productive use after evaluation."
+    },
+    {
+      "unit_id": "P0006",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definitions heading."
+    },
+    {
+      "unit_id": "P0007",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of Covered Software used to identify scope; definitions are non-citable context."
+    },
+    {
+      "unit_id": "P0008",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "License identifier completes the Covered Software definition."
+    },
+    {
+      "unit_id": "P0009",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of Official App used to interpret permissions; not itself a grant."
+    },
+    {
+      "unit_id": "P0010",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of Covered Source used to interpret source permissions."
+    },
+    {
+      "unit_id": "P0011",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of MIT Components used to identify the carve-out."
+    },
+    {
+      "unit_id": "P0012",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of Branding; no operative rule in this paragraph."
+    },
+    {
+      "unit_id": "P0013",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of Redistribution used to interpret restrictions."
+    },
+    {
+      "unit_id": "P0014",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Definition of Written Permission used to interpret permission conditions."
+    },
+    {
+      "unit_id": "P0015",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0016",
+      "status": "MODELED",
+      "clause_labels": [
+        "covered_software_scope"
+      ],
+      "reason": "Limits this license's scope to Covered Software."
+    },
+    {
+      "unit_id": "P0017",
+      "status": "MODELED",
+      "clause_labels": [
+        "mit_components_independent_rights"
+      ],
+      "reason": "Excludes MIT Components from this license and preserves the stated independent MIT rights."
+    },
+    {
+      "unit_id": "P0018",
+      "status": "MODELED",
+      "clause_labels": [
+        "version_and_release_boundary"
+      ],
+      "reason": "Sets prior-version and 2.2.0-and-later applicability boundaries, subject to later release statements."
+    },
+    {
+      "unit_id": "P0019",
+      "status": "MODELED",
+      "clause_labels": [
+        "unclear_file_notice_boundary"
+      ],
+      "reason": "Specifies which notice controls mixed-content files and cautions against assuming open-source rights for desktop-specific code without a clear notice."
+    },
+    {
+      "unit_id": "P0020",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0021",
+      "status": "MODELED",
+      "clause_labels": [
+        "official_app_download_install_evaluation"
+      ],
+      "reason": "Expressly permits downloading, installing, and using the unregistered Official App for evaluation."
+    },
+    {
+      "unit_id": "P0022",
+      "status": "MODELED",
+      "clause_labels": [
+        "evaluation_business_workflows"
+      ],
+      "reason": "Defines evaluation to include personal use and real business workflow evaluation for deciding whether the app meets needs."
+    },
+    {
+      "unit_id": "P0023",
+      "status": "MODELED",
+      "clause_labels": [
+        "productive_use_requires_purchase"
+      ],
+      "reason": "Requires purchase for routine or ongoing productive use after evaluation, including specified employment, client, customer, and paid commercial uses."
+    },
+    {
+      "unit_id": "P0024",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Provides purchase-information locations; it does not require a particular licensee action or establish a purchase condition beyond the operative rule at line 47."
+    },
+    {
+      "unit_id": "P0025",
+      "status": "MODELED",
+      "clause_labels": [
+        "commercial_productive_use_definition"
+      ],
+      "reason": "Identifies the work activities and compensation or business-value threshold that constitute commercial productive use."
+    },
+    {
+      "unit_id": "P0026",
+      "status": "MODELED",
+      "clause_labels": [
+        "evaluation_no_software_commercialization"
+      ],
+      "reason": "Expressly excludes redistribution and specified commercialization of Covered Software from the evaluation permission."
+    },
+    {
+      "unit_id": "P0027",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0028",
+      "status": "MODELED",
+      "clause_labels": [
+        "inspect_covered_source"
+      ],
+      "reason": "Permits inspection of Covered Source."
+    },
+    {
+      "unit_id": "P0029",
+      "status": "MODELED",
+      "clause_labels": [
+        "local_build_for_evaluation"
+      ],
+      "reason": "Permits local builds for personal or internal evaluation."
+    },
+    {
+      "unit_id": "P0030",
+      "status": "MODELED",
+      "clause_labels": [
+        "private_changes_and_patches",
+        "private_changes_no_third_party_distribution"
+      ],
+      "reason": "Permits private local modifications for personal or internal evaluation and requires Written Permission for the listed distribution and third-party uses."
+    },
+    {
+      "unit_id": "P0031",
+      "status": "MODELED",
+      "clause_labels": [
+        "self_built_productive_use_requires_permission"
+      ],
+      "reason": "States that an Official App purchase does not authorize productive use of self-built or modified copies; Written Permission is required."
+    },
+    {
+      "unit_id": "P0032",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0033",
+      "status": "MODELED",
+      "clause_labels": [
+        "unregistered_app_reminders"
+      ],
+      "reason": "States that reminders may be shown while the Official App is unregistered."
+    },
+    {
+      "unit_id": "P0034",
+      "status": "MODELED",
+      "clause_labels": [
+        "registered_license_reminders_removed"
+      ],
+      "reason": "States the reminder-removal effect of purchasing and applying a registered license, limited to the licensed user or scope."
+    },
+    {
+      "unit_id": "P0035",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "Repeats where purchase information may be found; no distinct activity duty is imposed."
+    },
+    {
+      "unit_id": "P0036",
+      "status": "MODELED",
+      "clause_labels": [
+        "conversion_features_remain_available"
+      ],
+      "reason": "States that conversion features are not artificially disabled solely because the evaluation version is unregistered."
+    },
+    {
+      "unit_id": "P0037",
+      "status": "MODELED",
+      "clause_labels": [
+        "no_alteration_of_notices_in_provided_copies"
+      ],
+      "reason": "Restricts alterations or misrepresentations of specified notices and checks in copies provided to others, absent Written Permission."
+    },
+    {
+      "unit_id": "P0038",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading."
+    },
+    {
+      "unit_id": "P0039",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "Introductory statement says Written Permission is required before listed acts, but the acts themselves are absent from the target chunk; adjacent context is non-citable and cannot establish complete coverage."
+    }
+  ]
+}

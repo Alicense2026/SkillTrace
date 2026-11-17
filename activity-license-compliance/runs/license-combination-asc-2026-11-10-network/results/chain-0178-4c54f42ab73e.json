@@ -1,0 +1,118 @@
+{
+  "case_id": "chain-0178-4c54f42ab73e",
+  "status": "SUCCESS",
+  "request_sha256": "799d574e12b9320f55a078b16e41d627684a00bac6238d4be93a6a1206791a96",
+  "analysis": {
+    "case_id": "chain-0178-4c54f42ab73e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0178-4c54f42ab73e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "AGPL-3.0第13条摘录要求修改后的程序支持远程交互时提供对应源码；可信记录称代码修改不适用，且仅确认对上游Llama材料的远程调用。没有证据表明下游CombinedProduct是AGPL所覆盖的修改版程序，故不据此认定源码提供义务已触发或违反。",
+      "Llama摘录中的AUP及其他协议条件纳入概括性使用义务；具体履行情况未提供。对象图仅确立API调用/链接关系，未证明两份许可约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0178-4c54f42ab73e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "依照Meta Llama 3协议使用材料，包括遵守适用法律法规及其纳入的Acceptable Use Policy。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "comply_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:b7874099eaa0bc72"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22593,
+    "input_tokens_details": {
+      "cached_tokens": 22400,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 762,
+    "output_tokens_details": {
+      "reasoning_tokens": 262
+    },
+    "total_tokens": 23355,
+    "attribution": {
+      "items": {
+        "msg_0b3da4c9831d7519016af2fe51a46c87d2ae58d4cf8dc36732": {
+          "input_tokens": 20561,
+          "cached_tokens": 20370,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20561,
+              "cached_tokens": 20370,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b3da4c9831d7519016af2fe56ee8487d2bfe9be6487e8296c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 500,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 500
+            }
+          ]
+        },
+        "rs_0b3da4c9831d7519016af2fe56d78887d29a3d6090d811e566": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 262
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 16.962,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

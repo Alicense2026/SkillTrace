@@ -1,0 +1,279 @@
+{
+  "case_id": "skill-05164",
+  "csv_row": 5165,
+  "source_excel_row": "7312",
+  "status": "SUCCESS",
+  "request_sha256": "49d826c2fd200c97e5381dd5386c17e0498fe36a363677e9a9f25a796ffb613c",
+  "analysis": {
+    "case_id": "skill-05164",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05164:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": "owned_repository_content",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05164:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": "reference_ideas_patterns_or_approaches",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-05164:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已知事实是对上游资产进行Use、Link及RemoteInteraction；没有证据表明下游调用者复制、修改、分发、再许可或商业利用上游软件。",
+      "MIT通知条款仅在制作或分发上游软件副本或实质部分时适用；当前未证实该触发事实。下游自定义许可限制针对其覆盖的仓库内容，不因API调用自动适用于上游资产；也没有证据表明远程调用者将该项目或其实质性衍生物作为托管服务提供。"
+    ],
+    "obligations": [],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "上游软件的Use获许可；摘录未规定Use单独附加义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "复制及副本通知义务针对上游软件副本；当前只有远程调用事实，未见复制。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "修改及副本通知义务未由当前已知活动触发。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "合并及副本通知义务未由当前已知活动触发。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "发布及副本通知义务未由当前已知活动触发。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "分发及副本通知义务未由当前已知活动触发。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "再许可及副本通知义务未由当前已知活动触发。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "出售副本及其通知义务未由当前已知活动触发。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "阅读、研究许可针对自定义许可覆盖的仓库内容；已知Use事实针对上游资产。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见引用自定义许可覆盖项目的理念、模式或方法；上游API调用本身不证明此行为。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见公开讨论自定义许可覆盖项目的事实。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见复制自定义许可覆盖内容的小段摘录。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该规则说明特定限制行为的书面许可例外；当前未见相关限制行为。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见分发自定义许可覆盖内容的实质部分。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见发布修改版本或分叉作为竞争性分发。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见对自定义许可覆盖内容进行商业利用。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "远程调用不等于将项目或其实质性衍生物作为托管服务提供；未见该活动。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见将自定义许可覆盖内容的实质部分并入商业产品。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见移除或遮蔽自定义许可覆盖内容上的声明。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见拟向仓库作出贡献；不据此推断未提供的外部贡献条款。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未见向仓库贡献修改；预先讨论条件未由已知事实触发。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05164-1794600117816513000-2.json",
+  "usage": {
+    "input_tokens": 23656,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2154,
+    "output_tokens_details": {
+      "reasoning_tokens": 414
+    },
+    "total_tokens": 25810,
+    "attribution": {
+      "items": {
+        "msg_0035371348fd64d9016af76d0508c487d088ab253383e56bc7": {
+          "input_tokens": 20932,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20932,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0035371348fd64d9016af76d0508c487d08c611edd8b8e255d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0035371348fd64d9016af76d0deed487d0931d306e04aa312b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1740,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1740
+            }
+          ]
+        },
+        "rs_0035371348fd64d9016af76d0dd31c87d0a930222abb42ea04": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 414
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

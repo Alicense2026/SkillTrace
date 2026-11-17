@@ -1,0 +1,66 @@
+{
+  "case_id": "chain-0302-56c9a8f2d933",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0302-56c9a8f2d933:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Ensure the use does not match a prohibited form of conduct in the cited agreement excerpt.",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "conduct_matches_prohibition_in_excerpt"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "subject": {
+        "artifact": "chain-0302-56c9a8f2d933:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If commercial use applies to the relevant paid feature/model, pay any required fee and follow applicable product rules.",
+      "trigger": "activity:CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "commercial_use",
+        "paid_feature_or_model",
+        "required_fee_and_product_rules_fulfilled"
+      ],
+      "source_refs": [
+        "license-text:upstream:1092ebce191fce09"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0302-56c9a8f2d933:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "When exercising licensed rights in the CC-BY-4.0 material, comply with applicable CC license conditions.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_shared"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "scope_shared",
+        "applicable_CC_license_conditions",
+        "CC_conditions_fulfilled"
+      ],
+      "source_refs": [
+        "license-text:downstream:8d016c6c579b5658"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

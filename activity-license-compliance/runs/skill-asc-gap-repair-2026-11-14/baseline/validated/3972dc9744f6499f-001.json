@@ -1,0 +1,293 @@
+{
+  "request_sha256": "923865e7c8ab9fec965392c1248c799ddce7493e0454807504a775c4c15d1b2d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 5,
+        "end_line": 6,
+        "clause_label": "copy_license_document",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "anyone",
+        "scope_note": "The license document itself may be copied verbatim; changing the license document is expressly excluded. This is not a grant to copy the Program.",
+        "condition_explanation": "The permission applies to verbatim copies of this license document.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 5,
+        "end_line": 6,
+        "clause_label": "distribute_license_document",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "anyone",
+        "scope_note": "The license document itself may be distributed verbatim; changing the license document is expressly excluded. This is not a grant to distribute the Program.",
+        "condition_explanation": "The permission applies to verbatim copies of this license document.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 156,
+        "end_line": 159,
+        "clause_label": "run_unmodified_program",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "license_in_force"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 2 explicitly affirms unlimited permission to run the unmodified Program. License rights last for the copyright term and are irrevocable provided the License's stated conditions are met; termination and reinstatement rules are addressed in section 8.",
+        "condition_explanation": "license_in_force means the licensee's license has not terminated, or has been reinstated under section 8. “Unlimited” describes the permission to run the unmodified Program; it does not waive conditions applicable to other acts.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 160,
+        "end_line": 161,
+        "clause_label": "output_coverage_boundary",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "output_from_running_covered_work",
+          "requires": "output_content_constitutes_covered_work"
+        },
+        "actor_role": "licensee",
+        "scope_note": "GPL-3.0 section 2 limits when the License covers output from running a covered work. The object is the identified output; output is not automatically treated as a derivative of the Program. This sentence establishes a scope boundary, not a blanket grant over all output.",
+        "condition_explanation": "output_from_running_covered_work means the output was produced by running a covered work. output_content_constitutes_covered_work means, based on the output's content, it qualifies as a covered work under the License's definition; the excerpt does not determine that factual or legal question.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The supplied target chunk ends at section 2; later operative GPL provisions, including conveyance, source provision, modification, patent, and termination conditions, are not available here and are not inferred.",
+      "The preamble describes aims and summaries, not the operative terms governing distribution or modification. Definitions and section headings are used as context only.",
+      "The output-scope sentence identifies when output is covered; it does not itself grant rights over output that is not a covered work."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "License title and version identify the document but impose no operative activity constraint."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "MODELED",
+        "clause_labels": [
+          "copy_license_document",
+          "distribute_license_document"
+        ],
+        "reason": "Expressly permits verbatim copying and distribution of the license document and prohibits changing it; the two permissions are modeled separately."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Preamble heading only."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes the license's character and purpose; it does not itself grant permissions or impose duties."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes the intended freedoms and who may use the license, rather than operative permissions or obligations."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Summarizes intended freedoms concerning distribution, price, source, and modification; operative terms are not stated in this paragraph."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States the rationale for responsibilities but does not specify an operative duty."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Preamble example summarizing distribution conditions; the operative terms are not supplied in this paragraph."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes developers' actions and the purpose of the License, not a duty of the licensee."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty statement is a disclaimer summary, and the changed-version marking statement is preamble-level summary rather than an operative term in this paragraph."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Explains the rationale and intended domain of a device-related provision without stating its operative conditions."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Explains patent concerns and intended effect rather than specifying operative patent terms."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introduces the terms and conditions but creates no activity constraint itself."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Terms-and-conditions heading only."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Definitions section heading only."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Identifies the License as GPL version 3; it supplies context for the modeled rules but creates no separate activity constraint."
+      },
+      {
+        "unit_id": "P0017",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines the meaning of Copyright for interpretation; no activity rule."
+      },
+      {
+        "unit_id": "P0018",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Program, licensee, and recipients for interpreting operative provisions; no activity rule."
+      },
+      {
+        "unit_id": "P0019",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines modification and modified versions; no activity rule."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines covered work for interpreting the output-coverage boundary and later provisions; no activity rule by itself."
+      },
+      {
+        "unit_id": "P0021",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines propagation; no activity rule."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines conveyance and excludes mere network interaction without copy transfer; no activity rule."
+      },
+      {
+        "unit_id": "P0023",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Appropriate Legal Notices; no notice duty is imposed in this definition."
+      },
+      {
+        "unit_id": "P0024",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Source Code section heading only."
+      },
+      {
+        "unit_id": "P0025",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines source code and object code; no activity rule."
+      },
+      {
+        "unit_id": "P0026",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Standard Interface; no activity rule."
+      },
+      {
+        "unit_id": "P0027",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines System Libraries and Major Component for interpreting source-related provisions; no activity rule."
+      },
+      {
+        "unit_id": "P0028",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Corresponding Source and its inclusions and exclusions; no source-provision obligation is imposed in this definition."
+      },
+      {
+        "unit_id": "P0029",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Further specifies what Corresponding Source need not include; no activity rule."
+      },
+      {
+        "unit_id": "P0030",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Corresponding Source for source-form works; no activity rule."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Basic Permissions section heading only."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "MODELED",
+        "clause_labels": [
+          "run_unmodified_program",
+          "output_coverage_boundary"
+        ],
+        "reason": "States the term and conditional irrevocability of granted rights, expressly permits running the unmodified Program, and limits License coverage of running output to output that is itself a covered work. The output boundary and run permission are separately modeled."
+      }
+    ]
+  },
+  "attempt": 1
+}

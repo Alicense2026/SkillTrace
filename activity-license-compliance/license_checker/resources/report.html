@@ -1,0 +1,11 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>Activity 双向约束审计 v0.6</title>
+<style>body{font:15px/1.65 system-ui;margin:30px;color:#153047}table{border-collapse:collapse;width:100%;font-size:13px}td,th{border:1px solid #cbd5df;padding:8px;vertical-align:top;text-align:left}th{background:#edf3f7}pre{white-space:pre-wrap;max-width:900px;font-size:12px}section{padding:16px;background:#edf3f7;margin:18px 0}input{padding:10px;width:70%}</style>
+<h1>Activity 双向约束审计 · v0.6</h1><section><b>未发现已证实的行为违规，不等于完成合规验证。</b><p>按意见修正：七种 C 是条款模态，另用检查状态表达违规、待履行及检查未完成。保留可信输入，不再默认合规。</p><pre>@@SUMMARY@@</pre></section>
+<h2>独立输出</h2><p><a href="license_license.json">许可证间比较与潜在冲突</a> · <a href="license_behavior.json">行为及履行检查</a> · <a href="obligations_by_activity.json">按 Activity 的完整义务清单</a> · <a href="joint_obligations.json">联合可满足性</a> · <a href="evidence_inventory.json">证据索引</a> · <a href="review_queue.json">复核事项</a></p>
+<p>LINK 是 API/加载接入，BUNDLE 主类是代码纳入；REMOTE_CALL、DEPENDENCY、发布物 BUNDLE、MODIFIED_COPY、COMBINED_PRODUCT 用关系边分别记录。源码纳入不会自动证明已打包发布。所有关系均做逐活动条件比较，范围未知会明确标记，不直接跳过。</p>
+<h2>已触发义务</h2><p>履行证据与触发行为证据分开记录。未知履行状态不会判定已满足，也不会伪造缺失证据来判违规。未确定触发的候选义务单独保存在完整义务 JSON。</p>
+<table><thead><tr><th>关系</th><th>Activity</th><th>对象</th><th>要求</th><th>许可/条款</th><th>履行</th><th>履行证据</th><th>下一步</th></tr></thead><tbody>@@OBLIGATIONS@@</tbody></table>
+<h2>全部关系</h2><input id="filter" aria-label="筛选关系" placeholder="筛选仓库、资产或状态"><table id="cases"><thead><tr><th>行</th><th>仓库</th><th>资产</th><th>关系主类</th><th>整体检查状态</th><th>已触发义务</th><th>潜在条款冲突</th><th>行为违规</th><th>详情</th></tr></thead><tbody>@@ROWS@@</tbody></table>
+<h2>人工回填</h2><p>编辑 human_input.json，填写 reviewer、按上下游/对象分组的 facts，或 scope_shared。值可为布尔/null，也可带 evidence_refs。无需为已核验关系重复提交证明；人工声明会保留为声明证据，不伪装为工具已检查的文件。执行：python3 -m license_checker.chain --input ../chain --human-input output/human_input.json --output-dir output</p>
+<h2>限制与待完成事项</h2><pre>@@LIMITS@@</pre>
+<script>document.getElementById('filter').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('#cases tbody tr').forEach(r=>r.hidden=!r.textContent.toLowerCase().includes(q));});</script></html>

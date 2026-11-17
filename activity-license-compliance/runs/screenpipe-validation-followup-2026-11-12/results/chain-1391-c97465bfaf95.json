@@ -1,0 +1,388 @@
+{
+  "case_id": "chain-1391-c97465bfaf95",
+  "source_csv_line": 1392,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "qwen3-asr-0.6b",
+    "artifact_url": "https://help.aliyun.com/zh/model-studio/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: crates/screenpipe-audio/src/transcription/engine.rs:376 ｜ 调用原文: const MODEL_NAME: &str = \"qwen3-asr-0.6b\";（引用处 第376行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 音频转写引擎中作为 ASR 模型标识加载",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "ADDITIONAL_VALIDATION_REPAIR",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 67.28,
+  "original_error": "Unknown subject",
+  "prior_attempts": 2,
+  "analysis": {
+    "case_id": "chain-1391-c97465bfaf95",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:854d672afa932e53"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use involves model-experience generated content used beyond experiencing the model, including commercial use or provision, transmission, or distribution to a third party"
+          },
+          "S": {
+            "artifact": "chain-1391-c97465bfaf95:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "personal_noncommercial_use",
+                "nonprofit_educational_or_research_use",
+                "evaluation_development_or_testing_within_seven_days"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-1391-c97465bfaf95:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "paid_screenpipe_enterprise_plan",
+                "commercial_license_from_licensor_expressly_covers_use"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-1391-c97465bfaf95:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use Licensed Work in a listed commercial context without a valid commercial license"
+          },
+          "S": {
+            "artifact": "chain-1391-c97465bfaf95:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "fulfill_custom_src_d4d4ce322d1e6a34_L37_L43_duty",
+            "when": "use_of_official_prebuilt_build"
+          },
+          "S": {
+            "artifact": "chain-1391-c97465bfaf95:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "fulfill_custom_src_d4d4ce322d1e6a34_L74_L76_duty",
+            "when": "use_outside_license_terms"
+          },
+          "S": {
+            "artifact": "chain-1391-c97465bfaf95:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "阿里云 aliyun.txt（SHA-256 977d83a858678046f5727791c0c1ebd9c8968360705f0d4865e4e316fb36079e）相关摘录限制模型体验生成内容的用途，并禁止将其用于其他目的或提供、传播、分发给第三方。现有事实确认的是对 qwen3-asr-0.6b 的远程调用；未确认该调用是否属于模型体验功能或涉及模型体验生成内容，因此仅保留条件义务，不判定违规。",
+      "对象图确认 Screenpipe 与上游模型之间存在 API 调用/链接，但没有确认 Screenpipe Licensed Work 是否为本次活动使用的对象，也未确认两份许可在同一对象及活动范围内共同适用。API 调用不证明模型权重转移或许可对象同一。",
+      "下游 LicenseRef-Custom 文本（SHA-256 d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463）将免费使用限于个人非商业、非营利教育或研究、或最多七天的评估/开发/测试；商业使用须同时具备付费 Screenpipe Enterprise 计划和明确覆盖该使用的商业许可。事实未确认本次活动是否使用 Licensed Work、用途类别或商业使用状态，也未提供计划或许可履行证据；收费本身不据此认定为商业使用。",
+      "下游文本对无有效商业许可时的禁止事项限于列明的商业产品/服务销售、托管服务、客户产品嵌入整合及竞争产品/服务等情形。当前未确认这些行为，不能将该条件禁止扩大为对所有 Use 的无条件禁止。",
+      "下游文本还规定官方预构建版本的订阅/设备及机器使用条件，以及超出许可条款使用后停止使用并销毁持有副本的义务；当前未确认是否使用官方预构建版本，也未确认是否发生超出许可条款的使用，因此仅将相关义务保留为条件分支。",
+      "修正对象表示：CombinedProduct 是允许对象中的 kind，artifact 身份仍为 chain-1391-c97465bfaf95:downstream；未据此推断该对象确已包含或使用 Licensed Work。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游模型材料时，如该使用涉及模型体验生成内容，应仅将其用于体验模型效果；不得用于其他目的（包括商业化），也不得以任何形式提供给第三方或在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:854d672afa932e53"
+        ],
+        "subject": {
+          "artifact": "chain-1391-c97465bfaf95:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "conduct_matches_prohibition_in_excerpt"
+          ]
+        },
+        "unresolved_predicates": [
+          "whether_use_involves_model_experience_generated_content",
+          "whether_use_is_beyond_experiencing_the_model",
+          "whether_use_involves_commercial_use_or_third_party_provision"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如本次使用涉及下游 Licensed Work，须符合至少一种免费使用类别：个人非商业使用，或非营利、教育或研究使用，或最多七天的评估、开发或测试使用；这些类别为可选路径，七天时限仅适用于评估、开发或测试类别。",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "subject": {
+          "artifact": "chain-1391-c97465bfaf95:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "downstream_licensed_work_use"
+          ]
+        },
+        "unresolved_predicates": [
+          "downstream_licensed_work_use",
+          "personal_noncommercial_use",
+          "nonprofit_educational_or_research_use",
+          "evaluation_development_or_testing_within_seven_days"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如本次使用涉及下游 Licensed Work 且属于商业使用，须同时具备付费 Screenpipe Enterprise 计划和许可方明确覆盖该使用的商业许可。",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "subject": {
+          "artifact": "chain-1391-c97465bfaf95:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "downstream_licensed_work_use",
+            "commercial_use"
+          ]
+        },
+        "unresolved_predicates": [
+          "downstream_licensed_work_use",
+          "commercial_use",
+          "paid_screenpipe_enterprise_plan",
+          "commercial_license_from_licensor_expressly_covers_use"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用下游 Licensed Work 且属于许可证列明的商业产品或服务销售、托管或管理服务、向客户提供的产品嵌入或整合、或竞争产品/服务等情形，不得在没有有效商业许可时进行该使用。",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "subject": {
+          "artifact": "chain-1391-c97465bfaf95:downstream",
+          "kind": "CombinedProduct"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "downstream_licensed_work_use",
+            "listed_commercial_context"
+          ]
+        },
+        "unresolved_predicates": [
+          "downstream_licensed_work_use",
+          "listed_commercial_context",
+          "valid_commercial_license"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用官方预构建的 Screenpipe 版本，应满足许可证所述的个人订阅/终身许可、公司用户数量及服务器、共享或无人值守机器的适用许可要求。",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "subject": {
+          "artifact": "chain-1391-c97465bfaf95:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_of_official_prebuilt_build"
+          ]
+        },
+        "unresolved_predicates": [
+          "use_of_official_prebuilt_build",
+          "fulfillment_of_official_build_license_duty"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如发生超出下游许可条款的使用并因此终止许可权利，应停止所有使用并销毁持有的全部副本。",
+        "source_refs": [
+          "license-text:downstream:7699d23d219d4823"
+        ],
+        "subject": {
+          "artifact": "chain-1391-c97465bfaf95:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_outside_license_terms"
+          ]
+        },
+        "unresolved_predicates": [
+          "use_outside_license_terms",
+          "fulfillment_of_termination_duty"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 25487,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 3023,
+    "output_tokens_details": {
+      "reasoning_tokens": 266
+    },
+    "total_tokens": 28510,
+    "attribution": {
+      "items": {
+        "msg_09bf5d7799ef91f8016af58a1d2c4c87d08670bae2d6ca82a4": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09bf5d7799ef91f8016af58a1d2c4c87d0a7d56c495db0f6eb": {
+          "input_tokens": 20604,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20604,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09bf5d7799ef91f8016af58a22b64487d0beab6b8f10c9c78a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2757,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2757
+            }
+          ]
+        },
+        "rs_09bf5d7799ef91f8016af58a229f2c87d0ba559d28eba65679": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 266
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 4843,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna"
+}

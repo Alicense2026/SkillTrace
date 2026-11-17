@@ -1,0 +1,57 @@
+{
+  "request_sha256": "93db43f903382ce2cde6e504f1c7c5436ae10c862820db086d127c8fd6f7cb09",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 144,
+        "end_line": 144,
+        "clause_label": "gap/additional_fees_review_before_charge",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_services_or_features_for_which_additional_fees_are_charged",
+          "requires": "customer_given_opportunity_to_review_and_accept_additional_fees_before_charge"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 6, Additional fees: applies when additional fees are charged in connection with Services. If Customer does not accept them, Anthropic may discontinue access to the Services or features.",
+        "condition_explanation": "customer_uses_services_or_features_for_which_additional_fees_are_charged identifies the stated scope. customer_given_opportunity_to_review_and_accept_additional_fees_before_charge means Anthropic must provide Customer an opportunity to review and accept those fees before charging them. This does not require Customer to accept; if Customer does not, Anthropic may discontinue access.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give Customer an opportunity to review and accept additional fees before charging them.",
+            "actor": "Anthropic",
+            "object": "Additional fees for Services or features",
+            "trigger": "Before charging additional fees in connection with Services or features."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "P0021 includes the fee, payment, subscription, cancellation, and refund provisions at lines 140–155. Existing anchors cover the stated service-fee and billing conditions, subscription access and recurring-payment terms, cancellation terms, seven-day-period use permission, and fee-increase notice condition; the added clause covers the opportunity to review and accept additional fees before charge.",
+      "Cancellation, cancellation notices, refunds, reimbursements, and Anthropic's option to retain a proportionate amount are operative actions not expressible with the supplied activities. They are not modeled as fictitious Use permissions. The seven-day cancellation conditions and the distinct website versus App Distributor cancellation paths are stated at lines 149–154. The customer cancellation right, required clear statement, reimbursement timing and method, and possible proportionate retention are therefore OUTSIDE_ACTIVITY_SCOPE.",
+      "The 24-hour cancellation deadline and resulting avoidance of renewal charges, and the rule that already-paid fees are nonrefundable on ordinary cancellation, are included in the existing subscription_cancellation_right anchor's scope note. The cancellation action itself remains outside the supplied activity scope."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0021",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "service_access_and_billing",
+          "subscription_access_and_recurring_payment",
+          "subscription_cancellation_right",
+          "seven_day_cancellation_period_use",
+          "subscription_fee_changes_and_advance_notice",
+          "gap/additional_fees_review_before_charge"
+        ],
+        "reason": "The cited anchors and added clause cover the expressible fee, billing, subscription, use, and fee-notice rules in lines 140–155. The paragraph also contains operative cancellation, cancellation-notice, refund, reimbursement, and proportionate-retention actions that cannot be represented by an allowed activity; those unmatched actions are identified as OUTSIDE_ACTIVITY_SCOPE in coverage_notes."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

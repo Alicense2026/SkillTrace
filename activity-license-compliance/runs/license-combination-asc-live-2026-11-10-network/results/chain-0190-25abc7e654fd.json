@@ -1,0 +1,156 @@
+{
+  "case_id": "chain-0190-25abc7e654fd",
+  "status": "SUCCESS",
+  "request_sha256": "34e95fedeaced4f786a6db9d2a2f622c76913c7100dda7c855d02fb9a12d9e30",
+  "analysis": {
+    "case_id": "chain-0190-25abc7e654fd",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0190-25abc7e654fd:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_access_at_no_charge_to_remote_users",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0190-25abc7e654fd:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "subject": {
+          "artifact": "chain-0190-25abc7e654fd:upstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "若该受许可程序被修改且支持网络交互，应向所有通过计算机网络远程交互的用户显著提供免费获取该版本对应源代码的机会。",
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "network_interaction",
+            "remote_users_interact_with_modified_version"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "network_interaction",
+          "remote_users_interact_with_modified_version",
+          "network_source_offer_available"
+        ],
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "AGPL-3.0 条款摘录将源代码提供义务限定于被修改且支持网络交互的版本；任务记录确认的是远程服务调用、修改不适用，因此现有事实不足以认定该触发条件成立，也不足以判定违规。",
+      "对象图仅确认 API 调用/链接关系，依赖、修改副本或共同产品范围均未知；不能据此认定 GPL-3.0 下游对象与 AGPL-3.0 上游对象共同受约束。",
+      "GPL-3.0 摘录中的源代码及分发条件针对相应复制、修改或传递活动；任务未提供这些活动已发生的事实，因此不据此产生当前违规或已触发义务。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 18231,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1021,
+    "output_tokens_details": {
+      "reasoning_tokens": 272
+    },
+    "total_tokens": 19252,
+    "attribution": {
+      "items": {
+        "msg_07d564e123287140016af2febbf55087d294602335167f5ea8": {
+          "input_tokens": 16199,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16199,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07d564e123287140016af2fec1b0c487d2bfb0e093fe2b7a98": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 749,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 749
+            }
+          ]
+        },
+        "rs_07d564e123287140016af2fec194e887d29d31a36f9dee5261": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 272
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.713,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

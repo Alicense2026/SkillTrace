@@ -1,0 +1,253 @@
+{
+  "case_id": "skill-01679",
+  "csv_row": 1680,
+  "source_excel_row": "2323",
+  "status": "SUCCESS",
+  "request_sha256": "4d2bf2ffb5959b83052b778856e3ce772c3d1d4fd15332bf96c0e235b5687593",
+  "analysis": {
+    "case_id": "skill-01679",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "copyright_and_permission_notices_appear_in_all_copies",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01679:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-01679:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "被许可人对上游 ISC 软件行使许可时，如形成该软件的副本，须在所有副本中包含原版权声明和 ISC 许可声明；现有事实未说明是否形成副本或是否已包含声明。",
+        "source_refs": [
+          "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+        ],
+        "subject": {
+          "artifact": "skill-01679:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "activity:Use",
+            "activity:Copy",
+            "activity:Modify",
+            "activity:Distribute"
+          ]
+        },
+        "unresolved_predicates": [
+          "copies_created",
+          "copyright_and_permission_notices_appear_in_all_copies"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "已知事实是下游通过远程服务调用上游，并存在 Link、RemoteInteraction 和 Use；没有证据表明上游软件被复制、修改或分发，也没有证据表明下游 MIT 软件被纳入该调用或被复制、分发。",
+      "ISC 原文要求在所有副本中出现版权及许可声明；现有调用事实不能证明产生了副本，也不能证明声明已履行。MIT 的副本声明义务仅适用于其软件的副本或实质部分，不因远程 API 调用本身触发。"
+    ],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留 ISC 使用许可的副本声明条件；已知发生 Use，副本及声明履行情况未知。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留 ISC 复制活动的同一副本声明条件；复制事实未知，故不判定不适用。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留 ISC 修改活动的同一副本声明条件；修改事实未知，故不判定不适用。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "保留 ISC 分发活动的同一副本声明条件；分发事实未知，故不判定不适用。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "该许可规则针对下游 MIT 软件；已知远程调用的对象是上游 ISC 软件，未证实调用者使用下游软件。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 复制规则适用于下游软件副本或实质部分；本行未证实复制该对象。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 修改规则适用于下游软件及其副本或实质部分；本行未证实修改该对象。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 合并规则针对下游 MIT 软件；本行未证实该软件被合并或形成其副本、实质部分。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 发布规则针对下游软件副本或实质部分；本行未证实发布该对象。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 分发规则针对下游软件副本或实质部分；本行未证实分发该对象。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 再许可规则针对下游软件副本或实质部分；本行未证实再许可该对象。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "MIT 出售副本规则针对下游软件副本或实质部分；本行未证实出售该对象。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01679-1794599284120693000-2.json",
+  "usage": {
+    "input_tokens": 17092,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2307,
+    "output_tokens_details": {
+      "reasoning_tokens": 832
+    },
+    "total_tokens": 19399,
+    "attribution": {
+      "items": {
+        "msg_09ef7ef6d3e23147016af769891da487d2a975ab33bb010117": {
+          "input_tokens": 14368,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14368,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09ef7ef6d3e23147016af769891da487d2b09b945098083c76": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09ef7ef6d3e23147016af76998b55087d2be48a23a045c5db6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1475,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1475
+            }
+          ]
+        },
+        "rs_09ef7ef6d3e23147016af7699210e887d2962ed5dcc5c3fa49": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 469
+        },
+        "rs_09ef7ef6d3e23147016af769964bd087d2a8710909a5edd47e": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 235
+        },
+        "rs_09ef7ef6d3e23147016af769989e1c87d2b9e85b8cbc6bd193": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 128
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 2,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-0004-13f51c2e5974",
+  "input_group_row": 4,
+  "aggregate_count": 1300,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "MIT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1300"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0004-13f51c2e5974",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0004-13f51c2e5974:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e3fae8b3bfd487c1"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0004-13f51c2e5974:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "任务记录确认了对上游 MIT 资产的 Use、Link 和 RemoteInteraction，但没有确认复制、修改、分发、再许可或提供源码；远程调用本身不据此推断为这些活动。",
+      "对象图中的上游/下游共同适用范围未知，且 API 调用/加载关系不证明两份许可约束同一对象；因此不据此认定许可冲突。",
+      "MIT 的许可授予摘录与版权/许可通知条款摘录分别涉及使用授权与在副本中保留通知。结构化首轮抽取将通知条件映射到 Use，但给出的通知原文限定于副本或实质部分；在未确认本案发生复制时，不将其扩展为已触发的履行义务。",
+      "未提供履行证据不表示未履行；当前没有足以认定行为违规的事实。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0004-66561ccd1677.json",
+  "original_case_id": "chain-0004-66561ccd1677",
+  "original_request_sha256": "96143ba6781a8f9e87842017a7713422715c49792e5bbca2c8397728bf779f43",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0004-66561ccd1677": "chain-0004-13f51c2e5974",
+    "license-text:upstream:04de8583241775d8": "license-text:upstream:04de8583241775d8",
+    "license-text:downstream:e3fae8b3bfd487c1": "license-text:downstream:e3fae8b3bfd487c1",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/3": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/3"
+  }
+}

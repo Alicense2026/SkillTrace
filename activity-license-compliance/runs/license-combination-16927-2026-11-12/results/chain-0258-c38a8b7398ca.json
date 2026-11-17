@@ -1,0 +1,95 @@
+{
+  "case_id": "chain-0258-c38a8b7398ca",
+  "input_group_row": 258,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "MPL-2.0",
+    "资产许可证原文标题/标签": "Mistral AI Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0258-c38a8b7398ca",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0258-c38a8b7398ca:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ab4d389cfbca96b4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0258-c38a8b7398ca:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0258-c38a8b7398ca:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Pay fees due for use of the Mistral AI Products within 30 days from the invoice date; applicable Order Form or other order confirmation may specify the fees and payment arrangement.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "fees_due",
+          "applicable_order_form_or_order_confirmation",
+          "payment_made"
+        ],
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes upstream Mistral API use and a link/remote-call relationship, not modification, distribution, sublicensing, or transfer of model weights.",
+      "The Mistral excerpt addresses customer fees but does not establish the applicable fee amount or order-specific terms. The downstream MPL excerpt provides grants for covered software/contributions; the record does not establish that MPL-covered material is used in or combined with the upstream service. Shared license scope is unknown, so no license-to-license conflict is supported by the supplied excerpts.",
+      "The MPL excerpt is a grant clause only; the extracted material does not provide any additional conditions that might apply to other activities."
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0255-a73999334c07.json",
+  "original_case_id": "chain-0255-a73999334c07",
+  "original_request_sha256": "24a67f1a77c6c1c55440de3b15a68d3bb072edf6686496c96de7b5b282edffa8",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0255-a73999334c07": "chain-0258-c38a8b7398ca",
+    "license-text:upstream:282b79bf9fcbaf7a": "license-text:upstream:282b79bf9fcbaf7a",
+    "license-text:downstream:ab4d389cfbca96b4": "license-text:downstream:ab4d389cfbca96b4",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/254": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/257"
+  }
+}

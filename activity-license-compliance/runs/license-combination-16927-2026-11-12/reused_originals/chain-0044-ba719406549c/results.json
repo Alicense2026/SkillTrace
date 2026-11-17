@@ -1,0 +1,190 @@
+{
+  "case_id": "chain-0044-ba719406549c",
+  "status": "SUCCESS",
+  "request_sha256": "58707df3f01e24f7670bb7752a611408c0f579a6d2d7e9da30abefdd8679f7e1",
+  "analysis": {
+    "case_id": "chain-0044-ba719406549c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0044-ba719406549c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0044-ba719406549c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0dcb9d786b1bf864"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0044-ba719406549c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0044-ba719406549c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the Llama Materials in compliance with the Llama agreement.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "agreement_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-0044-ba719406549c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If distributing or making available Llama Materials (or derivative works), or a product or service containing them, provide a copy of the agreement and prominently display “Built with Llama” on a related website, user interface, blogpost, about page, or product documentation.",
+        "trigger": "activity:Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "distribution_or_availability_scope"
+        ],
+        "source_refs": [
+          "license-text:upstream:d3ae3cf95b4c9826"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0044-ba719406549c:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the above copyright notice and permission notice in copies or substantial portions of the MIT-licensed software.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use:downstream",
+          "notice_included"
+        ],
+        "source_refs": [
+          "license-text:downstream:0dcb9d786b1bf864"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "对象图确认的是 downstream 对 upstream 的链接/API远程调用关系，且 shared scope 未确定；未据此推定分发、修改或模型权重转移。",
+      "Llama 3.2 授权摘录规定使用须遵守协议，但未提供其他协议条款的完整映射；未推断未展示的义务。分发相关条件仅在适用的分发或提供行为发生时触发。",
+      "MIT 原文摘录包含使用许可及副本通知条件，但任务事实未明确表明调用所用 downstream 软件本身发生了何种使用或通知履行。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 23139,
+    "input_tokens_details": {
+      "cached_tokens": 22912,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1360,
+    "output_tokens_details": {
+      "reasoning_tokens": 342
+    },
+    "total_tokens": 24499,
+    "attribution": {
+      "items": {
+        "msg_08c4969700c6506b016af2f8e61b0487d1a21b217d20ed49c5": {
+          "input_tokens": 21107,
+          "cached_tokens": 20882,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21107,
+              "cached_tokens": 20882,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08c4969700c6506b016af2f8ecdcd087d190c03a25539e8a3a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1018,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1018
+            }
+          ]
+        },
+        "rs_08c4969700c6506b016af2f8ecc5a487d1805f8d0991fe9307": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 342
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 28.121,
+  "auto_applied": false,
+  "aggregate_count": 37
+}

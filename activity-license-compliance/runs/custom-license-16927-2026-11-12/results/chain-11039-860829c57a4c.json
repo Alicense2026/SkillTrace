@@ -1,0 +1,187 @@
+{
+  "case_id": "chain-11039-860829c57a4c",
+  "source_csv_line": 11040,
+  "row": {
+    "github_repo": "claude-code-leak-source-code",
+    "github_url": "https://github.com/muhammadhaseebiqbal-dev/claude-code-leak-source-code",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ai.hashgrid/sdk",
+    "artifact_url": "https://github.com/hashgrid-labs/sdk",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: scripts/test-auth.ts:5 ｜ 调用原文: import Anthropic from '@anthropic-ai/sdk' ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: license-file ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 代码中真实 import 的 Anthropic API SDK，用于调用 Claude 模型",
+    "batch": "5001-5500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "muhammadhaseebiqbal-dev/claude-code-leak-source-code",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "24cba54b42e9559ab7f152b3bbbedcb4c3b1d5a3fff9aa3bdc784bafd5530e8c",
+    "filename": "_licenseref_full/texts/24cba54b42e9559ab7f152b3bbbedcb4c3b1d5a3fff9aa3bdc784bafd5530e8c.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:claude-code-leak-source-code-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-11039-860829c57a4c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-11039-860829c57a4c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "PROHIBITED"
+          },
+          "S": {
+            "artifact": "chain-11039-860829c57a4c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的是对上游 MIT 许可 SDK 的远程调用和 Use；API 调用不证明 SDK 源码被复制、修改、分发或并入下游材料。",
+      "下游 LicenseRef-Custom 的摘录仅为“UNLICENSED — NOT FOR REDISTRIBUTION”，其限制对象是下游仓库材料；摘录未说明发布该限制者的权限。未提供该材料被分发的事实，故不据此判定违规或许可冲突。",
+      "结构化条款均有首轮抽取标记；MIT 许可副本及通知要求针对相应复制、分发等活动的具体适用范围仍应以完整上下文为准。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 MIT 许可软件时满足包含版权声明和许可声明的条件。",
+        "source_refs": [
+          "license-text:upstream:bef591f1c28b6755"
+        ],
+        "subject": {
+          "artifact": "chain-11039-860829c57a4c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得分发受下游 LicenseRef-Custom 摘录限制的下游仓库材料。",
+        "source_refs": [
+          "license-text:downstream:a53ccaf49d1cf3ce"
+        ],
+        "subject": {
+          "artifact": "chain-11039-860829c57a4c:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19110,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1069,
+    "output_tokens_details": {
+      "reasoning_tokens": 312
+    },
+    "total_tokens": 20179,
+    "attribution": {
+      "items": {
+        "msg_0715b734ec770c22016af53cdfcc3087d1998b70d866a0c117": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0715b734ec770c22016af53cdfcc3087d1b8385fa83ca6b15d": {
+          "input_tokens": 17040,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17040,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0715b734ec770c22016af53ce5e9f487d193734ce8b37e6358": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 757,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 757
+            }
+          ]
+        },
+        "rs_0715b734ec770c22016af53ce5d2e087d190ae1acd422c6bd1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 312
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "57c7da36831d549a32d1b72f4b60fad90d4eadfae6b01f869c3a7e379bf18fc0",
+  "elapsed_seconds": 25.63
+}

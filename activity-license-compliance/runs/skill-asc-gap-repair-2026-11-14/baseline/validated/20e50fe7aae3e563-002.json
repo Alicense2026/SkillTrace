@@ -1,0 +1,858 @@
+{
+  "request_sha256": "4dbd5bbc24e12b3bd6357586626077579b4f15289a3458601d370ca49f6ef38d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 165,
+        "end_line": 168,
+        "clause_label": "s2_modify_library",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "modified_work_is_software_library_and_section_2_conditions_met"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2: modification of the Library or any portion, forming a work based on it; permission is subject to the conditions in §2.",
+        "condition_explanation": "The modified work must itself be a software library; modified files must carry prominent change and date notices; the whole work must be licensed at no charge to third parties under this License; and the specified good-faith effort must be made for application-supplied functions or tables, subject to §2d's argument exception.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 165,
+        "end_line": 168,
+        "clause_label": "s2_distribute_modified_library",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "modified_work_is_software_library_and_section_2_conditions_met"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2: copying and distributing modifications or a work based on the Library under §1, subject to §2's conditions.",
+        "condition_explanation": "Requires the modified work to be a software library, prominent notices on changed files stating changes and dates, licensing the whole at no charge to all third parties under this License, and the specified good-faith effort for application-supplied functions or tables except arguments passed when invoked.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Cause each modified file to carry prominent notices stating that it was changed and the date of any change.",
+            "actor": "licensee modifying and distributing the work",
+            "object": "each modified file in the Library-based work",
+            "trigger": "when distributing modifications or a work based on the Library under §2"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "License the whole modified work at no charge to all third parties under this License.",
+            "actor": "licensee distributing the modified work",
+            "object": "the modified work as a whole",
+            "trigger": "when distributing the modified work under §2"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Make a good-faith effort to ensure that a facility referring to an application-supplied function or data table (other than as an invocation argument) still operates and performs whatever part of its purpose remains meaningful if the application does not supply that function or table.",
+            "actor": "licensee modifying the Library",
+            "object": "the modified Library facility",
+            "trigger": "when the facility has the specified application-supplied function or table dependency"
+          }
+        ]
+      },
+      {
+        "start_line": 170,
+        "end_line": 170,
+        "clause_label": "s2_library_form",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "modified_work_is_software_library"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2(a): condition on the §2 permission to distribute the modified work.",
+        "condition_explanation": "The modified work must itself be a software library; this is a prerequisite, not a standalone grant.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 172,
+        "end_line": 173,
+        "clause_label": "s2_change_notices",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "prominent_change_and_date_notices_on_modified_files"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2(b): notice condition on distributing the modified work.",
+        "condition_explanation": "Each modified file must carry prominent notices stating that it was changed and the date of any change.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Cause modified files to carry prominent notices stating that they were changed and the date of any change.",
+            "actor": "licensee modifying and distributing the work",
+            "object": "modified files",
+            "trigger": "when distributing the modified work under §2"
+          }
+        ]
+      },
+      {
+        "start_line": 175,
+        "end_line": 176,
+        "clause_label": "s2_no_charge_license",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "whole_work_licensed_at_no_charge_under_lgpl_2_1"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2(c): condition on distributing the modified work as a whole.",
+        "condition_explanation": "The whole work must be licensed at no charge to all third parties under this License.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "License the whole modified work at no charge to all third parties under this License.",
+            "actor": "licensee distributing the modified work",
+            "object": "the modified work as a whole",
+            "trigger": "when distributing the modified work under §2"
+          }
+        ]
+      },
+      {
+        "start_line": 178,
+        "end_line": 184,
+        "clause_label": "s2_good_faith_functionality",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "good_faith_effort_for_nonargument_application_dependencies"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2(d): condition concerning specified facilities in the modified Library.",
+        "condition_explanation": "Applies when a facility refers to an application-supplied function or data table other than as an argument passed when invoked. The licensee must make a good-faith effort to ensure the facility still operates and performs whatever part of its purpose remains meaningful if the application does not supply it.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Make a good-faith effort to ensure the facility still operates and performs whatever part of its purpose remains meaningful if the application does not supply the referenced function or data table.",
+            "actor": "licensee modifying the Library",
+            "object": "the modified Library facility",
+            "trigger": "when the facility refers to an application-supplied function or data table other than as an invocation argument and the application may not supply it"
+          }
+        ]
+      },
+      {
+        "start_line": 193,
+        "end_line": 202,
+        "clause_label": "s2_scope_independent_sections",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "section_2_terms_apply_to_work_as_a_whole_except_separately_distributed_independent_sections"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2 scope rule for a work based on the Library. This describes the reach of §2 terms when distributing a whole and the separate-work exception.",
+        "condition_explanation": "§2 terms apply to the modified work as a whole. Identifiable sections not derived from the Library and reasonably considered independent and separate works are outside these terms when distributed as separate works. If distributed as part of a whole that is a work based on the Library, the whole must be under this License, whose permissions extend to every part of that whole.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 186,
+        "end_line": 191,
+        "clause_label": "s2d_example",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2(d) explanatory example, not an independent operative rule.",
+        "condition_explanation": "Illustrates the good-faith functionality condition in §2(d); it does not create a separate duty.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 209,
+        "end_line": 212,
+        "clause_label": "s2_aggregation_boundary",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "mere_aggregation_on_storage_or_distribution_medium",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §2: mere aggregation of another work not based on the Library with the Library or a work based on it does not bring that other work within this License.",
+        "condition_explanation": "The other work must not be based on the Library, and its association with the Library-based work must be mere aggregation on a volume of a storage or distribution medium.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 214,
+        "end_line": 221,
+        "clause_label": "s3_elect_gpl2",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "all_notices_referring_to_lgpl_changed_to_gpl_version_2_or_permitted_newer_version_and_no_other_notice_changes"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §3: option to apply the ordinary GNU General Public License instead to a given copy of the Library.",
+        "condition_explanation": "The licensee may specify ordinary GPL version 2, or a newer version than version 2 if one has appeared. To exercise the option, all notices referring to this License must be altered to refer to the chosen ordinary GPL version, and no other change may be made in those notices. This is an option, not a duty to change licenses.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Alter all notices referring to this License so they refer to the chosen ordinary GNU General Public License version, and make no other change in those notices.",
+            "actor": "licensee electing the §3 option",
+            "object": "all notices referring to this License in the given copy",
+            "trigger": "if the licensee elects to apply the ordinary GNU General Public License to that copy"
+          }
+        ]
+      },
+      {
+        "start_line": 224,
+        "end_line": 226,
+        "clause_label": "s3_irreversibility",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "s3_notice_change_made_for_given_copy",
+          "requires": "subsequent_copies_and_derivative_works_remain_under_ordinary_gpl"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §3: consequence of exercising the license-version option for a given copy.",
+        "condition_explanation": "Once the change is made for a copy, it is irreversible for that copy; the ordinary GPL applies to all subsequent copies and derivative works made from it.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 228,
+        "end_line": 229,
+        "clause_label": "s3_option_explanation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §3 explanatory statement about a possible reason to elect the GPL option.",
+        "condition_explanation": "States that the option may be useful for copying Library code into a program that is not a library; it does not add a rule.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 231,
+        "end_line": 236,
+        "clause_label": "s4_distribute_object_code",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "sections_1_and_2_conditions_and_complete_corresponding_machine_readable_source_distributed_under_sections_1_and_2"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §4: distribution of the Library, a portion, or a derivative under §2 in object-code or executable form.",
+        "condition_explanation": "Distribution must comply with §§1 and 2 and be accompanied by complete corresponding machine-readable source code, distributed under §§1 and 2 on a medium customarily used for software interchange.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Accompany the object code or executable with complete corresponding machine-readable source code and distribute that source under §§1 and 2 on a medium customarily used for software interchange.",
+            "actor": "licensee distributing the object code or executable",
+            "object": "complete corresponding source code for the distributed Library material",
+            "trigger": "when distributing the Library, a portion, or a §2 derivative in object-code or executable form"
+          }
+        ]
+      },
+      {
+        "start_line": 238,
+        "end_line": 242,
+        "clause_label": "s4_source_access_alternative",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "object_code_distribution_offers_access_to_copy_from_designated_place",
+          "requires": "equivalent_access_to_copy_source_from_same_place"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §4 alternative for satisfying the source-distribution requirement when object code is distributed by an offer of copy access from a designated place.",
+        "condition_explanation": "Equivalent access to copy the source from the same place satisfies the source requirement; third parties need not be compelled to copy source along with object code.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Offer equivalent access to copy the required source code from the same designated place as the object code.",
+            "actor": "licensee offering object-code access",
+            "object": "required source code for the object code",
+            "trigger": "when object-code distribution is made by offering access to copy from a designated place"
+          }
+        ]
+      },
+      {
+        "start_line": 244,
+        "end_line": 248,
+        "clause_label": "s5_work_uses_library_definition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §5 defines a work that uses the Library and states its isolated scope status; this is contextual classification, not a permission grant.",
+        "condition_explanation": "A program with no derivative of any Library portion, designed to work with the Library by compilation or linking, is a work that uses the Library; in isolation it is not a derivative and falls outside this License.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 250,
+        "end_line": 254,
+        "clause_label": "s5_linked_executable_scope",
+        "activities": [
+          "Link"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §5 scope explanation and cross-reference to §6, not an independent grant or complete distribution rule.",
+        "condition_explanation": "Linking a work that uses the Library with the Library creates an executable containing Library portions, characterized as a derivative covered by this License; §6 states distribution terms for such executables.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 256,
+        "end_line": 261,
+        "clause_label": "s5_header_derivative_caveat",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "AMBIGUOUS",
+          "when": "work_that_uses_library_uses_library_header_material",
+          "requires": "object_code_may_be_derivative_under_uncertain_legal_threshold"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §5: classification caveat; whether header-file use makes object code derivative is not precisely defined by law.",
+        "condition_explanation": "A work using Library header material may have object code that is derivative even if its source is not. The text expressly leaves the legal threshold uncertain, so no definite permission or prohibition can be extracted from this paragraph alone.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 263,
+        "end_line": 268,
+        "clause_label": "s5_small_header_use_unrestricted",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "object_file_uses_only_numerical_parameters_data_structure_layouts_accessors_or_small_macros_and_inline_functions_of_at_most_ten_lines",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §5: unrestricted use of an object file meeting the stated limited-header-material criteria. Executables that also contain Library portions remain subject to §6.",
+        "condition_explanation": "The object file must use only the listed kinds of material, with macros and inline functions small and no more than ten lines. This unrestricted-use statement does not remove §6 from executables containing Library portions.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 270,
+        "end_line": 273,
+        "clause_label": "s5_other_derivative_object_code",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "work_is_derivative_of_library_and_not_within_small_header_use_unrestricted_case",
+          "requires": "section_6_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §5: distribution of object code for a derivative work and executables containing it.",
+        "condition_explanation": "If the work is a derivative of the Library, its object code may be distributed under §6. Any executable containing that work is also subject to §6, whether or not directly linked with the Library.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 276,
+        "end_line": 281,
+        "clause_label": "s6_combine_link_and_distribute",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "work_that_uses_library_combined_or_linked_with_library",
+          "requires": "terms_permit_customer_own_use_modification_and_reverse_engineering_for_debugging_those_modifications"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6 exception: combine or link a work that uses the Library with the Library and distribute the resulting work containing Library portions under terms of the distributor's choice, subject to customer rights.",
+        "condition_explanation": "The chosen terms must permit modification of the work for the customer's own use and reverse engineering to debug those modifications.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 283,
+        "end_line": 289,
+        "clause_label": "s6_copy_notices_and_source_path",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_section_6_work",
+          "requires": "prominent_library_license_notices_and_license_copy_and_any_required_display_notice_and_at_least_one_section_6_source_alternative"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6 notice and source-compliance requirements for each distributed copy of the combined work.",
+        "condition_explanation": "Each copy must prominently state that the Library is used and is covered by this License, and include a copy of the License. If the work displays copyright notices during execution, the Library copyright notice and a reference directing the user to the License copy must be among them. In addition, one of §6(a)–(e) must be satisfied; these are alternatives, not cumulative requirements.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give prominent notice with each copy that the Library is used in the work and that the Library and its use are covered by this License, and supply a copy of this License.",
+            "actor": "licensee distributing the combined work",
+            "object": "each copy of the combined work",
+            "trigger": "when distributing a §6 work"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Include the Library copyright notice and a reference directing the user to the License copy among copyright notices displayed during execution.",
+            "actor": "licensee distributing the combined work",
+            "object": "copyright notices displayed by the work during execution",
+            "trigger": "if the work displays copyright notices during execution"
+          }
+        ]
+      },
+      {
+        "start_line": 291,
+        "end_line": 301,
+        "clause_label": "s6a_source_and_relink_materials",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_section_6_work_and_selecting_section_6a",
+          "requires": "complete_library_source_including_changes_and_complete_work_that_uses_library_materials_when_executable_linked_with_library"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6(a): one alternative for satisfying §6's source-material requirement.",
+        "condition_explanation": "Provide complete machine-readable Library source, including changes used in the work, under §§1 and 2. If the work is an executable linked with the Library, also provide the complete machine-readable work that uses the Library, as object code and/or source, enabling the user to modify the Library and relink a modified executable. The stated definitions-file limitation does not remove this condition.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Accompany the work with complete machine-readable source code for the Library, including changes used in the work, distributed under §§1 and 2.",
+            "actor": "licensee distributing the §6 work and selecting §6(a)",
+            "object": "Library source code, including changes used in the work",
+            "trigger": "when relying on §6(a) for a work distributed under §6"
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "For an executable linked with the Library, provide the complete machine-readable work that uses the Library as object code and/or source so the user can modify the Library and relink a modified executable containing it.",
+            "actor": "licensee distributing the §6 work and selecting §6(a)",
+            "object": "the complete work that uses the Library",
+            "trigger": "when the §6 work is an executable linked with the Library and §6(a) is selected"
+          }
+        ]
+      },
+      {
+        "start_line": 303,
+        "end_line": 309,
+        "clause_label": "s6b_shared_library_mechanism",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_section_6_work_and_selecting_section_6b",
+          "requires": "shared_library_mechanism_uses_users_existing_runtime_library_and_supports_interface_compatible_modified_library"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6(b): one alternative for satisfying §6's source-material requirement.",
+        "condition_explanation": "The suitable shared-library mechanism must use at runtime a copy of the Library already on the user's system rather than copying Library functions into the executable, and must operate properly with a user-installed modified version if interface-compatible with the version used to make the work.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 311,
+        "end_line": 314,
+        "clause_label": "s6c_written_offer",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_section_6_work_and_selecting_section_6c",
+          "requires": "written_offer_to_same_user_valid_at_least_three_years_for_section_6a_materials_at_no_more_than_distribution_cost"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6(c): one alternative for satisfying §6's source-material requirement.",
+        "condition_explanation": "The written offer must be valid for at least three years, be to give the same user the materials specified in §6(a), and charge no more than the cost of performing the distribution.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Make a written offer to give the same user the §6(a) materials for a charge no more than the cost of performing the distribution, and keep the offer valid for at least three years.",
+            "actor": "licensee distributing the §6 work and selecting §6(c)",
+            "object": "the §6(a) materials for the same user",
+            "trigger": "when relying on §6(c) for a work distributed under §6"
+          }
+        ]
+      },
+      {
+        "start_line": 316,
+        "end_line": 318,
+        "clause_label": "s6d_same_place_material_access",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distribution_of_section_6_work_offers_access_to_copy_from_designated_place_and_section_6d_selected",
+          "requires": "equivalent_access_to_copy_specified_materials_from_same_place"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6(d): one alternative for satisfying §6's source-material requirement when distribution offers copy access from a designated place.",
+        "condition_explanation": "Offer equivalent access to copy the materials specified above from the same place.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Offer equivalent access to copy the specified materials from the same designated place as the work.",
+            "actor": "licensee distributing the §6 work and selecting §6(d)",
+            "object": "the materials specified in §6(a)",
+            "trigger": "when distribution offers access to copy the work from a designated place and §6(d) is selected"
+          }
+        ]
+      },
+      {
+        "start_line": 320,
+        "end_line": 321,
+        "clause_label": "s6e_prior_receipt",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_section_6_work_and_selecting_section_6e",
+          "requires": "verify_same_user_already_received_materials_or_licensee_already_sent_them"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 §6(e): one alternative for satisfying §6's source-material requirement.",
+        "condition_explanation": "Verify either that the user has already received the specified materials or that the distributor has already sent the user a copy.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Verify that the user has already received the specified materials or that the distributor has already sent the user a copy.",
+            "actor": "licensee distributing the §6 work and selecting §6(e)",
+            "object": "the specified §6(a) materials for the user",
+            "trigger": "when relying on §6(e) for a work distributed under §6"
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "§6(a)–(e) are alternative compliance paths; the extracted clauses preserve them separately rather than requiring all paths.",
+      "The chunk ends at §6(e). Later LGPL-2.1 provisions and any external incorporated materials are not included or inferred.",
+      "§5 expressly describes uncertainty in the legal threshold for whether certain header-file use makes object code derivative; that uncertainty is retained rather than resolved."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0028",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_modify_library",
+          "s2_distribute_modified_library"
+        ],
+        "reason": "Captures the §2 modification and copying/distribution permission and its dependency on §1 and §2 conditions."
+      },
+      {
+        "unit_id": "P0029",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_library_form"
+        ],
+        "reason": "Captures the requirement that the modified work itself be a software library."
+      },
+      {
+        "unit_id": "P0030",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_change_notices"
+        ],
+        "reason": "Captures the prominent change-and-date notice condition."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_no_charge_license"
+        ],
+        "reason": "Captures the whole-work, no-charge, third-party licensing condition."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_good_faith_functionality"
+        ],
+        "reason": "Captures the application-supplied function/table trigger, invocation-argument exception, and good-faith effort requirement."
+      },
+      {
+        "unit_id": "P0033",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Illustrative square-root example for §2(d), not an independent operative rule; §2(d)'s rule is modeled separately."
+      },
+      {
+        "unit_id": "P0034",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_scope_independent_sections"
+        ],
+        "reason": "Captures whole-work application, separate independent-section exception, and the consequence of distributing those sections as part of the Library-based whole."
+      },
+      {
+        "unit_id": "P0035",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States legislative intent and disclaims an intent to claim rights or contest rights; it creates no separate behavioral duty or permission."
+      },
+      {
+        "unit_id": "P0036",
+        "status": "MODELED",
+        "clause_labels": [
+          "s2_aggregation_boundary"
+        ],
+        "reason": "Captures the boundary that mere aggregation does not bring an independent other work under the License."
+      },
+      {
+        "unit_id": "P0037",
+        "status": "MODELED",
+        "clause_labels": [
+          "s3_elect_gpl2"
+        ],
+        "reason": "Captures the optional GPL-version election, permitted version choice, required notice changes, and prohibition on other notice changes."
+      },
+      {
+        "unit_id": "P0038",
+        "status": "MODELED",
+        "clause_labels": [
+          "s3_irreversibility"
+        ],
+        "reason": "Captures irreversibility for the changed copy and the resulting coverage of subsequent copies and derivative works."
+      },
+      {
+        "unit_id": "P0039",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Explains a possible use of the §3 option; it adds no operative rule."
+      },
+      {
+        "unit_id": "P0040",
+        "status": "MODELED",
+        "clause_labels": [
+          "s4_distribute_object_code"
+        ],
+        "reason": "Captures the §4 object-code/executable distribution permission, corresponding-source requirement, source license terms, and customary-medium condition."
+      },
+      {
+        "unit_id": "P0041",
+        "status": "MODELED",
+        "clause_labels": [
+          "s4_source_access_alternative"
+        ],
+        "reason": "Captures the designated-place, same-place equivalent source-access alternative."
+      },
+      {
+        "unit_id": "P0042",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines and classifies a work that uses the Library and its isolated scope status; this paragraph is explanatory classification rather than a standalone grant."
+      },
+      {
+        "unit_id": "P0043",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Explains the derivative and §6 coverage consequences of linking; it points to the separately modeled §6 rules."
+      },
+      {
+        "unit_id": "P0044",
+        "status": "MODELED",
+        "clause_labels": [
+          "s5_header_derivative_caveat"
+        ],
+        "reason": "Preserves the conditional possibility of derivative status and the text's explicit legal uncertainty."
+      },
+      {
+        "unit_id": "P0045",
+        "status": "MODELED",
+        "clause_labels": [
+          "s5_small_header_use_unrestricted"
+        ],
+        "reason": "Captures the unrestricted-use rule's listed material categories, ten-line threshold, and §6 caveat for executables containing Library portions."
+      },
+      {
+        "unit_id": "P0046",
+        "status": "MODELED",
+        "clause_labels": [
+          "s5_other_derivative_object_code"
+        ],
+        "reason": "Captures §6 treatment of object code for a derivative work and executables containing that work."
+      },
+      {
+        "unit_id": "P0047",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6_combine_link_and_distribute"
+        ],
+        "reason": "Captures the combine/link and distribute permission, choice of terms, and customer modification and debugging reverse-engineering requirements."
+      },
+      {
+        "unit_id": "P0048",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6_copy_notices_and_source_path"
+        ],
+        "reason": "Captures per-copy prominent notices, License-copy requirement, conditional runtime copyright notice, and requirement to satisfy one source alternative."
+      },
+      {
+        "unit_id": "P0049",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6a_source_and_relink_materials"
+        ],
+        "reason": "Captures §6(a)'s Library source and changes, its license terms, and the additional materials and relinking purpose when the work is an executable linked with the Library."
+      },
+      {
+        "unit_id": "P0050",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6b_shared_library_mechanism"
+        ],
+        "reason": "Captures both requirements defining the §6(b) shared-library alternative, including compatibility of a modified library."
+      },
+      {
+        "unit_id": "P0051",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6c_written_offer"
+        ],
+        "reason": "Captures the recipient, materials, minimum three-year validity, and maximum charge for the §6(c) written offer."
+      },
+      {
+        "unit_id": "P0052",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6d_same_place_material_access"
+        ],
+        "reason": "Captures the designated-place trigger and equivalent same-place access to the specified materials."
+      },
+      {
+        "unit_id": "P0053",
+        "status": "MODELED",
+        "clause_labels": [
+          "s6e_prior_receipt"
+        ],
+        "reason": "Captures the verification requirement and its two alternative factual bases."
+      }
+    ]
+  },
+  "attempt": 1
+}

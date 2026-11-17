@@ -1,0 +1,120 @@
+{
+  "case_id": "chain-0046-2449ddc5ce7e",
+  "status": "SUCCESS",
+  "request_sha256": "a01a4396f9b7bdb40e777427a318364ac8f59bdc4af1c25e843fa84098097998",
+  "analysis": {
+    "case_id": "chain-0046-2449ddc5ce7e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0046-2449ddc5ce7e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-0046-2449ddc5ce7e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Customer须按订单表及协议支付适用服务费用；具体费用、账单及支付状态未提供。",
+        "trigger": true,
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "payment_fulfillment"
+        ],
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI Services Agreement 的已映射摘录仅涉及客户向服务提供方支付适用费用，不能据此推断客户向下游收费或其他使用限制。",
+      "记录确认远程服务调用及API链接，但下游GPL材料是否被复制、修改、合并、分发或提供源码均未知；GPL对应条款仅针对摘录所述的复制或传递场景，不能仅凭API调用触发。",
+      "对象图中的上下游许可共同适用范围为未知；本次未发现有依据的许可冲突或行为违规。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17653,
+    "input_tokens_details": {
+      "cached_tokens": 17536,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 801,
+    "output_tokens_details": {
+      "reasoning_tokens": 317
+    },
+    "total_tokens": 18454,
+    "attribution": {
+      "items": {
+        "msg_03c538658059f6b9016af2f902712887d18f2acd4c1d2d7996": {
+          "input_tokens": 15621,
+          "cached_tokens": 15506,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15621,
+              "cached_tokens": 15506,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03c538658059f6b9016af2f908991087d18161b00806d0ac6d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 484,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 484
+            }
+          ]
+        },
+        "rs_03c538658059f6b9016af2f9087d3487d191683aa3b6d6970e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 317
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.039,
+  "auto_applied": false,
+  "aggregate_count": 34
+}

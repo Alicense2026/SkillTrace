@@ -1,0 +1,124 @@
+{
+  "case_id": "chain-0365-84d71b4c0b35",
+  "status": "SUCCESS",
+  "request_sha256": "ad7ef5d7760070b7176717f6f18eb53c2afb666a95d9df030f68bcb8a7e5068d",
+  "analysis": {
+    "case_id": "chain-0365-84d71b4c0b35",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_services",
+                "attempt_reverse_engineer_extract_or_replicate_service_component"
+              ]
+            },
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0365-84d71b4c0b35:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对 Gemini API Additional Terms 第 L31-L34 条摘录；其竞争模型定义及上下文仍由原文确定。当前事实只证明 API 使用、远程调用和链接关系，未证明竞争模型开发或逆向、提取、复制服务组件；因此不判违规。",
+      "MIT OR Apache-2.0 是下游代码的许可标签，但代码修改不适用；没有证据表明该代码与上游 Gemini 服务构成共同受约束对象。故不把下游许可条件套用于 API 调用，也不据此判定许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Gemini API 服务时，不得将服务用于开发与该服务竞争的模型，亦不得尝试逆向工程、提取或复制服务组件；竞争模型的范围依条款定义及上下文判定。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "subject": {
+          "artifact": "chain-0365-84d71b4c0b35:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "use_services_to_develop_models_competing_with_services",
+          "attempt_reverse_engineer_extract_or_replicate_service_component"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21159,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 857,
+    "output_tokens_details": {
+      "reasoning_tokens": 271
+    },
+    "total_tokens": 22016,
+    "attribution": {
+      "items": {
+        "msg_069194b86db50ac2016af3066c704087d29b0cbfaa873fd3c0": {
+          "input_tokens": 19127,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19127,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_069194b86db50ac2016af30671bc4c87d29b89fe04c6038703": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 586,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 586
+            }
+          ]
+        },
+        "rs_069194b86db50ac2016af30671a0b887d28340cb1f6e8772e3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 271
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.927,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

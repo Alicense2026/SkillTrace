@@ -1,0 +1,68 @@
+{
+  "clauses": [
+    {
+      "start_line": 354,
+      "end_line": 354,
+      "clause_label": "publicity_logo_license",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "PERMITTED",
+        "when": true,
+        "requires": true
+      },
+      "actor_role": "Cohere",
+      "scope_note": "CLA §13, Publicity: Customer grants Cohere a limited, perpetual, fully paid-up, irrevocable, non-exclusive, non-transferable, non-sublicensable license to use Customer’s logo and trademarks in connection with Publicity. Cohere may also refer to Customer as a customer and disclose the agreement, services provided, and testimonials in Publicity, without notice or prior written consent.",
+      "condition_explanation": "Publicity means announcements, press or marketing releases, publications, presentations, case studies, other public statements, and Cohere’s Website and other online channels. The permission to use the logo and trademarks is limited to that purpose.",
+      "obligation_items": []
+    },
+    {
+      "start_line": 357,
+      "end_line": 357,
+      "clause_label": "export_law_compliance",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "complies_with_applicable_export_laws_and_regulations"
+      },
+      "actor_role": "Customer",
+      "scope_note": "CLA §13, Export Restrictions: Customer’s access to or use of the Cohere API SaaS Services is subject to applicable export laws and regulations.",
+      "condition_explanation": "complies_with_applicable_export_laws_and_regulations means Customer complies with export laws and regulations that may apply to its access to or use of the Cohere API SaaS Services.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Comply with all export laws and regulations that may apply to access to or use of the Cohere API SaaS Services.",
+          "actor": "Customer",
+          "object": "Cohere API SaaS Services",
+          "trigger": "Whenever Customer accesses or uses the Cohere API SaaS Services, to the extent export laws or regulations apply."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The target includes assignment provisions, including Customer’s restriction on assigning the Agreement without Cohere’s prior written consent and Cohere’s assignment right. Assignment of an agreement or contractual rights is not faithfully represented by the supplied activity/object categories; these provisions are not modeled as software sublicensing.",
+    "The target also contains procedural, interpretive, jurisdictional, force-majeure, severability, waiver, entire-agreement, amendment, and language provisions. No additional activity constraint is extracted from those provisions.",
+    "No incorporated external document is supplied for further detail on applicable export laws."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0099",
+      "status": "UNRESOLVED",
+      "clause_labels": [
+        "publicity_logo_license",
+        "export_law_compliance"
+      ],
+      "reason": "The publicity license and export-compliance duty are modeled, but the paragraph also contains operative assignment rights and restrictions that cannot be faithfully represented using the supplied canonical activities and objects."
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "case_id": "chain-12104-c4fe57ebd593",
+  "source_csv_line": 12105,
+  "row": {
+    "github_repo": "10x-n8n-skill",
+    "github_url": "https://github.com/openanalystinc/10x-n8n-skill",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "mistralai/Mistral-Nemo-Base-2407",
+    "artifact_url": "https://huggingface.co/mistralai/Mistral-Nemo-Base-2407",
+    "artifact_license": "apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: docs/nodes/n8n-repo/packages/@n8n/nodes-langchain/nodes/llms/LMOpenHuggingFaceInference/LmOpenHuggingFaceInference.node.ts:57 ｜ 调用原文: default: 'mistralai/Mistral-Nemo-Base-2407',（引用处 第142行） ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: vendored n8n HuggingFace 节点中的默认模型标识，未确认会被本 skill 实际加载调用",
+    "batch": "6001-6500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "openanalystinc/10x-n8n-skill",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112",
+    "filename": "_supplement_round2/ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 3; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-12104-c4fe57ebd593",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a8a6718c3f7d630e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-12104-c4fe57ebd593:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:82c10d34a526df8b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "user_is_not_authorized",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-12104-c4fe57ebd593:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:82c10d34a526df8b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "UNSPECIFIED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-12104-c4fe57ebd593:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游模型的 Use 已确认；对象图仅确认下游与上游存在 API 链接/远程调用，未确认下游软件与上游模型属于同一受约束对象或存在依赖、复制、合并或分发，因此不据此认定许可证范围重合或许可冲突。",
+      "下游原文说明使用权限取决于授权用户身份及与 10x.in 约定的条款，但未提供授权状态、约定条款或授权取得方式；未据此推断已授权或未授权。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "仅由获授权用户按与 10x.in 约定的条款使用下游软件；若用户未获授权，则不得使用。",
+        "source_refs": [
+          "license-text:downstream:82c10d34a526df8b"
+        ],
+        "subject": {
+          "artifact": "chain-12104-c4fe57ebd593:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use",
+          "user_is_not_authorized",
+          "授权用户身份及与 10x.in 约定的条款"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18932,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1056,
+    "output_tokens_details": {
+      "reasoning_tokens": 300
+    },
+    "total_tokens": 19988,
+    "attribution": {
+      "items": {
+        "msg_04ccc15b3eed5077016af5867dd80c87d09e0444c436dfa22f": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04ccc15b3eed5077016af5867dd80c87d0ae0f5331e2438ee1": {
+          "input_tokens": 16862,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16862,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_04ccc15b3eed5077016af586843a8487d09191f9bb8db1c883": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 756,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 756
+            }
+          ]
+        },
+        "rs_04ccc15b3eed5077016af586841ed887d09b77b3aa0edef8d3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 300
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 30.53
+}

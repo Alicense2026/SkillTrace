@@ -1,0 +1,204 @@
+{
+  "case_id": "skill-00420",
+  "csv_row": 421,
+  "source_excel_row": "603",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00420-1794596986848976000-1.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人对上游SGDK软件的每一副本或实质部分，均须包含原版权声明及MIT许可声明；仅在不产生副本或实质部分时可走该替代路径。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00420:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Copy",
+      "unresolved_predicates": [
+        "no_copy_or_substantial_portion_created",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人分发上游SGDK软件的副本或实质部分时，须在所有该等副本或实质部分中包含原版权声明及MIT许可声明；仅在未分发副本或实质部分时可走该替代路径。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00420:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Distribute",
+      "unresolved_predicates": [
+        "no_copy_or_substantial_portion_distributed",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人对下游SGDK软件的每一副本或实质部分，均须包含原版权声明及MIT许可声明；仅在不产生副本或实质部分时可走该替代路径。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00420:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Copy",
+      "unresolved_predicates": [
+        "no_copy_or_substantial_portion_created",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人分发下游SGDK软件的副本或实质部分时，须在所有该等副本或实质部分中包含原版权声明及MIT许可声明；仅在未分发副本或实质部分时可走该替代路径。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00420:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Distribute",
+      "unresolved_predicates": [
+        "no_copy_or_substantial_portion_distributed",
+        "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+      ]
+    }
+  ],
+  "limitations": [
+    "仅有MIT许可摘录E001、E002；对象图未确认两侧条款共同适用同一对象（scope_shared未知），故不据此认定其他活动存在冲突。",
+    "未确认分发、实质部分、副本中声明是否包含及下游具体活动；未知不视为未发生或未履行。代码纳入不等于已发布打包物。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "使用许可无附加义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已确认上游复制，保留声明条件及替代路径。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "可信事实确认上游未修改。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "合并活动及是否形成软件副本未知；声明义务由上游副本条件覆盖，不能据此认定已履行。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "分发是否发生未知；保留上游分发时的声明条件。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "分发是否发生未知；保留上游分发时的声明条件。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "转授权是否发生未知；其副本声明条件由上游分发义务覆盖。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies不在本任务canonical_activities中。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "使用许可无附加义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "下游复制事实未知，保留下游副本声明条件。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "下游修改事实未知；若形成软件副本，声明义务由下游副本条件覆盖。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "合并活动及是否形成软件副本未知；声明义务由下游副本条件覆盖。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "下游分发是否发生未知；保留相应声明条件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "下游分发是否发生未知；保留相应声明条件。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "转授权是否发生未知；其副本声明条件由下游分发义务覆盖。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "SellCopies不在本任务canonical_activities中。"
+    }
+  ]
+}

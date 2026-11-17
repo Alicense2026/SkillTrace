@@ -1,0 +1,134 @@
+{
+  "case_id": "chain-0237-8044e1826cd2",
+  "status": "SUCCESS",
+  "request_sha256": "bcf751cccfa26dc705e5da87a8dd92cef614e24746c0ae7333600ab81e8d8b0f",
+  "analysis": {
+    "case_id": "chain-0237-8044e1826cd2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0237-8044e1826cd2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API 条款摘录及其结构化映射标有 FIRST_PASS_REVIEW_REQUIRED；其禁止范围依赖“竞争模型”及逆向工程等原文语境。已知远程 API 调用不证明实施了这些受禁止用途。",
+      "对象图确认 downstream 与 upstream 存在 API 链接/远程调用，但两份许可是否对同一对象共同适用未知；没有据此认定许可冲突。CC0 条款所映射的下游对象上未提供具体活动事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0237-8044e1826cd2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得使用 Gemini API 或 Google AI Studio 服务开发与其竞争的模型；不得尝试逆向工程、提取或复制服务组件，包括底层数据或模型（例如参数权重）。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+              ]
+            }
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+          "attempt_to_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17773,
+    "input_tokens_details": {
+      "cached_tokens": 17536,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 981,
+    "output_tokens_details": {
+      "reasoning_tokens": 330
+    },
+    "total_tokens": 18754,
+    "attribution": {
+      "items": {
+        "msg_0c7e88a622020fb3016af30161bad887d28d4dc7c5291e2567": {
+          "input_tokens": 15741,
+          "cached_tokens": 15506,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15741,
+              "cached_tokens": 15506,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c7e88a622020fb3016af30168d2e487d2b3b8f74f1270b486": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 651,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 651
+            }
+          ]
+        },
+        "rs_0c7e88a622020fb3016af30168b74887d2aa13cb6bf5b9c27b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 330
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.475,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

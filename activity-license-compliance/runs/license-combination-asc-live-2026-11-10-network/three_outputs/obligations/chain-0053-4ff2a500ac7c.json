@@ -1,0 +1,70 @@
+{
+  "case_id": "chain-0053-4ff2a500ac7c",
+  "output": [
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 DeepSeek Open Platform 服务条款。",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0053-4ff2a500ac7c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:RemoteInteraction",
+      "unresolved_predicates": []
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如服务输出提供给终端用户，须清晰披露输出由 AI 生成、可能含错误或遗漏且仅供参考。",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0053-4ff2a500ac7c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "outputs_provided_by_service"
+        ]
+      },
+      "unresolved_predicates": [
+        "outputs_provided_by_service",
+        "disclosure_fulfilled"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若下游对象属于经修改且支持远程网络交互的受覆盖程序版本，须向远程交互用户显著提供免费获取该版本对应源码的机会。",
+      "source_refs": [
+        "license-text:downstream:d1bdfda347634501"
+      ],
+      "subject": {
+        "artifact": "chain-0053-4ff2a500ac7c:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "scope_shared",
+          "modified_covered_program",
+          "version_supports_remote_network_interaction"
+        ]
+      },
+      "unresolved_predicates": [
+        "scope_shared",
+        "modified_covered_program",
+        "version_supports_remote_network_interaction",
+        "source_offer_fulfilled"
+      ]
+    }
+  ],
+  "aggregate_count": 28
+}

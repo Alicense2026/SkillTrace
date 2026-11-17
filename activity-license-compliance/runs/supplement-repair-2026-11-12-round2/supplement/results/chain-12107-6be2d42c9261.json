@@ -1,0 +1,181 @@
+{
+  "case_id": "chain-12107-6be2d42c9261",
+  "source_csv_line": 12108,
+  "row": {
+    "github_repo": "10x-n8n-skill",
+    "github_url": "https://github.com/openanalystinc/10x-n8n-skill",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "Logambika/gpt-4.1-mini",
+    "artifact_url": "https://huggingface.co/Logambika/gpt-4.1-mini",
+    "artifact_license": "mit",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: docs/nodes/n8n-repo/packages/@n8n/nodes-langchain/nodes/llms/LmChatOpenRouter/LmChatOpenRouter.node.ts:179 ｜ 调用原文: default: 'openai/gpt-4.1-mini',（引用处 第66行） ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: vendored n8n OpenRouter 节点默认模型，未确认本 skill 实际调用",
+    "batch": "6001-6500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "openanalystinc/10x-n8n-skill",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112",
+    "filename": "_supplement_round2/ce7c3c1d394780ff13c137edfc7d40b7f4c9ba020a06f74168b8c1fc2b02e112.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 3; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-12107-6be2d42c9261",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:d9b51521e2731aa7"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "use_of_upstream_original_artifact"
+          },
+          "S": {
+            "artifact": "chain-12107-6be2d42c9261:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4ec4862e91c6ab1a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "user_is_not_authorized",
+            "when": "use_of_downstream_original_artifact"
+          },
+          "S": {
+            "artifact": "chain-12107-6be2d42c9261:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-12107-6be2d42c9261:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the copyright and permission notice when the applicable MIT notice condition is triggered by copying the Software or a substantial portion; the supplied excerpt does not establish that mere API use triggers this condition.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "copy_or_substantial_portion"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "copy_or_substantial_portion",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:d9b51521e2731aa7"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "limitations": [
+      "可信记录表明发生了对上游模型的远程调用及链接关系；这不证明向下游提供的软件本身被使用，也不证明模型权重转移、复制、修改或分发。",
+      "下游 LicenseRef-Custom 的授权用户身份及与 10x.in 协议约定的条款未知。其条款适用于下游 Software；现有对象图不足以确定该 Software 是否属于本次模型调用所用对象，因此未认定违规或形成确定的适用义务。",
+      "上游 MIT 条款的结构化 Use 映射标记为首轮抽取；所给通知原文明确涉及副本或实质部分。未据此推断单纯远程调用必然触发通知义务。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20541,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1165,
+    "output_tokens_details": {
+      "reasoning_tokens": 465
+    },
+    "total_tokens": 21706,
+    "attribution": {
+      "items": {
+        "msg_0c24f39b81ffe7da016af5869c16ac87d0830be02f8b9c37ca": {
+          "input_tokens": 18471,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18471,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c24f39b81ffe7da016af5869c16ac87d083c5ed923af6a845": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c24f39b81ffe7da016af586a5fc9c87d0ab421e611ed10c5a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 700,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 700
+            }
+          ]
+        },
+        "rs_0c24f39b81ffe7da016af586a5e5a887d0a9b1e8a26bdb0d65": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 465
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 32.36
+}

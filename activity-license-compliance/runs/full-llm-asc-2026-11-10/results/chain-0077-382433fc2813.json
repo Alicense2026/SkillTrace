@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-0077-382433fc2813",
+  "status": "SUCCESS",
+  "request_sha256": "f7a5189fb6c6a9cb38abcd2dcd0641009cb3c80c510e2cd1b943fdabb4c4d82c",
+  "analysis": {
+    "case_id": "chain-0077-382433fc2813",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:39a7c8ced8e1d3ee"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0077-382433fc2813:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:3983d3303d2a36c5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0077-382433fc2813:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的关系是下游仓库远程调用并链接上游模型；没有证据表明模型权重转移、分发、修改，或两项许可约束同一对象。未据此推断许可证冲突。",
+      "MIT通知条款所涉复制、分发及履行情况未提供；Apache分发条件目前也未触发。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用受MIT许可的软件时，满足其许可条件；许可文本要求在软件的所有副本或实质部分中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:3983d3303d2a36c5"
+        ],
+        "subject": {
+          "artifact": "chain-0077-382433fc2813:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 32617,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 887,
+    "output_tokens_details": {
+      "reasoning_tokens": 341
+    },
+    "total_tokens": 33504,
+    "attribution": {
+      "items": {
+        "msg_028b0d97070dd911016af2ea14ae9487d282f51977f7af7f27": {
+          "input_tokens": 30669,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30669,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_028b0d97070dd911016af2ea1baefc87d2af78ef703a520423": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 546,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 546
+            }
+          ]
+        },
+        "rs_028b0d97070dd911016af2ea1b933487d2aef663e7d833afe3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 341
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.326,
+  "auto_applied": false
+}

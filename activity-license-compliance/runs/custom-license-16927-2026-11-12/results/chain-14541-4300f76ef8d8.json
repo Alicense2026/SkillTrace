@@ -1,0 +1,159 @@
+{
+  "case_id": "chain-14541-4300f76ef8d8",
+  "source_csv_line": 14542,
+  "row": {
+    "github_repo": "agentic-pkm-mvp",
+    "github_url": "https://github.com/RasmusTho/agentic-pkm-mvp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-embedding-001",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: app/llm/gemini_embeddings.py:106 ｜ 调用原文: return os.getenv(\"EMBED_GEMINI_MODEL\", _GEMINI_DEFAULT_MODEL).strip() or _GEMINI_DEFAULT_MODEL ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: app/llm/gemini_embeddings.py 中作为嵌入模型被真实调用（含 GEMINI_BASE_URL/GEMINI_API_KEY 配置）",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "rasmustho/agentic-pkm-mvp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f",
+    "filename": "_licenseref_full/texts/e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:agentic-pkm-mvp-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14541-4300f76ef8d8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a86437a5db26c66"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_competing_models",
+                "attempt_to_reverse_engineer_extract_or_replicate_service_components"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14541-4300f76ef8d8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-14541-4300f76ef8d8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Gemini Services to develop models that compete with the Services, or attempt to reverse engineer, extract, or replicate any component of the Services, including underlying data or models.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_services_to_develop_competing_models",
+          "attempt_to_reverse_engineer_extract_or_replicate_service_components"
+        ],
+        "source_refs": [
+          "license-text:upstream:8a86437a5db26c66"
+        ]
+      }
+    ],
+    "limitations": [
+      "Gemini API Additional Terms clause L31-L34 is marked FIRST_PASS_REVIEW_REQUIRED. The excerpt prohibits specified model-development and reverse-engineering conduct, not ordinary API use generally; the supplied facts establish a remote embedding call but do not establish either prohibited purpose or conduct.",
+      "Downstream LicenseRef-Custom clauses concern repository content owned by Rasmus Thornberg. The object graph establishes an API/link relation, not that the repository is incorporated into, modified by, or distributed with the Gemini service; no downstream restriction is therefore applied to the upstream API call."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20863,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 951,
+    "output_tokens_details": {
+      "reasoning_tokens": 415
+    },
+    "total_tokens": 21814,
+    "attribution": {
+      "items": {
+        "msg_0fb03cf921347683016af53df14df487d19f93adbc3159dd76": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0fb03cf921347683016af53df14df487d1b44ebc0ef327c45b": {
+          "input_tokens": 18793,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18793,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0fb03cf921347683016af53df94d9c87d1a8aa79b33f236ce2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 536,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 536
+            }
+          ]
+        },
+        "rs_0fb03cf921347683016af53df931e087d19a43944e9427f90b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 415
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "236db727dd69313075116e7dca158418b50e7ec06c169c422577e5f3b0a5afed",
+  "elapsed_seconds": 22.85
+}

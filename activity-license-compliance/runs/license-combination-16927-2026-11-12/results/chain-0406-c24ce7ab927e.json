@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0406-c24ce7ab927e",
+  "input_group_row": 406,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "WTFPL",
+    "资产许可证原文标题/标签": "ISC",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0406-c24ce7ab927e",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0406-c24ce7ab927e:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Retain applicable copyright and permission notices.",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "subject": {
+          "artifact": "chain-0406-c24ce7ab927e:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "retain_applicable_notices"
+        ]
+      }
+    ],
+    "limitations": [
+      "The ISC permission passage conditions the grant on notices appearing in copies; the structured ASC maps a notice-retention condition to Use. The supplied facts establish Use and remote interaction, but do not establish copying or whether applicable notices are retained. No breach is inferred.",
+      "The supplied WTFPL excerpt concerns copying and distributing the license document itself. It does not establish a relevant condition for the reported API call, and the record does not establish downstream modification or distribution. The object graph marks shared scope as unknown; no license-to-license conflict is established from the available excerpts."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 17989,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 633,
+    "output_tokens_details": {
+      "reasoning_tokens": 192
+    },
+    "total_tokens": 18622,
+    "attribution": {
+      "items": {
+        "msg_0c55b4dda698815b016af5338c13ac87d186e804d337327c58": {
+          "input_tokens": 15919,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15919,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c55b4dda698815b016af5338c13ac87d1bbb454b13fc9b303": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c55b4dda698815b016af533901c5087d188f6bc1a16435ada": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 441,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 441
+            }
+          ]
+        },
+        "rs_0c55b4dda698815b016af53390053c87d19533a7a3b8268714": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 192
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "54489392b5040ae95b3fa3fe34fd1698c79ee136de6dabe6114a30361b274f41",
+  "elapsed_seconds": 25.86
+}

@@ -1,0 +1,156 @@
+{
+  "case_id": "chain-0366-9c8f0cbeeb04",
+  "status": "SUCCESS",
+  "request_sha256": "abef4a9a5f87a510696797a2b700019e4b9f83265fea68b29e70c86cd4964368",
+  "analysis": {
+    "case_id": "chain-0366-9c8f0cbeeb04",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0366-9c8f0cbeeb04:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0aaf95758fb301ff"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0366-9c8f0cbeeb04:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2a07d0faff95278c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0366-9c8f0cbeeb04:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认的是对上游服务的远程调用及链接关系，不证明下游代码被复制、修改、分发或与上游资产构成同一受许可对象；因此未据此触发下游 MIT/Apache 的通知或分发条款，也未判定许可冲突。",
+      "下游标签为“MIT OR Apache-2.0”，属可选许可路径；现有摘录分别提供 MIT 通知条件和 Apache 版权许可授予，但未提供完整上下文，且没有证据表明本案发生相关复制或分发。",
+      "OpenAI 摘录为费用条款；未提供订单、适用费用或付款履行事实，故仅保留费用义务，不据此认定欠费或违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "支付适用费用，并按订单约定的币种及付款期限向 OpenAI 或其转售方付款。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0366-9c8f0cbeeb04:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "applicable_fees",
+        "unresolved_predicates": [
+          "applicable_fees",
+          "payment_due"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20983,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1009,
+    "output_tokens_details": {
+      "reasoning_tokens": 220
+    },
+    "total_tokens": 21992,
+    "attribution": {
+      "items": {
+        "msg_09ac1bc8c7652ec8016af3067ed51c87d29f296ede810c2d81": {
+          "input_tokens": 18951,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18951,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09ac1bc8c7652ec8016af30683ead487d2814c0f4c042d6362": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 789,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 789
+            }
+          ]
+        },
+        "rs_09ac1bc8c7652ec8016af30683cf5c87d289232f3a74f73536": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 220
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.821,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

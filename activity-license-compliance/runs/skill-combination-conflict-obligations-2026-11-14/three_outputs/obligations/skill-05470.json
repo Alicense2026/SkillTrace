@@ -1,0 +1,393 @@
+{
+  "case_id": "skill-05470",
+  "csv_row": 5471,
+  "source_excel_row": "7731",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-05470-1794600375201416000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用Kimi开放平台前须使协议生效；协议以接受或实际使用为生效条件。",
+      "source_refs": [
+        "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+      ],
+      "subject": {
+        "artifact": "skill-05470:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": []
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "平台用户须先完成注册和实名认证，并具备与行为相适应的民事行为能力。",
+      "source_refs": [
+        "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+      ],
+      "subject": {
+        "artifact": "skill-05470:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "user_registered",
+        "user_real_name_authenticated",
+        "user_has_legally_appropriate_civil_capacity"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "用户不得不当使用、扰乱平台正常秩序或侵犯第三方权益。",
+      "source_refs": [
+        "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+      ],
+      "subject": {
+        "artifact": "skill-05470:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "use_is_not_improper_or_disruptive",
+        "use_does_not_infringe_third_party_rights"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "不得以协议列明的方式使用平台，包括反向工程、开发或训练竞争性模型，以及用于需专业资格的服务。",
+      "source_refs": [
+        "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+      ],
+      "subject": {
+        "artifact": "skill-05470:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "use_is_by_any_method_listed_in_lines_58_to_62"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "平台及其生成内容仅可按非商业、个人研究学习方式使用；商业化使用须事先取得服务提供者及相关权利人书面同意。",
+      "source_refs": [
+        "license:3abbe1834baf66933930f38d426156ad8fb1ebed6fac7de1738609284a7fe505"
+      ],
+      "subject": {
+        "artifact": "skill-05470:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "commercial_use",
+        "provider_and_relevant_rightsholders_gave_prior_written_consent",
+        "personal_research_or_study_purpose"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用下游PolyForm软件，须限于许可允许的目的；以公司利益使用时，须满足员工及独立承包人数和经通胀调整的上一纳税年度收入门槛。",
+      "source_refs": [
+        "license:2f81e317d36f83a199c9fa10bcb250775fd90510303eaeb15aac2d8f0c1fc2d6"
+      ],
+      "subject": {
+        "artifact": "skill-05470:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "downstream_software_use",
+        "for_a_permitted_purpose",
+        "for_benefit_of_your_company",
+        "company_has_fewer_than_100_employees_and_independent_contractors",
+        "company_prior_tax_year_revenue_below_inflation_adjusted_2019_usd_1000000_threshold"
+      ]
+    }
+  ],
+  "limitations": [
+    "上游Kimi协议约束平台服务及其内容；下游PolyForm文本约束软件。对象图仅确认远程调用和链接，未确认同一受约束对象，故不据此认定许可冲突。",
+    "调用事实仅证明上游Use/RemoteInteraction及Link；未证明商业使用、竞争性开发、内容违规、注册认证、分发、下游软件Use或义务履行。proprietary标签不代表另有未提供的授权条款。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "实际使用触发协议生效条件。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "平台使用受注册、实名认证及民事行为能力条件约束。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅说明账户登录方式，未见额外义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生账户转让。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生账户转让。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "当前事实未涉及信息更新或核验。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，不是本案调用者。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "属于服务提供者处置权限，未涉及该活动。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "属于服务提供者训练内容的授权，不是用户义务。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，且免费服务调整未发生。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明输出含深度合成标识或发生修改。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅载明服务权益及提供者调整权。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "实际平台使用受一般行为限制。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明发送或诱导生成条款所列内容。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "平台使用受列明用途禁止条件约束，触发事项未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明向第三方提供服务。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明发生海外使用。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生协议终止。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未涉及服务提供者终止服务。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生协议终止及相关信息留存。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "实际平台使用受非商业个人研究学习限制，商业事实及书面同意未知。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明创建竞争性产品或服务。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "所摘录条款为内容权利归属及用户责任说明，当前未见可映射的独立履行义务。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "内容许可授予服务提供者，不构成本案使用者的额外履行义务。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，相关核查未发生。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，相关公开行为未发生。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，相关内容处置未发生。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，未涉及用户资格发现及处置。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "义务主体为服务提供者，未涉及账户处置。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "若下游软件发生Use，须先同意PolyForm条款；该使用事实未知，保留条件。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "下游软件许可用途及分发、修改范围限制已保留在条件义务中。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明向他人提供软件副本。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明分发软件副本。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明修改下游软件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明创作下游软件衍生作品。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "下游软件Use许可受专利许可未终止条件约束，履行和触发事实未知。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "公司受益使用须满足人数与收入门槛，作为允许目的条件保留。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生转授下游许可证。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生转让下游许可证。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发生相关书面专利侵权主张。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明收到首次书面违规通知。"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-0085-7fd87a61bb55",
+  "status": "SUCCESS",
+  "request_sha256": "5d9ee398c6b26092ce73209866882cea79f80f8384ff94f1cdf9c996357bc798",
+  "analysis": {
+    "case_id": "chain-0085-7fd87a61bb55",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:79caa785ef9222cf"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "uses_Output_to_develop_AI_model",
+                "model_competes_with_OpenAI_products_or_services",
+                "no_Permitted_Exception_applies"
+              ]
+            },
+            "when": "TrainModel"
+          },
+          "S": {
+            "artifact": "chain-0085-7fd87a61bb55:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核实的活动为对 OpenAI 服务的 Use、RemoteInteraction 及 API Link；未证明模型权重转移、分发、修改或训练，因此不据此触发相关分发或训练条款。",
+      "OpenAI 条款 3.3(e) 明确限制使用 Output 开发与 OpenAI 产品和服务竞争的 AI 模型，但有定义的 Permitted Exception。是否适用该限制取决于训练用途、竞争性及例外条件；当前无训练事实。",
+      "OpenAI 服务协议的客户、Order Form、有效版本及适用的 OpenAI Policies 未由事实确定。本地协议文本可支持上述条款分析，但这些适用事项仍未核实。",
+      "下游 MIT 文本的通知义务针对软件副本或实质部分；当前仅确认 API 调用，未确认相关复制或分发，故不将其作为本次已触发义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "TrainModel",
+        "subject": {
+          "artifact": "chain-0085-7fd87a61bb55:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若使用 OpenAI Output 开发 AI 模型，不得开发与 OpenAI 产品或服务竞争的模型，除非适用协议定义的 Permitted Exception。",
+        "trigger": {
+          "all": [
+            "TrainModel",
+            "uses_Output_to_develop_AI_model"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "TrainModel",
+          "uses_Output_to_develop_AI_model",
+          "model_competes_with_OpenAI_products_or_services",
+          "no_Permitted_Exception_applies"
+        ],
+        "source_refs": [
+          "license-text:upstream:79caa785ef9222cf"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 34593,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 989,
+    "output_tokens_details": {
+      "reasoning_tokens": 325
+    },
+    "total_tokens": 35582,
+    "attribution": {
+      "items": {
+        "msg_0371244038ee2cca016af2eae3f63087d2977b2a3170bc3411": {
+          "input_tokens": 32645,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32645,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0371244038ee2cca016af2eaece3f087d2b0ce825a0fdb8092": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 664,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 664
+            }
+          ]
+        },
+        "rs_0371244038ee2cca016af2eaecc81c87d29abd0eb7eb425f97": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 325
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 30.478,
+  "auto_applied": false
+}

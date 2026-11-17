@@ -1,0 +1,109 @@
+{
+  "request_sha256": "90435bc28017483d1060846062960c3a0f656431fee0f91dc61754350ba2b916",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 1,
+        "end_line": 1,
+        "clause_label": "个人非商业使用限制",
+        "activities": [
+          "Use",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "personal_noncommercial_use"
+        },
+        "actor_role": "user",
+        "scope_note": "适用于本项目；仅允许个人非商业使用，商业使用不在该许可范围内。",
+        "condition_explanation": "personal_noncommercial_use means the use is both personal and non-commercial."
+      },
+      {
+        "start_line": 1,
+        "end_line": 1,
+        "clause_label": "遵守适用法律",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "use_occurs",
+          "requires": "comply_with_applicable_local_and_mainland_china_laws_and_regulations"
+        },
+        "actor_role": "user",
+        "scope_note": "使用本项目时，用户须遵守所在地及中国大陆相关法律法规。",
+        "condition_explanation": "use_occurs is the trigger; the user must comply with the applicable laws and regulations in their location and mainland China."
+      },
+      {
+        "start_line": 3,
+        "end_line": 3,
+        "clause_label": "未经备案服务限制",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "all": [
+              "service_is_provided_to_the_public_in_china",
+              "generative_ai_service_is_unfiled"
+            ]
+          }
+        },
+        "actor_role": "user",
+        "scope_note": "禁止向中国地区公众提供未经备案的生成式人工智能服务；文本不说明备案程序或适用范围的具体参数。",
+        "condition_explanation": "The prohibition applies when the service is provided to the public in China and the generative AI service is unfiled."
+      },
+      {
+        "start_line": 5,
+        "end_line": 5,
+        "clause_label": "使用即视为同意；不同意时停止并删除",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "agree_to_all_related_use_terms"
+        },
+        "actor_role": "user (identified in the text as the site operator)",
+        "scope_note": "使用本程序即视为已阅读并同意全部相关使用协议；不同意任何一项时，须立即停止使用并删除本程序的全部相关数据。",
+        "condition_explanation": "agree_to_all_related_use_terms means the user agrees to every related use term. The text does not supply those terms."
+      },
+      {
+        "start_line": 5,
+        "end_line": 5,
+        "clause_label": "不同意时停止使用并删除数据",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "disagrees_with_any_related_use_term",
+          "requires": "stop_using_program_and_delete_all_related_program_data_immediately"
+        },
+        "actor_role": "user (identified in the text as the site operator)",
+        "scope_note": "若不同意任何一项相关使用协议，须立即停止使用并删除本程序的全部相关数据。",
+        "condition_explanation": "disagrees_with_any_related_use_term is triggered by disagreement with at least one related use term; the required actions are immediate cessation and deletion of all related program data."
+      }
+    ],
+    "coverage_notes": [
+      "文本还包含不提供稳定性、商业性、完整性等明示或暗示保证的免责声明及自行承担使用责任的表述；这些内容不构成所列活动的许可、限制或活动相关义务，故未提取。",
+      "本片段提及但未提供“全部相关使用协议”的内容；其具体条款及适用范围无法据此确定，不作补充或推断。"
+    ]
+  }
+}

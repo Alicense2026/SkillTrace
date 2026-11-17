@@ -1,0 +1,114 @@
+{
+  "case_id": "chain-9042-480a21d62ec0",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "按适用订单及付款条款向 OpenAI 或其经销商支付适用费用。",
+      "source_refs": [
+        "license-text:upstream:cfcfd21e4b98f830"
+      ],
+      "subject": {
+        "artifact": "chain-9042-480a21d62ec0:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "applicable_fees_and_payment_due"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若技能目录包含原始许可或来源说明，优先遵守该许可或说明。",
+      "source_refs": [
+        "license-text:downstream:793e3d047b79b356"
+      ],
+      "subject": {
+        "artifact": "chain-9042-480a21d62ec0:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "skill_directory_contains_original_license_or_source_notice",
+      "unresolved_predicates": [
+        "skill_directory_contains_original_license_or_source_notice"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "在商用、再分发或大规模改造时，确认对应技能的来源和许可边界。",
+      "source_refs": [
+        "license-text:downstream:793e3d047b79b356"
+      ],
+      "subject": {
+        "artifact": "chain-9042-480a21d62ec0:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification"
+        ]
+      },
+      "unresolved_predicates": [
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "在商用、再分发或大规模改造时，确认对应技能的来源和许可边界。",
+      "source_refs": [
+        "license-text:downstream:793e3d047b79b356"
+      ],
+      "subject": {
+        "artifact": "chain-9042-480a21d62ec0:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification"
+        ]
+      },
+      "unresolved_predicates": [
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification"
+      ]
+    },
+    {
+      "activity": "Modify",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "在商用、再分发或大规模改造时，确认对应技能的来源和许可边界。",
+      "source_refs": [
+        "license-text:downstream:793e3d047b79b356"
+      ],
+      "subject": {
+        "artifact": "chain-9042-480a21d62ec0:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "commercial_use",
+          "redistribution",
+          "large_scale_modification"
+        ]
+      },
+      "unresolved_predicates": [
+        "commercial_use",
+        "redistribution",
+        "large_scale_modification"
+      ]
+    }
+  ]
+}

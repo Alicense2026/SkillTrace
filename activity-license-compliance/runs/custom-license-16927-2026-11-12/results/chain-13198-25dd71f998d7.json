@@ -1,0 +1,209 @@
+{
+  "case_id": "chain-13198-25dd71f998d7",
+  "source_csv_line": 13199,
+  "row": {
+    "github_repo": "doc2md",
+    "github_url": "https://github.com/KjellKod/doc2md",
+    "github_license": "LicenseRef-doc2md-Desktop",
+    "artifact_name": "gpt-5.6-sol",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: scripts/quest_runtime/orchestration.py:38 ｜ 调用原文: \"planner\": \"gpt-5.6-sol\", ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: orchestration.py DEFAULT_MODELS 与 CODEX_NATIVE_FALLBACK_MODEL 中实际配置的模型 ID",
+    "batch": "6501-7000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "kjellkod/doc2md",
+    "license_label": "LicenseRef-doc2md-Desktop",
+    "sha256": "838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a",
+    "filename": "_licenseref_full/texts/838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a.txt",
+    "evidence_file": "LICENSES/LicenseRef-doc2md-Desktop.txt",
+    "acquisition": "zip:mirror:doc2md-HEAD/LICENSES/LicenseRef-doc2md-Desktop.txt",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-13198-25dd71f998d7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:944e8627d927d51c"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "applicable_service_fees_due"
+          },
+          "S": {
+            "artifact": "chain-13198-25dd71f998d7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:12242dd1da9c7f2b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_is_for_evaluation",
+            "when": "good_faith_evaluation"
+          },
+          "S": {
+            "artifact": "chain-13198-25dd71f998d7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:12242dd1da9c7f2b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "payment_due_paid",
+            "when": "routine_or_ongoing_productive_use_after_evaluation"
+          },
+          "S": {
+            "artifact": "chain-13198-25dd71f998d7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的是 doc2md 对 OpenAI 模型的远程调用及 API 链接；这不证明模型权重转移、软件依赖、修改、分发或两许可约束同一对象。",
+      "OpenAI 摘录仅规定客户支付适用服务费；订单、费用是否到期及支付履行情况未提供。doc2md 的例行或持续生产性使用及是否处于评估阶段也未提供，故不判定违规。",
+      "未发现与已知远程调用直接相关、且可据所给摘录判定的许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "客户应按订单约定支付适用服务费。",
+        "source_refs": [
+          "license-text:upstream:944e8627d927d51c"
+        ],
+        "subject": {
+          "artifact": "chain-13198-25dd71f998d7:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "applicable_service_fees_due",
+        "unresolved_predicates": [
+          "applicable_service_fees_due",
+          "payment_made"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若在评估后将 Official App 用于例行或持续生产性工作，须购买许可证。",
+        "source_refs": [
+          "license-text:downstream:12242dd1da9c7f2b"
+        ],
+        "subject": {
+          "artifact": "chain-13198-25dd71f998d7:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "routine_or_ongoing_productive_use_after_evaluation",
+        "unresolved_predicates": [
+          "routine_or_ongoing_productive_use_after_evaluation",
+          "payment_due_paid"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 31609,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1165,
+    "output_tokens_details": {
+      "reasoning_tokens": 259
+    },
+    "total_tokens": 32774,
+    "attribution": {
+      "items": {
+        "msg_000f9b1bef649e43016af53cef06ec87d082226b02cbb5f6a2": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_000f9b1bef649e43016af53cef06ec87d0872f8e3fd6f56cac": {
+          "input_tokens": 29539,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 29539,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_000f9b1bef649e43016af53cf43be087d0b8d9d6265116ae27": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 906,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 906
+            }
+          ]
+        },
+        "rs_000f9b1bef649e43016af53cf4203887d0833bccade0ce5e44": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 259
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "f059e0cfce82563ee09e4c89a916a29df07a2df3b3d3bdfdcaea4d2d81ad6e2e",
+  "elapsed_seconds": 28.76
+}

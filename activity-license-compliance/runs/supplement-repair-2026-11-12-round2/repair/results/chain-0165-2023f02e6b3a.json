@@ -1,0 +1,151 @@
+{
+  "case_id": "chain-0165-2023f02e6b3a",
+  "input_group_row": 165,
+  "aggregate_count": 5,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "5"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "elapsed_seconds": 24.06,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/license-combination-16927-2026-11-12",
+  "relationship_weight": 5,
+  "original_error": "Invalid obligation values",
+  "analysis": {
+    "case_id": "chain-0165-2023f02e6b3a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_service_components_including_underlying_data_or_models"
+              ]
+            },
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0165-2023f02e6b3a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0165-2023f02e6b3a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "When using the Gemini API Services, do not use them to develop models that compete with the Services (e.g., Gemini API or Google AI Studio), and do not attempt to reverse engineer, extract, or replicate any component of the Services, including underlying data or models such as parameter weights.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "competing_model_development",
+          "reverse_engineering_or_extraction",
+          "replication_of_service_components"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录确认对 Gemini API 的远程调用和使用，但没有证据表明存在模型开发、逆向工程、提取或复制行为；因此不判定违规。Gemini 条款的禁止范围是这些特定行为，并非一般 API 调用。",
+      "Gemini 条款结构化 ASC 将该条款映射为无条件 Use 禁止，范围过宽；此处依据条款摘录保留条件，未将未知行为推定为已发生。",
+      "Elastic-2.0 原文涉及其软件的使用、分发、托管服务等；本记录未证明 Elastic 软件被使用或被提供为托管/管理服务。远程调用 Gemini API 本身不能触发这些限制，也没有证据证明两许可约束同一对象，故不作许可冲突判断。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 28676,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 800,
+    "output_tokens_details": {
+      "reasoning_tokens": 153
+    },
+    "total_tokens": 29476,
+    "attribution": {
+      "items": {
+        "msg_05f60bc090199ef7016af5838ec3fc87d0bb3111d3ac5211de": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05f60bc090199ef7016af5838ec3fc87d0bf50482d932fe8c6": {
+          "input_tokens": 25308,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25308,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05f60bc090199ef7016af58392361087d09f804f743a7a49c7": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 647,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 647
+            }
+          ]
+        },
+        "rs_05f60bc090199ef7016af583921f1487d0b8fa5ab589678a8d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 153
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3328,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

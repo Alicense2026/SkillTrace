@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-1394-1d3fbe20d3c4",
+  "source_csv_line": 1395,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "google/gemma-4-31B",
+    "artifact_url": "https://huggingface.co/google/gemma-4-31B",
+    "artifact_license": "apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: packages/ai-gateway/src/index.ts:201 ｜ 调用原文: const model = 'gemma4-31b'; ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: ai-gateway index.ts 中作为模型路由项",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-1394-1d3fbe20d3c4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f57f42646cbf422b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-1394-1d3fbe20d3c4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "可信记录确认对 google/gemma-4-31B 进行远程调用及 API 链接，但不证明分发、修改、合并或模型权重转移；本次未据此触发分发类条款。",
+      "Apache 原文摘录及结构化规则支持对上游对象的 Use 许可，但该本地许可证来源的 provider_match 为空，无法核实其与记录中 Gemma 资产及具体版本的对应关系。",
+      "下游 LicenseRef-Custom 的摘录约束 Screenpipe Licensed Work；对象图仅确认 API 调用/链接，且上下游共享受约束对象的范围为未知。因此未将下游软件许可条件套用于远程 Gemma 模型调用。"
+    ],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22123,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 751,
+    "output_tokens_details": {
+      "reasoning_tokens": 384
+    },
+    "total_tokens": 22874,
+    "attribution": {
+      "items": {
+        "msg_0487c52483884e13016af585ed798487d093fdfa6310ef4cd1": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0487c52483884e13016af585ed798487d0bc64f4c769947406": {
+          "input_tokens": 20053,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20053,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0487c52483884e13016af585f53b3087d084aba51df2451365": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 367,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 367
+            }
+          ]
+        },
+        "rs_0487c52483884e13016af585f5242487d0b849a639beadbdbe": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 384
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 21.51
+}

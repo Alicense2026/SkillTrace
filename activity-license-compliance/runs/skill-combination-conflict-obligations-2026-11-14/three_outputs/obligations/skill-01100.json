@@ -1,0 +1,999 @@
+{
+  "case_id": "skill-01100",
+  "csv_row": 1101,
+  "source_excel_row": "1527",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01100-1794598691601428000-1.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "开发者使用 DeepSeek Open Platform API 服务须遵守适用条款；被引用的其他适用协议、政策或指南内容未在本地材料中完整提供。",
+      "source_refs": [
+        "license:bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0"
+      ],
+      "subject": {
+        "artifact": "skill-01100:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "compliance_with_applicable_terms"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游修改 AGPL 覆盖程序且该修改版本支持远程网络交互时，修改者须显著向所有远程交互用户提供免费获取该版本对应源码的机会，并按 §13 包含该条款所指 GPL-3 覆盖作品的对应源码。API 服务提供者的模型权重或输出不因此成为该程序源码。",
+      "source_refs": [
+        "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+      ],
+      "subject": {
+        "artifact": "skill-01100:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "modified_covered_program",
+          "modified_version_supports_remote_computer_network_interaction"
+        ]
+      },
+      "unresolved_predicates": [
+        "modified_covered_program",
+        "modified_version_supports_remote_computer_network_interaction"
+      ]
+    }
+  ],
+  "limitations": [
+    "已核对本地 DeepSeek 条款（DeepSeek.txt，SHA-256 bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0）及 AGPL-3.0-or-later 文本（SHA-256 b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18）。",
+    "事实证明下游调用 DeepSeek API 并使用服务；没有证明模型权重、源码或许可材料被复制、修改、合并、分发或再许可。远程 API 调用本身不触发 AGPL §13 的修改程序网络源代码提供义务。该义务仅在下游修改了受覆盖程序且修改版本支持网络交互时适用；两项条件未知。",
+    "DeepSeek 条款中引用的 Terms of Use、其他适用协议及网站公告未完整提供；不推断其未提供内容。其余事实未列明的使用场景、履行状况及条件均为未知。许可对象范围没有证据证明两份许可约束同一对象，故不据此认定许可冲突。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用 API；保留遵守适用条款的条件义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有证据表明已将模型能力整合为下游产品或组合产品。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该义务由 DeepSeek 承担，非本案调用者义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务变更触发事实；且义务主体为 DeepSeek。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账户注册、登录或相关活动事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有 API 密钥保管、分享或客户端暴露事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有条款所述违法、侵权或其他不当使用事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提供或运营面向终端用户的下游系统的事实。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有面向公众提供应用服务或处理个人信息的事实。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无相关安全措施事实；其对象为开发者系统、网络、信息和数据。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提交 Inputs 的事实。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未发现与本案已知调用相关的独立义务；其为适用法律及条款条件。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务 Output 使用事实。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有创建衍生作品事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有训练其他模型事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用 DeepSeek 品牌标识事实。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关品牌呈现或关联事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有品牌条款违约或 DeepSeek 要求公开声明的事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有终端用户访问下游系统及开发者作为个人信息控制者的事实。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用付费服务或预付费触发事实；收费不能单独证明商用。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有付费服务价格或服务调整事实。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有充值事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有退款申请事实。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有充值事实。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有终端用户使用服务或相关不当行为事实。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有终端用户违约造成损失的事实；该责任分配不构成本案活动冲突。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有终端用户争议事实；该争议分配不构成本案活动义务。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有条款所述违法、违规或相关损失事实。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有向终端用户提供服务输出的事实。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关制裁、出口管制或输入材料事实。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修订条款生效且用户不接受的事实。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务变更影响权利的事实；通知主体为 DeepSeek。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该安全保障义务由 DeepSeek 承担。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有用户年龄或监护人同意相关事实。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账户注册事实。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账户注册或使用承诺相关事实。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有注册信息或代他人使用账户事实。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账户或密码保管事实。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有恶意注册账户事实。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转让、借用、出租或提供账户事实。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账户凭据保管或未经授权使用事实。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有停止服务或删除账户事实。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该项为 DeepSeek 在特定条件下保留的权利。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "API 服务使用受第 1.1 条适用条款条件约束，已由同来源的适用条款义务涵盖。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有发布或传播服务输出事实。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有违法或不当目的使用服务的事实。"
+    },
+    {
+      "rule_ref": "U047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该项为 DeepSeek 审查用户行为的权利。"
+    },
+    {
+      "rule_ref": "U048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有生成、表达或推广所列内容事实。"
+    },
+    {
+      "rule_ref": "U049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容或聊天机器人的事实。"
+    },
+    {
+      "rule_ref": "U050",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容或聊天机器人的事实。"
+    },
+    {
+      "rule_ref": "U051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容或聊天机器人的事实。"
+    },
+    {
+      "rule_ref": "U052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容或聊天机器人的事实。"
+    },
+    {
+      "rule_ref": "U053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有生成、表达或推广相关内容事实。"
+    },
+    {
+      "rule_ref": "U054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有生成、表达或推广相关内容事实。"
+    },
+    {
+      "rule_ref": "U055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有涉及未成年人的相关内容事实。"
+    },
+    {
+      "rule_ref": "U056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容事实。"
+    },
+    {
+      "rule_ref": "U057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容事实。"
+    },
+    {
+      "rule_ref": "U058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有冒充他人的相关内容事实。"
+    },
+    {
+      "rule_ref": "U059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有干扰、损害或危及服务及其组件的事实。"
+    },
+    {
+      "rule_ref": "U060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有网络入侵、未经授权访问或漏洞测试事实。"
+    },
+    {
+      "rule_ref": "U061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有扰乱或损害网络正常运行的事实。"
+    },
+    {
+      "rule_ref": "U062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有逆向工程、抓取或复制服务内容事实。"
+    },
+    {
+      "rule_ref": "U063",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有危及服务系统或组件的其他活动事实。"
+    },
+    {
+      "rule_ref": "U064",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有为第 3.6 条所列不当目的使用服务的事实。"
+    },
+    {
+      "rule_ref": "U065",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有违法或侵害第三方权利的目的事实。"
+    },
+    {
+      "rule_ref": "U066",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有危险目的或科学技术伦理违规事实。"
+    },
+    {
+      "rule_ref": "U067",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有知识产权侵害或不正当竞争事实。"
+    },
+    {
+      "rule_ref": "U068",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有复制 DeepSeek 服务事实。"
+    },
+    {
+      "rule_ref": "U069",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转让 DeepSeek 服务事实；远程调用不等于转让。"
+    },
+    {
+      "rule_ref": "U070",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出租 DeepSeek 服务事实。"
+    },
+    {
+      "rule_ref": "U071",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有借出 DeepSeek 服务事实。"
+    },
+    {
+      "rule_ref": "U072",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出售 DeepSeek 服务事实。"
+    },
+    {
+      "rule_ref": "U073",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有再许可 DeepSeek 服务事实。"
+    },
+    {
+      "rule_ref": "U074",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有法律限制或损害 DeepSeek 权益的使用事实。"
+    },
+    {
+      "rule_ref": "U075",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提交 Inputs 事实。"
+    },
+    {
+      "rule_ref": "U076",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提交用户 Inputs 的事实。"
+    },
+    {
+      "rule_ref": "U077",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用服务 Output 事实。"
+    },
+    {
+      "rule_ref": "U078",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有应用 Inputs 或 Outputs 的具体事实。"
+    },
+    {
+      "rule_ref": "U079",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该项为 DeepSeek 处理 Inputs 和 Outputs 的条件性权限。"
+    },
+    {
+      "rule_ref": "U080",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有与输出所链接的第三方资源互动事实；仅存在 API 与服务关系。"
+    },
+    {
+      "rule_ref": "U081",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有平台 AI 标签或修改标签事实。"
+    },
+    {
+      "rule_ref": "U082",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有生产或传播虚假、侵权信息等相关事实。"
+    },
+    {
+      "rule_ref": "U083",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有对自然人产生法律或重大影响的输出使用事实。"
+    },
+    {
+      "rule_ref": "U084",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有品牌标识使用事实。"
+    },
+    {
+      "rule_ref": "U085",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提交反馈事实；该项涉及 DeepSeek 对反馈的使用。"
+    },
+    {
+      "rule_ref": "U086",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该项为 DeepSeek 的保留措施权利。"
+    },
+    {
+      "rule_ref": "U087",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关制裁、出口、再出口或转让事实。"
+    },
+    {
+      "rule_ref": "U088",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提交含受出口许可限制材料的 Inputs 事实。"
+    },
+    {
+      "rule_ref": "U089",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有公告修订条款后继续使用的事实。"
+    },
+    {
+      "rule_ref": "U090",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有公告修订条款且用户不接受的事实。"
+    },
+    {
+      "rule_ref": "U091",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有向终端用户提供或发布服务输出的事实。"
+    },
+    {
+      "rule_ref": "U092",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有第三方索赔、损失或补偿触发事实。"
+    },
+    {
+      "rule_ref": "U093",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "本案已知服务使用；一般适用条款遵守条件已由同来源义务保留，未推断特定出口管制事实。"
+    },
+    {
+      "rule_ref": "U094",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有 DeepSeek 品牌标识使用事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有复制 AGPL 许可文件的事实。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改 AGPL 许可文件的事实；不等于禁止修改程序。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用下游 AGPL 覆盖程序的事实；调用的是上游 API 服务。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有为专属修改或运行设施向他人转交覆盖作品的事实。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有再许可覆盖作品事实；API 调用不是该行为。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交程序原样源代码副本事实。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交原样副本或收取该副本费用事实。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有以源代码形式转交基于程序的作品事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有编译或聚合 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有以目标代码形式转交覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有以物理产品形式转交目标代码事实。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有以物理产品形式转交目标代码事实。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交目标代码副本事实。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有通过指定地点提供目标代码访问事实。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有点对点转交目标代码事实。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交目标代码覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有符合条件的用户产品目标代码转交事实。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有接收者修改或安装作品后请求网络访问的事实。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有依 §6 转交对应源码或提供安装信息事实。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有适用于程序或可分离部分的额外许可事实。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有向覆盖作品添加材料事实。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有向覆盖作品添加经授权材料或附加条款事实。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改或组合 AGPL 覆盖材料事实。"
+    },
+    {
+      "rule_ref": "D027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有按 §7 向覆盖作品添加条款事实。"
+    },
+    {
+      "rule_ref": "D028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传播 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有许可终止或恢复事实。"
+    },
+    {
+      "rule_ref": "D031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有版权持有人通知及补救事实。"
+    },
+    {
+      "rule_ref": "D032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有权利终止且未永久恢复事实。"
+    },
+    {
+      "rule_ref": "D033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有接收或运行 AGPL 程序副本事实。"
+    },
+    {
+      "rule_ref": "D034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有通过点对点接收副本及附带传播事实。"
+    },
+    {
+      "rule_ref": "D035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改 AGPL 覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传播 AGPL 覆盖作品事实；远程调用不等于传播。"
+    },
+    {
+      "rule_ref": "D037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交覆盖作品事实；该自动许可不涉及上游 API。"
+    },
+    {
+      "rule_ref": "D038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有组织实体交易传播作品的事实。"
+    },
+    {
+      "rule_ref": "D040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有实体交易接收者请求对应源码的事实。"
+    },
+    {
+      "rule_ref": "D041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有对 AGPL 授予权利施加进一步限制事实。"
+    },
+    {
+      "rule_ref": "D042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有就 AGPL 授予权利收费事实；服务商收费与该项不同。"
+    },
+    {
+      "rule_ref": "D043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提起相关专利诉讼事实。"
+    },
+    {
+      "rule_ref": "D044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用贡献者版本及相关专利活动事实。"
+    },
+    {
+      "rule_ref": "D045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交覆盖作品并明知依赖专利许可的事实。"
+    },
+    {
+      "rule_ref": "D046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交作品并授予部分接收者专利许可事实。"
+    },
+    {
+      "rule_ref": "D047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有符合所述条件的第三方专利许可安排事实。"
+    },
+    {
+      "rule_ref": "D048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关专利法抗辩事实。"
+    },
+    {
+      "rule_ref": "D049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有无法同时履行许可及其他义务的转交事实。"
+    },
+    {
+      "rule_ref": "D050",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已知存在远程交互，但该条款另要求修改 AGPL 覆盖程序；该条件未知，故保留条件义务，不将普通 API 调用认作触发。"
+    },
+    {
+      "rule_ref": "D051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有将 AGPL 覆盖作品与 GPL-3 作品组合的事实。"
+    },
+    {
+      "rule_ref": "D052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转交所述组合作品事实。"
+    },
+    {
+      "rule_ref": "D053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有程序指定 AGPL 版本或后续版本选择事实。"
+    },
+    {
+      "rule_ref": "D054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有程序未指定 AGPL 版本的事实。"
+    },
+    {
+      "rule_ref": "D055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有代理人选择未来许可版本的事实。"
+    },
+    {
+      "rule_ref": "D056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有选择后续许可版本事实。"
+    },
+    {
+      "rule_ref": "D057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有贡献者专利权范围内制作作品事实。"
+    },
+    {
+      "rule_ref": "D058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出售贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有要约出售贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传播贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提供支持或保修并收费事实。"
+    }
+  ]
+}

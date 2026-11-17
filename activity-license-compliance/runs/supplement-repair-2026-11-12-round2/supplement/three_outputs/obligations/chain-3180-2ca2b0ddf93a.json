@@ -1,0 +1,64 @@
+{
+  "case_id": "chain-3180-2ca2b0ddf93a",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "不得将 Gemini Services 用于开发与 Services 竞争的模型；若用途并非开发竞争模型，该禁止条件不触发。",
+      "source_refs": [
+        "license-text:upstream:e21eb592bca72c62"
+      ],
+      "subject": {
+        "artifact": "chain-3180-2ca2b0ddf93a:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_services_to_develop_models_that_compete_with_the_services"
+        ]
+      },
+      "unresolved_predicates": [
+        "use_services_to_develop_models_that_compete_with_the_services"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如使用 FIM One Software，须限于被许可方组织或其关联方内部目的。",
+      "source_refs": [
+        "license-text:downstream:767494ee5d9f9dc7"
+      ],
+      "subject": {
+        "artifact": "chain-3180-2ca2b0ddf93a:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "downstream_software_use",
+        "internal_purpose"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如在应用中使用 FIM One Software，该应用不得构成竞争产品，且不得构成第3条所限制的 Hosted Service。",
+      "source_refs": [
+        "license-text:downstream:767494ee5d9f9dc7"
+      ],
+      "subject": {
+        "artifact": "chain-3180-2ca2b0ddf93a:downstream",
+        "kind": "CombinedProduct"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "downstream_combined_product_use",
+        "application_does_not_constitute_competing_product",
+        "application_does_not_constitute_hosted_service_restricted_by_section_3"
+      ]
+    }
+  ]
+}

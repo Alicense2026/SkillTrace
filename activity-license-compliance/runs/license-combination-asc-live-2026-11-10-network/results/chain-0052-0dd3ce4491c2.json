@@ -1,0 +1,137 @@
+{
+  "case_id": "chain-0052-0dd3ce4491c2",
+  "status": "SUCCESS",
+  "request_sha256": "29f618ee91f75b60a6b2293370ac6ecd97ccb5f0f399f77062341e6675c1dc78",
+  "analysis": {
+    "case_id": "chain-0052-0dd3ce4491c2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0052-0dd3ce4491c2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:483f0b3ba0aa2ceb"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0052-0dd3ce4491c2:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认下游通过远程服务调用并链接上游 Llama 3.1；不证明下游对象包含、修改或分发 Llama Materials，也不证明两许可约束同一对象。因而未发现可确认的许可冲突。",
+      "MIT 条款摘录涉及 MIT 软件对象；当前事实没有证明对该下游对象实施了 Use，也没有明确其与上游材料的共同受约束范围。",
+      "Llama 3.1 条款摘录足以确认使用权受协议遵守条件约束；相关协议的其他定义、例外及具体履行要求未在摘录中完整呈现。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 Llama Materials 时遵守 Llama 协议。",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "subject": {
+          "artifact": "chain-0052-0dd3ce4491c2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "协议具体履行情况"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23661,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 820,
+    "output_tokens_details": {
+      "reasoning_tokens": 190
+    },
+    "total_tokens": 24481,
+    "attribution": {
+      "items": {
+        "msg_0e30e0c9326f913f016af2f8ece4e087d2862bcea798fc425e": {
+          "input_tokens": 21629,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21629,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0e30e0c9326f913f016af2f8f0ea7487d284f6ea7feb94a0d2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 630,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 630
+            }
+          ]
+        },
+        "rs_0e30e0c9326f913f016af2f8f0d37487d2a12af0454ef0727e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 190
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.808,
+  "auto_applied": false,
+  "aggregate_count": 29
+}

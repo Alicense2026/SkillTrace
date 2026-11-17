@@ -1,0 +1,168 @@
+{
+  "case_id": "chain-0050-16c2ae852cca",
+  "status": "SUCCESS",
+  "request_sha256": "6f11876912845e3bf7580fb568250af01280017b4434d4548cc4a8b1979b9b55",
+  "analysis": {
+    "case_id": "chain-0050-16c2ae852cca",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:4554d130c48ad11f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_in_accordance_with_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0050-16c2ae852cca:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:4554d130c48ad11f"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "uses_output",
+                "develops_competing_ai_model",
+                {
+                  "not": "permitted_exception"
+                }
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0050-16c2ae852cca:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI Services Agreement §2.2及§3.3的相关原文已检查；Agreement称Customer接受条款或使用Services时同意，但本任务未提供具体客户、适用订单/服务条款版本或相关OpenAI政策，故相应义务作为条件性义务保留。",
+      "未发现把下游Apache-2.0许可条件施加于远程调用之OpenAI服务或模型的依据；对象图仅确认API调用/链接，未确认分发、修改、组合或共同许可范围。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该调用受OpenAI Services Agreement约束，须依该协议使用服务，并遵守适用法律及OpenAI Policies；具体适用政策版本取决于有效协议及订单。",
+        "source_refs": [
+          "license-text:upstream:4554d130c48ad11f"
+        ],
+        "subject": {
+          "artifact": "chain-0050-16c2ae852cca:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "agreement_applicability",
+          "applicable_policy_version"
+        ]
+      },
+      {
+        "activity": "TrainModel",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用服务输出开发与OpenAI产品或服务竞争的AI模型，且不适用协议定义的Permitted Exception，则不得进行该用途。",
+        "source_refs": [
+          "license-text:upstream:4554d130c48ad11f"
+        ],
+        "subject": {
+          "artifact": "chain-0050-16c2ae852cca:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "uses_output",
+            "develops_competing_ai_model"
+          ]
+        },
+        "unresolved_predicates": [
+          "uses_output",
+          "develops_competing_ai_model",
+          "permitted_exception"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33147,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1151,
+    "output_tokens_details": {
+      "reasoning_tokens": 299
+    },
+    "total_tokens": 34298,
+    "attribution": {
+      "items": {
+        "msg_037b245c7f79102d016af2e7d8d07087d2b3ea66a7605b7ece": {
+          "input_tokens": 31199,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31199,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_037b245c7f79102d016af2e7deb18487d2ad6b361e4b343eaa": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 852,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 852
+            }
+          ]
+        },
+        "rs_037b245c7f79102d016af2e7de95ec87d29071d15e763384f4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 299
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 38.819,
+  "auto_applied": false
+}

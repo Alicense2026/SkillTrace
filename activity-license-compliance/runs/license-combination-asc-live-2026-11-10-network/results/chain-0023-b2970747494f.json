@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0023-b2970747494f",
+  "status": "SUCCESS",
+  "request_sha256": "c251c74ede16a838a99d7761bd9163c1c1f2d1f1929d888d50f3b9a8b0e83a05",
+  "analysis": {
+    "case_id": "chain-0023-b2970747494f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0023-b2970747494f:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:02dfe77e930a26a7"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0023-b2970747494f:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0023-b2970747494f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用模型体验等相关功能生成的内容仅用于体验模型效果；不得用于其他用途或商业化，不得以任何形式提供给第三方或在第三方平台使用、传播或分发；输入和用户内容应符合摘录中的相关要求。",
+        "trigger": true,
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt",
+          "service_scope_matches_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      }
+    ],
+    "limitations": [
+      "阿里云百炼条款摘录涵盖模型体验等相关功能，但现有事实未明确本次远程调用是否属于该摘录所述服务及生成内容用途；因此保留条件义务，不判定违规。",
+      "Apache-2.0摘录针对下游对象的版权许可；对象图只确认API调用/链接，未确认两份许可约束同一对象，故不据此判定许可冲突。",
+      "未发现条款支持将普通远程调用视为源码或模型权重披露、分发或修改；分发、收费、商用等活动均未证实。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19269,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 876,
+    "output_tokens_details": {
+      "reasoning_tokens": 234
+    },
+    "total_tokens": 20145,
+    "attribution": {
+      "items": {
+        "msg_0b20d4c7970070b5016af2f785879087d296a32d04cc08d090": {
+          "input_tokens": 17237,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17237,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b20d4c7970070b5016af2f78cc63887d290a4ac9ac74ca184": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 642,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 642
+            }
+          ]
+        },
+        "rs_0b20d4c7970070b5016af2f78caaa487d2bba5ad5a21162954": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 234
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.473,
+  "auto_applied": false,
+  "aggregate_count": 103
+}

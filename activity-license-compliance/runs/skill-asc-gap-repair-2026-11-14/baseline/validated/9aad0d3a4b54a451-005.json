@@ -1,0 +1,707 @@
+{
+  "request_sha256": "d30baea2f1cf1d2539006a3908608b486c1b1971d9359eec0f90b7b1e2a55d66",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 104,
+        "end_line": 104,
+        "clause_label": "minimum_age_requirement",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "age_at_least_higher_of_18_or_local_minimum_consent_age"
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §2; accessing Services is subject to the stated minimum age.",
+        "condition_explanation": "local_minimum_consent_age means the minimum age required to consent to use Services in Customer’s location; the required age is whichever is higher, that age or 18.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 105,
+        "end_line": 105,
+        "clause_label": "provide_account_information",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "providing_account_information_to_access_services",
+          "requires": "account_information_is_correct_current_and_complete"
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §2; the Account information duty applies when providing information to access Services. Anthropic may use the information to communicate about Services; communications using Account information satisfy legal-notice requirements.",
+        "condition_explanation": "The information provided must be correct, current, and complete.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide correct, current, and complete Account information.",
+            "actor": "Customer",
+            "object": "Account information",
+            "trigger": "When providing Account information to access Services."
+          }
+        ]
+      },
+      {
+        "start_line": 106,
+        "end_line": 106,
+        "clause_label": "account_credentials_not_shared",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §2; prohibits sharing Account login information, Anthropic API keys, or Account credentials with anyone else and prohibits making the Account available to anyone else.",
+        "condition_explanation": "The prohibition applies to sharing the listed credentials or making the Account available to another person.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not share Account login information, Anthropic API keys, or Account credentials with anyone else, and do not make the Account available to anyone else.",
+            "actor": "Customer",
+            "object": "Anthropic Account and its login information, API keys, and credentials",
+            "trigger": "While holding or using the Account."
+          }
+        ]
+      },
+      {
+        "start_line": 106,
+        "end_line": 106,
+        "clause_label": "report_unauthorized_account_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_becomes_aware_of_unauthorized_account_access",
+          "requires": "notify_anthropic_immediately_by_email_to_support_at_anthropic_dot_com"
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §2; Customer is responsible for activity under its Account and must notify Anthropic immediately upon becoming aware of unauthorized access.",
+        "condition_explanation": "The trigger is Customer becoming aware of unauthorized access to its Account; the specified notice channel is support@anthropic.com and the time requirement is immediately.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Notify Anthropic immediately by emailing support@anthropic.com.",
+            "actor": "Customer",
+            "object": "Unauthorized access to Customer’s Anthropic Account",
+            "trigger": "When Customer becomes aware of unauthorized Account access."
+          }
+        ]
+      },
+      {
+        "start_line": 108,
+        "end_line": 108,
+        "clause_label": "account_linking_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "anthropic_links_account_using_organization_owned_email_to_enterprise_account",
+          "requires": {
+            "any": [
+              "anthropic_provides_notice_before_linking",
+              "organization_is_responsible_for_notifying_customer",
+              "organization_has_already_informed_customer_it_may_monitor_and_control_account"
+            ]
+          }
+        },
+        "actor_role": "Anthropic",
+        "scope_note": "Commercial Terms §2; applies to linking an Account associated with an organization-owned email to that organization’s enterprise account. The latter two alternatives excuse Anthropic from providing additional notice.",
+        "condition_explanation": "Anthropic provides notice before linking unless the organization is responsible for notifying Customer or has already informed Customer that it may monitor and control the Account.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide notice to Customer before linking the Account to the organization’s enterprise account, unless an express exception applies.",
+            "actor": "Anthropic",
+            "object": "Customer’s Account and its linkage to the organization’s enterprise account",
+            "trigger": "Before linking, unless the organization is responsible for notifying Customer or has already informed Customer that it may monitor and control the Account."
+          }
+        ]
+      },
+      {
+        "start_line": 109,
+        "end_line": 109,
+        "clause_label": "evaluation_noncommercial_only",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "using_services_for_evaluation_purposes",
+          "requires": true
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §2; evaluation Services may be limited in time or functionality. The restriction applies to evaluation use, not all Service use.",
+        "condition_explanation": "Evaluation use is for personal, non-commercial use only; commercial evaluation use is prohibited.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Services for evaluation purposes commercially.",
+            "actor": "Customer",
+            "object": "Anthropic Services used for evaluation",
+            "trigger": "Whenever using Services for evaluation purposes."
+          }
+        ]
+      },
+      {
+        "start_line": 113,
+        "end_line": 113,
+        "clause_label": "service_use_compliance_condition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "comply_with_commercial_terms",
+              "comply_with_acceptable_use_policy",
+              "comply_with_supported_regions_policy",
+              "comply_with_applicable_posted_guidelines_and_supplemental_terms"
+            ]
+          }
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §3; access to and use of Anthropic Services is subject to the Terms, Acceptable Use Policy, Supported Regions Policy, and applicable guidelines or supplemental terms posted on Services. Customer is responsible for all activity under its access account.",
+        "condition_explanation": "The incorporated policies and posted terms are not provided in full, so their specific rules cannot be enumerated. Each listed compliance condition applies to access to or use of Services.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the Commercial Terms, Acceptable Use Policy, Supported Regions Policy, and applicable guidelines or supplemental terms posted on Services.",
+            "actor": "Customer",
+            "object": "Access to and use of Anthropic Services",
+            "trigger": "Whenever accessing or using Services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Take responsibility for all activity under the account used to access Services.",
+            "actor": "Customer",
+            "object": "Activity under the account through which Customer accesses Services",
+            "trigger": "Whenever that account is used to access Services."
+          }
+        ]
+      },
+      {
+        "start_line": 115,
+        "end_line": 115,
+        "clause_label": "unlawful_service_use_prohibited",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "manner_of_service_access_or_use_violates_applicable_law_or_regulation",
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; applies to Customer’s access or use, including helping another person access or use Services, and expressly includes export-law violations as an example.",
+        "condition_explanation": "The prohibition applies when the manner of access or use violates applicable law or regulation.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use, or help another person access or use, Services in a manner that violates applicable law or regulation.",
+            "actor": "Customer",
+            "object": "Anthropic Services",
+            "trigger": "Whenever the manner of access or use would violate applicable law or regulation."
+          }
+        ]
+      },
+      {
+        "start_line": 116,
+        "end_line": 116,
+        "clause_label": "competitive_development_and_resale_prohibited",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "access_or_use_is_to_develop_competing_product_or_service_or_resell_services",
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; includes developing or training AI or machine-learning algorithms or models and reselling Services as stated examples within the competitive-development prohibition.",
+        "condition_explanation": "Prohibited purposes include developing a product or service that competes with Anthropic Services, including the specified AI/ML development or training, and reselling Services.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access or use, or help another person access or use, Services to develop products or services that compete with Services, including developing or training AI or machine-learning algorithms or models, or to resell Services.",
+            "actor": "Customer",
+            "object": "Anthropic Services",
+            "trigger": "Whenever access or use is for a stated competitive-development or resale purpose."
+          }
+        ]
+      },
+      {
+        "start_line": 117,
+        "end_line": 117,
+        "clause_label": "reverse_engineering_prohibited_except_when_law_forbids_restriction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "decompile_reverse_engineer_disassemble_or_otherwise_reduce_services_to_human_readable_form",
+          "requires": "applicable_law_does_not_prohibit_these_restrictions"
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; the restriction does not apply when applicable law prohibits these restrictions.",
+        "condition_explanation": "Applicable law prohibiting the restriction is the express exception; the excerpt does not specify the laws or jurisdictions that may do so.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not decompile, reverse engineer, disassemble, or otherwise reduce Services to human-readable form.",
+            "actor": "Customer",
+            "object": "Anthropic Services",
+            "trigger": "When performing the listed acts, except when applicable law prohibits these restrictions."
+          }
+        ]
+      },
+      {
+        "start_line": 118,
+        "end_line": 118,
+        "clause_label": "service_data_harvesting_restricted",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "crawl_scrape_or_otherwise_harvest_data_or_information_from_services",
+          "requires": "activity_is_not_permitted_under_terms"
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; crawling, scraping, or harvesting from Services is prohibited except as permitted under the Terms.",
+        "condition_explanation": "The exception depends on permission under the Terms; the supplied excerpt does not specify which harvesting is permitted.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not crawl, scrape, or otherwise harvest data or information from Services except as permitted under the Terms.",
+            "actor": "Customer",
+            "object": "Data or information from Anthropic Services",
+            "trigger": "Whenever crawling, scraping, or harvesting, except to the extent permitted under the Terms."
+          }
+        ]
+      },
+      {
+        "start_line": 119,
+        "end_line": 119,
+        "clause_label": "unauthorized_access_or_deception_prohibited",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "use_of_services_materials_or_actions_is_to_obtain_unauthorized_access_or_deceive_a_person",
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; covers use of Services, Materials, or Actions for either stated purpose.",
+        "condition_explanation": "The prohibition applies when the purpose is obtaining unauthorized access to any system or information, or deceiving any person.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Services, Materials, or Actions to obtain unauthorized access to any system or information, or to deceive any person.",
+            "actor": "Customer",
+            "object": "Anthropic Services, Materials, or Actions",
+            "trigger": "Whenever the use is for obtaining unauthorized access or deceiving a person."
+          }
+        ]
+      },
+      {
+        "start_line": 120,
+        "end_line": 120,
+        "clause_label": "rights_violation_prohibited",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "use_infringes_misappropriates_or_violates_intellectual_property_or_other_legal_rights",
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; includes publicity and privacy rights.",
+        "condition_explanation": "The prohibition covers infringement, misappropriation, or violation of intellectual-property or other legal rights.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not infringe, misappropriate, or violate intellectual-property or other legal rights, including rights of publicity or privacy.",
+            "actor": "Customer",
+            "object": "Rights affected by the Customer’s use of Services",
+            "trigger": "Whenever use would infringe, misappropriate, or violate such rights."
+          }
+        ]
+      },
+      {
+        "start_line": 121,
+        "end_line": 121,
+        "clause_label": "automated_access_restricted",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "access_services_through_automated_or_non_human_means",
+          "requires": {
+            "all": [
+              {
+                "not": "accessing_via_anthropic_api_key"
+              },
+              {
+                "not": "otherwise_explicitly_permitted"
+              }
+            ]
+          }
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; automated or non-human access is excepted when via an Anthropic API Key or otherwise explicitly permitted.",
+        "condition_explanation": "Either API-key access or other explicit permission suffices as an exception; both exceptions need not apply.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not access Services through automated or non-human means, including a bot or script, unless accessing via an Anthropic API Key or otherwise explicitly permitted.",
+            "actor": "Customer",
+            "object": "Anthropic Services",
+            "trigger": "Whenever using automated or non-human access, except when either stated exception applies."
+          }
+        ]
+      },
+      {
+        "start_line": 122,
+        "end_line": 122,
+        "clause_label": "restrictive_or_harmful_conduct_prohibited",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "any": [
+              "conduct_restricts_or_inhibits_another_person_from_using_or_enjoying_services",
+              "anthropic_reasonably_believes_conduct_exposes_anthropic_user_affiliate_or_other_third_party_to_liability_damages_or_detriment"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; the second basis includes reputational harms and depends on Anthropic’s reasonable belief; the first concerns conduct that restricts or inhibits another person’s use or enjoyment.",
+        "condition_explanation": "Either stated basis triggers the prohibition: actual restriction or inhibition, or Anthropic’s reasonable belief that conduct exposes a listed party to liability, damages, or detriment.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not engage in conduct that restricts or inhibits another person from using or enjoying Services, or that Anthropic reasonably believes exposes Anthropic, a user, affiliate, or other third party to liability, damages, or detriment.",
+            "actor": "Customer",
+            "object": "Anthropic Services and affected persons or entities",
+            "trigger": "Whenever either stated basis applies."
+          }
+        ]
+      },
+      {
+        "start_line": 123,
+        "end_line": 123,
+        "clause_label": "specified_financial_reliance_prohibited",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "rely_on_services_materials_or_actions_to_trade_securities_or_provide_or_receive_advice_about_specified_financial_products_or_services",
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; covers buying or selling securities and providing or receiving advice about securities, commodities, derivatives, or other financial products or services.",
+        "condition_explanation": "The prohibition is on relying on Services, Materials, or Actions for the listed transactions or advice.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not rely on Services, Materials, or Actions to buy or sell securities or to provide or receive advice about securities, commodities, derivatives, or other financial products or services.",
+            "actor": "Customer",
+            "object": "Anthropic Services, Materials, or Actions",
+            "trigger": "Whenever relying on them for a stated transaction or advice."
+          }
+        ]
+      },
+      {
+        "start_line": 124,
+        "end_line": 124,
+        "clause_label": "service_abuse_harm_interference_disruption_prohibited",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "conduct_abuses_harms_interferes_with_or_disrupts_services",
+          "requires": true
+        },
+        "actor_role": "customer_or_assisted_person",
+        "scope_note": "Commercial Terms §3; examples include introducing viruses or malware, spamming or DDoSing Services, and bypassing systems or protective measures.",
+        "condition_explanation": "The prohibition covers the stated conduct and is not limited to the examples.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not abuse, harm, interfere with, or disrupt Services, including by introducing viruses or malware, spamming or DDoSing, or bypassing systems or protective measures.",
+            "actor": "Customer",
+            "object": "Anthropic Services and their systems or protective measures",
+            "trigger": "Whenever the conduct abuses, harms, interferes with, or disrupts Services."
+          }
+        ]
+      },
+      {
+        "start_line": 128,
+        "end_line": 128,
+        "clause_label": "input_rights_and_nonviolation_representations",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "submitting_inputs_or_directing_claude_to_take_actions",
+          "requires": {
+            "all": [
+              "customer_has_rights_licenses_and_permissions_necessary_for_anthropic_to_process_inputs_and_provide_services",
+              "submission_of_inputs_and_directed_actions_do_not_violate_terms_acceptable_use_policy_or_applicable_law"
+            ]
+          }
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §4; Customer represents and warrants necessary rights, licenses, and permissions for processing Inputs and providing Services, including third-party integration, sharing Materials at Customer’s direction, and taking Actions. Customer also represents and warrants that submissions and directed Actions do not violate the Terms, Acceptable Use Policy, or applicable laws or regulations.",
+        "condition_explanation": "The rights representation concerns permissions necessary for Anthropic’s processing and service provision. The non-violation representation concerns submitting Inputs or directing Claude to take Actions.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Have all rights, licenses, and permissions necessary for Anthropic to process submitted Inputs under the Terms and provide Services, including where relevant third-party integration, sharing Materials at Customer’s direction, and taking Actions.",
+            "actor": "Customer",
+            "object": "Inputs submitted to Services and Actions Customer directs Claude to take",
+            "trigger": "When submitting Inputs or directing Claude to take Actions."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure that submitting Inputs or directing Claude to take Actions does not violate the Terms, Acceptable Use Policy, or laws or regulations applicable to those Inputs or Actions.",
+            "actor": "Customer",
+            "object": "Submitted Inputs and directed Actions",
+            "trigger": "When submitting Inputs or directing Claude to take Actions."
+          }
+        ]
+      },
+      {
+        "start_line": 128,
+        "end_line": 128,
+        "clause_label": "input_rights_retained",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §4; as between Customer and Anthropic, and to the extent permitted by applicable law, Customer retains any right, title, and interest it has in submitted Inputs. This preserves existing rights and does not grant rights Customer does not have.",
+        "condition_explanation": "The statement concerns only rights Customer has in submitted Inputs and is qualified by applicable law.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 128,
+        "end_line": 128,
+        "clause_label": "output_rights_assignment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_complies_with_terms",
+          "requires": "anthropic_assigns_to_customer_its_right_title_and_interest_if_any_in_outputs"
+        },
+        "actor_role": "customer",
+        "scope_note": "Commercial Terms §4; Anthropic assigns its right, title, and interest, if any, in Outputs to Customer, subject to Customer’s compliance with the Terms. Outputs are not stated to be derivatives of Inputs.",
+        "condition_explanation": "The assignment is conditioned on Customer’s compliance with the Terms and limited to Anthropic’s interest, if any.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 135,
+        "end_line": 135,
+        "clause_label": "materials_use_and_training_opt_out",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              {
+                "not": "customer_opted_out_of_training_through_account_settings"
+              },
+              {
+                "all": [
+                  "customer_opted_out_of_training_through_account_settings",
+                  "materials_provided_as_feedback"
+                ]
+              },
+              {
+                "all": [
+                  "customer_opted_out_of_training_through_account_settings",
+                  "materials_flagged_for_safety_review_to_improve_harmful_content_detection_enforce_policies_or_advance_safety_research"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "Anthropic",
+        "scope_note": "Commercial Terms §4; Materials are Inputs and Outputs collectively under this section. Anthropic may use Materials to provide, maintain, and improve Services and develop other products and services, including training models. Opting out through account settings affects training; training remains included when Materials are provided as Feedback or flagged for the stated safety-review purposes.",
+        "condition_explanation": "Training is included absent opt-out. After opt-out, training remains permitted for Feedback or Materials flagged for safety review to improve harmful-content detection, enforce policies, or advance safety research. The excerpt does not state that opt-out bars other listed Materials uses.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 138,
+        "end_line": 138,
+        "clause_label": "feedback_use_and_conversation_storage",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_provides_feedback_or_rates_output_in_response_to_input",
+          "requires": "anthropic_may_use_feedback_as_it_chooses_without_payment_or_other_obligation_to_customer_and_rating_stores_related_conversation_as_feedback"
+        },
+        "actor_role": "Anthropic",
+        "scope_note": "Commercial Terms §5; Customer has no obligation to provide Feedback. If Customer rates an Output in response to an Input, the related conversation is stored as part of Feedback. Anthropic may use provided Feedback however it chooses without payment or other obligation to Customer.",
+        "condition_explanation": "Feedback is voluntary. The use permission applies if Feedback is provided; a rating triggers storage of the related conversation as Feedback.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Acceptable Use Policy, Supported Regions Policy, and posted guidelines or supplemental terms incorporated by §3 are not supplied in full; their detailed rules cannot be extracted.",
+      "Lines 107 and 110 describe account closure and possible additional terms but do not expressly require Customer to close an account or accept additional terms.",
+      "The definition of Inputs, Outputs, Actions, and Materials is context for §4; no additional grant is inferred from the definitions.",
+      "Lines 129–134 are accuracy and reliability cautions and do not impose an operative rule in this activity-constraint extraction.",
+      "The training opt-out has the two express exceptions stated in line 135; no additional opt-out effect is inferred."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0017",
+        "status": "MODELED",
+        "clause_labels": [
+          "minimum_age_requirement",
+          "provide_account_information",
+          "account_credentials_not_shared",
+          "report_unauthorized_account_access",
+          "account_linking_notice",
+          "evaluation_noncommercial_only"
+        ],
+        "reason": "Models the minimum-age condition, Account information duty, credential and Account-sharing prohibitions, unauthorized-access notification, enterprise-linking notice and exceptions, and evaluation-use limitation. Lines 107 and 110 do not impose an independent duty to close an Account or accept additional terms."
+      },
+      {
+        "unit_id": "P0018",
+        "status": "MODELED",
+        "clause_labels": [
+          "service_use_compliance_condition",
+          "unlawful_service_use_prohibited",
+          "competitive_development_and_resale_prohibited",
+          "reverse_engineering_prohibited_except_when_law_forbids_restriction",
+          "service_data_harvesting_restricted",
+          "unauthorized_access_or_deception_prohibited",
+          "rights_violation_prohibited",
+          "automated_access_restricted",
+          "restrictive_or_harmful_conduct_prohibited",
+          "specified_financial_reliance_prohibited",
+          "service_abuse_harm_interference_disruption_prohibited"
+        ],
+        "reason": "Models the general compliance condition and each distinct prohibited-use category, including the express exceptions and qualifications."
+      },
+      {
+        "unit_id": "P0019",
+        "status": "MODELED",
+        "clause_labels": [
+          "input_rights_and_nonviolation_representations",
+          "input_rights_retained",
+          "output_rights_assignment",
+          "materials_use_and_training_opt_out"
+        ],
+        "reason": "Models Customer’s rights and non-violation representations, retained Input rights, conditional Output assignment, and Materials-use permission with opt-out and both training exceptions. Lines 129–134 are cautions rather than operative behavioral duties."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "MODELED",
+        "clause_labels": [
+          "feedback_use_and_conversation_storage"
+        ],
+        "reason": "Models voluntary Feedback, Anthropic’s permission to use Feedback without payment or other obligation, and storage of the related conversation when an Output is rated in response to an Input."
+      }
+    ]
+  },
+  "attempt": 2
+}

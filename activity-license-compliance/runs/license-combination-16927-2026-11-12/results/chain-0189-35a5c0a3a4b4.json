@@ -1,0 +1,209 @@
+{
+  "case_id": "chain-0189-35a5c0a3a4b4",
+  "input_group_row": 189,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "百度智能云用户服务协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0189-35a5c0a3a4b4",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "service_opened_and_applicable_order_terms_followed",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0189-35a5c0a3a4b4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not_explicitly_authorized_elsewhere",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0189-35a5c0a3a4b4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a439b0693b029d6b"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "prominently_offer_corresponding_source_at_no_charge_from_a_network_server",
+            "when": {
+              "all": [
+                "modified_agpl_program",
+                "version_supports_remote_interaction",
+                "users_interact_with_version_remotely"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0189-35a5c0a3a4b4:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "RemoteInteraction",
+        "figure_case_refs": [],
+        "reason": "A=RemoteInteraction/S=百度智能云上游原始服务；条款要求服务已开通并遵循适用订单条件，同时禁止未被明确授权的远程交互；可信记录确认发生远程服务调用，但未提供开通、订单或相关授权事实，因此不能认定违反。来源：百度智能云协议L343-L346、L507-L509及记录row 188。",
+        "source_refs": [
+          "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/188",
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "status": "OBLIGATIONS_OPEN"
+      },
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A=ProvideSource/S=下游AGPL修改版；AGPL第13节仅在修改了程序且该版本支持远程交互、用户远程交互时要求提供对应源码机会。记录明确为“修改不适用”，故该修改版源码提供触发条件未成立；普通远程调用本身不触发此义务。",
+        "source_refs": [
+          "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/188",
+          "license-text:downstream:a439b0693b029d6b"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "仅在服务已开通且遵循适用订单条款的条件下使用百度智能云服务；确认远程交互已由适用条款明确授权。",
+        "source_refs": [
+          "license-text:upstream:aa3cf9944401c982"
+        ],
+        "subject": {
+          "artifact": "chain-0189-35a5c0a3a4b4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "service_opened",
+          "applicable_order_terms_followed",
+          "explicit_authorization_for_remote_interaction"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图仅确认下游至上游的API链接和远程调用，DEPENDENCY及范围共用状态未知；不能据此认定两项许可约束同一对象，也不据此认定许可证冲突。",
+      "AGPL第13节摘录针对修改版本；本记录称代码修改不适用，因此未发现该网络源码提供义务的当前触发。"
+    ],
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 53126,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1528,
+    "output_tokens_details": {
+      "reasoning_tokens": 391
+    },
+    "total_tokens": 54654,
+    "attribution": {
+      "items": {
+        "msg_0c41a75463e8309d016af52fc51c1487d08e336ea60945a836": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c41a75463e8309d016af52fc51c1487d0a1ae787fb3095310": {
+          "input_tokens": 51056,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 51056,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c41a75463e8309d016af52fccfb3887d094dd2b5819e0f1c4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1137,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1137
+            }
+          ]
+        },
+        "rs_0c41a75463e8309d016af52fcb984087d0817332219eadfed2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 320
+        },
+        "rs_0c41a75463e8309d016af52fcce40c87d093266e6b56efbf2b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 71
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "eb8361bdfc120fe37f331bd503de941b8aefb82391fffee88b35abfeaf507e43",
+  "elapsed_seconds": 36.04
+}

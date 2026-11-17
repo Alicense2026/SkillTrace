@@ -1,0 +1,41 @@
+{
+  "case_id": "chain-14461-c6999a2cc311",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游材料时满足 include_copyright_and_permission_notice；该通知条件是否适用于本次仅有的远程调用，需以实际复制或涉及软件实质部分等触发事实为准。",
+      "source_refs": [
+        "license-text:upstream:d45e1fffe2074206"
+      ],
+      "subject": {
+        "artifact": "chain-14461-c6999a2cc311:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_involved",
+        "include_copyright_and_permission_notice"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用下游 YaSwarm 软件，须先取得版权持有人的书面授权。",
+      "source_refs": [
+        "license-text:downstream:505201be299cac23"
+      ],
+      "subject": {
+        "artifact": "chain-14461-c6999a2cc311:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "prior_written_authorization_from_copyright_holder"
+      ]
+    }
+  ]
+}

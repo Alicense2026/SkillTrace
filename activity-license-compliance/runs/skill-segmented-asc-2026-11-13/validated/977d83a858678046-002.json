@@ -1,0 +1,405 @@
+{
+  "request_sha256": "e23d2c10d8ee907702c850514a91c75445862ba0d19eb677c81d75851e06cdb8",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 108,
+        "end_line": 110,
+        "clause_label": "service_use_rules",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "comply_with_applicable_law",
+              "comply_with_service_use_rules",
+              "comply_with_security_control_rules",
+              "comply_with_product_documentation_and_operating_guidance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §§3.2.1–3.2.3; applies to use of Alibaba Cloud products and services, including API or integrated access. Referenced rules, documentation, and guidance are not supplied.",
+        "condition_explanation": "The predicates require compliance with applicable law; Alibaba Cloud’s Service Use Rules and Security Control Rules; and applicable product/service descriptions, technical specifications, processes, operation documents, and updates. For API or similar integration access, the user must review applicable material periodically and/or before purchase.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable laws, the Service Use Rules, Security Control Rules, and applicable product/service operating guidance.",
+            "actor": "User/licensee",
+            "object": "Alibaba Cloud service use",
+            "trigger": "Whenever using an Alibaba Cloud product or service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Review applicable website product/service guidance and updates periodically and/or before purchasing API or similarly integrated services.",
+            "actor": "User/licensee",
+            "object": "Applicable product/service guidance",
+            "trigger": "When opening a product or service through an API or similar system connection or integration; review periodically and/or before purchase."
+          }
+        ]
+      },
+      {
+        "start_line": 111,
+        "end_line": 111,
+        "clause_label": "resource_metadata_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "authorized_resource_center_metadata_access_for_search_display_and_billing"
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §3.2.4. The user authorizes Resource Center, through a service-linked role, to access cloud products and obtain resource-management metadata for console search/display and billing display.",
+        "condition_explanation": "The predicate covers access to cloud-product resource-management metadata, including resource IDs, specifications, operating status, and cloud-service-derived descriptive data, for the stated Resource Center functions.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 113,
+        "end_line": 115,
+        "clause_label": "provider_support_duty",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "during_the_service_term",
+          "requires": true
+        },
+        "actor_role": "Alibaba Cloud service provider",
+        "scope_note": "General terms §3.3. Alibaba Cloud undertakes to provide 24/7 telephone and online-ticket consultation; fault support is for faults not caused by user operation and excludes user-caused, force-majeure, and other matters outside Alibaba Cloud’s control.",
+        "condition_explanation": "Consultation is provided during the service term. The stated exclusions limit the circumstances in which timely fault support is promised.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide 24/7 telephone and online-ticket consultation and timely support for qualifying faults.",
+            "actor": "Alibaba Cloud",
+            "object": "Customer service and fault-support service",
+            "trigger": "During the service term; fault support applies to faults not caused by user operation and excludes force majeure and other matters outside Alibaba Cloud’s control."
+          }
+        ]
+      },
+      {
+        "start_line": 119,
+        "end_line": 124,
+        "clause_label": "paid_service_use_and_fees",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "service_is_open_and_within_its_term_or_entitlement",
+          "requires": {
+            "all": [
+              "pay_applicable_service_fees",
+              "maintain_sufficient_account_balance_for_postpaid_service"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §§3.4.1–3.4.2. Covers prepaid and postpaid services. Prepaid term and resource-package expiry/consumption rules apply; continued use after package exhaustion or expiry without a new package may be treated as postpaid and charged. Statutory or separately agreed exceptions apply to the package-use priority rule.",
+        "condition_explanation": "The predicates require payment under the applicable pricing arrangement and, for postpaid use, sufficient account balance. A resource package expires at the earlier of its term ending or its services being exhausted; unused quantity is forfeited at term end. Continued use after exhaustion or expiry without a replacement package may incur postpaid charges.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the applicable charges for service use, including postpaid charges incurred through continued use after a resource package is exhausted or expires.",
+            "actor": "User/licensee",
+            "object": "Alibaba Cloud service",
+            "trigger": "When using a paid service, including continued use after resource-package exhaustion or expiry without purchasing another package."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Maintain sufficient account balance to continue using a postpaid service.",
+            "actor": "User/licensee",
+            "object": "Account balance for postpaid service",
+            "trigger": "While using a postpaid service, unless another agreement applies or other amounts remain unpaid."
+          }
+        ]
+      },
+      {
+        "start_line": 125,
+        "end_line": 132,
+        "clause_label": "provider_service_changes_and_termination",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "service_term_is_active",
+          "requires": "applicable_notice_and_refund_conditions_for_provider_termination_or_change"
+        },
+        "actor_role": "Alibaba Cloud service provider",
+        "scope_note": "General terms §§3.4.3–3.4.5. Alibaba Cloud may perform maintenance and may modify or terminate services. Early termination grounds include mutual agreement, serious user breach, specified network-security harm, uncontrollable circumstances or legal impediment, and service discontinuation with advance notice.",
+        "condition_explanation": "For maintenance-related short interruptions, Alibaba Cloud must give advance notice within a reasonable time. Before discontinuing a service or function under §3.4.4(5), it must give 30 days’ notice and refund prepaid, unconsumed amounts. For other changes or discontinuation under §3.4.5, it will use best efforts to give advance notice by one or more stated channels; no fixed period is specified.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give reasonable advance notice of maintenance that may briefly interrupt or suspend service.",
+            "actor": "Alibaba Cloud",
+            "object": "Service maintenance or interruption",
+            "trigger": "When planned upgrade, maintenance, or optimization may cause a short interruption or suspension."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Give notice 30 days before terminating a service or function under §3.4.4(5), and refund prepaid amounts not consumed.",
+            "actor": "Alibaba Cloud",
+            "object": "Terminated service or function and prepaid unconsumed fees",
+            "trigger": "Before termination of a service or function under §3.4.4(5)."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Use best efforts to give advance notice of a service change or termination by one or more stated notice channels.",
+            "actor": "Alibaba Cloud",
+            "object": "Changed or terminated service",
+            "trigger": "Before a service change or termination under §3.4.5; no specific notice period is stated."
+          }
+        ]
+      },
+      {
+        "start_line": 134,
+        "end_line": 154,
+        "clause_label": "service_purchase_and_payment_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "service_is_purchased_or_used",
+          "requires": {
+            "all": [
+              "pay_service_fees_under_applicable_pricing_and_billing_terms",
+              "use_supported_payment_method_and_matching_payer_identity",
+              "pay_undisputed_billed_amounts_during_dispute"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §§4.1–4.10. Amounts, billing standards, refund/withdrawal charges, and other order-specific terms depend on the relevant purchase page, order, or published billing policy. Includes the 7-day order hold for unpaid prepaid orders, renewal payment timing, and limited invoice-document duties.",
+        "condition_explanation": "The user may choose an available prepaid or postpaid service and must pay the applicable stated price. An unpaid prepaid order expires after 7 days or earlier if service sells out. Renewal for a further term is due at least 7 days before expiry. Billing objections generally must be raised within 5 working days; undisputed amounts are payable while a dispute is resolved. Invoice return or red-invoice documentation is required only in the stated tax-refund/reissue circumstances.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the service fees applicable under the purchase page, order, and then-effective billing rules.",
+            "actor": "User/licensee",
+            "object": "Purchased or used Alibaba Cloud service",
+            "trigger": "Upon purchase or use when payment is due under the applicable prepaid or postpaid arrangement."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Use a supported payment method, with payer identity matching the registered or verified account name.",
+            "actor": "User/licensee",
+            "object": "Service payment",
+            "trigger": "Whenever paying for a service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the undisputed portion of a bill while a timely billing objection is being resolved.",
+            "actor": "User/licensee",
+            "object": "Undisputed billed amount",
+            "trigger": "When the user disputes a bill within 5 working days after receipt, unless otherwise agreed."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay renewal fees at least 7 days before the service term expires when the parties wish to continue the service.",
+            "actor": "User/licensee",
+            "object": "Service renewal",
+            "trigger": "When both parties wish to continue a service after its term expires."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Return the issued invoice or provide necessary red-invoice documentation, as applicable, for a tax-required invoice reissue or red invoice.",
+            "actor": "User/licensee",
+            "object": "Invoice and supporting tax documents",
+            "trigger": "When a sales allowance, return, or other tax-required reissue/red-invoice event occurs; return the invoice if issued in the same month and not tax-certified, or provide required documentation if tax-certified or returned after the issue month; no documents are required if the invoice was not issued or delivered."
+          }
+        ]
+      },
+      {
+        "start_line": 145,
+        "end_line": 145,
+        "clause_label": "continued_use_after_free_period",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "free_period_or_free_quota_has_ended",
+          "requires": "pay_then_effective_published_fees_for_subsequent_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §4.5. Free use is limited to the stated free period or quota; continued use after charging begins is subject to the then-effective policy. The separate preview-product terms are incorporated but not supplied.",
+        "condition_explanation": "Alibaba Cloud must publish or notify the charging policy at least 10 calendar days before fees begin. Continued use once the charging period starts triggers payment under that policy.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay fees under the then-effective charging policy for service use after the free period or quota ends.",
+            "actor": "User/licensee",
+            "object": "Service used after the free period or quota",
+            "trigger": "The charging period has begun and the user continues using the service."
+          }
+        ]
+      },
+      {
+        "start_line": 144,
+        "end_line": 144,
+        "clause_label": "promotion_confidentiality",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_receives_or_uses_a_promotional_offer",
+          "requires": "keep_offer_terms_confidential"
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §4.4.4. Confidentiality attaches to promotional activities or policies associated with the user’s purchased service. Breach may result in cancellation of the offer and possible service suspension or termination.",
+        "condition_explanation": "The predicate applies to the promotional activity or policy for the purchased service; the clause states no specific confidentiality exception.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Keep confidential the promotional activity or policy applicable to the purchased service.",
+            "actor": "User/licensee",
+            "object": "Promotional offer or policy",
+            "trigger": "When the user receives or benefits from a promotional activity or policy for a purchased service."
+          }
+        ]
+      },
+      {
+        "start_line": 156,
+        "end_line": 161,
+        "clause_label": "fees_arrears_and_data_retention",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "service_is_used_or_user_business_data_is_stored",
+          "requires": "pay_fees_timely_and_in_full"
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §§5.1–5.6. Alibaba Cloud may withhold, suspend, or terminate service for unpaid amounts. On termination for arrears, user business data is stored only for the applicable buffer period, subject to law, regulator requirements, or agreement; it is then deleted, including cached and backup copies.",
+        "condition_explanation": "The user must pay fees on time and in full. The buffer-period duration is determined by the service-specific terms, product documentation, or service description, none of which is supplied. Data deletion is stated to be irreversible; no continuing retention, export, or return duty is undertaken.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay fees owed under the agreement timely and in full.",
+            "actor": "User/licensee",
+            "object": "Service fees",
+            "trigger": "When fees are due under the agreement."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Delete all user business data, including cached and backup copies, when the applicable post-termination buffer period expires.",
+            "actor": "Alibaba Cloud",
+            "object": "User business data stored for the user",
+            "trigger": "Service or support was terminated because of arrears and the applicable buffer period has expired, except where law, regulator requirements, or a separate agreement requires otherwise."
+          }
+        ]
+      },
+      {
+        "start_line": 163,
+        "end_line": 163,
+        "clause_label": "cloud_security_and_privacy_responsibilities",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "comply_with_network_data_security_and_privacy_requirements",
+              "manage_user_controlled_networks_and_applications",
+              "select_configure_and_use_cloud_products_for_data_and_system_security_needs"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "General terms §6.1. The user manages networks and applications under its account and systems built using purchased cloud services; Alibaba Cloud operates the underlying infrastructure and Alibaba Cloud-provided software. The user is responsible for selecting, configuring, and using cloud products in light of its own security requirements.",
+        "condition_explanation": "The predicates require compliance with applicable network-security, data-security, and privacy requirements, management of user-controlled systems and applications, and security-appropriate product selection and configuration. The clause distinguishes user-managed layers from Alibaba Cloud’s underlying infrastructure and software operations.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable network-security, data-security, and privacy management requirements.",
+            "actor": "User/licensee",
+            "object": "User’s cloud-service use and data processing",
+            "trigger": "Whenever managing or using cloud services and systems."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Manage and operate networks and applications under the user’s account or built using the purchased cloud services.",
+            "actor": "User/licensee",
+            "object": "User-managed network systems and applications",
+            "trigger": "While operating systems and applications under the user’s account or built using cloud services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Select, configure, and use cloud products according to the security requirements of the user’s data and business systems.",
+            "actor": "User/licensee",
+            "object": "Cloud products and their configurations",
+            "trigger": "When selecting, configuring, or using purchased cloud products."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Lines 85–107 provide acceptance, provider, agreement-scope, and service definitions/context; they do not independently grant a software or model license. The applicable provider and service may depend on special terms or the purchase page, and partner-operated services may have a separate provider agreement.",
+      "Referenced Service Use Rules, Security Control Rules, service-specific terms, purchase-page terms, SLAs, billing policies, preview-product terms, and Resource Center service-linked-role details are not supplied; their contents are not inferred.",
+      "The chunk ends at line 163. Later provisions are outside the target and are not modeled."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0039",
+        "status": "MODELED",
+        "clause_labels": [
+          "service_use_rules",
+          "resource_metadata_access",
+          "provider_support_duty",
+          "paid_service_use_and_fees",
+          "provider_service_changes_and_termination",
+          "service_purchase_and_payment_terms",
+          "continued_use_after_free_period",
+          "promotion_confidentiality",
+          "fees_arrears_and_data_retention",
+          "cloud_security_and_privacy_responsibilities"
+        ],
+        "reason": "Reviewed all target lines 85–163. Operative service-use, metadata-access, support, service-term and change, payment, promotional confidentiality, arrears/data-retention, and security-responsibility provisions are modeled. Lines 85–107 are agreement and service context, not an independent activity rule; headings and disclaimers are not treated as standalone activity rules."
+      }
+    ]
+  },
+  "attempt": 2
+}

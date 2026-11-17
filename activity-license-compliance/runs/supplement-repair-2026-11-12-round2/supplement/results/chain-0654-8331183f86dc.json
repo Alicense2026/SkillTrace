@@ -1,0 +1,195 @@
+{
+  "case_id": "chain-0654-8331183f86dc",
+  "source_csv_line": 655,
+  "row": {
+    "github_repo": "xiaobei",
+    "github_url": "https://github.com/TeamWiseFlow/xiaobei",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "daijro/camoufox",
+    "artifact_url": "https://github.com/daijro/camoufox",
+    "artifact_license": "MPL-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: crews/main/skills/expert-douyin/tools/douyin-engagement/scripts/douyin_engagement.py:365 ｜ 调用原文: 'transport': 'http', 'session_source': 'camoufox_profile'} ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: camoufox-guard skill 与 camoufox-cli 浏览器自动化工具链",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "teamwiseflow/xiaobei",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f",
+    "filename": "_supplement_round2/8c7ebd852847205e782867a646fa1efe44043065e384980a1dedf76595a2498f.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 5; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-0654-8331183f86dc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:563719c52f4cf5ba"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0654-8331183f86dc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ecae70bb4c6d32a2"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "xiaobei_has_explicitly_authorized_use_in_writing"
+            },
+            "when": "use_xiaobei_source_code_to_operate_multi_tenant_environment"
+          },
+          "S": {
+            "artifact": "chain-0654-8331183f86dc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ecae70bb4c6d32a2"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "xiaobei_has_explicitly_authorized_use_in_writing"
+            },
+            "when": "use_xiaobei_source_code_to_operate_multi_tenant_environment"
+          },
+          "S": {
+            "artifact": "chain-0654-8331183f86dc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已核对的MPL-2.0摘录为贡献者授权条款；它允许对上游原件的Use，但该摘录不足以判断所有MPL条件。",
+      "LicenseRef-Custom的多租户限制针对使用xiaobei源代码运营多租户环境。现有事实只证明相关代码路径发生远程调用，未证明多租户运营、该限制适用于本次活动或是否取得书面授权；因此不判定违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用xiaobei源代码运营多租户环境，须取得xiaobei明确书面授权；否则不得进行该使用。",
+        "source_refs": [
+          "license-text:downstream:ecae70bb4c6d32a2"
+        ],
+        "subject": {
+          "artifact": "chain-0654-8331183f86dc:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_xiaobei_source_code_to_operate_multi_tenant_environment",
+        "unresolved_predicates": [
+          "use_xiaobei_source_code_to_operate_multi_tenant_environment",
+          "xiaobei_has_explicitly_authorized_use_in_writing"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20728,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1143,
+    "output_tokens_details": {
+      "reasoning_tokens": 393
+    },
+    "total_tokens": 21871,
+    "attribution": {
+      "items": {
+        "msg_0a63526fd645e426016af5857a98f087d1b4f56b18ccb38051": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a63526fd645e426016af5857a98f087d1bc3258eeff89c004": {
+          "input_tokens": 18658,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18658,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a63526fd645e426016af585823c8887d1b6e898c1ab634266": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 750,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 750
+            }
+          ]
+        },
+        "rs_0a63526fd645e426016af5858225a087d183c35d4dc0408f6e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 393
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 28.22
+}

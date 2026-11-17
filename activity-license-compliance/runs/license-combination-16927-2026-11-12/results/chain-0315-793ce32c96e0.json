@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0315-793ce32c96e0",
+  "input_group_row": 315,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Elastic-2.0",
+    "资产许可证原文标题/标签": "CC-BY-4.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0315-793ce32c96e0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0315-793ce32c96e0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "CC-BY-4.0 的许可授予摘录仅概括要求遵守许可条件；本次提供的相关摘录不足以逐项确定其具体履行要求，故不推断缺失条款。",
+      "Elastic-2.0 的托管服务限制适用于提供该软件的托管或管理服务并使用户获得其相当部分功能的情形。已知事实是远程服务调用，未表明用户提供此类服务；也未证实 Elastic-2.0 与 CC-BY-4.0 约束同一对象，故不据此认定冲突或违规。",
+      "仅检查了与已知 Use 和 RemoteInteraction 事实相关的范围；未发现权重转移、修改或分发事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0315-793ce32c96e0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用 CC-BY-4.0 许可材料时须遵守该许可的适用条件；具体条件需按完整适用条款确定。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "履行适用的CC-BY-4.0许可条件"
+        ],
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 28378,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 889,
+    "output_tokens_details": {
+      "reasoning_tokens": 349
+    },
+    "total_tokens": 29267,
+    "attribution": {
+      "items": {
+        "msg_0ee5878026cf158e016af53177f8cc87d1984ad9761edff4b7": {
+          "input_tokens": 26308,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 26308,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ee5878026cf158e016af53177f8cc87d19f86fd5ff8ceebde": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ee5878026cf158e016af5317edb5c87d1ae9b1a3f4b0f304d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 540,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 540
+            }
+          ]
+        },
+        "rs_0ee5878026cf158e016af5317ebfb487d1aab0449ef0c64caf": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 349
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "07a4d55cec702ee863bd44866ed1c4ee9dfeb8438824c99a79eb628712322d2a",
+  "elapsed_seconds": 24.1
+}

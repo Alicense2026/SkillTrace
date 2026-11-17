@@ -1,0 +1,46 @@
+{
+  "case_id": "chain-0183-52e36dac6e93",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如有适用费用到期，应按 Order Form 规定的币种和付款条款向 OpenAI 或适用的经销商支付。",
+      "source_refs": [
+        "license-text:upstream:c9e0443a56323634"
+      ],
+      "subject": {
+        "artifact": "chain-0183-52e36dac6e93:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "applicable_fees_due",
+      "unresolved_predicates": [
+        "applicable_fees_due"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如 PolyForm 许可的软件属于本次使用范围，应同意该条款，并仅为 permitted purpose 使用该软件。",
+      "source_refs": [
+        "license-text:downstream:90f14d1a95666069"
+      ],
+      "subject": {
+        "artifact": "chain-0183-52e36dac6e93:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_shared"
+        ]
+      },
+      "unresolved_predicates": [
+        "scope_shared",
+        "agree_to_terms",
+        "permitted_purpose"
+      ]
+    }
+  ]
+}

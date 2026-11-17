@@ -1,0 +1,568 @@
+{
+  "request_sha256": "cd73490f1cd379a19428c61031a45b97897fc9d14ecdc5037ff94770b5d4c8e2",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 637,
+        "end_line": 637,
+        "clause_label": "confidentiality_limit_disclosure",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "disclosure_not_authorized_by_disclosing_party_and_not_permitted_representative_disclosure"
+        },
+        "actor_role": "recipient party",
+        "scope_note": "Section 8.1; covers the other party’s information marked or reasonably understood to be confidential or proprietary. Disclosure to representatives who need it for contemplated product services is allowed only if they assume equivalent confidentiality duties.",
+        "condition_explanation": "The restriction applies to disclosure without the disclosing party’s consent, except the stated representative-disclosure path.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not disclose the other party’s confidential information without that party’s consent, except to representatives who need it for contemplated product services and are bound by equivalent confidentiality obligations.",
+            "actor": "receiving party",
+            "object": "other party’s confidential or proprietary information",
+            "trigger": "Whenever receiving the information; the restriction does not bar the specified need-to-know representative disclosure subject to equivalent confidentiality obligations."
+          }
+        ]
+      },
+      {
+        "start_line": 639,
+        "end_line": 639,
+        "clause_label": "legal_disclosure_notice",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "disclosure_required_or_needed_by_legal_process",
+          "requires": {
+            "any": [
+              "notice_given_immediately_to_disclosing_party",
+              "advance_notice_prohibited_by_law_or_regulation",
+              "disclosing_party_fails_to_respond_in_time"
+            ]
+          }
+        },
+        "actor_role": "receiving party",
+        "scope_note": "Section 8.2; concerns disclosure of information required or needed by legal process and notice to the disclosing party.",
+        "condition_explanation": "The notice duty applies upon legally required or needed disclosure, except when law or regulation bars advance notice or the disclosing party does not respond in time.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Immediately notify the disclosing party of the legally required or needed disclosure so it may seek protective measures.",
+            "actor": "receiving party",
+            "object": "information to be disclosed under legal process",
+            "trigger": "When disclosure is required or needed by legal process, unless advance notice is prohibited by law or regulation or the disclosing party fails to respond in time."
+          }
+        ]
+      },
+      {
+        "start_line": 641,
+        "end_line": 641,
+        "clause_label": "necessary_minimum_confidential_submission",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "recipient_needs_submission_or_explanation_for_qualification_recognition_or_standard_certification",
+          "requires": "necessary_minimum_disclosure_and_recipient_institution_bound_to_confidentiality_at_least_as_strict_as_agreement"
+        },
+        "actor_role": "receiving party",
+        "scope_note": "Section 8.3; applies when submitting materials to or explaining the other party’s circumstances to an administrative department, industry association, or similar institution for the stated qualification, recognition, or standards purpose.",
+        "condition_explanation": "The recipient may make the stated submission or explanation only on a minimum-necessary basis and must require the institution receiving the confidential information to protect it at least to the agreement’s standard.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Limit confidential information disclosed to the institution to the minimum necessary and require the institution to protect it to a standard no less protective than this agreement.",
+            "actor": "receiving party",
+            "object": "other party’s confidential information submitted to the institution",
+            "trigger": "When making a submission or explanation to obtain a business qualification or recognition, or to meet a national or industry standard or certification."
+          }
+        ]
+      },
+      {
+        "start_line": 643,
+        "end_line": 643,
+        "clause_label": "provider_information_processing_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "for_agreement_administration_execution_or_product_service_provision",
+          "requires": true
+        },
+        "actor_role": "Baidu Intelligent Cloud",
+        "scope_note": "Section 8.4; permits Baidu to process information provided by the customer, including storing it in Baidu’s database, for the specified purposes.",
+        "condition_explanation": "The permission is limited to managing or performing the agreement and providing product services; it is not a general-purpose processing grant.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 645,
+        "end_line": 645,
+        "clause_label": "protect_confidential_information_and_mitigate_leaks",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "handling_confidential_information_or_a_confidentiality_leak_has_been_discovered",
+          "requires": "best_efforts_to_protect_confidential_information_and_cooperation_on_reasonable_leak_mitigation"
+        },
+        "actor_role": "receiving party; both parties cooperate after a leak",
+        "scope_note": "Section 8.5; imposes best-efforts protection and, after discovery of a leak, cooperation to take reasonable measures to avoid or mitigate harm.",
+        "condition_explanation": "The best-efforts protection duty applies while handling confidential information. The additional cooperation duty is triggered by discovery of a leak.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Use best efforts to protect the confidential information from disclosure.",
+            "actor": "receiving party",
+            "object": "confidential information received under the agreement",
+            "trigger": "While holding or handling the confidential information."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Cooperate in taking all reasonable measures to avoid or mitigate the harm caused by the leak.",
+            "actor": "both parties",
+            "object": "confidential information involved in a discovered leak",
+            "trigger": "Upon discovery of a leak of confidential information."
+          }
+        ]
+      },
+      {
+        "start_line": 649,
+        "end_line": 649,
+        "clause_label": "reserved_ownership_no_express_grant",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "both parties",
+        "scope_note": "Section 9.1 reserves each party’s ownership and intellectual-property rights in products it provides, except for rights expressly granted in the agreement. This clause itself grants no use right.",
+        "condition_explanation": "The ownership reservation does not establish the scope of any express grant; no grant is specified in this paragraph.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 651,
+        "end_line": 651,
+        "clause_label": "counterparty_material_use_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "using_or_copying_counterparty_trademark_logo_business_information_technology_or_other_material",
+          "requires": "counterparty_prior_consent_or_use_within_scope_and_purpose_of_express_agreement_license"
+        },
+        "actor_role": "either party",
+        "scope_note": "Section 9.2; restricts use and copying of the other party’s listed materials absent prior consent, and restricts any intellectual-property license obtained from the other party to the agreement’s purpose and scope.",
+        "condition_explanation": "Use or copying requires prior consent. Separately, an obtained IP license may not be used outside the agreement’s purpose and scope.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use or copy the other party’s trademark, logo, business information, technology, or other materials without that party’s prior consent.",
+            "actor": "either party when using the other party’s materials",
+            "object": "counterparty trademarks, logos, business information, technology, and other materials",
+            "trigger": "Whenever using or copying those materials, unless the counterparty has given prior consent."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use an intellectual-property license obtained from the other party for a purpose or within a scope beyond that agreed in the agreement.",
+            "actor": "either party that obtained the license",
+            "object": "intellectual-property license obtained from the other party",
+            "trigger": "Whenever exercising the license."
+          }
+        ]
+      },
+      {
+        "start_line": 653,
+        "end_line": 653,
+        "clause_label": "no_unauthorized_third_party_provision_of_provider_results",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "providing_to_any_third_party_technical_materials_statistics_or_technical_improvement_methods_or_results_used_or_obtained_by_baidu_during_service",
+          "requires": "baidu_prior_written_consent"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 9.3; Baidu claims ownership and IP in the described technical materials, statistical data, and technical-improvement methods and results, and bars the customer from providing them to third parties without prior written consent. Pre-agreement Baidu rights remain Baidu’s.",
+        "condition_explanation": "The restriction concerns providing the specified materials or results to a third party; prior written consent is the stated exception.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not provide the specified technical materials, statistical data, or technical-improvement methods or results to any third party without Baidu’s prior written consent.",
+            "actor": "customer",
+            "object": "technical materials, statistical data, and technical-improvement methods and results used or obtained by Baidu while providing services",
+            "trigger": "Whenever providing such material or results to a third party, unless Baidu has given prior written consent."
+          }
+        ]
+      },
+      {
+        "start_line": 655,
+        "end_line": 655,
+        "clause_label": "prohibit_reverse_engineering_and_technology_based_development",
+        "activities": [
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "activity_concerns_baidu_product_or_service_software_program_code_or_platform",
+          "requires": true
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 9.4; prohibits reverse engineering, decompilation, disassembly, source-code discovery, and modification, upgrading, transformation, or development of other software or technology based on or using Baidu product/service-related software or technology, as well as other conduct that may harm Baidu’s proprietary rights.",
+        "condition_explanation": "The prohibition is tied to the identified Baidu products, services, software, programs, code, platforms, and related technology.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not reverse engineer, decompile, or disassemble the relevant software or attempt to discover its engineering program or obtain its source code.",
+            "actor": "customer",
+            "object": "Baidu product- or service-related software, programs, code, or platforms",
+            "trigger": "Whenever dealing with the identified Baidu software or technology."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify, upgrade, transform, or develop other software or technology based on or using the relevant Baidu software or technology.",
+            "actor": "customer",
+            "object": "Baidu product- or service-related software and technology",
+            "trigger": "Whenever undertaking modification, upgrading, transformation, or development based on or using the identified material."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not otherwise act in a way that may harm Baidu’s proprietary rights in its products and services.",
+            "actor": "customer",
+            "object": "Baidu products and services and related proprietary rights",
+            "trigger": "Whenever undertaking conduct that may harm those rights."
+          }
+        ]
+      },
+      {
+        "start_line": 657,
+        "end_line": 657,
+        "clause_label": "customer_customization_mark_permission",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "baidu_provides_customized_service_using_customer_company_logo_painting_pattern_or_software_wake_word",
+          "requires": "use_necessary_for_customized_service_and_custom_content_noninfringing_and_legal"
+        },
+        "actor_role": "Baidu Intelligent Cloud",
+        "scope_note": "Section 9.5; the customer grants Baidu the IP rights, including trademark permission, necessary to provide the specified customization. Customer also warrants legality and non-infringement and bears resulting legal responsibility and Baidu’s losses if the requested content violates those requirements.",
+        "condition_explanation": "The permission is limited to what is necessary for the customization and applies when the customization involves the stated customer marks, patterns, or wake words.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure requested customization content does not infringe others’ lawful rights and does not violate laws or regulations.",
+            "actor": "customer",
+            "object": "customer-requested customization content, including company logo, painting pattern, or wake word",
+            "trigger": "When requesting customization using that content."
+          }
+        ]
+      },
+      {
+        "start_line": 667,
+        "end_line": 667,
+        "clause_label": "keep_discount_terms_confidential",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "disclosing_discount_or_preferential_treatment_information",
+          "requires": "disclosure_authorized_under_agreement"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 10.4; customer must keep information concerning discounts and preferential terms confidential. The paragraph separately gives Baidu suspension or termination remedies and a claim for resulting losses.",
+        "condition_explanation": "The confidentiality obligation applies to information concerning discounts and preferential treatment; the paragraph does not specify an exception or authorized disclosure path.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Keep information concerning discounts and preferential terms confidential and do not disclose it except where authorized under the agreement.",
+            "actor": "customer",
+            "object": "discount and preferential-treatment information",
+            "trigger": "While the customer possesses or has access to that information."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Website-published payment, invoice, compensation, product, and service rules are referenced but not supplied; their details cannot be inferred.",
+      "Payment to the provider, invoice application, automatic renewal configuration, and certain contract remedies do not map faithfully to the allowed activity/object schema.",
+      "The ownership reservation in Section 9.1 does not itself grant a license. The agreement’s referenced express grants and external documents are not supplied.",
+      "Section 10.4’s confidentiality duty is extracted separately from its suspension, termination, and damages remedies."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0269",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Balance reminders and balance-checking/payment-related consequences and advice are stated, but the activity schema does not represent paying the provider or the external reminder procedures."
+      },
+      {
+        "unit_id": "P0270",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Evidentiary rule that recorded service usage is measured by Baidu’s backend records; it does not impose a modeled license activity constraint."
+      },
+      {
+        "unit_id": "P0271",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Refers to website-published promotional activity details without imposing an operative activity duty or permission in this paragraph."
+      },
+      {
+        "unit_id": "P0272",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Describes customer recharge/payment routes and refers to external payment rules; payment to the provider is not represented by the allowed activities."
+      },
+      {
+        "unit_id": "P0273",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Provides an invoice-application opportunity and refers to external application requirements; applying for or issuing an invoice is not represented by the allowed activities."
+      },
+      {
+        "unit_id": "P0274",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Describes optional automatic renewal and deduction at the then-current price, but the schema does not represent setting renewal or the customer’s payment to the provider."
+      },
+      {
+        "unit_id": "P0275",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the confidentiality section."
+      },
+      {
+        "unit_id": "P0276",
+        "status": "MODELED",
+        "clause_labels": [
+          "confidentiality_limit_disclosure"
+        ],
+        "reason": "Restricts disclosure and permits limited representative disclosure subject to equivalent confidentiality duties."
+      },
+      {
+        "unit_id": "P0277",
+        "status": "MODELED",
+        "clause_labels": [
+          "legal_disclosure_notice"
+        ],
+        "reason": "Requires immediate notice for legally compelled or needed disclosure, subject to the stated exceptions."
+      },
+      {
+        "unit_id": "P0278",
+        "status": "MODELED",
+        "clause_labels": [
+          "necessary_minimum_confidential_submission"
+        ],
+        "reason": "Requires minimum-necessary disclosure and equivalent confidentiality protection for the specified institutional submissions."
+      },
+      {
+        "unit_id": "P0279",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_information_processing_permission"
+        ],
+        "reason": "Permits Baidu to process and store customer-provided information for agreement administration, performance, and service provision."
+      },
+      {
+        "unit_id": "P0280",
+        "status": "MODELED",
+        "clause_labels": [
+          "protect_confidential_information_and_mitigate_leaks"
+        ],
+        "reason": "Requires best-efforts protection of confidential information and cooperation on reasonable mitigation after discovery of a leak."
+      },
+      {
+        "unit_id": "P0281",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the intellectual-property section."
+      },
+      {
+        "unit_id": "P0282",
+        "status": "MODELED",
+        "clause_labels": [
+          "reserved_ownership_no_express_grant"
+        ],
+        "reason": "Records the ownership and IP reservation while correctly treating it as no independent use grant."
+      },
+      {
+        "unit_id": "P0283",
+        "status": "MODELED",
+        "clause_labels": [
+          "counterparty_material_use_restrictions"
+        ],
+        "reason": "Restricts use or copying without prior consent and limits obtained IP licenses to the agreement’s purpose and scope."
+      },
+      {
+        "unit_id": "P0284",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_unauthorized_third_party_provision_of_provider_results"
+        ],
+        "reason": "Reserves Baidu’s rights in specified materials and results and prohibits unauthorized third-party provision."
+      },
+      {
+        "unit_id": "P0285",
+        "status": "MODELED",
+        "clause_labels": [
+          "prohibit_reverse_engineering_and_technology_based_development"
+        ],
+        "reason": "Prohibits reverse engineering, source-code discovery, technology-based modification or development, and other conduct harming Baidu’s proprietary rights."
+      },
+      {
+        "unit_id": "P0286",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_customization_mark_permission"
+        ],
+        "reason": "Grants Baidu only the IP permission necessary for specified customization and imposes customer legality and non-infringement duties."
+      },
+      {
+        "unit_id": "P0287",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the liability section."
+      },
+      {
+        "unit_id": "P0288",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "General breach, notice-to-cure period, incurability exception, and damages consequences are contract remedies not faithfully expressible as an allowed activity constraint."
+      },
+      {
+        "unit_id": "P0289",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Compensation for service nonavailability is a remedy referring to external compensation standards, not an activity constraint."
+      },
+      {
+        "unit_id": "P0290",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Contains delay-compensation and late-payment consequences, termination rights, thresholds, and exceptions; these payment and liability remedies are not faithfully representable as activity constraints."
+      },
+      {
+        "unit_id": "P0291",
+        "status": "MODELED",
+        "clause_labels": [
+          "keep_discount_terms_confidential"
+        ],
+        "reason": "Models the customer’s operative duty to keep discount and preferential-treatment information confidential; the paragraph also states suspension, termination, and damages remedies."
+      },
+      {
+        "unit_id": "P0292",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Allocates responsibility for third-party acts or omissions as a liability disclaimer."
+      },
+      {
+        "unit_id": "P0293",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Excludes specified categories of damages; this is a liability disclaimer."
+      },
+      {
+        "unit_id": "P0294",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Caps contractual damages; this is a liability limitation."
+      },
+      {
+        "unit_id": "P0295",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the force-majeure and incident section."
+      },
+      {
+        "unit_id": "P0296",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Excuses liability when force majeure or an incident makes performance impossible, unnecessary, or meaningless; it is a liability excuse rather than a license activity rule."
+      },
+      {
+        "unit_id": "P0297",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines force majeure and incidents for the surrounding provision."
+      },
+      {
+        "unit_id": "P0298",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Requires continued performance after the event when both parties can perform and continuation is necessary, but does not specify a particular allowed activity/object pair."
+      },
+      {
+        "unit_id": "P0299",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying contract amendment and termination."
+      },
+      {
+        "unit_id": "P0300",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introduces the following list of early-termination circumstances without stating a complete standalone condition."
+      },
+      {
+        "unit_id": "P0301",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Lists mutual agreement as an early-termination circumstance; it is not an activity-constraint rule."
+      },
+      {
+        "unit_id": "P0302",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Gives Baidu early service-termination rights for serious customer breaches, including payment, legal, and promise breaches; termination rights are outside the allowed activity/object representation."
+      }
+    ]
+  },
+  "attempt": 3
+}

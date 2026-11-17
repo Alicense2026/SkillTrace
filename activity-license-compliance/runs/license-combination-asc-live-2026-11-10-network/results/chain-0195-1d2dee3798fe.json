@@ -1,0 +1,185 @@
+{
+  "case_id": "chain-0195-1d2dee3798fe",
+  "status": "SUCCESS",
+  "request_sha256": "d9ba2bf371b7b07219ab256e4e389e159f85ef743de62be9f37cc870609b0502",
+  "analysis": {
+    "case_id": "chain-0195-1d2dee3798fe",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0195-1d2dee3798fe:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0195-1d2dee3798fe:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:43c0428247497593"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0195-1d2dee3798fe:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Anthropic 条款摘录限于服务访问许可，并明确不授予复制、修改或分发提供方软件或模型权重的许可；本案已知为远程服务调用，不据此推定权重转移或分发。",
+      "对象图中上下游共同适用范围为未知；未发现可据现有条款及事实确认的许可冲突。",
+      "ISC 第5条摘录规定复制、修改或分发等许可行为须保留适用版权声明和许可声明；现有事实未明确这些行为是否针对下游 ISC 材料发生。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0195-1d2dee3798fe:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守 Anthropic 服务条款。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0195-1d2dee3798fe:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "遵守 Anthropic 服务条款。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0195-1d2dee3798fe:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "如使用该 ISC 材料，保留适用的版权声明和许可声明。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use"
+        ],
+        "source_refs": [
+          "license-text:downstream:43c0428247497593"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17493,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1213,
+    "output_tokens_details": {
+      "reasoning_tokens": 263
+    },
+    "total_tokens": 18706,
+    "attribution": {
+      "items": {
+        "msg_0430a3a65725a9aa016af2ff2ffbc487d29a8d79ed48a94722": {
+          "input_tokens": 15461,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15461,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0430a3a65725a9aa016af2ff354f7887d2b764f8807772302a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 950,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 950
+            }
+          ]
+        },
+        "rs_0430a3a65725a9aa016af2ff3533e487d280a68ed92c2ad5e3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 263
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.802,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

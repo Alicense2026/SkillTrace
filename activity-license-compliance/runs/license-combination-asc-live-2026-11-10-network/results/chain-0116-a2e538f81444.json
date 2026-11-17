@@ -1,0 +1,134 @@
+{
+  "case_id": "chain-0116-a2e538f81444",
+  "status": "SUCCESS",
+  "request_sha256": "56890f11c05bdeec175d8a05d5a32f45fc7cbfc224476bc943abc06dd0b5f51e",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0116-a2e538f81444:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e2114e2bc5dd0e85"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope"
+          },
+          "S": {
+            "artifact": "chain-0116-a2e538f81444:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "两份本地许可证文本的相关结构化条款均标记FIRST_PASS_REVIEW_REQUIRED。已知活动是对上游MIT对象的Use及API远程调用；未证明复制、分发或下游CC对象本身被Use，因此不据此认定相关通知义务已违反，也不推断远程调用触发源码提供义务。",
+      "对象图中的LINK/REMOTE_CALL并未确定两份许可约束同一对象；scope_shared未知。CC许可授予范围限于其Licensed Material及相关权利，现有摘录不足以判定该API调用是否在其范围内。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游MIT对象时，按许可要求包含版权声明及许可声明。",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "subject": {
+          "artifact": "chain-0116-a2e538f81444:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0116-a2e538f81444"
+  },
+  "usage": {
+    "input_tokens": 22101,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 956,
+    "output_tokens_details": {
+      "reasoning_tokens": 381
+    },
+    "total_tokens": 23057,
+    "attribution": {
+      "items": {
+        "msg_06a2628bf9238aea016af2fbe318f887d1b002021a75953a70": {
+          "input_tokens": 20069,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20069,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06a2628bf9238aea016af2fbeb872087d181dd60808a48e4b2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 575,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 575
+            }
+          ]
+        },
+        "rs_06a2628bf9238aea016af2fbeb6bac87d1b1101a2311b692cb": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 381
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.125,
+  "auto_applied": false,
+  "aggregate_count": 8
+}

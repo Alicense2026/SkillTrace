@@ -1,0 +1,1054 @@
+{
+  "case_id": "skill-00287",
+  "csv_row": 288,
+  "source_excel_row": "421",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00287-1794596655460506000-3.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "开发者使用 DeepSeek Open Platform 服务时须遵守适用条款；妥善保管 API 密钥，不与他人分享或公开披露，不将密钥暴露于浏览器或其他客户端代码；促使自己及端用户遵守 DeepSeek Terms of Use，并遵守适用法律、不侵害他人权益、不谋取不正当利益、不扰乱互联网平台正常秩序；建立保障系统、网络、信息和数据完整性、保密性、可用性并防范滥用的组织及技术措施。未提供的引用条款不作扩张解释。",
+      "source_refs": [
+        "license:bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0"
+      ],
+      "subject": {
+        "artifact": "skill-00287:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_applicable_terms",
+        "api_key_kept_securely_and_not_shared_disclosed_or_exposed_client_side",
+        "developer_and_end_users_comply_with_deepseek_terms_of_use",
+        "comply_with_applicable_law",
+        "do_not_infringe_others_rights",
+        "do_not_seek_improper_gains",
+        "do_not_disrupt_normal_internet_platform_order",
+        "establish_safeguards_for_integrity_confidentiality_and_availability"
+      ]
+    },
+    {
+      "activity": "ProvideNetworkService",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "开发者作为下游系统、应用或功能的提供者和运营者时，须承担相应法律责任，建立与端用户之间的权利义务协议，并规范、管理端用户使用行为。",
+      "source_refs": [
+        "license:bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0"
+      ],
+      "subject": {
+        "artifact": "skill-00287:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "developer_provides_or_operates_downstream_systems_applications_or_functions",
+      "unresolved_predicates": [
+        "developer_provides_or_operates_downstream_systems_applications_or_functions"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "承担修改 AGPL 覆盖程序并提供支持远程计算机网络交互的版本的主体，须显著向所有远程交互用户提供免费网络服务器访问该版本对应源码的机会；仅在该修改和交互条件成立时适用。",
+      "source_refs": [
+        "license:b1c7829ac260ca85e70b033cea73bc8a47d72e3224a71706b7391c504dc90d18"
+      ],
+      "subject": {
+        "artifact": "skill-00287:downstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "modified_program",
+          "modified_program_supports_remote_computer_network_interaction"
+        ]
+      },
+      "unresolved_predicates": [
+        "modified_program",
+        "modified_program_supports_remote_computer_network_interaction"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知事实为对 DeepSeek API 的远程调用及链接；没有事实表明 AGPL 覆盖程序被修改、提供网络交互或分发。AGPL §13 的源码提供义务仅在修改程序且修改版本支持网络交互时触发，不能由普通 API 调用推定，也不适用于上游 API 或模型权重。",
+    "DeepSeek 条款引用的其他协议、Terms of Use、政策或指南未提供全文，相关内容不作推断。其他未列事实及履行情况均为未知；未发现可确认的许可冲突或实际违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已发生服务使用；遵守适用条款的条件义务已保留。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供Combine活动事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是DeepSeek提供资料的义务，不是调用者义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未见相关服务变更事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "账户注册、登录事实未提供。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用已发生；密钥保护义务已保留，履行未知。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用已发生；合规义务已保留，具体履行未知。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "是否运营下游系统未知，故保留条件义务。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "公开服务及个人信息处理事实未提供。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用已发生；安全措施义务已保留。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "提交输入事实未提供。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供独立输入使用事实。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供服务输出使用事实。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供衍生产品开发事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供训练模型事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供品牌标识使用事实。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供所列误导性品牌使用事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供相关违约或要求声明事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "端用户访问下游系统及个人信息控制者事实未提供。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "付费服务及预付要求事实未提供。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供价格或服务调整事实。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供充值事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供退款申请事实。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供充值事实。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用合规要求已合并保留。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供端用户违约及损失事实，属于责任分配。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "争议解决与责任分配不属于可核验活动义务。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "所列触发情形未知，且提供者处置权不是调用者义务。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供向端用户使用或提供输出事实。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用中的出口管制及制裁合规要求已保留。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供修订条款生效及拒绝接受事实。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供相关服务变更事实。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是DeepSeek作为服务提供者的义务。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "年龄及监护人同意事实未提供。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户注册事实未提供。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "此条仅引出后续账户承诺。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户注册信息及代他人使用事实未提供。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户保管事实未提供。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户注册事实未提供。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户转借或提供他人的事实未提供。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户凭据保管及未授权使用事实未提供。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "停用或删除账户事实未提供。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "账户删除事实未提供。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "遵守适用条款的义务已合并保留。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供发布或传播输出事实。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已发生服务使用；禁止用途条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是DeepSeek审核用户行为的权限。"
+    },
+    {
+      "rule_ref": "U048",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用已发生；所列禁止用途条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U049",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U050",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U051",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U052",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U053",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U054",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U055",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U056",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U057",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U058",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "相关内容特征及生成行为未提供。"
+    },
+    {
+      "rule_ref": "U059",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用已发生；禁止的干扰或安全风险条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U060",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供网络入侵或未授权测试事实。"
+    },
+    {
+      "rule_ref": "U061",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供扰乱网络运行事实。"
+    },
+    {
+      "rule_ref": "U062",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供反向工程、抓取或复制服务内容事实。"
+    },
+    {
+      "rule_ref": "U063",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供危害服务系统或组件事实。"
+    },
+    {
+      "rule_ref": "U064",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用合规义务已保留。"
+    },
+    {
+      "rule_ref": "U065",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "禁止违法或侵权用途条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U066",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "禁止危险用途条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U067",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "禁止侵权或不公平竞争条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U068",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供复制服务事实。"
+    },
+    {
+      "rule_ref": "U069",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "API调用不证明转移或分发服务。"
+    },
+    {
+      "rule_ref": "U070",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供出租服务事实。"
+    },
+    {
+      "rule_ref": "U071",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供出借服务事实。"
+    },
+    {
+      "rule_ref": "U072",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供出售服务事实。"
+    },
+    {
+      "rule_ref": "U073",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供再许可服务事实；AGPL对象不同。"
+    },
+    {
+      "rule_ref": "U074",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用合规义务已保留。"
+    },
+    {
+      "rule_ref": "U075",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "提交输入事实未提供。"
+    },
+    {
+      "rule_ref": "U076",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供输入使用事实。"
+    },
+    {
+      "rule_ref": "U077",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供输出使用事实。"
+    },
+    {
+      "rule_ref": "U078",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供输入或输出的独立使用事实。"
+    },
+    {
+      "rule_ref": "U079",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "此条授权DeepSeek处理输入和输出。"
+    },
+    {
+      "rule_ref": "U080",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供访问输出中第三方资源事实。"
+    },
+    {
+      "rule_ref": "U081",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供平台生成标签或更改标签事实。"
+    },
+    {
+      "rule_ref": "U082",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "禁止用途条件已纳入服务使用合规义务。"
+    },
+    {
+      "rule_ref": "U083",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供对自然人有法律或重大影响的输出使用事实。"
+    },
+    {
+      "rule_ref": "U084",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供品牌标识使用事实。"
+    },
+    {
+      "rule_ref": "U085",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供提交反馈事实。"
+    },
+    {
+      "rule_ref": "U086",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "此条规定服务提供者的处置权。"
+    },
+    {
+      "rule_ref": "U087",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "服务使用的制裁及受禁用途条件已纳入合规义务。"
+    },
+    {
+      "rule_ref": "U088",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "提交相关输入事实未提供。"
+    },
+    {
+      "rule_ref": "U089",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供修订条款公告事实。"
+    },
+    {
+      "rule_ref": "U090",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供拒绝修订条款后继续使用事实。"
+    },
+    {
+      "rule_ref": "U091",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供向端用户提供或发布输出事实。"
+    },
+    {
+      "rule_ref": "U092",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "责任及赔偿触发事实未提供，不属于已确认API调用的独立义务。"
+    },
+    {
+      "rule_ref": "U093",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "出口管制及制裁合规要求与U030同源同项，已合并。"
+    },
+    {
+      "rule_ref": "U094",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供DeepSeek品牌标识使用事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供复制许可证文件事实。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供修改许可证文件事实。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "API调用不证明使用AGPL覆盖程序。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供为专属修改或运行设施而传递覆盖作品。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供传递覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供再许可覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供传递覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供原样源代码副本分发事实。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供依§4传递逐字副本事实。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供分发覆盖作品源代码事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL覆盖作品与独立作品汇编事实。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供目标代码分发事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供实体产品中的目标代码分发事实。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供实体产品中的目标代码分发事实。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供目标代码副本分发事实。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供指定地点提供目标代码访问事实。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供点对点传递目标代码事实。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供目标代码作品分发事实。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供用户产品交易及目标代码分发事实。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供接收者修改或安装作品并申请网络访问事实。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供§6对应源码传递事实。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL覆盖作品使用或额外许可事实。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供传递覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供将材料加入覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供组合或附加条款事实。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供组合及进一步限制事实。"
+    },
+    {
+      "rule_ref": "D027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供对覆盖作品添加条款事实。"
+    },
+    {
+      "rule_ref": "D028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL覆盖作品分发事实。"
+    },
+    {
+      "rule_ref": "D029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL覆盖作品修改事实。"
+    },
+    {
+      "rule_ref": "D030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供许可违约及恢复事实。"
+    },
+    {
+      "rule_ref": "D031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供权利人通知及补救事实。"
+    },
+    {
+      "rule_ref": "D032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供权利终止事实。"
+    },
+    {
+      "rule_ref": "D033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "API调用不证明运行AGPL程序副本。"
+    },
+    {
+      "rule_ref": "D034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供为接收副本产生的点对点传播。"
+    },
+    {
+      "rule_ref": "D035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL覆盖作品修改事实。"
+    },
+    {
+      "rule_ref": "D036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供传播AGPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供传递AGPL覆盖作品；自动许可不涉及上游API。"
+    },
+    {
+      "rule_ref": "D038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL作品传递及第三方遵守问题。"
+    },
+    {
+      "rule_ref": "D039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供实体交易及作品接收事实。"
+    },
+    {
+      "rule_ref": "D040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供实体交易及对应源码取得事实。"
+    },
+    {
+      "rule_ref": "D041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供对AGPL权利施加进一步限制事实。"
+    },
+    {
+      "rule_ref": "D042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供对AGPL权利行使收费事实；API服务收费不等于对此权利收费。"
+    },
+    {
+      "rule_ref": "D043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供相关专利诉讼事实。"
+    },
+    {
+      "rule_ref": "D044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供贡献者版本及专利许可范围内使用事实。"
+    },
+    {
+      "rule_ref": "D045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供依赖专利许可传递覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供传递作品并授予专利许可事实。"
+    },
+    {
+      "rule_ref": "D047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供规定的第三方专利许可安排事实。"
+    },
+    {
+      "rule_ref": "D048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供专利法抗辩相关事实。"
+    },
+    {
+      "rule_ref": "D049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供无法同时履行的传递条件。"
+    },
+    {
+      "rule_ref": "D050",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "是否修改AGPL覆盖程序及版本是否支持远程交互未知；保留AGPL网络源码提供条件义务，不视为已触发。"
+    },
+    {
+      "rule_ref": "D051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供与GPL-3.0作品组合事实。"
+    },
+    {
+      "rule_ref": "D052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供组合作品分发事实。"
+    },
+    {
+      "rule_ref": "D053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL版本选择事实。"
+    },
+    {
+      "rule_ref": "D054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供AGPL版本选择事实。"
+    },
+    {
+      "rule_ref": "D055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供代理选择版本事实。"
+    },
+    {
+      "rule_ref": "D056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供选择较新AGPL版本事实。"
+    },
+    {
+      "rule_ref": "D057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供贡献者版本及相关专利活动。"
+    },
+    {
+      "rule_ref": "D058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供贡献者版本出售事实。"
+    },
+    {
+      "rule_ref": "D059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供贡献者版本要约出售事实。"
+    },
+    {
+      "rule_ref": "D060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供贡献者版本修改事实。"
+    },
+    {
+      "rule_ref": "D061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供贡献者版本传播事实。"
+    },
+    {
+      "rule_ref": "D062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供收费支持或保修事实。"
+    }
+  ]
+}

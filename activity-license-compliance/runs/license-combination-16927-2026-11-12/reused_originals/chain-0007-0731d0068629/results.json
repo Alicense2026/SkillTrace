@@ -1,0 +1,153 @@
+{
+  "case_id": "chain-0007-0731d0068629",
+  "status": "SUCCESS",
+  "request_sha256": "fbab03208c911c75219dfc5ca20c61d3fab4294661772a217f6224adbbc3e8a6",
+  "analysis": {
+    "case_id": "chain-0007-0731d0068629",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0007-0731d0068629:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0007-0731d0068629:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认的是远程服务调用和API链接，未证明MIT许可的软件被复制、修改、分发或纳入下游产品，也未证明两份许可约束同一对象；因此不据此认定许可冲突。",
+      "Anthropic条款摘录只提供服务访问授权概述，且标记为首轮抽取待复核；本分析仅按该摘录记录遵守服务条款的条件，未推断未提供的具体服务条款内容。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用Anthropic服务须遵守服务条款。",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0007-0731d0068629:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "远程交互须遵守服务条款。",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "subject": {
+          "artifact": "chain-0007-0731d0068629:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "comply_with_service_terms"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18714,
+    "input_tokens_details": {
+      "cached_tokens": 18560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 863,
+    "output_tokens_details": {
+      "reasoning_tokens": 164
+    },
+    "total_tokens": 19577,
+    "attribution": {
+      "items": {
+        "msg_07daf43f73fe612a016af2f6ea6c3c87d2b572d9e13061d1ff": {
+          "input_tokens": 16682,
+          "cached_tokens": 16530,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16682,
+              "cached_tokens": 16530,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_07daf43f73fe612a016af2f6ede2ec87d2933e634ddcce705d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 699,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 699
+            }
+          ]
+        },
+        "rs_07daf43f73fe612a016af2f6edc72487d2b934f6cdc7a5b6dc": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 164
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.383,
+  "auto_applied": false,
+  "aggregate_count": 843
+}

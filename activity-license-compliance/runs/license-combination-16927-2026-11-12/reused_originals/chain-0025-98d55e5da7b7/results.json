@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0025-98d55e5da7b7",
+  "status": "SUCCESS",
+  "request_sha256": "68d7ca80407631ae325a32a7d25dd5dbcc980f98f015105d0816678b80a88a17",
+  "analysis": {
+    "case_id": "chain-0025-98d55e5da7b7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0025-98d55e5da7b7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:efac1c3a4c41c79f"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY"
+          },
+          "S": {
+            "artifact": "chain-0025-98d55e5da7b7:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "subject": {
+          "artifact": "chain-0025-98d55e5da7b7:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "If the covered AGPL program is modified and that modified version supports remote interaction, prominently offer remote users an opportunity to receive its Corresponding Source at no charge through a network server.",
+        "trigger": {
+          "all": [
+            "activity:Modify on downstream covered AGPL program",
+            "activity:RemoteInteraction with that modified downstream program"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_program_modified",
+          "downstream_version_supports_remote_interaction"
+        ],
+        "source_refs": [
+          "license-text:downstream:efac1c3a4c41c79f"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record describes a remote service call and says code modification is not applicable. The recorded remote interaction concerns the upstream API; it does not establish remote interaction with a modified downstream AGPL program.",
+      "The AGPL excerpt’s network source-offer rule is conditional on modifying the covered program and the modified version supporting remote interaction. The excerpt does not establish that these conditions hold for this chain.",
+      "The object graph does not establish that upstream and downstream license conditions govern the same artifact; scope_shared is unknown. No license-license conflict is established from the available facts and excerpts."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18230,
+    "input_tokens_details": {
+      "cached_tokens": 18048,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 789,
+    "output_tokens_details": {
+      "reasoning_tokens": 202
+    },
+    "total_tokens": 19019,
+    "attribution": {
+      "items": {
+        "msg_0ef34b2c577a9320016af2f7d1ce0c87d1ab6177036d86862d": {
+          "input_tokens": 16198,
+          "cached_tokens": 16018,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16198,
+              "cached_tokens": 16018,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ef34b2c577a9320016af2f7d6934887d1a90102c9755d1a5d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 587,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 587
+            }
+          ]
+        },
+        "rs_0ef34b2c577a9320016af2f7d67c4887d1b3ab1a28859ceab0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 202
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 17.762,
+  "auto_applied": false,
+  "aggregate_count": 98
+}

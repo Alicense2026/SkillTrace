@@ -1,0 +1,157 @@
+{
+  "case_id": "chain-0246-e0862d40d789",
+  "status": "SUCCESS",
+  "request_sha256": "5c92b3a67026af70c4c65cf68f7b8870364b72d3bac0d992dd4facb0d2f841b2",
+  "analysis": {
+    "case_id": "chain-0246-e0862d40d789",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0246-e0862d40d789:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0081c3feffb34520"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0246-e0862d40d789:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0246-e0862d40d789:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅为模型体验目的使用生成内容；不得将其用于其他目的，包括商业化，或以任何形式提供给第三方或在第三方平台使用、传播、分发。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt",
+          "use_purpose",
+          "third_party_provision_or_distribution"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0246-e0862d40d789:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在适用副本中保留版权声明和许可声明。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_use_scope",
+          "retain_applicable_notices"
+        ],
+        "source_refs": [
+          "license-text:downstream:0081c3feffb34520"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录确认对阿里云百炼服务的远程调用和使用，但未说明具体用途、生成内容用途或是否向第三方提供内容；不能据此认定违反上游禁止条款。",
+      "对象图确认API调用/链接关系，但未确认ISC软件与上游服务约束同一对象或存在依赖、合并、修改副本关系；未据此判定许可证冲突。",
+      "上游摘录标记为首轮抽取且注明需检查完整段落；具体功能范围及例外仍以完整文本为准。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19565,
+    "input_tokens_details": {
+      "cached_tokens": 19328,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1041,
+    "output_tokens_details": {
+      "reasoning_tokens": 267
+    },
+    "total_tokens": 20606,
+    "attribution": {
+      "items": {
+        "msg_01baa6f438a0a5e4016af301dfec8087d191ffb9074e0f5c01": {
+          "input_tokens": 17533,
+          "cached_tokens": 17298,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17533,
+              "cached_tokens": 17298,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_01baa6f438a0a5e4016af301e6340087d189f3f19e8a351fad": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 774,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 774
+            }
+          ]
+        },
+        "rs_01baa6f438a0a5e4016af301e61cdc87d18a289be23af697cd": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 267
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.627,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

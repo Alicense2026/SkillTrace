@@ -1,0 +1,191 @@
+{
+  "case_id": "chain-0187-8259c5c59f1a",
+  "status": "SUCCESS",
+  "request_sha256": "b46e29a6fea48f4a179be0f6c5de45f148b92579d7c945b69df0c45647463e0d",
+  "analysis": {
+    "case_id": "chain-0187-8259c5c59f1a",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components"
+              ]
+            },
+            "when": "use_Gemini_API_Services"
+          },
+          "S": {
+            "artifact": "chain-0187-8259c5c59f1a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2f93eb6f29708206"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": "exercise_CC_Licensed_Rights"
+          },
+          "S": {
+            "artifact": "chain-0187-8259c5c59f1a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2f93eb6f29708206"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "exercise_CC_Licensed_Rights"
+          },
+          "S": {
+            "artifact": "chain-0187-8259c5c59f1a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0187-8259c5c59f1a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得将 Gemini API Services 用于开发与 Gemini API 或 Google AI Studio 竞争的模型；不得尝试对服务组件进行逆向工程、提取或复制。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "use_Gemini_API_Services"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_Gemini_API_Services",
+          "competing_model_development",
+          "reverse_engineering_extraction_or_replication"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0187-8259c5c59f1a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅在 CC 许可范围内行使 Licensed Rights，并遵守该许可适用的条件。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "exercise_CC_Licensed_Rights"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "exercise_CC_Licensed_Rights",
+          "within_license_scope",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:2f93eb6f29708206"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游摘录针对将服务用于开发竞争模型及逆向工程、提取或复制服务组件；记录仅证明远程 API 调用，未证明这些受限用途，因此不据此认定违规。",
+      "对象图确认下游与上游存在 API 链接和远程调用，但依赖、修改副本或组合产品关系未知；没有证据证明两份许可针对同一受约束对象，故不判定许可间冲突。",
+      "下游 CC 条款摘录仅能支持许可范围及遵守适用许可条件的要求；材料是否属于 CC Licensed Material、实际是否行使相关权利及具体条件是否满足均未知。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20048,
+    "input_tokens_details": {
+      "cached_tokens": 19840,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1341,
+    "output_tokens_details": {
+      "reasoning_tokens": 281
+    },
+    "total_tokens": 21389,
+    "attribution": {
+      "items": {
+        "msg_02736c06c49ef9da016af2fec69c6087d29533818d4e01afe7": {
+          "input_tokens": 18016,
+          "cached_tokens": 17810,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18016,
+              "cached_tokens": 17810,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02736c06c49ef9da016af2fecd67a087d2b7759f0ae32e8174": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1060,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1060
+            }
+          ]
+        },
+        "rs_02736c06c49ef9da016af2fecd4be087d2aa7f19f43bf7ed9a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 281
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 28.504,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

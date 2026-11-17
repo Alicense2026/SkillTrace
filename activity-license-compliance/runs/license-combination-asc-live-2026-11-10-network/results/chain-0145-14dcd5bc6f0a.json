@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0145-14dcd5bc6f0a",
+  "status": "SUCCESS",
+  "request_sha256": "edf442ddedf8354b46814ac30adb42db054f5a94884a0c39b74e623a7b3b18d6",
+  "analysis": {
+    "case_id": "chain-0145-14dcd5bc6f0a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0145-14dcd5bc6f0a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e8fcbe454a9fcf95"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0145-14dcd5bc6f0a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "可信记录确认对上游 MIT 资产进行 Use，并存在 API 链接/远程调用；这不证明下游产品包含上游代码、依赖或与上游资产构成同一受约束对象。",
+      "对象图的 scope_shared 未知，且下游 BSD 资产的具体 Use 活动未证实；不据此认定两份许可证共同约束同一对象或发生冲突。",
+      "MIT、BSD-2-Clause结构化条款均标记 FIRST_PASS_REVIEW_REQUIRED；本分析仅基于所列许可文本摘录及映射条款。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0145-14dcd5bc6f0a:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用该 MIT 软件时，须包含版权声明和许可声明。",
+        "trigger": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0145-14dcd5bc6f0a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "如对该 BSD-2-Clause 资产进行 Use，须保留适用通知。",
+        "trigger": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "retain_applicable_notices"
+        ],
+        "source_refs": [
+          "license-text:downstream:e8fcbe454a9fcf95"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20418,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 925,
+    "output_tokens_details": {
+      "reasoning_tokens": 178
+    },
+    "total_tokens": 21343,
+    "attribution": {
+      "items": {
+        "msg_0253e980a4e3ca43016af2fcb6dd0087d294472c620f6c9d0d": {
+          "input_tokens": 18386,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18386,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0253e980a4e3ca43016af2fcbaa78087d2b3a5f0d382aa94d4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 747,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 747
+            }
+          ]
+        },
+        "rs_0253e980a4e3ca43016af2fcba8bd887d2bd455e5bdffcc5c3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 178
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.731,
+  "auto_applied": false,
+  "aggregate_count": 5
+}

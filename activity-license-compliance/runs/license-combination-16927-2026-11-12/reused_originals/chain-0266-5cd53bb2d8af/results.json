@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0266-5cd53bb2d8af",
+  "status": "SUCCESS",
+  "request_sha256": "9680d1e78f3808faa41221a321533497a2fd81f72bb5adb785156d3a56e56453",
+  "analysis": {
+    "case_id": "chain-0266-5cd53bb2d8af",
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "provide_corresponding_source_access_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "remote_interaction_supported"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0266-5cd53bb2d8af:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:363cd04a67aff871"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "provide_corresponding_source_access_at_no_charge",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "remote_interaction_supported"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0266-5cd53bb2d8af:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "ProvideSource/各自受覆盖的修改程序；两份AGPL原文第13条均仅在修改程序且支持远程交互时要求提供对应源码访问；两方要求相同，不构成相反约束。已知事实为远程服务调用且修改不适用，故本次未触发该义务；条款及来源：第13条。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33",
+          "license-text:downstream:363cd04a67aff871"
+        ],
+        "status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+      }
+    ],
+    "obligations": [],
+    "limitations": [
+      "对象图确认下游与上游之间存在API链接/远程调用，但依赖、修改副本或组合产品关系未知；远程调用本身不证明上游程序被修改，也不将上游义务自动扩展至下游对象。",
+      "本次仅检查两份本地AGPL文本中提供的第13条摘录及其网络源码提供要求；未据此推断其他条款或未提供的适用范围。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17746,
+    "input_tokens_details": {
+      "cached_tokens": 17536,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 942,
+    "output_tokens_details": {
+      "reasoning_tokens": 282
+    },
+    "total_tokens": 18688,
+    "attribution": {
+      "items": {
+        "msg_0878846d6d5cb312016af302a8941087d286518d5c52850695": {
+          "input_tokens": 15714,
+          "cached_tokens": 15506,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15714,
+              "cached_tokens": 15506,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0878846d6d5cb312016af302ae1e8087d2a140cd0d0051f8f7": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 660,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 660
+            }
+          ]
+        },
+        "rs_0878846d6d5cb312016af302ae02a887d2a8f25db62831e5f0": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 282
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.645,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

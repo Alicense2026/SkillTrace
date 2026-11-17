@@ -1,0 +1,371 @@
+{
+  "case_id": "skill-00875",
+  "csv_row": 876,
+  "source_excel_row": "1235",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00875-1794598014466912000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者须同意 PolyForm 条款，并使该软件用途符合许可定义的 permitted_purpose；可适用的许可路径包括非商业目的、符合列明条件的个人用途、列明组织用途，或依法成立的 fair use。",
+      "source_refs": [
+        "license:ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
+      ],
+      "subject": {
+        "artifact": "skill-00875:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "agreed_to_terms",
+        "permitted_purpose",
+        "purpose_is_noncommercial",
+        "personal_use_for_listed_purpose",
+        "benefits_public_knowledge_if_research_experiment_or_testing",
+        "no_anticipated_commercial_application",
+        "user_is_listed_organization_type",
+        "use_is_fair_use_under_law"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游许可使用者仅在相关专利权利要求可由贡献者许可，且因其贡献单独或与提交作品组合而必然被侵害的范围内，依 Apache-2.0 专利授权使用作品。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00875:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游许可使用者不得依赖因其针对作品或其中贡献提起特定专利诉讼而终止的该作品专利许可。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00875:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+        ]
+      },
+      "unresolved_predicates": [
+        "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+        "patent_license_for_that_work_has_terminated"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游许可使用者不得使用许可方商标或名称，除非该使用合理、惯常且仅用于说明作品来源或复现 NOTICE 文件内容。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00875:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "uses_licensor_trade_name_or_mark"
+        ]
+      },
+      "unresolved_predicates": [
+        "uses_licensor_trade_name_or_mark",
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "下游许可使用者不得依赖因其本人或其公司作出规定的书面专利侵权主张而终止的专利许可；公司主张仅对代表该公司工作的许可使用者产生该范围的终止效果。",
+      "source_refs": [
+        "license:ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
+      ],
+      "subject": {
+        "artifact": "skill-00875:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "patent_license_terminated_by_patent_claim"
+        ]
+      },
+      "unresolved_predicates": [
+        "patent_license_terminated_by_patent_claim"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "收到首次书面违规或未获许可行为通知后，下游许可使用者须在收到通知后32日内完全遵守条款，并采取实际步骤纠正既往违规；两项均须及时完成以维持许可继续有效。",
+      "source_refs": [
+        "license:ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
+      ],
+      "subject": {
+        "artifact": "skill-00875:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "first_written_notice_of_violation_or_unlicensed_action"
+        ]
+      },
+      "unresolved_predicates": [
+        "first_written_notice_of_violation_or_unlicensed_action",
+        "full_compliance_with_terms_within_32_days_of_receiving_notice",
+        "practical_steps_taken_to_correct_past_violations_within_32_days_of_receiving_notice"
+      ]
+    }
+  ],
+  "limitations": [
+    "已核验本地 Apache-2.0 与 PolyForm-Noncommercial-1.0.0 摘录中的相关 Use 条款。对象图确认的是远程调用/链接，未确认共享许可对象；未发现许可冲突。",
+    "商业用途、许可条款接受、专利主张及专利权终止等事实未提供，按条件义务处理；未据此判定违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及复制；本例确认远程调用，未确认复制。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及创作衍生作品；未确认修改或衍生。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及再许可；未确认再许可行为。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及分发；未确认分发。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "已确认上游作品被使用；保留适用范围受限的专利授权条件。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及出售作品；未确认出售副本。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "使用已发生；诉讼触发条件未知，条件性保留终止后的禁止要求。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "相关复制及分发条件未确认。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及分发及其通知条件；未确认分发。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象限定为修改作品；未确认上游作品被修改。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象限定为衍生作品；未确认创作衍生作品。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "上游作品使用已发生；是否使用许可方名称或商标未知，保留例外限定的要求。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "与 U012 的商标使用限制合并，保留相同例外及来源。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅在分发时提供或收费承接特定额外责任才触发；未确认该行为。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象为衍生作品分发；未确认衍生或分发。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认分发修改文件。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认以源码形式分发衍生作品。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未确认包含 NOTICE 文件且分发衍生作品。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "对象限定为修改作品；未确认修改。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "下游软件使用已发生；条款要求接受许可，接受状态未知。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "下游软件使用已发生；将 permitted_purpose 作为必要条件保留。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及向他人提供软件副本；未确认分发。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅在他人取得软件副本时要求通知；未确认提供副本。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及修改；未确认修改下游软件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅涉及创作衍生作品；未确认创作。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用已发生；保留适用专利权利要求范围内的许可条件。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "非商业目的为 permitted_purpose 的一条路径，已并入条件义务。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "列明个人用途及其限定作为 permitted_purpose 的可选路径保留。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "列明组织用途作为 permitted_purpose 的可选路径保留。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "依法成立的 fair use 作为许可条款不限制的可选路径保留。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "禁止的是转让或再许可；未确认该行为，远程调用本身不等于再许可。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "使用已发生；专利主张及许可终止条件未知，保留条件性禁止要求。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "首次书面违规通知事实未知；按未知而非未发生处理，条件性保留通知后的补救义务。"
+    }
+  ]
+}

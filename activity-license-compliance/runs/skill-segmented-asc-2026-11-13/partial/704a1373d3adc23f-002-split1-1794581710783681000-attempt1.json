@@ -1,0 +1,207 @@
+{
+  "clauses": [
+    {
+      "start_line": 200,
+      "end_line": 206,
+      "clause_label": "agentic_service_responsibility_and_supervision",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "using_agentic_service",
+        "requires": {
+          "all": [
+            "licensee_is_solely_responsible_for_service_actions_and_tasks",
+            "licensee_determines_service_appropriateness",
+            "licensee_authorizes_access_and_connections_to_data_applications_and_systems",
+            "licensee_exercises_judgment_and_supervision_in_production_when_used",
+            "human_confirmation_requests_are_not_automatically_bypassed"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Applies when using agentic services, including the Computer Use API. The service's actions and tasks are within scope.",
+      "condition_explanation": "using_agentic_service applies to use of an agentic service; the remaining predicates state the licensee's expressly assigned responsibilities and prohibition.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Determine whether the agentic service is appropriate for the use case.",
+          "actor": "licensee",
+          "object": "agentic service",
+          "trigger": "When using an agentic service."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Authorize the service's access and connection to data, applications, and systems.",
+          "actor": "licensee",
+          "object": "data, applications, and systems accessed or connected by the agentic service",
+          "trigger": "When using an agentic service that accesses or connects to data, applications, or systems."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Exercise judgment and supervision when and if the service is used in production environments.",
+          "actor": "licensee",
+          "object": "agentic service used in a production environment",
+          "trigger": "When and if the agentic service is used in a production environment."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not automatically bypass requests for human confirmation.",
+          "actor": "licensee",
+          "object": "human confirmation requests encountered by the agentic service",
+          "trigger": "When using an agentic service."
+        }
+      ]
+    },
+    {
+      "start_line": 224,
+      "end_line": 226,
+      "clause_label": "search_results_no_ownership_assertion",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "using_grounding_with_google_search",
+        "requires": "does_not_assert_ownership_rights_in_intellectual_property_in_search_suggestions_or_links_outside_own_web_domains"
+      },
+      "actor_role": "licensee",
+      "scope_note": "Applies to intellectual property in Search Suggestions or Links in Grounded Results, excluding the licensee's web domain(s). This is a restriction on asserting ownership, not a requirement to label output as Google-owned.",
+      "condition_explanation": "using_grounding_with_google_search means using the Grounding with Google Search service. The excluded web domain(s) are the licensee's own.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not assert ownership rights in intellectual property in Search Suggestions or Links in Grounded Results.",
+          "actor": "licensee",
+          "object": "intellectual property in Search Suggestions or Links in Grounded Results, excluding the licensee's web domain(s)",
+          "trigger": "When using Grounding with Google Search; the restriction excludes the licensee's web domain(s)."
+        }
+      ]
+    },
+    {
+      "start_line": 230,
+      "end_line": 232,
+      "clause_label": "search_grounding_application_and_display_scope",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "using_grounding_with_google_search",
+        "requires": {
+          "all": [
+            "application_is_owned_and_operated_by_licensee",
+            "grounded_results_are_displayed_with_associated_search_suggestions",
+            "display_is_only_to_end_user_who_submitted_prompt"
+          ]
+        }
+      },
+      "actor_role": "licensee",
+      "scope_note": "Governs use of Grounding with Google Search: it may only be used in an application owned and operated by the licensee, and Grounded Results must be displayed with associated Search Suggestions only to the end user who submitted the prompt.",
+      "condition_explanation": "using_grounding_with_google_search means use of the named service. The display requirements apply to Grounded Results and the associated Search Suggestion(s) for the prompt submitter.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Use Grounding with Google Search only in an application owned and operated by the licensee.",
+          "actor": "licensee",
+          "object": "Grounding with Google Search service",
+          "trigger": "Whenever the licensee uses Grounding with Google Search."
+        },
+        {
+          "duty_type": "PERFORM",
+          "content": "Display Grounded Results with the associated Search Suggestion(s) only to the end user who submitted the prompt.",
+          "actor": "licensee",
+          "object": "Grounded Results and associated Search Suggestion(s)",
+          "trigger": "Whenever displaying Grounded Results obtained through Grounding with Google Search."
+        }
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "The incorporated Google Cloud Terms of Service, Service Specific Terms, Supplemental Paid Credit Terms, and pricing page are not supplied in full. Their payment, billing, dispute, regional, and pricing provisions cannot be extracted in detail here.",
+    "The source identifies pricing-change timing and states that continued Paid Services use constitutes consent to changes, but the underlying fee amounts and applicable external payment duties are unavailable.",
+    "Definitions and destination-page term references in the Search section provide context; they do not themselves create additional behavioral duties in these target paragraphs."
+  ],
+  "paragraph_audit": [
+    {
+      "unit_id": "P0033",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "This paragraph assigns payment, invoicing, billing, disputes, and related matters to incorporated Google Cloud Terms sections whose operative provisions are not provided; the payment rules cannot be faithfully modeled from this paragraph alone."
+    },
+    {
+      "unit_id": "P0034",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "This paragraph identifies incorporated payment, miscellaneous, and regional-modification sections, including listed subject areas, but their operative terms are unavailable."
+    },
+    {
+      "unit_id": "P0035",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "This paragraph incorporates external pricing, billing, and supplemental paid-credit terms that are not supplied; their operative duties and conditions cannot be determined."
+    },
+    {
+      "unit_id": "P0036",
+      "status": "UNRESOLVED",
+      "clause_labels": [],
+      "reason": "The paragraph specifies that Paid Services fees are on a pricing page and that Google may change pricing, but the applicable prices are not supplied. It also states that continued Paid Services use constitutes consent to posted changes, subject to the stated 30-day default and immediate effective timing for new Paid Services unless otherwise specified."
+    },
+    {
+      "unit_id": "P0037",
+      "status": "NONOPERATIVE",
+      "clause_labels": [],
+      "reason": "This paragraph excludes direct use of Google Cloud Platform services from the scope of these Terms; it does not state an activity constraint on use of the Gemini Paid Services."
+    },
+    {
+      "unit_id": "P0038",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0039",
+      "status": "MODELED",
+      "clause_labels": [
+        "agentic_service_responsibility_and_supervision"
+      ],
+      "reason": "The paragraph assigns responsibility and specific duties concerning agentic-service actions, access, suitability, production supervision, and human confirmation."
+    },
+    {
+      "unit_id": "P0040",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Section heading only."
+    },
+    {
+      "unit_id": "P0041",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "This paragraph defines Grounding with Google Search-related terms and identifies separate destination-page terms. Those definitions and cross-references supply context for the operative restriction in the following paragraph; no separate behavioral rule is extracted here."
+    },
+    {
+      "unit_id": "P0042",
+      "status": "CONTEXT",
+      "clause_labels": [],
+      "reason": "Use-restrictions heading only."
+    },
+    {
+      "unit_id": "P0043",
+      "status": "MODELED",
+      "clause_labels": [
+        "search_grounding_application_and_display_scope"
+      ],
+      "reason": "Requires the service to be used only in an application owned and operated by the licensee and limits display of Grounded Results and associated Search Suggestions to the prompt-submitting end user."
+    }
+  ]
+}

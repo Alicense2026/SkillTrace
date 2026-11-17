@@ -1,0 +1,66 @@
+{
+  "case_id": "chain-0193-40c7efe50962",
+  "input_group_row": 193,
+  "aggregate_count": 3,
+  "combination": {
+    "GitHub许可证": "BSD-3-Clause",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "3"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0193-40c7efe50962",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0193-40c7efe50962:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "A/S：Use Gemini API 上游原始资产；摘录仅禁止使用服务开发与服务竞争的模型，且禁止逆向工程、提取或复制服务组件；事实仅确认远程调用和使用，未表明这些特定行为，因此该禁止条款在已知事实下不适用。来源：Gemini API Additional Terms，L31-L34。",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "上游结构化抽取把 L31-L34 映射为对 Use 的无条件禁止，但原文摘录将禁止范围限定为开发竞争模型及逆向工程、提取或复制服务组件；因此未将该映射泛化为普通 API 调用禁令。",
+      "BSD-3-Clause 的许可授予映射针对 downstream 资产；现有事实仅确认调用/链接上游 API，未证明 BSD 资产被使用、复制、修改或分发，也未证明两许可约束同一对象。未据此推断许可冲突或通知义务。",
+      "关系记录明确代码修改不适用；分发、源代码提供、再许可及商业用途均无已知事实。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0185-6dee5744e339.json",
+  "original_case_id": "chain-0185-6dee5744e339",
+  "original_request_sha256": "63789a2339ca4d63bdf2963280776fc3409c984933b4fd5f58d51aac46d2c74a",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0185-6dee5744e339": "chain-0193-40c7efe50962",
+    "license-text:upstream:ffe5b0021e0b945a": "license-text:upstream:ffe5b0021e0b945a",
+    "license-text:downstream:2df6b5d5eb63f921": "license-text:downstream:2df6b5d5eb63f921",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/184": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/192"
+  }
+}

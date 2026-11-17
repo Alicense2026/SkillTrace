@@ -1,0 +1,170 @@
+{
+  "case_id": "chain-11036-abef5e6d4cbd",
+  "source_csv_line": 11037,
+  "row": {
+    "github_repo": "claude-code-leak-source-code",
+    "github_url": "https://github.com/muhammadhaseebiqbal-dev/claude-code-leak-source-code",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/utils/codeIndexing.ts:66 ｜ 调用原文: gemini: 'gemini',（引用处 第98行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: codeIndexing 中仅见 provider 字符串，无法确认是否真实调用 Gemini 模型",
+    "batch": "5001-5500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "muhammadhaseebiqbal-dev/claude-code-leak-source-code",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "24cba54b42e9559ab7f152b3bbbedcb4c3b1d5a3fff9aa3bdc784bafd5530e8c",
+    "filename": "_licenseref_full/texts/24cba54b42e9559ab7f152b3bbbedcb4c3b1d5a3fff9aa3bdc784bafd5530e8c.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:claude-code-leak-source-code-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-11036-abef5e6d4cbd",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-11036-abef5e6d4cbd:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "AMBIGUOUS",
+            "when": true,
+            "requires": "Use of the Services to develop models competing with the Services, or attempt to reverse engineer, extract, or replicate a component of the Services"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:643d2be6a2d61ce2"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "S": {
+            "artifact": "chain-11036-abef5e6d4cbd:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PROHIBITED"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "subject": {
+          "artifact": "chain-11036-abef5e6d4cbd:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not redistribute the repository source code.",
+        "trigger": "activity:Distribute",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Distribute"
+        ],
+        "source_refs": [
+          "license-text:downstream:643d2be6a2d61ce2"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游原文为 Gemini API Additional Terms of Service，SHA-256 704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138。结构化条款将其概括为对上游资产的一般 Use 禁止；但摘录实际仅禁止以服务开发竞争模型及逆向工程、提取或复制服务组件。不能据此断定本任务已发生禁止用途，且竞争模型及服务组件的定义依赖原文上下文。",
+      "下游原文仅为“UNLICENSED — NOT FOR REDISTRIBUTION”，并未说明限制提出者或其权限；条款范围是仓库源代码。分发事实未知。",
+      "证据确认的是对 Gemini API 的远程调用和链接关系；没有依据认定分发、修改、商业用途或两份许可约束同一对象。因此未判定许可间冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 16737,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1027,
+    "output_tokens_details": {
+      "reasoning_tokens": 349
+    },
+    "total_tokens": 17764,
+    "attribution": {
+      "items": {
+        "msg_037e43330566c007016af53cc6ce7c87d28e069fe7b0f6e5e0": {
+          "input_tokens": 14667,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14667,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_037e43330566c007016af53cc6ce7c87d28fde88969bad1a74": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_037e43330566c007016af53cce002c87d2861891ed33a75968": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 678,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 678
+            }
+          ]
+        },
+        "rs_037e43330566c007016af53ccde8fc87d2b95acf829fc6c72a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 349
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "6b547af7b3bb297b0abeb6c78ad864e808bc710dd58a9bef8c8fc21466b9e8f8",
+  "elapsed_seconds": 28.22
+}

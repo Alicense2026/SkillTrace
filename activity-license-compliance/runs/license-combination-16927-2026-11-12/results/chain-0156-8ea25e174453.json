@@ -1,0 +1,72 @@
+{
+  "case_id": "chain-0156-8ea25e174453",
+  "input_group_row": 156,
+  "aggregate_count": 6,
+  "combination": {
+    "GitHub许可证": "MPL-2.0",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "6"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0156-8ea25e174453",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0156-8ea25e174453:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:80f873eb427a6493"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0156-8ea25e174453:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "可信记录确认对上游 Apache-2.0 资产进行 Use、Link 和 RemoteInteraction，且没有代码修改；API调用不等同于代码或权重转移。",
+      "对象图的依赖、打包、修改副本及组合产品关系均未知，scope_shared=null；目前不能据此认定两份许可在同一受约束对象上共同适用。",
+      "MPL-2.0 的结构化摘录仅提供第2.1节许可授予的引言，未列明授予的具体权利；该规则标记为 FIRST_PASS_REVIEW_REQUIRED。不得从摘录推断未提供的权利范围或远程调用义务。",
+      "已检查的 Apache-2.0 条款摘录授予上游作品的 Use 权利，但其范围注释未涵盖专利权；本结论仅限该摘录及已确认的活动。"
+    ],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0158-34d9246a3957.json",
+  "original_case_id": "chain-0158-34d9246a3957",
+  "original_request_sha256": "1b75a4d111988927003fe9c1531b4235a9c2d2336730c2f6bce6621526809269",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0158-34d9246a3957": "chain-0156-8ea25e174453",
+    "license-text:upstream:f442ffb3b75c892c": "license-text:upstream:f442ffb3b75c892c",
+    "license-text:downstream:80f873eb427a6493": "license-text:downstream:80f873eb427a6493",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/157": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/155"
+  }
+}

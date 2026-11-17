@@ -1,0 +1,80 @@
+{
+  "case_id": "chain-0242-5837c495761c",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 DeepSeek Open Platform 服务条款。",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0242-5837c495761c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 DeepSeek Open Platform 服务条款。",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0242-5837c495761c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:RemoteInteraction",
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "向终端用户清楚披露输出由 AI 生成、可能包含错误或遗漏且仅供参考。",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0242-5837c495761c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:RemoteInteraction",
+      "unresolved_predicates": [
+        "output_disclosure_fulfilled"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若服务向用户提供 Elastic 软件任何实质功能，则不得以该软件向第三方提供 hosted 或 managed service。",
+      "source_refs": [
+        "license-text:downstream:a9a19e650c6d6d03"
+      ],
+      "subject": {
+        "artifact": "chain-0242-5837c495761c:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:RemoteInteraction",
+        "service_provides_users_access_to_any_substantial_set_of_software_features_or_functionality"
+      ]
+    }
+  ],
+  "aggregate_count": 2
+}

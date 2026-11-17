@@ -1,0 +1,431 @@
+{
+  "case_id": "skill-00045",
+  "csv_row": 46,
+  "source_excel_row": "78",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00045-1794590930114061000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "被许可人仅在相关专利权利要求属于贡献者可许可且因其贡献单独或与提交作品结合而必然被侵犯时，依该专利授权范围使用作品。",
+      "trigger": true,
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "被许可人不得在相关专利授权因其针对作品或其中贡献提起所述专利诉讼而终止后，继续依该专利授权行事。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+        "patent_license_for_that_work_has_terminated"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "被许可人使用、复制及分发上游作品时须遵守 Apache 许可对该作品的适用条件。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "use_reproduction_and_distribution_of_work_otherwise_complies_with_license"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "被许可人不得使用许可人的商号、商标、服务标志或产品名称；例外仅为合理且惯常地描述作品来源或复制 NOTICE 内容。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_of_licensor_trade_name_or_mark"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "use_of_licensor_trade_name_or_mark",
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若被许可人向其他接收者分发上游作品或其衍生作品，须向各接收者提供 Apache 许可证副本。",
+      "trigger": "activity:Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "若分发被修改的文件，须使每个该文件带有醒目的变更说明。",
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "licensee_distributes_modified_file"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "licensee_distributes_modified_file"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "DerivativeWork"
+      },
+      "requirement": "若以源代码形式分发衍生作品，须保留与该衍生作品相关的原作品源代码中的版权、专利、商标及归属声明。",
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "licensee_distributes_derivative_in_source_form"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "licensee_distributes_derivative_in_source_form"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "skill-00045:upstream",
+        "kind": "DerivativeWork"
+      },
+      "requirement": "若作品分发包含 NOTICE 文件且被许可人分发衍生作品，须附上其中与衍生作品相关归属声明的可读副本。",
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "work_includes_notice_file_as_part_of_distribution",
+          "licensee_distributes_derivative_work"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "work_includes_notice_file_as_part_of_distribution",
+        "licensee_distributes_derivative_work"
+      ],
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "subject": {
+        "artifact": "skill-00045:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "每当复制软件或其实质部分时，须在所有该等副本或实质部分中包含版权声明及 MIT 许可声明；仅远程 API 调用不触发该要求。",
+      "trigger": {
+        "all": [
+          "activity:Copy",
+          "copy_or_substantial_portion_created"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Copy",
+        "copy_or_substantial_portion_created"
+      ],
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "subject": {
+        "artifact": "skill-00045:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若分发的软件副本或实质部分包含该软件，须在所有该等副本或实质部分中包含版权声明及 MIT 许可声明。",
+      "trigger": {
+        "all": [
+          "activity:Distribute",
+          "copy_or_substantial_portion_distributed"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "copy_or_substantial_portion_distributed"
+      ],
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ]
+    }
+  ],
+  "limitations": [
+    "已确认的事实是下游远程调用及与上游的链接；没有证据表明复制、分发、修改、捆绑或提供源码。不得将 API 调用视为权重或源码转移。",
+    "对象图的 scope_shared 未知，且对象区分上游原作品与下游作品；本次没有依据认定两许可共同约束同一对象，故不作许可间冲突结论。",
+    "商业用途、专利诉讼、商标使用、分发形式及相关通知履行均未知；未知不等于已违反或已履行。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "复制授权条款本身未列出额外义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "制作衍生作品的授权条款本身未列出额外义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "再许可授权条款本身未列出额外义务。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分发授权条款本身未列出额外义务；具体分发条件由 U009 列明。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "使用事实已知；专利授权适用范围条件保留为义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "出售副本未见发生事实；本条仅为有限专利授权。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "专利诉讼及授权终止情况未知，已保留条件性限制。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4,
+        5
+      ],
+      "reason": "复制授权所附许可副本及修改文件变更声明要求分别保留。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "reason": "分发许可副本、修改声明、源代码声明保留及 NOTICE 归属义务均已按触发条件保留。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "使用上游作品时须满足许可条件，履行情况未知。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "衍生作品上的额外条款不能取代底层作品适用条件；与 U010 同义去重。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该规则界定明确允许的商标使用例外；限制由 U013 表达。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "商标是否使用及是否落入例外未知，已保留条件限制。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "NOT_APPLICABLE",
+      "obligation_indices": [],
+      "reason": "未提供分发中提供或收费支持、保证、赔偿等额外责任的事实；该条款仅在该行为发生时适用。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "衍生作品分发授权；其附随分发条件已由 U009 审计。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "修改文件变更声明义务与 U008 同一要求，已合并。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        6
+      ],
+      "reason": "源代码形式分发衍生作品时保留适用声明的义务已保留。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        7
+      ],
+      "reason": "NOTICE 文件及衍生作品分发条件未知，已保留适用归属义务。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "与 U010 同一底层作品合规条件，已合并。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT 使用授权条款本身未增加使用通知义务。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "复制及实质部分形成情况未知，已保留 MIT 通知条件；远程调用本身不触发。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "修改授权所附通知要求仅在复制或实质部分形成时触发，与 D002 同一要求已合并。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "合并授权涉及的软件副本通知要求已按副本条件合并保留。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        9
+      ],
+      "reason": "发布时是否包含软件副本或实质部分未知，通知条件已保留。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        9
+      ],
+      "reason": "分发软件副本的通知要求与 D005 相同，已合并。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "再许可中是否包含软件副本或实质部分未知；同一副本通知要求已保留。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "出售副本通知条件与 MIT 副本通知要求相同，已合并。"
+    }
+  ]
+}

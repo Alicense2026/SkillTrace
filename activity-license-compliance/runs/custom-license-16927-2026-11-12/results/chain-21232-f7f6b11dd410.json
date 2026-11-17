@@ -1,0 +1,189 @@
+{
+  "case_id": "chain-21232-f7f6b11dd410",
+  "source_csv_line": 21233,
+  "row": {
+    "github_repo": "Patchwork-Assurance",
+    "github_url": "https://github.com/sjtroxel/Patchwork-Assurance",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "claude-sonnet-5",
+    "artifact_url": "https://docs.anthropic.com/en/docs/about-claude/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: tests/test_agents.py:142 ｜ 调用原文: finding, trace = analyze_law(_co_law(), SIT, CO_SCOPE, [CO_CHUNK], llm, \"claude-sonnet-5\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 生产 ui/memo.py MODEL_LABELS 与定价表登记的 Sonnet 模型 id，测试仅做断言",
+    "batch": "14201-16927",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "sjtroxel/patchwork-assurance",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "6be1ef3dcefae6d0d279c7372f27c48c144fa254cb33db53fe1d74d70986c258",
+    "filename": "_licenseref_full/texts/6be1ef3dcefae6d0d279c7372f27c48c144fa254cb33db53fe1d74d70986c258.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:Patchwork-Assurance-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-21232-f7f6b11dd410",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-21232-f7f6b11dd410:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": "activity:RemoteInteraction"
+          },
+          "S": {
+            "artifact": "chain-21232-f7f6b11dd410:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the applicable service terms when using the upstream service.",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "subject": {
+          "artifact": "chain-21232-f7f6b11dd410:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the applicable service terms when remotely interacting with the upstream service.",
+        "source_refs": [
+          "license-text:upstream:8a3eac45493eee79"
+        ],
+        "subject": {
+          "artifact": "chain-21232-f7f6b11dd410:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:RemoteInteraction",
+        "unresolved_predicates": [
+          "compliance_with_service_terms"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游摘录仅支持服务访问许可及遵守服务条款的条件，未提供足以判断更具体服务条款内容的摘录。",
+      "下游原文限制的是对仓库内容的特定活动；现有事实仅确认对上游服务的Use和RemoteInteraction，以及API链接关系，未确认对下游仓库内容实施Use、Copy或其他受限活动，故不据此判定冲突或违规。",
+      "对象图未确认上下游许可约束同一对象；API调用不证明模型权重或代码转移。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19203,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 951,
+    "output_tokens_details": {
+      "reasoning_tokens": 230
+    },
+    "total_tokens": 20154,
+    "attribution": {
+      "items": {
+        "msg_06c50bb18cf9e956016af53ef5bcc087d2b095051a6948f7c2": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06c50bb18cf9e956016af53ef5bcc087d2b267234cd305dece": {
+          "input_tokens": 17133,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17133,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_06c50bb18cf9e956016af53efa86fc87d2a8a005a3ad32aca0": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 721,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 721
+            }
+          ]
+        },
+        "rs_06c50bb18cf9e956016af53efa6ffc87d288d7236d34844d0a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 230
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "9a156503be1dfdef1710bbb2a3643a0b18d903b4fc35a6c3b553cba37d843ed2",
+  "elapsed_seconds": 25.65
+}

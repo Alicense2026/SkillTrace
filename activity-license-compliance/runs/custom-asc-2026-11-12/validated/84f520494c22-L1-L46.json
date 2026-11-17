@@ -1,0 +1,163 @@
+{
+  "request_sha256": "ef2c7f27bbd683cc982fe35d8bd79c462e5dd575eb8014b938016cea0eec83a0",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 20,
+        "end_line": 22,
+        "clause_label": "3.1 Permitted Use",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "no_5ire_brand_used_in_modified_versions",
+              "prominent_required_statement_present"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to the Community Edition only. Use, modification, and distribution are stated to be free only subject to both conditions; the required statement is: “This product is based on 5ire Community Edition and is not affiliated with 5ire.” The brand restriction is expressly limited here to modified versions, including their names, logos, and marketing materials. This clause does not supply the underlying Apache 2.0 terms.",
+        "condition_explanation": "Both predicates must hold: the 5ire Brand is not used in a modified version, and the quoted statement is prominently stated."
+      },
+      {
+        "start_line": 26,
+        "end_line": 31,
+        "clause_label": "3.2 Commercial License Required",
+        "activities": [
+          "Distribute",
+          "Use",
+          "ProvideNetworkService",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "serves_enterprise_clients_over_10_users"
+                ]
+              },
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "integrates_into_hardware_or_products_for_sale"
+                ]
+              },
+              {
+                "all": [
+                  "modified_code",
+                  "distribution_directly_or_as_saas",
+                  "government_or_education_procurement_involves_sensitive_data"
+                ]
+              },
+              "uses_5ire_brand_in_product_service_or_promotion"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "A commercial license from 5ire is required for the stated cases. For the first three alternatives, both modification and distribution (directly or as SaaS) are required, plus any one of the listed circumstances. Brand use in a product, service, or promotion independently triggers the requirement. The text does not state the terms of that separate commercial license.",
+        "condition_explanation": "The prohibition applies when any one of the four alternatives is true: each of the first three requires all predicates within that alternative; brand use is an independent trigger. The supplied text does not specify whether obtaining the commercial license changes these restrictions, only that it is required."
+      },
+      {
+        "start_line": 35,
+        "end_line": 37,
+        "clause_label": "3.3 Contributor Agreement",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "contributes_code",
+          "requires": "grant_5ire_exclusive_rights_to_dual_license_contributions_under_apache_2_0_and_proprietary_terms"
+        },
+        "actor_role": "contributor",
+        "scope_note": "By contributing code, the contributor grants 5ire exclusive rights to dual-license that contributor’s contributions. The clause does not specify the grant’s detailed scope or terms.",
+        "condition_explanation": "The obligation applies when the actor contributes code."
+      },
+      {
+        "start_line": 35,
+        "end_line": 37,
+        "clause_label": "3.3 Contributor Agreement",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "contributes_code",
+          "requires": "waive_patent_claims_against_5ire_commercial_use_of_contributions"
+        },
+        "actor_role": "contributor",
+        "scope_note": "By contributing code, the contributor waives patent claims against 5ire’s commercial use of the contributions. This is limited to that stated beneficiary and use.",
+        "condition_explanation": "The waiver applies when the actor contributes code and concerns 5ire’s commercial use of those contributions."
+      },
+      {
+        "start_line": 41,
+        "end_line": 41,
+        "clause_label": "4. Trademark Protection",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "unauthorized_5ire_brand_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The 5ire Brand is excluded from the Apache 2.0 grant, and unauthorized use is prohibited. This addresses the brand, not the software-use grant.",
+        "condition_explanation": "The prohibition applies to 5ire Brand use that is unauthorized; the text does not define authorization."
+      },
+      {
+        "start_line": 45,
+        "end_line": 46,
+        "clause_label": "5. Updates & Enforcement",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "continued_use_after_30_days_from_terms_update",
+          "requires": "acceptance_of_updated_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "5ire reserves the right to update the terms; continued use after 30 days constitutes acceptance. Violations may result in termination of rights and legal action. The text does not identify a cure period or restoration mechanism.",
+        "condition_explanation": "Continued use after 30 days from an update is stated to constitute acceptance of the updated terms."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text refers to Apache License 2.0 and a separate proprietary Commercial Edition license but does not provide their full terms. No terms from those unseen licenses are reconstructed; the extent of any permissions or additional obligations under them is therefore not established here.",
+      "The text does not define the 30-day update period’s starting point or update-notice method, the scope of the brand authorization, or the commercial-license terms. It states possible termination for violations but gives no cure or restoration terms.",
+      "The reference to termination and legal action is recorded with the update/enforcement clause; it does not specify which rights terminate, the termination procedure, or whether rights can be restored."
+    ]
+  }
+}

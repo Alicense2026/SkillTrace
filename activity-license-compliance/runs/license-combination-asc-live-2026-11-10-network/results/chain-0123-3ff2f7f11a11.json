@@ -1,0 +1,135 @@
+{
+  "case_id": "chain-0123-3ff2f7f11a11",
+  "status": "SUCCESS",
+  "request_sha256": "5a86d9061695f82445d2190cd88d11e7a97ab46ce4b534d94a7fb492c89d09f5",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:282b79bf9fcbaf7a"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": "activity:Charge"
+          },
+          "S": {
+            "artifact": "chain-0123-3ff2f7f11a11:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:3662e61b1a8e7172"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "version_supports_remote_interaction",
+                "users_interact_remotely_through_network"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0123-3ff2f7f11a11:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S: ProvideSource/AGPL downstream ModifiedArtifact；第13条仅在修改了Program且该版本支持远程交互时要求提供对应源码；可信记录明确为远程服务调用且代码修改不适用，未触发修改前提，因此本项不适用。来源：AGPL-3.0第13条摘录。",
+        "source_refs": [
+          "license-text:downstream:3662e61b1a8e7172"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "Mistral原文匹配到的摘录仅涉及客户支付应付费用；没有下游收费事实，且摘录不足以判断其他使用或服务许可条件。",
+      "AGPL第13条摘录以修改Program为前提；任务事实称代码修改不适用。未据此推断API远程调用构成AGPL网络源码义务。",
+      "对象图的依赖、捆绑、修改副本及组合产品关系均未确定；API链接/调用本身不证明两项许可约束同一对象。"
+    ],
+    "obligations": [],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": [],
+    "case_id": "chain-0123-3ff2f7f11a11"
+  },
+  "usage": {
+    "input_tokens": 16785,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 891,
+    "output_tokens_details": {
+      "reasoning_tokens": 264
+    },
+    "total_tokens": 17676,
+    "attribution": {
+      "items": {
+        "msg_0acba261bd8937e1016af2fc1cc81887d18a383f5fab6c4fee": {
+          "input_tokens": 14753,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 14753,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0acba261bd8937e1016af2fc22a04487d1a3eac541c43c9673": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 627,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 627
+            }
+          ]
+        },
+        "rs_0acba261bd8937e1016af2fc22846487d19cb8f4b955832661": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 264
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.478,
+  "auto_applied": false,
+  "aggregate_count": 7
+}

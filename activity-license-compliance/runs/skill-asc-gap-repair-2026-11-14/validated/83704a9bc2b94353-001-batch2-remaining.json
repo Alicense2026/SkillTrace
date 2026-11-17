@@ -1,0 +1,51 @@
+{
+  "request_sha256": "a3d2169b09aeb87078d1b5ef8c60baed97badc9a9f408c128a5a706facc1019d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 76,
+        "end_line": 76,
+        "clause_label": "gap/account_real_name_alignment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "account_real_name_subject_matches_actual_user"
+        },
+        "actor_role": "licensee",
+        "scope_note": "User Service Agreement, account real-name authentication: use of the Baidu Intelligent Cloud account is subject to keeping the authentication subject consistent with the actual account user. The existing anchor gap/account_personal_use_and_nontransfer already covers the account-holder-only use and transfer, gift, or inheritance restriction stated in line 74.",
+        "condition_explanation": "account_real_name_subject_matches_actual_user means the account is authenticated in the name of the person or entity that actually uses it; the user must avoid authenticating a company account in an individual's name or authenticating their own account in another person's name.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not authenticate an account in a name inconsistent with the actual account user, including authenticating an account used by a company in an individual's name or an account used by you in another person's name.",
+            "actor": "user",
+            "object": "Baidu Intelligent Cloud account real-name authentication",
+            "trigger": "When completing or maintaining real-name authentication for an account."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Line 75 assigns account-use-right disputes to Baidu for determination based primarily on real-name authentication information, with the stated exception for clear and direct contrary proof. This allocation of account-determination authority is not itself a user action constraint represented by the fixed activity vocabulary; the account-use and authentication duties are captured by the existing anchor and added clause."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0032",
+        "status": "MODELED",
+        "clause_labels": [
+          "gap/account_personal_use_and_nontransfer",
+          "gap/account_real_name_alignment"
+        ],
+        "reason": "The existing anchor covers account-holder-only use and the restriction on transfer, gift, or inheritance without Baidu's consent and a real-name change; the added clause captures the duty to align the real-name authentication subject with the actual account user. Line 75's determination rule is noted separately as an allocation of authority, not an additional user action constraint."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

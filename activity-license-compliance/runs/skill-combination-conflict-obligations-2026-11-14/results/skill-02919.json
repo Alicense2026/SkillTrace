@@ -1,0 +1,361 @@
+{
+  "case_id": "skill-02919",
+  "csv_row": 2920,
+  "source_excel_row": "3993",
+  "status": "SUCCESS",
+  "request_sha256": "2005b9a363551a3c2cbde968463a65477f8557d86f2a4f26bf0fd3c979cb4893",
+  "analysis": {
+    "case_id": "skill-02919",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02919:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:dfcf019bba77a78a04d2f2a03615fcf5dd5e2ebdd5c785fa6c2757c14f54a3e3"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "user_agrees_to_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02919:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:dfcf019bba77a78a04d2f2a03615fcf5dd5e2ebdd5c785fa6c2757c14f54a3e3"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "personal_educational_or_study_use",
+                "reference_for_own_projects",
+                "attribution_visible"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02919:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:dfcf019bba77a78a04d2f2a03615fcf5dd5e2ebdd5c785fa6c2757c14f54a3e3"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                {
+                  "any": [
+                    "execute_scripts_or_tools",
+                    "modify_code_locally"
+                  ]
+                },
+                "noncommercial_purpose",
+                "personal_use",
+                "attribution_visible"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02919:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:dfcf019bba77a78a04d2f2a03615fcf5dd5e2ebdd5c785fa6c2757c14f54a3e3"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "attribution_visible",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-02919:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "skill-02919:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用该材料须符合自定义条款；如属获准使用，须保持“Sistema Marmelstein” - George Marmelstein 及“Todos os direitos reservados.”可见。条款列明的个人学习、项目参考及非商业脚本/工具使用、个人本地修改均受各自条件限制。",
+        "trigger": {
+          "any": [
+            "use_of_downstream_material",
+            "access_or_use_of_downstream_material"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_of_downstream_material",
+          "user_agrees_to_terms",
+          "personal_educational_or_study_use",
+          "reference_for_own_projects",
+          "execute_scripts_or_tools",
+          "modify_code_locally",
+          "noncommercial_purpose",
+          "personal_use",
+          "attribution_visible"
+        ],
+        "source_refs": [
+          "license:dfcf019bba77a78a04d2f2a03615fcf5dd5e2ebdd5c785fa6c2757c14f54a3e3"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的是下游对上游 API 的远程调用及链接关系；没有证据表明下游复制、分发、修改、捆绑或再许可上游软件，也没有证据表明调用者使用了下游仓库中的自定义许可材料。",
+      "MIT 通知条件仅针对软件副本或实质部分；远程 API 调用本身不触发。对象图未确认两份许可约束同一对象，故不据此认定许可冲突。",
+      "自定义许可明确限制其材料的分发、商业使用等行为，但这些活动没有本行发生事实；不将限制扩张至独立下游代码或 API 输出。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "上游软件的使用获许可，条款未附使用义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "当前事实为远程调用，未证明复制上游软件。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明修改上游软件。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明合并上游软件。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明发布上游软件。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明分发上游软件。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明再许可上游软件。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明出售上游软件副本。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "如实际访问或使用下游材料，须依条款接受其条件；当前材料使用事实未知，故保留条件义务。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "下游材料获准使用的用途及归属条件已合并保留；是否触发尚未知。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "执行脚本或工具、或本地修改的非商业及个人用途条件与归属要求已合并保留；调用事实未证明这些活动。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未发生下游材料再分发；API 调用不等于分发该材料。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未发生公开分享下游材料。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未发生出售下游材料。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未确认对下游许可材料作商业使用。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未发生移除或修改下游材料上的声明。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未发生公开分发下游材料的衍生作品。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未发生将下游材料纳入课程、培训或教学材料。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "任何获准的下游材料使用均须保持指定归属可见；与 D002、D003 同类要求合并。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-02919-1794593812028471000-1.json",
+  "usage": {
+    "input_tokens": 20472,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2417,
+    "output_tokens_details": {
+      "reasoning_tokens": 393
+    },
+    "total_tokens": 22889,
+    "attribution": {
+      "items": {
+        "msg_0858aec7d1e50929016af7541dab5487d198c8020c530cf99c": {
+          "input_tokens": 17748,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17748,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0858aec7d1e50929016af7541dab5487d1a4bacd01d24dce6d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0858aec7d1e50929016af7542565f087d18fd76c830e81736d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2024,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2024
+            }
+          ]
+        },
+        "rs_0858aec7d1e50929016af754254a6487d1ace22cc70007afcf": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 393
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

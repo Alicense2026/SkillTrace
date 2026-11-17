@@ -1,0 +1,136 @@
+{
+  "case_id": "chain-0219-e63096083f48",
+  "status": "SUCCESS",
+  "request_sha256": "7620800e29c7249da6b7f999e288defea0b8b695dcbfd377e3a0b78d08d6f94a",
+  "analysis": {
+    "case_id": "chain-0219-e63096083f48",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0219-e63096083f48:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:03b92faa95bc9b49"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0219-e63096083f48:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0219-e63096083f48:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_Llama_agreement",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:2537dca3832f1e4d"
+        ]
+      }
+    ],
+    "limitations": [
+      "Llama 2 第 1(a) 条摘录授予对 Llama Materials 的使用权，但以遵守协议为条件；所提供摘录未包含协议其余条款，不能据此确定具体履行要求。",
+      "对象图确认了 API 调用/链接，但下游 Apache 许可对象与上游 Llama Materials 是否落在同一受约束范围尚未确定。API 调用不证明模型权重转移、修改、分发或网络服务义务的触发。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 18675,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 744,
+    "output_tokens_details": {
+      "reasoning_tokens": 170
+    },
+    "total_tokens": 19419,
+    "attribution": {
+      "items": {
+        "msg_0dca62332d12e4c8016af30012146c87d28bfe4505b58a51d6": {
+          "input_tokens": 16643,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16643,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0dca62332d12e4c8016af30015cb7087d2a4600113feb778b7": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 574,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 574
+            }
+          ]
+        },
+        "rs_0dca62332d12e4c8016af30015aff887d28839797171349f04": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 170
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 16.404,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

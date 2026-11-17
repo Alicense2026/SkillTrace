@@ -1,0 +1,168 @@
+{
+  "case_id": "chain-0052-8e622d95a0f1",
+  "status": "SUCCESS",
+  "request_sha256": "3fd090f60efe2a86101557fd2422783822e59654c7c49437626ad85067d0418a",
+  "analysis": {
+    "case_id": "chain-0052-8e622d95a0f1",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a2b088223db79135"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0052-8e622d95a0f1:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a2b088223db79135"
+        ],
+        "triple": {
+          "A": "TrainModel",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "all": [
+                "uses_output",
+                "trains_competing_model"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0052-8e622d95a0f1:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:baad952e10f28dd6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0052-8e622d95a0f1:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI Services Agreement §2.2 permits access to and use of the Services, including API integration. §3.3(e) restricts using Output to develop competing AI models, subject to a defined Permitted Exception. The restriction is conditional and does not establish that model training occurred.",
+      "The supplied OpenAI agreement refers to Order Forms and OpenAI Policies, and does not establish the applicable customer-specific order, policy version, or whether an exception applies. No relevant Apache-versus-OpenAI contradictory condition is evidenced.",
+      "The Apache-2.0 text governs the downstream repository asset; the evidence establishes an API link/remote call, not transfer of OpenAI model weights or a modified or combined copy. No distribution, source-offer, sublicensing, or training activity is established."
+    ],
+    "obligations": [
+      {
+        "activity": "TrainModel",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Do not use OpenAI Output to develop AI models that compete with OpenAI products or services, unless a Permitted Exception applies.",
+        "source_refs": [
+          "license-text:upstream:a2b088223db79135"
+        ],
+        "subject": {
+          "artifact": "chain-0052-8e622d95a0f1:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:TrainModel",
+            "uses_output",
+            "trains_competing_model"
+          ]
+        },
+        "unresolved_predicates": [
+          "activity:TrainModel",
+          "uses_output",
+          "trains_competing_model",
+          "permitted_exception_applies"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33286,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1026,
+    "output_tokens_details": {
+      "reasoning_tokens": 236
+    },
+    "total_tokens": 34312,
+    "attribution": {
+      "items": {
+        "msg_05988dc8b26a8907016af2e80b9ad087d1b2776c6aef489816": {
+          "input_tokens": 31338,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31338,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05988dc8b26a8907016af2e8114f6c87d1920217d52a544e1a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 790,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 790
+            }
+          ]
+        },
+        "rs_05988dc8b26a8907016af2e811383887d193aa2fab4f0c5354": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 236
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 24.362,
+  "auto_applied": false
+}

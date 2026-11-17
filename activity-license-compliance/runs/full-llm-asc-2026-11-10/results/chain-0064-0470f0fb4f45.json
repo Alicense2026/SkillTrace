@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-0064-0470f0fb4f45",
+  "status": "SUCCESS",
+  "request_sha256": "72b1d445b0bca4755fafc4dd316f6c5d2052352b9977bace180ebc7910f19f44",
+  "analysis": {
+    "case_id": "chain-0064-0470f0fb4f45",
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0383bdf4ac7bed31"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "users_interact_remotely_through_computer_network",
+                "modified_version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0064-0470f0fb4f45:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If the covered program is modified and its modified version supports remote interaction, prominently offer remote users access to the Corresponding Source of that version from a network server at no charge.",
+        "source_refs": [
+          "license-text:downstream:0383bdf4ac7bed31"
+        ],
+        "subject": {
+          "artifact": "chain-0064-0470f0fb4f45:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "users_interact_remotely_through_computer_network",
+            "modified_version_supports_remote_interaction"
+          ]
+        },
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "users_interact_remotely_through_computer_network",
+          "modified_version_supports_remote_interaction",
+          "source_offer_provided"
+        ]
+      }
+    ],
+    "limitations": [
+      "已知事实是应用通过远程服务调用 Qwen；这不证明 Qwen 权重或源码转移、分发、修改，也不证明 Cherry Studio 的用户正在远程交互其修改版本。",
+      "本地 AGPL-3.0 原文第13节的源码提供义务以修改程序及其修改版本支持远程交互为触发条件；现有事实不足以确定这些条件是否成立。",
+      "上游资产标为 Apache-2.0，但本地 Apache 文本 provider_match 为空，且该许可证标签来自模型卡记录；不据此推定与下游 AGPL 许可作用于同一对象。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33778,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 956,
+    "output_tokens_details": {
+      "reasoning_tokens": 325
+    },
+    "total_tokens": 34734,
+    "attribution": {
+      "items": {
+        "msg_0b35553af4f0810e016af2e904188887d1a3db3d39a5de0dfa": {
+          "input_tokens": 31830,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31830,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b35553af4f0810e016af2e90a948087d19c0c23744ea4878c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 631,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 631
+            }
+          ]
+        },
+        "rs_0b35553af4f0810e016af2e90a7d8087d198fc5770e2ec3005": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 325
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.594,
+  "auto_applied": false
+}

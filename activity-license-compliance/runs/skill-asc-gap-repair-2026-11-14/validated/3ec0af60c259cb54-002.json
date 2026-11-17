@@ -1,0 +1,235 @@
+{
+  "request_sha256": "70136a7710c898a402bde85f301f94c4a3518287951e9d74b6e22863b8c00be2",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 34,
+        "end_line": 37,
+        "clause_label": "gap/customer_use_prohibited_for_phi_without_addendum",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "protected_health_information_processed_without_healthcare_addendum_or_service_not_designed_for_phi"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 5.4. Customer may not use Services to create, receive, maintain, transmit, or otherwise process Protected Health Information unless Customer has signed the Healthcare Addendum. Notwithstanding that exception, Services not designed for PHI may not be used to store, transmit, or process it.",
+        "condition_explanation": "protected_health_information_processed_without_healthcare_addendum_or_service_not_designed_for_phi means either Customer processes PHI without signing the Healthcare Addendum, or the Service is not designed for PHI and Customer stores, transmits, or processes PHI using it.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services to create, receive, maintain, transmit, or otherwise process Protected Health Information unless the Healthcare Addendum has been signed; do not use a Service not designed for PHI to store, transmit, or process PHI.",
+            "actor": "Customer",
+            "object": "Services, specifically their use to process Protected Health Information",
+            "trigger": "Whenever Customer uses a Service to process PHI; the signed Healthcare Addendum exception applies only to the first prohibition, not to use of a Service not designed for PHI."
+          }
+        ]
+      },
+      {
+        "start_line": 40,
+        "end_line": 44,
+        "clause_label": "gap/gap_customer_service_use_subject_to_payment_and_billing_duties",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "applicable_fees_paid_under_order_form_payment_terms",
+              "complete_accurate_billing_and_contact_information_provided",
+              "required_tax_withholding_payment_uplift_made",
+              "undisputed_invoice_amounts_paid",
+              "invoice_dispute_notice_sent_within_30_days_if_disputing"
+            ]
+          }
+        },
+        "actor_role": "customer",
+        "scope_note": "Sections 6.1–6.5. These are payment and billing conditions associated with Customer’s use of purchased Services, not a permission for Customer to charge third parties. Fees, currency, payment terms, payment interval, and any minimum commitment depend on the applicable Order Form; the Service Credit Terms are externally referenced. This clause does not encode OpenAI’s separate right to charge Customer or suspend/terminate Services for overdue Fees.",
+        "condition_explanation": "applicable_fees_paid_under_order_form_payment_terms means Customer pays applicable Fees to OpenAI or its reseller in the currency and under the terms in the Order Form, including invoices at the specified interval. complete_accurate_billing_and_contact_information_provided means Customer provides complete and accurate billing and contact information. required_tax_withholding_payment_uplift_made means Fees are paid without deduction or withholding, except where law requires it, in which case Customer increases payment so the net received equals the invoiced amount. undisputed_invoice_amounts_paid means all undisputed amounts are paid. invoice_dispute_notice_sent_within_30_days_if_disputing means, if Customer disputes an invoice, Customer contacts ar-enterprise@openai.com within 30 days after issuance and pays all undisputed amounts.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay applicable Fees to OpenAI or Customer’s reseller in the currency and under the payment terms in the Order Form, and pay invoices on the payment interval stated there.",
+            "actor": "Customer",
+            "object": "Fees for the Services",
+            "trigger": "When Fees are due under the applicable Order Form."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide complete and accurate billing and contact information to OpenAI.",
+            "actor": "Customer",
+            "object": "Billing and contact information",
+            "trigger": "When providing or maintaining billing and contact information for the Services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Fees in full without deduction or withholding; if a deduction or withholding is required by law, increase payment so the net amount received equals the amount invoiced.",
+            "actor": "Customer",
+            "object": "Fees invoiced for the Services",
+            "trigger": "When paying Fees; the payment uplift applies if a deduction or withholding is required by law."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "To dispute an invoice, contact ar-enterprise@openai.com within 30 days after the invoice was issued and pay all undisputed amounts.",
+            "actor": "Customer",
+            "object": "The disputed invoice and undisputed invoice amounts",
+            "trigger": "If Customer disputes an invoice."
+          }
+        ]
+      },
+      {
+        "start_line": 43,
+        "end_line": 43,
+        "clause_label": "gap/gap_overdue_undisputed_invoice_interest",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_has_overdue_undisputed_invoice_amount",
+          "requires": "overdue_undisputed_amount_subject_to_possible_monthly_finance_charge"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 6.4: overdue undisputed amounts may be subject to a finance charge of 1.5% of the unpaid balance per month. This preserves the agreement’s discretionary ‘may be subject to’ wording and does not characterize the charge as Customer charging a third party.",
+        "condition_explanation": "customer_has_overdue_undisputed_invoice_amount means an undisputed invoice amount remains unpaid after it is due. The clause records the stated possible consequence, not a mandatory charge.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 43,
+        "end_line": 43,
+        "clause_label": "gap/gap_invoice_dispute_finance_charge",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_has_overdue_undisputed_invoice_amount",
+          "requires": "no_more_than_1_5_percent_of_unpaid_balance_per_month_if_finance_charge_imposed"
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Section 6.4: if a finance charge is imposed on overdue undisputed amounts, the stated rate is 1.5% of the unpaid balance per month. This is a limit on a possible charge, not a duty to impose one.",
+        "condition_explanation": "customer_has_overdue_undisputed_invoice_amount means an undisputed invoice amount remains unpaid after it is due; the agreement says such amounts may be subject to the stated finance charge.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 42,
+        "end_line": 42,
+        "clause_label": "gap/gap_tax_charges_and_customer_tax_payment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "taxes_charged_as_required_by_law_and_customer_pays_fees_without_tax_deduction_subject_to_required_withholding_uplift"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 6.3. Fees exclude taxes; OpenAI or the reseller charges taxes as required by applicable law in connection with the Services. Customer must pay Fees in full without deduction or withholding and increase payment if required withholding would reduce the net amount received. This clause does not treat Customer as charging third parties.",
+        "condition_explanation": "taxes_charged_as_required_by_law_and_customer_pays_fees_without_tax_deduction_subject_to_required_withholding_uplift means applicable taxes are charged by OpenAI or the reseller as law requires, and Customer pays Fees in full, increasing payment when legally required withholding would otherwise reduce the invoiced net amount.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay applicable taxes charged in connection with the Services and pay Fees without tax deduction or withholding; if withholding is legally required, increase payment so the net amount received equals the invoiced amount.",
+            "actor": "Customer",
+            "object": "Taxes and Fees for the Services",
+            "trigger": "When taxes are charged as required by law or Fees are paid; the payment uplift applies if a deduction or withholding is required by law."
+          }
+        ]
+      },
+      {
+        "start_line": 55,
+        "end_line": 55,
+        "clause_label": "gap/gap_customer_suspend_end_user_account_on_openai_request",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "openai_requested_suspension_or_termination_of_relevant_end_user_account",
+          "requires": "continued_use_of_relevant_end_user_account_after_request"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 8.1: OpenAI may request that Customer suspend or terminate the relevant End User account if the End User violates the Agreement or causes, or will cause, a Security Emergency. OpenAI may itself suspend or terminate that account if Customer fails to do so promptly. OpenAI’s direct account action is not modeled as a Customer activity.",
+        "condition_explanation": "openai_requested_suspension_or_termination_of_relevant_end_user_account means OpenAI has requested suspension or termination because an End User violated the Agreement or caused, or will cause, a Security Emergency; continued use after that request is the stated prohibited circumstance.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly suspend or terminate the relevant End User account when OpenAI requests it.",
+            "actor": "Customer",
+            "object": "The relevant End User account",
+            "trigger": "OpenAI requests suspension or termination because the End User violated the Agreement or caused, or will cause, a Security Emergency."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "Section 5.1 references Security Measures at cdn.openai.com/osa/security-measures.pdf, which is not supplied; its contents are excluded and not inferred. The local obligation to comply, and the termination option tied to a materially diminishing update, do not map faithfully to an allowed activity.",
+      "Section 5.2 requires OpenAI to provide the most recent Audit Reports on Customer’s written request, no more than once per year. Providing an audit report is not an allowed activity; this local duty is classified OUTSIDE_ACTIVITY_SCOPE.",
+      "Section 5.3 incorporates the DPA for processing Personal Data, but the DPA is not supplied. Its contents are excluded and not inferred.",
+      "Sections 6.1–6.6 include OpenAI/reseller fee-charging and price-correction terms, a potential suspension or termination for overdue Fees, and Service Credits subject to external Service Credit Terms. These are not represented as Customer Charge/SellCopies permissions; external Service Credit Terms are not supplied.",
+      "Section 8.1’s OpenAI power to suspend or terminate an End User account and Section 8.2’s OpenAI powers to limit or suspend Services, plus notice, tailoring, cooperation, and restoration duties, do not map faithfully to the allowed activities. They are classified OUTSIDE_ACTIVITY_SCOPE rather than represented as Use permissions."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0006",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "gap/customer_use_prohibited_for_phi_without_addendum"
+        ],
+        "reason": "The local PHI prohibition and its Healthcare Addendum and service-design limits are modeled. Section 5.1’s security compliance duty and conditional termination option, Section 5.2’s duty to provide Audit Reports on written request no more than once yearly, and Section 5.3’s DPA compliance rule cannot all be represented by the permitted activities. The Security Measures and DPA are absent external references and are not inferred."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "MODELED",
+        "clause_labels": [
+          "gap/gap_customer_service_use_subject_to_payment_and_billing_duties",
+          "gap/gap_overdue_undisputed_invoice_interest",
+          "gap/gap_invoice_dispute_finance_charge",
+          "gap/gap_tax_charges_and_customer_tax_payment"
+        ],
+        "reason": "Customer payment, billing-information, tax, withholding-uplift, invoice-dispute, and overdue-amount terms are captured as conditions or ancillary duties on relevant Service use without misusing Charge. OpenAI’s separate fee-charging, pricing-correction, and Services suspension or termination powers, and external Service Credit Terms, are noted as not represented or excluded in coverage_notes."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [
+          "gap/gap_customer_suspend_end_user_account_on_openai_request"
+        ],
+        "reason": "The local Customer duty to promptly suspend or terminate an End User account on OpenAI’s qualifying request is recorded. OpenAI’s direct account suspension or termination power, Services limitation or suspension powers, and associated notice, tailoring, cooperation, and restoration duties do not fit the fixed activity vocabulary."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_grants_openai_limited_content_use_permission",
+          "openai_feedback_use_permission"
+        ],
+        "reason": "The immutable anchors cover Sections 9.2–9.3: OpenAI’s limited necessary use of Customer Content, including extension to subcontractors and subprocessors, and the Feedback use permission. Section 9.1 reserves IP Rights except as expressly granted and states Customer obtains only a limited right to use Services with no ownership transfer; this is reservation/ownership language, not an additional activity permission or independently expressible use constraint, so no new clause is appropriate."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 2
+}

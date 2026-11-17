@@ -1,0 +1,147 @@
+{
+  "case_id": "chain-0291-efa3b2f6e135",
+  "status": "SUCCESS",
+  "request_sha256": "027dd358c3a77e93b6a12f798572c51ef68defcde0b7340124da37d745cc4f98",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0291-efa3b2f6e135:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c45f65cecc107355"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0291-efa3b2f6e135:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本案确认的是对上游 BSD-3-Clause 资产的远程服务调用/链接；未证明分发、修改、依赖、捆绑或共同产品，故不将分发条件套用于 API 调用，也不推断许可范围共享。",
+      "本地原文摘录仅提供 BSD 的再分发与使用许可引言及 CC-BY-4.0 的许可授予引言，未提供通知保留、CC 许可条件等具体条款的完整上下文；不能据此进一步判定这些条件的具体内容或履行情况。两份本地文本均无 provider_match。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对上游材料的使用须保留适用通知。",
+        "source_refs": [
+          "license-text:upstream:5d410e8cefff0f80"
+        ],
+        "subject": {
+          "artifact": "chain-0291-efa3b2f6e135:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "retain_applicable_notices"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对下游 CC-BY-4.0 材料的使用须遵守 CC 许可条件。",
+        "source_refs": [
+          "license-text:downstream:c45f65cecc107355"
+        ],
+        "subject": {
+          "artifact": "chain-0291-efa3b2f6e135:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_CC_license_conditions"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0291-efa3b2f6e135"
+  },
+  "usage": {
+    "input_tokens": 19067,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 572,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 19639,
+    "attribution": {
+      "items": {
+        "msg_0c6e0669588f687d016af303d5408887d186654d381f61cb66": {
+          "input_tokens": 17035,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17035,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c6e0669588f687d016af303d5b54c87d1822d91715ea2d490": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 572,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 572
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 15.179,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

@@ -1,0 +1,175 @@
+{
+  "case_id": "chain-4550-30a0450ccc8c",
+  "source_csv_line": 4551,
+  "row": {
+    "github_repo": "neuraldeskapp",
+    "github_url": "https://github.com/vakovalskii/neuraldeskapp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "io.github.pipeworx-io/tavily",
+    "artifact_url": "https://github.com/pipeworx-io/mcp-tavily",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/agent/ipc-handlers.ts:165 ｜ 调用原文: const SECRET_PATTERNS = /(_KEY|_SECRET|_TOKEN|_PASSWORD|_CREDENTIAL|_AUTH)$|^(OPENAI|ANTHROPIC|TAVILY|ZAI|AWS_|AZURE_|GOOGLE_|GITHUB_TOKEN|NPM_TOKEN|CODEX_)/i; ｜ 证据等级: 待复核（中） ｜ 解析: mcp-registry → mcp-registry ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: SettingsModal 中配置 tavilyApiKey 并启用 web 搜索，实际调用 Tavily 搜索 API",
+    "batch": "2001-2500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "vakovalskii/neuraldeskapp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d",
+    "filename": "_licenseref_full/texts/73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:NeuralDeskApp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-4550-30a0450ccc8c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:74afe03c65d9eace"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-4550-30a0450ccc8c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:5bd511b9855176fa"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+                "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-4550-30a0450ccc8c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:5bd511b9855176fa"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "purchase_commercial_license_from_licensor",
+            "when": "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd_and_uses_software"
+          },
+          "S": {
+            "artifact": "chain-4550-30a0450ccc8c:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已确认的活动是下游对 Tavily 上游资产的 Use、Link 和 RemoteInteraction；无证据表明上游资产被复制、修改、分发、纳入或作为权重转移。API 调用本身不证明这些活动，也不证明两份许可证约束共同适用的对象。",
+      "MIT 的首轮结构化 Use 条款要求保留版权及许可通知，但所引原文将通知要求限定于 Software 的副本或实质部分。当前事实未证明发生 Copy；摘录不足以将该通知条件扩展至单纯远程调用。",
+      "下游 LicenseRef-Custom 条款针对下游软件的使用；当前事实未明确下游该软件的 Use 活动、收入/资金门槛或竞争性产品条件，故不能判定这些条件已触发或已违反。"
+    ],
+    "obligations": [],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20654,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1175,
+    "output_tokens_details": {
+      "reasoning_tokens": 431
+    },
+    "total_tokens": 21829,
+    "attribution": {
+      "items": {
+        "msg_0fa815f02ccb8ee2016af53bda4f5c87d197e4c33c1f89320a": {
+          "input_tokens": 18584,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18584,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0fa815f02ccb8ee2016af53bda4f5c87d1bde976494a81d59b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0fa815f02ccb8ee2016af53be29a6087d1a5ea6bdce5dc2178": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 744,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 744
+            }
+          ]
+        },
+        "rs_0fa815f02ccb8ee2016af53be27e9887d1bc4a9c9f5fc3c026": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 431
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "4c0fed6cec45e9018f3c6fa087d664081d6d7ab2ce8ba63198175da0e53183c3",
+  "elapsed_seconds": 27.2
+}

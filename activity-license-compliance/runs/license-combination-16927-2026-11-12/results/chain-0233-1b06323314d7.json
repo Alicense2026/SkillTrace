@@ -1,0 +1,135 @@
+{
+  "case_id": "chain-0233-1b06323314d7",
+  "input_group_row": 233,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "CC-BY-NC-4.0",
+    "资产许可证原文标题/标签": "阿里云百炼服务特别说明",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0233-1b06323314d7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1b06323314d7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0d35a91091710e15"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1b06323314d7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0d35a91091710e15"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0233-1b06323314d7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0233-1b06323314d7:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use generated content beyond the experience purpose, including for commercial purposes or by providing it to third parties or third-party platforms, if the conduct falls within the prohibition in the excerpt.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "conduct_matches_prohibition_in_excerpt"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0233-1b06323314d7:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Exercise the use only within the CC-BY-NC-4.0 Licensed Rights and comply with applicable CC license conditions.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "within_license_scope",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:0d35a91091710e15"
+        ]
+      }
+    ],
+    "limitations": [
+      "供应链记录确认对上游资产的远程服务调用及使用，但没有说明生成内容的具体用途；摘录中的体验用途、商业化及向第三方提供限制是否适用尚不能确定。",
+      "对象图确认下游与上游存在 API 链接，但依赖、修改副本及共同产品关系未知；不能据此认定双方许可条款共同约束同一对象。",
+      "所提供的 CC-BY-NC-4.0 摘录仅支持许可范围及一般许可条件，未提供非商业限制等具体条款；不据此补写该等义务或判定冲突。",
+      "本次仅输出与已确认的 Use 活动相关规则；未确认分发、修改或源码提供等活动。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0230-fc073bd7cece.json",
+  "original_case_id": "chain-0230-fc073bd7cece",
+  "original_request_sha256": "b5c5e911986736d63568ce2ba5fc3200d0cd7d235f1e11795d73a10d9e071a7e",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0230-fc073bd7cece": "chain-0233-1b06323314d7",
+    "license-text:upstream:e0a6023d95b56568": "license-text:upstream:e0a6023d95b56568",
+    "license-text:downstream:0d35a91091710e15": "license-text:downstream:0d35a91091710e15",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/229": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/232"
+  }
+}

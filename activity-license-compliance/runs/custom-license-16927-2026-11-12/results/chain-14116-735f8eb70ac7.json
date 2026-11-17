@@ -1,0 +1,169 @@
+{
+  "case_id": "chain-14116-735f8eb70ac7",
+  "source_csv_line": 14117,
+  "row": {
+    "github_repo": "semanticembed-sdk",
+    "github_url": "https://github.com/jmurray10/semanticembed-sdk",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "sammcj/claude-agent-sdk",
+    "artifact_url": "https://github.com/sammcj/agentic-coding/tree/main/Skills_disabled/claude-agent-sdk",
+    "artifact_license": "Apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/semanticembed/agent/agent.py:25 ｜ 调用原文: pip install 'semanticembed[agent-claude]' # claude-agent-sdk>=0.1.60 ｜ 证据等级: 待复核（中） ｜ 解析: skillsmp → skillsmp ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: agent.py 实际 import 并调用 create_sdk_mcp_server/query/tool 构建 Claude Agent",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "jmurray10/semanticembed-sdk",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "07ae269fd17f31b9ea6323739e9ea3d6f3df184cab10d503634809040bec7452",
+    "filename": "_licenseref_full/texts/07ae269fd17f31b9ea6323739e9ea3d6f3df184cab10d503634809040bec7452.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:semanticembed-sdk-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14116-735f8eb70ac7",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8600a9206093ca6c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-14116-735f8eb70ac7:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:97941841e222c67c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "activity_is_unauthorized"
+          },
+          "S": {
+            "artifact": "chain-14116-735f8eb70ac7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "LicenseRef-Custom 摘录禁止未经授权的使用，但未定义何为授权或说明授权来源；现有事实不能确定该次使用是否未经授权。",
+      "对象图确认的是远程 API 调用和链接，不证明上下游许可约束同一对象或构成衍生作品；未据此判定许可冲突。",
+      "仅纳入与已确认 Use 活动相关的结构化条款；本次未对其他活动作结论。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 LicenseRef-Custom 覆盖的 SemanticEmbed SDK 时，不得未经授权使用该 SDK。",
+        "source_refs": [
+          "license-text:downstream:97941841e222c67c"
+        ],
+        "subject": {
+          "artifact": "chain-14116-735f8eb70ac7:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "Use",
+        "unresolved_predicates": [
+          "activity_is_unauthorized"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17885,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 800,
+    "output_tokens_details": {
+      "reasoning_tokens": 246
+    },
+    "total_tokens": 18685,
+    "attribution": {
+      "items": {
+        "msg_0a194167a1ddb6ae016af53d949d6087d19f4f024b9616755d": {
+          "input_tokens": 15815,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15815,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a194167a1ddb6ae016af53d949d6087d1a09c561db7415643": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a194167a1ddb6ae016af53d99ace887d1919fb949a7d8eb13": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 554,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 554
+            }
+          ]
+        },
+        "rs_0a194167a1ddb6ae016af53d99914887d1bdffe41facc1a816": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 246
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "6ae16e0caa1592a1096c5f79b4054080f0e3ef16ca3e41c5b595fcd165c0f857",
+  "elapsed_seconds": 23.58
+}

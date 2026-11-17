@@ -1,0 +1,148 @@
+{
+  "case_id": "chain-0067-860338b8c0be",
+  "status": "SUCCESS",
+  "request_sha256": "924026974a4cdcae7172922831c3b7787789e3ac36b005bc90ac04be6d0df2b4",
+  "analysis": {
+    "case_id": "chain-0067-860338b8c0be",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6460ffb1275df2f5"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0067-860338b8c0be:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cde4f6b05416ce46"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "that_modified_version_supports_remote_interaction",
+                "users_interact_remotely_with_that_version"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0067-860338b8c0be:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 Qwen 模型按可信记录为远程服务调用；API调用不证明模型权重转移、修改、分发或与下游程序构成同一受许可对象。对象图的共享范围未确定。",
+      "Apache 2.0 第2节摘录支持上游使用许可；下游 AGPL-3.0 第13节的源码提供义务仅在相应受覆盖程序被修改且该修改版本支持并提供远程交互时适用。当前事实未证明这些触发条件，不能据远程 API 调用推定义务已触发。",
+      "结构化 ASC 标记为首轮抽取；以上仅就相关摘录及可信事实判断。"
+    ],
+    "obligations": [
+      {
+        "activity": "ProvideSource",
+        "subject": {
+          "artifact": "chain-0067-860338b8c0be:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "requirement": "若修改了 AGPL 覆盖程序，且该修改版本支持远程交互并有用户通过网络与之交互，须显著提供获取该版本 Corresponding Source 的机会，并通过网络服务器免费提供访问。",
+        "trigger": {
+          "all": [
+            "modified_covered_program",
+            "that_modified_version_supports_remote_interaction",
+            "users_interact_remotely_with_that_version"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "modified_covered_program",
+          "that_modified_version_supports_remote_interaction",
+          "users_interact_remotely_with_that_version",
+          "network_source_offer_available"
+        ],
+        "source_refs": [
+          "license-text:downstream:cde4f6b05416ce46"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 33783,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1033,
+    "output_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "total_tokens": 34816,
+    "attribution": {
+      "items": {
+        "msg_00697c827c452ffa016af2e94d7f1087d29d94102d2f8fae1f": {
+          "input_tokens": 31835,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31835,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_00697c827c452ffa016af2e953f3a087d2a22789b4707bee19": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 720,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 720
+            }
+          ]
+        },
+        "rs_00697c827c452ffa016af2e953d7f087d2bd49d2708bdb90da": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 313
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.434,
+  "auto_applied": false
+}

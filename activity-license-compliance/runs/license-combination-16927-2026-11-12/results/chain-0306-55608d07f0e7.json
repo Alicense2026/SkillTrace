@@ -1,0 +1,78 @@
+{
+  "case_id": "chain-0306-55608d07f0e7",
+  "input_group_row": 306,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "CC-BY-NC-SA-4.0",
+    "资产许可证原文标题/标签": "AGPL-3.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0306-55608d07f0e7:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:2e32371e76a3bd3e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0306-55608d07f0e7:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "AGPL-3.0 §13的摘录以修改Program且修改版本支持网络交互为触发条件；记录说明代码修改不适用，故未据远程调用单独触发源代码提供义务。该条款只针对修改版本。",
+      "对象图仅确认API链接/远程调用，未确认下游资产是否依赖、包含或与上游构成同一受许可对象；CC许可权利范围及其对本次远程调用的适用性无法据现有摘录进一步确定。"
+    ],
+    "obligations": [],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": [],
+    "case_id": "chain-0306-55608d07f0e7"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0300-6ca8bdd6a21c.json",
+  "original_case_id": "chain-0300-6ca8bdd6a21c",
+  "original_request_sha256": "c69e795ff80fb8341073d0e41dc43eeb6fb2ae577acf3add777214f9d7118309",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0300-6ca8bdd6a21c": "chain-0306-55608d07f0e7",
+    "license-text:upstream:5b08064288d26a33": "license-text:upstream:5b08064288d26a33",
+    "license-text:downstream:2e32371e76a3bd3e": "license-text:downstream:2e32371e76a3bd3e",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/299": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/305"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "case_id": "chain-0079-d7fd83d600a4",
+  "status": "SUCCESS",
+  "request_sha256": "cd0ca247e811e9fbac477a34ed72f86819df07f617f95b70fc71f0b90468cc53",
+  "analysis": {
+    "case_id": "chain-0079-d7fd83d600a4",
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:df611725db93bc3b"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0079-d7fd83d600a4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:81fd0d4efbeb10b4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0079-d7fd83d600a4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [],
+    "review_items": [],
+    "limitations": [
+      "对象图确认的是下游代码对上游 Qwen 模型的远程调用和链接，不是模型权重转移、复制或分发；没有证据表明两份许可约束同一对象。",
+      "Apache 原文中的分发条件适用于分发 Work 或其衍生作品；本案未证实相关分发活动。MIT 原文的通知要求针对软件副本或其实质部分；本案未证实相关复制活动。",
+      "本地 Apache 原文是 Apache License 2.0，但供应链记录中的上游许可标签及模型卡对应关系仍有不确定性；本结论仅覆盖提供的原文与已确认的远程调用范围。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 32615,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 786,
+    "output_tokens_details": {
+      "reasoning_tokens": 313
+    },
+    "total_tokens": 33401,
+    "attribution": {
+      "items": {
+        "msg_05d2283d202cd7c6016af2ea4756a887d1b815dec57981ef16": {
+          "input_tokens": 30667,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30667,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05d2283d202cd7c6016af2ea4dc8d887d1ac12d99ed183a467": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 473,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 473
+            }
+          ]
+        },
+        "rs_05d2283d202cd7c6016af2ea4dad4487d1973da18efd48c157": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 313
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.295,
+  "auto_applied": false
+}

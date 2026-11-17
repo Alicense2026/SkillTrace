@@ -1,0 +1,191 @@
+{
+  "case_id": "chain-0070-53f84dddd43d",
+  "status": "SUCCESS",
+  "request_sha256": "95ace71a20987dd205ec33760926f682ea6b5aa9d603edd49e10a6bbe60b4c56",
+  "analysis": {
+    "case_id": "chain-0070-53f84dddd43d",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:440fb381ed784499"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0070-53f84dddd43d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:db504a79fccb0f47"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0070-53f84dddd43d:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:440fb381ed784499"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0070-53f84dddd43d:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:db504a79fccb0f47"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0070-53f84dddd43d:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发上游软件的副本或实质部分，须在其中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:upstream:440fb381ed784499"
+        ],
+        "subject": {
+          "artifact": "chain-0070-53f84dddd43d:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "notice_included"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发下游软件的副本或实质部分，须在其中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:db504a79fccb0f47"
+        ],
+        "subject": {
+          "artifact": "chain-0070-53f84dddd43d:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "notice_included"
+        ]
+      }
+    ],
+    "limitations": [
+      "已确认的是下游通过 API 远程调用上游模型；该调用关系本身不证明分发、复制、修改或两项许可约束同一对象。",
+      "MIT 原文允许广泛使用等行为，但版权及许可声明条款明确针对副本或软件实质部分；当前无分发事实或履行证据。",
+      "模型卡标注 MIT；本地上游与下游许可证文本相同。许可证文本未明确规定的活动不据此扩展为额外义务。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 33862,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1338,
+    "output_tokens_details": {
+      "reasoning_tokens": 375
+    },
+    "total_tokens": 35200,
+    "attribution": {
+      "items": {
+        "msg_05297180a504928c016af2e999e6f887d196ae5603259b3a65": {
+          "input_tokens": 31914,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31914,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05297180a504928c016af2e9a2527887d18ae89386188590d6": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 963,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 963
+            }
+          ]
+        },
+        "rs_05297180a504928c016af2e9a236c487d18b26442c9065780d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 375
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 28.556,
+  "auto_applied": false
+}

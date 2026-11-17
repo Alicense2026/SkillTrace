@@ -1,0 +1,115 @@
+{
+  "case_id": "chain-0033-09a2e4365b77",
+  "status": "SUCCESS",
+  "request_sha256": "a6f722a8d8f35506af91f66c11cbfe67fb828a6b7a2f38e200b31350d11ecba1",
+  "analysis": {
+    "case_id": "chain-0033-09a2e4365b77",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0033-09a2e4365b77:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：上游 AGPL-3.0 第13条要求为支持远程交互的修改版本提供对应源码获取机会；已知事实是远程服务调用且代码修改不适用，修改版本触发条件不成立，因此该条款在已知事实下不适用，不能据此认定违规。",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "已核对的上游 AGPL-3.0 第13条原文摘录只在修改程序且该版本支持网络远程交互时触发源码提供义务；可信记录明确称代码修改不适用。API 调用本身不等同修改、分发或模型权重转移。",
+      "对象图未确认上下游许可约束同一对象（scope_shared=null）；因此不据此扩展上游条款至下游对象。当前提供的结构化规则集中于第13条，其他可能相关条款未据此作出结论。"
+    ],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17737,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 831,
+    "output_tokens_details": {
+      "reasoning_tokens": 337
+    },
+    "total_tokens": 18568,
+    "attribution": {
+      "items": {
+        "msg_0bdd7703faae88da016af2f806264887d1b780982825b50cc4": {
+          "input_tokens": 15705,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15705,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bdd7703faae88da016af2f80cade087d18fd557fa6ae938c5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 494,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 494
+            }
+          ]
+        },
+        "rs_0bdd7703faae88da016af2f80c925487d1ac081fd7f46f40ca": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 337
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 17.679,
+  "auto_applied": false,
+  "aggregate_count": 60
+}

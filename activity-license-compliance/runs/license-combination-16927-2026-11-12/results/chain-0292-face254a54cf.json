@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-0292-face254a54cf",
+  "input_group_row": 292,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "BSD-3-Clause",
+    "资产许可证原文标题/标签": "智谱开放平台用户协议",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0292-face254a54cf",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0292-face254a54cf:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": "activity:Use",
+            "requires": "conduct_matches_prohibition_in_excerpt"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0292-face254a54cf:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not engage in use conduct covered by the agreement’s listed prohibitions; the excerpt includes restrictions concerning extraction, reverse engineering, certain decision-making uses, model/output training, and specified third-party service provision.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes API use, a link, and remote interaction, but does not establish prohibited extraction, reverse engineering, a restricted decision-making use, training, or onward provision of platform services. No violation is supported by the known facts.",
+      "The upstream excerpt is marked FIRST_PASS_REVIEW_REQUIRED and includes multiple distinct prohibitions; their applicability depends on the particular conduct and full clause context.",
+      "The BSD-3-Clause excerpt grants use subject to notice retention, but the facts do not establish use of the downstream BSD-licensed artifact. The object graph marks dependency, bundling, modified-copy, and combined-product relations unknown; no BSD notice obligation or license conflict is therefore established.",
+      "No distribution, modification, source provision, sublicensing, commercial use, or charge is established. API calling alone is not treated as distribution or transfer of model weights."
+    ],
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0286-0acdcc7deb5a.json",
+  "original_case_id": "chain-0286-0acdcc7deb5a",
+  "original_request_sha256": "a5f6bdcea9172115d9821823d61372a8a54ac2a81e0b5c6dd4a21e99e4d1c5d9",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0286-0acdcc7deb5a": "chain-0292-face254a54cf",
+    "license-text:upstream:1092ebce191fce09": "license-text:upstream:1092ebce191fce09",
+    "license-text:downstream:5d3cd1ca9a6354af": "license-text:downstream:5d3cd1ca9a6354af",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/285": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/291"
+  }
+}

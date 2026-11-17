@@ -1,0 +1,454 @@
+[
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 3,
+      "end_line": 3,
+      "clause_label": "recovered/commercial_terms_scope",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": true,
+        "requires": "customer_is_organization_or_entity_it_represents"
+      },
+      "actor_role": "customer",
+      "scope_note": "Commercial Terms scope Mistral AI Products; excludes individual consumers, addressed to separate consumer terms.",
+      "condition_explanation": "Mistral AI Products covers the listed websites, products, software, services, and technologies offered by Mistral AI.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/commercial_terms_scope",
+      "verdict": "SUPPORTED",
+      "reason": "Line 3 defines the commercial Customer as the organization, company, or other entity represented and identifies the covered Mistral AI Products."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 5,
+      "end_line": 5,
+      "clause_label": "recovered/consumer_terms_boundary",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "UNSPECIFIED",
+        "when": "individual_consumer",
+        "requires": true
+      },
+      "actor_role": "individual_consumer",
+      "scope_note": "Directs individual consumers to other terms; does not state those terms’ rules.",
+      "condition_explanation": "The applicable consumer terms depend on where the individual resides.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/consumer_terms_boundary",
+      "verdict": "SUPPORTED",
+      "reason": "Line 5 directs individual consumers to separate consumer terms based on residence; the anchor correctly avoids importing their content."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 7,
+      "end_line": 7,
+      "clause_label": "recovered/acceptance_binds_customer",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "terms_accepted_by_click_order_form_or_access_on_customer_behalf",
+        "requires": "acceptor_has_legal_authority_to_bind_customer_and_accepts_terms_and_applicable_additional_terms"
+      },
+      "actor_role": "customer",
+      "scope_note": "Acceptance of these Terms and referenced policies/terms forms a binding agreement as of acceptance.",
+      "condition_explanation": "Acceptance occurs by clicking an agreement control, executing a referencing Order Form, or otherwise accessing or using Products on Customer’s behalf. Referenced terms are not supplied in full.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/acceptance_binds_customer",
+      "verdict": "SUPPORTED",
+      "reason": "Line 7 lists the three acceptance routes, represents the acceptor’s authority, incorporates the specified terms, and makes the agreement binding as of acceptance."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 10,
+      "end_line": 10,
+      "clause_label": "recovered/customer_infrastructure_authorization",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "use_on_customer_infrastructure",
+        "requires": "express_mistral_ai_authorization_in_order_form"
+      },
+      "actor_role": "customer",
+      "scope_note": "Access to or use of Products on infrastructure Customer owns or controls; subject also to Order Form and Customer Infrastructure Additional Terms.",
+      "condition_explanation": "Customer Infrastructure includes private servers or private cloud. Additional Terms are referenced but not supplied.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/customer_infrastructure_authorization",
+      "verdict": "SUPPORTED",
+      "reason": "Line 10 requires express Mistral AI authorization in an Order Form and identifies the additional governing documents."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 12,
+      "end_line": 12,
+      "clause_label": "recovered/partner_infrastructure_authorization",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "use_on_partner_infrastructure",
+        "requires": "express_partner_authorization_in_applicable_ordering_documentation"
+      },
+      "actor_role": "customer",
+      "scope_note": "Use on infrastructure owned by a third-party partner authorized to resell or market Products; subject to partner terms and, unless otherwise specified therein, these Terms and Partner Served - Deployment Terms.",
+      "condition_explanation": "The partner’s applicable ordering documentation must expressly authorize access or use. Referenced deployment and partner terms are not supplied.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/partner_infrastructure_authorization",
+      "verdict": "SUPPORTED",
+      "reason": "Line 12 requires express partner authorization in applicable ordering documentation and states the partner-terms qualification."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 14,
+      "end_line": 14,
+      "clause_label": "recovered/mistral_infrastructure_terms",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "use_on_mistral_ai_infrastructure",
+        "requires": "comply_with_these_terms_and_mistral_infrastructure_additional_terms"
+      },
+      "actor_role": "customer",
+      "scope_note": "Applies to Products on Mistral AI Infrastructure, including uses not on Customer or Partner Infrastructure.",
+      "condition_explanation": "The clause specifies governing terms, not a separate express grant. The referenced Additional Terms are not supplied.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/mistral_infrastructure_terms",
+      "verdict": "SUPPORTED",
+      "reason": "Line 14 identifies the applicable Terms and Additional Terms and defines the covered infrastructure by exclusion of Customer and Partner Infrastructure."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 16,
+      "end_line": 16,
+      "clause_label": "recovered/customer_activity_and_consent_responsibility",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "activities_through_customer_account_or_connected_with_customer_infrastructure_or_customer_offerings",
+        "requires": "appropriate_end_user_consents_or_permissions_required_for_compliance_with_terms_obtained"
+      },
+      "actor_role": "customer",
+      "scope_note": "Customer is solely responsible for specified activities, including End User actions, and for obtaining required End User consents or permissions.",
+      "condition_explanation": "Scope includes Customer Account and End User Accounts, Customer Infrastructure, and Customer Offerings. Definitions appear in the supplied definition context.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Obtain appropriate End User consents or permissions required for Customer’s compliance with these Terms.",
+          "actor": "Customer",
+          "object": "End User consents or permissions",
+          "trigger": "When such consent or permission is required for Customer’s compliance with these Terms."
+        }
+      ]
+    },
+    "review": {
+      "clause_label": "recovered/customer_activity_and_consent_responsibility",
+      "verdict": "SUPPORTED",
+      "reason": "Line 16 assigns Customer responsibility for the specified activities and expressly requires obtaining End User permissions or consents needed for compliance."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 18,
+      "end_line": 18,
+      "clause_label": "recovered/affiliate_separate_workspace_acceptance",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "customer_affiliate_wishes_to_access_products_on_separate_workspace",
+        "requires": {
+          "any": [
+            "affiliate_separately_accepts_these_terms",
+            "affiliate_enters_separate_order_form_with_mistral_ai"
+          ]
+        }
+      },
+      "actor_role": "customer_affiliate",
+      "scope_note": "Separate-workspace access apart from Customer Account; alternative acceptance paths.",
+      "condition_explanation": "Affiliate is defined in the paragraph by control, being controlled, or common control.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Separately accept these Terms or enter into a separate Order Form with Mistral AI.",
+          "actor": "Customer Affiliate",
+          "object": "Separate-workspace access to Mistral AI Products",
+          "trigger": "If the Customer Affiliate wishes to access Products on a workspace separate from Customer Account."
+        }
+      ]
+    },
+    "review": {
+      "clause_label": "recovered/affiliate_separate_workspace_acceptance",
+      "verdict": "SUPPORTED",
+      "reason": "Line 18 requires separate acceptance or a separate Order Form for Affiliate access on a separate workspace."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 21,
+      "end_line": 21,
+      "clause_label": "recovered/limited_product_access_license",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "customer_complies_with_terms",
+        "requires": "use_within_limited_nonexclusive_nontransferable_and_nonsublicensable_license_except_assignment_and_end_user_exceptions"
+      },
+      "actor_role": "customer",
+      "scope_note": "Express license to access and use Mistral AI Products; transfer exception refers to Section 14.2 and sublicensing exception is for End Users.",
+      "condition_explanation": "Compliance with Terms is a condition. The referenced assignment provision is not supplied; the stated End User exception does not expand beyond its terms.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/limited_product_access_license",
+      "verdict": "SUPPORTED",
+      "reason": "Line 21 expressly grants a limited, non-exclusive, non-transferable, non-sublicensable access-and-use license, subject to compliance and the stated assignment and End User exceptions."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 31,
+      "end_line": 31,
+      "clause_label": "recovered/prohibit_reverse_engineering_attempts",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "attempt_to_reverse_engineer_decompile_or_discover_source_code_or_underlying_components_including_via_output_or_modified_output"
+      },
+      "actor_role": "customer",
+      "scope_note": "Restriction covers attempts directed at Products and attempts using Output or modified Output; excludes the restriction to the extent prohibited by applicable law.",
+      "condition_explanation": "Underlying components include algorithms, weights, or systems. The applicable-law exception limits the prohibition.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not attempt to reverse engineer, decompile, or otherwise discover Product source code or underlying components, including by using Output or modified Output.",
+          "actor": "Customer and persons Customer permits, including End Users",
+          "object": "Mistral AI Products, including their source code and underlying components",
+          "trigger": "Whenever such an attempt is not to an extent that applicable law prohibits this restriction."
+        }
+      ]
+    },
+    "review": {
+      "clause_label": "recovered/prohibit_reverse_engineering_attempts",
+      "verdict": "SUPPORTED",
+      "reason": "Line 31 prohibits the listed attempts, including those using Output or modified Output, except to the extent the restriction is prohibited by applicable law."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 37,
+      "end_line": 37,
+      "clause_label": "recovered/prohibit_unpermitted_extraction",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "method_extracts_product_content_other_than_as_permitted_through_products_in_accordance_with_terms"
+      },
+      "actor_role": "customer",
+      "scope_note": "Restriction permits extraction methods allowed through Products in accordance with Terms.",
+      "condition_explanation": "The prohibition applies only to extraction by a method outside that permitted route.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use a method to extract Product content except as permitted through Products in accordance with these Terms.",
+          "actor": "Customer and persons Customer permits, including End Users",
+          "object": "Content from Mistral AI Products",
+          "trigger": "When the extraction method is not permitted through Products in accordance with these Terms."
+        }
+      ]
+    },
+    "review": {
+      "clause_label": "recovered/prohibit_unpermitted_extraction",
+      "verdict": "SUPPORTED",
+      "reason": "Line 37 prohibits extraction by methods other than those permitted through the Products in accordance with the Terms."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 41,
+      "end_line": 41,
+      "clause_label": "recovered/restrict_vibe_integration_and_third_party_access",
+      "activities": [
+        "Combine"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PROHIBITED",
+        "when": true,
+        "requires": "vibe_integrated_or_combined_with_customer_third_party_offering_without_prior_written_authorization"
+      },
+      "actor_role": "customer",
+      "scope_note": "Prohibits integrating or combining Vibe with Customer’s third-party offerings, including software, hardware, or other technology; also restricts third-party access absent authorization or a Terms exception.",
+      "condition_explanation": "Prior written authorization or an express exception under these Terms allows the otherwise restricted conduct.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not integrate or combine Vibe with products offered to third parties, including software, hardware, or other technology, without prior written authorization.",
+          "actor": "Customer and persons Customer permits, including End Users",
+          "object": "Vibe and Customer’s third-party offering",
+          "trigger": "When integration or combination is proposed and prior written authorization is absent."
+        },
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not grant a third party access to Products without prior written authorization or an exception provided under these Terms.",
+          "actor": "Customer and persons Customer permits, including End Users",
+          "object": "Third-party access to Mistral AI Products",
+          "trigger": "When third-party access is granted and neither prior written authorization nor a Terms exception applies."
+        }
+      ]
+    },
+    "review": {
+      "clause_label": "recovered/restrict_vibe_integration_and_third_party_access",
+      "verdict": "SUPPORTED",
+      "reason": "Line 41 restricts Vibe integration or combination with third-party offerings and separately restricts third-party access, with the stated authorization or Terms exceptions."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 43,
+      "end_line": 43,
+      "clause_label": "recovered/maintain_end_user_restrictions",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "customer_provides_end_users_access_or_use",
+        "requires": "restrictions_substantially_equivalent_to_section_2_2_maintained_and_enforced"
+      },
+      "actor_role": "customer",
+      "scope_note": "Customer must maintain and enforce substantially equivalent Use Restrictions with End Users.",
+      "condition_explanation": "This is an express duty concerning End Users; Section 2.2 restrictions are stated in lines 25–41.",
+      "obligation_items": [
+        {
+          "duty_type": "PERFORM",
+          "content": "Maintain and enforce with End Users restrictions substantially equivalent to those in Section 2.2.",
+          "actor": "Customer",
+          "object": "End User use of Mistral AI Products and Outputs",
+          "trigger": "For End Users subject to Customer’s access or use arrangements."
+        }
+      ]
+    },
+    "review": {
+      "clause_label": "recovered/maintain_end_user_restrictions",
+      "verdict": "SUPPORTED",
+      "reason": "Line 43 expressly requires Customer to maintain and enforce substantially equivalent Section 2.2 restrictions with End Users."
+    }
+  },
+  {
+    "chunk": "4f00a0042342233a-001",
+    "clause": {
+      "start_line": 45,
+      "end_line": 45,
+      "clause_label": "recovered/beta_internal_evaluation_only",
+      "activities": [
+        "Use"
+      ],
+      "objects": [
+        "OriginalArtifact"
+      ],
+      "C": {
+        "kind": "CONDITIONALLY_PERMITTED",
+        "when": "mistral_ai_makes_beta_products_available",
+        "requires": "internal_evaluation_and_testing_only"
+      },
+      "actor_role": "customer",
+      "scope_note": "Beta Products may be made available at Mistral AI’s discretion solely for Customer’s internal evaluation and testing; third-party distribution or access is prohibited.",
+      "condition_explanation": "Beta availability is discretionary. Mistral AI may suspend or terminate Beta access at any time in its sole discretion. The paragraph’s as-is and risk statements are disclaimers, not extracted duties.",
+      "obligation_items": []
+    },
+    "review": {
+      "clause_label": "recovered/beta_internal_evaluation_only",
+      "verdict": "SUPPORTED",
+      "reason": "Line 45 limits Beta Product use to Customer’s internal evaluation and testing and leaves third-party distribution or access to the separately modeled express prohibition."
+    }
+  }
+]

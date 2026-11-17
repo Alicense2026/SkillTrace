@@ -1,0 +1,180 @@
+{
+  "case_id": "chain-0133-031fc88ba025",
+  "input_group_row": 133,
+  "aggregate_count": 8,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "Apache-2.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "8"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0133-031fc88ba025",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0133-031fc88ba025:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:909a88d5ef38a563"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agree_to_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0133-031fc88ba025:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:909a88d5ef38a563"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0133-031fc88ba025:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0133-031fc88ba025:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Agree to the PolyForm terms and use the software for a permitted purpose.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "permitted_purpose",
+          "agree_to_terms"
+        ],
+        "source_refs": [
+          "license-text:downstream:909a88d5ef38a563"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes remote service interaction and a link to the upstream Apache-2.0 asset, but not a dependency, modified copy, or combined product. The object graph marks scope_shared as unknown; an API call alone does not establish that the PolyForm-licensed downstream artifact is used as the same constrained object.",
+      "The PolyForm permitted-purpose excerpts identify noncommercial purposes and certain specific permitted uses, but do not provide the complete definition needed to classify this use. No commercial-use violation is inferred.",
+      "Distribution, sublicensing, modification, and source provision are not established; related conditions and prohibitions are not treated as triggered."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 32374,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1033,
+    "output_tokens_details": {
+      "reasoning_tokens": 366
+    },
+    "total_tokens": 33407,
+    "attribution": {
+      "items": {
+        "msg_02c68734dd0c2e80016af52f3d7a0887d0810914793be7f1ae": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02c68734dd0c2e80016af52f3d7a0887d0ba776d2d42445944": {
+          "input_tokens": 30304,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 30304,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02c68734dd0c2e80016af52f45381887d09f5680cf5bd8c72a": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 667,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 667
+            }
+          ]
+        },
+        "rs_02c68734dd0c2e80016af52f451cc487d0acf158e9abe1b4db": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 366
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "5f99ece827005532c55ad02ffbdffb05c9d40c5772bdbabb38775b9b05a94c92",
+  "elapsed_seconds": 28.4
+}

@@ -1,0 +1,176 @@
+{
+  "case_id": "chain-0383-6ef0f2660994",
+  "input_group_row": 383,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "PolyForm-Noncommercial-1.0.0",
+    "资产许可证原文标题/标签": "LLAMA 3.3 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0383-6ef0f2660994",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0383-6ef0f2660994:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7eb149a4544bd273"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "all_of_agree_to_terms_and_permitted_purpose",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0383-6ef0f2660994:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 Llama 3.3 授权条款明确许可对 Llama Materials 的使用，但摘录未说明该授权如何适用于远程 API 调用；未将调用推定为权重转移、修改或分发。",
+      "对象图确认下游与上游存在 API 链接和远程调用，但是否有共同受约束对象未知；因此未认定许可间冲突。",
+      "上游使用须遵守协议的具体其他条件未由已匹配摘录完整映射；不据此推断商业限制、AUP、输出训练限制或其他义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 Llama Materials 时遵守 Llama 协议适用条款；现有摘录未完整列明具体条件。",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "subject": {
+          "artifact": "chain-0383-6ef0f2660994:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "具体适用的 Llama 协议条件及其履行情况"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若对 PolyForm 涵盖的软件行使许可权利，须同意条款并限于 permitted purpose。",
+        "source_refs": [
+          "license-text:downstream:7eb149a4544bd273"
+        ],
+        "subject": {
+          "artifact": "chain-0383-6ef0f2660994:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "下游软件是否被使用或其许可权利是否被行使",
+          "agree_to_terms",
+          "permitted_purpose"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 36236,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1073,
+    "output_tokens_details": {
+      "reasoning_tokens": 269
+    },
+    "total_tokens": 37309,
+    "attribution": {
+      "items": {
+        "msg_0b5f813c651179f0016af532f5511087d19104bdb1b24bf440": {
+          "input_tokens": 34166,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 34166,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b5f813c651179f0016af532f5511087d1b1bcc66ce9972aef": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b5f813c651179f0016af532fac2d087d1b161fbef42081db0": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 804,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 804
+            }
+          ]
+        },
+        "rs_0b5f813c651179f0016af532faa70887d1898d095f854278aa": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 269
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "9f9dffeff1e195b7dee01ecdb549b6c201692bb99ef3942e552606713f4b5e5c",
+  "elapsed_seconds": 31.52
+}

@@ -1,0 +1,166 @@
+{
+  "request_sha256": "3c8eda048389026b596a7ab1b96de522b7b1f9ba332b1c0ce98681b4e74e711d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 5,
+        "end_line": 5,
+        "clause_label": "1 — commercial use and commercial-license requirement",
+        "activities": [
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "any": [
+              "conditions_below_are_met_and_commercial_license_obtained_from_producer",
+              "conditions_below_are_not_met"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "xiaobei. The text permits commercial utilization but says a commercial license must be obtained from the producer if the conditions below are met; it does not clearly specify how that requirement applies to each listed condition.",
+        "condition_explanation": "The predicate preserves the stated commercial-license requirement when the conditions below are met; the alternative reflects that the text does not expressly require that license when they are not met. The specific restrictions and exception are stated separately in the following clauses."
+      },
+      {
+        "start_line": 7,
+        "end_line": 9,
+        "clause_label": "1(a) — multi-tenant service",
+        "activities": [
+          "Use",
+          "ProvideNetworkService",
+          "RemoteInteraction"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "xiaobei_has_explicitly_authorized_use_in_writing"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Using xiaobei source code to operate a multi-tenant environment is prohibited unless xiaobei explicitly authorizes it in writing. A tenant is one workspace, providing a separated area for that tenant's data and configurations.",
+        "condition_explanation": "The prohibition applies absent explicit written authorization from xiaobei. The license text defines a tenant as one workspace."
+      },
+      {
+        "start_line": 11,
+        "end_line": 13,
+        "clause_label": "1(b) — frontend logo and copyright information",
+        "activities": [
+          "Modify",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "use_involves_xiaobei_frontend_and_removes_or_modifies_logo_or_copyright_information"
+        },
+        "actor_role": "licensee",
+        "scope_note": "When using xiaobei's frontend, the licensee may not remove or modify the logo or copyright information in the xiaobei console or applications. This restriction does not apply to uses that do not involve the frontend. The frontend is the components in the web/ directory when running from raw source, or the web image when running with Docker.",
+        "condition_explanation": "The prohibition applies only when use involves the defined frontend and removes or modifies the specified logo or copyright information; non-frontend use is expressly excluded."
+      },
+      {
+        "start_line": 15,
+        "end_line": 15,
+        "clause_label": "1(c) — commercial web crawling or data harvesting",
+        "activities": [
+          "Use",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "use_for_commercial_web_crawling_or_data_harvesting"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits using xiaobei for commercial web crawling or data harvesting operations.",
+        "condition_explanation": "The prohibition applies when xiaobei is used for commercial web crawling or data harvesting."
+      },
+      {
+        "start_line": 17,
+        "end_line": 17,
+        "clause_label": "1(d) — unlawful or unauthorized scraping",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": "use_for_unlawful_or_unauthorized_scraping"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits using xiaobei for unlawful or unauthorized scraping, including scraping that violates applicable laws, website terms of service, or robots exclusion directives.",
+        "condition_explanation": "The prohibition applies to scraping that is unlawful or unauthorized; the text gives the listed violations as examples."
+      },
+      {
+        "start_line": 19,
+        "end_line": 19,
+        "clause_label": "1(e) — obtaining, copying, or distributing protected content",
+        "activities": [
+          "Use",
+          "Copy",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "all": [
+              "use_xiaobei_to_obtain_copy_or_distribute_content_from_media_platforms_trading_platforms_or_other_third_party_ip_protected_material",
+              "prior_explicit_authorization_from_rights_holder_absent"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits using xiaobei to obtain, copy, or distribute content from media platforms, trading platforms, or other material protected by third-party intellectual property rights, unless the rights holder has given prior explicit authorization.",
+        "condition_explanation": "The prohibition applies to the specified content activity when prior explicit authorization from the rights holder has not been obtained."
+      },
+      {
+        "start_line": 21,
+        "end_line": 24,
+        "clause_label": "2 — contributor agreement and contributed-code use",
+        "activities": [
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "contributor_contributes_code",
+          "requires": {
+            "all": [
+              "contributor_agrees_producer_can_adjust_open_source_agreement_to_be_more_strict_or_relaxed",
+              "contributor_agrees_contributed_code_may_be_used_for_commercial_purposes_including_cloud_business_operations"
+            ]
+          }
+        },
+        "actor_role": "contributor",
+        "scope_note": "The text says a contributor should agree that the producer can make the open-source agreement more strict or relaxed as deemed necessary and that the contributor's contributed code may be used commercially, including in cloud business operations. It does not state that the contributor's agreement itself grants general commercial-use rights in xiaobei.",
+        "condition_explanation": "These statements apply in the contributor role when code is contributed. The text does not specify a separate procedure or form for the stated agreement."
+      }
+    ],
+    "coverage_notes": [
+      "Line 26 refers other rights and restrictions to Apache License 2.0 and provides an external URL, but the Apache license text is not supplied here; its terms are not reconstructed.",
+      "The commercial-license trigger in line 5 is ambiguous: it says a commercial license is required if the conditions below are met, without clarifying whether that requirement applies to every listed circumstance or only some.",
+      "The appearance-patent statement and copyright notice do not themselves state operative permissions or restrictions on the listed activities.",
+      "The supplied text does not state operative terms for source provision, attribution notices, sublicensing, training, fees, output rights, or termination and restoration."
+    ]
+  }
+}

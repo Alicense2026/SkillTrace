@@ -1,0 +1,212 @@
+{
+  "case_id": "chain-0907-84e65d764dde",
+  "source_csv_line": 908,
+  "row": {
+    "github_repo": "yao",
+    "github_url": "https://github.com/YaoApp/yao",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-3.5-turbo",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: openai/openai.go:44 ｜ 调用原文: model := \"gpt-3.5-turbo\"（引用处 第19行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 出现在 openai/openai.go 常量中，可能是默认模型名或示例，需看是否被实际调用",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "yaoapp/yao",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "ba8a74a81726baf73380d22116482271e8e9ce27691d9a37754f83af1053659e",
+    "filename": "_licenseref_full/texts/ba8a74a81726baf73380d22116482271e8e9ce27691d9a37754f83af1053659e.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:yao-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7f5361554bee170f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "branding_and_copyright_information_preserved_or_changes_authorized",
+                "certificate_verification_system_preserved",
+                "commercial_license_obtained_if_enterprise_threshold_met"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0907-84e65d764dde:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7f5361554bee170f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "certificate_verification_logic_processes_and_related_pages_preserved_and_complete_verification_system_maintained",
+            "when": "using_yao_engine"
+          },
+          "S": {
+            "artifact": "chain-0907-84e65d764dde:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:7f5361554bee170f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "commercial_license_from_infinite_wisdom_software_obtained",
+            "when": {
+              "any": [
+                "organization_has_50_or_more_employees",
+                "organization_has_annual_revenue_exceeding_usd_1000000"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0907-84e65d764dde:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI.txt仅匹配到客户向OpenAI付款的条款摘录，未提供适用于本次API调用的其他条款；不能据此推断其许可或使用条件。",
+      "下游许可证摘录称其余权利和限制参照Apache License 2.0，但未提供相应文本；未对未映射条款作结论。",
+      "事实确认了远程调用及API关联，但未确认下游对象上的Use活动、商业用途、企业门槛是否达到或任何履行情况；未将远程调用等同于分发、修改或权重转移。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用下游Yao Engine时，保留品牌和版权信息（除非已获指定授权），并维持证书验证系统；若组织达到任一企业门槛，还须取得Infinite Wisdom Software商业许可。",
+        "source_refs": [
+          "license-text:downstream:7f5361554bee170f"
+        ],
+        "subject": {
+          "artifact": "chain-0907-84e65d764dde:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_yao_engine",
+        "unresolved_predicates": [
+          "downstream_use",
+          "branding_and_copyright_information_preserved_or_changes_authorized",
+          "certificate_verification_system_preserved",
+          "organization_has_50_or_more_employees",
+          "organization_has_annual_revenue_exceeding_usd_1000000",
+          "commercial_license_from_infinite_wisdom_software_obtained"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0907-84e65d764dde"
+  },
+  "usage": {
+    "input_tokens": 19163,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1492,
+    "output_tokens_details": {
+      "reasoning_tokens": 585
+    },
+    "total_tokens": 20655,
+    "attribution": {
+      "items": {
+        "msg_0cb8bb28c0e7cd6e016af53af5584087d18535c74316e0c6af": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0cb8bb28c0e7cd6e016af53af5584087d1bbb490f82d61b6ce": {
+          "input_tokens": 17093,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17093,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0cb8bb28c0e7cd6e016af53b00749087d192e7a191a0323c51": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 907,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 907
+            }
+          ]
+        },
+        "rs_0cb8bb28c0e7cd6e016af53aff1ac487d1907b1544e85b7cec": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        },
+        "rs_0cb8bb28c0e7cd6e016af53b005d5887d18dbece52e486d654": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 69
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "0fa6f1af108f0b1ba94c10e1c75271603e1a363b4aa9b3300f11a050e7a2be2e",
+  "elapsed_seconds": 33.01
+}

@@ -1,0 +1,690 @@
+{
+  "case_id": "skill-04050",
+  "csv_row": 4051,
+  "source_excel_row": "5695",
+  "status": "SUCCESS",
+  "request_sha256": "880cf88ed364f407e40dfdef1323126bfe24c990ee2071f4eb940737ee6abc3f",
+  "analysis": {
+    "case_id": "skill-04050",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-04050:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "patent_license_for_that_work_has_terminated",
+            "when": "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+          },
+          "S": {
+            "artifact": "skill-04050:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_within_express_license_permissions_or_written_permission",
+            "when": true
+          },
+          "S": {
+            "artifact": "skill-04050:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游原件的使用仅在相关专利权利主张属于贡献者可许可且由贡献本身或其与提交作品的组合必然侵权时，受该专利许可覆盖；不得据此推定超出该范围的专利许可。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-04050:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游原件的专利许可若因针对作品或其中贡献提起所述专利诉讼而终止，在权利未书面恢复前不得依赖该已终止的专利许可；该限制针对专利许可，不是版权许可。",
+        "source_refs": [
+          "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+        ],
+        "subject": {
+          "artifact": "skill-04050:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement"
+          ]
+        },
+        "unresolved_predicates": [
+          "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+          "patent_license_for_that_work_has_terminated"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游受许可对象的使用须处于该许可证明确授予的权限范围内，或取得对该具体使用有效的书面许可；此条件仅约束 Covered Software，不自动延伸至独立上游服务资产。",
+        "source_refs": [
+          "license:838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a"
+        ],
+        "subject": {
+          "artifact": "skill-04050:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "material_is_covered_software",
+          "use_within_express_license_permissions_or_written_permission"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "仅当材料属于该许可证定义的 Covered Software 时，才适用该许可证对该材料的范围限定；远程调用本身不证明上游服务资产属于 Covered Software。",
+        "source_refs": [
+          "license:838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a"
+        ],
+        "subject": {
+          "artifact": "skill-04050:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "material_is_covered_software"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "下游原件的许可适用边界取决于发布版本；早于 2.2.0 的版本保留先前 MIT 权限，所述 2.2.0 起的边界仅在适用版本及未被后续发布说明或许可文件改变时适用。",
+        "source_refs": [
+          "license:838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a"
+        ],
+        "subject": {
+          "artifact": "skill-04050:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "release_version_and_license_boundary"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录证明下游通过远程服务调用并链接上游资产，且记录称未发现该资产源码纳入；未证明分发、修改、捆绑或模型权重转移。",
+      "下游许可证仅适用于 Covered Software；当前事实未证明远程调用的上游服务资产属于 Covered Software，也未提供足以确定相关发布版本及许可边界的事实。因此不把分发限制套用于 API 调用。",
+      "上游 Apache-2.0 的相关使用许可受专利权利主张范围限制；专利诉讼是否触发专利许可终止未知，不能据此判定违规。",
+      "调用是否属于下游许可证明确授予的许可使用范围未知；这不是实际违规结论。图示案例及合成冲突模式不作为本例许可证条款或事实依据。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "复制许可；无复制事实。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "创作衍生作品；无修改或衍生事实。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "再许可；无再许可事实。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "分发许可；无分发事实。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "上游原件已被使用；条件义务保留专利许可的必要侵权范围限制。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "仅涉专利范围内销售；无销售事实。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "诉讼触发事实未知；条件义务保留专利许可终止后的限制，未认定违规。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "条件针对复制及分发；无此事实。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "条件针对分发及其特定形式；无此事实。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "针对修改作品的使用；无修改事实。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "针对衍生作品使用；无衍生事实。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "无商标或名称使用事实。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "无相关商标使用事实。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "无分发或收费提供额外责任承诺事实。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "衍生作品分发许可；无分发事实。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "无修改文件分发事实。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "无衍生作品源码形式分发事实。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "无 NOTICE 文件及衍生作品分发事实。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "针对修改作品使用；无修改事实。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "下游 Use 已发生；许可范围及具体使用是否在明确授权内作为条件义务保留。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 Official App 身份事实；远程服务调用不证明使用 Official App。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "Covered Software 是决定许可证适用范围的条件；当前未证明该条件成立。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 MIT Component 事实。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "相关发布版本及许可边界未提供；以条件义务保留该规则的版本范围。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无混合内容文件事实。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无未注册 Official App 评估使用事实。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 Official App 评估事实。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 Official App 例行或持续生产使用事实。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 Official App 商业生产使用事实；收费与商业使用不可互相推定。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 Covered Software 分发事实。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明被检查对象是 Covered Source。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无本地构建或创建衍生作品事实。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无修改 Covered Source 事实。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发下游修改作品事实。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无生产性使用非官方构建事实。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无未注册 Official App 使用事实。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无购买并应用注册许可事实。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 Official App 评估转换使用事实。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无向他人提供副本或修改通知的事实。"
+      },
+      {
+        "rule_ref": "D021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发 Covered Software 事实。"
+      },
+      {
+        "rule_ref": "D022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无销售 Covered Software 事实。"
+      },
+      {
+        "rule_ref": "D023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无再许可 Covered Software 事实。"
+      },
+      {
+        "rule_ref": "D024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "本例是调用远程服务，不是托管 Covered Software。"
+      },
+      {
+        "rule_ref": "D025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发衍生桌面应用事实。"
+      },
+      {
+        "rule_ref": "D026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无发布非官方构建事实。"
+      },
+      {
+        "rule_ref": "D027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无捆绑 Covered Software 事实。"
+      },
+      {
+        "rule_ref": "D028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无使用 Covered Software 提供公开或第三方转换服务事实。"
+      },
+      {
+        "rule_ref": "D029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无转让注册许可事实。"
+      },
+      {
+        "rule_ref": "D030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无品牌误导性使用事实。"
+      },
+      {
+        "rule_ref": "D031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无将修改构建声称为 Official App 的事实。"
+      },
+      {
+        "rule_ref": "D032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无 doc2md 名称使用事实。"
+      },
+      {
+        "rule_ref": "D033",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无相关品牌使用事实。"
+      },
+      {
+        "rule_ref": "D034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发副本或移除品牌事实。"
+      },
+      {
+        "rule_ref": "D035",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "仅声明第三方软件适用其自身许可，未给出具体规则；不据此虚构义务。"
+      },
+      {
+        "rule_ref": "D036",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无捆绑 MIT 组件事实；远程调用不等同于捆绑。"
+      },
+      {
+        "rule_ref": "D037",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无经书面许可授权的分发事实。"
+      },
+      {
+        "rule_ref": "D038",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无官方公开应用发布事实。"
+      },
+      {
+        "rule_ref": "D039",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无对受许可文件作出贡献事实。"
+      },
+      {
+        "rule_ref": "D040",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无分发贡献内容事实。"
+      },
+      {
+        "rule_ref": "D041",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无再许可贡献内容事实。"
+      },
+      {
+        "rule_ref": "D042",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无商业化贡献内容事实。"
+      },
+      {
+        "rule_ref": "D043",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证明发生许可违反或权利终止。"
+      },
+      {
+        "rule_ref": "D044",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无权利书面恢复事实。"
+      },
+      {
+        "rule_ref": "D045",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无再分发 Covered Software 事实。"
+      },
+      {
+        "rule_ref": "D046",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无销售、转许可、托管或其他列举行为事实。"
+      },
+      {
+        "rule_ref": "D047",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无发布或分发衍生桌面应用事实。"
+      },
+      {
+        "rule_ref": "D048",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无发布非官方公开构建事实。"
+      },
+      {
+        "rule_ref": "D049",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无捆绑 Covered Software 事实。"
+      },
+      {
+        "rule_ref": "D050",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无使用 Covered Software 提供转换服务事实。"
+      },
+      {
+        "rule_ref": "D051",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无注册许可转让事实。"
+      },
+      {
+        "rule_ref": "D052",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无误导性品牌使用事实。"
+      },
+      {
+        "rule_ref": "D053",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "无声称非官方构建为 Official App 的事实。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-04050-1794594635042829000-3.json",
+  "usage": {
+    "input_tokens": 47097,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 4305,
+    "output_tokens_details": {
+      "reasoning_tokens": 154
+    },
+    "total_tokens": 51402,
+    "attribution": {
+      "items": {
+        "msg_0d8775b53f2f5361016af7587994c487d2a5414cea3964f001": {
+          "input_tokens": 44373,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 44373,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d8775b53f2f5361016af7587994c487d2baf00ddf0d0f5bba": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d8775b53f2f5361016af7587d1fa887d2821fa7de47c4d085": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 4151,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 4151
+            }
+          ]
+        },
+        "rs_0d8775b53f2f5361016af7587d03bc87d281cd888bda03cbd2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 154
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 3,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

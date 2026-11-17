@@ -1,0 +1,222 @@
+{
+  "request_sha256": "61303406ee7bf845bad0f7719848bae68dda6a57a9f4a1cda2dd15c84529b7fc",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 6,
+        "end_line": 7,
+        "clause_label": "license_document_verbatim_copy",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "verbatim_copy_of_license_document"
+        },
+        "actor_role": "anyone",
+        "scope_note": "Permission applies to verbatim copies of this license document, not the Library.",
+        "condition_explanation": "verbatim_copy_of_license_document means the license document is reproduced without changes.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 7,
+        "end_line": 7,
+        "clause_label": "license_document_change_prohibition",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "anyone",
+        "scope_note": "The object is this license document; this prohibition does not concern modification of the Library.",
+        "condition_explanation": "The license document may not be changed.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not change the license document.",
+            "actor": "anyone changing or copying the license document",
+            "object": "the LGPL license document",
+            "trigger": "Whenever reproducing or handling the license document."
+          }
+        ]
+      },
+      {
+        "start_line": 40,
+        "end_line": 46,
+        "clause_label": "library_distribution_preamble_conditions",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "give_recipients_all_licensee_rights",
+              "recipients_receive_or_can_get_source_code",
+              "show_recipients_license_terms"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Preamble description of distributing copies of the Library, gratis or for a fee. It summarizes duties; detailed operative terms and their scope appear in license sections not included in this chunk.",
+        "condition_explanation": "give_recipients_all_licensee_rights means grant recipients all rights given to the distributor; recipients_receive_or_can_get_source_code means recipients receive the source code or can obtain it; show_recipients_license_terms means make the license terms known to recipients.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give recipients all rights given to the distributor under the license.",
+            "actor": "licensee distributing copies of the Library",
+            "object": "copies of the Library and recipients' rights in them",
+            "trigger": "When distributing copies of the Library, whether gratis or for a fee."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure recipients receive or can get the source code.",
+            "actor": "licensee distributing copies of the Library",
+            "object": "source code for the Library",
+            "trigger": "When distributing copies of the Library, whether gratis or for a fee."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Show recipients the license terms so they know their rights.",
+            "actor": "licensee distributing copies of the Library",
+            "object": "license terms accompanying copies of the Library",
+            "trigger": "When distributing copies of the Library, whether gratis or for a fee."
+          }
+        ]
+      },
+      {
+        "start_line": 43,
+        "end_line": 46,
+        "clause_label": "linked_code_object_files_preamble_condition",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distribute_work_linked_with_library",
+          "requires": "provide_complete_object_files_for_relinking"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Preamble description of distributing a work linked with the Library; the duty concerns complete object files for the linked work so recipients can relink it after modifying and recompiling the Library.",
+        "condition_explanation": "distribute_work_linked_with_library means the licensee distributes code linked with the Library; provide_complete_object_files_for_relinking means provide recipients complete object files enabling relinking with the Library after Library changes and recompilation.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide recipients complete object files for the linked work so they can relink it with the Library after changing and recompiling the Library.",
+            "actor": "licensee distributing code linked with the Library",
+            "object": "complete object files for the linked work",
+            "trigger": "When distributing code linked with the Library."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "This chunk contains the preamble and a permission to copy the license document, but not the operative LGPL sections that specify the detailed conditions and scope of Library permissions, modification, linking, distribution, source provision, patents, or termination.",
+      "The preamble passage at lines 40–46 is phrased as an example and summary of distributor responsibilities; the extracted duties are limited to what it expressly states and do not substitute for missing operative sections."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "License title and version identify the document but impose no behavioral rule."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "MODELED",
+        "clause_labels": [
+          "license_document_verbatim_copy",
+          "license_document_change_prohibition"
+        ],
+        "reason": "Lines 6–7 expressly permit verbatim copying and distribution of the license document and disallow changing it; these are represented separately."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes the purpose and intended freedoms of the GPL family without stating a specific operative rule for this Library."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Preamble heading only."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes the general purpose of restrictions and responsibilities but does not state a specific action rule."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Suggests considering which license is a better strategy; this is advice, not a behavioral duty or permission."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Describes freedoms the licenses are designed to ensure; it is a general statement of purpose, not an operative grant or duty in this paragraph."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States policy purposes and general responsibilities without specifying an operative action rule."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "library_distribution_preamble_conditions",
+          "linked_code_object_files_preamble_condition"
+        ],
+        "reason": "Expressly describes recipient-rights, source-access, and terms duties on distributing Library copies, and complete-object-file provision when distributing linked code."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Describes the license's role in offering legal permission to copy, distribute, and modify the Library; it does not itself state the operative permission's terms."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Explains warranty and reputational objectives and what recipients should know, without imposing an operative duty in this paragraph."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States patent-policy intent but does not itself create a patent grant or behavioral duty."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Identifies the designated-library scope and explains the purpose of allowing linkage into non-free programs; it does not state operative linking conditions."
+      }
+    ]
+  },
+  "attempt": 3
+}

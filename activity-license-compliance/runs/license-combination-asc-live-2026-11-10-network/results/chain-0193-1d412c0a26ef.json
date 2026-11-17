@@ -1,0 +1,240 @@
+{
+  "case_id": "chain-0193-1d412c0a26ef",
+  "status": "SUCCESS",
+  "request_sha256": "0b96114273f683e54ccc566ae96ff63381fc9f01596f46e83819a7e6fea49ab4",
+  "analysis": {
+    "case_id": "chain-0193-1d412c0a26ef",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0193-1d412c0a26ef:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0193-1d412c0a26ef:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4084f749838d7e68"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "license_whole_work_under_GPL_and_provide_source",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0193-1d412c0a26ef:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4084f749838d7e68"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "license_whole_work_under_GPL_and_provide_source",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0193-1d412c0a26ef:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:4084f749838d7e68"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "provide_corresponding_source_by_allowed_method",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0193-1d412c0a26ef:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [
+      {
+        "activity": "Modify",
+        "figure_case_refs": [],
+        "reason": "Modify/上游 OriginalArtifact；MIT许可允许修改但要求保留版权及许可通知；GPL摘录对其所覆盖的下游 ModifiedArtifact 要求整项作品按GPL许可并提供源码。共同适用范围及该下游作品是否为MIT材料的衍生/同一作品未确定，且这些要求并非摘录所示的明确相反要求；因此不据此认定冲突。来源：MIT许可授予及通知条款、GPL第5节。",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8",
+          "license-text:downstream:4084f749838d7e68"
+        ],
+        "status": "CONDITIONS_TO_INHERIT"
+      }
+    ],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在副本或软件实质部分中包含版权声明及许可声明。",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "subject": {
+          "artifact": "chain-0193-1d412c0a26ef:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "修改/使用MIT材料时保留版权声明及许可声明；若下游修改作品属于GPL所覆盖作品，则整项作品按GPL许可并提供源码。",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8",
+          "license-text:downstream:4084f749838d7e68"
+        ],
+        "subject": {
+          "artifact": "chain-0193-1d412c0a26ef:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice",
+          "scope_shared"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若分发GPL覆盖的修改作品，须按GPL许可整项作品并提供源码；若以目标代码形式传递，还须按许可允许的方式提供对应源码。",
+        "source_refs": [
+          "license-text:downstream:4084f749838d7e68"
+        ],
+        "subject": {
+          "artifact": "chain-0193-1d412c0a26ef:downstream",
+          "kind": "ModifiedArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "scope_shared",
+          "distribution_form"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录表明代码已修改、集成并复制MIT资产，但未证明已分发；不得由此推断分发或源码提供义务已触发。",
+      "对象图的链接、远程调用及打包关系未确认；修改副本与下游GPL作品的许可共同适用范围仍不明确。GPL摘录仅支持其覆盖作品范围内的条件，不足以认定整个组合产品必然受GPL覆盖。",
+      "通知、整项作品许可及源码提供的实际履行证据均未提供；缺少证据不等于未履行。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20279,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1775,
+    "output_tokens_details": {
+      "reasoning_tokens": 254
+    },
+    "total_tokens": 22054,
+    "attribution": {
+      "items": {
+        "msg_0748d0b74035d171016af2fef5276c87d1884feb2c9f8af132": {
+          "input_tokens": 18247,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18247,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0748d0b74035d171016af2fefa9fec87d1a4d6cf0651c3a32d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1521,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1521
+            }
+          ]
+        },
+        "rs_0748d0b74035d171016af2fefa90c887d1868ae52f444d650e": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 254
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 35.241,
+  "auto_applied": false,
+  "aggregate_count": 3
+}

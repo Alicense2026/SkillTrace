@@ -1,0 +1,134 @@
+{
+  "case_id": "chain-0111-daaf89efc3b0",
+  "status": "SUCCESS",
+  "request_sha256": "ab66cc693f607edfee2f097929c35e0e45fa83bb59f93527aac7800e144ae82e",
+  "analysis": {
+    "case_id": "chain-0111-daaf89efc3b0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:52d28b23f3b28aa4"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0111-daaf89efc3b0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:12b91da01cdca9df"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0111-daaf89efc3b0:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "供应链记录确认对上游资产进行 Use、Link 和 RemoteInteraction，但未确认对下游软件副本或其副本、衍生作品进行相关活动；API调用本身不证明对上游资产的分发、修改或复制。",
+      "对象图中的依赖及上下游许可约束是否共同适用于同一对象未知（scope_shared=null），故不据此认定许可证冲突。结构化条款标记 FIRST_PASS_REVIEW_REQUIRED；结论限于所提供的摘录和ASC映射。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若对MIT许可的下游软件进行Use，纳入版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:12b91da01cdca9df"
+        ],
+        "subject": {
+          "artifact": "chain-0111-daaf89efc3b0:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "activity:Use"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 19988,
+    "input_tokens_details": {
+      "cached_tokens": 19840,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 881,
+    "output_tokens_details": {
+      "reasoning_tokens": 326
+    },
+    "total_tokens": 20869,
+    "attribution": {
+      "items": {
+        "msg_0a100c3b608f2883016af2fbe44b9887d2b885d0deb25f9261": {
+          "input_tokens": 17956,
+          "cached_tokens": 17810,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17956,
+              "cached_tokens": 17810,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0a100c3b608f2883016af2fbeac08887d29312ea08d5483af7": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 555,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 555
+            }
+          ]
+        },
+        "rs_0a100c3b608f2883016af2fbeaa99c87d29fd87848f5a6d0d5": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 326
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.679,
+  "auto_applied": false,
+  "aggregate_count": 9
+}

@@ -1,0 +1,62 @@
+{
+  "case_id": "chain-0288-a380a0057cb8",
+  "input_group_row": 288,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "BSD-3-Clause",
+    "资产许可证原文标题/标签": "AGPL-3.0",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0288-a380a0057cb8:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "AGPL-3.0 clause 13 applies to a modified version supporting remote interaction. The trusted facts specify remote service calls and that modification does not apply, so this clause is not triggered for the reported interaction.",
+      "The object graph records a link/API-call relation, but scope_shared is unknown and does not establish that the downstream BSD-3-Clause artifact is a derivative, modified copy, or combined product of the upstream AGPL-3.0 program. No license-to-license conflict is established.",
+      "The BSD-3-Clause permission excerpt concerns redistribution and use; no downstream activity on the BSD-licensed artifact is established. No distribution or source-provision obligation is inferred from the remote call alone."
+    ],
+    "obligations": [],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": [],
+    "case_id": "chain-0288-a380a0057cb8"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0281-eb73363bcf52.json",
+  "original_case_id": "chain-0281-eb73363bcf52",
+  "original_request_sha256": "b6dfe3f7fed11fb1aeb80ba0f159142295a992f4876b4a0c492be65fd9fc1593",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0281-eb73363bcf52": "chain-0288-a380a0057cb8",
+    "license-text:upstream:5b08064288d26a33": "license-text:upstream:5b08064288d26a33",
+    "license-text:downstream:682326d7af1f7aa6": "license-text:downstream:682326d7af1f7aa6",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/280": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/287"
+  }
+}

@@ -1,0 +1,1252 @@
+{
+  "case_id": "skill-01992",
+  "csv_row": 1993,
+  "source_excel_row": "2781",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-01992-1794603284295652000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "上游服务使用者须在相关百炼服务或功能适用时接受特别说明及适用服务协议；使用前述服务时遵守适用法律、服务使用规则、安全管控规则及产品操作指引。",
+      "source_refs": [
+        "license:977d83a858678046f5727791c0c1ebd9c8968360705f0d4865e4e316fb36079e"
+      ],
+      "subject": {
+        "artifact": "skill-01992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "use_or_experience_covered_bailian_service_or_function",
+      "unresolved_predicates": [
+        "covered_bailian_service_or_function_applicability",
+        "acceptance_and_compliance_status"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若该调用属于通过百炼使用第三方模型或技术服务，上游服务使用者须遵守该第三方适用的使用要求或规范，包括适用的开源许可条款；若选择第三方开源模型或技术服务，须在使用前自行查找并确认最新适用许可条款；若选择商业闭源服务，须先查看并同意其在线协议及使用规则。",
+      "source_refs": [
+        "license:977d83a858678046f5727791c0c1ebd9c8968360705f0d4865e4e316fb36079e"
+      ],
+      "subject": {
+        "artifact": "skill-01992:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "third_party_model_or_technology_used_or_selected_through_bailian",
+      "unresolved_predicates": [
+        "third_party_model_or_technology_classification",
+        "applicable_terms_and_compliance_status"
+      ]
+    }
+  ],
+  "limitations": [
+    "已知下游代码通过 API 远程调用上游；没有证据表明上游模型或服务被复制、修改、打包、合并或分发。GPL-3.0 下游条款针对其许可对象，现有对象图未证明该对象与上游服务或模型是同一对象，故不认定许可冲突。",
+    "阿里云材料提及百炼及第三方模型服务，但未提供调用服务具体产品/服务协议、第三方模型协议或外部规则全文；仅保留本地文本明确的适用条件，不推断其内容。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "百炼适用范围尚不能由现有调用事实完全确定，保留条件性使用义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有AI订阅自动续费或升级策略事实。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有Token Plan团队版SSO使用事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的售后义务，与本次调用者活动无关。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的售后义务，与本次调用者活动无关。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用付费增值售后支持的事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有免费体验服务的事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有参加体验活动或相关行为事实。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者调整活动的许可，与本次调用者活动无关。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有体验服务添加AI标识或修改标识的事实。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有模型体验内容输入或使用事实。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条描述体验服务的数据收集，不是本次API调用的明确事实。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有声音复刻体验事实。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有完成声音复刻任务或使用复刻声音事实。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用体验交互生成内容的事实。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "本地文本规定百炼服务使用者遵守适用规则与产品指引，合并于条件性使用义务。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有资源中心元数据访问事实。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的支持义务，与本次调用者活动无关。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有付费服务或相关计费事实。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的维护、通知或退款义务，与本次调用者活动无关。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有购买、付费、账单争议或发票处理事实。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有免费期结束后继续使用的事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有促销优惠事实。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有欠费或相关服务终止事实。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条针对云资源系统和配置的管理，未证明与本次API调用相关。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有云上安全策略配置或风险通知事实。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关云产品配置活动事实。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务费用到期事实。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有平台数据或凭证管理事实。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有网站日志保存或主管机关查询事实。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有客户数据备份事实。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明本次调用处理了本条所指的客户业务数据。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有涉及国家秘密的事实。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "适用操作指引具体内容未提供，且已由U016涵盖适用产品操作指引义务。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有具体需要政府许可或批准的活动事实。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有经阿里云认可的第三方购买或实际使用安排事实。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的服务提供义务。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有迁移通知及要求调整DNS或配置的事实。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账户授权管理功能及授权账户事实。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关功能发生不兼容或软件错误的事实。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者处理衍生云服务数据的许可。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有第三方组件条款与协议冲突的事实。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有反编译、逆向工程或访问产品源代码的事实。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "API调用不证明以会使百炼产品服务受开源许可约束的方式使用或部署。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有安装或使用随附的可选第三方软件事实。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条仅承认客户业务数据归属，不涉及本次活动的行为要求。"
+    },
+    {
+      "rule_ref": "U047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条针对阿里云处理客户业务数据，非本次调用者义务。"
+    },
+    {
+      "rule_ref": "U048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有删除或更改业务数据事实。"
+    },
+    {
+      "rule_ref": "U049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务到期、提前终止或欠费事实。"
+    },
+    {
+      "rule_ref": "U050",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有选择境外数据中心及数据出境事实。"
+    },
+    {
+      "rule_ref": "U051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明复制或提供阿里云受保护材料给他人。"
+    },
+    {
+      "rule_ref": "U052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有提交材料、产生结果或第三方权利侵害事实。"
+    },
+    {
+      "rule_ref": "U053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改云服务软件、技术或材料的事实。"
+    },
+    {
+      "rule_ref": "U054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有知识产权侵权事件事实。"
+    },
+    {
+      "rule_ref": "U055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有第三方知识产权质疑或投诉事实。"
+    },
+    {
+      "rule_ref": "U056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有接收、披露或处理合同保密信息的事实。"
+    },
+    {
+      "rule_ref": "U057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有处理合同保密信息的事实。"
+    },
+    {
+      "rule_ref": "U058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有保密信息泄露事实。"
+    },
+    {
+      "rule_ref": "U059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的酌情救济条款。"
+    },
+    {
+      "rule_ref": "U060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有阿里云暂停或终止服务并造成损失的事实。"
+    },
+    {
+      "rule_ref": "U061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出口管制、制裁或相关禁止用途事实。"
+    },
+    {
+      "rule_ref": "U062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有联系方式提供或更新事实。"
+    },
+    {
+      "rule_ref": "U063",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有联系方式准确性或更新事实。"
+    },
+    {
+      "rule_ref": "U064",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有不可抗力或意外事件影响履约的事实。"
+    },
+    {
+      "rule_ref": "U065",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有持续60日的不可抗力履约障碍事实。"
+    },
+    {
+      "rule_ref": "U066",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有协议变更通知及接受或终止选择事实。"
+    },
+    {
+      "rule_ref": "U067",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转让协议事实。"
+    },
+    {
+      "rule_ref": "U068",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有阿里云展示客户案例的事实。"
+    },
+    {
+      "rule_ref": "U069",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有贿赂或腐败行为事实。"
+    },
+    {
+      "rule_ref": "U070",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有用户资格或制裁限制事实。"
+    },
+    {
+      "rule_ref": "U071",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "账号注册和登录前置事实未提供；条款仅适用于百炼产品访问。"
+    },
+    {
+      "rule_ref": "U072",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转让、出租或出借账户事实。"
+    },
+    {
+      "rule_ref": "U073",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有发现未经授权账户使用的事实。"
+    },
+    {
+      "rule_ref": "U074",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "具体显示的操作指引未提供，适用使用义务已由U016合并保留。"
+    },
+    {
+      "rule_ref": "U075",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务选择、付费或续费事实。"
+    },
+    {
+      "rule_ref": "U076",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有优惠活动事实。"
+    },
+    {
+      "rule_ref": "U077",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有免费服务转为收费后继续使用的事实。"
+    },
+    {
+      "rule_ref": "U078",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有价格调整或继续购买事实。"
+    },
+    {
+      "rule_ref": "U079",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务付款事实。"
+    },
+    {
+      "rule_ref": "U080",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有账单争议事实。"
+    },
+    {
+      "rule_ref": "U081",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有发票重开或红字发票事实。"
+    },
+    {
+      "rule_ref": "U082",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有未付费用事实。"
+    },
+    {
+      "rule_ref": "U083",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有欠费、债务抵销或终止服务事实。"
+    },
+    {
+      "rule_ref": "U084",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的售后支持义务。"
+    },
+    {
+      "rule_ref": "U085",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有付费服务或资源包使用事实。"
+    },
+    {
+      "rule_ref": "U086",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的维护、变更、终止通知或退款义务。"
+    },
+    {
+      "rule_ref": "U087",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有服务订单或费用到期事实。"
+    },
+    {
+      "rule_ref": "U088",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关内容制作或使用事实。"
+    },
+    {
+      "rule_ref": "U089",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有上传或处理信息内容事实。"
+    },
+    {
+      "rule_ref": "U090",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有编造或传播虚假信息事实。"
+    },
+    {
+      "rule_ref": "U091",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有通过服务发布、上传、链接或提供内容事实。"
+    },
+    {
+      "rule_ref": "U092",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用阿里云商标、服务标识等事实。"
+    },
+    {
+      "rule_ref": "U093",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有经书面授权使用阿里云标识事实。"
+    },
+    {
+      "rule_ref": "U094",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有通过服务训练、优化或精调模型的事实。"
+    },
+    {
+      "rule_ref": "U095",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有上传素材事实。"
+    },
+    {
+      "rule_ref": "U096",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有知识产权质疑或投诉事实。"
+    },
+    {
+      "rule_ref": "U097",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用阿里云或其关联模型生成内容的相关事实。"
+    },
+    {
+      "rule_ref": "U098",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有外部商业化生成内容事实。"
+    },
+    {
+      "rule_ref": "U099",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有其他客户获得相似生成内容事实。"
+    },
+    {
+      "rule_ref": "U100",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条定义保密信息范围，不独立规定本次活动义务。"
+    },
+    {
+      "rule_ref": "U101",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有接收或持有对方保密信息的事实。"
+    },
+    {
+      "rule_ref": "U102",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有持有保密信息或员工访问事实。"
+    },
+    {
+      "rule_ref": "U103",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有披露保密信息的事实。"
+    },
+    {
+      "rule_ref": "U104",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有发现保密信息泄露事实。"
+    },
+    {
+      "rule_ref": "U105",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是服务提供者的酌情救济条款。"
+    },
+    {
+      "rule_ref": "U106",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有连续72小时无法使用服务的事实。"
+    },
+    {
+      "rule_ref": "U107",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有联系方式提供或变更事实。"
+    },
+    {
+      "rule_ref": "U108",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有联系方式提供或变更事实。"
+    },
+    {
+      "rule_ref": "U109",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用自定义插件事实。"
+    },
+    {
+      "rule_ref": "U110",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用平台开发应用或向外提供服务的事实。"
+    },
+    {
+      "rule_ref": "U111",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有因违约引发侵权投诉或诉讼事实。"
+    },
+    {
+      "rule_ref": "U112",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "通过百炼使用第三方模型或技术服务时须遵守其适用要求，适用性及履行状态未知。"
+    },
+    {
+      "rule_ref": "U113",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有转售百炼服务或平台模型事实。"
+    },
+    {
+      "rule_ref": "U114",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有训练或开发竞争产品或服务事实。"
+    },
+    {
+      "rule_ref": "U115",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "第三方开源与商业闭源服务有不同的使用前要求，合并保留服务类型条件。"
+    },
+    {
+      "rule_ref": "U116",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用Token Plan或Coding Plan订阅事实。"
+    },
+    {
+      "rule_ref": "U117",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有个人版Token Plan或Coding Plan调用事实；条款是对提供者的数据使用授权。"
+    },
+    {
+      "rule_ref": "U118",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有Token Plan团队版使用事实。"
+    },
+    {
+      "rule_ref": "U119",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未表明选择条文所指的第三方模型API服务。"
+    },
+    {
+      "rule_ref": "U120",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有首次调用云市场第三方模型API事实。"
+    },
+    {
+      "rule_ref": "U121",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条描述提供者处理客户信息，不是本次调用者行为义务。"
+    },
+    {
+      "rule_ref": "U122",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关客户调研、服务沟通或商业电子信息事实。"
+    },
+    {
+      "rule_ref": "U123",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证明本次调用处理了条文所指客户业务数据。"
+    },
+    {
+      "rule_ref": "U124",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条规定提供者处理客户业务数据的限制，不是调用者义务。"
+    },
+    {
+      "rule_ref": "U125",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有删除或更改客户数据请求事实。"
+    },
+    {
+      "rule_ref": "U126",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有选择境外处理或数据出境事实。"
+    },
+    {
+      "rule_ref": "U127",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未表明选择条文所指的第三方模型API服务。"
+    },
+    {
+      "rule_ref": "U128",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有反向工程或发现百炼服务源代码事实。"
+    },
+    {
+      "rule_ref": "U129",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是声音复刻场景下的平台提供者义务。"
+    },
+    {
+      "rule_ref": "U130",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有第三方知识产权质疑或投诉事实。"
+    },
+    {
+      "rule_ref": "U131",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有外部商业化生成内容或损失事实。"
+    },
+    {
+      "rule_ref": "U132",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有保密信息泄露并造成损失事实。"
+    },
+    {
+      "rule_ref": "U133",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出口管制、制裁或相关禁止用途事实。"
+    },
+    {
+      "rule_ref": "U134",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有购买、付费、账单争议或发票处理事实。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条仅许可逐字复制GPL许可文件；无此活动事实。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条仅许可分发逐字复制的GPL许可文件；无此活动事实。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "GPL许可对象与被调用上游服务是否相同未获证明。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有输出构成GPL覆盖作品的事实。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有使用GPL覆盖作品的事实。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有为自身修改或运行GPL覆盖作品而向他人交付的事实。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发GPL覆盖作品或再许可事实。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有相关技术措施或法律定性事实。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传递GPL覆盖作品的事实。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发原样源代码副本的事实。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出售GPL覆盖作品副本的事实。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有以源代码形式传递基于GPL程序作品的事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发修改后的源代码作品事实。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发修改后的源代码作品事实。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传递基于GPL程序的修改作品事实。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发含交互界面的修改作品事实。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有与GPL覆盖作品组合或汇编事实。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发目标代码形式覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有采用GPL第6(a)节实体介质路径分发目标代码事实。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有采用GPL第6(b)节书面要约路径分发目标代码事实。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有采用GPL第6(c)节路径分发单份目标代码事实。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有采用GPL第6(d)节指定地点路径分发目标代码事实。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有通过点对点传输分发目标代码事实。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有分发含系统库可分离部分的目标代码作品事实。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有向用户产品交付目标代码或安装信息事实。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有因修改而拒绝网络访问事实。"
+    },
+    {
+      "rule_ref": "D027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有按GPL第6节提供对应源代码或安装信息事实。"
+    },
+    {
+      "rule_ref": "D028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有适用于GPL程序或其部分的额外许可事实。"
+    },
+    {
+      "rule_ref": "D029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传递适用额外许可的覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有向覆盖作品添加材料事实。"
+    },
+    {
+      "rule_ref": "D031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有经相关版权人授权向新增材料附加条款事实。"
+    },
+    {
+      "rule_ref": "D032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有GPL再许可、传递或进一步限制事实。"
+    },
+    {
+      "rule_ref": "D033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有依据GPL第7节向覆盖作品添加条款事实。"
+    },
+    {
+      "rule_ref": "D034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传播GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有停止GPL违规或权利恢复相关事实。"
+    },
+    {
+      "rule_ref": "D037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有权利人通知及限期补救相关事实。"
+    },
+    {
+      "rule_ref": "D038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有因许可终止影响接收方权利的相关事实。"
+    },
+    {
+      "rule_ref": "D039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有GPL权利终止或恢复相关事实。"
+    },
+    {
+      "rule_ref": "D040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有接收或运行GPL程序副本事实。"
+    },
+    {
+      "rule_ref": "D041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有点对点接收副本并发生附带传播事实。"
+    },
+    {
+      "rule_ref": "D042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传递GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有第三方收到GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有实体交易导致传播GPL覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有对GPL权利施加进一步限制或提起相关专利诉讼事实。"
+    },
+    {
+      "rule_ref": "D046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有行使贡献者专利许可事实。"
+    },
+    {
+      "rule_ref": "D047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改贡献者版本并行使专利许可事实。"
+    },
+    {
+      "rule_ref": "D048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有出售贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有要约出售贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D050",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传播贡献者版本事实。"
+    },
+    {
+      "rule_ref": "D051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有依赖专利许可传递覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有单一交易安排下传递覆盖作品并授予专利许可事实。"
+    },
+    {
+      "rule_ref": "D053",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有条文所述第三方专利安排及传递覆盖作品事实。"
+    },
+    {
+      "rule_ref": "D054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有依赖其他可用专利许可或抗辩事实。"
+    },
+    {
+      "rule_ref": "D055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有其他义务与GPL条件无法同时履行事实。"
+    },
+    {
+      "rule_ref": "D056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有与AGPLv3作品链接事实。"
+    },
+    {
+      "rule_ref": "D057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有与AGPLv3作品合并事实。"
+    },
+    {
+      "rule_ref": "D058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有传递AGPLv3与GPL覆盖作品组合事实。"
+    },
+    {
+      "rule_ref": "D059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有为GPL程序选择许可版本事实。"
+    },
+    {
+      "rule_ref": "D060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有代理人指定并公开接受未来GPL版本事实。"
+    },
+    {
+      "rule_ref": "D061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有按GPL示例声明分发程序事实。"
+    },
+    {
+      "rule_ref": "D062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有修改GPL示例声明所指程序事实。"
+    },
+    {
+      "rule_ref": "D063",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有应用GPL示例声明事实。"
+    },
+    {
+      "rule_ref": "D064",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有应用交互式终端程序启动通知事实。"
+    },
+    {
+      "rule_ref": "D065",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "没有将GPL程序并入专有程序事实。"
+    }
+  ]
+}

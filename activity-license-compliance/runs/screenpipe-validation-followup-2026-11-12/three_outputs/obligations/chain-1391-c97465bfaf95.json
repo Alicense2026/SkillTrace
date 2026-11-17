@@ -1,0 +1,151 @@
+{
+  "case_id": "chain-1391-c97465bfaf95",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游模型材料时，如该使用涉及模型体验生成内容，应仅将其用于体验模型效果；不得用于其他目的（包括商业化），也不得以任何形式提供给第三方或在第三方平台使用、传播或分发。",
+      "source_refs": [
+        "license-text:upstream:854d672afa932e53"
+      ],
+      "subject": {
+        "artifact": "chain-1391-c97465bfaf95:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "conduct_matches_prohibition_in_excerpt"
+        ]
+      },
+      "unresolved_predicates": [
+        "whether_use_involves_model_experience_generated_content",
+        "whether_use_is_beyond_experiencing_the_model",
+        "whether_use_involves_commercial_use_or_third_party_provision"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如本次使用涉及下游 Licensed Work，须符合至少一种免费使用类别：个人非商业使用，或非营利、教育或研究使用，或最多七天的评估、开发或测试使用；这些类别为可选路径，七天时限仅适用于评估、开发或测试类别。",
+      "source_refs": [
+        "license-text:downstream:7699d23d219d4823"
+      ],
+      "subject": {
+        "artifact": "chain-1391-c97465bfaf95:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "downstream_licensed_work_use"
+        ]
+      },
+      "unresolved_predicates": [
+        "downstream_licensed_work_use",
+        "personal_noncommercial_use",
+        "nonprofit_educational_or_research_use",
+        "evaluation_development_or_testing_within_seven_days"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如本次使用涉及下游 Licensed Work 且属于商业使用，须同时具备付费 Screenpipe Enterprise 计划和许可方明确覆盖该使用的商业许可。",
+      "source_refs": [
+        "license-text:downstream:7699d23d219d4823"
+      ],
+      "subject": {
+        "artifact": "chain-1391-c97465bfaf95:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "downstream_licensed_work_use",
+          "commercial_use"
+        ]
+      },
+      "unresolved_predicates": [
+        "downstream_licensed_work_use",
+        "commercial_use",
+        "paid_screenpipe_enterprise_plan",
+        "commercial_license_from_licensor_expressly_covers_use"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如使用下游 Licensed Work 且属于许可证列明的商业产品或服务销售、托管或管理服务、向客户提供的产品嵌入或整合、或竞争产品/服务等情形，不得在没有有效商业许可时进行该使用。",
+      "source_refs": [
+        "license-text:downstream:7699d23d219d4823"
+      ],
+      "subject": {
+        "artifact": "chain-1391-c97465bfaf95:downstream",
+        "kind": "CombinedProduct"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "downstream_licensed_work_use",
+          "listed_commercial_context"
+        ]
+      },
+      "unresolved_predicates": [
+        "downstream_licensed_work_use",
+        "listed_commercial_context",
+        "valid_commercial_license"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如使用官方预构建的 Screenpipe 版本，应满足许可证所述的个人订阅/终身许可、公司用户数量及服务器、共享或无人值守机器的适用许可要求。",
+      "source_refs": [
+        "license-text:downstream:7699d23d219d4823"
+      ],
+      "subject": {
+        "artifact": "chain-1391-c97465bfaf95:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_of_official_prebuilt_build"
+        ]
+      },
+      "unresolved_predicates": [
+        "use_of_official_prebuilt_build",
+        "fulfillment_of_official_build_license_duty"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "如发生超出下游许可条款的使用并因此终止许可权利，应停止所有使用并销毁持有的全部副本。",
+      "source_refs": [
+        "license-text:downstream:7699d23d219d4823"
+      ],
+      "subject": {
+        "artifact": "chain-1391-c97465bfaf95:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "use_outside_license_terms"
+        ]
+      },
+      "unresolved_predicates": [
+        "use_outside_license_terms",
+        "fulfillment_of_termination_duty"
+      ]
+    }
+  ]
+}

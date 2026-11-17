@@ -1,0 +1,214 @@
+{
+  "case_id": "chain-0388-b9580f083c57",
+  "input_group_row": 388,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "PolyForm-Perimeter-1.0.1",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0388-b9580f083c57",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "developing_models_that_compete_with_the_Gemini_Services",
+            "when": "using_Gemini_API_Services"
+          },
+          "S": {
+            "artifact": "chain-0388-b9580f083c57:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b1bff3edd764482c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose"
+          },
+          "S": {
+            "artifact": "chain-0388-b9580f083c57:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:b1bff3edd764482c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "product_competes_with_PolyForm_software",
+            "when": "providing_product_to_others"
+          },
+          "S": {
+            "artifact": "chain-0388-b9580f083c57:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0388-b9580f083c57:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not use the Gemini API Services to develop models that compete with those Services.",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "using_Gemini_API_Services"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "developing_competing_model"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0388-b9580f083c57:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the software only for a permitted purpose; a purpose involving providing others a product that competes with the software is excluded.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "permitted_purpose",
+          "providing_competing_product_to_others"
+        ],
+        "source_refs": [
+          "license-text:downstream:b1bff3edd764482c"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0388-b9580f083c57:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Agree to the PolyForm terms as strict obligations and conditions to obtain a license.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "agreement_to_terms"
+        ],
+        "source_refs": [
+          "license-text:downstream:b1bff3edd764482c"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "记录确认远程服务调用及 API 链接，但不证明两份许可约束同一对象；对象图中的共同范围未知，故未判定许可冲突。",
+      "上游摘录禁止的是使用服务开发竞争模型及逆向工程、提取或复制服务组件；结构化抽取将该条款映射为较宽的 Use 禁止。此处按摘录保留竞争模型这一具体条件；未发现逆向工程、提取或复制事实。",
+      "未提供竞争模型开发、是否向他人提供竞争产品、PolyForm 条款接受情况或相应履行事实。未将 API 调用视为分发、代码修改或模型权重转移。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 27526,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1367,
+    "output_tokens_details": {
+      "reasoning_tokens": 310
+    },
+    "total_tokens": 28893,
+    "attribution": {
+      "items": {
+        "msg_08282898e3af1942016af53316ff6c87d18dc0dd72d38618b7": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08282898e3af1942016af53316ff6c87d19dae15cc416ff937": {
+          "input_tokens": 25456,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 25456,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_08282898e3af1942016af5331e255c87d18dd738dce51d4461": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1057,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1057
+            }
+          ]
+        },
+        "rs_08282898e3af1942016af5331e0e7887d193fc11a319f0da31": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 310
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "04187722d67be6ecc3a0c1dfd13a330748b5aef2afd0c096fb1c30ae17204833",
+  "elapsed_seconds": 46.87
+}

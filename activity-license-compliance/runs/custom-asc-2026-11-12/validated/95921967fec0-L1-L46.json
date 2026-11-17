@@ -1,0 +1,86 @@
+{
+  "request_sha256": "0fd2ccc3ff4caf25846c2b4075680227eff701b01ba7ec13e17e81cb2e10c4dc",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 12,
+        "end_line": 18,
+        "clause_label": "一、授权范围",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "noncommercial_personal_use"
+        },
+        "actor_role": "any individual",
+        "scope_note": "Grants personal use, copying, modification, and distribution of the software and modified versions, only for noncommercial personal use.",
+        "condition_explanation": "noncommercial_personal_use means the activity is noncommercial and for personal use; both limits apply."
+      },
+      {
+        "start_line": 22,
+        "end_line": 25,
+        "clause_label": "二、禁止事项",
+        "activities": [
+          "Use",
+          "CommercialUse",
+          "Combine",
+          "ProvideNetworkService",
+          "SellCopies",
+          "Charge",
+          "OfferPaidAccess"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "explicit_written_authorization_from_copyright_owner"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Without the copyright owner's explicit written authorization, the software or modified versions may not be used for any commercial purpose or profit-making project, made part of any commercial product or service, or commercially operated, sold, or hosted for a fee.",
+        "condition_explanation": "The prohibition applies when explicit written authorization from the copyright owner is absent. The text does not define the scope or terms of any authorization."
+      },
+      {
+        "start_line": 29,
+        "end_line": 31,
+        "clause_label": "三、衍生作品",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "a_version_is_copied_or_derived_from_the_repository",
+          "requires": "comply_with_all_license_terms"
+        },
+        "actor_role": "person copying or deriving a version",
+        "scope_note": "Versions copied or derived from the repository—including Fork, Clone, Submodule, or republication after download—are subject to all license terms, whether modified or not. The text also prohibits evasion by copying core logic or renaming.",
+        "condition_explanation": "The obligation applies to versions copied or derived from this repository; comply with all terms of this license. The listed examples are illustrative."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a personal-use license for this repository and its derivative versions, not a general software-license template; no terms for third-party dependencies are supplied.",
+      "Commercial-use authorization is referenced as separately obtained explicit written authorization; no authorization terms are provided.",
+      "The noncommercial personal-use grant and the commercial-use prohibition do not specify separate rules for network access or training; no additional grant for those activities is stated.",
+      "Disclaimer and governing-law provisions are omitted as unrelated to the requested activities."
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "case_id": "chain-13204-03c1a9c32d5f",
+  "source_csv_line": 13205,
+  "row": {
+    "github_repo": "doc2md",
+    "github_url": "https://github.com/KjellKod/doc2md",
+    "github_license": "LicenseRef-doc2md-Desktop",
+    "artifact_name": "Donchitos/ux-review",
+    "artifact_url": "https://github.com/Donchitos/Claude-Code-Game-Studios/tree/main/.claude/skills/ux-review",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: scripts/quest_runtime/review_intelligence.py:657 ｜ 调用原文: # P-marker severity used by UX plan-review embeds (per ux-review/SKILL.md ｜ 证据等级: 待复核（中） ｜ 解析: skillsmp → skillsmp ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: .skills/ux-review Agent Skill 注册于 skills 目录",
+    "batch": "6501-7000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "kjellkod/doc2md",
+    "license_label": "LicenseRef-doc2md-Desktop",
+    "sha256": "838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a",
+    "filename": "_licenseref_full/texts/838ca495c3e6d32653b673a44c47129a9630a7182ea44a4360ba84b22907e49a.txt",
+    "evidence_file": "LICENSES/LicenseRef-doc2md-Desktop.txt",
+    "acquisition": "zip:mirror:doc2md-HEAD/LICENSES/LicenseRef-doc2md-Desktop.txt",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-13204-03c1a9c32d5f",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:64404b3a439fc356"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-13204-03c1a9c32d5f:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cb006ea78c1fbfca"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-13204-03c1a9c32d5f:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "use_is_for_evaluation",
+            "when": "good_faith_evaluation"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cb006ea78c1fbfca"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-13204-03c1a9c32d5f:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "payment_due_paid",
+            "when": "routine_or_ongoing_productive_use_after_evaluation"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-13204-03c1a9c32d5f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "满足适用MIT许可条件时，保留版权声明和许可声明。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:64404b3a439fc356"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-13204-03c1a9c32d5f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "若该材料属于许可覆盖的 Official App，评估使用须为善意评估；若评估后用于常规或持续生产性工作，须购买许可。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "downstream_license_covers_called_service"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_license_covers_called_service",
+          "good_faith_evaluation",
+          "routine_or_ongoing_productive_use_after_evaluation",
+          "payment_due_paid"
+        ],
+        "source_refs": [
+          "license-text:downstream:cb006ea78c1fbfca"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游MIT文本与下游LicenseRef-doc2md-Desktop文本均有本地来源标识；下游摘录针对Covered Software/Official App，但现有事实未证明远程调用的ux-review资产属于该许可定义的Covered Software或Official App，因此下游条款的适用性保留条件。",
+      "事实确认的是远程调用与Use；未证明复制、修改、分发、常规或持续生产性使用、评估用途或付费授权。远程调用本身不证明分发、源码提供或模型权重转移。",
+      "MIT许可摘录的通知条件涉及许可覆盖软件的复制或实质部分；当前材料未说明远程调用是否涉及此类复制，故通知义务仅作条件性要求，不据此认定未履行。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 34778,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1260,
+    "output_tokens_details": {
+      "reasoning_tokens": 263
+    },
+    "total_tokens": 36038,
+    "attribution": {
+      "items": {
+        "msg_0b1ee00237427752016af53d163f5087d1b11baf679b62222d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b1ee00237427752016af53d163f5087d1b20efdbd3c76ce04": {
+          "input_tokens": 32708,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 32708,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0b1ee00237427752016af53d1b8e7887d18d4da7dcaa233910": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 997,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 997
+            }
+          ]
+        },
+        "rs_0b1ee00237427752016af53d1b730887d1bf56d2859fad67b6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 263
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "917e39327fc10f7233987245b31355cca787433d19d49dba878f44ab7309bb01",
+  "elapsed_seconds": 31.02
+}

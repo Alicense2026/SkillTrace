@@ -1,0 +1,158 @@
+{
+  "case_id": "chain-9823-e05d91ef1fbc",
+  "source_csv_line": 9824,
+  "row": {
+    "github_repo": "pdftriage",
+    "github_url": "https://github.com/adobe-research/pdftriage",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-3.5-turbo-16k",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: pdftriage_scripts/functions.py:284 ｜ 调用原文: response = openai.ChatCompletion.create( ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 在 gpt_evaluate.py 的 openai.ChatCompletion.create 中作为 model 参数被调用，functions.py 也有引用。",
+    "batch": "4501-5000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "adobe-research/pdftriage",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "910c3b38609dbb1d1344d720873c77225f4b46073910113ed1d890328d5454fe",
+    "filename": "_supplement_round2/910c3b38609dbb1d1344d720873c77225f4b46073910113ed1d890328d5454fe.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 6; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-9823-e05d91ef1fbc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:82de9073242959c6"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees",
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-9823-e05d91ef1fbc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI 原文摘录只涉及客户向 OpenAI 或转售商支付适用费用；没有证据表明下游用户收费，也不能据此推断该活动已发生。",
+      "下游 LicenseRef-Custom 原文针对 Adobe Licensed Materials；现有对象图只证实对 OpenAI 服务的远程调用/链接，未证实两者适用范围重合或本案对下游材料实施受许可活动，因此不据此判定冲突或生成下游义务。",
+      "未提供适用费用是否到期的事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "subject": {
+          "artifact": "chain-9823-e05d91ef1fbc:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "向 OpenAI 或适用的转售商支付适用费用",
+        "trigger": "applicable_fees_due",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "fee_payment_fulfilled"
+        ],
+        "source_refs": [
+          "license-text:upstream:82de9073242959c6"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20479,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 818,
+    "output_tokens_details": {
+      "reasoning_tokens": 333
+    },
+    "total_tokens": 21297,
+    "attribution": {
+      "items": {
+        "msg_059640f7f6e20b70016af58654069087d08371303b8f044107": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_059640f7f6e20b70016af58654069087d0b94916bcd35625d5": {
+          "input_tokens": 18409,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18409,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_059640f7f6e20b70016af5865ab07487d08a551fe05feb3068": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 485,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 485
+            }
+          ]
+        },
+        "rs_059640f7f6e20b70016af5865a94c087d0b299f7cd21cb13fd": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 333
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 27.73
+}

@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0037-2486aa892fab",
+  "status": "SUCCESS",
+  "request_sha256": "1d39e695d086065824ab3dc2e1e50e165e2147a721a61e7f96f94e48349a4b2d",
+  "analysis": {
+    "case_id": "chain-0037-2486aa892fab",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions"
+          },
+          "S": {
+            "artifact": "chain-0037-2486aa892fab:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:85436ac2e0e1ee6f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0037-2486aa892fab:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0037-2486aa892fab:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_CC_license_conditions",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "applicable_CC_license_conditions",
+          "fulfillment_of_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:upstream:6c58d51d2054a711"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0037-2486aa892fab:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "include_copyright_and_permission_notice",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "activity:Use",
+          "whether_use_involves_copy_or_substantial_portion",
+          "notice_inclusion"
+        ],
+        "source_refs": [
+          "license-text:downstream:85436ac2e0e1ee6f"
+        ]
+      }
+    ],
+    "limitations": [
+      "CC-BY-4.0摘录仅呈现许可授予语句，未提供适用于本次使用的具体条件条款；因此保留一般条件义务，不推断具体归属、链接或其他义务。",
+      "MIT通知条款摘录限于复制或实质部分；记录证明的是远程服务调用，不证明下游软件的复制、分发或其他受该通知条款约束的行为。",
+      "对象图确认下游到上游的API链接/远程调用，但是否存在许可共同适用的同一对象未知；未据此认定许可冲突。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20101,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 966,
+    "output_tokens_details": {
+      "reasoning_tokens": 235
+    },
+    "total_tokens": 21067,
+    "attribution": {
+      "items": {
+        "msg_05dc2606a86a6a35016af2f8479fec87d28f0265a7ee8f24bd": {
+          "input_tokens": 18069,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18069,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05dc2606a86a6a35016af2f84c8d8487d2a1615f83cf0c2c97": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 731,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 731
+            }
+          ]
+        },
+        "rs_05dc2606a86a6a35016af2f84c71a087d2ab1aab554cf91169": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 235
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 21.028,
+  "auto_applied": false,
+  "aggregate_count": 50
+}

@@ -1,0 +1,318 @@
+{
+  "case_id": "chain-0269-e250234d6787",
+  "status": "SUCCESS",
+  "request_sha256": "c5ae190465f0e029740b875ad59aec9ed727ce6e2190720f44caa2fb94cc22a5",
+  "analysis": {
+    "case_id": "chain-0269-e250234d6787",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "non_commercial_use_or_prior_written_commercial_authorization",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "military_or_illegal_purpose",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "prior_written_authorization_from_licensor",
+            "when": "activity:CommercialUse"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "prior_written_authorization_from_licensor",
+            "when": "activity:Charge"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Baichuan_license",
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "provide_Baichuan_source_and_license_copy_to_third_party_user",
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:814088fced64b830"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:814088fced64b830"
+        ],
+        "triple": {
+          "A": "Distribute",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Distribute"
+          },
+          "S": {
+            "artifact": "chain-0269-e250234d6787:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use/chain-0269-e250234d6787:upstream OriginalArtifact 与 downstream CombinedProduct；上游许可对非商业使用允许，商业使用需事先书面授权，并禁止军事或非法用途；Apache-2.0摘录对下游对象授予使用权但未提出相反限制。远程调用及使用已确认，但对象图未确定两许可是否约束同一对象，因此不构成已确认冲突；商业授权条件仍须满足。来源：Baichuan L18-L19、L21-L25；Apache-2.0第2节。",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea",
+          "license-text:downstream:814088fced64b830"
+        ],
+        "status": "CONDITIONS_TO_INHERIT"
+      },
+      {
+        "activity": "Distribute",
+        "figure_case_refs": [],
+        "reason": "Distribute/上游 OriginalArtifact 与下游 CombinedProduct；Baichuan条款要求向第三方使用者提供模型来源及协议副本，Apache-2.0第2节授予分发权但未否定该要求。实际分发及两许可范围是否重合均未知，故无冲突认定；若分发上游材料或受其约束的产品，应履行上游通知/副本要求。来源：Baichuan L21-L25；Apache-2.0第2节。",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea",
+          "license-text:downstream:814088fced64b830"
+        ],
+        "status": "CONDITIONS_TO_INHERIT"
+      }
+    ],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对上游 Baichuan 2 材料的使用须为非商业用途，或已取得许可方事先书面商业授权；不得用于军事或非法目的。",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "subject": {
+          "artifact": "chain-0269-e250234d6787:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "commercial_use",
+          "prior_written_authorization_from_licensor",
+          "military_or_illegal_purpose",
+          "scope_shared"
+        ]
+      },
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对上游 Baichuan 2 材料收费须取得许可方事先书面授权。",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "subject": {
+          "artifact": "chain-0269-e250234d6787:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Charge",
+        "unresolved_predicates": [
+          "activity:Charge",
+          "prior_written_authorization_from_licensor",
+          "scope_shared"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "对上游 Baichuan 2 材料作商业用途须取得许可方事先书面授权。",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "subject": {
+          "artifact": "chain-0269-e250234d6787:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:CommercialUse",
+        "unresolved_predicates": [
+          "activity:CommercialUse",
+          "prior_written_authorization_from_licensor",
+          "scope_shared"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若向第三方使用者分发 Baichuan 2 模型或模型衍生品，须提供模型来源及 Baichuan 2 协议副本。",
+        "source_refs": [
+          "license-text:upstream:a335d1f0250d6eea"
+        ],
+        "subject": {
+          "artifact": "chain-0269-e250234d6787:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Distribute",
+        "unresolved_predicates": [
+          "activity:Distribute",
+          "scope_shared"
+        ]
+      }
+    ],
+    "limitations": [
+      "对象图仅确认下游通过远程服务调用并链接上游；未确认两份许可约束同一对象，且未提供分发、收费或商业使用事实。",
+      "结构化ASC为首轮抽取；Baichuan授权条款的上下文和许可定义可能影响托管服务是否属于分发或商业使用，现有摘录不足以判定。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 23408,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 2194,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 25602,
+    "attribution": {
+      "items": {
+        "msg_067ec6c07f0cd60a016af302b35c6c87d290fd74accc0bde2e": {
+          "input_tokens": 21376,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21376,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_067ec6c07f0cd60a016af302b3ea3087d29488aac0d887a4a1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 2194,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 2194
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 47.155,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

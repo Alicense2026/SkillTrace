@@ -1,0 +1,115 @@
+{
+  "request_sha256": "68f1beb26d52fdebfaabddb6b414ad974ac45bf8e72e3b47c7b5ee18ec2873e6",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 299,
+        "end_line": 299,
+        "clause_label": "customer_account_credentials_and_user_controls",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "use_only_through_customer_user_account",
+              "account_access_limited_to_permitted_users",
+              "credentials_kept_secure",
+              "credentials_provided_to_and_used_only_by_permitted_users",
+              "credentials_not_shared_between_unique_permitted_users",
+              "individual_users_bound_to_terms_no_less_restrictive_or_protective_of_cohere",
+              "customer_responsible_for_use_through_customer_credentials_and_associated_fees"
+            ]
+          }
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 7, Customer User Account; applies to Customer's and Permitted Users' use of the Cohere API SaaS Services through the Customer User Account and Customer Credentials. Customer must not allow a Permitted User to share the account with another person. Cohere's reserved right to suspend, deactivate, or replace an account is not a Customer duty.",
+        "condition_explanation": "Permitted Users are authorized employees and independent contractors. Each atom states a separate account, credential, or user-contract requirement. Customer responsibility for use through Customer Credentials includes associated Fees; it does not itself specify an additional access-control action.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure Permitted Users use the Cohere API SaaS Services only through the Customer User Account.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services access through the Customer User Account",
+            "trigger": "Whenever Customer or a Permitted User uses the Cohere API SaaS Services."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not allow a Permitted User to share the Customer User Account with any other person.",
+            "actor": "Customer",
+            "object": "Customer User Account",
+            "trigger": "At all times the Customer User Account is used."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Keep Customer Credentials secure; provide them only to and permit their use only by Permitted Users; and do not share them between more than one unique Permitted User.",
+            "actor": "Customer",
+            "object": "Customer Credentials",
+            "trigger": "Whenever Customer manages, provides, or permits use of Customer Credentials."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly notify Cohere of any actual or suspected unauthorized use of the Cohere API SaaS Services.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services",
+            "trigger": "Upon actual or suspected unauthorized use."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure all individual users of the Cohere API SaaS Services, including Permitted Users, are contractually bound to terms with Customer no less restrictive or protective of Cohere's rights than this Agreement.",
+            "actor": "Customer",
+            "object": "Individual users' contractual terms governing use of the Cohere API SaaS Services",
+            "trigger": "Before or while an individual user uses the Cohere API SaaS Services."
+          }
+        ]
+      },
+      {
+        "start_line": 302,
+        "end_line": 302,
+        "clause_label": "support_services_customer_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "subject_to_any_additional_support_terms_in_order_form"
+        },
+        "actor_role": "customer",
+        "scope_note": "Section 8, Support; concerns Customer's access to Cohere technical Support Services, generally available by email and through Cohere's online knowledge base and Documentation. Additional support terms may be set out in an Order Form.",
+        "condition_explanation": "The text says Customer will generally have access and makes any additional support terms in an Order Form applicable; it does not state a definite unconditional service-delivery obligation or specify what those additional terms are.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The Order Form may contain additional Support Services terms, but it was not supplied; their contents cannot be determined."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0090",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_account_credentials_and_user_controls"
+        ],
+        "reason": "The paragraph's account-use restriction, credential safeguards, prompt unauthorized-use notice, user-contract requirement, and responsibility for use through Customer Credentials are represented. Cohere's discretionary account suspension/replacement and liability disclaimer do not impose a Customer activity duty."
+      },
+      {
+        "unit_id": "P0091",
+        "status": "MODELED",
+        "clause_labels": [
+          "support_services_customer_access"
+        ],
+        "reason": "The paragraph provides for Customer's general access to technical Support Services and identifies possible Order Form terms; the conditional access rule records that scope without inventing a guaranteed support-delivery obligation."
+      }
+    ]
+  },
+  "attempt": 1
+}

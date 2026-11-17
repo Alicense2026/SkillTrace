@@ -1,0 +1,885 @@
+{
+  "case_id": "skill-00068",
+  "csv_row": 69,
+  "source_excel_row": "113",
+  "status": "SUCCESS",
+  "request_sha256": "8cd93896440d4143f959a52fa78bb507d88114efaf932c9669b689014015fb9e",
+  "analysis": {
+    "case_id": "skill-00068",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本行事实证实对 Gemini API 的远程调用及 Use、Link 关系；未证实分发、修改、模型权重转移或 CC-BY-4.0 许可材料被用于本次调用。未据此认定许可间冲突或行为违规。",
+      "Gemini API Additional Terms 引用的 API Terms、Prohibited Use Policy、地区及功能文档、数据处理附录等外部材料未提供；不推断其内容。proprietary 标签不构成所有厂商共同许可。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者须年满18岁；服务不得用于面向或可能被未满18岁人士访问的 API Client。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "user_is_at_least_18",
+          "api_client_not_directed_to_or_likely_accessed_by_under_18s"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者须为开发者以专业或商业目的构建 Google AI 模型；不得作消费者用途。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "professional_or_business_purpose_not_consumer_use"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者仅可在可用地区访问服务；若向欧洲经济区、瑞士或英国用户提供 API Client，须仅使用付费服务。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "within_available_region",
+          "not_making_api_clients_available_to_users_in_eea_switzerland_or_uk",
+          "using_only_paid_services_for_api_clients_available_to_users_in_eea_switzerland_or_uk"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者不得开发与服务竞争的模型，也不得试图逆向工程、提取或复制服务组件（包括底层数据或模型）。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "developing_model_that_competes_with_services",
+          "attempting_to_reverse_engineer_extract_or_replicate_service_component_data_or_model"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者须遵守 API Terms 的 API Prohibitions 及 Prohibited Use Policy；其具体内容未提供。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "comply_with_api_prohibitions_and_prohibited_use_policy"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者不得绕过保护措施，也不得使用违反 API Terms 或 Additional Terms 的内容。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "attempting_to_bypass_protective_measures_or_using_content_that_violates_terms"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者不得将服务用于临床实践、提供医疗建议，或用于受医疗器械监管机构监督或需其许可/批准的方式。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "use_in_clinical_practice",
+          "use_to_provide_medical_advice",
+          "use_overseen_by_or_requiring_medical_device_regulatory_clearance_or_approval"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用生成内容时，上游 API 使用者须遵守适用法律及 API Terms；仅在适用法律要求且内容以 API 调用结果返回用户时须提供归属标识。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "comply_with_applicable_law_and_api_terms_when_using_generated_content"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 Unpaid Services，上游 API 使用者不得提交敏感、机密或个人信息。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "unpaid_service_use",
+        "unresolved_predicates": [
+          "unpaid_service_use",
+          "submitting_sensitive_confidential_or_personal_information_to_unpaid_services"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在依赖、发布或以其他方式使用服务提供的内容前，上游 API 使用者须审慎判断；不得将服务或其内容作为医疗、心理健康、法律、金融或其他专业建议加以依赖。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "any": [
+            "relying_on_publishing_or_otherwise_using_service_content",
+            "relying_on_service_content_as_professional_advice"
+          ]
+        },
+        "unresolved_predicates": [
+          "relying_on_publishing_or_otherwise_using_service_content",
+          "relying_on_service_content_as_professional_advice"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者须为用途确定必要且适当的安全设置和事实性工具。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "determine_necessary_and_appropriate_safety_settings_and_factuality_tools_for_use_case"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 Google Search Grounding，上游 API 使用者须在自有并运营的应用中使用，并仅向提交提示的终端用户展示结果及相关搜索建议；同时须遵守该功能的内容使用、复制存储、监测和展示限制及其适用例外。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_grounding_with_google_search",
+        "unresolved_predicates": [
+          "using_grounding_with_google_search",
+          "application_owned_and_operated_by_licensee",
+          "display_grounded_results_with_associated_search_suggestions_only_to_end_user_who_submitted_prompt",
+          "comply_with_applicable_grounding_search_content_restrictions_and_exceptions"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 Grounding with Google Maps，上游 API 使用者须遵守该功能文档及结果存储限制；不得抓取、导出或训练 Google Maps Data。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_grounding_with_google_maps",
+        "unresolved_predicates": [
+          "using_grounding_with_google_maps",
+          "comply_with_grounding_with_google_maps_documentation",
+          "scraping_or_exporting_google_maps_data",
+          "training_on_google_maps_data"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用代理式服务，上游 API 使用者须评估用途适合性、授权其访问或连接数据/应用/系统，并在生产环境使用时行使判断和监督；不得自动绕过人工确认请求。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "using_agentic_services",
+        "unresolved_predicates": [
+          "using_agentic_services",
+          "assess_suitability_and_authorize_access_and_connections_and_exercise_judgment_and_supervision_and_not_automatically_bypass_human_confirmation_requests"
+        ]
+      },
+      {
+        "activity": "Distribute",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "上游 API 使用者不得在文档定义的禁止地区分发或营销 Customer Applications；禁止地区及该项行为是否发生未知。",
+        "source_refs": [
+          "license:704a1373d3adc23f38caaca1ec1c13487abcf077252d33a8a22f6af1b9a7f138"
+        ],
+        "subject": {
+          "artifact": "skill-00068:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "distribution_or_marketing_in_prohibited_territory",
+        "unresolved_predicates": [
+          "distribution_or_marketing_in_prohibited_territory",
+          "prohibited_territory_as_defined_in_documentation"
+        ]
+      }
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "已证实使用 API；年龄和 API Client 条件未知，保留条件义务。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "已证实使用服务；用途条件未知，保留义务。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "已证实使用服务；地区、API Client 和付费服务条件未知。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          3
+        ],
+        "reason": "服务使用触发限制；禁止行为是否发生未知。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          4
+        ],
+        "reason": "服务使用触发遵守引用政策的义务；具体内容未提供。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          5
+        ],
+        "reason": "服务使用触发禁止性要求；相关行为未知。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          6
+        ],
+        "reason": "服务使用触发医疗及受监管用途限制；具体用途未知。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          7
+        ],
+        "reason": "生成内容使用条件义务；适用法律及具体使用情况未知。"
+      },
+      {
+        "rule_ref": "U009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规定 Google 对未付费服务内容的处理，不是调用者义务。"
+      },
+      {
+        "rule_ref": "U010",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          8
+        ],
+        "reason": "是否使用未付费服务及提交何种信息未知，保留条件义务。"
+      },
+      {
+        "rule_ref": "U011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "描述授予 Google 的内容许可扩展；不构成本行可确认的调用者活动义务。"
+      },
+      {
+        "rule_ref": "U012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "描述 Google 对调优内容的处理，不是调用者活动义务。"
+      },
+      {
+        "rule_ref": "U013",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "地区相关付费服务条件已并入 U003 对应义务。"
+      },
+      {
+        "rule_ref": "U014",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          2
+        ],
+        "reason": "付费服务分类条件已并入 U003 对应义务；不以收费推定。"
+      },
+      {
+        "rule_ref": "U015",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "仅提供 Paid Services 中 Google 主体定义背景。"
+      },
+      {
+        "rule_ref": "U016",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未证实定价变更后持续使用；该条主要规定定价变更及继续使用的同意后果。"
+      },
+      {
+        "rule_ref": "U017",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          12
+        ],
+        "reason": "是否使用代理式服务未知，保留功能触发条件义务。"
+      },
+      {
+        "rule_ref": "U018",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Search Grounding 使用情况未知，保留功能触发义务。"
+      },
+      {
+        "rule_ref": "U019",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 内容限制及例外并入该功能义务。"
+      },
+      {
+        "rule_ref": "U020",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 复制、存储及监测限制并入该功能义务。"
+      },
+      {
+        "rule_ref": "U021",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 复制存储的可选许可路径保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U022",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 为遵守法律而复制存储的条件保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U023",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 允许终端用户复制存储时的限制保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U024",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 监测限制保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U025",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          10
+        ],
+        "reason": "Grounding 修改和展示限制及书面许可条件保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "规定 Google 的数据存储及处理，不是调用者义务。"
+      },
+      {
+        "rule_ref": "U027",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          11
+        ],
+        "reason": "Maps Grounding 是否使用未知，保留功能触发义务。"
+      },
+      {
+        "rule_ref": "U028",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          11
+        ],
+        "reason": "Maps Grounding 展示限制保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U029",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          11
+        ],
+        "reason": "Maps Grounding 文档合规要求保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U030",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          11
+        ],
+        "reason": "Maps Grounding 存储限制及可选路径保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U031",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          11
+        ],
+        "reason": "Maps Grounding 抓取和导出限制保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U032",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          11
+        ],
+        "reason": "Maps Grounding 训练限制保留在该功能义务中。"
+      },
+      {
+        "rule_ref": "U033",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          13
+        ],
+        "reason": "禁止地区及分发行为未知，保留条件性限制。"
+      },
+      {
+        "rule_ref": "U034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "描述 Google 的 Maps 数据处理，不是调用者活动义务。"
+      },
+      {
+        "rule_ref": "U035",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未证实协议终止；该条说明相关条款在适用时存续。"
+      },
+      {
+        "rule_ref": "U036",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "仅适用于 Robotics Models 与硬件或其他产品；本行事实为 Gemini API 调用。"
+      },
+      {
+        "rule_ref": "U037",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          8
+        ],
+        "reason": "是否依赖、发布或以其他方式使用服务内容未知，保留条件义务。"
+      },
+      {
+        "rule_ref": "U038",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          8
+        ],
+        "reason": "不得将服务内容作为专业建议依赖的条件限制已保留。"
+      },
+      {
+        "rule_ref": "U039",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          9
+        ],
+        "reason": "安全设置与事实性工具义务已保留。"
+      },
+      {
+        "rule_ref": "U040",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "未证实主张 Grounding 搜索建议或链接的知识产权所有权。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实行使 CC BY Licensed Rights。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "CC BY 授权不证明本次 API 调用行使该授权。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实转授 CC BY Licensed Rights。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实复制 CC BY Licensed Material。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY Licensed Material。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实创作 CC BY Adapted Material。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实复制 CC BY Adapted Material。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY Adapted Material。"
+      },
+      {
+        "rule_ref": "D009",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实适用许可例外的事实。"
+      },
+      {
+        "rule_ref": "D010",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实技术修改 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D011",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实接收或行使 CC BY 许可材料权利。"
+      },
+      {
+        "rule_ref": "D012",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实对 CC BY 许可材料施加限制性条款或技术措施。"
+      },
+      {
+        "rule_ref": "D013",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实作出关联、赞助、认可或官方身份声明。"
+      },
+      {
+        "rule_ref": "D014",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D015",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D016",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D017",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D018",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D019",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D020",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D021",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D022",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      },
+      {
+        "rule_ref": "D023",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享材料或许可方提出移除请求。"
+      },
+      {
+        "rule_ref": "D024",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享自制 CC BY 改编材料。"
+      },
+      {
+        "rule_ref": "D025",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实复制数据库内容。"
+      },
+      {
+        "rule_ref": "D026",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享数据库内容。"
+      },
+      {
+        "rule_ref": "D027",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实将数据库内容组合进受独立数据库权利保护的数据库。"
+      },
+      {
+        "rule_ref": "D028",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享全部或实质部分数据库内容。"
+      },
+      {
+        "rule_ref": "D029",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实违反 CC BY 条款或许可权利终止。"
+      },
+      {
+        "rule_ref": "D030",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实权利终止及其恢复条件。"
+      },
+      {
+        "rule_ref": "D031",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实许可方明示恢复权利。"
+      },
+      {
+        "rule_ref": "D032",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实本行行为可依法不经该公共许可实施。"
+      },
+      {
+        "rule_ref": "D033",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实使用 Creative Commons 商标或标志。"
+      },
+      {
+        "rule_ref": "D034",
+        "status": "OUT_OF_SCOPE",
+        "obligation_indices": [],
+        "reason": "未证实分享 CC BY 许可材料。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00068-1794596221047947000-3.json",
+  "usage": {
+    "input_tokens": 52369,
+    "input_tokens_details": {
+      "cached_tokens": 2560,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 5464,
+    "output_tokens_details": {
+      "reasoning_tokens": 365
+    },
+    "total_tokens": 57833,
+    "attribution": {
+      "items": {
+        "msg_044f433f07b31405016af75ea6b05087d091134d98e2ea290a": {
+          "input_tokens": 49645,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 49645,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_044f433f07b31405016af75ea6b05087d09932a29d6b5f7be7": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_044f433f07b31405016af75eaddd6c87d08094edd507973ff4": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 5099,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 5099
+            }
+          ]
+        },
+        "rs_044f433f07b31405016af75eab866887d0a30ba0aa530d28ad": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 241
+        },
+        "rs_044f433f07b31405016af75eadc1f087d0ba9f8acbf0dfd0ba": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 124
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 2560,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 3,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

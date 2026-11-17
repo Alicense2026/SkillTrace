@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-1391-c97465bfaf95",
+  "source_csv_line": 1392,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "qwen3-asr-0.6b",
+    "artifact_url": "https://help.aliyun.com/zh/model-studio/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: crates/screenpipe-audio/src/transcription/engine.rs:376 ｜ 调用原文: const MODEL_NAME: &str = \"qwen3-asr-0.6b\";（引用处 第376行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 音频转写引擎中作为 ASR 模型标识加载",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "ERROR",
+  "reason": "Unknown subject",
+  "attempts": 2,
+  "attempt_history": [
+    {
+      "attempt": 1,
+      "error": "Invalid obligation values",
+      "diagnostics": [
+        {
+          "path": "$.obligations[1].requirement",
+          "invalid": {
+            "any": [
+              "personal_noncommercial_use",
+              "nonprofit_educational_or_research_use",
+              "evaluation_development_or_testing_within_seven_days"
+            ]
+          },
+          "problem": "Must be a nonempty string, preserving the full condition and OR/AND semantics"
+        },
+        {
+          "path": "$.obligations[2].requirement",
+          "invalid": {
+            "all": [
+              "paid_screenpipe_enterprise_plan",
+              "commercial_license_from_licensor_expressly_covers_use"
+            ]
+          },
+          "problem": "Must be a nonempty string, preserving the full condition and OR/AND semantics"
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "error": "Unknown subject",
+      "diagnostics": [
+        {
+          "path": "$.asc_rules[3].triple.S",
+          "invalid": {
+            "artifact": "chain-1391-c97465bfaf95:CombinedProduct",
+            "kind": "CombinedProduct"
+          },
+          "problem": "Must exactly match an allowed_subjects object"
+        }
+      ]
+    }
+  ],
+  "elapsed_seconds": 102.18
+}

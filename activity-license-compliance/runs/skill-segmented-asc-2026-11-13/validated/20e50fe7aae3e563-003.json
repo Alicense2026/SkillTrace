@@ -1,0 +1,682 @@
+{
+  "request_sha256": "daa5bf3001af75f3b875e5160f9aabedb1a9214d628f11a3ed5da0ff04f3309c",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 323,
+        "end_line": 330,
+        "clause_label": "provide_executable_reproduction_materials",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_executable_that_uses_library",
+          "requires": "provide_required_reproduction_materials_except_os_major_component_material_unless_component_accompanies_executable"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 executable-distribution terms: the required form of the work must include data and utility programs needed to reproduce the executable. Materials normally distributed with major operating-system components are excepted unless the component accompanies the executable.",
+        "condition_explanation": "distributing_executable_that_uses_library means distributing an executable that uses the Library; required_reproduction_materials means the work form includes data and utility programs needed to reproduce that executable; os_major_component_material means material normally distributed in source or binary form with a major component of the operating system on which the executable runs.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide the required form of the work, including data and utility programs needed to reproduce the executable; this need not include material normally distributed with major operating-system components unless that component accompanies the executable.",
+            "actor": "licensee distributing the executable",
+            "object": "the work form and materials needed to reproduce the executable",
+            "trigger": "When distributing an executable that uses the Library."
+          }
+        ]
+      },
+      {
+        "start_line": 332,
+        "end_line": 336,
+        "clause_label": "no_distribution_with_conflicting_proprietary_library",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "using_library_and_proprietary_library_that_does_not_normally_accompany_operating_system_together_in_executable",
+          "requires": "proprietary_library_restrictions_conflict_with_reproduction_material_requirement"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The text says the licensee cannot use the Library together with the conflicting proprietary library in an executable that the licensee distributes.",
+        "condition_explanation": "using_library_and_proprietary_library_that_does_not_normally_accompany_operating_system_together_in_executable means both libraries are used together in the executable; proprietary_library_restrictions_conflict_with_reproduction_material_requirement means the proprietary library's license restrictions prevent satisfying the reproduction-material requirement.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute an executable using both the Library and the proprietary library when their license requirements conflict with the reproduction-material requirement.",
+            "actor": "licensee",
+            "object": "the executable containing both libraries",
+            "trigger": "When the libraries are used together in an executable and the proprietary library's restrictions conflict with the reproduction-material requirement."
+          }
+        ]
+      },
+      {
+        "start_line": 339,
+        "end_line": 344,
+        "clause_label": "combined_library_permission",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "separate_distribution_of_library_work_and_other_facilities_otherwise_permitted_and_section_7_conditions_met"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 7 permits placing Library-based facilities side-by-side with other facilities in one library and distributing it, subject to separate distribution being otherwise permitted and the requirements in section 7(a) and (b).",
+        "condition_explanation": "separate_distribution_of_library_work_and_other_facilities_otherwise_permitted means each may otherwise be distributed separately; section_7_conditions_met means the uncombined copy and prominent notice requirements in section 7(a) and (b) are satisfied.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 346,
+        "end_line": 349,
+        "clause_label": "accompany_combined_library_with_uncombined_copy",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_combined_library",
+          "requires": "accompany_with_same_library_based_work_uncombined_and_distributed_under_preceding_sections"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 7(a): condition on distribution of the combined library; the accompanying copy is the same Library-based work, uncombined with other library facilities, and is distributed under the preceding sections.",
+        "condition_explanation": "distributing_combined_library means distributing a combined library under section 7; preceding_sections means the applicable terms in the earlier sections of the license.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Accompany the combined library with a copy of the same Library-based work, uncombined with other library facilities, and distribute that copy under the preceding sections.",
+            "actor": "licensee distributing the combined library",
+            "object": "the accompanying uncombined copy of the Library-based work",
+            "trigger": "Whenever the licensee distributes a combined library under section 7."
+          }
+        ]
+      },
+      {
+        "start_line": 351,
+        "end_line": 353,
+        "clause_label": "notice_for_combined_library",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "distributing_combined_library",
+          "requires": "prominent_notice_identifies_library_based_part_and_location_of_uncombined_form"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 7(b): condition on distribution of the combined library.",
+        "condition_explanation": "distributing_combined_library means distributing a combined library under section 7; the notice must state prominently that part is a work based on the Library and explain where the accompanying uncombined form can be found.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give prominent notice with the combined library that part of it is a work based on the Library and explain where to find the accompanying uncombined form.",
+            "actor": "licensee distributing the combined library",
+            "object": "the combined library",
+            "trigger": "Whenever the licensee distributes a combined library under section 7."
+          }
+        ]
+      },
+      {
+        "start_line": 355,
+        "end_line": 361,
+        "clause_label": "prohibit_unauthorized_copying",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "copying_not_expressly_provided_for_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 8 prohibits copying the Library except as expressly provided. An unauthorized attempt automatically terminates the actor's rights; recipients' licenses remain in force while they remain fully compliant.",
+        "condition_explanation": "copying_not_expressly_provided_for_by_license means the specific copying action is not expressly authorized under the license. Automatic termination concerns the actor making the unauthorized attempt; compliant recipients are excepted from termination.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not copy the Library except as expressly provided under the license.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "Whenever the licensee copies the Library."
+          }
+        ]
+      },
+      {
+        "start_line": 355,
+        "end_line": 361,
+        "clause_label": "prohibit_unauthorized_modification",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "modification_not_expressly_provided_for_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 8 prohibits modifying the Library except as expressly provided. An unauthorized attempt automatically terminates the actor's rights; compliant recipients' licenses remain in force.",
+        "condition_explanation": "modification_not_expressly_provided_for_by_license means the specific modification is not expressly authorized under the license.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not modify the Library except as expressly provided under the license.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "Whenever the licensee modifies the Library."
+          }
+        ]
+      },
+      {
+        "start_line": 355,
+        "end_line": 361,
+        "clause_label": "prohibit_unauthorized_sublicensing",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "sublicensing_not_expressly_provided_for_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 8 prohibits sublicensing the Library except as expressly provided. The automatic-termination consequence and compliant-recipient exception are stated in the section.",
+        "condition_explanation": "sublicensing_not_expressly_provided_for_by_license means the specific sublicensing action is not expressly authorized under the license.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not sublicense the Library except as expressly provided under the license.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "Whenever the licensee sublicenses the Library."
+          }
+        ]
+      },
+      {
+        "start_line": 355,
+        "end_line": 361,
+        "clause_label": "prohibit_unauthorized_linking",
+        "activities": [
+          "Link"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "linking_not_expressly_provided_for_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 8 prohibits linking with the Library except as expressly provided. The automatic-termination consequence and compliant-recipient exception are stated in the section.",
+        "condition_explanation": "linking_not_expressly_provided_for_by_license means the specific linking action is not expressly authorized under the license.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not link with the Library except as expressly provided under the license.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "Whenever the licensee links with the Library."
+          }
+        ]
+      },
+      {
+        "start_line": 355,
+        "end_line": 361,
+        "clause_label": "prohibit_unauthorized_distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "distribution_not_expressly_provided_for_by_license"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 8 prohibits distributing the Library except as expressly provided. An unauthorized attempt automatically terminates the actor's rights; recipients' licenses remain in force while they remain fully compliant.",
+        "condition_explanation": "distribution_not_expressly_provided_for_by_license means the specific distribution action is not expressly authorized under the license.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute the Library except as expressly provided under the license.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "Whenever the licensee distributes the Library."
+          }
+        ]
+      },
+      {
+        "start_line": 363,
+        "end_line": 370,
+        "clause_label": "modify_or_distribute_only_under_accepted_terms",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "accept_license_by_modifying_and_comply_with_applicable_license_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 9: signature is not required, but the license supplies no other permission to modify the Library or its derivative works; modifying indicates acceptance of the license and its applicable terms.",
+        "condition_explanation": "accept_license_by_modifying_and_comply_with_applicable_license_terms means undertaking the modification indicates acceptance and the actor observes applicable license terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 363,
+        "end_line": 370,
+        "clause_label": "distribute_only_under_accepted_terms",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "accept_license_by_distributing_and_comply_with_applicable_license_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 9: signature is not required, but the license supplies no other permission to distribute the Library or its derivative works; distributing indicates acceptance of the license and its applicable terms.",
+        "condition_explanation": "accept_license_by_distributing_and_comply_with_applicable_license_terms means undertaking the distribution indicates acceptance and the actor observes applicable license terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 372,
+        "end_line": 376,
+        "clause_label": "redistribution_and_recipient_rights",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "redistributing_library_or_work_based_on_library",
+          "requires": "comply_with_applicable_terms_and_impose_no_further_restrictions_on_granted_rights"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 10: recipients automatically receive rights from the original licensor to copy, distribute, link with, or modify the Library subject to the license terms. The redistributor must not impose further restrictions on those rights.",
+        "condition_explanation": "redistributing_library_or_work_based_on_library means redistributing the Library or a work based on it; impose_no_further_restrictions means recipients remain able to exercise the rights granted by the license without additional restrictions.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not impose further restrictions on recipients' exercise of rights granted by the license.",
+            "actor": "licensee redistributing the Library or a work based on it",
+            "object": "recipients' rights in the Library granted under the license",
+            "trigger": "Whenever the licensee redistributes the Library or a work based on it."
+          }
+        ]
+      },
+      {
+        "start_line": 377,
+        "end_line": 378,
+        "clause_label": "no_third_party_enforcement_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 10 states that the redistributor is not responsible for enforcing third-party compliance; this is a scope clarification, not a grant or duty.",
+        "condition_explanation": "No additional action or condition is imposed by this statement.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 381,
+        "end_line": 392,
+        "clause_label": "distribution_bar_when_obligations_conflict",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "other_conditions_imposed_on_licensee",
+          "requires": "cannot_satisfy_license_and_other_pertinent_obligations_simultaneously"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 11: imposed conditions, including those arising from a patent allegation or judgment, do not excuse compliance. If simultaneous compliance is impossible, the licensee may not distribute the Library.",
+        "condition_explanation": "other_conditions_imposed_on_licensee means conditions imposed by court order, agreement, or otherwise; cannot_satisfy_license_and_other_pertinent_obligations_simultaneously means no distribution can satisfy both the LGPL and all other pertinent obligations.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute the Library if distribution cannot simultaneously satisfy this license and all other pertinent obligations.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "When conditions are imposed on the licensee and simultaneous compliance with this license and those conditions is impossible."
+          }
+        ]
+      },
+      {
+        "start_line": 412,
+        "end_line": 418,
+        "clause_label": "geographical_distribution_limitation",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "original_copyright_holder_adds_explicit_geographical_limitation_due_to_patent_or_copyrighted_interface_restriction",
+          "requires": "distribution_in_or_among_excluded_countries"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 12 allows the original copyright holder to add an explicit geographic distribution limitation in the specified circumstances; the limitation is incorporated into the license.",
+        "condition_explanation": "original_copyright_holder_adds_explicit_geographical_limitation_due_to_patent_or_copyrighted_interface_restriction means the holder adds a country exclusion because patents or copyrighted interfaces restrict distribution or use; excluded_countries are those expressly identified by that limitation.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not distribute the Library in or among countries excluded by an applicable explicit geographic limitation.",
+            "actor": "licensee",
+            "object": "the Library",
+            "trigger": "When an applicable explicit geographic limitation has been added under section 12."
+          }
+        ]
+      },
+      {
+        "start_line": 425,
+        "end_line": 431,
+        "clause_label": "option_to_choose_license_version",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "library_specifies_version_and_any_later_version_choose_specified_or_later_fsf_version",
+              "library_specifies_no_version_choose_any_fsf_published_version"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 13: version selection is optional; the applicable choice depends on the version language specified for the Library.",
+        "condition_explanation": "library_specifies_version_and_any_later_version means the Library names a version and permits any later version; library_specifies_no_version means it specifies no license version. This paragraph does not provide the stated choice where a version is specified without an any-later-version option.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 434,
+        "end_line": 441,
+        "clause_label": "request_permission_for_incompatible_incorporation",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "wishing_to_incorporate_library_parts_into_other_free_program_with_incompatible_distribution_conditions",
+          "requires": "permission_from_author_or_fsf_for_fsf_copyrighted_software"
+        },
+        "actor_role": "licensee",
+        "scope_note": "LGPL-2.1 section 14 directs the licensee to write to the author to ask permission for the described incorporation; for FSF-copyrighted software, the contact is the FSF. No grant or assurance that permission will be given is stated.",
+        "condition_explanation": "wishing_to_incorporate_library_parts_into_other_free_program_with_incompatible_distribution_conditions means the proposed free program has distribution conditions incompatible with the LGPL; fsf_copyrighted_software identifies the alternative permission contact.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Write to the author to ask permission before incorporating Library parts into a free program with incompatible distribution conditions; for FSF-copyrighted software, write to the Free Software Foundation.",
+            "actor": "licensee wishing to make the incorporation",
+            "object": "the proposed incorporation of Library parts",
+            "trigger": "When the licensee wishes to make the described incorporation."
+          }
+        ]
+      },
+      {
+        "start_line": 477,
+        "end_line": 480,
+        "clause_label": "notices_when_applying_license_to_new_library",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "applying_these_terms_to_new_library",
+          "requires": "attach_notices_and_include_copyright_line_and_full_notice_pointer_in_each_file"
+        },
+        "actor_role": "person applying the terms",
+        "scope_note": "Application guidance says to attach notices to the library. Each file should have at least a copyright line and pointer to the full notice. Placing notices at the start of each source file is described as safest, not mandatory.",
+        "condition_explanation": "applying_these_terms_to_new_library means the person elects to apply these terms to the new library; source-file-start_placement is advice rather than a condition.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Attach the applicable notices to the library and include at least a copyright line and a pointer to the full notice in each file.",
+            "actor": "person applying these terms to the new library",
+            "object": "the new library and its files",
+            "trigger": "When applying these terms to the new library."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The supplied chunk contains the complete target text. Section 7's preceding-sections cross-reference is preserved as a condition but the referenced earlier requirements are outside this chunk.",
+      "Section 14 describes asking for permission; the text does not guarantee permission or itself grant permission for incompatible incorporation.",
+      "The warranty and liability provisions and nonbinding application recommendation are not activity constraints. Advisory notice placement is distinguished from the stated per-file notice guidance."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0054",
+        "status": "MODELED",
+        "clause_labels": [
+          "provide_executable_reproduction_materials"
+        ],
+        "reason": "Models the reproduction-material provision, including its operating-system-component exception."
+      },
+      {
+        "unit_id": "P0055",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_distribution_with_conflicting_proprietary_library"
+        ],
+        "reason": "Models the prohibition on distributing an executable combining the libraries when proprietary restrictions conflict with the material requirement."
+      },
+      {
+        "unit_id": "P0056",
+        "status": "MODELED",
+        "clause_labels": [
+          "combined_library_permission"
+        ],
+        "reason": "Models conditional permission to distribute the combined library and its stated prerequisites."
+      },
+      {
+        "unit_id": "P0057",
+        "status": "MODELED",
+        "clause_labels": [
+          "accompany_combined_library_with_uncombined_copy"
+        ],
+        "reason": "Models the required accompanying uncombined copy and applicable preceding-section terms."
+      },
+      {
+        "unit_id": "P0058",
+        "status": "MODELED",
+        "clause_labels": [
+          "notice_for_combined_library"
+        ],
+        "reason": "Models the prominent notice and location information requirement."
+      },
+      {
+        "unit_id": "P0059",
+        "status": "MODELED",
+        "clause_labels": [
+          "prohibit_unauthorized_copying",
+          "prohibit_unauthorized_modification",
+          "prohibit_unauthorized_sublicensing",
+          "prohibit_unauthorized_linking",
+          "prohibit_unauthorized_distribution"
+        ],
+        "reason": "Models each listed unauthorized action's prohibition and records the section's termination and compliant-recipient qualifications in scope notes."
+      },
+      {
+        "unit_id": "P0060",
+        "status": "MODELED",
+        "clause_labels": [
+          "modify_or_distribute_only_under_accepted_terms",
+          "distribute_only_under_accepted_terms"
+        ],
+        "reason": "Models the acceptance effect and applicable terms for modification and distribution; the absence of another grant is noted in scope."
+      },
+      {
+        "unit_id": "P0061",
+        "status": "MODELED",
+        "clause_labels": [
+          "redistribution_and_recipient_rights",
+          "no_third_party_enforcement_responsibility"
+        ],
+        "reason": "Models recipient rights and the prohibition on further restrictions, and records the express absence of a third-party enforcement responsibility."
+      },
+      {
+        "unit_id": "P0062",
+        "status": "MODELED",
+        "clause_labels": [
+          "distribution_bar_when_obligations_conflict"
+        ],
+        "reason": "Models the distribution bar when simultaneous compliance with the license and other imposed obligations is impossible, including the patent example."
+      },
+      {
+        "unit_id": "P0063",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Severability and intended interpretive effect, not an activity constraint."
+      },
+      {
+        "unit_id": "P0064",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Explains the purpose of section 11 without creating an independent behavioral duty."
+      },
+      {
+        "unit_id": "P0065",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States the intended consequence of the rest of the license without an independent activity constraint."
+      },
+      {
+        "unit_id": "P0066",
+        "status": "MODELED",
+        "clause_labels": [
+          "geographical_distribution_limitation"
+        ],
+        "reason": "Models the conditional geographic limitation and resulting distribution restriction."
+      },
+      {
+        "unit_id": "P0067",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States that the FSF may publish new versions; it imposes no licensee action constraint."
+      },
+      {
+        "unit_id": "P0068",
+        "status": "MODELED",
+        "clause_labels": [
+          "option_to_choose_license_version"
+        ],
+        "reason": "Models the optional license-version choice and its alternative branches."
+      },
+      {
+        "unit_id": "P0069",
+        "status": "MODELED",
+        "clause_labels": [
+          "request_permission_for_incompatible_incorporation"
+        ],
+        "reason": "Models the direction to request permission and the FSF contact exception."
+      },
+      {
+        "unit_id": "P0070",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty heading only."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty disclaimer and risk allocation, not an activity constraint."
+      },
+      {
+        "unit_id": "P0072",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Liability limitation, not an activity constraint."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "End-of-terms marker only."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "How-to-apply heading only."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Nonbinding recommendation, not a license duty."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "MODELED",
+        "clause_labels": [
+          "notices_when_applying_license_to_new_library"
+        ],
+        "reason": "Models the notice instructions and per-file minimum, while noting source-file-start placement is advisory."
+      }
+    ]
+  },
+  "attempt": 2
+}

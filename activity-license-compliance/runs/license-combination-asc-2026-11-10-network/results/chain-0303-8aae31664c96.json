@@ -1,0 +1,155 @@
+{
+  "case_id": "chain-0303-8aae31664c96",
+  "status": "SUCCESS",
+  "request_sha256": "ed881e16ce4068474d457b057a1ea5cb1195af156260838e77d5265f5d9b9b82",
+  "analysis": {
+    "case_id": "chain-0303-8aae31664c96",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0303-8aae31664c96:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:5e3b965b014f963d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "within_license_scope",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0303-8aae31664c96:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0303-8aae31664c96:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Do not engage in conduct prohibited by the cited agreement excerpt when using the Zhipu Open Platform/API.",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "conduct_matches_prohibition_in_excerpt"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "subject": {
+          "artifact": "chain-0303-8aae31664c96:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "If commercial use of the covered service applies, pay the required fee and follow the applicable product rules; the excerpt describes a separate paid-use path.",
+        "trigger": "activity:CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "commercial_use",
+          "pay_required_fee_and_follow_product_rules"
+        ],
+        "source_refs": [
+          "license-text:upstream:1092ebce191fce09"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "The trusted record establishes use and remote API interaction with the Zhipu platform, not distribution, modification, source provision, or transfer of model weights.",
+      "The CC-BY-NC-SA-4.0 grant excerpt is limited to Licensed Rights and covered material; the object graph identifies an API link, not whether the downstream artifact is within that license scope or whether its licensed rights are exercised. No license conflict is established from the link alone.",
+      "The Zhipu excerpt includes a 2026-09-04 effective date and broad use restrictions; applicability of particular prohibitions depends on the actual conduct, which is not specified. Commercial use and fulfillment of any paid-use conditions are also unknown."
+    ]
+  },
+  "usage": {
+    "input_tokens": 33616,
+    "input_tokens_details": {
+      "cached_tokens": 33408,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1030,
+    "output_tokens_details": {
+      "reasoning_tokens": 259
+    },
+    "total_tokens": 34646,
+    "attribution": {
+      "items": {
+        "msg_013a30877edd4205016af304eb04b887d18b938d19c2916f9d": {
+          "input_tokens": 31584,
+          "cached_tokens": 31378,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 31584,
+              "cached_tokens": 31378,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_013a30877edd4205016af304f0957c87d1a6639b6d75a145e5": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 771,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 771
+            }
+          ]
+        },
+        "rs_013a30877edd4205016af304f07e8887d1ae8cc7b296fa3ea3": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 259
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 23.12,
+  "auto_applied": false,
+  "aggregate_count": 1
+}

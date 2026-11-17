@@ -1,0 +1,94 @@
+{
+  "case_id": "chain-19908-dbd7005c201a",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用 DeepSeek 服务时须遵守适用的服务条款。",
+      "source_refs": [
+        "license-text:upstream:cb12cac8a1098bfb"
+      ],
+      "subject": {
+        "artifact": "chain-19908-dbd7005c201a:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "service_terms_compliance"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "向终端用户明确披露输出由 AI 生成、可能含有错误或遗漏且仅供参考。",
+      "source_refs": [
+        "license-text:upstream:cb12cac8a1098bfb"
+      ],
+      "subject": {
+        "artifact": "chain-19908-dbd7005c201a:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "end_user_disclosure_fulfillment"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用下游软件，须限于个人、教育或非商业开源目的。",
+      "source_refs": [
+        "license-text:downstream:661d8444038009fb"
+      ],
+      "subject": {
+        "artifact": "chain-19908-dbd7005c201a:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "personal_educational_or_noncommercial_open_source_purpose"
+      ]
+    },
+    {
+      "activity": "CommercialUse",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "商业使用下游软件前须取得单独的商业许可。",
+      "source_refs": [
+        "license-text:downstream:661d8444038009fb"
+      ],
+      "subject": {
+        "artifact": "chain-19908-dbd7005c201a:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:CommercialUse",
+      "unresolved_predicates": [
+        "activity:CommercialUse",
+        "separate_commercial_license"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若分发下游软件，或项目纳入其重要源码部分，须显著注明原作者 syso 并链接至原 VultLab 项目仓库。",
+      "source_refs": [
+        "license-text:downstream:661d8444038009fb"
+      ],
+      "subject": {
+        "artifact": "chain-19908-dbd7005c201a:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "any",
+      "unresolved_predicates": [
+        "activity:Distribute",
+        "project_incorporates_significant_source_portions",
+        "attribution_and_link_fulfillment"
+      ]
+    }
+  ]
+}

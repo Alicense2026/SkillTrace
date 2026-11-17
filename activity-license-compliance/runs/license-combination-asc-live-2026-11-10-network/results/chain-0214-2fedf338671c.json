@@ -1,0 +1,128 @@
+{
+  "case_id": "chain-0214-2fedf338671c",
+  "status": "SUCCESS",
+  "request_sha256": "3f866d7020fc2e4d88bdf49dbb65b85222a64f718660895f2fc2ff6ff687a084",
+  "analysis": {
+    "case_id": "chain-0214-2fedf338671c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0214-2fedf338671c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：为downstream修改版本提供源码；AGPL第13条仅在修改Program且该版本支持网络交互时触发；可信事实说明此处代码修改不适用，虽存在远程调用，但修改这一触发条件未满足，因此本项不适用，不构成未提供源码的违规。来源：AGPL-3.0第13条摘录。",
+        "source_refs": [
+          "license-text:downstream:26919da2538c8e56"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "Llama 3.3许可摘录将使用权置于遵守协议整体条件之下；所给摘录不足以枚举其他适用条件或判断其履行情况。",
+      "已知事实为远程服务调用和API/链接关系；未证明分发、修改、权重转移或两个许可约束同一对象。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用Llama Materials时遵守Llama协议的适用条件。",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "subject": {
+          "artifact": "chain-0214-2fedf338671c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "compliance_with_Llama_agreement"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21443,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 856,
+    "output_tokens_details": {
+      "reasoning_tokens": 284
+    },
+    "total_tokens": 22299,
+    "attribution": {
+      "items": {
+        "msg_0ece70bc101f9724016af2ffd5fa1887d2b17536a08e9fdd7e": {
+          "input_tokens": 19411,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19411,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0ece70bc101f9724016af2ffdbd2dc87d289d8aa0b6694b10f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 572,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 572
+            }
+          ]
+        },
+        "rs_0ece70bc101f9724016af2ffdbb73087d2b6d464161445521f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 284
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 18.577,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

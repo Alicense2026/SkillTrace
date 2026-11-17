@@ -1,0 +1,367 @@
+{
+  "request_sha256": "d05f941cb786e990728666923b36946acd0a502390eff0971e52dfd42dd460ab",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 318,
+        "end_line": 327,
+        "clause_label": "user_product_installation_information",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": {
+            "all": [
+              "conveys_object_code_work_under_section_6",
+              "work_in_with_or_specifically_for_user_product",
+              "transaction_transfers_possession_and_use_right_in_perpetuity_or_fixed_term",
+              "recipient_can_install_modified_object_code_on_user_product"
+            ]
+          },
+          "requires": "provide_installation_information_with_corresponding_source"
+        },
+        "actor_role": "conveyor",
+        "scope_note": "GPL-3.0 section 6: Installation Information must accompany Corresponding Source for the specified object-code conveyance and User Product transaction. No duty under this paragraph if neither the conveyor nor any third party can install modified object code on the product.",
+        "condition_explanation": "conveys_object_code_work_under_section_6 means the actor conveys object-code work under section 6; work_in_with_or_specifically_for_user_product means it is in, with, or specifically for a User Product; the transaction condition requires transfer of possession and use rights to the recipient perpetually or for a fixed term, regardless of transaction characterization; the final condition is the express exception.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Accompany the Corresponding Source conveyed under section 6 with Installation Information sufficient for installing and executing modified versions from modified Corresponding Source in the User Product.",
+            "actor": "conveyor",
+            "object": "Corresponding Source and Installation Information for the covered work in the User Product",
+            "trigger": "When the actor conveys object-code work under section 6 in, with, or specifically for a User Product as part of a transaction transferring possession and use rights perpetually or for a fixed term, unless neither the actor nor any third party can install modified object code on the User Product."
+          }
+        ]
+      },
+      {
+        "start_line": 329,
+        "end_line": 335,
+        "clause_label": "installation_information_limits_and_network_access",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "recipient_modifies_or_installs_work",
+              "recipient_modifies_or_installs_work_in_user_product"
+            ]
+          },
+          "requires": "network_access_denial_only_if_modification_materially_and_adversely_affects_network_operation_or_violates_communication_rules_or_protocols"
+        },
+        "actor_role": "network_operator",
+        "scope_note": "GPL-3.0 section 6: this passage limits the Installation Information duty and permits denial of network access in the stated circumstances; it does not impose a continuing support, warranty, or update duty.",
+        "condition_explanation": "The permission concerns denying network access where the modification itself materially and adversely affects network operation or violates communication rules or protocols. The passage does not identify a specific network operator; that actor label describes the party controlling network access.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not deny network access on the basis of a modification unless the modification itself materially and adversely affects network operation or violates the rules and protocols for communication across the network.",
+            "actor": "network operator",
+            "object": "Network access for the modified work or User Product",
+            "trigger": "When network access is denied because the work or User Product has been modified."
+          }
+        ]
+      },
+      {
+        "start_line": 337,
+        "end_line": 341,
+        "clause_label": "publicly_documented_source_format",
+        "activities": [
+          "ProvideSource"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "corresponding_source_or_installation_information_provided_under_section_6",
+          "requires": "publicly_documented_format_public_source_implementation_no_special_password_or_key"
+        },
+        "actor_role": "conveyor",
+        "scope_note": "GPL-3.0 section 6: applies to Corresponding Source conveyed and Installation Information provided in accordance with that section.",
+        "condition_explanation": "The format must be publicly documented, have an implementation available to the public in source-code form, and require no special password or key for unpacking, reading, or copying.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide the Corresponding Source and Installation Information in a publicly documented format with an implementation available to the public in source-code form, requiring no special password or key for unpacking, reading, or copying.",
+            "actor": "conveyor",
+            "object": "Corresponding Source and Installation Information",
+            "trigger": "Whenever Corresponding Source is conveyed or Installation Information is provided in accordance with GPL-3.0 section 6."
+          }
+        ]
+      },
+      {
+        "start_line": 345,
+        "end_line": 352,
+        "clause_label": "additional_permissions_scope",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "additional_permissions_apply_to_program_or_part",
+          "requires": "whole_program_additional_permissions_valid_under_applicable_law_or_part_used_separately_under_permissions_applicable_only_to_that_part"
+        },
+        "actor_role": "user",
+        "scope_note": "GPL-3.0 section 7: additional permissions supplement the License by making exceptions from one or more conditions. Permissions applicable to the entire Program are treated as included in the License only to the extent valid under applicable law. If permissions apply only to part, that part may be used separately under them, while the entire Program remains governed by GPL-3.0 without regard to those part-only permissions.",
+        "condition_explanation": "additional_permissions_apply_to_program_or_part means additional terms supplement the GPL by making exceptions from one or more GPL conditions. The whole-Program path is limited by validity under applicable law; the part-only path permits separate use of that part under those permissions and does not displace GPL-3.0 for the entire Program.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 354,
+        "end_line": 359,
+        "clause_label": "additional_permissions_on_conveyance",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "conveys_copy_of_covered_work",
+          "requires": true
+        },
+        "actor_role": "conveyor",
+        "scope_note": "GPL-3.0 section 7: on conveying a copy, the actor may remove additional permissions from the copy or any part; additional permissions may themselves require removal in specified modification cases. The actor may place additional permissions on material the actor adds only where the actor has or can give appropriate copyright permission.",
+        "condition_explanation": "The option to remove additional permissions arises when conveying a copy of a covered work. The separate authority to add permissions is limited to material added by the actor and subject to the actor having or being able to give appropriate copyright permission.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 354,
+        "end_line": 359,
+        "clause_label": "additional_permissions_on_added_material",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "adds_material_to_covered_work",
+          "requires": "appropriate_copyright_permission_for_added_material"
+        },
+        "actor_role": "modifier",
+        "scope_note": "GPL-3.0 section 7: additional permissions may be placed on material added by the actor to a covered work, subject to appropriate copyright permission. Any applicable additional permission may itself require removal in certain modification cases.",
+        "condition_explanation": "appropriate_copyright_permission_for_added_material means the actor has or can give appropriate copyright permission for the added material.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 361,
+        "end_line": 386,
+        "clause_label": "authorized_additional_terms_on_added_material",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "adds_material_to_covered_work",
+          "requires": "authorized_by_copyright_holders_of_added_material"
+        },
+        "actor_role": "modifier",
+        "scope_note": "GPL-3.0 section 7: for material added to a covered work, and only if authorized by its copyright holders, the actor may supplement the GPL terms with the specified additional terms. The listed possible terms include warranty/liability terms, preservation of specified reasonable notices or attributions, origin and modification marking, publicity-name limits, trademark-rights reservations, and narrowly triggered indemnification. The warranty/liability option is not separately extracted as an activity constraint.",
+        "condition_explanation": "authorized_by_copyright_holders_of_added_material means the copyright holders of the added material authorize supplementing the terms. The indemnification term described at lines 382-386 is limited to a person conveying the material or modified versions with contractual assumptions of liability to the recipient, and to liability those assumptions directly impose on the licensors or authors.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Preserve specified reasonable legal notices or author attributions in the added material or in Appropriate Legal Notices displayed by works containing it, if that additional term is imposed.",
+            "actor": "conveyer or other person to whom the additional term applies",
+            "object": "Added material or Appropriate Legal Notices displayed by works containing it",
+            "trigger": "When an authorized additional term under GPL-3.0 section 7(b) imposes preservation of specified reasonable legal notices or author attributions."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Do not misrepresent the origin of the added material and mark modified versions in reasonable ways as different from the original, if those additional terms are imposed.",
+            "actor": "person using or modifying the added material",
+            "object": "Added material and modified versions of it",
+            "trigger": "When an authorized additional term under GPL-3.0 section 7(c) imposes the relevant origin or marking requirement."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use licensors' or authors' names for publicity purposes to the extent an authorized additional term limits that use.",
+            "actor": "person using the added material",
+            "object": "Names of licensors or authors of the added material",
+            "trigger": "When an authorized additional term under GPL-3.0 section 7(d) limits publicity use of those names."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Indemnify licensors and authors for liability directly imposed on them by the person's contractual assumptions of liability to the recipient, if that additional term is imposed.",
+            "actor": "person conveying the material or modified versions with contractual assumptions of liability to the recipient",
+            "object": "Liability directly imposed on licensors or authors by those contractual assumptions",
+            "trigger": "Only when the person conveys the material or modified versions with contractual assumptions of liability to the recipient and an authorized additional term under GPL-3.0 section 7(f) requires indemnification."
+          }
+        ]
+      },
+      {
+        "start_line": 388,
+        "end_line": 396,
+        "clause_label": "further_restrictions_and_removal",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": {
+            "any": [
+              "received_program_or_part_has_notice_of_gpl_governance_and_further_restriction",
+              "license_document_contains_further_restriction_and_permits_relicensing_or_conveying_under_gpl"
+            ]
+          },
+          "requires": {
+            "any": [
+              "remove_further_restriction_from_received_program_or_part",
+              "add_material_under_other_license_document_only_if_further_restriction_does_not_survive_gpl_relicensing_or_conveying"
+            ]
+          }
+        },
+        "actor_role": "recipient_or_relicensor",
+        "scope_note": "GPL-3.0 section 7: a received Program or part bearing the specified GPL-plus-further-restriction notice may have that term removed. Material governed by another license document containing a further restriction may be added to a covered work when that document permits GPL relicensing or conveying, only if the further restriction does not survive that relicensing or conveying.",
+        "condition_explanation": "A further restriction is a non-permissive additional term as described in section 7. The two paths are alternatives: removal of a term from the received Program or part, or addition of material under the described other license document subject to non-survival of the restriction.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not retain the further restriction when adding material under the other license document to a covered work through GPL relicensing or conveying, if that restriction would survive.",
+            "actor": "person adding the material",
+            "object": "Material governed by the other license document and the further restriction",
+            "trigger": "When that license document contains a further restriction, permits relicensing or conveying under GPL-3.0, and the restriction would otherwise survive such relicensing or conveying."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The extracted text does not supply any particular additional permissions, additional terms, other license document, or further-restriction notice; those remain conditional on the stated facts and are not presumed to exist.",
+      "The section 6 source-provision requirement is cross-referenced as applying to Corresponding Source conveyed under that section; the full earlier source-conveyance alternatives are outside this target chunk.",
+      "No continuing support, warranty, or update obligation is created by lines 329-332. The warranty/liability additional-term option at lines 365-366 is excluded as a disclaimer-related matter."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0058",
+        "status": "MODELED",
+        "clause_labels": [
+          "user_product_installation_information"
+        ],
+        "reason": "Models the conditional Installation Information duty and the express no-installation-capability exception."
+      },
+      {
+        "unit_id": "P0059",
+        "status": "MODELED",
+        "clause_labels": [
+          "installation_information_limits_and_network_access"
+        ],
+        "reason": "Models the limits on continuing support, warranty, or update duties and the conditional network-access rule."
+      },
+      {
+        "unit_id": "P0060",
+        "status": "MODELED",
+        "clause_labels": [
+          "publicly_documented_source_format"
+        ],
+        "reason": "Models the applicable format, public-implementation, and no-password-or-key requirements."
+      },
+      {
+        "unit_id": "P0061",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0062",
+        "status": "MODELED",
+        "clause_labels": [
+          "additional_permissions_scope"
+        ],
+        "reason": "Models the scope and limits of additional permissions."
+      },
+      {
+        "unit_id": "P0063",
+        "status": "MODELED",
+        "clause_labels": [
+          "additional_permissions_on_conveyance",
+          "additional_permissions_on_added_material"
+        ],
+        "reason": "Models the option to remove additional permissions on conveyance and the qualified ability to add permissions to added material."
+      },
+      {
+        "unit_id": "P0064",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty and liability terms are excluded from this activity-constraint extraction."
+      },
+      {
+        "unit_id": "P0065",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_additional_terms_on_added_material"
+        ],
+        "reason": "Models the authorized option to impose notice and attribution terms."
+      },
+      {
+        "unit_id": "P0066",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_additional_terms_on_added_material"
+        ],
+        "reason": "Models authorized terms concerning origin misrepresentation and reasonable marking of modified versions."
+      },
+      {
+        "unit_id": "P0067",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_additional_terms_on_added_material"
+        ],
+        "reason": "Models the authorized limitation on publicity use of licensor or author names."
+      },
+      {
+        "unit_id": "P0068",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_additional_terms_on_added_material"
+        ],
+        "reason": "Models the authorized reservation of trademark-law rights."
+      },
+      {
+        "unit_id": "P0069",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_additional_terms_on_added_material"
+        ],
+        "reason": "Models the limited authorized indemnification term and its triggering circumstances."
+      },
+      {
+        "unit_id": "P0070",
+        "status": "MODELED",
+        "clause_labels": [
+          "authorized_additional_terms_on_added_material"
+        ],
+        "reason": "Lines 382-386 describe the optional indemnification term; the cited clause range 361-386 overlaps these lines and models its precise scope and conditions."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "MODELED",
+        "clause_labels": [
+          "further_restrictions_and_removal"
+        ],
+        "reason": "Models classification as a further restriction and the conditional removal/addition paths, including non-survival upon GPL relicensing or conveying."
+      }
+    ]
+  },
+  "attempt": 3
+}

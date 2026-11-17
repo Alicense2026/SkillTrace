@@ -1,0 +1,249 @@
+{
+  "case_id": "chain-1387-468e0231970f",
+  "source_csv_line": 1388,
+  "row": {
+    "github_repo": "screenpipe",
+    "github_url": "https://github.com/screenpipe/screenpipe",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-5.6-terra",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: apps/screenpipe-app-tauri/lib/utils/chatgpt-preset.ts:9 ｜ 调用原文: const DEFAULT_CHATGPT_MODEL = \"gpt-5.6-terra\";（引用处 第9行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: chatgpt-preset.ts 中作为默认预设模型常量",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "screenpipe/screenpipe",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463",
+    "filename": "_supplement_round2/d4d4ce322d1e6a348fbe4f66f61feaaa15176c276c9cdd7f9c67d97041709463.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 2; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-1387-468e0231970f",
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:609271fa1594f8d6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "personal_noncommercial_use",
+                "nonprofit_educational_or_research_use",
+                "evaluation_development_or_testing_within_seven_days"
+              ]
+            },
+            "when": "use_of_licensed_work"
+          },
+          "S": {
+            "artifact": "chain-1387-468e0231970f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:609271fa1594f8d6"
+        ],
+        "triple": {
+          "A": "CommercialUse",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "paid_screenpipe_enterprise_plan",
+                "commercial_license_from_licensor_expressly_covers_use"
+              ]
+            },
+            "when": "commercial_use_of_licensed_work"
+          },
+          "S": {
+            "artifact": "chain-1387-468e0231970f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:609271fa1594f8d6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "paid_screenpipe_enterprise_plan",
+                "commercial_license_from_licensor_expressly_covers_use"
+              ]
+            },
+            "when": "commercial_use_of_licensed_work"
+          },
+          "S": {
+            "artifact": "chain-1387-468e0231970f:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If using the Licensed Work, satisfy at least one permitted category: personal non-commercial use; nonprofit, educational, or research use; or evaluation, development, and testing within seven days.",
+        "source_refs": [
+          "license-text:downstream:609271fa1594f8d6"
+        ],
+        "subject": {
+          "artifact": "chain-1387-468e0231970f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_of_licensed_work",
+        "unresolved_predicates": [
+          "downstream_use_of_licensed_work",
+          "use_category"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "For commercial use of the Licensed Work, have both a paid Screenpipe Enterprise plan and a commercial license from the Licensor expressly covering that use.",
+        "source_refs": [
+          "license-text:downstream:609271fa1594f8d6"
+        ],
+        "subject": {
+          "artifact": "chain-1387-468e0231970f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "commercial_use_of_licensed_work",
+        "unresolved_predicates": [
+          "downstream_use_of_licensed_work",
+          "commercial_use",
+          "paid_screenpipe_enterprise_plan",
+          "commercial_license_from_licensor_expressly_covers_use"
+        ]
+      },
+      {
+        "activity": "CommercialUse",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "For commercial use of the Licensed Work, have both a paid Screenpipe Enterprise plan and a commercial license from the Licensor expressly covering that use.",
+        "source_refs": [
+          "license-text:downstream:609271fa1594f8d6"
+        ],
+        "subject": {
+          "artifact": "chain-1387-468e0231970f:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "commercial_use_of_licensed_work",
+        "unresolved_predicates": [
+          "downstream_commercial_use",
+          "paid_screenpipe_enterprise_plan",
+          "commercial_license_from_licensor_expressly_covers_use"
+        ]
+      }
+    ],
+    "limitations": [
+      "OpenAI 原文匹配到的结构化摘录仅为客户向 OpenAI 支付服务费用的条款；该条款不建立下游商业收费限制，也不足以判定本次远程 API 调用的许可条件。不得将 proprietary 标签当作通用许可条款。",
+      "记录确认的是 Screenpipe 对 OpenAI 模型的远程调用；未证明下游 Licensed Work 的使用、分发、修改或与上游对象共享许可范围。下游许可的具体版本和适用范围仍以所给摘录为限。",
+      "下游非商业/商业使用类别、Enterprise 计划及特别商业许可的履行事实均未提供；收费事实亦未提供。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20758,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1551,
+    "output_tokens_details": {
+      "reasoning_tokens": 330
+    },
+    "total_tokens": 22309,
+    "attribution": {
+      "items": {
+        "msg_003a8989ed96649b016af585893cf487d08a292b0ff59f9f05": {
+          "input_tokens": 18688,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18688,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_003a8989ed96649b016af585893cf487d098b7bee75c1c2c6d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_003a8989ed96649b016af5858fbc0c87d08628d4e845647a38": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1221,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1221
+            }
+          ]
+        },
+        "rs_003a8989ed96649b016af5858fa08087d0b5d6499ccbc79423": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 330
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 42.44
+}

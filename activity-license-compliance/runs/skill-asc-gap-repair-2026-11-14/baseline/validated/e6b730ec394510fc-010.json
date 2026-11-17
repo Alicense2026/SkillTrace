@@ -1,0 +1,267 @@
+{
+  "request_sha256": "7537f0e4fbe8f8b9b7686b0d55562c8904c851e8385ccf42f3ed71fd94adb254",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 315,
+        "end_line": 315,
+        "clause_label": "confidentiality_required_disclosure",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "disclosure_required_by_applicable_law_or_court_or_administrative_order",
+          "requires": {
+            "all": [
+              "prompt_written_notice_to_discloser_unless_prohibited_by_law",
+              "cooperate_with_discloser_to_seek_protective_order"
+            ]
+          }
+        },
+        "actor_role": "Recipient",
+        "scope_note": "Section 10(c)(i): Recipient may disclose the Discloser’s Confidential Information to the extent disclosure is required by applicable law or by an order of a court or similar judicial or administrative body. Notice and cooperation conditions apply, subject to the stated legal-prohibition exception for notice.",
+        "condition_explanation": "disclosure_required_by_applicable_law_or_court_or_administrative_order means disclosure is required by applicable law or by an order of a court or similar judicial or administrative body. prompt_written_notice_to_discloser_unless_prohibited_by_law means the Recipient promptly gives the Discloser written notice unless law prohibits it. cooperate_with_discloser_to_seek_protective_order means the Recipient cooperates with the Discloser to seek an appropriate protective order.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly notify the Discloser in writing of the required disclosure, except to the extent prohibited by law.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "Disclosure is required by applicable law or by an order of a court or similar judicial or administrative body, and applicable law does not prohibit notice."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Cooperate with the Discloser to seek an appropriate protective order.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "Disclosure is required by applicable law or by an order of a court or similar judicial or administrative body."
+          }
+        ]
+      },
+      {
+        "start_line": 315,
+        "end_line": 315,
+        "clause_label": "confidentiality_advisors_disclosure",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "recipient_is_legal_counsel_or_professional_advisor",
+          "requires": "recipient_needs_information_to_provide_professional_advisory_services_in_connection_with_party_business"
+        },
+        "actor_role": "Recipient",
+        "scope_note": "Section 10(c)(ii): Recipient may disclose the Discloser’s Confidential Information to its legal counsel or other professional advisors only to the extent they need it to provide applicable professional advisory services in connection with the Party’s business.",
+        "condition_explanation": "recipient_is_legal_counsel_or_professional_advisor means the disclosure recipient is the Recipient’s legal counsel or another professional advisor. recipient_needs_information_to_provide_professional_advisory_services_in_connection_with_party_business means the information is needed to provide applicable professional advisory services connected with the Party’s business.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 315,
+        "end_line": 315,
+        "clause_label": "cohere_transaction_disclosure",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "actor_is_cohere",
+          "requires": {
+            "all": [
+              "recipient_is_potential_assignee_acquirer_or_successor_of_cohere",
+              "recipient_needs_information_for_potential_cohere_corporate_transaction"
+            ]
+          }
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Section 10(c)(iii): Cohere may disclose the Discloser’s Confidential Information to potential assignees, acquirers, or successors of Cohere only to the extent they need it in connection with a potential sale, merger, amalgamation, or other corporate transaction involving Cohere’s business or assets.",
+        "condition_explanation": "actor_is_cohere identifies Cohere as the Recipient. recipient_is_potential_assignee_acquirer_or_successor_of_cohere means the disclosure recipient is a potential assignee, acquirer, or successor of Cohere. recipient_needs_information_for_potential_cohere_corporate_transaction means the recipient needs the information in connection with a potential sale, merger, amalgamation, or other corporate transaction involving Cohere’s business or assets.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 316,
+        "end_line": 316,
+        "clause_label": "return_or_dispose_cohere_confidential_records",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "cohere_requests_return_or_disposal",
+          "requires": "return_or_dispose_as_cohere_directs_and_certify_completion_promptly"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 10(d): on Cohere’s request, Customer must promptly return or dispose of tangible records of Cohere’s Confidential Information as directed by Cohere and certify that all such Confidential Information has been returned or disposed of.",
+        "condition_explanation": "cohere_requests_return_or_disposal means Cohere has requested return or disposal. return_or_dispose_as_cohere_directs_and_certify_completion_promptly means Customer promptly follows Cohere’s direction and certifies completion.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly return or dispose of tangible records of Cohere’s Confidential Information as Cohere directs, and certify that all such Confidential Information has been returned or disposed of.",
+            "actor": "Customer",
+            "object": "Tangible records of Cohere’s Confidential Information",
+            "trigger": "Cohere requests their return or disposal."
+          }
+        ]
+      },
+      {
+        "start_line": 318,
+        "end_line": 318,
+        "clause_label": "customer_data_no_prohibited_data",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_provides_customer_data_for_cohere_api_saas_services",
+          "requires": "customer_data_contains_no_prohibited_data"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 11(a)(i): Customer represents, warrants, and covenants that Customer Data will not contain Prohibited Data, expressly subject to Section 5(b). The text of that qualification is not supplied in the target chunk.",
+        "condition_explanation": "customer_provides_customer_data_for_cohere_api_saas_services means Customer supplies Customer Data in connection with the services. customer_data_contains_no_prohibited_data means the data contains no Prohibited Data; the referenced Section 5(b) qualification is not available here.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not include Prohibited Data in Customer Data.",
+            "actor": "Customer",
+            "object": "Customer Data",
+            "trigger": "Customer provides Customer Data, subject to the qualification in Section 5(b)."
+          }
+        ]
+      },
+      {
+        "start_line": 318,
+        "end_line": 318,
+        "clause_label": "personal_information_authority_and_notices",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_data_contains_personal_information",
+          "requires": {
+            "all": [
+              "provide_required_notices_and_disclosures_including_to_each_permitted_user",
+              "obtain_applicable_third_party_consents_and_permissions",
+              "have_all_authority_required_by_applicable_laws_including_privacy_laws"
+            ]
+          }
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 11(a)(ii), subject to Section 5(b): Customer represents, warrants, and covenants that it has the required notices, disclosures, consents, permissions, and authority enabling Cohere to provide the services and otherwise exercise agreement rights, including the specified processing and third-party disclosures.",
+        "condition_explanation": "customer_data_contains_personal_information means Customer Data contains Personal Information. The notice, consent, permission, and authority predicates refer to requirements imposed by applicable laws, including applicable Privacy Laws, for the stated service and agreement purposes.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide all notices and disclosures required by applicable law, including to each Permitted User.",
+            "actor": "Customer",
+            "object": "Personal Information in Customer Data",
+            "trigger": "Customer Data contains Personal Information, to the extent required by applicable laws, including Privacy Laws, for the stated service and agreement purposes."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Obtain all applicable third-party consents and permissions.",
+            "actor": "Customer",
+            "object": "Personal Information in Customer Data",
+            "trigger": "Customer Data contains Personal Information, to the extent required by applicable laws, including Privacy Laws, for the stated service and agreement purposes."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Have all authority required by applicable law, including Privacy Laws, to enable Cohere to provide the services and exercise its agreement rights, including the described processing and third-party disclosures.",
+            "actor": "Customer",
+            "object": "Personal Information in Customer Data",
+            "trigger": "Customer Data contains Personal Information."
+          }
+        ]
+      },
+      {
+        "start_line": 320,
+        "end_line": 322,
+        "clause_label": "indemnity_and_claim_defense_duties_unrepresentable",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "AMBIGUOUS",
+          "when": true,
+          "requires": "indemnity_defense_and_claim_handling_commitments_not_representable_by_available_activities"
+        },
+        "actor_role": "Customer and Cohere, as specified by the respective indemnity",
+        "scope_note": "Sections 11(b)–(d): Customer’s obligations to defend, indemnify, and hold harmless Cohere and related persons for the listed losses; Customer’s cooperation and settlement-consent duties; Cohere’s specified third-party intellectual-property claim indemnity; and exclusions to Cohere’s indemnity. These operative commitments cannot be faithfully expressed using the available activities. The supplied text does not support recasting Customer’s cooperation or settlement-consent duties as a different activity.",
+        "condition_explanation": "Customer’s indemnity triggers include Customer Data, Customer’s breach of agreement obligations or specified sections, and Customer’s or a Permitted User’s use of the services in combination with third-party software, applications, or services. Cohere’s indemnity concerns third-party intellectual-property claims about the services or permitted access or use, subject to the exceptions in line 322. The available activity vocabulary has no indemnify, defend, hold harmless, cooperate in defense, or settle action.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 325,
+        "end_line": 331,
+        "clause_label": "copyright_assurance_and_exclusions_unrepresentable",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "AMBIGUOUS",
+          "when": true,
+          "requires": "conditional_copyright_claim_defense_indemnity_and_its_exclusions_not_expressible_as_activity_constraints"
+        },
+        "actor_role": "Cohere and Customer, as specified by the assurance and exclusions",
+        "scope_note": "Cohere Copyright Assurance: Cohere’s defense and indemnity for third-party claims alleging that an Output infringes, violates, or misappropriates third-party copyright rights, subject to the listed exclusions. This is a remedial commitment, not a grant or prohibition on using Outputs. The exclusions include conditions based on overdue Fees, Customer breach, intentional generation, Customer finetuning or Modification, and continued use in specified knowledge or notice circumstances. Those conditions affect whether the assurance applies; they do not themselves state a general prohibition on continued use.",
+        "condition_explanation": "The assurance concerns a third-party claim alleging that any Output infringes, violates, or misappropriates copyright rights. It does not apply if Customer is late paying due Fees; Customer has breached the Agreement; Customer is, in Cohere’s reasonable discretion, intentionally using the services to generate potentially infringing Outputs; the claim resulted from Customer finetuning or Modification of the services; or Customer continues using the Outputs when Customer knows or should reasonably know they infringe, misappropriate, or violate copyright rights, or after receiving notice of that allegation. The supplied activity vocabulary cannot represent Cohere’s defense and indemnity commitment or express these assurance-eligibility conditions as a permission or prohibition without changing their meaning.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The supplied activity vocabulary cannot represent indemnification, defense, hold-harmless, cooperation in defense, or settlement-consent commitments. These operative provisions are identified as unrepresentable rather than converted into unrelated activity duties.",
+      "Section 5(b), referenced in the Customer warranty in line 318, is not included in the target chunk; its qualification is preserved but cannot be specified.",
+      "The Copyright Assurance exclusions determine whether Cohere’s assurance applies. In particular, the continued-use language is not extracted as a standalone prohibition because the text states an exclusion from the assurance, not a general ban on use.",
+      "Line 319 is a warranty disclaimer and is nonoperative for this activity-constraint extraction."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0093",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "confidentiality_required_disclosure",
+          "confidentiality_advisors_disclosure",
+          "cohere_transaction_disclosure",
+          "return_or_dispose_cohere_confidential_records",
+          "customer_data_no_prohibited_data",
+          "personal_information_authority_and_notices",
+          "indemnity_and_claim_defense_duties_unrepresentable"
+        ],
+        "reason": "The confidentiality exceptions, return/disposal duty, and Customer data and personal-information covenants are modeled. The indemnity, defense, hold-harmless, cooperation, and settlement-consent commitments in lines 320–322 remain unrepresentable; the Section 5(b) qualification is also unavailable."
+      },
+      {
+        "unit_id": "P0094",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "copyright_assurance_and_exclusions_unrepresentable"
+        ],
+        "reason": "The Copyright Assurance and its eligibility exclusions are identified, but the defense and indemnity commitment and its conditional coverage cannot be faithfully represented using the supplied activities. The continued-use language is an exclusion from coverage, not a standalone prohibition. The liability-limit introduction at line 333 is nonoperative for this activity-constraint extraction."
+      }
+    ]
+  },
+  "attempt": 2
+}

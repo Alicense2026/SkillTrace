@@ -1,0 +1,110 @@
+{
+  "case_id": "chain-0226-82c134011883",
+  "input_group_row": 226,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "BSD-2-Clause",
+    "资产许可证原文标题/标签": "Anthropic Commercial Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0226-82c134011883",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "chain-0226-82c134011883:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "S": {
+            "artifact": "chain-0226-82c134011883:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0226-82c134011883:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_service_terms",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "subject": {
+          "artifact": "chain-0226-82c134011883:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "comply_with_service_terms",
+        "trigger": "activity:RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ],
+        "source_refs": [
+          "license-text:upstream:cb940de944c2c95c"
+        ]
+      }
+    ],
+    "limitations": [
+      "Anthropic 服务许可摘录限定为服务访问；本案事实为远程调用，未证明复制、修改、分发或模型权重转移。",
+      "BSD-2-Clause 的结构化规则未覆盖 CombinedProduct 对象；下游活动亦未证实发生，因此无法将其条款映射到本案已发生的活动。",
+      "对象图中的 LINK/REMOTE_CALL 不证明上下游许可共同约束同一对象；共同范围未知。相关结构化条款标记为 FIRST_PASS_REVIEW_REQUIRED，结论限于提供的摘录与映射。"
+    ],
+    "review_items": [],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0223-494e64d8b66b.json",
+  "original_case_id": "chain-0223-494e64d8b66b",
+  "original_request_sha256": "f485415338a6a32b9a8c95b7b5d9f2300d86bcc1480c9cb5f9619e6435b43718",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0223-494e64d8b66b": "chain-0226-82c134011883",
+    "license-text:upstream:cb940de944c2c95c": "license-text:upstream:cb940de944c2c95c",
+    "license-text:downstream:7f129cb6eeac5f55": "license-text:downstream:7f129cb6eeac5f55",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/222": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/225"
+  }
+}

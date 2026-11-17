@@ -1,0 +1,233 @@
+{
+  "case_id": "chain-0394-0267526c0015",
+  "input_group_row": 394,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "PolyForm-Small-Business-1.0.0",
+    "资产许可证原文标题/标签": "OpenAI Services Agreement",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0394-0267526c0015",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "triple": {
+          "A": "Charge",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "pay_applicable_fees_to_OpenAI_or_reseller",
+            "when": "applicable_fees_due"
+          },
+          "S": {
+            "artifact": "chain-0394-0267526c0015:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c2435668b4481fe1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "agree_to_license_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0394-0267526c0015:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c2435668b4481fe1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "permitted_purpose",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0394-0267526c0015:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:c2435668b4481fe1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "company_benefit_use_and_company_below_both_size_and_revenue_thresholds",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0394-0267526c0015:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "OpenAI.txt 的匹配条款仅涉及客户向 OpenAI 或转售商支付适用费用；不能据此推断客户向下游收费，也不能确认费用是否已到期。",
+      "PolyForm 条款适用于 downstream 软件，但事实确认的是通过 API 远程调用 upstream 服务；没有证据表明此次调用本身构成对 downstream 软件的 Use。对象间的 LINK/REMOTE_CALL 不证明许可约束同一对象，因此不判定许可证冲突。",
+      "PolyForm 的 permitted purpose 未被完整定义；小企业条款只列明一种符合条件的目的。相关用途、公司规模及收入事实均未提供。"
+    ],
+    "obligations": [
+      {
+        "activity": "Charge",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如有适用费用到期，向 OpenAI 或客户的转售商支付该费用。",
+        "source_refs": [
+          "license-text:upstream:c9e0443a56323634"
+        ],
+        "subject": {
+          "artifact": "chain-0394-0267526c0015:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "applicable_fees_due",
+        "unresolved_predicates": [
+          "applicable_fees_due",
+          "fee_payment_made"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 PolyForm 所覆盖的 downstream 软件，须同意该许可条款。",
+        "source_refs": [
+          "license-text:downstream:c2435668b4481fe1"
+        ],
+        "subject": {
+          "artifact": "chain-0394-0267526c0015:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_software_use",
+          "agree_to_license_terms"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用 PolyForm 所覆盖的 downstream 软件，该用途须为许可条款允许的目的；以公司利益为目的使用时，须满足条款规定的员工/独立承包人数量及收入门槛。",
+        "source_refs": [
+          "license-text:downstream:c2435668b4481fe1"
+        ],
+        "subject": {
+          "artifact": "chain-0394-0267526c0015:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "downstream_software_use",
+          "permitted_purpose",
+          "company_benefit_use",
+          "company_size",
+          "company_revenue_threshold"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 23858,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1610,
+    "output_tokens_details": {
+      "reasoning_tokens": 404
+    },
+    "total_tokens": 25468,
+    "attribution": {
+      "items": {
+        "msg_0bc1994afec5d0e9016af5335bddf087d0951305922315ed57": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bc1994afec5d0e9016af5335bddf087d0b6c1d07aaa0739ee": {
+          "input_tokens": 21788,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 21788,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bc1994afec5d0e9016af53363c65487d0a46dc98607dd99e2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1206,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1206
+            }
+          ]
+        },
+        "rs_0bc1994afec5d0e9016af53363aa6c87d098ae7bbd247195d2": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 404
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "57b2f47ca6e76974c214732a52569e9f471f2fa6ece5f2bb9f9705e23d6d1832",
+  "elapsed_seconds": 37.42
+}

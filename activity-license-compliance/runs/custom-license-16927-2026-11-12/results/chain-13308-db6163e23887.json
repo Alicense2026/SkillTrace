@@ -1,0 +1,156 @@
+{
+  "case_id": "chain-13308-db6163e23887",
+  "source_csv_line": 13309,
+  "row": {
+    "github_repo": "jarvis-voice",
+    "github_url": "https://github.com/bigsk1/jarvis-voice",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "qwen3",
+    "artifact_url": "https://help.aliyun.com/zh/model-studio/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: bin/wake-jarvis-local.py:41 ｜ 调用原文: print(f\"🧠 Model: {get_config_value('OLLAMA_MODEL', 'qwen3')}\") ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 本地 Ollama 默认模型，bin/wake-jarvis-local.py 中读取",
+    "batch": "6501-7000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "bigsk1/jarvis-voice",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8",
+    "filename": "_licenseref_full/texts/7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:jarvis-voice-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-13308-db6163e23887",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:483e0b10216e9a3a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt",
+            "when": "use_occurs"
+          },
+          "S": {
+            "artifact": "chain-13308-db6163e23887:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游条款 L42-L45 的摘录针对模型体验等相关功能及其生成内容；虽有可信远程调用和 Use 事实，但现有材料不能确定该调用是否属于摘录覆盖的服务/功能，也不能确定使用目的或是否涉及生成内容的商业化、向第三方提供或传播。因此不判定已违反。",
+      "下游 LicenseRef-Custom 的相关要求针对其软件的使用；现有对象图只确认下游到上游的 API 调用/链接，未确认上游模型是下游许可证所约束的软件或同一许可对象，故不据此建立许可证冲突或下游义务。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若该调用属于摘录覆盖的模型体验功能，使用仅限体验模型效果；不得将生成内容用于其他目的或商业化，也不得以任何形式提供给第三方或在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:483e0b10216e9a3a"
+        ],
+        "subject": {
+          "artifact": "chain-13308-db6163e23887:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_occurs",
+        "unresolved_predicates": [
+          "covered_service_or_function",
+          "use_purpose",
+          "generated_content_use",
+          "third_party_provision_or_distribution"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 26245,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1043,
+    "output_tokens_details": {
+      "reasoning_tokens": 506
+    },
+    "total_tokens": 27288,
+    "attribution": {
+      "items": {
+        "msg_02e60ca1e741d87c016af53d33adc887d296198d3159cc89dd": {
+          "input_tokens": 24175,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 24175,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02e60ca1e741d87c016af53d33adc887d2b7a262f2b9e02619": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_02e60ca1e741d87c016af53d3d6f4c87d29522c40e24693ffa": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 537,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 537
+            }
+          ]
+        },
+        "rs_02e60ca1e741d87c016af53d3d53ac87d2bcdcaa8b7aa3711f": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 506
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "8cc0b6c8a34c1b806fc71280038fbd2ab42e0f90ccb4ec08f594a1382565e271",
+  "elapsed_seconds": 25.55
+}

@@ -1,0 +1,530 @@
+{
+  "case_id": "skill-00001",
+  "csv_row": 2,
+  "source_excel_row": "14",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00001-1794589729025071000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer接受OpenAI Services Agreement（点击同意、接受Order Form或使用Services均构成接受）。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": []
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer仅在协议期限内并依协议使用OpenAI Services。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "during_term"
+        ]
+      },
+      "unresolved_predicates": [
+        "during_term"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer及End Users不得实施OpenAI Agreement第3.3节列明的禁止行为；竞争模型限制受Permitted Exception例外约束。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "use_violates_applicable_law_or_openai_policies",
+        "use_violates_third_party_rights",
+        "allow_minor_without_parent_or_guardian_consent",
+        "reverse_engineer_services_or_service_systems",
+        "use_output_to_develop_competing_ai_model_without_permitted_exception",
+        "extract_service_data_other_than_through_permitted_service_functionality",
+        "buy_sell_or_transfer_api_keys_with_third_party",
+        "interfere_with_disrupt_services_or_circumvent_limits_or_protective_measures_or_safety_mitigations",
+        "violate_or_circumvent_usage_limits_or_configure_services_to_avoid_them"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer访问或使用第三方服务时遵守该服务适用条款。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "customer_elects_to_access_third_party_service"
+        ]
+      },
+      "unresolved_predicates": [
+        "customer_elects_to_access_third_party_service"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer提供Input时须有全部必要权利、许可和授权，并对Output的使用及准确性、适当性负责。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "input_rights_licenses_and_permissions_available",
+        "customer_evaluates_output"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Recipient仅为行使协议权利或履行协议义务而使用披露方机密信息，并受第7.2节例外限制。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "use_only_to_exercise_agreement_rights_or_fulfill_agreement_obligations"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Recipient在处理披露方机密信息时采取合理保护措施，但受第7.2节例外限制。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "reasonable_protection_measures_taken"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer使用Services须遵守适用贸易法，满足受限主体及禁运地区限制。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "use_complies_with_applicable_trade_laws",
+        "customer_and_end_users_not_in_embargoed_countries_or_on_restricted_party_lists",
+        "use_not_in_or_for_benefit_of_embargoed_countries_or_restricted_parties"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer按Order Form支付Services费用并提供准确账单及联系信息；依法必须扣缴时补足净额，争议账单时按期通知并支付无争议款项。",
+      "source_refs": [
+        "license:3ec0af60c259cb54e6dcd09976d0601d83df7f719574167feaefe922bf209274"
+      ],
+      "subject": {
+        "artifact": "skill-00001:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "applicable_fees_paid_under_order_form_payment_terms",
+        "complete_accurate_billing_and_contact_information_provided",
+        "required_tax_withholding_payment_uplift_made",
+        "undisputed_invoice_amounts_paid",
+        "invoice_dispute_notice_sent_within_30_days_if_disputing"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用下游ISC软件时，所有副本均须附上版权声明和许可声明。",
+      "source_refs": [
+        "license:e172b6adf983131de94165dab9e5c682941bff8aaef4c0aa36abb5323936e9df"
+      ],
+      "subject": {
+        "artifact": "skill-00001:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use on downstream software",
+      "unresolved_predicates": [
+        "activity:Use on downstream software"
+      ]
+    }
+  ],
+  "limitations": [
+    "上游OpenAI Services Agreement约束主体为Customer，作用于Services、Customer Content及协议使用；远程API调用不证明该服务与下游ISC代码为同一受约束对象。proprietary标签不构成额外共同许可条款。",
+    "未发现活动涉及分发、复制、修改、合并、再许可、收费或模型训练；未将ISC通知条件扩展至API调用。下游软件是否发生许可意义上的Use未在事实中单列，故仅保留条件义务。",
+    "订单、期限、账户配置、适用政策、服务期限、第三方服务及各项合规/履行状态未有事实记录；未知不视为已满足或违反。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已发生Services使用，保留接受协议条件。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "此项为OpenAI提供服务义务，不是本案Customer活动义务。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无续约或缩减范围事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无额外购买事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无Affiliate使用事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无Affiliate独立购买事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无按用量购买事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "远程调用Services，期限及依约使用条件保留。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "API应用集成/向终端用户提供应用不是已证事实。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无服务功能更新或终止选择事实。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "账户凭据、账户信息、转售或未授权访问事项无事实触发。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无终端用户账户或同意事项事实。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "Use条款适用于Services使用，条件禁止事项逐项保留。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        3
+      ],
+      "reason": "仅在选择访问第三方服务时适用，保留触发条件。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "所有权与权利转让条款未产生本案相关义务。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "规定OpenAI对Customer Content的使用，不转为调用者义务。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        4
+      ],
+      "reason": "Customer提供Input及使用Output时的条件义务已保留。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        5
+      ],
+      "reason": "机密信息使用限制在该使用范围内保留。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无披露机密信息事实。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        6
+      ],
+      "reason": "持有或处理机密信息时的保护条件已保留。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "规定OpenAI获得的有限许可，不是调用者使用义务。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无提供Feedback事实。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无公开使用对方名称、标识或关系声明事实。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无协议终止事实。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无Beta服务事实；且为许可而非义务。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        7
+      ],
+      "reason": "Services使用受贸易法及受限地区/主体条件约束。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无向Services提供Input的事实。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未记录服务访问或提供访问所在地，且相关限制另有其触发事实。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无协议或政策更新事实。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无处理PHI事实。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "使用付费Services的费用、账单及支付条件保留；具体订单与履行未知。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "逾期未争议款及可能财务费用无事实触发。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "仅限制OpenAI可能收取的财务费用，不属调用者义务。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        8
+      ],
+      "reason": "税费及依法扣缴补足要求与U031合并去重。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无OpenAI要求暂停或终止终端用户账户的事实。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "为OpenAI在特定情形披露信息的许可，无本案相关活动。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无滥用Customer Content事实。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无侵权索赔及停止使用指示事实。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是OpenAI提供服务义务，主体非调用者。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是OpenAI暂停服务的许可，非调用者活动限制。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是OpenAI或转售方的税务义务。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "这是OpenAI可能收取财务费用的许可。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "服务积分预付是否要求未知，且本轮活动未映射为该支付行为。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无披露机密信息事实。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "为OpenAI及账户管理事项，无相应事实。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "规定OpenAI限制服务访问时的行为，不是本案调用者义务。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        9
+      ],
+      "reason": "ISC使用许可的副本通知义务保留；下游Use事实未明确，故条件待定。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无复制下游软件事实。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无修改下游软件事实。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "无分发下游软件事实。"
+    }
+  ]
+}

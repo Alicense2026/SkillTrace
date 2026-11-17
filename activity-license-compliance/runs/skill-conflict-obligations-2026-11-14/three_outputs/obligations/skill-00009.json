@@ -1,0 +1,140 @@
+{
+  "case_id": "skill-00009",
+  "csv_row": 10,
+  "source_excel_row": "22",
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00009-1794590273812545000-2.json",
+  "output": [
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "被许可人制作或分发下游 MIT 软件的副本或实质部分时，须在每一副本或实质部分中包含版权声明和 MIT 许可声明；该要求不因单纯远程 API 调用而触发。",
+      "source_refs": [
+        "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+      ],
+      "subject": {
+        "artifact": "skill-00009:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "Copy",
+          "Distribute"
+        ]
+      },
+      "unresolved_predicates": [
+        "copy_or_substantial_portion_created_or_distributed"
+      ]
+    }
+  ],
+  "limitations": [
+    "已检查本地 MIT-0 与 MIT 原文中对应的 Use、复制及分发条款。记录证明远程调用、链接和使用，但未证明复制、分发、修改或组合；MIT 通知义务仅在制作或分发软件副本或实质部分时触发。",
+    "下游 MIT 原文的通知条件针对该许可所涵盖软件的副本或实质部分；现有对象图不证明上游与下游许可覆盖同一对象。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT-0 原文允许使用且不附加通知或归属义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未显示对上游软件进行复制。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未显示修改上游软件。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未显示合并上游软件。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未显示分发上游软件。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未显示再许可上游软件。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "现有事实未显示出售上游软件副本。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "MIT 原文允许使用；该条款没有单独的使用通知条件。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "复制许可受副本或实质部分通知条件约束，已合并保留该条件义务。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "修改许可的通知条件与已合并义务相同；修改行为本身不视为分发。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "合并许可的通知条件已合并保留；条款对象仍为软件副本或实质部分。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "发布软件时若包含副本或实质部分，适用已合并的通知义务。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "分发软件副本或实质部分时适用已合并的通知义务。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "再许可涉及副本或实质部分时，通知条件已由同一义务保留。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "出售软件副本时适用已合并的副本通知义务。"
+    }
+  ]
+}

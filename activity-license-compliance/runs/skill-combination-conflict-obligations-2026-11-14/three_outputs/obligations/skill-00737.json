@@ -1,0 +1,732 @@
+{
+  "case_id": "skill-00737",
+  "csv_row": 738,
+  "source_excel_row": "1052",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00737-1794597835747904000-2.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Customer 使用 Mistral AI Products 时须遵守适用法律、Terms 及适用的 Additional Terms。",
+      "source_refs": [
+        "license:4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5"
+      ],
+      "subject": {
+        "artifact": "skill-00737:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": []
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若服务实际运行在 Mistral AI Infrastructure，Customer 须遵守 Mistral AI Usage Policy；若使用第三方连接器，Customer 须持有所需连接权利、许可和权限，并遵守该连接器适用条款。",
+      "source_refs": [
+        "license:4f00a0042342233aad0215e9d975765dfe87f2e2a0a14d3eb8d2de5c4662feb5"
+      ],
+      "subject": {
+        "artifact": "skill-00737:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "any": [
+          "use_on_mistral_ai_infrastructure",
+          "customer_uses_third_party_connector"
+        ]
+      },
+      "unresolved_predicates": [
+        "use_on_mistral_ai_infrastructure",
+        "customer_uses_third_party_connector"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若下游实际使用 BUSL Licensed Work，licensee 须为非生产用途，或确保该生产用途获 Additional Use Grant 许可；此 OR 路径适用于相关版本。",
+      "source_refs": [
+        "license:6bcadbd42fe75b568dc54f3e89bc346516b313d5cce26e7f57e0c80caf1ce410"
+      ],
+      "subject": {
+        "artifact": "skill-00737:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "use_of_downstream_BUSL_licensed_work",
+      "unresolved_predicates": [
+        "use_of_downstream_BUSL_licensed_work",
+        "use_is_non_production",
+        "production_use_permitted_by_additional_use_grant"
+      ]
+    }
+  ],
+  "limitations": [
+    "上游是 Mistral AI 产品的远程服务调用；对象图不证明模型权重、服务提供者与下游代码是同一许可对象，也不证明修改、打包或分发。BUSL-1.1 对下游仓库代码的规则不据此套用于上游服务或模型。",
+    "Mistral 条款中的基础设施类型、连接器使用、账户及产品附加条款适用情况未知；未提供的外部政策和文件不作内容推断。",
+    "BUSL 的特定版本 Change Date、Additional Use Grant、LICENSE.TXT 引用内容及实际生产用途均未提供；其对应分支不能在本案确定。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "基础设施及授权条件未知，已将适用时的义务纳入条件义务。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及向 Mistral 提供 Feedback 后 Mistral 的权利；未证实提供 Feedback。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及 Mistral 对 Feedback 相关材料的复制；本案无该活动事实。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及 Mistral 对 Feedback 相关材料的披露；本案无该活动事实。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及 Mistral 对 Feedback 相关材料的许可；本案无该活动事实。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及 Mistral 分发 Feedback 相关材料；本案无该活动事实。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及 Mistral 商业利用 Feedback 相关材料；本案无该活动事实。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "所有权及权利转让声明不构成当前活动的独立许可义务。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Customer Data 提供给产品的事实未提供；该条件义务不映射为本案已发生的活动。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "责任归属说明未产生独立行为条件。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实将 Output 表示为人工生成。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实停用输出过滤器。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供使用 Output 的事实；该评估要求不能从单纯 API 调用扩展至未知 Output 使用。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实对图像 Output 进行竞争图像生成产品开发或训练。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实依赖或向第三方提供 Output。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该规则约束 Mistral 使用 Customer Data 或 Output；本案未证实相应对象和用途。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该训练限制约束 Mistral，不约束已证实的下游远程调用者行为。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "涉及 Mistral 在特定例外下训练；本案无该对象及行为事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用 Labs 或 Preview Models。"
+    },
+    {
+      "rule_ref": "U020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用 Labs 或 Preview Models。"
+    },
+    {
+      "rule_ref": "U021",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用 Labs 或 Preview Models。"
+    },
+    {
+      "rule_ref": "U022",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "权利保留说明未产生当前活动的独立义务。"
+    },
+    {
+      "rule_ref": "U023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实接收或使用保密信息；本案远程调用事实不足以触发该对象条件。"
+    },
+    {
+      "rule_ref": "U024",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知发生上游 Use；保留遵守适用法律及合同条款的条件义务。"
+    },
+    {
+      "rule_ref": "U025",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "条款期限说明不构成当前活动的独立义务。"
+    },
+    {
+      "rule_ref": "U026",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实停止使用并终止条款。"
+    },
+    {
+      "rule_ref": "U027",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实条款列举的暂停或终止触发情形。"
+    },
+    {
+      "rule_ref": "U028",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实条款终止或账户导出意图。"
+    },
+    {
+      "rule_ref": "U029",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "存续条款仅说明其他条款继续有效，不独立产生本案义务。"
+    },
+    {
+      "rule_ref": "U030",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供个人数据处理或适用数据保护法的事实。"
+    },
+    {
+      "rule_ref": "U031",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Mistral 以控制者身份处理个人数据；隐私政策内容未提供。"
+    },
+    {
+      "rule_ref": "U032",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实在 Mistral 基础设施处理个人数据；DPA 内容未提供。"
+    },
+    {
+      "rule_ref": "U033",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "更新权及程序说明不构成当前调用者的独立义务。"
+    },
+    {
+      "rule_ref": "U034",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Mistral 作出重大更新。"
+    },
+    {
+      "rule_ref": "U035",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实条款更新或通知。"
+    },
+    {
+      "rule_ref": "U036",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Customer 不同意更新。"
+    },
+    {
+      "rule_ref": "U037",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实本案有依据条款发出通知或通信。"
+    },
+    {
+      "rule_ref": "U038",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实转让权利或分包义务。"
+    },
+    {
+      "rule_ref": "U039",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Mistral 分包义务。"
+    },
+    {
+      "rule_ref": "U040",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用对方名称、标识或商标。"
+    },
+    {
+      "rule_ref": "U041",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实代表对方承担义务。"
+    },
+    {
+      "rule_ref": "U042",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供相关出口管制、制裁或受管制输入事实。"
+    },
+    {
+      "rule_ref": "U043",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "基础设施类型未知；保留使用 Mistral 基础设施时遵守 Usage Policy 的条件义务。"
+    },
+    {
+      "rule_ref": "U044",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实在 Mistral 基础设施使用账户。"
+    },
+    {
+      "rule_ref": "U045",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发、共享或提供 End User Account。"
+    },
+    {
+      "rule_ref": "U046",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实发现未经授权或欺诈性访问。"
+    },
+    {
+      "rule_ref": "U047",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实媒体客户身份或编辑用途新闻功能。"
+    },
+    {
+      "rule_ref": "U048",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实媒体客户拟将新闻功能用于编辑目的。"
+    },
+    {
+      "rule_ref": "U049",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实创建会话分享链接。"
+    },
+    {
+      "rule_ref": "U050",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实启用第三方连接器。"
+    },
+    {
+      "rule_ref": "U051",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实通过连接器向第三方发送 Customer input。"
+    },
+    {
+      "rule_ref": "U052",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实通过连接器请求执行操作。"
+    },
+    {
+      "rule_ref": "U053",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "连接器使用情况未知；保留连接器条件下的所需权利、权限及其条款要求。"
+    },
+    {
+      "rule_ref": "U054",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实在产品中存储凭据或通过凭据连接第三方服务。"
+    },
+    {
+      "rule_ref": "U055",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实存储凭据或通过其请求操作。"
+    },
+    {
+      "rule_ref": "U056",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Output 由第三方技术生成。"
+    },
+    {
+      "rule_ref": "U057",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条款是 Mistral 的监测许可，不是调用者义务。"
+    },
+    {
+      "rule_ref": "U058",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实接收第三方内容。"
+    },
+    {
+      "rule_ref": "U059",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用网页搜索显示的第三方内容进行复制或存储。"
+    },
+    {
+      "rule_ref": "U060",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实重新分发、转售或再许可网页搜索第三方内容。"
+    },
+    {
+      "rule_ref": "U061",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实将网页搜索第三方内容用于机器学习活动。"
+    },
+    {
+      "rule_ref": "U062",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用网页搜索第三方内容开发或改进面向第三方的商业产品或服务。"
+    },
+    {
+      "rule_ref": "U063",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供输入内容违法或违反 Usage Policy 的事实。"
+    },
+    {
+      "rule_ref": "U064",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该项是 Mistral 的裁量权，不是调用者义务。"
+    },
+    {
+      "rule_ref": "U065",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该项涉及 Mistral 使用聚合或匿名 Usage Data；本案无此对象事实。"
+    },
+    {
+      "rule_ref": "U066",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用音频 Mistral AI 产品。"
+    },
+    {
+      "rule_ref": "U067",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发音频生成内容或适用法要求披露。"
+    },
+    {
+      "rule_ref": "U068",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实在 Customer Infrastructure 上使用产品。"
+    },
+    {
+      "rule_ref": "U069",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "是否使用 Partner Infrastructure 未知；保留适用时取得明确授权并遵守相关条款的条件义务。"
+    },
+    {
+      "rule_ref": "U070",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已发生 Use；保留遵守适用 Terms 及基础设施附加条款的条件义务。"
+    },
+    {
+      "rule_ref": "U071",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实通过客户账户、客户基础设施或客户产品进行相关 End User 活动。"
+    },
+    {
+      "rule_ref": "U072",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实关联方通过独立工作区访问产品。"
+    },
+    {
+      "rule_ref": "U073",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知发生产品 Use；保留遵守 Terms 的许可条件。"
+    },
+    {
+      "rule_ref": "U074",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实逆向工程、反编译或发现底层组件。"
+    },
+    {
+      "rule_ref": "U075",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实以产品未许可方式提取内容。"
+    },
+    {
+      "rule_ref": "U076",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实将 Vibe 集成到第三方产品或向第三方提供产品访问。"
+    },
+    {
+      "rule_ref": "U077",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实向 End Users 提供访问或使用。"
+    },
+    {
+      "rule_ref": "U078",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Mistral 提供 Beta Products。"
+    },
+    {
+      "rule_ref": "U079",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知发生产品 Use；遵守适用法律、Terms、Usage Policy 及其他政策的条件义务已纳入。"
+    },
+    {
+      "rule_ref": "U080",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供侵犯或违反第三方权利的事实。"
+    },
+    {
+      "rule_ref": "U081",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未提供涉及儿童个人信息或未成年人使用的事实。"
+    },
+    {
+      "rule_ref": "U082",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用 Output 逆向工程。"
+    },
+    {
+      "rule_ref": "U083",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实危害产品安全或功能的行为。"
+    },
+    {
+      "rule_ref": "U084",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实购买、出售或转移 API key 或账户。"
+    },
+    {
+      "rule_ref": "U085",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发 Beta Product 或向第三方提供其访问。"
+    },
+    {
+      "rule_ref": "U086",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "该条款约束 Mistral 提供文件或订单中描述的支持；本案未涉及相应支持请求。"
+    },
+    {
+      "rule_ref": "U087",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实 Vibe 与面向第三方的客户产品结合。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实复制下游 Licensed Work。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改下游 Licensed Work。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实创作下游衍生作品。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发下游 Licensed Work。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "下游 BUSL 使用及生产属性未知；保留非生产或取得 Additional Use Grant 的 OR 条件。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "变更许可触发日期和相关版本状态未知，且未证实下游 Licensed Work 使用；变更后许可内容亦未提供。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实变更触发后继续依赖原始 BUSL 权利；不推断变更许可的范围。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用不符合当时有效要求，商业许可或停止使用的替代路径未触发。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实收到或使用原件、修改件或衍生作品。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实持有或制作 Licensed Work 的原件或修改件副本；该义务不适用于单纯远程调用。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实从第三方收到 Licensed Work 的原件或修改件。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实违反 BUSL 的使用。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用许可方或关联方商标、标识。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实使用 BUSL 文本许可作品或以其商标指称该许可。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "条款规定许可方的承诺，不转化为本案被许可方义务。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "Change Date 及 LICENSE.TXT 内容未提供，不能判断变更许可是否生效。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实复制下游 Licensed Work，亦未提供该版本变更触发状态。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实修改下游 Licensed Work，亦未提供该版本变更触发状态。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实创作下游衍生作品，亦未提供该版本变更触发状态。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "未证实分发下游 Licensed Work，亦未提供该版本变更触发状态。"
+    }
+  ]
+}

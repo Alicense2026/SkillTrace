@@ -1,0 +1,52 @@
+{
+  "case_id": "chain-0340-57e2c890dd1e",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 Llama 协议中适用于该使用的要求。",
+      "source_refs": [
+        "license-text:upstream:b7874099eaa0bc72"
+      ],
+      "subject": {
+        "artifact": "chain-0340-57e2c890dd1e:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_Llama_agreement"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若下游 CombinedProduct 的使用落入 COCL 软件许可范围，须限于非商业使用，并满足许可遵守、保留许可及 NOTICE/版权/归属/许可通知、以及对修改文件作出清晰变更标记的条件；若该使用构成 COCL 定义的商业使用，还须有另行书面协商的商业权利。",
+      "source_refs": [
+        "license-text:downstream:24053523ca9496f5"
+      ],
+      "subject": {
+        "artifact": "chain-0340-57e2c890dd1e:downstream",
+        "kind": "CombinedProduct"
+      },
+      "trigger": {
+        "all": [
+          "activity:Use:downstream",
+          "scope_shared"
+        ]
+      },
+      "unresolved_predicates": [
+        "activity:Use:downstream",
+        "scope_shared",
+        "non_commercial_use",
+        "license_compliance",
+        "license_notice_and_attribution_notices_retained_in_all_copies_and_derivative_works",
+        "modified_files_clearly_marked_as_changed",
+        "activity_constitutes_commercial_use_under_section_1_2",
+        "no_separately_negotiated_written_commercial_rights"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

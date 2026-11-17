@@ -1,0 +1,212 @@
+{
+  "case_id": "chain-21231-7e3958fab7d9",
+  "source_csv_line": 21232,
+  "row": {
+    "github_repo": "Patchwork-Assurance",
+    "github_url": "https://github.com/sjtroxel/Patchwork-Assurance",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "BAAI/bge-small-en-v1.5",
+    "artifact_url": "https://huggingface.co/BAAI/bge-small-en-v1.5",
+    "artifact_license": "mit",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: eval/sweep_knobs.py:100 ｜ 调用原文: with isolated_core(corpus_path, BASE_MODEL, BASE_MAX_CHARS, BASE_OVERLAP) as core: ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 生产检索默认嵌入模型（BASE_MODEL），FastEmbedEmbedder 实际加载，sweep_knobs 亦以它为基线测量",
+    "batch": "14201-16927",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "sjtroxel/patchwork-assurance",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "6be1ef3dcefae6d0d279c7372f27c48c144fa254cb33db53fe1d74d70986c258",
+    "filename": "_licenseref_full/texts/6be1ef3dcefae6d0d279c7372f27c48c144fa254cb33db53fe1d74d70986c258.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:Patchwork-Assurance-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-21231-7e3958fab7d9",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e447de318da1b79f"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-21231-7e3958fab7d9:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:3513fcd5f560a6ca"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "portfolio_viewing",
+                "educational_viewing"
+              ]
+            },
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-21231-7e3958fab7d9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:3513fcd5f560a6ca"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "not_prior_written_permission_from_copyright_holder",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-21231-7e3958fab7d9:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Include the copyright and permission notice when using the upstream MIT-licensed artifact.",
+        "source_refs": [
+          "license-text:upstream:e447de318da1b79f"
+        ],
+        "subject": {
+          "artifact": "chain-21231-7e3958fab7d9:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": []
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Use of the downstream repository is permitted only for portfolio viewing or educational viewing, and otherwise requires prior written permission from the copyright holder.",
+        "source_refs": [
+          "license-text:downstream:3513fcd5f560a6ca"
+        ],
+        "subject": {
+          "artifact": "chain-21231-7e3958fab7d9:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "portfolio_viewing",
+          "educational_viewing",
+          "prior_written_permission_from_copyright_holder"
+        ]
+      }
+    ],
+    "limitations": [
+      "The trusted record establishes use and remote interaction with the upstream model, but does not establish use of the downstream repository as an object or whether its stated viewing-purpose conditions apply.",
+      "The object graph records a link/remote-call relationship and leaves scope_shared unknown; it does not establish that the downstream repository and upstream model are the same licensed object. No license-to-license conflict is therefore established.",
+      "The MIT notice excerpt concerns copies or substantial portions. The record does not establish that such copying occurred; the notice obligation above reflects the structured permission-condition mapping, not a finding of copying."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22027,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1153,
+    "output_tokens_details": {
+      "reasoning_tokens": 279
+    },
+    "total_tokens": 23180,
+    "attribution": {
+      "items": {
+        "msg_097dd6e966d574af016af53ef1245087d2815a49eb4d2ae0bb": {
+          "input_tokens": 19957,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19957,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_097dd6e966d574af016af53ef1245087d29aafec43c4568408": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_097dd6e966d574af016af53ef6e22487d2aa5cb18a7d452a2d": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 874,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 874
+            }
+          ]
+        },
+        "rs_097dd6e966d574af016af53ef6cb1487d281166f08c365d1d6": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 279
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "a9c156450b3eeec23434278d1cacc5d708a829c9cd46ccebea7fae5722d05d28",
+  "elapsed_seconds": 31.49
+}

@@ -1,0 +1,138 @@
+{
+  "case_id": "chain-0081-5942d07f7c59",
+  "status": "SUCCESS",
+  "request_sha256": "45ef4068e3a362c901f45346c226c2d8502749a9050b3614a91602bd586dc41b",
+  "analysis": {
+    "case_id": "chain-0081-5942d07f7c59",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:0474e3056473d921"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0081-5942d07f7c59:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:ab8ee43fac5aeeac"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0081-5942d07f7c59:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0081-5942d07f7c59:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the copyright and permission notice with copies or substantial portions of the MIT-licensed software.",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_of_MIT_licensed_software",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:downstream:ab8ee43fac5aeeac"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "The trusted record establishes use and remote interaction with the upstream MIT-0 asset, and a link/API-call relation; it does not establish that the downstream MIT-licensed artifact is used, copied, distributed, or in the same licensed scope as the upstream asset.",
+      "The MIT-0 grant permits use without an attribution condition in the cited grant text. The MIT excerpt provides a notice condition for copies or substantial portions; it does not establish that the notice condition is triggered merely by remote API interaction.",
+      "No structured ASC excerpt maps a separate condition to RemoteInteraction or API service use. No distribution, modification, copying, or transfer of model weights is established."
+    ],
+    "overall_status": "OBLIGATIONS_OPEN"
+  },
+  "usage": {
+    "input_tokens": 20311,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 857,
+    "output_tokens_details": {
+      "reasoning_tokens": 243
+    },
+    "total_tokens": 21168,
+    "attribution": {
+      "items": {
+        "msg_0c9645d04c8ce36d016af2fa46ede887d1abae20243b9ed481": {
+          "input_tokens": 18279,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18279,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c9645d04c8ce36d016af2fa4cdd2887d1af9055008dcbb76b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 614,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 614
+            }
+          ]
+        },
+        "rs_0c9645d04c8ce36d016af2fa4cc61887d1b33f11f6bacd3537": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 243
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.556,
+  "auto_applied": false,
+  "aggregate_count": 15
+}

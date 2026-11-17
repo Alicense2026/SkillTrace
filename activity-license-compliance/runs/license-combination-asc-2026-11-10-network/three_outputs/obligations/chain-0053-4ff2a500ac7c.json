@@ -1,0 +1,63 @@
+{
+  "case_id": "chain-0053-4ff2a500ac7c",
+  "output": [
+    {
+      "activity": "RemoteInteraction",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "向服务终端用户清楚披露输出由AI生成、可能含错误或遗漏且仅供参考",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0053-4ff2a500ac7c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "activity:RemoteInteraction",
+          "outputs_provided_to_end_users"
+        ]
+      },
+      "unresolved_predicates": [
+        "outputs_provided_to_end_users",
+        "disclosure_fulfilled"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 DeepSeek Open Platform 服务条款",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0053-4ff2a500ac7c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "service_terms_compliance"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 DeepSeek Open Platform 服务条款",
+      "source_refs": [
+        "license-text:upstream:b2a3e7ddf565746c"
+      ],
+      "subject": {
+        "artifact": "chain-0053-4ff2a500ac7c:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:RemoteInteraction",
+      "unresolved_predicates": [
+        "service_terms_compliance"
+      ]
+    }
+  ],
+  "aggregate_count": 28
+}

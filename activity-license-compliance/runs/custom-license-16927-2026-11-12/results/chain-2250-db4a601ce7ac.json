@@ -1,0 +1,158 @@
+{
+  "case_id": "chain-2250-db4a601ce7ac",
+  "source_csv_line": 2251,
+  "row": {
+    "github_repo": "5ire",
+    "github_url": "https://github.com/nanbingxyz/5ire",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "Xenova/bge-m3",
+    "artifact_url": "https://huggingface.co/Xenova/bge-m3",
+    "artifact_license": "mit",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/main/constants.ts:1 ｜ 调用原文: export const DOCUMENT_EMBEDDING_MODEL_NAME = \"Xenova/bge-m3\";（引用处 第1行） ｜ 证据等级: 待复核（中） ｜ 解析: huggingface → hf-model ｜ 许可证来源: model-card ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: DOCUMENT_EMBEDDING_MODEL_NAME，embedder 实际下载并加载的嵌入模型",
+    "batch": "1-1000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "nanbingxyz/5ire",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "84f520494c227243304a7d22ffdbb16f516586252e40a56c641cc26e7bafcff4",
+    "filename": "_licenseref_full/texts/84f520494c227243304a7d22ffdbb16f516586252e40a56c641cc26e7bafcff4.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:5ire-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-2250-db4a601ce7ac",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6d3330cdf237fb7c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-2250-db4a601ce7ac:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:293448b85fb688b1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "no_5ire_brand_used_in_modified_versions",
+                "prominent_required_statement_present"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-2250-db4a601ce7ac:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [],
+    "limitations": [
+      "可信记录确认的是对 Xenova/bge-m3 的远程调用及 API 链接；未证明下游复制、修改、分发或再许可该模型，故不触发 MIT 关于副本/分发的通知义务。",
+      "MIT 摘录将版权及许可通知置于副本或实质部分中；结构化 Use 条款将其概括为使用条件，但现有事实未证明发生复制，不能据此认定未履行或形成冲突。",
+      "下游 LicenseRef-Custom 的 L20-L22 条款明确限于 Community Edition；对象图未确认该条款与被调用模型或本次远程调用共享适用范围。该文本也未提供底层 Apache 2.0 条款。",
+      "共享范围未知；未发现具体相反条款或明确违反事实。未提供的活动履行情况不作为未履行认定。"
+    ],
+    "overall_status": "INCOMPLETE_ANALYSIS",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 22764,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 917,
+    "output_tokens_details": {
+      "reasoning_tokens": 384
+    },
+    "total_tokens": 23681,
+    "attribution": {
+      "items": {
+        "msg_0db169589ce14247016af53b172ddc87d29a6b8ac215fc992a": {
+          "input_tokens": 20694,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20694,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0db169589ce14247016af53b172ddc87d2a4e38bab96c0f7e5": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0db169589ce14247016af53b1e8aec87d29acba7245f3e370b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 533,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 533
+            }
+          ]
+        },
+        "rs_0db169589ce14247016af53b1e6f5487d29301ce03f65945d1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 384
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "deb6979c2686e124fa2b96db7167f240782718c14bd93f15f0bf4f185e1b28c6",
+  "elapsed_seconds": 23.41
+}

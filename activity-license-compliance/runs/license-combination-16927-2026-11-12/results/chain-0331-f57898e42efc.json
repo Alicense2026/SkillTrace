@@ -1,0 +1,162 @@
+{
+  "case_id": "chain-0331-f57898e42efc",
+  "input_group_row": 331,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "ISC",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0331-f57898e42efc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0331-f57898e42efc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:29195450b88c6d5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "retain_applicable_notices",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0331-f57898e42efc:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [
+      {
+        "activity": "Use",
+        "figure_case_refs": [],
+        "reason": "Use/上游原始材料；ISC允许使用但要求保留适用通知；下游ISC对下游原始材料规定同样要求，没有相反约束；远程调用及Use已证实，但两条规则的对象是否共同覆盖仍未知，因此仅在scope_shared时比较，条件可共同履行。来源为双方ISC许可文本L5-L5。",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d",
+          "license-text:downstream:29195450b88c6d5d"
+        ],
+        "status": "CONDITIONS_INCLUDED"
+      }
+    ],
+    "limitations": [
+      "双方本地原文匹配同一ISC文本及哈希，但结构化ASC为首轮抽取。摘录仅覆盖L5-L5许可授予及通知条件，未据此推断其他条款。",
+      "对象图确认API链接/远程调用，不证明上下游许可约束同一对象；下游各活动事实未知，且无修改、复制或分发事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游ISC材料时保留适用的版权及许可通知。",
+        "source_refs": [
+          "license-text:upstream:29195450b88c6d5d"
+        ],
+        "subject": {
+          "artifact": "chain-0331-f57898e42efc:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "retain_applicable_notices",
+          "scope_shared"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 18965,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 716,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 19681,
+    "attribution": {
+      "items": {
+        "msg_0c4ed101d992f05b016af531d1f0c487d1a46b582392f2f2d9": {
+          "input_tokens": 16895,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16895,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c4ed101d992f05b016af531d1f0c487d1bcf27d8d45cca1f0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0c4ed101d992f05b016af531d2b64087d1bb6f50abe391e0d4": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 716,
+          "content": [
+            {
+              "input_tokens": 2,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 716
+            }
+          ]
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "c18eea89747c900f1df6f4d750e3d86099df9edd7decee598e1513c23fc83a55",
+  "elapsed_seconds": 23.9
+}

@@ -1,0 +1,90 @@
+{
+  "case_id": "chain-0241-97511d905cc6",
+  "input_group_row": 241,
+  "aggregate_count": 2,
+  "combination": {
+    "GitHub许可证": "CC0-1.0",
+    "资产许可证原文标题/标签": "Gemini API Additional Terms of Service",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "2"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0241-97511d905cc6",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0241-97511d905cc6:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "Gemini API 条款摘录及其结构化映射标有 FIRST_PASS_REVIEW_REQUIRED；其禁止范围依赖“竞争模型”及逆向工程等原文语境。已知远程 API 调用不证明实施了这些受禁止用途。",
+      "对象图确认 downstream 与 upstream 存在 API 链接/远程调用，但两份许可是否对同一对象共同适用未知；没有据此认定许可冲突。CC0 条款所映射的下游对象上未提供具体活动事实。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0241-97511d905cc6:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得使用 Gemini API 或 Google AI Studio 服务开发与其竞争的模型；不得尝试逆向工程、提取或复制服务组件，包括底层数据或模型（例如参数权重）。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            {
+              "any": [
+                "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+                "attempt_to_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+              ]
+            }
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "use_services_to_develop_models_competing_with_Gemini_API_or_Google_AI_Studio",
+          "attempt_to_reverse_engineer_extract_or_replicate_services_components_including_underlying_data_or_models"
+        ],
+        "source_refs": [
+          "license-text:upstream:ffe5b0021e0b945a"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0237-8044e1826cd2.json",
+  "original_case_id": "chain-0237-8044e1826cd2",
+  "original_request_sha256": "bcf751cccfa26dc705e5da87a8dd92cef614e24746c0ae7333600ab81e8d8b0f",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0237-8044e1826cd2": "chain-0241-97511d905cc6",
+    "license-text:upstream:ffe5b0021e0b945a": "license-text:upstream:ffe5b0021e0b945a",
+    "license-text:downstream:91198a6dec5f3533": "license-text:downstream:91198a6dec5f3533",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/236": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/240"
+  }
+}

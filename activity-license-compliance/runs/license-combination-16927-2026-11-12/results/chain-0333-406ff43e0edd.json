@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-0333-406ff43e0edd",
+  "input_group_row": 333,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "ISC",
+    "资产许可证原文标题/标签": "LLAMA 3.1 COMMUNITY LICENSE AGREEMENT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0333-406ff43e0edd",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0333-406ff43e0edd:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "记录确认对上游 Llama 3.1 材料进行远程服务调用，但未说明 ISC 下游软件本身是否被使用；故未将 ISC 使用条款套用于该 API 调用。",
+      "对象图只确认 LINK/REMOTE_CALL，未确认共同作品、修改副本、分发、再许可或源码提供。Llama 3.1 的分发条件不因远程调用自动触发。",
+      "Llama 许可相关结构化抽取标记为 FIRST_PASS_REVIEW_REQUIRED；所引使用授权摘录要求遵守协议，但未在该摘录中细化全部履行要求。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0333-406ff43e0edd:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "使用 Llama Materials 时遵守 Llama agreement。",
+        "trigger": true,
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "comply_with_Llama_agreement"
+        ],
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 22240,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 823,
+    "output_tokens_details": {
+      "reasoning_tokens": 337
+    },
+    "total_tokens": 23063,
+    "attribution": {
+      "items": {
+        "msg_050f920a8d0423d2016af531e9ce2c87d1838088caeb3a03db": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_050f920a8d0423d2016af531e9ce2c87d1ac10fd4464c9d865": {
+          "input_tokens": 20170,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20170,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_050f920a8d0423d2016af531f0820087d1ace169fbc64f301c": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 486,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 486
+            }
+          ]
+        },
+        "rs_050f920a8d0423d2016af531f0664887d1aeb692effc861c03": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 337
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "04b960cdb1b3b7181c34807a8433ee292f673296a06e8bbd0c4ed13339ae9f34",
+  "elapsed_seconds": 25.92
+}

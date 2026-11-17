@@ -1,0 +1,308 @@
+{
+  "case_id": "skill-00039",
+  "csv_row": 40,
+  "source_excel_row": "70",
+  "status": "SUCCESS",
+  "request_sha256": "5e7358aec866a03d80f1061536b8f5212f797721012bd3cec0a51b54b6af826c",
+  "analysis": {
+    "case_id": "skill-00039",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "skill-00039:upstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ],
+        "triple": {
+          "A": "Use",
+          "S": {
+            "artifact": "skill-00039:downstream",
+            "kind": "OriginalArtifact"
+          },
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": true
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "skill-00039:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "上游许可的被许可人对软件的每份副本或实质部分，须附上版权声明及MIT许可声明；若未制作或分发此类副本或实质部分，则该条件不要求附加声明。",
+        "trigger": {
+          "any": [
+            "no_copy_or_substantial_portion_created",
+            "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "Copy",
+          "substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ],
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ]
+      },
+      {
+        "activity": "Copy",
+        "subject": {
+          "artifact": "skill-00039:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "下游许可的被许可人对软件的每份副本或实质部分，须附上版权声明及MIT许可声明；若未制作或分发此类副本或实质部分，则该条件不要求附加声明。",
+        "trigger": {
+          "any": [
+            "no_copy_or_substantial_portion_created",
+            "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "Copy",
+          "substantial_portion_created",
+          "copyright_and_permission_notices_included_in_all_copies_or_substantial_portions"
+        ],
+        "source_refs": [
+          "license:3e1464b0f88624bd400d41c51669db70c3c729bfd8df0a981cf131f80b2ccce9"
+        ]
+      }
+    ],
+    "limitations": [
+      "已检查本地MIT文本及其对应的上游、下游结构化规则。事实确认的是远程服务调用、Use和Link；未确认复制、分发、修改或其他许可行为，因此副本通知义务仅按触发条件保留。",
+      "对象图未确认两侧许可是否共同约束同一对象；远程调用和链接本身不证明软件副本或实质部分转移。"
+    ],
+    "review_items": [],
+    "rule_obligation_audit": [
+      {
+        "rule_ref": "U001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "许可明确允许对上游软件进行Use，未列附加条件。"
+      },
+      {
+        "rule_ref": "U002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "复制规则的通知条件已作为有条件义务保留。"
+      },
+      {
+        "rule_ref": "U003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "修改规则涉及副本或实质部分时的通知要求，归并至上游通知义务。"
+      },
+      {
+        "rule_ref": "U004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "合并规则涉及副本或实质部分时的通知要求，归并至上游通知义务。"
+      },
+      {
+        "rule_ref": "U005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "发布规则涉及分发副本或实质部分时的通知要求，归并至上游通知义务。"
+      },
+      {
+        "rule_ref": "U006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "分发规则的通知要求已归并至上游通知义务。"
+      },
+      {
+        "rule_ref": "U007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "再许可规则涉及副本或实质部分时的通知要求，归并至上游通知义务。"
+      },
+      {
+        "rule_ref": "U008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          0
+        ],
+        "reason": "出售副本规则的通知要求已归并至上游通知义务。"
+      },
+      {
+        "rule_ref": "D001",
+        "status": "NO_OBLIGATION",
+        "obligation_indices": [],
+        "reason": "许可明确允许对下游软件进行Use，未列附加条件。"
+      },
+      {
+        "rule_ref": "D002",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "复制规则的通知条件已作为有条件义务保留。"
+      },
+      {
+        "rule_ref": "D003",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "修改规则涉及副本或实质部分时的通知要求，归并至下游通知义务。"
+      },
+      {
+        "rule_ref": "D004",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "合并规则涉及副本或实质部分时的通知要求，归并至下游通知义务。"
+      },
+      {
+        "rule_ref": "D005",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "发布规则涉及分发副本或实质部分时的通知要求，归并至下游通知义务。"
+      },
+      {
+        "rule_ref": "D006",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "分发规则的通知要求已归并至下游通知义务。"
+      },
+      {
+        "rule_ref": "D007",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "再许可规则涉及副本或实质部分时的通知要求，归并至下游通知义务。"
+      },
+      {
+        "rule_ref": "D008",
+        "status": "INCLUDED",
+        "obligation_indices": [
+          1
+        ],
+        "reason": "出售副本规则的通知要求已归并至下游通知义务。"
+      }
+    ]
+  },
+  "raw_response": "activity-license-compliance/runs/skill-conflict-obligations-2026-11-14/responses/skill-00039-1794590819941059000-1.json",
+  "usage": {
+    "input_tokens": 18193,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1883,
+    "output_tokens_details": {
+      "reasoning_tokens": 325
+    },
+    "total_tokens": 20076,
+    "attribution": {
+      "items": {
+        "msg_041ee4faf81212eb016af748681f7087d0b09abdc1f779845d": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_041ee4faf81212eb016af748681f7087d0bcc6a1d410b0be3a": {
+          "input_tokens": 15469,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15469,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_041ee4faf81212eb016af7486ed94c87d08f30b5477afe22f0": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1558,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1558
+            }
+          ]
+        },
+        "rs_041ee4faf81212eb016af7486ebdd487d08b1bd375c9fe7a8b": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 325
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2684,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "model": "gpt-6-luna",
+  "attempt": 1,
+  "normalization_policy": "Exact subject serialization aliases may be converted to allowed_subject objects; raw response retained"
+}

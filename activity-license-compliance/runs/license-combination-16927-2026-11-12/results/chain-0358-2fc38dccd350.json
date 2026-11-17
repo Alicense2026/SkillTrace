@@ -1,0 +1,148 @@
+{
+  "case_id": "chain-0358-2fc38dccd350",
+  "input_group_row": 358,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "MIT",
+    "资产许可证原文标题/标签": "AGPL-3.0",
+    "调用方式（代码修改）": "代码层面集成（修改：否）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_upstream_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0358-2fc38dccd350:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:5b08064288d26a33"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": {
+              "all": [
+                "modified_upstream_program",
+                "version_supports_remote_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0358-2fc38dccd350:upstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0358-2fc38dccd350:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "triple": {
+          "A": "Copy",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0358-2fc38dccd350:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "AGPL-3.0-only 本地文本摘录中的网络源代码提供义务以修改程序且版本支持远程交互为前提；可信事实明确代码未修改，因此该条件未触发。远程调用事实本身不构成该义务的触发条件。",
+      "MIT 条款适用对象与对象图中的纳入关系是否覆盖同一受许可材料未明确；未据此推断 AGPL 与 MIT 存在许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Copy",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "在所有副本或软件实质部分中包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "subject": {
+          "artifact": "chain-0358-2fc38dccd350:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Copy",
+        "unresolved_predicates": []
+      },
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用受 MIT 许可的软件时，遵守许可条件；相关副本或实质部分须包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:246613076f619962"
+        ],
+        "subject": {
+          "artifact": "chain-0358-2fc38dccd350:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": []
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0358-2fc38dccd350"
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0355-9186e48158af.json",
+  "original_case_id": "chain-0355-9186e48158af",
+  "original_request_sha256": "dba9dcdd00ea6ae893731ff6efae2bd0a7eb791ea5f357a0d7cbd18cfeaa0bf7",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0355-9186e48158af": "chain-0358-2fc38dccd350",
+    "license-text:upstream:5b08064288d26a33": "license-text:upstream:5b08064288d26a33",
+    "license-text:downstream:246613076f619962": "license-text:downstream:246613076f619962",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/354": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/357"
+  }
+}

@@ -1,0 +1,292 @@
+{
+  "request_sha256": "f62be98cef4015cedc1d6d02be5be411576a6e15e0321ac02af1cd6a7b945c7e",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 11,
+        "end_line": 16,
+        "clause_label": "1. Permissions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "any": [
+              "educational_purpose",
+              "noncommercial_purpose"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "The license grants access to and study of the software for educational purposes, and use in personal, non-commercial projects. It also grants permission to make personal repository copies and to modify the software for personal use; those separate activities are captured in the following clauses. Commercial use is addressed separately in section 3.",
+        "condition_explanation": "The use permission applies for educational purposes or non-commercial purposes; the text does not define those tests."
+      },
+      {
+        "start_line": 13,
+        "end_line": 13,
+        "clause_label": "1. Permissions — Fork",
+        "activities": [
+          "Copy"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "personal_copy"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission to create personal copies of the repository; no permission to distribute those copies is implied.",
+        "condition_explanation": "The copy must be a personal copy."
+      },
+      {
+        "start_line": 14,
+        "end_line": 14,
+        "clause_label": "1. Permissions — Modify",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "personal_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission to make changes and improvements to the software for personal use. This does not itself grant permission to share adaptations.",
+        "condition_explanation": "The modification permission is limited to personal use."
+      },
+      {
+        "start_line": 15,
+        "end_line": 15,
+        "clause_label": "1. Permissions — Share",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "noncommercial_purpose",
+              "attribution_requirements_satisfied",
+              "redistribution_license_notice_included",
+              "public_fork_or_derivative_prominent_link_included_if_applicable"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permission to redistribute the software, including derivatives as addressed by the attribution and public-link requirements. Commercial purposes are separately restricted in section 3.",
+        "condition_explanation": "Redistribution must be non-commercial and meet the attribution and license-notice requirements. A prominent link is required for public forks or derivatives."
+      },
+      {
+        "start_line": 20,
+        "end_line": 22,
+        "clause_label": "2. Requirements — Attribution Required",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "use_occurs",
+          "requires": {
+            "all": [
+              "credit_original_author_bigsk1",
+              "link_to_original_repository",
+              "indicate_changes_if_made",
+              "no_suggestion_of_author_endorsement"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to any use of the software. Credit must be appropriate and may be given in any reasonable manner, provided it does not suggest endorsement. This requirement is separate from the redistribution-specific notice and link requirements.",
+        "condition_explanation": "When any use occurs, credit BigSk1 and link the original repository; indicate whether changes were made, and do not imply the author endorses the user or use."
+      },
+      {
+        "start_line": 24,
+        "end_line": 24,
+        "clause_label": "2. Requirements — License Notice",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "redistribution_occurs",
+          "requires": "copy_of_this_license_included"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to any redistribution of the software.",
+        "condition_explanation": "When redistribution occurs, include a copy of this license."
+      },
+      {
+        "start_line": 26,
+        "end_line": 26,
+        "clause_label": "2. Requirements — Link Back",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "public_fork_or_derivative_distributed",
+          "requires": "prominent_link_to_specified_repository_included"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applies to public forks or derivatives and requires a prominent link to https://github.com/bigsk1/jarvis-voice.",
+        "condition_explanation": "The obligation is triggered when a fork or derivative is public; it does not state this link requirement for every private copy."
+      },
+      {
+        "start_line": 32,
+        "end_line": 37,
+        "clause_label": "3. Restrictions — Commercial Use",
+        "activities": [
+          "CommercialUse",
+          "Use",
+          "Distribute",
+          "ProvideNetworkService",
+          "OfferPaidAccess",
+          "SellCopies"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "commercial_purpose_without_explicit_written_permission_from_copyright_holder"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Prohibits commercial-purpose use of the software or derivative works without explicit written permission from the copyright holder. Listed examples include sale, use in a commercial product or service, paid services, inclusion in a sold product, and revenue-generating activity. The examples are not stated to be exhaustive. The clause does not itself grant a commercial license when the exception applies.",
+        "condition_explanation": "The prohibition applies when the purpose is commercial and the copyright holder has not given explicit written permission."
+      },
+      {
+        "start_line": 39,
+        "end_line": 39,
+        "clause_label": "3. Restrictions — Remove Attribution",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not remove, alter, or obscure copyright notices, attribution, or license information in the software or copies/adaptations.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 41,
+        "end_line": 41,
+        "clause_label": "3. Restrictions — Trademark Use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "use_name_jarvis_bigsk1_or_associated_branding_to_endorse_or_promote_derived_product_without_prior_written_permission"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Restricts use of the specified names or associated branding to endorse or promote products derived from the software; it is not a general restriction on all use of those names.",
+        "condition_explanation": "The prohibition applies to endorsement or promotion of derived products using the specified names or branding when prior written permission is absent."
+      },
+      {
+        "start_line": 43,
+        "end_line": 43,
+        "clause_label": "3. Restrictions — Patent Claims",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not make patent claims against the author related to the software. The text does not specify a broader patent-retaliation trigger or additional parties.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 53,
+        "end_line": 56,
+        "clause_label": "5. Contributions",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "contribution_submitted",
+          "requires": "contribution_submitted_to_project"
+        },
+        "actor_role": "contributor; copyright holder is grantee",
+        "scope_note": "On submitting contributions (including pull requests, issues, or suggestions), the contributor agrees that contributions are licensed under the same terms and grants the copyright holder a perpetual, worldwide, non-exclusive, royalty-free license to use, modify, and distribute the contributions. This is a grant concerning submitted contributions, not a general grant to the licensee over the project software.",
+        "condition_explanation": "The stated agreement and grant are triggered by submission of a contribution to the project."
+      },
+      {
+        "start_line": 64,
+        "end_line": 64,
+        "clause_label": "7. Termination",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "failure_to_comply_with_any_license_term",
+          "requires": "destroy_all_copies_in_possession"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Rights under the license terminate automatically upon failure to comply with any license term; upon termination, the licensee must destroy all copies of the software in their possession.",
+        "condition_explanation": "Noncompliance with any license term triggers automatic termination and the stated destruction obligation."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a source-available license for the Jarvis Voice Assistant software; it does not identify or grant rights in separate third-party dependencies, services, models, or data.",
+      "The section 4 contact invitation to discuss commercial licensing options is not itself a commercial-use grant. No separately negotiated permission is supplied.",
+      "The non-binding summary and warranty/liability disclaimer were not extracted as operative ASC clauses. The final statement that the license is inspired by other licenses does not incorporate their terms; those external licenses were not reconstructed.",
+      "The text does not state general permissions for sublicensing, linking, hosting/network access, training, charging, or combining beyond the specifically described commercial-use examples; no such permission is inferred."
+    ]
+  }
+}

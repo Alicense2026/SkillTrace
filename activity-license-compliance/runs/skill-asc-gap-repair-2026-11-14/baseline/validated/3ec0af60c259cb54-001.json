@@ -1,0 +1,636 @@
+{
+  "request_sha256": "d264c75c1e3721bac70b42b857e5fbca3d58b3e7bc66ffe99cb99ab8b345bed3",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 3,
+        "end_line": 3,
+        "clause_label": "agreement_acceptance_by_use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "acceptance_by_click_order_form_acceptance_or_service_use"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Agreement preamble; use of Services is one of the stated methods by which Customer agrees to the Agreement.",
+        "condition_explanation": "acceptance_by_click_order_form_acceptance_or_service_use means Customer accepts by clicking “I agree,” accepting the Order Form, or using the Services.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "openai_deliver_services_during_term",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Section 1.1; OpenAI must deliver the Services to Customer for the Services Term listed on the Order Form.",
+        "condition_explanation": "Services Term is specified in the applicable Order Form; increases purchased during a Services Term are prorated to end with the then-current Services Term unless the parties agree otherwise in writing.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Deliver the Services to Customer for the Services Term.",
+            "actor": "OpenAI",
+            "object": "Services",
+            "trigger": "During the Services Term listed on the Order Form, subject to any written agreement otherwise for the term of service increases."
+          }
+        ]
+      },
+      {
+        "start_line": 7,
+        "end_line": 7,
+        "clause_label": "customer_nonrenewal_or_scope_reduction_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "notice_at_least_30_days_before_next_renewal_term"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 1.2; applies when Customer gives notice of non-renewal or scope reduction for a Renewal Term.",
+        "condition_explanation": "notice_at_least_30_days_before_next_renewal_term means the notice is given at least 30 days before the next Renewal Term starts. Whether renewal occurs and whether Services auto-renew are determined by the Order Form.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give notice of non-renewal or scope reduction at least 30 days before the start of the next Renewal Term.",
+            "actor": "Customer",
+            "object": "Services renewal or scope",
+            "trigger": "When Customer elects non-renewal or scope reduction for a Renewal Term."
+          }
+        ]
+      },
+      {
+        "start_line": 10,
+        "end_line": 10,
+        "clause_label": "authorized_purchaser_additional_service_purchases",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "services_configured_to_allow_additional_purchases",
+          "requires": "additional_purchase_charged_at_then_current_price_unless_order_form_says_otherwise"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 1.3(b); Authorized Purchasers may purchase additional licenses, quantities, or volumes only where the Services are configured to allow those purchases.",
+        "condition_explanation": "services_configured_to_allow_additional_purchases is the stated configuration condition. The charge is based on Customer’s then-current price for the remainder of the then-current Services Term unless the Order Form provides otherwise.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the charge for additional licenses, quantities, or volumes for the remainder of the then-current Services Term at the then-current price, unless the Order Form provides otherwise.",
+            "actor": "Customer",
+            "object": "Additional Services purchased by Authorized Purchasers",
+            "trigger": "When an Authorized Purchaser purchases additional licenses, quantities, or volumes through a configuration that permits such purchases."
+          }
+        ]
+      },
+      {
+        "start_line": 12,
+        "end_line": 12,
+        "clause_label": "affiliate_use_under_customer_account",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "affiliate_accesses_services_in_connection_with_agreement",
+          "requires": true
+        },
+        "actor_role": "Customer Affiliate",
+        "scope_note": "Section 1.4(a); Affiliate use under Customer’s Account occurs in the same workspace and organizational ID as Customer. Customer is responsible and liable for Affiliate acts and omissions connected with the Agreement.",
+        "condition_explanation": "affiliate_accesses_services_in_connection_with_agreement means the Affiliate accesses the Services in connection with this Agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Be responsible and liable for all acts and omissions of its Affiliates that access the Services in connection with the Agreement.",
+            "actor": "Customer",
+            "object": "Affiliate use of Services under Customer’s Account",
+            "trigger": "When a Customer Affiliate accesses the Services in connection with this Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 13,
+        "end_line": 13,
+        "clause_label": "affiliate_separate_purchase_order_form",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "affiliate_purchase_and_use_intended_separate_from_customer",
+          "requires": "affiliate_executes_separate_order_form"
+        },
+        "actor_role": "Customer Affiliate",
+        "scope_note": "Section 1.4(b); when Affiliate purchase and use is intended to be separate from Customer’s, the Affiliate must execute a separate Order Form; OpenAI then creates a separate workspace and organizational ID and provisions Services accordingly. Affiliates entering Order Forms under the Agreement are bound by it.",
+        "condition_explanation": "affiliate_purchase_and_use_intended_separate_from_customer is the stated condition for requiring a separate Order Form.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Execute a separate Order Form for separate Affiliate purchase and use.",
+            "actor": "Customer Affiliate",
+            "object": "Separate Affiliate Services purchase",
+            "trigger": "When Affiliate purchase and use of the Services is intended to be separate from Customer’s."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Create a separate workspace and organizational ID and provision the Services accordingly.",
+            "actor": "OpenAI",
+            "object": "Separate Affiliate Services account and workspace",
+            "trigger": "After the Affiliate executes the separate Order Form."
+          }
+        ]
+      },
+      {
+        "start_line": 14,
+        "end_line": 14,
+        "clause_label": "usage_based_service_fees",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_purchases_usage_based_services",
+          "requires": "pay_fees_based_on_usage_calculated_by_openai"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 1.5; applies to Services purchased based on usage.",
+        "condition_explanation": "customer_purchases_usage_based_services means Customer purchases Services on a usage basis; fees are based on usage calculated by OpenAI.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Fees for usage-based Services based on usage calculated by OpenAI.",
+            "actor": "Customer",
+            "object": "Usage-based Services",
+            "trigger": "When Customer purchases Services based on usage."
+          }
+        ]
+      },
+      {
+        "start_line": 17,
+        "end_line": 18,
+        "clause_label": "customer_access_and_use_services",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "during_term",
+          "requires": "in_accordance_with_agreement"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Sections 2.1–2.2; non-exclusive right to access and use Services during the Term, including use of the API to integrate Services into Customer Applications and make those applications available to End Users.",
+        "condition_explanation": "during_term means while the Agreement’s Term is in effect. in_accordance_with_agreement requires compliance with applicable Agreement terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 18,
+        "end_line": 18,
+        "clause_label": "integrate_services_and_make_applications_available",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "during_term",
+          "requires": "in_accordance_with_agreement"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 2.2; includes using OpenAI’s API to integrate Services into Customer Applications and making those applications available to End Users.",
+        "condition_explanation": "during_term means while the Agreement’s Term is in effect; the integration and availability remain subject to the Agreement.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 19,
+        "end_line": 19,
+        "clause_label": "customer_termination_for_material_functionality_reduction",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "openai_update_materially_reduces_services_functionality_and_customer_notified",
+          "requires": "customer_elects_within_5_business_days_of_receipt_and_gives_30_days_written_notice"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 2.3; termination right for an OpenAI update materially reducing Services functionality; excluded for features provided on a beta or evaluation basis.",
+        "condition_explanation": "The condition requires a material reduction in Services functionality, notice at the Account email address, Customer’s election within five business days after receiving notice, and 30 days’ written termination notice. The right does not apply to updates to beta or evaluation features.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give OpenAI 30 days’ written notice of termination after electing to terminate within five business days of receiving the update notice.",
+            "actor": "Customer",
+            "object": "Agreement",
+            "trigger": "An OpenAI update materially reduces Services functionality, OpenAI notifies Customer at the Account email address, and the update is not to a beta or evaluation feature."
+          }
+        ]
+      },
+      {
+        "start_line": 22,
+        "end_line": 22,
+        "clause_label": "account_information_credentials_resale_and_incident_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "accurate_current_account_information_and_no_credential_sharing_or_account_access_resale_or_lease"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 3.1; governs Customer Account information and access credentials, resale or lease of Account or End User Account access, and notice of unauthorized access.",
+        "condition_explanation": "The rule requires accurate, current Account information; prohibits sharing Account access credentials or individual login credentials between multiple users and reselling or leasing access to the Account or an End User Account; and requires prompt notice upon awareness of unauthorized access.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide accurate and current Account information.",
+            "actor": "Customer",
+            "object": "Customer Account information",
+            "trigger": "While maintaining or using the Customer Account."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not share Account access credentials or individual login credentials between multiple users.",
+            "actor": "Customer",
+            "object": "Account access credentials and individual login credentials",
+            "trigger": "At all times."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not resell or lease access to the Account or any End User Account.",
+            "actor": "Customer",
+            "object": "Account or End User Account access",
+            "trigger": "At all times."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly notify OpenAI of unauthorized access to the Account or Services.",
+            "actor": "Customer",
+            "object": "Customer Account or Services",
+            "trigger": "Promptly after Customer becomes aware of unauthorized access."
+          }
+        ]
+      },
+      {
+        "start_line": 23,
+        "end_line": 23,
+        "clause_label": "end_user_single_user_accounts_and_consents",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "single_end_user_per_account_and_necessary_end_user_consents_obtained_and_maintained"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 3.2; applies to End User Accounts, activities under Customer’s Account, and consents necessary for Administrators’ Agreement-described activities and OpenAI’s service delivery.",
+        "condition_explanation": "single_end_user_per_account means each End User Account is provisioned to, registered for, and used by one End User only. Necessary consents must be obtained and maintained from End Users.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provision, register, and permit use of each End User Account for a single End User only.",
+            "actor": "Customer",
+            "object": "End User Accounts",
+            "trigger": "Whenever an End User Account is provisioned, registered, or used."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Be responsible for all activities under its Account, including activities of End Users with End User Accounts or accessing Services through a Customer Application.",
+            "actor": "Customer",
+            "object": "Activities under Customer’s Account",
+            "trigger": "When activities occur under Customer’s Account."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Obtain and maintain from End Users necessary consents for Administrators to engage in Agreement-described activities and for OpenAI to deliver the Services.",
+            "actor": "Customer",
+            "object": "End User consents",
+            "trigger": "Before and while the relevant Administrator activities or OpenAI service delivery occur."
+          }
+        ]
+      },
+      {
+        "start_line": 24,
+        "end_line": 24,
+        "clause_label": "customer_and_end_user_service_restrictions",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "use_violates_applicable_law_or_openai_policies",
+              "use_violates_third_party_rights",
+              "allow_minor_without_parent_or_guardian_consent",
+              "reverse_engineer_services_or_service_systems",
+              "use_output_to_develop_competing_ai_model_without_permitted_exception",
+              "extract_service_data_other_than_through_permitted_service_functionality",
+              "buy_sell_or_transfer_api_keys_with_third_party",
+              "interfere_with_disrupt_services_or_circumvent_limits_or_protective_measures_or_safety_mitigations",
+              "violate_or_circumvent_usage_limits_or_configure_services_to_avoid_them"
+            ]
+          }
+        },
+        "actor_role": "Customer and End Users",
+        "scope_note": "Section 3.3; applies to Customer and End Users and prohibits the listed conduct. The restriction on developing competing AI models from Output has a Permitted Exception; the definition and scope of that exception are not included in the supplied text.",
+        "condition_explanation": "Each atom denotes the corresponding prohibited conduct in Section 3.3(a)–(i). use_output_to_develop_competing_ai_model_without_permitted_exception applies only absent a Permitted Exception. Reverse Engineer is defined in the supplied definition context and includes specified reverse-engineering and model-extraction conduct, except where the restriction is contrary to applicable law.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services or Customer Content in a way that violates applicable laws or OpenAI Policies.",
+            "actor": "Customer and End Users",
+            "object": "Services or Customer Content",
+            "trigger": "At all times."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services or Customer Content in a way that violates third-party rights.",
+            "actor": "Customer and End Users",
+            "object": "Services or Customer Content",
+            "trigger": "At all times."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not allow minors to use OpenAI Services without consent from their parent or guardian.",
+            "actor": "Customer and End Users",
+            "object": "OpenAI Services used by minors",
+            "trigger": "When a minor uses OpenAI Services, unless the minor’s parent or guardian has consented."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not Reverse Engineer any aspect of the Services or the systems used to provide them.",
+            "actor": "Customer and End Users",
+            "object": "Services and systems used to provide Services",
+            "trigger": "At all times, except to the extent the restriction is contrary to applicable law."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Output to develop artificial intelligence models that compete with OpenAI’s products and services, except for a Permitted Exception.",
+            "actor": "Customer and End Users",
+            "object": "Output",
+            "trigger": "When using Output to develop an AI model that competes with OpenAI’s products or services, unless a Permitted Exception applies."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not extract data from the Services other than as permitted through the Services.",
+            "actor": "Customer and End Users",
+            "object": "Data from the Services",
+            "trigger": "When extracting data, unless extraction is permitted through the Services."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not buy, sell, or transfer API keys from, to, or with a third party.",
+            "actor": "Customer and End Users",
+            "object": "API keys",
+            "trigger": "At all times."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not interfere with or disrupt the Services, including by circumventing rate limits or restrictions or bypassing protective measures or safety mitigations.",
+            "actor": "Customer and End Users",
+            "object": "Services and their limits, protective measures, and safety mitigations",
+            "trigger": "At all times."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not violate or circumvent Usage Limits or configure the Services to avoid Usage Limits.",
+            "actor": "Customer and End Users",
+            "object": "Services and Usage Limits",
+            "trigger": "At all times."
+          }
+        ]
+      },
+      {
+        "start_line": 25,
+        "end_line": 25,
+        "clause_label": "third_party_service_access_and_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_elects_to_access_third_party_service",
+          "requires": "comply_with_applicable_third_party_service_terms"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 3.4; Third-Party Services may be available through the Services and Customer may elect to use them in its sole discretion. Access or use is governed by the Agreement and relevant Third-Party Service Terms.",
+        "condition_explanation": "customer_elects_to_access_third_party_service means Customer chooses to access or use a Third-Party Service; applicable Third-Party Service Terms are additional terms for that service.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the applicable Third-Party Service Terms when accessing a Third-Party Service.",
+            "actor": "Customer",
+            "object": "Third-Party Service",
+            "trigger": "Upon accessing or using a Third-Party Service."
+          }
+        ]
+      },
+      {
+        "start_line": 28,
+        "end_line": 28,
+        "clause_label": "customer_input_retention_and_output_ownership",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "to_extent_permitted_by_applicable_law",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 4.1; as between Customer and OpenAI, Customer retains ownership rights in Input and owns Output; OpenAI assigns to Customer any OpenAI right, title, and interest in Output. Input and Output are distinct materials.",
+        "condition_explanation": "to_extent_permitted_by_applicable_law qualifies the stated allocation. The clause states ownership and assignment, not an independent license to use or distribute Input or Output.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 29,
+        "end_line": 29,
+        "clause_label": "openai_customer_content_use_limits",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "any": [
+              "necessary_to_provide_customer_services",
+              "necessary_to_comply_with_applicable_law",
+              "necessary_to_enforce_openai_policies",
+              "necessary_to_prevent_abuse",
+              "customer_explicitly_agrees_to_develop_or_improve_services"
+            ]
+          }
+        },
+        "actor_role": "OpenAI",
+        "scope_note": "Section 4.2; applies to OpenAI’s use of Customer Content. Development or improvement use is excluded unless Customer explicitly agrees.",
+        "condition_explanation": "The first four alternatives are stated necessary purposes. The separate development or improvement purpose is permitted only if Customer explicitly agrees. Customer Content comprises Input and Output as defined elsewhere in the Agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use Customer Content except as necessary to provide Customer with Services, comply with applicable law, enforce OpenAI Policies, or prevent abuse; do not use it to develop or improve Services unless Customer explicitly agrees.",
+            "actor": "OpenAI",
+            "object": "Customer Content",
+            "trigger": "Whenever OpenAI uses Customer Content."
+          }
+        ]
+      },
+      {
+        "start_line": 30,
+        "end_line": 30,
+        "clause_label": "customer_input_rights_and_output_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "input_rights_licenses_and_permissions_available_and_customer_evaluates_output"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 4.3; Customer is responsible for Input, must have rights, licenses, and permissions to provide it, and is solely responsible for use and evaluation of Outputs.",
+        "condition_explanation": "The clause expressly imposes an Input rights representation and warranty and assigns responsibility for Output use and evaluation. It does not itself grant a right to use Output.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Have all rights, licenses, and permissions required to provide Input to the Services.",
+            "actor": "Customer",
+            "object": "Input",
+            "trigger": "When providing Input to the Services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Be solely responsible for all use of Outputs and for evaluating their accuracy and appropriateness for Customer’s use case.",
+            "actor": "Customer",
+            "object": "Output",
+            "trigger": "Whenever Customer uses Output or selects Output for a use case."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The Permitted Exception referenced in Section 3.3(e), the Order Form, OpenAI Policies, Third-Party Service Terms, and other incorporated documents are not supplied in full; their content cannot be inferred.",
+      "Sections 4.1–4.3 establish ownership, assignment, and responsibilities or limits on OpenAI’s use; they do not state a general license to exploit Input or Output. Section 4.4’s similarity statement creates no operative behavioral duty.",
+      "P0001 includes party and defined-term context plus a representation concerning authority to enter the Agreement; the authority representation is not an activity constraint and is not modeled as a license rule."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "NONOPERATIVE",
+        "clause_labels": [
+          "agreement_acceptance_by_use"
+        ],
+        "reason": "The paragraph identifies the parties and includes a representation of legal authority, which is not a behavioral activity constraint; the acceptance-by-use operative condition is extracted, but party and defined-term material is contextual."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "MODELED",
+        "clause_labels": [
+          "openai_deliver_services_during_term",
+          "customer_nonrenewal_or_scope_reduction_notice",
+          "authorized_purchaser_additional_service_purchases",
+          "affiliate_use_under_customer_account",
+          "affiliate_separate_purchase_order_form",
+          "usage_based_service_fees"
+        ],
+        "reason": "Modeled the service delivery obligation, renewal notice timing, configured additional purchases and their charge, Affiliate use and responsibility, separate Affiliate purchase path, and usage-based Fees."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_access_and_use_services",
+          "integrate_services_and_make_applications_available",
+          "customer_termination_for_material_functionality_reduction"
+        ],
+        "reason": "Modeled the access and API-integration permissions subject to the Agreement and the functionality-reduction termination option, including its timing and beta/evaluation exception."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "MODELED",
+        "clause_labels": [
+          "account_information_credentials_resale_and_incident_notice",
+          "end_user_single_user_accounts_and_consents",
+          "customer_and_end_user_service_restrictions",
+          "third_party_service_access_and_terms"
+        ],
+        "reason": "Modeled Account information, credential and access constraints, unauthorized-access notice, End User account and consent duties, each listed restriction and its stated exception, and optional Third-Party Service access subject to its terms."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_input_retention_and_output_ownership",
+          "openai_customer_content_use_limits",
+          "customer_input_rights_and_output_responsibility"
+        ],
+        "reason": "Modeled the Input and Output ownership allocation and assignment, OpenAI’s limited Customer Content use and consent exception, and Customer’s Input-rights and Output-responsibility duties; the similarity statement is nonoperative."
+      }
+    ]
+  },
+  "attempt": 1
+}

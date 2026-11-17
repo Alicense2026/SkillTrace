@@ -1,0 +1,78 @@
+{
+  "request_sha256": "f47e0a789e18483b39d95dbe0ccf0bf17e2c113108ba9e8512d8791bb8ca11f2",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 44,
+        "end_line": 44,
+        "clause_label": "gap/voice_replica_original_voice_handling",
+        "activities": [
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "voice_replication_task_completed",
+          "requires": true
+        },
+        "actor_role": "provider",
+        "scope_note": "For model-square voice-replication experience, the provider states that after the replication task is completed it deletes the uploaded original voice and does not store or use that original voice.",
+        "condition_explanation": "voice_replication_task_completed means the voice-replication task has finished. The duty concerns the user's original uploaded voice, not the generated replica.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Delete the user's original voice recording after the voice-replication task is completed.",
+            "actor": "Alibaba Cloud Bailian",
+            "object": "Original voice recording uploaded for voice replication",
+            "trigger": "After the voice-replication task is completed."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not store or use the user's original voice recording.",
+            "actor": "Alibaba Cloud Bailian",
+            "object": "Original voice recording uploaded for voice replication",
+            "trigger": "For the original voice recording uploaded for voice replication."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "P0014 refers to the customer-service-benefits standard on an external webpage that is not supplied; its specific requirements are excluded, and no additional standard-specific duties are inferred.",
+      "P0022 refers to third-party agreements that are not supplied. No contents of those agreements are inferred; the paragraph's dispute-responsibility and support statements do not impose an activity constraint on the user."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0014",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "support_standard_external"
+        ],
+        "reason": "The provider's local commitment to follow the published customer-service-benefits standard is covered by the existing anchor, but the referenced external standard is unavailable, so its specific operative requirements cannot be extracted."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "MODELED",
+        "clause_labels": [
+          "experience_ai_label",
+          "experience_input_content_lawfulness",
+          "experience_content_collection_disclosure",
+          "voice_replica_upload_restrictions",
+          "voice_replica_experience_only",
+          "gap/voice_replica_original_voice_handling",
+          "experience_output_restricted_use"
+        ],
+        "reason": "Existing anchors cover the label, user-content, voice-upload, experience-only, and output-use provisions; the added clause models the provider's original-voice deletion and non-storage/non-use commitments."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "The paragraph allocates responsibility for third-party disputes and support and disclaims provider responsibility; it does not state a user activity constraint or an express user action duty."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 1
+}

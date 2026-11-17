@@ -1,0 +1,51 @@
+{
+  "request_sha256": "8ef3d5794c16638a7c756329dfe3ea815f79b5b4926ad333bb2c4756a64fb602",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 5,
+        "end_line": 8,
+        "clause_label": "Proprietary License — Software restrictions",
+        "activities": [
+          "Copy",
+          "Modify",
+          "Distribute",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "express_written_permission_absent"
+        },
+        "actor_role": "third party or other user of the Software",
+        "scope_note": "The Software and associated documentation, in source or binary form, are proprietary to the GateForge Project. Copying, modifying, distributing, or using them is prohibited without the copyright holder’s express written permission; the text does not state the terms or scope of any permission that may be granted.",
+        "condition_explanation": "The prohibition applies when express written permission from the copyright holder is absent."
+      },
+      {
+        "start_line": 10,
+        "end_line": 14,
+        "clause_label": "Proprietary License — protocol and adapter interoperability exception",
+        "activities": [
+          "Use",
+          "CreateDerivative"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "interop_purpose_and_no_repository_contents_redistributed"
+        },
+        "actor_role": "third parties",
+        "scope_note": "Third parties may reference and implement the protocol specification under protocol/ and reference adapter patterns under adapters/_scaffold/ for interoperability with GateForge AI-AO deployments, provided they do not redistribute repository contents. This limited permission does not grant permission to copy, modify, use, or distribute the rest of the Software.",
+        "condition_explanation": "Both conditions apply: the referencing or implementation must be for interoperability with GateForge AI-AO deployments, and the implementation must not redistribute the contents of the repository."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text is a proprietary license notice, not a full license grant. It does not specify terms for express written permissions or address fees, sublicensing, charging, hosting, network access, training, or rights in outputs; no permissions on those subjects are inferred.",
+      "The interoperability exception is limited to the identified protocol specification and reference adapter patterns. The text does not define the full boundaries of those materials or clarify the scope of an implementation beyond the stated purpose and non-redistribution condition."
+    ]
+  }
+}

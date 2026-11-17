@@ -1,0 +1,182 @@
+{
+  "case_id": "chain-21627-e17947488be3",
+  "source_csv_line": 21628,
+  "row": {
+    "github_repo": "fodda-mcp",
+    "github_url": "https://github.com/piers-fawkes/fodda-mcp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gemini-2.0-flash",
+    "artifact_url": "https://ai.google.dev/gemini-api/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/editorialFill.ts:28 ｜ 调用原文: export async function callGemini(prompt: string, modelName: string = 'gemini-2.0-flash', maxTokens: number = 2048): Promise<GeminiResponse> {（引用处 第28行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: src/editorialFill.ts 的 callGemini 默认模型，通过 @google/genai 调用",
+    "batch": "14201-16927",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "piers-fawkes/fodda-mcp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "a38ca8666bf8aee0a97bda169270ed0dfc6aa7758baaf713cc90856f4a5f038f",
+    "filename": "_licenseref_full/texts/a38ca8666bf8aee0a97bda169270ed0dfc6aa7758baaf713cc90856f4a5f038f.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:fodda-mcp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-21627-e17947488be3",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:a51787f7a62ccd5c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": "use_to_develop_models_competing_with_the_services_or_attempt_to_reverse_engineer_extract_or_replicate_a_service_component"
+          },
+          "S": {
+            "artifact": "chain-21627-e17947488be3:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "when": true,
+            "requires": {
+              "all": [
+                "comply_with_license_terms",
+                "comply_with_fodda_terms_of_service",
+                "install_and_run_software",
+                "connect_to_fodda_service",
+                "use_valid_fodda_api_key"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-21627-e17947488be3:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "If using the downstream Software, use it solely to install and run it to connect to the Fodda service with a valid Fodda API key, and comply with the license terms and Fodda Terms of Service.",
+        "source_refs": [
+          "license-text:downstream:cc5c566ede8e01e8"
+        ],
+        "subject": {
+          "artifact": "chain-21627-e17947488be3:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use_downstream_Software",
+        "unresolved_predicates": [
+          "activity:Use_downstream_Software",
+          "valid_fodda_api_key",
+          "compliance_with_license_terms",
+          "compliance_with_fodda_terms_of_service"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "limitations": [
+      "已确认的是下游代码对 Gemini API 的远程调用及其对上游资产的链接；未确认该调用是否构成对下游许可所称 Fodda Software 的使用，故相关义务仅作条件性列示。",
+      "上游摘录禁止将服务用于开发竞争模型及反向工程、提取或复制服务组件；现有事实仅表明普通 API 调用，未表明这些触发行为。结构化抽取标记需首轮复核，且未提供 Fodda Terms of Service 内容，无法据此判断其具体要求。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 18649,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1151,
+    "output_tokens_details": {
+      "reasoning_tokens": 425
+    },
+    "total_tokens": 19800,
+    "attribution": {
+      "items": {
+        "msg_03deac6aced99eb6016af53f0d7ca487d1858a3259657a3d85": {
+          "input_tokens": 16579,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 16579,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03deac6aced99eb6016af53f0d7ca487d1a7ba33f786baec07": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_03deac6aced99eb6016af53f15def087d1a62d55d6905b6c79": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 726,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 726
+            }
+          ]
+        },
+        "rs_03deac6aced99eb6016af53f15c7fc87d1962b0c97d0cd19a1": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 425
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "d23e28db17bce4ae1e8b29eef500201b2e3bf6fabe88e471e19092ee2df8a188",
+  "elapsed_seconds": 28.13
+}

@@ -1,0 +1,590 @@
+{
+  "request_sha256": "a620b1615de4e13a41fc59caba57de6f6fc32e166b59b7c2927c27926f6e7fd3",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 112,
+        "end_line": 112,
+        "clause_label": "term_commencement_and_duration",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 11.1; the Terms commence on the earlier of Customer’s first use of the Mistral AI Products or acceptance, and continue for any applicable Order Form term or until terminated under Section 11.",
+        "condition_explanation": "This sets the Terms’ commencement and duration; it does not state a separate use condition.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 114,
+        "end_line": 114,
+        "clause_label": "customer_termination_without_order_forms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "no_order_forms_in_effect",
+          "requires": "outstanding_payment_obligations_fulfilled"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 11.2; if no Order Forms are in effect, Customer may cease using the Products and terminate the Terms at any time, subject to outstanding payment obligations. Prepaid fees are not refundable.",
+        "condition_explanation": "no_order_forms_in_effect means there are no Order Forms then in effect between Customer and Mistral AI. outstanding_payment_obligations_fulfilled means Customer fulfills payment obligations outstanding when terminating.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Fulfill outstanding payment obligations.",
+            "actor": "Customer",
+            "object": "Fees owed under the Terms",
+            "trigger": "Customer ceases use and terminates under Section 11.2 when no Order Forms are in effect."
+          }
+        ]
+      },
+      {
+        "start_line": 116,
+        "end_line": 116,
+        "clause_label": "mistral_suspension_or_termination_right",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "any": [
+              "customer_breaches_terms_or_policies",
+              "customer_fails_to_pay_fees_when_due",
+              "suspension_or_termination_necessary_to_comply_with_applicable_law",
+              "mistral_business_judgment_serious_risk_of_harm"
+            ]
+          },
+          "requires": true
+        },
+        "actor_role": "Mistral AI",
+        "scope_note": "Section 11.3; Mistral AI reserves the right to immediately suspend or terminate Customer’s account or access to all or part of the Products, including access by any End User, on any listed ground. Customer may appeal suspension or termination concerning a Customer Account or End User Account by contacting support@mistral.ai.",
+        "condition_explanation": "The grounds are alternatives: Customer breaches the Terms or Mistral AI policies, including the Usage Policy; fails to pay Fees when due; suspension or termination is necessary to comply with applicable law; or Mistral AI judges that continued use would cause serious risk of harm to Mistral AI or anyone else. This represents Mistral AI’s discretionary right, not a Customer prohibition.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 118,
+        "end_line": 118,
+        "clause_label": "post_termination_payment_and_use_cessation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "terms_terminated_or_expired",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 11.4; Customer’s right to use the Products immediately ceases upon termination or expiration. Customer must pay outstanding Fees, including unpaid invoices and charges incurred up to termination. If Customer desires to export Customer Data or Outputs from its Customer Account, it must export before terminating that account; export may not be possible afterward.",
+        "condition_explanation": "terms_terminated_or_expired means the Terms have terminated or expired. The export duty applies only if Customer desires to export the specified material from its Customer Account.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay all outstanding Fees, including unpaid invoices and other charges incurred up to the termination date.",
+            "actor": "Customer",
+            "object": "Fees owed under the Terms",
+            "trigger": "The Terms are terminated."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Complete the desired export before terminating the Customer Account.",
+            "actor": "Customer",
+            "object": "Customer Data or Outputs in the Customer Account",
+            "trigger": "Customer desires to export that material from its Customer Account."
+          }
+        ]
+      },
+      {
+        "start_line": 120,
+        "end_line": 120,
+        "clause_label": "survival_of_specified_terms",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "terms_expired_or_terminated",
+          "requires": true
+        },
+        "actor_role": "Customer and Mistral AI",
+        "scope_note": "Section 11.5; payment obligations incurred during the term and the listed provisions survive expiration or termination for the duration necessary to achieve each provision’s intended purpose. Listed provisions include Sections 1.1–1.3, 2.2, 2.4, 3.3–3.5, 4, 5, 6, 7.4, 8, 9, 10, 11.4–11.5, 14, and 16.",
+        "condition_explanation": "Survival applies upon expiration or termination for any reason. This clause states survival only; the substantive rules in the referenced provisions are not supplied by this clause.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 123,
+        "end_line": 123,
+        "clause_label": "data_protection_law_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "party_conduct_falls_within_applicable_data_protection_law",
+          "requires": "comply_with_applicable_data_protection_law"
+        },
+        "actor_role": "each Party",
+        "scope_note": "Section 12.1; each Party must comply with Applicable Data Protection Law. The clause incorporates that law’s meanings for Data Controller, Data Processor, Data Subjects, Personal Data, and Process.",
+        "condition_explanation": "Applicable Data Protection Law means applicable national, federal, EU, state, provincial, or other privacy, data security, or data protection law or regulation, including GDPR to the extent applicable. The compliance duty applies when a Party’s conduct falls within that law.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with Applicable Data Protection Law.",
+            "actor": "each Party",
+            "object": "Personal Data and related conduct governed by Applicable Data Protection Law",
+            "trigger": "The Party’s conduct falls within Applicable Data Protection Law."
+          }
+        ]
+      },
+      {
+        "start_line": 125,
+        "end_line": 125,
+        "clause_label": "mistral_controller_processing_reference",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "mistral_collects_or_processes_customers_personal_data_as_controller",
+          "requires": "follow_mistral_privacy_policy"
+        },
+        "actor_role": "Mistral AI",
+        "scope_note": "Section 12.2 states that Mistral AI collects and Processes Customer’s Personal Data as a Data Controller in accordance with Mistral AI’s privacy policy, whose URL may be updated. The policy is not supplied, so its requirements cannot be extracted.",
+        "condition_explanation": "The stated controller collection and processing is tied to compliance with an external privacy policy. The supplied text does not provide that policy’s operative terms; this clause is therefore unresolved as to those terms.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 127,
+        "end_line": 127,
+        "clause_label": "processor_processing_and_dpa_reference",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": "customer_uses_products_on_mistral_infrastructure",
+          "requires": "comply_with_applicable_data_processing_agreement_if_processing_occurs"
+        },
+        "actor_role": "Mistral AI and Customer",
+        "scope_note": "Section 12.3; if Customer uses the Products on Mistral Infrastructure, Mistral AI may process Personal Data on Customer’s behalf as Data Processor, and the referenced Data Processing Agreement applies between the Parties. The DPA is not supplied, so its operative terms cannot be extracted.",
+        "condition_explanation": "The clause makes processor processing possible, not inevitable, when Customer uses the Products on Mistral Infrastructure. It states that the DPA applies but does not disclose its substantive requirements; this clause is unresolved as to those requirements.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 130,
+        "end_line": 130,
+        "clause_label": "mistral_term_update_authority",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": "follow_section_13_update_procedures"
+        },
+        "actor_role": "Mistral AI",
+        "scope_note": "Section 13.1; Mistral AI may update the Terms, applicable Additional Terms, Usage Policy, and other terms posted at the referenced URL, subject to the procedures in Section 13.",
+        "condition_explanation": "The update procedures include notice, effective-date, and objection provisions in Sections 13.2–13.4.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 132,
+        "end_line": 132,
+        "clause_label": "notice_of_material_updates",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "mistral_makes_material_update",
+          "requires": "notify_customer_by_email_or_customer_account_notification"
+        },
+        "actor_role": "Mistral AI",
+        "scope_note": "Section 13.2; Mistral AI must notify Customer of material updates by email or Customer Account notification.",
+        "condition_explanation": "material_update means an update to the Terms that is material. Either stated notice channel suffices.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Notify Customer of a material update by email or Customer Account notification.",
+            "actor": "Mistral AI",
+            "object": "Material update to the Terms",
+            "trigger": "Mistral AI makes a material update."
+          }
+        ]
+      },
+      {
+        "start_line": 134,
+        "end_line": 134,
+        "clause_label": "update_effective_dates",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "terms_update_posted_or_notice_provided",
+          "requires": true
+        },
+        "actor_role": "Mistral AI",
+        "scope_note": "Section 13.3; material updates take effect 30 days after notice. Non-material updates and updates made for compliance with applicable law or to address a material security risk take effect immediately upon posting.",
+        "condition_explanation": "The immediate-effect grounds are alternatives: the update is non-material, is made for legal compliance, or addresses a material security risk. Other material updates take effect 30 days after notice.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 136,
+        "end_line": 136,
+        "clause_label": "customer_response_to_updates",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_disagrees_with_update_before_effective_date",
+          "requires": "stop_using_products_and_terminate_terms_before_update_effective_date"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 13.4; Customer’s sole and exclusive remedy for disagreement is to stop using the Products and terminate before the update takes effect. Termination takes effect on the update’s effective date. Customer’s continued use on or after that date constitutes acceptance of the updated Terms.",
+        "condition_explanation": "The termination path is available only before the update’s effective date. Continued use on or after that date is an alternative that constitutes acceptance; the clause does not require continued use.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 139,
+        "end_line": 139,
+        "clause_label": "notice_form_and_delivery",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "notice_or_communication_required_or_authorized_under_terms",
+          "requires": "written_notice_sent_through_applicable_recipient_channel"
+        },
+        "actor_role": "either Party",
+        "scope_note": "Section 14.1; required or authorized notices and communications must be in writing. Customer notices may be sent to the supplied or Customer Account-associated email or physical address, or by in-product notification. Notices to Mistral AI may be emailed to legal@mistral.ai, with a written copy to its physical address above or as specified in an Order Form, labeled Attention: Legal.",
+        "condition_explanation": "The duty applies only to communications required or authorized under the Terms. Delivery channels depend on the recipient and are stated in the paragraph.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Put any required or authorized notice or communication in writing and send it through an applicable channel specified for its recipient.",
+            "actor": "the Party sending the notice or communication",
+            "object": "Notice or other communication under the Terms",
+            "trigger": "The Terms require or authorize that notice or communication."
+          }
+        ]
+      },
+      {
+        "start_line": 141,
+        "end_line": 141,
+        "clause_label": "customer_assignment_and_mistral_assignment",
+        "activities": [
+          "Sublicense"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "customer_assigns_transfers_rights_or_subcontracts_obligations_to_third_party_without_mistral_prior_written_consent",
+          "requires": true
+        },
+        "actor_role": "Customer",
+        "scope_note": "Section 14.2; Customer may not assign or transfer its rights or subcontract its obligations to a third party without Mistral AI’s prior written consent. Mistral AI may assign, transfer, or subcontract to an affiliate without Customer’s prior written consent.",
+        "condition_explanation": "The Customer restriction does not apply if Mistral AI gives prior written consent. The clause does not authorize Customer to sublicense the Products as such.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not assign or transfer rights under the Terms or subcontract obligations under them to a third party without Mistral AI’s prior written consent.",
+            "actor": "Customer",
+            "object": "Customer’s rights and obligations under the Terms",
+            "trigger": "Customer proposes to assign, transfer, or subcontract to a third party and has not obtained Mistral AI’s prior written consent."
+          }
+        ]
+      },
+      {
+        "start_line": 141,
+        "end_line": 141,
+        "clause_label": "mistral_subcontractor_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "mistral_subcontracts_obligations_to_third_party",
+          "requires": "remain_responsible_for_subcontractor_acts_and_omissions"
+        },
+        "actor_role": "Mistral AI",
+        "scope_note": "Section 14.2; when Mistral AI subcontracts any obligation to a third party, it remains responsible for that third party’s acts and omissions.",
+        "condition_explanation": "The responsibility attaches if Mistral AI subcontracts any of its obligations to a third party.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Remain responsible for the subcontractor’s acts and omissions.",
+            "actor": "Mistral AI",
+            "object": "Acts and omissions of a third-party subcontractor performing Mistral AI obligations",
+            "trigger": "Mistral AI subcontracts any obligation under the Terms to a third party."
+          }
+        ]
+      },
+      {
+        "start_line": 145,
+        "end_line": 145,
+        "clause_label": "use_of_other_party_marks",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "party_uses_other_party_name_logo_or_mark_without_prior_written_preapproval",
+          "requires": true
+        },
+        "actor_role": "either Party",
+        "scope_note": "Section 14.4; neither Party may use the other Party’s name, logos, or marks without that Party’s written pre-approval in each case, including in websites, media, social media, marketing materials, or other public statements. Email suffices for written pre-approval.",
+        "condition_explanation": "The restriction applies to each use and can be avoided by obtaining the other Party’s written pre-approval for that use.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the other Party’s name, logos, or marks without that Party’s prior written pre-approval for the particular use.",
+            "actor": "either Party",
+            "object": "The other Party’s name, logos, or marks",
+            "trigger": "The Party proposes to use the other Party’s name, logos, or marks and has not obtained prior written pre-approval for that use."
+          }
+        ]
+      },
+      {
+        "start_line": 147,
+        "end_line": 147,
+        "clause_label": "no_authority_to_bind_other_party",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "party_binds_or_incurs_obligation_on_behalf_of_other_party_without_prior_written_consent",
+          "requires": true
+        },
+        "actor_role": "either Party",
+        "scope_note": "Section 14.5; neither Party has power to bind the other or incur obligations on the other’s behalf without that Party’s prior written consent. The paragraph also states the Parties’ independent-contractor status.",
+        "condition_explanation": "The restriction is avoided by the other Party’s prior written consent.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not bind the other Party or incur an obligation on its behalf without that Party’s prior written consent.",
+            "actor": "either Party",
+            "object": "The other Party",
+            "trigger": "The Party proposes to bind the other Party or incur an obligation on its behalf without prior written consent."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The Usage Policy, applicable Order Forms, Mistral AI privacy policy, and Data Processing Agreement are not supplied; their substantive terms cannot be inferred. Sections 12.2 and 12.3 therefore remain unresolved as to those external terms.",
+      "Section 11.5 identifies surviving provisions but does not supply their full operative text in this chunk; only the survival rule is modeled.",
+      "Section 13.1’s update authority is subject to the procedures in Sections 13.2–13.4, which are included here.",
+      "Section 14.3 allocates liability for force-majeure-caused failure or delay and does not create an activity constraint. Sections 14.6 and 14.7 concern third-party-beneficiary status and waiver rules, respectively, and do not create activity constraints.",
+      "The available activity/object vocabulary does not specifically describe notice delivery or data processing; the nearest available categories are used without implying an additional substantive grant."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0051",
+        "status": "MODELED",
+        "clause_labels": [
+          "term_commencement_and_duration"
+        ],
+        "reason": "Section 11.1 states when the Terms commence and how long they continue."
+      },
+      {
+        "unit_id": "P0052",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_termination_without_order_forms"
+        ],
+        "reason": "Section 11.2 provides a conditional Customer termination path and preserves outstanding payment obligations."
+      },
+      {
+        "unit_id": "P0053",
+        "status": "MODELED",
+        "clause_labels": [
+          "mistral_suspension_or_termination_right"
+        ],
+        "reason": "Section 11.3 gives Mistral AI suspension and termination grounds and states Customer’s appeal route."
+      },
+      {
+        "unit_id": "P0054",
+        "status": "MODELED",
+        "clause_labels": [
+          "post_termination_payment_and_use_cessation"
+        ],
+        "reason": "Section 11.4 states the post-termination payment duty, cessation of use rights, and conditional pre-termination export duty."
+      },
+      {
+        "unit_id": "P0055",
+        "status": "MODELED",
+        "clause_labels": [
+          "survival_of_specified_terms"
+        ],
+        "reason": "Section 11.5 identifies payment obligations and provisions that survive expiration or termination."
+      },
+      {
+        "unit_id": "P0056",
+        "status": "MODELED",
+        "clause_labels": [
+          "data_protection_law_compliance"
+        ],
+        "reason": "Section 12.1 requires each Party to comply with applicable data protection law and incorporates its definitions."
+      },
+      {
+        "unit_id": "P0057",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "mistral_controller_processing_reference"
+        ],
+        "reason": "The paragraph states that Mistral AI collects and processes Customer Personal Data as controller in accordance with an external privacy policy, which is not supplied; its operative requirements cannot be faithfully extracted."
+      },
+      {
+        "unit_id": "P0058",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "processor_processing_and_dpa_reference"
+        ],
+        "reason": "The paragraph states that processor processing may occur on Mistral Infrastructure and that an external DPA applies, but the DPA’s operative terms are not supplied."
+      },
+      {
+        "unit_id": "P0059",
+        "status": "MODELED",
+        "clause_labels": [
+          "mistral_term_update_authority"
+        ],
+        "reason": "Section 13.1 grants Mistral AI authority to update specified terms subject to the Section 13 procedures."
+      },
+      {
+        "unit_id": "P0060",
+        "status": "MODELED",
+        "clause_labels": [
+          "notice_of_material_updates"
+        ],
+        "reason": "Section 13.2 requires notice to Customer of material updates through either specified channel."
+      },
+      {
+        "unit_id": "P0061",
+        "status": "MODELED",
+        "clause_labels": [
+          "update_effective_dates"
+        ],
+        "reason": "Section 13.3 states the 30-day effective-date rule and the immediate-effect alternatives."
+      },
+      {
+        "unit_id": "P0062",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_response_to_updates"
+        ],
+        "reason": "Section 13.4 states the pre-effective-date termination remedy and acceptance through continued use."
+      },
+      {
+        "unit_id": "P0063",
+        "status": "MODELED",
+        "clause_labels": [
+          "notice_form_and_delivery"
+        ],
+        "reason": "Section 14.1 specifies written form and recipient-specific delivery channels."
+      },
+      {
+        "unit_id": "P0064",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_assignment_and_mistral_assignment",
+          "mistral_subcontractor_responsibility"
+        ],
+        "reason": "Section 14.2 restricts Customer assignment and subcontracting, permits Mistral AI affiliate assignment or subcontracting, and makes Mistral AI responsible for third-party subcontractors’ acts and omissions."
+      },
+      {
+        "unit_id": "P0065",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section 14.3 allocates liability for force-majeure-caused failure or delay; it does not impose an activity constraint."
+      },
+      {
+        "unit_id": "P0066",
+        "status": "MODELED",
+        "clause_labels": [
+          "use_of_other_party_marks"
+        ],
+        "reason": "Section 14.4 restricts use of the other Party’s marks without case-specific prior written approval."
+      },
+      {
+        "unit_id": "P0067",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_authority_to_bind_other_party"
+        ],
+        "reason": "Section 14.5 states independent-contractor status and restricts binding the other Party without prior written consent."
+      },
+      {
+        "unit_id": "P0068",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section 14.6 concerns third-party-beneficiary status and creates no activity constraint."
+      },
+      {
+        "unit_id": "P0069",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section 14.7 concerns waivers and non-waiver; it creates no activity constraint."
+      }
+    ]
+  },
+  "attempt": 2
+}

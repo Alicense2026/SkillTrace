@@ -1,0 +1,101 @@
+{
+  "case_id": "chain-0271-b8a2656c67a2",
+  "input_group_row": 271,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "AGPL-3.0",
+    "资产许可证原文标题/标签": "llama3.1",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0271-b8a2656c67a2",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0271-b8a2656c67a2:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cca90801cea53d0e"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0271-b8a2656c67a2:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：对下游修改版提供对应源码；AGPL第13条的触发条件是修改了程序且该版本支持远程交互。可信事实明确代码修改不适用，因此该触发条件不成立；远程API调用本身不足以触发该义务。来源：AGPL第13条摘录及供应链记录。",
+        "source_refs": [
+          "license-text:downstream:cca90801cea53d0e",
+          "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/270"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "上游Llama条款摘录支持其授予材料使用权，但要求遵守协议；提供的摘录不足以完整映射该协议中与本次API调用相关的全部条件。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用Llama材料时遵守Llama 3.1 Community License Agreement。",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "subject": {
+          "artifact": "chain-0271-b8a2656c67a2:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "协议中与本次使用相关的其他适用条件及其履行情况"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0213-877ead632df0.json",
+  "original_case_id": "chain-0213-877ead632df0",
+  "original_request_sha256": "e52c5e583c92e14f76a033db3425d3fb6c958c1e6d03047f2542d0e56e60859d",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0213-877ead632df0": "chain-0271-b8a2656c67a2",
+    "license-text:upstream:9260a1f6a8642080": "license-text:upstream:9260a1f6a8642080",
+    "license-text:downstream:cca90801cea53d0e": "license-text:downstream:cca90801cea53d0e",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/212": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/270"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "case_id": "chain-0092-7b7f71b2e2cc",
+  "input_group_row": 92,
+  "aggregate_count": 15,
+  "combination": {
+    "GitHub许可证": "CC-BY-4.0",
+    "资产许可证原文标题/标签": "MIT",
+    "调用方式（代码修改）": "远程服务调用（修改不适用）",
+    "数量": "15"
+  },
+  "status": "SUCCESS",
+  "origin": "REUSED",
+  "analysis": {
+    "case_id": "chain-0092-7b7f71b2e2cc",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0092-7b7f71b2e2cc:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:9c5bdb0c62f65653"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_CC_license_conditions",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0092-7b7f71b2e2cc:downstream",
+            "kind": "CombinedProduct"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0092-7b7f71b2e2cc:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "在软件副本或实质部分中包含版权声明和许可声明。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "include_copyright_and_permission_notice"
+        ],
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0092-7b7f71b2e2cc:downstream",
+          "kind": "CombinedProduct"
+        },
+        "requirement": "在行使适用许可权利时遵守 CC-BY-4.0 许可条件。",
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "scope_shared",
+          "comply_with_CC_license_conditions"
+        ],
+        "source_refs": [
+          "license-text:downstream:9c5bdb0c62f65653"
+        ]
+      }
+    ],
+    "limitations": [
+      "可信记录表明发生远程服务调用/链接，且代码修改不适用；这不证明下游产品包含、复制、修改或分发上游软件，也不证明两份许可约束同一对象。",
+      "CC-BY-4.0 摘录提供许可授予条款，但未提供足以细化各项许可条件的摘录；因此仅保留条件性义务，不推断缺失条款。",
+      "两份本地许可证文本的版本和条款映射以所给 source_ref、文件名及哈希为限；相关义务的对象范围及履行情况未提供。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reused_from": "activity-license-compliance/runs/license-combination-asc-2026-11-10-network/results/chain-0080-9df6b606c0dc.json",
+  "original_case_id": "chain-0080-9df6b606c0dc",
+  "original_request_sha256": "c5d21af4a7908d2e0b6fa4c1bb795019ced7b9750830c6bcff24712373023c34",
+  "original_asc_sha256": "e9112293cd1a04504609eb732817020d7d8606735db162a1f01aa7853b596857",
+  "reported_model": "gpt-6-luna",
+  "reference_remapping": {
+    "chain-0080-9df6b606c0dc": "chain-0092-7b7f71b2e2cc",
+    "license-text:upstream:04de8583241775d8": "license-text:upstream:04de8583241775d8",
+    "license-text:downstream:9c5bdb0c62f65653": "license-text:downstream:9c5bdb0c62f65653",
+    "../aggregate_all_10200/许可证组合统计.csv#/rows/79": "activity-license-compliance/aggregate_all_16927/许可证组合统计.csv#/rows/91"
+  }
+}

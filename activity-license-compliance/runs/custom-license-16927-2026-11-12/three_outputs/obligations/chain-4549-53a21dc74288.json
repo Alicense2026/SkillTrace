@@ -1,0 +1,48 @@
+{
+  "case_id": "chain-4549-53a21dc74288",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-4549-53a21dc74288:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "For use under the Community License, revenue or equivalent funding must remain below USD 1,000,000 throughout use, and the software must not be used to create, distribute, or host a substantially similar product or service offered to third parties in competition with the licensor.",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+        "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+      ],
+      "source_refs": [
+        "license-text:downstream:7322fa8043de26f8"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-4549-53a21dc74288:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the licensee's annual gross revenue or funding exceeds USD 1,000,000 and it uses the software, purchase a Commercial License from the licensor.",
+      "trigger": {
+        "all": [
+          "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+          "activity:Use"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+        "activity:Use",
+        "purchase_commercial_license_from_licensor"
+      ],
+      "source_refs": [
+        "license-text:downstream:7322fa8043de26f8"
+      ]
+    }
+  ]
+}

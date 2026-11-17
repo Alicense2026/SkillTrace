@@ -1,0 +1,42 @@
+{
+  "case_id": "chain-0135-58f63e634c90",
+  "output": [
+    {
+      "activity": "Charge",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "向OpenAI或适用经销商支付Order Form规定的适用费用，并遵守其中的付款条款。",
+      "source_refs": [
+        "license-text:upstream:c9e0443a56323634"
+      ],
+      "subject": {
+        "artifact": "chain-0135-58f63e634c90:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "applicable_fees_due",
+      "unresolved_predicates": [
+        "applicable_fees_due",
+        "payment_fulfillment"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用该BSD许可对象时，保留适用通知。",
+      "source_refs": [
+        "license-text:downstream:6e86e248b5add4d1"
+      ],
+      "subject": {
+        "artifact": "chain-0135-58f63e634c90:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "retain_applicable_notices"
+      ]
+    }
+  ],
+  "aggregate_count": 6
+}

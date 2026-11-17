@@ -1,0 +1,47 @@
+{
+  "case_id": "chain-16570-af4ad8eaca7c",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-16570-af4ad8eaca7c:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若对该源代码实施Use，须先取得版权所有者书面同意。",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "prior_written_consent_from_copyright_holder"
+      ],
+      "source_refs": [
+        "license-text:downstream:1d939a0b2a1e77cb"
+      ]
+    },
+    {
+      "activity": "ProvideSource",
+      "subject": {
+        "artifact": "chain-16570-af4ad8eaca7c:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "requirement": "若上游程序已被修改且其版本支持网络交互，应显著向所有经网络远程交互的用户提供免费获取该版本对应源码的机会。",
+      "trigger": {
+        "all": [
+          "modified_covered_program",
+          "network_interaction"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "modified_covered_program",
+        "network_interaction",
+        "network_source_offer_available"
+      ],
+      "source_refs": [
+        "license-text:upstream:362dfa7f24c3c3b7"
+      ]
+    }
+  ]
+}

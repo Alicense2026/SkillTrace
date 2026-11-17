@@ -1,0 +1,249 @@
+{
+  "case_id": "chain-13311-c7febe7745f4",
+  "source_csv_line": 13312,
+  "row": {
+    "github_repo": "jarvis-voice",
+    "github_url": "https://github.com/bigsk1/jarvis-voice",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "ollama/ollama",
+    "artifact_url": "https://github.com/ollama/ollama",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: api/routes/query.py:33 ｜ 调用原文: - `local`: Uses Ollama - private, offline capable ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 本地 LLM 运行时，LLM_PROVIDER 默认 ollama 并使用 OLLAMA_MODEL",
+    "batch": "6501-7000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "bigsk1/jarvis-voice",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8",
+    "filename": "_licenseref_full/texts/7f12b0e7342652a64a1b5f1e440fe7ddcf63b9de2b10a7291a6bd8eefeb111d8.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:jarvis-voice-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-13311-c7febe7745f4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8affa9a8a6e78b68"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-13311-c7febe7745f4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:915485e9cb318a93"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "any": [
+                "educational_purpose",
+                "noncommercial_purpose"
+              ]
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-13311-c7febe7745f4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:915485e9cb318a93"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": {
+              "all": [
+                "credit_original_author_bigsk1",
+                "link_to_original_repository",
+                "indicate_changes_if_made",
+                "no_suggestion_of_author_endorsement"
+              ]
+            },
+            "when": "use_occurs"
+          },
+          "S": {
+            "artifact": "chain-13311-c7febe7745f4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:915485e9cb318a93"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "commercial_purpose_without_explicit_written_permission_from_copyright_holder",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-13311-c7febe7745f4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 MIT 条款与下游 LicenseRef-Custom 条款分别适用于 Ollama 原件和 jarvis-voice 原件。已知 API 链接/远程调用不证明两许可约束同一对象；对象图中的依赖、修改副本、组合产品及共同范围均未确定，因此未判定许可冲突。",
+      "已知上游 Use 和远程调用；无证据证明复制或分发 Ollama 软件。MIT 通知条款原文针对副本或实质部分，不能据此认定本次 API 调用触发该通知义务。",
+      "下游许可原文已提供，但下游对象的 Use、教育/非商业目的、商业目的及书面授权事实未确定；没有据此认定违规。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 MIT 软件时，应满足 include_copyright_and_permission_notice；但本次远程调用是否涉及受该通知条款约束的副本或实质部分未证实。",
+        "source_refs": [
+          "license-text:upstream:8affa9a8a6e78b68"
+        ],
+        "subject": {
+          "artifact": "chain-13311-c7febe7745f4:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "copy_or_substantial_portion_involved",
+          "include_copyright_and_permission_notice"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用下游软件，应满足 any(educational_purpose, noncommercial_purpose)，并给予 BigSk1 适当署名、链接原仓库、在有修改时说明修改，且不得暗示作者背书；不得在无版权持有人明确书面许可时作商业目的使用。",
+        "source_refs": [
+          "license-text:downstream:915485e9cb318a93"
+        ],
+        "subject": {
+          "artifact": "chain-13311-c7febe7745f4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_occurs",
+        "unresolved_predicates": [
+          "use_occurs",
+          "educational_purpose",
+          "noncommercial_purpose",
+          "commercial_purpose",
+          "explicit_written_permission_from_copyright_holder",
+          "attribution_requirements_satisfied"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 26980,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1810,
+    "output_tokens_details": {
+      "reasoning_tokens": 633
+    },
+    "total_tokens": 28790,
+    "attribution": {
+      "items": {
+        "msg_0640c97870561645016af53d4863f887d19387b2744583c8f6": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0640c97870561645016af53d4863fc87d1b5111da953962ef4": {
+          "input_tokens": 24910,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 24910,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0640c97870561645016af53d548b0487d19c518e8a10b8c634": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1177,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1177
+            }
+          ]
+        },
+        "rs_0640c97870561645016af53d52546887d1a728ae4ef0f52854": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 516
+        },
+        "rs_0640c97870561645016af53d546f5487d18a683e7d02c9bc12": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 117
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "fd01efa3575b36c625189d5c46a8ac24f66f1ce9e67fd7223c5c06d07236f131",
+  "elapsed_seconds": 39.16
+}

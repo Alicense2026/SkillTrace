@@ -1,0 +1,322 @@
+{
+  "request_sha256": "f202cf80f70306d1edb1e0c742169c4a9087200f1356d929d00a78c4892e4336",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 43,
+        "end_line": 47,
+        "clause_label": "4. Free Official-App Evaluation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "good_faith_evaluation",
+          "requires": "use_is_for_evaluation"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permits downloading, installing, and using the Official App as an unregistered evaluation version, including personal use and evaluation against real business workflows to decide whether the app meets the user's needs. No fixed trial period applies. If use becomes routine or ongoing productive work after evaluation, a license must be purchased.",
+        "condition_explanation": "The permission is for good-faith evaluation. The purchase obligation applies when the user keeps using the Official App for routine or ongoing productive work after evaluation."
+      },
+      {
+        "start_line": 47,
+        "end_line": 51,
+        "clause_label": "4. Productive use of Official App",
+        "activities": [
+          "Use",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "routine_or_ongoing_productive_use_after_evaluation",
+          "requires": "payment_due_paid"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The user must purchase a license to use the Official App for routine or ongoing productive work after evaluation, including work for an employer, client, customer, or other paid commercial purpose. Commercial productive use includes creating, converting, preparing, reviewing, or delivering materials in compensated or business-value work. This is an obligation to pay for use, not permission to redistribute or commercialize the Covered Software itself.",
+        "condition_explanation": "The obligation applies when use is routine or ongoing productive work after evaluation; the listed examples clarify that trigger."
+      },
+      {
+        "start_line": 53,
+        "end_line": 53,
+        "clause_label": "4. Limits on evaluation and licensed productive use",
+        "activities": [
+          "Distribute",
+          "SellCopies",
+          "Sublicense",
+          "OfferPaidAccess",
+          "ProvideNetworkService",
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section 4 does not authorize redistribution, resale, sublicensing, public derivative apps, marketplace listings, hosted-service bundling, client redistribution, use as a managed third-party conversion service, or other commercialization of the Covered Software itself. The clause limits what Sections 4's Official-App use permissions authorize; it does not state a rule for unrelated artifacts.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 57,
+        "end_line": 61,
+        "clause_label": "5. Source Visibility And Private Local Evaluation Builds",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "personal_or_internal_evaluation",
+          "requires": "private_local_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Permits inspecting Covered Source, building Covered Software locally, and making private local changes or personal patches for personal or internal evaluation. Organizational internal evaluation is for that organization's own use by its employees or contractors. Private changes and builds may not be distributed, published, sold, sublicensed, rented, leased, hosted, bundled, provided to clients or other third parties, or used to offer a public or third-party service without Written Permission.",
+        "condition_explanation": "The permission is limited to local personal or organizational internal evaluation. The private-use condition excludes making the builds or changes available to others or using them for a public or third-party service."
+      },
+      {
+        "start_line": 61,
+        "end_line": 61,
+        "clause_label": "5. Restrictions on private local evaluation builds",
+        "activities": [
+          "Distribute",
+          "SellCopies",
+          "Sublicense",
+          "ProvideNetworkService",
+          "OfferPaidAccess"
+        ],
+        "objects": [
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "written_permission_for_specific_use"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Private local changes and builds made for personal or internal evaluation may not be distributed, published, sold, sublicensed, rented, leased, hosted, bundled, provided to clients or other third parties, or used to offer a public or third-party service unless Written Permission allows the specific use.",
+        "condition_explanation": "The prohibition applies when the user lacks Written Permission for the specific use; Written Permission is the stated exception."
+      },
+      {
+        "start_line": 63,
+        "end_line": 63,
+        "clause_label": "5. Productive use of self-built or modified copies",
+        "activities": [
+          "Use",
+          "CommercialUse"
+        ],
+        "objects": [
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "productive_use",
+          "requires": {
+            "not": "written_permission_for_specific_use"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "A purchased Official App license does not authorize productive use of any other copy, including a self-built copy made from unmodified source. Productive use of a copy other than the Official App requires Written Permission.",
+        "condition_explanation": "The prohibition applies to productive use of a non-Official-App copy when Written Permission for that use has not been granted."
+      },
+      {
+        "start_line": 69,
+        "end_line": 69,
+        "clause_label": "6. Registered License And Evaluation Reminders",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "registered_license_applied",
+          "requires": "within_licensed_user_or_scope"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Applying a purchased registered license removes evaluation reminders for the licensed user or licensed scope. This clause does not state broader rights to use or redistribute the Covered Software.",
+        "condition_explanation": "The reminder-removal effect applies only after purchase and application of a registered license, and only for its licensed user or scope."
+      },
+      {
+        "start_line": 75,
+        "end_line": 75,
+        "clause_label": "6. Restrictions on altering notices and license controls in copies provided to others",
+        "activities": [
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "copy_is_distributed_or_provided_to_others",
+          "requires": {
+            "not": "written_permission_for_specific_use"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Without Written Permission, a licensee may not remove, bypass, disable, alter, or misrepresent evaluation reminders, payment prompts, license checks, update notices, copyright notices, license notices, or third-party notices in a copy that is distributed or provided to others.",
+        "condition_explanation": "The restriction applies to copies distributed or provided to others when Written Permission for the specific use is absent."
+      },
+      {
+        "start_line": 79,
+        "end_line": 89,
+        "clause_label": "7. What Requires Written Permission",
+        "activities": [
+          "Distribute",
+          "SellCopies",
+          "Sublicense",
+          "OfferPaidAccess",
+          "ProvideNetworkService",
+          "Bundle",
+          "CommercialUse",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "not": "written_permission_for_specific_use"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Written Permission is required before redistributing the Covered Software or a modified version; selling, sublicensing, renting, leasing, publishing, hosting, or repackaging it; publishing or distributing a derivative desktop application; publishing renamed, forked, or unofficial public builds; listing, bundling, or including it in another product, paid product, marketplace product, commercial tool, hosted service, managed service, or software distribution; using it to offer a public or third-party conversion service; transferring a registered license except as purchase terms or separate Written Permission expressly allow; using Branding to suggest endorsement, sponsorship, official status, or source confusion; or claiming a modified, forked, repackaged, or redistributed build is the Official App. This scope is the Covered Software and the specified uses, not MIT Components as such. Section 4 separately addresses evaluation and licensed productive use of the Official App.",
+        "condition_explanation": "The listed uses are prohibited unless Written Permission expressly allows the specific use. Registered-license transfer also has the stated alternative of being expressly allowed by the purchase terms."
+      },
+      {
+        "start_line": 97,
+        "end_line": 101,
+        "clause_label": "8. Branding And Trademark Limits",
+        "activities": [
+          "Use",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "any": [
+              "truthfully_refer_to_project_or_official_app",
+              "written_permission_for_specific_use"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "The license grants no trademark rights. The doc2md name may be used only to truthfully refer to the project or the Official App. Branding may not be used to imply endorsement, sponsorship, affiliation, or official status without Written Permission. Branding may not be removed or altered in a redistributed copy; redistribution itself requires Written Permission.",
+        "condition_explanation": "The limited name-use permission is for truthful reference. Use implying endorsement, sponsorship, affiliation, or official status requires Written Permission. The redistribution restriction independently applies to Branding in redistributed copies."
+      },
+      {
+        "start_line": 107,
+        "end_line": 109,
+        "clause_label": "9. Third-Party Software And MIT Notices",
+        "activities": [
+          "Distribute",
+          "Bundle"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "OBLIGATORY",
+          "when": "distribution_occurs",
+          "requires": "notices_preserved"
+        },
+        "actor_role": "distributor",
+        "scope_note": "MIT Components bundled with the Covered Software remain under MIT and must retain their required notices. Distributions authorized by Written Permission must include required third-party notices and MIT notices where applicable. Official public app releases must bundle or otherwise ship the required notice inventory for the MIT Components and third-party software included in the released artifact.",
+        "condition_explanation": "Notice requirements apply when the relevant components are bundled or a distribution occurs. The notice-inventory requirement specifically applies to Official public app releases; distributions of the Covered Software under Written Permission must include applicable required third-party and MIT notices."
+      },
+      {
+        "start_line": 113,
+        "end_line": 115,
+        "clause_label": "10. Contributions",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute",
+          "Sublicense",
+          "CommercialUse",
+          "Bundle"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "contribution_submitted_to_files_covered_by_this_license",
+          "requires": {
+            "not": "separate_written_agreement_says_otherwise"
+          }
+        },
+        "actor_role": "contributor_to_project; grant_recipient_is_Kjell_Hedström_and_doc2md_project",
+        "scope_note": "Unless a separate written agreement says otherwise, contributions to files covered by this license are submitted under this license and include an irrevocable, worldwide, royalty-free permission for Kjell Hedström and the doc2md project to use, reproduce, modify, distribute, sublicense, commercialize, include in official builds, and relicense those contributions as part of the Covered Software. The project may require a separate contributor agreement or explicit inbound-rights confirmation before accepting contributions and may decline contributions when rights, ownership, or licensing terms are unclear. This grant is to the project, not a general permission for contributors or downstream recipients to exercise those rights.",
+        "condition_explanation": "The grant applies to contributions to covered files unless a separate written agreement says otherwise. Acceptance may also depend on a required contributor agreement or explicit inbound-rights confirmation."
+      },
+      {
+        "start_line": 121,
+        "end_line": 125,
+        "clause_label": "11. Termination",
+        "activities": [
+          "Use",
+          "Copy",
+          "Modify",
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "license_violation_and_rights_terminated",
+          "requires": {
+            "not": "rights_reinstated_in_writing"
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "A license violation automatically terminates the violator's rights under this license. The copyright holder may reinstate those rights in writing. Termination does not terminate rights independently held under the MIT License for MIT Components.",
+        "condition_explanation": "After a violation terminates rights, the license permissions are unavailable unless the copyright holder reinstates them in writing. The clause preserves independent MIT rights for MIT Components."
+      }
+    ],
+    "coverage_notes": [
+      "The license applies only to Covered Software. MIT Components and third-party software remain governed by their own stated license terms; this extraction does not infer their permissions. Earlier releases before 2.2.0 retain prior repo-wide MIT permissions, and the stated boundary applies to releases tagged 2.2.0 and later until a later release changes it as specified in the text (lines 33-39).",
+      "Source visibility, evaluation, and private local modification permissions are limited as stated; they do not grant general redistribution, productive use of self-built copies, or public-service rights. Uses requiring Written Permission are not treated as permitted absent that permission.",
+      "Section 9 refers to required third-party and MIT notices but does not supply the underlying notice inventory or third-party license terms. Purchase information and other referenced materials are external and not reconstructed here.",
+      "The text contains warranty, liability, governing-law, and entire-agreement terms that do not establish activities within the requested ASC categories and are omitted."
+    ]
+  }
+}

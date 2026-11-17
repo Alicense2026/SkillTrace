@@ -1,0 +1,148 @@
+{
+  "request_sha256": "983ccab5f576feae9a58f00552a8207c91a56a9b07da96dbf3009cfe5928287a",
+  "data": {
+    "decisions": [
+      {
+        "candidate_id": "C001",
+        "decision": "CORRECT_AND_ADD",
+        "covered_rule_ids": [],
+        "reason": "Section 6.2 (line 381) bars use of the listed DeepSeek-related identifiers except as permitted by relevant law and licensed by DeepSeek. The candidate captures that conjunctive exception, while current rule seg-72672be98950c123a94f0f58 treats permission by relevant law OR DeepSeek licensing as sufficient, so it does not preserve the same exception.",
+        "corrected_clause": {
+          "start_line": 381,
+          "end_line": 381,
+          "clause_label": "brand_identifier_restriction",
+          "activities": [
+            "Use"
+          ],
+          "objects": [
+            "OriginalArtifact"
+          ],
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "when": true,
+            "requires": "use_is_permitted_by_relevant_law_and_licensed_by_DeepSeek"
+          },
+          "actor_role": "user_or_end_user",
+          "scope_note": "Section 6.2 restricts use of DeepSeek-related trademarks and other prominent brand identifiers, alone or in combination; it also bars displaying, using, or applying to register related identifiers and implying a right to deal with them, except as permitted by relevant law and licensed by DeepSeek.",
+          "condition_explanation": "The specified brand-identifier use is prohibited unless it is both permitted by relevant law and licensed by DeepSeek.",
+          "obligation_items": [
+            {
+              "duty_type": "REFRAIN",
+              "content": "Do not use DeepSeek-related trademarks, service marks, trade names, domain names, website names, logos, URLs, or other prominent brand features, including displaying or using them, applying to register related identifiers, or indicating a right to display, use, or otherwise deal with them, unless the use is permitted by relevant law and licensed by DeepSeek.",
+              "actor": "user or end user",
+              "object": "DeepSeek-related brand identifiers",
+              "trigger": "Whenever using or seeking to display, use, register, or imply a right to deal with a covered identifier, unless the use is permitted by relevant law and licensed by DeepSeek."
+            }
+          ]
+        }
+      },
+      {
+        "candidate_id": "C002",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-f63aa00f992c2e2b39256002"
+        ],
+        "reason": "The existing rule covers DeepSeek’s permission to use feedback provided to it without restriction or compensation. That is the same actor, object, action, and trigger as the candidate (source line 386).",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C003",
+        "decision": "EXCLUDE",
+        "covered_rule_ids": [
+          "seg-00d3eadc32aa3ea9680cabf9",
+          "gap-390968ec16869f70a3a4180e"
+        ],
+        "reason": "Section 8.2 (line 395) describes DeepSeek’s remedial measures and user liability/compensation duties, not a permission or prohibition on a listed activity involving an allowed object. The candidate itself marks these matters unrepresentable but encodes them as Use of OriginalArtifact with an UNSPECIFIED condition; do not retain that placeholder representation. The existing rules separately capture provider remedial measures and expressible liability/compensation duties.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C004",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-a17bb81af08eeeca8de503d4"
+        ],
+        "reason": "The current rule covers restricted-country and prohibited restricted-party service use under the applicable export-control and sanctions laws. This matches the candidate’s actor, object, conduct, and legal limitation (source line 426).",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C005",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-a17bb81af08eeeca8de503d4"
+        ],
+        "reason": "The current rule expressly includes prohibited export, re-export, or transfer of the Services to or within comprehensively sanctioned countries or to restricted parties, subject to applicable law. It therefore covers the candidate’s specified conduct and conditions (source line 426).",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C006",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "gap-c6912567fdb9afe27373e7d0",
+          "seg-49fa5e2f42fa806d5dcc435e"
+        ],
+        "reason": "The current rules capture the express duty to comply with all applicable Export Control and Sanctions Laws concerning the user’s and end users’ access to and use of the Services, including the compliance obligation stated at line 426. They cover the candidate’s compliance duty without turning it into a general permission.",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C007",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-5fe6374ff98d4ec3fc02783b"
+        ],
+        "reason": "The current rule captures the prohibition on including in Inputs material or information requiring a license for release or export, applying to the user and end users (source line 426).",
+        "corrected_clause": null
+      },
+      {
+        "candidate_id": "C008",
+        "decision": "COVERED",
+        "covered_rule_ids": [
+          "seg-94be8b0e938e056c2db9059b"
+        ],
+        "reason": "Section 11.1 (line 440) directs the user to stop using the Service immediately if the user does not accept announced modified Terms. The current rule captures that same actor, action, condition, and object; the candidate’s additional condition that the user accepts revised Terms is not needed for this stop-use clause.",
+        "corrected_clause": null
+      }
+    ]
+  },
+  "additions": [
+    {
+      "rule_id": "gap-d12fa69e7adcf28fa7286aa8",
+      "license_id": "DeepSeek.txt",
+      "source_aliases": [
+        "DeepSeek.txt"
+      ],
+      "source_sha256": "bade980b28943b2d1af232122f1c3928b9117eb671574cb5c59f4b4d66fba8c0",
+      "ASC": {
+        "A": "Use",
+        "S": {
+          "artifact": "$LICENSED_MATERIAL",
+          "kind": "OriginalArtifact"
+        },
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "use_is_permitted_by_relevant_law_and_licensed_by_DeepSeek"
+        }
+      },
+      "source_lines": [
+        381,
+        381
+      ],
+      "source_excerpt": "6.2 Without our permission, you or your end users shall not use any trademarks, service marks, trade names, domain names, website names, company logos (LOGOs), URLs, or other prominent brand features related to the Services, including but not limited to \"DeepSeek,\" etc., in any way, either singly or in combination. You are not allowed to display, use, or apply for registration of trademarks, domain names, etc., related to the aforementioned terms in any way, and you shall not perform acts that expressly or implicitly indicate the right to display, use, or otherwise deal with these identifiers to others except as permitted by the relevant law and licensed by DeepSeek.",
+      "clause_label": "historical/bade980b28943b2d-006/C001/brand_identifier_restriction",
+      "actor_role": "user_or_end_user",
+      "scope_note": "Section 6.2 restricts use of DeepSeek-related trademarks and other prominent brand identifiers, alone or in combination; it also bars displaying, using, or applying to register related identifiers and implying a right to deal with them, except as permitted by relevant law and licensed by DeepSeek.",
+      "condition_explanation": "The specified brand-identifier use is prohibited unless it is both permitted by relevant law and licensed by DeepSeek.",
+      "obligation_items": [
+        {
+          "duty_type": "REFRAIN",
+          "content": "Do not use DeepSeek-related trademarks, service marks, trade names, domain names, website names, logos, URLs, or other prominent brand features, including displaying or using them, applying to register related identifiers, or indicating a right to display, use, or otherwise deal with them, unless the use is permitted by relevant law and licensed by DeepSeek.",
+          "actor": "user or end user",
+          "object": "DeepSeek-related brand identifiers",
+          "trigger": "Whenever using or seeking to display, use, register, or imply a right to deal with a covered identifier, unless the use is permitted by relevant law and licensed by DeepSeek."
+        }
+      ],
+      "supporting_source_ranges": [],
+      "repair_chunk": "bade980b28943b2d-006"
+    }
+  ]
+}

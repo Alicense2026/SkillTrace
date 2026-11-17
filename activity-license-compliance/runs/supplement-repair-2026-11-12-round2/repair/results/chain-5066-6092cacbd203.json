@@ -1,0 +1,222 @@
+{
+  "case_id": "chain-5066-6092cacbd203",
+  "source_csv_line": 5067,
+  "row": {
+    "github_repo": "databricks-agent-skills",
+    "github_url": "https://github.com/databricks/databricks-agent-skills",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "santoshkanthety/databricks-connect",
+    "artifact_url": "https://github.com/santoshkanthety/databricks-agent/tree/main/skills/databricks-connect",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: plugins/databricks/antigravity/skills/databricks-synthetic-data-gen/scripts/generate_synthetic_data.py:10 ｜ 调用原文: - Install dependencies locally: uv pip install faker pandas numpy holidays databricks-connect ｜ 证据等级: 待复核（中） ｜ 解析: skillsmp → skillsmp ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: generate_synthetic_data.py 导入 databricks.connect.DatabricksSession 建立 Spark 会话",
+    "batch": "2001-2500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "databricks/databricks-agent-skills",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "df8afbfd34830a45f85dff044550a913a3355be1c61ab756417e7670cb48fa1c",
+    "filename": "_licenseref_full/texts/df8afbfd34830a45f85dff044550a913a3355be1c61ab756417e7670cb48fa1c.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:databricks-agent-skills-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "elapsed_seconds": 32.85,
+  "cohort": "VALIDATION_REPAIR",
+  "original_run": "runs/custom-license-16927-2026-11-12",
+  "relationship_weight": 1,
+  "original_error": "Invalid obligation values",
+  "analysis": {
+    "case_id": "chain-5066-6092cacbd203",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:bd491a3979a29a18"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice_in_all_copies_or_substantial_portions",
+            "when": "use_of_upstream_OriginalArtifact"
+          },
+          "S": {
+            "artifact": "chain-5066-6092cacbd203:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0517b4b927c2097c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "use_in_connection_with_Databricks_Services_pursuant_to_Agreement",
+                "comply_with_applicable_Databricks_Service_restrictions",
+                "use_in_accordance_with_applicable_documentation"
+              ]
+            },
+            "when": "use_of_downstream_OriginalArtifact"
+          },
+          "S": {
+            "artifact": "chain-5066-6092cacbd203:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0517b4b927c2097c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "use_not_in_connection_with_Databricks_Services_pursuant_to_Agreement",
+            "when": "use_of_downstream_OriginalArtifact"
+          },
+          "S": {
+            "artifact": "chain-5066-6092cacbd203:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_license_findings": [],
+    "license_behavior_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-5066-6092cacbd203:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Include the copyright notice and permission notice in all copies or substantial portions of the Software.",
+        "trigger": "all",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "whether_copies_or_substantial_portions_are_made"
+        ],
+        "source_refs": [
+          "license-text:upstream:bd491a3979a29a18"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-5066-6092cacbd203:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "Use the Licensed Materials only in connection with Databricks Services pursuant to the Agreement, comply with applicable Databricks Service restrictions, and use them in accordance with applicable documentation.",
+        "trigger": "use_of_downstream_OriginalArtifact",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "downstream_OriginalArtifact_use",
+          "Agreement_context",
+          "applicable_service_restrictions",
+          "applicable_documentation_compliance",
+          "scope_shared"
+        ],
+        "source_refs": [
+          "license-text:downstream:0517b4b927c2097c"
+        ]
+      }
+    ],
+    "review_items": [],
+    "limitations": [
+      "记录确认对 Databricks 服务的远程调用及 API/代码链接，但不能据此认定下游 LicenseRef-Custom 的 Licensed Materials 与上游 MIT 软件是共同受约束对象，也不能认定源码或权重已转移。",
+      "LicenseRef-Custom 的使用条款限于依 Agreement 使用 Databricks Services 的情境；现有事实未说明 Agreement、适用服务限制或文档合规情况，因此保留条件义务，不判定违反。",
+      "MIT 原文要求在软件副本或实质部分中包含版权及许可通知；未证实发生复制，故履行状态未知，不据此推断发生复制或分发。"
+    ]
+  },
+  "usage": {
+    "input_tokens": 27520,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1250,
+    "output_tokens_details": {
+      "reasoning_tokens": 219
+    },
+    "total_tokens": 28770,
+    "attribution": {
+      "items": {
+        "msg_039738076893a043016af5840a663487d08462972f8cef3c0f": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_039738076893a043016af5840a663487d0a1598af5eee5c14b": {
+          "input_tokens": 23759,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 23759,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_039738076893a043016af5840f406c87d09213b45ea45d0166": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1031,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1031
+            }
+          ]
+        },
+        "rs_039738076893a043016af5840f294c87d085f49253e60393c5": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 219
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 3721,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": []
+}

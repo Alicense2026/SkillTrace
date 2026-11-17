@@ -1,0 +1,139 @@
+{
+  "case_id": "chain-9824-ff655e61935b",
+  "source_csv_line": 9825,
+  "row": {
+    "github_repo": "pdftriage",
+    "github_url": "https://github.com/adobe-research/pdftriage",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "langchain-ai/langchain",
+    "artifact_url": "https://github.com/langchain-ai/langchain",
+    "artifact_license": "MIT",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: pdftriage/test.py:3 ｜ 调用原文: from langchain.chains.openai_functions import create_openai_fn_chain, create_structured_output_chain ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: pdftriage/test.py 导入 langchain 的 ChatOpenAI、prompt 和 chain 等组件。",
+    "batch": "4501-5000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "cohort": "SUPPLEMENT",
+  "relationship_weight": 1,
+  "custom_mapping": {
+    "repository": "adobe-research/pdftriage",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "910c3b38609dbb1d1344d720873c77225f4b46073910113ed1d890328d5454fe",
+    "filename": "_supplement_round2/910c3b38609dbb1d1344d720873c77225f4b46073910113ed1d890328d5454fe.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "User-supplied workbook sheet 许可证全文 row 6; 获取成功(mirror)",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:320c454008dccb5d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-9824-ff655e61935b:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "事实确认的是对上游 MIT 资产的远程 API 调用/使用；未确认下游包含、复制、修改或分发该资产。对象图中的链接与远程调用不足以证明双方许可证对同一对象适用，scope_shared 未知。",
+      "下游 LicenseRef-Custom 的已提供条款约束其 Licensed Materials；当前事实未表明这些材料被用于本次调用。未据此推断对上游 MIT 资产的限制或许可冲突。",
+      "MIT 许可授予摘录受后续条件约束，但具体通知条款摘录针对副本或软件实质部分；当前记录未确认复制。首轮结构化映射将通知条件关联到 Use，不能据此确定仅远程调用即触发该通知义务。"
+    ],
+    "obligations": [],
+    "overall_status": "NO_CONFLICT_IN_CHECKED_SCOPE",
+    "review_items": [],
+    "case_id": "chain-9824-ff655e61935b"
+  },
+  "usage": {
+    "input_tokens": 22966,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 744,
+    "output_tokens_details": {
+      "reasoning_tokens": 350
+    },
+    "total_tokens": 23710,
+    "attribution": {
+      "items": {
+        "msg_0df95dd23f3e8a3a016af58662359087d085a1690323ee3c6b": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0df95dd23f3e8a3a016af58662359087d0abe76d2c7ea7a72c": {
+          "input_tokens": 20896,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 20896,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0df95dd23f3e8a3a016af5866bceb887d0875b8539481e34ee": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 394,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 394
+            }
+          ]
+        },
+        "rs_0df95dd23f3e8a3a016af5866bb7bc87d085a892bc7b6ecb17": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 350
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "attempts": 1,
+  "attempt_history": [],
+  "elapsed_seconds": 27.87
+}

@@ -1,0 +1,276 @@
+{
+  "request_sha256": "2e63decb48a64669d382529f3fd97a3e70455ab0f56e1e74bf1bb0015134d1c1",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 6,
+        "end_line": 6,
+        "clause_label": "commercial_use_subject_to_conditions",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "branding_and_copyright_information_not_removed_or_modified_unless_authorized",
+              "certificate_verification_logic_processes_and_related_pages_preserved",
+              "complete_certificate_verification_system_maintained_regardless_of_usage_purpose",
+              {
+                "any": [
+                  "organization_has_fewer_than_50_employees_and_annual_revenue_does_not_exceed_usd_1000000",
+                  "commercial_license_obtained_from_infinite_wisdom_software"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Yao Engine commercial use under the additional terms. The text says commercial use is allowed but that a commercial license is required for organizations meeting the stated employee or revenue threshold. The relationship of the branding and certificate-system requirements to commercial use and the license trigger is not fully explicit.",
+        "condition_explanation": "The branding predicate means the specified Yao Engine, Yao Agents, Tai, and Tai Link console/application logo and copyright information remain unchanged unless an authorization certificate is issued through Yao Developer Certificate. The employee and revenue predicates reproduce the stated thresholds. The text does not specify how the commercial-license requirement applies to uses by organizations that meet neither threshold.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not remove or modify the specified logo or copyright information unless authorized by a certificate issued through Yao Developer Certificate.",
+            "actor": "licensee",
+            "object": "Yao Engine / Yao Agents / Tai / Tai Link console or application logo and copyright information",
+            "trigger": "Whenever the licensee commercially uses Yao Engine; exception: an authorization certificate has been issued through Yao Developer Certificate."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Preserve the Yao certificate verification logic, processes, and related pages marked in code comments, and maintain the complete Yao certificate verification system.",
+            "actor": "licensee",
+            "object": "Yao certificate verification logic, processes, marked pages, and complete certificate verification system",
+            "trigger": "Regardless of usage purpose."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Obtain a commercial license from Infinite Wisdom Software.",
+            "actor": "organization using Yao Engine",
+            "object": "Commercial use of Yao Engine",
+            "trigger": "The organization has 50 or more employees, or its annual revenue exceeds USD 1,000,000."
+          }
+        ]
+      },
+      {
+        "start_line": 11,
+        "end_line": 11,
+        "clause_label": "authorized_branding_change",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "authorization_certificate_issued_through_yao_developer_certificate"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The specified Yao Engine, Yao Agents, Tai, and Tai Link console/application logo and copyright information.",
+        "condition_explanation": "Changing the specified logo or copyright information is allowed only with an authorization certificate issued through Yao Developer Certificate.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 10,
+        "end_line": 10,
+        "clause_label": "preserve_branding_and_copyright",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PROHIBITED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "The Yao Engine / Yao Agents / Tai / Tai Link console/application logo and copyright information. Line 11 separately permits changes with the specified authorization certificate.",
+        "condition_explanation": "The text prohibits removing or modifying the identified logo and copyright information; an authorization certificate issued through Yao Developer Certificate is the stated exception.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not remove or modify the identified logo or copyright information.",
+            "actor": "licensee",
+            "object": "Yao Engine / Yao Agents / Tai / Tai Link console or application logo and copyright information",
+            "trigger": "When handling the identified branding or copyright information; exception: authorization through a certificate issued via Yao Developer Certificate."
+          }
+        ]
+      },
+      {
+        "start_line": 15,
+        "end_line": 16,
+        "clause_label": "maintain_certificate_verification_system",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "certificate_verification_logic_processes_and_marked_pages_preserved_and_complete_system_maintained"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Yao certificate verification logic, processes, related pages marked in code comments, and complete certificate verification system.",
+        "condition_explanation": "The marked logic, processes, and pages must be preserved, and the complete verification system must be maintained regardless of usage purpose.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Preserve the Yao certificate verification logic, processes, and related pages marked in code comments, and maintain the complete Yao certificate verification system.",
+            "actor": "licensee",
+            "object": "Yao certificate verification logic, processes, marked pages, and complete certificate verification system",
+            "trigger": "Regardless of usage purpose."
+          }
+        ]
+      },
+      {
+        "start_line": 20,
+        "end_line": 20,
+        "clause_label": "enterprise_commercial_license_requirement",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "organization_has_50_or_more_employees_or_annual_revenue_exceeds_usd_1000000",
+          "requires": "commercial_license_obtained_from_infinite_wisdom_software"
+        },
+        "actor_role": "organization using Yao Engine",
+        "scope_note": "Commercial use of Yao Engine by an organization meeting either stated enterprise threshold.",
+        "condition_explanation": "The license trigger is disjunctive: 50 or more employees, or annual revenue exceeding USD 1,000,000. The text does not say that both thresholds must be met.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Obtain a commercial license from Infinite Wisdom Software.",
+            "actor": "organization using Yao Engine",
+            "object": "Commercial use of Yao Engine",
+            "trigger": "The organization has 50 or more employees, or its annual revenue exceeds USD 1,000,000."
+          }
+        ]
+      },
+      {
+        "start_line": 26,
+        "end_line": 26,
+        "clause_label": "contributor_code_commercial_use",
+        "activities": [
+          "CommercialUse"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": true,
+          "requires": true
+        },
+        "actor_role": "Infinite Wisdom Software",
+        "scope_note": "Contributor Agreement statement that contributed code may be used for commercial purposes, including the company's cloud business operations.",
+        "condition_explanation": "The text states that contributed code may be used commercially, including for Infinite Wisdom Software's cloud business operations.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The document identifies itself as a modified Apache License 2.0 and incorporates other Apache License 2.0 rights and restrictions by reference. The referenced license text is not supplied, so its operative permissions and restrictions cannot be extracted.",
+      "The commercial-use introduction does not clearly establish whether the branding and certificate-system requirements apply to all commercial use or only to uses requiring a commercial license.",
+      "The contributor paragraph also states that Infinite Wisdom Software may adjust the open-source agreement to be more strict or relaxed. The text does not specify the scope or mechanism of that adjustment, so its operative effect remains unresolved."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Document heading only."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Identifies a modified Apache License 2.0 with additional conditions, but the referenced Apache terms are not supplied and cannot be extracted."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "commercial_use_subject_to_conditions"
+        ],
+        "reason": "States that Yao Engine may be used commercially and introduces the commercial-license requirement; the clause records the stated conditions and preserves ambiguity about their scope."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading for the branding requirements in the following paragraphs."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "MODELED",
+        "clause_labels": [
+          "preserve_branding_and_copyright",
+          "authorized_branding_change"
+        ],
+        "reason": "Prohibits removing or modifying the specified branding and copyright information and states the authorization-certificate exception."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading for the certificate-verification requirements in the following paragraphs."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "MODELED",
+        "clause_labels": [
+          "maintain_certificate_verification_system"
+        ],
+        "reason": "Requires preservation of the marked certificate-verification logic, processes, and pages, and maintenance of the complete system regardless of usage purpose."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Subheading for the enterprise-scale requirements in the following paragraph."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "enterprise_commercial_license_requirement"
+        ],
+        "reason": "States the employee and annual-revenue thresholds that trigger the commercial-license requirement."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "contributor_code_commercial_use"
+        ],
+        "reason": "Line 26's commercial-use permission is modeled, but line 25 also states that the contributor should agree that Infinite Wisdom Software can adjust the agreement. The scope and mechanism of that operative term are not sufficiently specified to represent faithfully."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Incorporates other rights and restrictions from Apache License 2.0 by reference; the referenced license text is not supplied."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Copyright notice only; it does not state a behavioral duty."
+      }
+    ]
+  },
+  "attempt": 3
+}

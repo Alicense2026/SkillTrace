@@ -1,0 +1,75 @@
+{
+  "case_id": "chain-0091-52d772bb41f2",
+  "output": [
+    {
+      "activity": "Charge",
+      "subject": {
+        "artifact": "chain-0091-52d772bb41f2:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "按订单表向OpenAI或适用的经销商支付适用费用。",
+      "trigger": true,
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "applicable_fees_due",
+        "payment_made"
+      ],
+      "source_refs": [
+        "license-text:upstream:c9e0443a56323634"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0091-52d772bb41f2:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若使用范围涵盖BUSL Licensed Work，非生产用途须遵守当前适用的许可证要求；生产用途仅在适用的Additional Use Grant明确许可范围内进行。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_shared"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "scope_shared",
+        "production_use",
+        "current_license_requirements",
+        "applicable_additional_use_grant"
+      ],
+      "source_refs": [
+        "license-text:downstream:2e2adf429ae95819"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0091-52d772bb41f2:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "若使用范围涵盖该BUSL版本且Change Date或四周年日期已到，遵守该版本适用的Change License。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "scope_shared",
+          "change_date_or_fourth_anniversary_of_first_public_distribution_of_the_specific_version_has_arrived"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "scope_shared",
+        "applicable_version",
+        "change_date_or_fourth_anniversary_of_first_public_distribution_of_the_specific_version_has_arrived",
+        "change_license_compliance"
+      ],
+      "source_refs": [
+        "license-text:downstream:2e2adf429ae95819"
+      ]
+    }
+  ],
+  "aggregate_count": 15
+}

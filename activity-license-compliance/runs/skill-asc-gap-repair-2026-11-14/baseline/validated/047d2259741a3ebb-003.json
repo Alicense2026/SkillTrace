@@ -1,0 +1,233 @@
+{
+  "request_sha256": "084a7756d68156bb1fcd3075f8cc768c100b9ebcb268879f11a0fa43344a99b0",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 358,
+        "end_line": 361,
+        "clause_label": "license_term_and_automatic_termination",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "within_copyright_and_similar_rights_term",
+              "complies_with_public_license"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "CC BY-NC-SA 4.0 Section 6(a); applies to Licensed Material. Rights terminate automatically upon failure to comply.",
+        "condition_explanation": "within_copyright_and_similar_rights_term means the term of the Copyright and Similar Rights licensed. complies_with_public_license means the licensee has not failed to comply with the Public License.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 358,
+        "end_line": 361,
+        "clause_label": "use_rights_terminate_on_noncompliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": {
+            "not": "complies_with_public_license"
+          },
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "CC BY-NC-SA 4.0 Section 6(a); noncompliance automatically terminates rights under the Public License.",
+        "condition_explanation": "complies_with_public_license is false when the licensee fails to comply with the Public License. This clause captures the resulting loss of licensed permission; it does not determine whether a particular act independently violates copyright law.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 366,
+        "end_line": 368,
+        "clause_label": "automatic_reinstatement_after_timely_cure",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "license_rights_terminated_under_section_6a",
+          "requires": {
+            "all": [
+              "violation_cured",
+              "cure_within_30_days_of_discovery"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "CC BY-NC-SA 4.0 Section 6(b)(1); reinstates rights in the Licensed Material after termination under Section 6(a).",
+        "condition_explanation": "license_rights_terminated_under_section_6a means rights terminated because of noncompliance. cure_within_30_days_of_discovery requires cure no later than 30 days after the licensee discovers the violation.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 370,
+        "end_line": 370,
+        "clause_label": "express_reinstatement_by_licensor",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "license_rights_terminated_under_section_6a",
+          "requires": "licensor_expressly_reinstates_rights"
+        },
+        "actor_role": "licensee",
+        "scope_note": "CC BY-NC-SA 4.0 Section 6(b)(2); rights in the Licensed Material may be reinstated by express reinstatement from the Licensor.",
+        "condition_explanation": "license_rights_terminated_under_section_6a means rights terminated under Section 6(a); licensor_expressly_reinstates_rights means the Licensor expressly reinstates them.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "Only the supplied target chunk was reviewed. The clauses distinguish the license term and automatic termination from the two alternative reinstatement paths. Section 6(b) preserves the Licensor's possible remedies; it does not specify a licensee action to extract here.",
+      "The chunk does not contain the underlying behavioral conditions in Sections 2 and 3; this extraction does not infer them. The final Creative Commons contact/trademark paragraph expressly says it does not form part of the Public License."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0070",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty and liability disclaimer interpretation; excluded from this activity-constraint extraction."
+      },
+      {
+        "unit_id": "P0071",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading identifying the term and termination section."
+      },
+      {
+        "unit_id": "P0072",
+        "status": "MODELED",
+        "clause_labels": [
+          "license_term_and_automatic_termination",
+          "use_rights_terminate_on_noncompliance"
+        ],
+        "reason": "States the license term and automatic termination of rights upon noncompliance."
+      },
+      {
+        "unit_id": "P0073",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Introduces reinstatement following termination; the operative reinstatement alternatives are in the following paragraphs."
+      },
+      {
+        "unit_id": "P0074",
+        "status": "MODELED",
+        "clause_labels": [
+          "automatic_reinstatement_after_timely_cure"
+        ],
+        "reason": "Provides automatic reinstatement if the violation is cured within 30 days of discovery."
+      },
+      {
+        "unit_id": "P0075",
+        "status": "MODELED",
+        "clause_labels": [
+          "express_reinstatement_by_licensor"
+        ],
+        "reason": "Provides the alternative reinstatement path upon express reinstatement by the Licensor."
+      },
+      {
+        "unit_id": "P0076",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Preserves possible remedies for violations without imposing a specific activity constraint or duty in this extraction."
+      },
+      {
+        "unit_id": "P0077",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "States the Licensor's option to separately offer or stop distributing material and clarifies that those actions do not terminate this Public License; it imposes no licensee activity duty."
+      },
+      {
+        "unit_id": "P0078",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Survival-of-sections provision; it does not itself specify a behavioral duty to extract."
+      },
+      {
+        "unit_id": "P0079",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading."
+      },
+      {
+        "unit_id": "P0080",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Addresses whether the Licensor is bound by terms communicated by the licensee, not a licensee activity constraint."
+      },
+      {
+        "unit_id": "P0081",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Characterizes unstated arrangements as separate and independent; no activity duty is specified."
+      },
+      {
+        "unit_id": "P0082",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section heading."
+      },
+      {
+        "unit_id": "P0083",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Interpretive boundary preserving uses that do not require permission under the Public License; it does not grant a new licensed activity or impose a duty."
+      },
+      {
+        "unit_id": "P0084",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Severability and reformation provision, not an activity constraint."
+      },
+      {
+        "unit_id": "P0085",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Specifies conditions for waiver or consent to noncompliance; no independent activity duty is stated."
+      },
+      {
+        "unit_id": "P0086",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Preserves applicable privileges and immunities; no activity constraint is stated."
+      },
+      {
+        "unit_id": "P0087",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Document separator."
+      },
+      {
+        "unit_id": "P0088",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Supplementary Creative Commons statements expressly identified as not forming part of the Public Licenses; no Public License activity rule is extracted."
+      },
+      {
+        "unit_id": "P0089",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Contact information only."
+      }
+    ]
+  },
+  "attempt": 1
+}

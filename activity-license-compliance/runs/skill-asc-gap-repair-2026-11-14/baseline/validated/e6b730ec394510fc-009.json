@@ -1,0 +1,360 @@
+{
+  "request_sha256": "94746af124e2f0f28c7420d7834b52f51c192a3c26e0fcba34e9cedd72d5cb6d",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 305,
+        "end_line": 305,
+        "clause_label": "customer_fee_payment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "applicable_fees_paid_per_order_form_or_current_price_list"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer’s use of the Cohere API SaaS Services; fees may depend on an Order Form, and additional usage fees apply when capacity is exceeded or the Agreement otherwise requires them.",
+        "condition_explanation": "applicable_fees_paid_per_order_form_or_current_price_list means paying the fees specified in an applicable Order Form, or otherwise the then-current price list, including additional usage fees where due.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Cohere the applicable fees, including additional fees for usage exceeding Order Form capacity or otherwise requiring additional payment.",
+            "actor": "Customer",
+            "object": "Cohere API SaaS Services usage",
+            "trigger": "When Customer uses the Cohere API SaaS Services and fees are due under an Order Form, the then-current price list, or applicable additional-usage terms."
+          }
+        ]
+      },
+      {
+        "start_line": 306,
+        "end_line": 306,
+        "clause_label": "cohere_fee_change_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "cohere_changes_fees",
+          "requires": "provide_customer_at_least_7_days_notice"
+        },
+        "actor_role": "Cohere",
+        "scope_note": "Notice duty for changes to the Fees.",
+        "condition_explanation": "cohere_changes_fees applies when Cohere changes Fees; the notice period is at least seven days.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give Customer no less than seven days’ notice of any change to Fees.",
+            "actor": "Cohere",
+            "object": "Fees for Cohere API SaaS Services",
+            "trigger": "Whenever Cohere changes the Fees."
+          }
+        ]
+      },
+      {
+        "start_line": 307,
+        "end_line": 307,
+        "clause_label": "customer_billing_account_information",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_has_billing_account_for_paid_services",
+          "requires": "billing_information_current_complete_and_accurate"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer’s billing account for paid services; includes prompt updating of account information and prompt notification of payment-method cancellation or awareness of a potential security breach.",
+        "condition_explanation": "customer_has_billing_account_for_paid_services applies to the Customer billing account associated with paid services. billing_information_current_complete_and_accurate includes providing and promptly updating complete, accurate, and current information, promptly notifying Cohere if the payment method is cancelled or Customer becomes aware of a potential security breach, and paying through an available method at the timing and frequency specified by the current price list.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide current, complete, and accurate billing-account information and promptly update it when it changes.",
+            "actor": "Customer",
+            "object": "Customer billing account",
+            "trigger": "While Customer has a billing account for paid services."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Promptly notify Cohere if the payment method is cancelled or Customer becomes aware of a potential security breach, such as unauthorized disclosure or use of its Customer User Account.",
+            "actor": "Customer",
+            "object": "Customer billing account and Customer User Account security information",
+            "trigger": "Upon cancellation of Customer’s payment method or Customer becoming aware of a potential security breach."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay Fees by credit card or another method then available on the Website, at the timing and frequency stated in Cohere’s then-current price list.",
+            "actor": "Customer",
+            "object": "Fees for paid services",
+            "trigger": "When Fees are due."
+          }
+        ]
+      },
+      {
+        "start_line": 308,
+        "end_line": 308,
+        "clause_label": "customer_disputed_charge_deadline",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_believes_cohere_charged_incorrectly",
+          "requires": "contact_cohere_within_45_days_to_request_adjustment_or_credit"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Process for requesting an adjustment or credit for an allegedly incorrect charge; undisputed amounts remain payable during a dispute.",
+        "condition_explanation": "customer_believes_cohere_charged_incorrectly triggers the request deadline. The 45-day period runs from the date Cohere charged Customer.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Contact Cohere to request an adjustment or credit no later than 45 days after the charge.",
+            "actor": "Customer",
+            "object": "Disputed Cohere charge",
+            "trigger": "If Customer believes Cohere charged Customer incorrectly."
+          }
+        ]
+      },
+      {
+        "start_line": 308,
+        "end_line": 308,
+        "clause_label": "customer_pay_undisputed_amounts",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "charge_dispute_exists",
+          "requires": "pay_undisputed_amounts_under_payment_terms"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Payment duty during a dispute; only undisputed amounts are subject to this payment duty.",
+        "condition_explanation": "charge_dispute_exists means the Parties are in a dispute over a charge.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay all undisputed amounts in accordance with the Agreement’s payment terms.",
+            "actor": "Customer",
+            "object": "Undisputed Fees",
+            "trigger": "When a charge dispute exists."
+          }
+        ]
+      },
+      {
+        "start_line": 308,
+        "end_line": 308,
+        "clause_label": "parties_good_faith_charge_resolution",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "charge_dispute_exists",
+          "requires": "discuss_disputed_amounts_in_good_faith"
+        },
+        "actor_role": "Each Party",
+        "scope_note": "Good-faith discussion obligation concerning disputed amounts.",
+        "condition_explanation": "charge_dispute_exists means the Parties are in a dispute over a charge.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Discuss the disputed amounts in good faith to resolve the dispute.",
+            "actor": "Each Party",
+            "object": "Disputed charge amounts",
+            "trigger": "When a charge dispute exists."
+          }
+        ]
+      },
+      {
+        "start_line": 309,
+        "end_line": 309,
+        "clause_label": "customer_no_withholding_or_setoff",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "amounts_due_under_agreement",
+          "requires": "withhold_or_set_off_amounts_due"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Prohibition on withholding or setting off amounts due under the Agreement.",
+        "condition_explanation": "amounts_due_under_agreement applies to amounts due under the Agreement.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not withhold or set off amounts due under the Agreement.",
+            "actor": "Customer",
+            "object": "Amounts due under the Agreement",
+            "trigger": "Whenever an amount is due under the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 310,
+        "end_line": 310,
+        "clause_label": "customer_pay_applicable_transaction_taxes",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "taxes_or_similar_charges_apply_to_agreement_transactions",
+          "requires": "pay_applicable_charges_except_cohere_net_income_or_profits_taxes"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Customer is responsible for applicable transaction taxes and listed similar charges, including interest and penalties, but not taxes based on Cohere’s net income or profits.",
+        "condition_explanation": "taxes_or_similar_charges_apply_to_agreement_transactions includes applicable sales, use, gross receipts, value-added, GST, HST, personal-property or other taxes, duties, tariffs, assessments, and export or import fees. The exception is taxes based on Cohere’s net income or profits.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay applicable transaction taxes, duties, tariffs, assessments, export and import fees, and similar charges, including imposed interest and penalties, except taxes based on Cohere’s net income or profits.",
+            "actor": "Customer",
+            "object": "Transactions contemplated in connection with the Agreement",
+            "trigger": "When such taxes or similar charges apply to the transactions."
+          }
+        ]
+      },
+      {
+        "start_line": 311,
+        "end_line": 311,
+        "clause_label": "payment_survives_service_suspension",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "cohere_suspends_api_saas_services_under_agreement",
+          "requires": "continue_required_payments"
+        },
+        "actor_role": "Customer",
+        "scope_note": "Suspension of the Cohere API SaaS Services, including suspension under Sections 2(e) or 9(e), does not excuse Customer’s payment obligations.",
+        "condition_explanation": "cohere_suspends_api_saas_services_under_agreement applies to any suspension by Cohere pursuant to the Agreement, including the referenced sections.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Continue making payments required under the Agreement despite suspension of the services.",
+            "actor": "Customer",
+            "object": "Payments due under the Agreement for Cohere API SaaS Services",
+            "trigger": "Whenever Cohere suspends the Cohere API SaaS Services pursuant to the Agreement."
+          }
+        ]
+      },
+      {
+        "start_line": 314,
+        "end_line": 314,
+        "clause_label": "recipient_confidentiality_use_disclosure_and_protection",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": "recipient_has_discloser_confidential_information_during_or_after_term",
+          "requires": "any_of_disclose_outside_permitted_recipients_or_use_outside_agreement_purpose_or_alter_remove_proprietary_legend_or_fail_required_safeguards"
+        },
+        "actor_role": "Recipient",
+        "scope_note": "Confidentiality covenants apply during the Term and thereafter. Recipient may act as permitted to exercise its rights or perform its obligations under the Agreement. Disclosure is permitted to qualifying need-to-know personnel, subcontractors, or affiliates, and other recipients approved in writing by Discloser.",
+        "condition_explanation": "recipient_has_discloser_confidential_information_during_or_after_term applies to Confidential Information of the Discloser in the Recipient’s possession or knowledge during the Term or thereafter. The use and disclosure restrictions do not apply to acts necessary to exercise Agreement rights or perform Agreement obligations. Qualifying permitted recipients must meet the stated need-to-know and written-agreement safeguards. Required safeguards are reasonable precautions at least as stringent as those used to protect the Recipient’s own similar confidential information.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not disclose the Discloser’s Confidential Information except as necessary to exercise Agreement rights or perform Agreement obligations, to qualifying need-to-know personnel, subcontractors, or affiliates, or to recipients approved in writing by the Discloser.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "During the Term and at all times thereafter, while the Recipient has the Discloser’s Confidential Information."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Discloser’s Confidential Information except to exercise Agreement rights or perform Agreement obligations.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "During the Term and at all times thereafter, while the Recipient has the Discloser’s Confidential Information."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not alter or remove any proprietary legend from the Discloser’s Confidential Information.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information and its proprietary legends",
+            "trigger": "During the Term and at all times thereafter, while the Recipient has the Discloser’s Confidential Information."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Take necessary precautions and measures reasonable in the circumstances to prevent improper use or disclosure of the Discloser’s Confidential Information, at least as stringently as the Recipient protects its own confidential information of a similar type.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information",
+            "trigger": "Whenever the Recipient holds or handles the Discloser’s Confidential Information."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure personnel, subcontractors, or affiliates receiving Confidential Information under the permitted-recipient exception are bound by written agreements no less protective than the Agreement and directed to hold the information in the strictest confidence.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information disclosed to personnel, subcontractors, or affiliates",
+            "trigger": "Before disclosing Confidential Information to such a permitted recipient."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Be responsible for breaches of this confidentiality section by the Recipient’s personnel, subcontractors, or affiliates.",
+            "actor": "Recipient",
+            "object": "Discloser’s Confidential Information and compliance with the confidentiality covenants",
+            "trigger": "If the Recipient’s personnel, subcontractors, or affiliates breach Section 10."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The referenced Order Form, current price list, Website payment methods, and Sections 2(e) and 9(e) are not supplied in full, so their additional terms cannot be determined here.",
+      "Lines 312–313 provide a heading and definitions, not an independent operative duty. The confidentiality covenants at line 314 are modeled; separate exceptions and return/destruction provisions supplied as adjacent context are not target paragraphs."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0092",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_fee_payment",
+          "cohere_fee_change_notice",
+          "customer_billing_account_information",
+          "customer_disputed_charge_deadline",
+          "customer_pay_undisputed_amounts",
+          "parties_good_faith_charge_resolution",
+          "customer_no_withholding_or_setoff",
+          "customer_pay_applicable_transaction_taxes",
+          "payment_survives_service_suspension",
+          "recipient_confidentiality_use_disclosure_and_protection"
+        ],
+        "reason": "Lines 305–311 and 314 are covered by cited clauses. Line 304 is a heading; line 312 is a heading and line 313 contains definitions used as context."
+      }
+    ]
+  },
+  "attempt": 2
+}

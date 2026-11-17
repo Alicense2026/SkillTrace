@@ -1,0 +1,47 @@
+{
+  "case_id": "chain-0332-d374e4597d34",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-0332-d374e4597d34:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "遵守适用法律法规及 Llama 3 Acceptable Use Policy。",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "AUP_and_applicable_law_compliance"
+      ],
+      "source_refs": [
+        "license-text:upstream:b7874099eaa0bc72"
+      ]
+    },
+    {
+      "activity": "TrainModel",
+      "subject": {
+        "artifact": "chain-0332-d374e4597d34:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "不得使用 Llama 材料或其输出改进其他大型语言模型（不包括 Meta Llama 3 或其衍生作品）。",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "activity:TrainModel",
+          "uses_Llama_materials_or_outputs_to_improve_another_large_language_model"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:TrainModel",
+        "improvement_target_and_materials"
+      ],
+      "source_refs": [
+        "license-text:upstream:b7874099eaa0bc72"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

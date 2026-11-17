@@ -1,0 +1,142 @@
+{
+  "case_id": "chain-0004-66561ccd1677",
+  "status": "SUCCESS",
+  "request_sha256": "96143ba6781a8f9e87842017a7713422715c49792e5bbca2c8397728bf779f43",
+  "analysis": {
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0004-66561ccd1677:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:e3fae8b3bfd487c1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED",
+            "requires": true,
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0004-66561ccd1677:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "上游 MIT 与下游 Apache-2.0 的原文分别有本地匹配记录；但对象图仅确认 API 链接/远程调用，依赖、打包、修改副本及共同受约束范围均未知，不能据此认定许可条款共同适用或存在冲突。",
+      "MIT 首轮结构化摘录把使用许可条件映射为需包含版权与许可声明；所引通知原文明确针对 copies 或 substantial portions。仅有远程调用事实，未证明复制或分发，故不能断定该通知条件已触发或未履行。",
+      "Apache-2.0 摘录仅涵盖版权许可授予；其专利条款等未映射到本次检查。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若使用上游 MIT 软件的行为落入相应许可条件范围，按要求包含版权声明及许可声明；摘录原文明确涉及软件副本或实质部分。",
+        "source_refs": [
+          "license-text:upstream:04de8583241775d8"
+        ],
+        "subject": {
+          "artifact": "chain-0004-66561ccd1677:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "copy_or_substantial_portion"
+          ]
+        },
+        "unresolved_predicates": [
+          "copy_or_substantial_portion"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": [],
+    "case_id": "chain-0004-66561ccd1677"
+  },
+  "usage": {
+    "input_tokens": 19802,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 974,
+    "output_tokens_details": {
+      "reasoning_tokens": 323
+    },
+    "total_tokens": 20776,
+    "attribution": {
+      "items": {
+        "msg_084748b5407c08a3016af2f68520c887d1a3abbc4a810a3ce7": {
+          "input_tokens": 17770,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 17770,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_084748b5407c08a3016af2f68badd087d1a49680fc337903e2": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 651,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 651
+            }
+          ]
+        },
+        "rs_084748b5407c08a3016af2f68b923c87d195c4e94e802f5ab7": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 323
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.893,
+  "auto_applied": false,
+  "aggregate_count": 1108
+}

@@ -1,0 +1,232 @@
+{
+  "case_id": "chain-4546-b63aa0f86b15",
+  "source_csv_line": 4547,
+  "row": {
+    "github_repo": "neuraldeskapp",
+    "github_url": "https://github.com/vakovalskii/neuraldeskapp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "gpt-5.3-codex",
+    "artifact_url": "https://platform.openai.com/docs/models",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: src/agent/libs/llm-providers.ts:122 ｜ 调用原文: id: 'gpt-5.3-codex',（引用处 第4行） ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 出现在 llm-providers.ts 的模型列表常量中，可能是内置模型清单，但无法确认是否被真实调用",
+    "batch": "2001-2500",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "vakovalskii/neuraldeskapp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d",
+    "filename": "_licenseref_full/texts/73b6840d25b359870169c90c1a55dbf7c3364b2e32ef5f2c952cd9305f052a7d.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:NeuralDeskApp-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-4546-b63aa0f86b15",
+    "asc_rules": [
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:52f51f8a16ff1e8a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": {
+              "all": [
+                "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+                "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+              ]
+            },
+            "when": "use_of_downstream_original_artifact"
+          },
+          "S": {
+            "artifact": "chain-4546-b63aa0f86b15:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:52f51f8a16ff1e8a"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "purchase_commercial_license_from_licensor",
+            "when": "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd_and_uses_software"
+          },
+          "S": {
+            "artifact": "chain-4546-b63aa0f86b15:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:52f51f8a16ff1e8a"
+        ],
+        "triple": {
+          "A": "Modify",
+          "C": {
+            "kind": "PROHIBITED",
+            "requires": true,
+            "when": "removing_or_altering_copyright_notices_or_license_information_stored_in_software"
+          },
+          "S": {
+            "artifact": "chain-4546-b63aa0f86b15:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "本记录确认对上游模型的远程调用/使用，但未确认下游软件的 Use、Modify、Distribute 或其他活动；因此下游许可条款只作为以相应活动发生为触发条件的义务处理。",
+      "下游许可的收入门槛、竞争产品条件及任何商业许可是否适用均无事实值；摘录未给出商业许可条款。未发现与远程 API 调用直接对应的下游限制。",
+      "OpenAI 摘录仅涉及客户向 OpenAI 或转售方支付费用，不能据此推断客户对下游用户收费或产生许可冲突。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用下游软件时，须始终满足年总收入或等值资金低于 1,000,000 美元，并且不得将其用于创建、分发或托管与许可方软件实质相似且面向第三方竞争的产品或服务。",
+        "source_refs": [
+          "license-text:downstream:52f51f8a16ff1e8a"
+        ],
+        "subject": {
+          "artifact": "chain-4546-b63aa0f86b15:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "use_of_downstream_original_artifact",
+        "unresolved_predicates": [
+          "use_of_downstream_original_artifact",
+          "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+          "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若实体或个人年总收入或资金超过 1,000,000 美元且使用软件，须向许可方购买商业许可。",
+        "source_refs": [
+          "license-text:downstream:52f51f8a16ff1e8a"
+        ],
+        "subject": {
+          "artifact": "chain-4546-b63aa0f86b15:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd_and_uses_software",
+        "unresolved_predicates": [
+          "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+          "use_of_downstream_original_artifact"
+        ]
+      },
+      {
+        "activity": "Modify",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "不得移除或更改软件中存储的版权声明或许可信息。",
+        "source_refs": [
+          "license-text:downstream:52f51f8a16ff1e8a"
+        ],
+        "subject": {
+          "artifact": "chain-4546-b63aa0f86b15:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "removing_or_altering_copyright_notices_or_license_information_stored_in_software",
+        "unresolved_predicates": [
+          "removing_or_altering_copyright_notices_or_license_information_stored_in_software"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 17992,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1694,
+    "output_tokens_details": {
+      "reasoning_tokens": 328
+    },
+    "total_tokens": 19686,
+    "attribution": {
+      "items": {
+        "msg_0aaf8d83545412dd016af53ba826b087d088250c58b2d0e60d": {
+          "input_tokens": 15922,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15922,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0aaf8d83545412dd016af53ba826b087d0a0544bc704322ce2": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0aaf8d83545412dd016af53baef66887d09d305de15fbc3b54": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 1366,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 1366
+            }
+          ]
+        },
+        "rs_0aaf8d83545412dd016af53baedac087d0bcdeeedfe0e65373": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 328
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "9ed03b3dc6126c9bdc6ad6fd9ff04f885887c93ded7805edc4d8464064a781ef",
+  "elapsed_seconds": 37.65
+}

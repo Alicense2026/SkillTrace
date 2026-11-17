@@ -1,0 +1,611 @@
+{
+  "request_sha256": "feeafcea3c8d1827c63309eca065e70da79164adac209ff2d821e6bf5dcf317f",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 16,
+        "end_line": 19,
+        "clause_label": "age_and_audience_limits",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "user_is_at_least_18",
+              "api_client_not_directed_to_or_likely_accessed_by_under_18s"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Age Requirements; applies to API and use of Services as part of an API Client.",
+        "condition_explanation": "user_is_at_least_18 means the person using the APIs is at least 18 years old. api_client_not_directed_to_or_likely_accessed_by_under_18s means the Services are not used as part of a website, application, or other service directed toward or likely to be accessed by individuals under 18.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 23,
+        "end_line": 24,
+        "clause_label": "professional_or_business_purpose",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "professional_or_business_purpose_not_consumer_use"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use Restrictions; applies to Google AI Studio and Gemini API use.",
+        "condition_explanation": "professional_or_business_purpose_not_consumer_use means use is for developers building with Google AI models for professional or business purposes, and not for consumer use.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 26,
+        "end_line": 29,
+        "clause_label": "regional_access_and_paid_service_limit",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": {
+            "all": [
+              "within_available_region",
+              {
+                "any": [
+                  "not_making_api_clients_available_to_users_in_eea_switzerland_or_uk",
+                  "using_only_paid_services_for_api_clients_available_to_users_in_eea_switzerland_or_uk"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use Restrictions; region availability is specified by external Documentation. The Paid Services definition at lines 113–120 determines the relevant service classification.",
+        "condition_explanation": "within_available_region means the Services are accessed, and any API Clients made available to users are made available, only within an available region. eea_switzerland_or_uk means the European Economic Area, Switzerland, or the United Kingdom. If API Clients are made available to users in any of those places, only Paid Services may be used. Paid Services classification depends on the conditions in lines 113–120.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 31,
+        "end_line": 34,
+        "clause_label": "no_competing_models_or_reverse_engineering",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "developing_model_that_competes_with_services",
+              "attempting_to_reverse_engineer_extract_or_replicate_service_component_data_or_model"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use Restrictions; covers developing models that compete with Services and attempting to reverse engineer, extract, or replicate any Service component, including underlying data or models such as parameter weights.",
+        "condition_explanation": "The prohibition applies to either competing-model development or an attempt to reverse engineer, extract, or replicate a Service component.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not develop models that compete with the Services or attempt to reverse engineer, extract, or replicate any component of the Services.",
+            "actor": "licensee",
+            "object": "Services, including underlying data and models",
+            "trigger": "Whenever using the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 36,
+        "end_line": 41,
+        "clause_label": "external_prohibitions_and_policy_compliance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_api_prohibitions_and_prohibited_use_policy"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use Restrictions; incorporates the API Terms' API Prohibitions and the linked Prohibited Use Policy. Their substantive content is not supplied.",
+        "condition_explanation": "comply_with_api_prohibitions_and_prohibited_use_policy means compliance with both the API Prohibitions section of the API Terms and the linked Prohibited Use Policy; their requirements cannot be determined from this chunk.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with the API Terms' API Prohibitions and the Prohibited Use Policy.",
+            "actor": "licensee",
+            "object": "use of the Services",
+            "trigger": "Whenever using the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 43,
+        "end_line": 50,
+        "clause_label": "safety_measures_and_settings",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "attempting_to_bypass_protective_measures_or_using_content_that_violates_terms"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use Restrictions; includes a prohibition on bypassing protective measures or using content violating the API Terms or Additional Terms, plus a safety-settings responsibility and a review/approval caveat for less restrictive settings.",
+        "condition_explanation": "The prohibition applies if either protective measures are bypassed or content violating the referenced terms is used. The separate responsibility to determine necessary and appropriate safety settings and factuality tools is stated as a duty, but cannot be represented as a distinct activity in the supplied activity vocabulary. Google review and approval may apply to applications with less restrictive safety settings; no approval outcome is supplied.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not attempt to bypass protective measures or use content that violates the API Terms or Additional Terms.",
+            "actor": "licensee",
+            "object": "Services and content used with the Services",
+            "trigger": "Whenever using the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 52,
+        "end_line": 54,
+        "clause_label": "medical_use_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": {
+            "any": [
+              "use_in_clinical_practice",
+              "use_to_provide_medical_advice",
+              "use_overseen_by_or_requiring_medical_device_regulatory_clearance_or_approval"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use Restrictions; bars the stated medical and regulated uses of the Services.",
+        "condition_explanation": "The prohibition applies if use is in clinical practice, to provide medical advice, or in any manner overseen by or requiring clearance or approval from a medical device regulatory agency.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the Services in clinical practice, to provide medical advice, or in a manner overseen by or requiring medical-device regulatory clearance or approval.",
+            "actor": "licensee",
+            "object": "Services",
+            "trigger": "Whenever using the Services."
+          }
+        ]
+      },
+      {
+        "start_line": 62,
+        "end_line": 69,
+        "clause_label": "generated_content_law_and_shared_use_responsibility",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "comply_with_applicable_law_and_api_terms_when_using_generated_content"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Use of Generated Content; the applicable-law duty is stated to be required by the API Terms. Attribution may be required by applicable law when generated content is returned as part of an API call. User discretion and responsibility statements are also included.",
+        "condition_explanation": "The operative compliance duty is to comply with applicable law in using generated content, including attribution only where applicable law requires it. The API Terms are external and not supplied. The text also assigns responsibility for the licensee's use and for use by recipients with whom content is shared, without specifying a separately expressible activity duty.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with applicable law when using generated content, including providing attribution to users when applicable law requires it for content returned as part of an API call.",
+            "actor": "licensee",
+            "object": "generated content",
+            "trigger": "When using generated content; attribution is required only when applicable law requires it in the stated API-call context."
+          }
+        ]
+      },
+      {
+        "start_line": 79,
+        "end_line": 84,
+        "clause_label": "unpaid_service_data_use_description",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "unpaid_service_use"
+        },
+        "actor_role": "Google",
+        "scope_note": "Gemini API Additional Terms, Unpaid Services, How Google Uses Your Data; describes Google's use of submitted content and generated responses, subject to the linked Privacy Policy. This is a provider data-processing commitment, not a licensee activity permission or duty expressible with the supplied activities.",
+        "condition_explanation": "unpaid_service_use includes Google AI Studio and unpaid Gemini API quota. The stated purposes are to provide, improve, and develop Google products, services, and machine-learning technologies, including enterprise features. The linked Privacy Policy is not supplied.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 86,
+        "end_line": 91,
+        "clause_label": "unpaid_service_sensitive_information_prohibition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "submitting_sensitive_confidential_or_personal_information_to_unpaid_services"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Unpaid Services, How Google Uses Your Data; expressly directs users not to submit sensitive, confidential, or personal information to Unpaid Services.",
+        "condition_explanation": "unpaid_service_use means use of an Unpaid Service, including Google AI Studio or unpaid Gemini API quota. The prohibition applies to submission of any sensitive, confidential, or personal information.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not submit sensitive, confidential, or personal information to Unpaid Services.",
+            "actor": "licensee",
+            "object": "input submitted to Unpaid Services",
+            "trigger": "Whenever using Unpaid Services."
+          }
+        ]
+      },
+      {
+        "start_line": 93,
+        "end_line": 98,
+        "clause_label": "api_terms_content_license_extension",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "content_submitted_to_services_or_generated_responses"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Unpaid Services, How Google Uses Your Data; describes an extension of the license granted to Google under the API Terms' Submission of Content section. The incorporated grant and its operative scope are not supplied, so no permission or duty is inferred.",
+        "condition_explanation": "The extension applies to the extent required under applicable law for Google's use and covers submitted content, including examples of prompts, associated system instructions, cached content, and files, as well as generated responses. The API Terms' underlying license is missing.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 100,
+        "end_line": 103,
+        "clause_label": "tuning_content_use_and_deletion_description",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "content_imported_or_uploaded_to_model_tuning_feature"
+        },
+        "actor_role": "Google",
+        "scope_note": "Gemini API Additional Terms, Unpaid Services, How Google Uses Your Data; describes Google's purpose limitation and retention/deletion behavior for tuning content. These provider data-handling statements do not map to an available activity without inventing one.",
+        "condition_explanation": "The stated use is only for the express tuning purpose. Tuning content may be retained with tuned models for re-tuning when supported models change, and related tuning content is deleted when the tuned model is deleted.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 105,
+        "end_line": 109,
+        "clause_label": "eea_paid_data_terms_cross_application",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "user_in_eea_switzerland_or_uk",
+          "requires": "paid_services_data_terms_apply_to_all_services"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Unpaid Services, How Google Uses Your Data; for users in the EEA, Switzerland, or UK, the Paid Services data-use terms apply to all Services, including otherwise unpaid Google AI Studio and Gemini API quota. The referenced Paid Services section is at lines 128–153.",
+        "condition_explanation": "user_in_eea_switzerland_or_uk means the user is in the European Economic Area, Switzerland, or United Kingdom. This clause incorporates the Paid Services data-use provisions; it does not itself specify a distinct user action or additional data duty.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 113,
+        "end_line": 120,
+        "clause_label": "paid_service_classification",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "service_access_classified_as_paid_or_unpaid_by_stated_billing_conditions"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Paid Services; defines when access is treated as a Paid Service, a classification used by other terms rather than an independent permission or obligation.",
+        "condition_explanation": "A fee-offered Service is Paid. Google AI Studio access is also Paid when the account has access to a Cloud Project with an associated active Cloud Billing account or is a Workspace enterprise account, even if offered free. Gemini API access is Paid only through a Cloud Project associated with an active billing account.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 122,
+        "end_line": 124,
+        "clause_label": "paid_service_google_entity_definition",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "UNSPECIFIED",
+          "when": true,
+          "requires": "paid_services"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Gemini API Additional Terms, Paid Services; cross-reference defining which Google entity the term Google denotes. The referenced entity definition is external and not supplied.",
+        "condition_explanation": "For Paid Services, Google has the meaning in the linked Google Cloud Terms entity definition. This definition supplies context only and does not itself create a behavioral rule.",
+        "obligation_items": []
+      }
+    ],
+    "coverage_notes": [
+      "The API Terms, API Prohibitions, Prohibited Use Policy, Privacy Policy, applicable data-protection terms, and linked Documentation are not supplied; incorporated requirements and referenced details cannot be fully extracted.",
+      "The clauses describing Google's processing, logging, and tuning-content handling are provider-side data commitments, not licensee activity constraints expressible with the allowed activity vocabulary; they are identified without inventing permissions or duties.",
+      "The source ends at line 163. Paragraphs P0031 and P0032 concern payment-term heading and billing/payment handling; the target material does not create a licensee activity constraint, and external incorporated payment terms are not supplied."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Document title only."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Effective date only."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Acceptance preamble and definitions/cross-references; not a behavioral rule within the target scope."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0005",
+        "status": "MODELED",
+        "clause_labels": [
+          "age_and_audience_limits"
+        ],
+        "reason": "Models minimum user age and restriction on API Clients directed to or likely accessed by minors."
+      },
+      {
+        "unit_id": "P0006",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0007",
+        "status": "MODELED",
+        "clause_labels": [
+          "professional_or_business_purpose"
+        ],
+        "reason": "Models the stated professional/business-purpose limitation and exclusion of consumer use."
+      },
+      {
+        "unit_id": "P0008",
+        "status": "MODELED",
+        "clause_labels": [
+          "regional_access_and_paid_service_limit"
+        ],
+        "reason": "Models available-region restriction and Paid Services-only condition for API Clients available to users in specified territories."
+      },
+      {
+        "unit_id": "P0009",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_competing_models_or_reverse_engineering"
+        ],
+        "reason": "Models both competitive-model development and reverse-engineering/extraction/replication prohibitions."
+      },
+      {
+        "unit_id": "P0010",
+        "status": "MODELED",
+        "clause_labels": [
+          "external_prohibitions_and_policy_compliance"
+        ],
+        "reason": "Models express duty to comply with incorporated API prohibitions and the Prohibited Use Policy; incorporated substance is flagged as unavailable."
+      },
+      {
+        "unit_id": "P0011",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "safety_measures_and_settings"
+        ],
+        "reason": "The bypass and violating-content prohibition is modeled, but the separate responsibility to determine necessary safety settings and factuality tools cannot be faithfully represented as a distinct activity duty in the supplied vocabulary."
+      },
+      {
+        "unit_id": "P0012",
+        "status": "MODELED",
+        "clause_labels": [
+          "medical_use_prohibition"
+        ],
+        "reason": "Models all three prohibited medical/regulated use paths."
+      },
+      {
+        "unit_id": "P0013",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0014",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Google non-ownership statement and reservation of rights; does not impose a behavioral duty or grant an activity permission."
+      },
+      {
+        "unit_id": "P0015",
+        "status": "MODELED",
+        "clause_labels": [
+          "generated_content_law_and_shared_use_responsibility"
+        ],
+        "reason": "Models applicable-law compliance and conditional attribution duty. Responsibility for third-party use and discretion language does not specify an independently checkable activity duty."
+      },
+      {
+        "unit_id": "P0016",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0017",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Defines Unpaid Services; definition used to interpret later operative provisions."
+      },
+      {
+        "unit_id": "P0018",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Subsection heading only."
+      },
+      {
+        "unit_id": "P0019",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "unpaid_service_data_use_description"
+        ],
+        "reason": "Describes Google's data-use purposes and references a Privacy Policy not supplied; provider-side processing commitment is not representable as a licensee activity rule."
+      },
+      {
+        "unit_id": "P0020",
+        "status": "MODELED",
+        "clause_labels": [
+          "unpaid_service_sensitive_information_prohibition"
+        ],
+        "reason": "Models the express prohibition on submitting sensitive, confidential, or personal information to Unpaid Services; reviewer/privacy practices are provider-side descriptions."
+      },
+      {
+        "unit_id": "P0021",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "api_terms_content_license_extension"
+        ],
+        "reason": "Identifies extension of a Google license but the operative underlying API Terms grant is missing, so its scope and conditions cannot be faithfully extracted."
+      },
+      {
+        "unit_id": "P0022",
+        "status": "UNRESOLVED",
+        "clause_labels": [
+          "tuning_content_use_and_deletion_description"
+        ],
+        "reason": "Describes Google's tuning-content use, retention, and deletion commitments, which cannot be represented as licensee activity constraints with the available activities."
+      },
+      {
+        "unit_id": "P0023",
+        "status": "MODELED",
+        "clause_labels": [
+          "eea_paid_data_terms_cross_application"
+        ],
+        "reason": "Models the territorial condition applying Paid Services data terms to all Services; the incorporated data-use provisions are separately cited at lines 128–153."
+      },
+      {
+        "unit_id": "P0024",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Section heading only."
+      },
+      {
+        "unit_id": "P0025",
+        "status": "CONTEXT",
+        "clause_labels": [
+          "paid_service_classification"
+        ],
+        "reason": "Defines Paid Services and access classifications, modeled as context for the regional restriction and data terms."
+      },
+      {
+        "unit_id": "P0026",
+        "status": "CONTEXT",
+        "clause_labels": [
+          "paid_service_google_entity_definition"
+        ],
+        "reason": "Cross-reference defining the entity meant by Google for Paid Services; referenced definition is unavailable."
+      },
+      {
+        "unit_id": "P0027",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Subsection heading only."
+      },
+      {
+        "unit_id": "P0028",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "States Google will not use Paid Services prompts or responses to improve products and will process them under an external Data Processing Addendum; also states limited logging and retention purposes. These are provider-side data-handling commitments that cannot be represented faithfully with the allowed activities and objects."
+      },
+      {
+        "unit_id": "P0029",
+        "status": "UNRESOLVED",
+        "clause_labels": [],
+        "reason": "Describes other data collected and incorporates external controller-controller terms and Privacy Policy; provider-side processing terms and missing incorporated documents prevent faithful activity-rule extraction."
+      },
+      {
+        "unit_id": "P0030",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Cross-reference to the Grounding with Google Search section; the referenced section is outside this target paragraph."
+      },
+      {
+        "unit_id": "P0031",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Payment Terms heading only."
+      },
+      {
+        "unit_id": "P0032",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Identifies Cloud Billing as handling payments; no licensee activity constraint or express payment obligation is stated in this paragraph."
+      }
+    ]
+  },
+  "attempt": 2
+}

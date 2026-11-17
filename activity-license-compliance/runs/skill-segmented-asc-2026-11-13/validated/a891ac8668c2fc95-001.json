@@ -1,0 +1,155 @@
+{
+  "request_sha256": "0275c7b43c1231c5de4c146d7b1db388a289a1e9e548a860040b762b3fe8f803",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 3,
+        "end_line": 5,
+        "clause_label": "personal_internal_use_with_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "notice_retained"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section covering the Work: an individual may view, use, and run the software and its contents for personal and internal purposes, provided the notice is retained.",
+        "condition_explanation": "notice_retained means the copyright notice in line 1 is retained. The permission is limited to personal and internal purposes.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Retain the copyright notice.",
+            "actor": "individual exercising the permission",
+            "object": "copy of the Work being viewed, used, or run",
+            "trigger": "When viewing, using, or running the Work under the personal-and-internal-purpose permission."
+          }
+        ]
+      },
+      {
+        "start_line": 3,
+        "end_line": 5,
+        "clause_label": "personal_internal_adaptation_with_notice",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": true,
+          "requires": "notice_retained"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Section covering the Work: an individual may adapt the software and its contents for personal and internal purposes, provided the notice is retained.",
+        "condition_explanation": "notice_retained means the copyright notice in line 1 is retained. The permission is limited to personal and internal purposes.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Retain the copyright notice.",
+            "actor": "individual exercising the permission",
+            "object": "adapted Work",
+            "trigger": "When adapting the Work under the personal-and-internal-purpose permission."
+          }
+        ]
+      },
+      {
+        "start_line": 8,
+        "end_line": 14,
+        "clause_label": "no_training_or_model_data_use_of_work",
+        "activities": [
+          "TrainModel"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "no_prior_written_permission_from_copyright_holder"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The Work, in whole or in part, may not be used as training, fine-tuning, pre-training, evaluation, benchmarking, retrieval, or other input data for an AI or machine-learning model, system, agent, or dataset. The restriction applies by automated or manual means, whether commercial or non-commercial.",
+        "condition_explanation": "no_prior_written_permission_from_copyright_holder means the copyright holder has not given prior written permission for the use. The stated restriction applies to the Work in whole or in part.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not collect, copy, ingest, or otherwise use the Work, in whole or in part, as training, fine-tuning, pre-training, evaluation, benchmarking, retrieval, or other input data for a machine-learning or artificial-intelligence model, system, agent, or dataset.",
+            "actor": "any person or entity using the Work",
+            "object": "the Work, in whole or in part",
+            "trigger": "Unless the copyright holder has given prior written permission; applies whether the use is commercial or non-commercial and whether performed by automated or manual means."
+          }
+        ]
+      },
+      {
+        "start_line": 8,
+        "end_line": 14,
+        "clause_label": "no_training_or_model_data_use_of_derivatives",
+        "activities": [
+          "TrainModel"
+        ],
+        "objects": [
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "when": true,
+          "requires": "no_prior_written_permission_from_copyright_holder"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The training and model-data restriction expressly applies to derivatives of the Work as well as the Work itself.",
+        "condition_explanation": "no_prior_written_permission_from_copyright_holder means the copyright holder has not given prior written permission for the use. The restriction covers derivatives of the Work.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not collect, copy, ingest, or otherwise use derivatives of the Work as training, fine-tuning, pre-training, evaluation, benchmarking, retrieval, or other input data for a machine-learning or artificial-intelligence model, system, agent, or dataset.",
+            "actor": "any person or entity using a derivative of the Work",
+            "object": "derivative of the Work",
+            "trigger": "Unless the copyright holder has given prior written permission; applies whether the use is commercial or non-commercial and whether performed by automated or manual means."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The source contains no incorporated external documents identified in the supplied text."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0001",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Copyright and all-rights-reserved notice identifies the work and rights holder but imposes no operative activity constraint."
+      },
+      {
+        "unit_id": "P0002",
+        "status": "MODELED",
+        "clause_labels": [
+          "personal_internal_use_with_notice",
+          "personal_internal_adaptation_with_notice"
+        ],
+        "reason": "Models the personal and internal scope, permissions to use/run and adapt, and retained-notice condition."
+      },
+      {
+        "unit_id": "P0003",
+        "status": "MODELED",
+        "clause_labels": [
+          "no_training_or_model_data_use_of_work",
+          "no_training_or_model_data_use_of_derivatives"
+        ],
+        "reason": "Models the stated restriction, its enumerated model-data uses, its application to the Work and derivatives, and the prior-written-permission exception."
+      },
+      {
+        "unit_id": "P0004",
+        "status": "NONOPERATIVE",
+        "clause_labels": [],
+        "reason": "Warranty and liability disclaimers do not impose an activity constraint."
+      }
+    ]
+  },
+  "attempt": 1
+}

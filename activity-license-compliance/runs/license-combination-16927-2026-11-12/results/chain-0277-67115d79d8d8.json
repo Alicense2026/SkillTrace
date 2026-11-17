@@ -1,0 +1,173 @@
+{
+  "case_id": "chain-0277-67115d79d8d8",
+  "input_group_row": 277,
+  "aggregate_count": 1,
+  "combination": {
+    "GitHub许可证": "Apache-2.0",
+    "资产许可证原文标题/标签": "DeepSeek Open Platform Terms of Service",
+    "调用方式（代码修改）": "代码层面集成（修改：否）",
+    "数量": "1"
+  },
+  "status": "SUCCESS",
+  "origin": "NEW",
+  "analysis": {
+    "case_id": "chain-0277-67115d79d8d8",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0277-67115d79d8d8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "triple": {
+          "A": "ProvideNetworkService",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-0277-67115d79d8d8:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "DeepSeek Open Platform Terms govern API service access, not model-weight redistribution; no weight transfer is established.",
+      "The record establishes use of the upstream service and code-level integration without modification, but does not establish downstream distribution, provision of outputs to end users, or whether the upstream and downstream license scopes are shared.",
+      "The DeepSeek ASC extraction is marked FIRST_PASS_REVIEW_REQUIRED. The service-access excerpt requires compliance with the Terms generally but does not specify the full set of service-term conditions; no additional conditions are inferred.",
+      "The AI-output disclosure clause concerns outputs supplied through the service. The record does not establish whether outputs were provided to end users."
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Comply with the DeepSeek Open Platform Terms when accessing and using the API service.",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0277-67115d79d8d8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": []
+      },
+      {
+        "activity": "ProvideNetworkService",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "Clearly disclose to end users that service output is AI-generated, may contain errors or omissions, and is for reference only.",
+        "source_refs": [
+          "license-text:upstream:b2a3e7ddf565746c"
+        ],
+        "subject": {
+          "artifact": "chain-0277-67115d79d8d8:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "output_provided_to_end_users",
+        "unresolved_predicates": [
+          "output_provided_to_end_users"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "reported_model": "gpt-6-luna",
+  "usage": {
+    "input_tokens": 17859,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1144,
+    "output_tokens_details": {
+      "reasoning_tokens": 411
+    },
+    "total_tokens": 19003,
+    "attribution": {
+      "items": {
+        "msg_0bac1139b28a3d40016af530ab21ac87d09216ce708b12e0da": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bac1139b28a3d40016af530ab21ac87d0ae0317a48cab8336": {
+          "input_tokens": 15789,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 15789,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0bac1139b28a3d40016af530b31f0087d0aabf566066072aca": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 733,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 733
+            }
+          ]
+        },
+        "rs_0bac1139b28a3d40016af530b3033c87d0b61dc366ee79f40a": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 411
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "request_sha256": "1c4cd4f0d3ad9207d4a006d8393a414c847f61c8fd04987911290618f6313ca1",
+  "elapsed_seconds": 31.98
+}

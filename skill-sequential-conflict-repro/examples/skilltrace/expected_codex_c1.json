@@ -1,0 +1,58 @@
+{
+  "files": [
+    {
+      "path": "examples/skilltrace/sample_codex_c1.jsonl",
+      "events": 4
+    }
+  ],
+  "events": 4,
+  "detected_skills": [
+    {
+      "id": "paper-search-pro",
+      "name": "paper-search-pro",
+      "license": "Apache-2.0",
+      "repository": "o0000-code/paper-search-pro",
+      "commit": "2b55e0853b8a42325b69cd20cb6d13e03b23695e",
+      "first_event": 1,
+      "source_file": "examples/skilltrace/sample_codex_c1.jsonl",
+      "matched_text": "paper-search-pro",
+      "evidence": "{\"normalized\": {\"args\": {\"command\": \"cat repos/paper-search-pro/SKILL.md\"}, \"event_type\": \"tool_result\", \"metadata\": {\"exit_code\": 0, \"status\": \"completed\"}, \"result\": \"Loaded paper-s"
+    },
+    {
+      "id": "easy-vibe",
+      "name": "easy-vibe",
+      "license": "CC-BY-NC-SA-4.0",
+      "repository": "datawhalechina/easy-vibe",
+      "commit": "f2239c67052b6ad9ae3e72bc6b7a76f3c903cf64",
+      "first_event": 2,
+      "source_file": "examples/skilltrace/sample_codex_c1.jsonl",
+      "matched_text": ".trae/skills/编写交互式教程指南/skill.md",
+      "evidence": "{\"normalized\": {\"args\": {\"command\": \"cat 'repos/easy-vibe/.trae/skills/编写交互式教程指南/SKILL.md'\"}, \"event_type\": \"tool_result\", \"metadata\": {\"exit_code\": 0, \"status\": \"completed\"}, \"result\": \"Loaded interactive tut"
+    }
+  ],
+  "license_sequence": [
+    {
+      "id": "paper-search-pro",
+      "license": "Apache-2.0"
+    },
+    {
+      "id": "easy-vibe",
+      "license": "CC-BY-NC-SA-4.0"
+    }
+  ],
+  "matched_chains": [
+    {
+      "scenario": "C1",
+      "conflict_type": "commercial_use",
+      "call_order": [
+        "paper-search-pro",
+        "easy-vibe"
+      ],
+      "detected_order": [
+        "paper-search-pro",
+        "easy-vibe"
+      ]
+    }
+  ],
+  "errors": []
+}

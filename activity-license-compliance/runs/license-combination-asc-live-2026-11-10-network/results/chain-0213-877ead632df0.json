@@ -1,0 +1,153 @@
+{
+  "case_id": "chain-0213-877ead632df0",
+  "status": "SUCCESS",
+  "request_sha256": "e52c5e583c92e14f76a033db3425d3fb6c958c1e6d03047f2542d0e56e60859d",
+  "analysis": {
+    "case_id": "chain-0213-877ead632df0",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0213-877ead632df0:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:cca90801cea53d0e"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": "network_source_offer_available",
+            "when": {
+              "all": [
+                "modified_covered_program",
+                "network_interaction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0213-877ead632df0:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：对下游修改版本提供对应源码；触发条件为修改了受覆盖程序且该版本支持远程网络交互。事实记载为远程服务调用且代码修改不适用，不能据此认定受覆盖程序已修改，故本条款在已知事实下不适用；来源为AGPL第13条摘录。",
+        "source_refs": [
+          "license-text:downstream:cca90801cea53d0e"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "Llama 3.1 原文摘录的许可授予条款要求遵守协议，但本次提供的相关摘录不足以逐项映射协议中适用于单纯远程 API 调用的全部条件；不得据此推断额外的源码披露或权重转移义务。",
+      "对象图中的下游与上游关系为 API 调用/链接，是否属于共同受约束对象或覆盖 AGPL 网络源码义务的修改版本未获证实；现有事实称代码修改不适用，因此不把 API 调用视为分发或修改。",
+      "上游原文结构化摘录标记为 FIRST_PASS_REVIEW_REQUIRED；本次结论仅限所列条款与已知活动。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用上游 Llama Materials 时遵守 Llama 3.1 Community License Agreement 的适用条款。",
+        "source_refs": [
+          "license-text:upstream:9260a1f6a8642080"
+        ],
+        "subject": {
+          "artifact": "chain-0213-877ead632df0:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "applicable_Llama_agreement_requirements",
+          "fulfillment_of_applicable_requirements"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21408,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1025,
+    "output_tokens_details": {
+      "reasoning_tokens": 212
+    },
+    "total_tokens": 22433,
+    "attribution": {
+      "items": {
+        "msg_05467423e6b0375d016af2ffc089f487d18d3c0c4ca7e3b244": {
+          "input_tokens": 19376,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19376,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_05467423e6b0375d016af2ffc5034887d19c1b06d98518564f": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 813,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 813
+            }
+          ]
+        },
+        "rs_05467423e6b0375d016af2ffc4ca3887d1b6f9a5c91c5ca1a9": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 212
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 22.247,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

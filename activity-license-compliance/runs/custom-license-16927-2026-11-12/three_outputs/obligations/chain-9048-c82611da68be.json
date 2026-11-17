@@ -1,0 +1,44 @@
+{
+  "case_id": "chain-9048-c82611da68be",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "Retain applicable notices.",
+      "source_refs": [
+        "license-text:upstream:27974bd56b2acb18"
+      ],
+      "subject": {
+        "artifact": "chain-9048-c82611da68be:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "retain_applicable_notices"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "If the skill directory contains an original license or source notice, prioritize compliance with that license or notice.",
+      "source_refs": [
+        "license-text:downstream:17a4f89ec8cd06cf"
+      ],
+      "subject": {
+        "artifact": "chain-9048-c82611da68be:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          true,
+          "skill_directory_contains_original_license_or_source_notice"
+        ]
+      },
+      "unresolved_predicates": [
+        "skill_directory_contains_original_license_or_source_notice"
+      ]
+    }
+  ]
+}

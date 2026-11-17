@@ -1,0 +1,222 @@
+{
+  "case_id": "chain-21735-5a2f3cae870a",
+  "source_csv_line": 21736,
+  "row": {
+    "github_repo": "kerebrom",
+    "github_url": "https://github.com/ulianbass/kerebrom",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "google-gemini/gemini-cli",
+    "artifact_url": "https://github.com/google-gemini/gemini-cli",
+    "artifact_license": "Apache-2.0",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: versions/v1/internal/setup/setup_test.go:300 ｜ 调用原文: agent: \"gemini-cli\",（引用处 第47行） ｜ 证据等级: 待复核（中） ｜ 解析: github → github ｜ 许可证来源: github-api ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: 仅出现在 setup_test 测试夹具中，未见实际 setup 代码确认调用。",
+    "batch": "14201-16927",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "ulianbass/kerebrom",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "eebcebb42f62aaded3a5780d22b98084c40a99ffbc0c974c401a22f128891007",
+    "filename": "_licenseref_full/texts/eebcebb42f62aaded3a5780d22b98084c40a99ffbc0c974c401a22f128891007.txt",
+    "evidence_file": "LICENSE",
+    "acquisition": "zip:mirror:kerebrom-HEAD/LICENSE",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-21735-5a2f3cae870a",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:034e7b551efb0bd1"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-21735-5a2f3cae870a:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a5b9ec53b93116e6"
+        ],
+        "triple": {
+          "A": "Link",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "prior_written_permission_from_author"
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-21735-5a2f3cae870a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:a5b9ec53b93116e6"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": {
+              "not": "prior_written_permission_from_author"
+            },
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-21735-5a2f3cae870a:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Link",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若本条款所指的将软件纳入另一项目适用于该 API/代码链接关系，须先取得作者书面许可；现有证据未说明该许可是否取得。",
+        "source_refs": [
+          "license-text:downstream:a5b9ec53b93116e6"
+        ],
+        "subject": {
+          "artifact": "chain-21735-5a2f3cae870a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Link",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "prior_written_permission_from_author"
+        ]
+      },
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若对下游软件的使用落入该限制且未取得作者事先书面许可，不得将其用于商业、托管或生产目的；适用范围及许可状态未明。",
+        "source_refs": [
+          "license-text:downstream:a5b9ec53b93116e6"
+        ],
+        "subject": {
+          "artifact": "chain-21735-5a2f3cae870a:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "scope_shared"
+          ]
+        },
+        "unresolved_predicates": [
+          "scope_shared",
+          "commercial_hosted_or_production_use",
+          "prior_written_permission_from_author"
+        ]
+      }
+    ],
+    "limitations": [
+      "下游 LicenseRef-Custom 条款将“纳入另一项目”结构化映射为 Link，但摘录没有明确说明 API 调用或代码引用是否属于该行为；对象图只证明 API/代码链接关系，不证明纳入、衍生或许可范围共享，因此按条件义务处理。",
+      "记录表明发生远程服务调用，但没有提供作者书面许可、下游软件用途是否属商业/托管/生产用途等事实；收费、分发或源码/模型权重转移均未证实。",
+      "上游 Apache-2.0 摘录对 Use 明确许可；未见与已证实调用活动直接相关的上游相反限制。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20899,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1265,
+    "output_tokens_details": {
+      "reasoning_tokens": 343
+    },
+    "total_tokens": 22164,
+    "attribution": {
+      "items": {
+        "msg_0098e29eb2d4fabf016af53f13a89887d2a124a4fd8ff0e927": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0098e29eb2d4fabf016af53f13a89887d2bb53884913938eb1": {
+          "input_tokens": 18829,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18829,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0098e29eb2d4fabf016af53f1ab50087d29b75d2dd5329f255": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 922,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 922
+            }
+          ]
+        },
+        "rs_0098e29eb2d4fabf016af53f1a9dd887d29124e887c5e3f131": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 343
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "f0e0dd68cb07a85adb844feb3ec1395a552d42f5eeb69c8623c42fc5ff695943",
+  "elapsed_seconds": 31.28
+}

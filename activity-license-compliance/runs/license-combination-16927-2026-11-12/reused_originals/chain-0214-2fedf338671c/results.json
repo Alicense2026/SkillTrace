@@ -1,0 +1,152 @@
+{
+  "case_id": "chain-0214-2fedf338671c",
+  "status": "SUCCESS",
+  "request_sha256": "3f866d7020fc2e4d88bdf49dbb65b85222a64f718660895f2fc2ff6ff687a084",
+  "analysis": {
+    "case_id": "chain-0214-2fedf338671c",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_Llama_agreement",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0214-2fedf338671c:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:26919da2538c8e56"
+        ],
+        "triple": {
+          "A": "ProvideSource",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": {
+              "all": [
+                "downstream_modified_program",
+                "downstream_supports_remote_interaction",
+                "activity:RemoteInteraction"
+              ]
+            }
+          },
+          "S": {
+            "artifact": "chain-0214-2fedf338671c:downstream",
+            "kind": "ModifiedArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [
+      {
+        "activity": "ProvideSource",
+        "figure_case_refs": [],
+        "reason": "A/S：对下游 AGPL 修改版提供源码；AGPL 第13条要求修改后的程序支持网络交互时，向远程交互用户提供对应源码获取机会。事实明确为远程服务调用且代码修改不适用，未满足“修改了该程序”的触发条件；不构成违规。",
+        "source_refs": [
+          "license-text:downstream:26919da2538c8e56"
+        ],
+        "status": "NOT_APPLICABLE"
+      }
+    ],
+    "license_license_findings": [],
+    "limitations": [
+      "上游原文匹配 Llama 3.3 Community License Agreement；本次提供的相关摘录仅明确授予受协议约束的使用权，未提供本次使用所涉其他协议条件的完整映射，故不推断其具体内容。",
+      "AGPL 第13条相关义务针对修改后的 AGPL 程序；现有事实不支持本案存在此类修改。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 Llama Materials 时遵守 Llama agreement。",
+        "source_refs": [
+          "license-text:upstream:3801d78c611c8093"
+        ],
+        "subject": {
+          "artifact": "chain-0214-2fedf338671c:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use",
+        "unresolved_predicates": [
+          "comply_with_Llama_agreement"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21443,
+    "input_tokens_details": {
+      "cached_tokens": 21248,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 942,
+    "output_tokens_details": {
+      "reasoning_tokens": 240
+    },
+    "total_tokens": 22385,
+    "attribution": {
+      "items": {
+        "msg_0d2bcd6733b3bf7c016af2fff745ac87d2af5cb72f53e331c9": {
+          "input_tokens": 19411,
+          "cached_tokens": 19218,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19411,
+              "cached_tokens": 19218,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0d2bcd6733b3bf7c016af2fffca23887d2a85befdd43416503": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 702,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 702
+            }
+          ]
+        },
+        "rs_0d2bcd6733b3bf7c016af2fffc866c87d2afe7fc3192d4a305": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 240
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 20.687,
+  "auto_applied": false,
+  "aggregate_count": 2
+}

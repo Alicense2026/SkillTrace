@@ -1,0 +1,65 @@
+{
+  "case_id": "chain-0355-9186e48158af",
+  "output": [
+    {
+      "activity": "ProvideSource",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若修改的上游程序支持远程交互，须向通过计算机网络远程交互的用户显著提供免费获取该版本对应源代码的机会。",
+      "source_refs": [
+        "license-text:upstream:5b08064288d26a33"
+      ],
+      "subject": {
+        "artifact": "chain-0355-9186e48158af:upstream",
+        "kind": "ModifiedArtifact"
+      },
+      "trigger": {
+        "all": [
+          "modify_upstream_program",
+          "remote_interaction"
+        ]
+      },
+      "unresolved_predicates": [
+        "modify_upstream_program",
+        "remote_interaction"
+      ]
+    },
+    {
+      "activity": "Copy",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "复制下游MIT软件或其实质部分时，在副本中包含版权声明和许可声明。",
+      "source_refs": [
+        "license-text:downstream:246613076f619962"
+      ],
+      "subject": {
+        "artifact": "chain-0355-9186e48158af:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "copy_downstream_software_or_substantial_portion",
+      "unresolved_predicates": [
+        "copy_downstream_software_or_substantial_portion",
+        "include_copyright_and_permission_notice"
+      ]
+    },
+    {
+      "activity": "Distribute",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "分发下游MIT软件或其实质部分时，在副本中包含版权声明和许可声明。",
+      "source_refs": [
+        "license-text:downstream:246613076f619962"
+      ],
+      "subject": {
+        "artifact": "chain-0355-9186e48158af:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "distribute_downstream_software_or_substantial_portion",
+      "unresolved_predicates": [
+        "distribute_downstream_software_or_substantial_portion",
+        "include_copyright_and_permission_notice"
+      ]
+    }
+  ],
+  "aggregate_count": 1
+}

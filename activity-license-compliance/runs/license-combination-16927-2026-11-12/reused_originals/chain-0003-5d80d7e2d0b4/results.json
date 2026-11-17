@@ -1,0 +1,133 @@
+{
+  "case_id": "chain-0003-5d80d7e2d0b4",
+  "status": "SUCCESS",
+  "request_sha256": "6d84d39a1516b05ec85f07478c857bbf70123786dea0cb97f1dd16586c31b7dd",
+  "analysis": {
+    "case_id": "chain-0003-5d80d7e2d0b4",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:f442ffb3b75c892c"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PERMITTED"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "downstream",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "include_copyright_and_permission_notice"
+          },
+          "S": {
+            "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "对象图确认的是 API 链接和远程调用，不证明下游 MIT 代码与上游 Apache 作品是同一受约束对象；共同范围未知。未发现可据以认定冲突的相反条款。",
+      "下游活动记录未证明对 MIT 软件实施 Use、Copy、Distribute 或 Sublicense；不据此认定通知义务已触发或未履行。"
+    ],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "如使用下游 MIT 软件，遵守适用许可条件；结构化条款映射为包含版权声明和许可声明。",
+        "source_refs": [
+          "license-text:downstream:0c7d177c6ca7364d"
+        ],
+        "subject": {
+          "artifact": "chain-0003-5d80d7e2d0b4:downstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": "activity:Use:downstream",
+        "unresolved_predicates": [
+          "activity:Use:downstream"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20377,
+    "input_tokens_details": {
+      "cached_tokens": 20224,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 900,
+    "output_tokens_details": {
+      "reasoning_tokens": 329
+    },
+    "total_tokens": 21277,
+    "attribution": {
+      "items": {
+        "msg_010eaffa627a9e40016af2f6a31af887d2a72ead8712ac30f1": {
+          "input_tokens": 18345,
+          "cached_tokens": 18194,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18345,
+              "cached_tokens": 18194,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_010eaffa627a9e40016af2f6a9c37c87d293a48fc31f5bb565": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 571,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 571
+            }
+          ]
+        },
+        "rs_010eaffa627a9e40016af2f6a9ac4c87d2a1fd6c5ed066877d": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 329
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 2030,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.374,
+  "auto_applied": false,
+  "aggregate_count": 1215
+}

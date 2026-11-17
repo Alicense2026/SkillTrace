@@ -1,0 +1,76 @@
+{
+  "case_id": "chain-17624-c7133e765920",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 Anthropic 服务条款。",
+      "source_refs": [
+        "license-text:upstream:9442ad69204ad4ab"
+      ],
+      "subject": {
+        "artifact": "chain-17624-c7133e765920:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "RemoteInteraction",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "遵守 Anthropic 服务条款。",
+      "source_refs": [
+        "license-text:upstream:9442ad69204ad4ab"
+      ],
+      "subject": {
+        "artifact": "chain-17624-c7133e765920:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "comply_with_service_terms"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若使用下游 Work，须限于个人和内部目的，并保留该通知。",
+      "source_refs": [
+        "license-text:downstream:7fa754f427ea761c"
+      ],
+      "subject": {
+        "artifact": "chain-17624-c7133e765920:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:Use",
+      "unresolved_predicates": [
+        "activity:Use",
+        "personal_and_internal_purposes",
+        "notice_retained"
+      ]
+    },
+    {
+      "activity": "TrainModel",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "若将下游 Work 或其衍生物用于训练、微调、评估、基准测试、检索或其他模型输入，须先取得版权持有人的书面许可。",
+      "source_refs": [
+        "license-text:downstream:7fa754f427ea761c"
+      ],
+      "subject": {
+        "artifact": "chain-17624-c7133e765920:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": "activity:TrainModel",
+      "unresolved_predicates": [
+        "activity:TrainModel",
+        "prior_written_permission_from_copyright_holder"
+      ]
+    }
+  ]
+}

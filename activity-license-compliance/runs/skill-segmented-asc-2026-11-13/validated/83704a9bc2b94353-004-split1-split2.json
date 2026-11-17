@@ -1,0 +1,811 @@
+{
+  "request_sha256": "f3c96c127b0ac047db428b4ad8a52ca240306508a55b2e9a188889f47bbf9357",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 579,
+        "end_line": 579,
+        "clause_label": "customer_dns_update_after_migration_notice",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_migrates_customer_cloud_server_and_notifies_customer_of_required_dns_change",
+          "requires": "change_relevant_domain_dns_to_provider_designated_ip_as_directed"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §5(11). Customer must update DNS as directed following a migration notice; otherwise the website may become inaccessible, and this is not a provider breach.",
+        "condition_explanation": "provider_designated_ip is the IP address Baidu Smart Cloud specifies in the migration notice.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "After receiving the migration notice, change the relevant domain DNS to the IP address designated by Baidu Smart Cloud, as directed.",
+            "actor": "customer/licensee",
+            "object": "DNS settings for the customer's domain",
+            "trigger": "Baidu Smart Cloud migrates the customer's cloud server and notifies the customer of the required DNS change."
+          }
+        ]
+      },
+      {
+        "start_line": 581,
+        "end_line": 581,
+        "clause_label": "pricing_change_and_nonrenewal",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_changes_pricing_discounts_or_billing_rules_and_gives_30_days_advance_notice",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "customer_accepts_updated_terms",
+                  "order_is_new_or_is_a_new_renewal_period_after_effective_date"
+                ]
+              },
+              {
+                "all": [
+                  "customer_does_not_accept_updated_terms",
+                  "current_service_expires",
+                  "automatic_renewal_stops_for_that_service"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "both_parties",
+        "scope_note": "Online-order agreement §5(12). Updated terms apply to new orders and new order periods created by renewal after the effective date, not the existing order period. If the customer does not accept the adjustment, cooperation ends at current service expiry and automatic renewal ends with it; no further automatic renewal charge is made.",
+        "condition_explanation": "Provider must give 30 days' advance notice. The two alternatives describe acceptance and nonacceptance consequences.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Give notice of pricing, discount, or billing-rule changes at least 30 days in advance.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Notice of pricing, discount, or billing-rule changes",
+            "trigger": "Baidu Smart Cloud changes product pricing, discounts, or billing rules."
+          }
+        ]
+      },
+      {
+        "start_line": 583,
+        "end_line": 583,
+        "clause_label": "provider_promotional_use_of_customer_identifiers",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "agreement_is_effective_and_provider_promotes_customer_service_use_as_example_or_success_story",
+          "requires": "do_not_disclose_customer_confidential_information"
+        },
+        "actor_role": "licensor",
+        "scope_note": "Online-order agreement §5(13). During the agreement, Baidu Smart Cloud may use the customer's name and enterprise identifiers for promotion of a service-use example or success story, provided confidential information is not disclosed. Other use of the enterprise name or logo requires written permission.",
+        "condition_explanation": "The promotional permission is limited to the stated example or success-story purpose; the confidentiality limitation applies to that promotion.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not disclose the customer's confidential information in promotional material.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Customer confidential information",
+            "trigger": "Baidu Smart Cloud uses the customer’s service use as a promotional example or success story."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the customer's enterprise name or identifiers outside the stated promotional purpose without the customer's written permission.",
+            "actor": "Baidu Smart Cloud",
+            "object": "Customer enterprise name and identifiers",
+            "trigger": "Baidu Smart Cloud proposes use outside promotion of the service-use example or success story."
+          }
+        ]
+      },
+      {
+        "start_line": 587,
+        "end_line": 587,
+        "clause_label": "credit_policy_section_scope",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_accepts_service_and_provider_grants_customer_a_credit_policy",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6 introduction. The section's credit-policy terms apply when the customer accepts the service and Baidu Smart Cloud grants a credit policy.",
+        "condition_explanation": "This paragraph limits the applicability of the following section; it does not itself state credit limits or payment schedules.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 589,
+        "end_line": 590,
+        "clause_label": "credit_application_and_application_materials",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_applies_for_credit_policy",
+          "requires": "application_submitted_through_sales_manager_and_submitted_materials_and_statements_are_correct_complete_true_and_valid"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(1)–(2). The provider reviews applications and may require materials and retain those submitted.",
+        "condition_explanation": "The accuracy duty applies to materials and statements submitted in the credit-policy application.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Submit the credit-policy application through the sales manager.",
+            "actor": "customer/licensee",
+            "object": "Credit-policy application",
+            "trigger": "Customer seeks a credit policy."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Ensure application materials and related statements are correct, complete, true, and valid.",
+            "actor": "customer/licensee",
+            "object": "Credit-policy application materials and statements",
+            "trigger": "Customer submits materials or statements in a credit-policy application."
+          }
+        ]
+      },
+      {
+        "start_line": 592,
+        "end_line": 592,
+        "clause_label": "provider_credit_policy_discretion",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "PERMITTED",
+          "when": "credit_policy_application_or_existing_credit_policy",
+          "requires": true
+        },
+        "actor_role": "licensor",
+        "scope_note": "Online-order agreement §6(3). Baidu Smart Cloud may decide whether to grant a credit policy or adjust an existing policy based on the listed factors.",
+        "condition_explanation": "Factors include application materials, historical consumption capacity, payment performance, overdue records, and anticipated consumption growth.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 593,
+        "end_line": 593,
+        "clause_label": "credit_policy_acceptance_or_unrequested_offer",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "credit_policy_is_pushed_to_customer_system_account",
+          "requires": {
+            "any": [
+              {
+                "all": [
+                  "customer_applied_through_sales_manager",
+                  "customer_reviews_policy",
+                  "customer_clicks_agree"
+                ]
+              },
+              {
+                "all": [
+                  "customer_did_not_apply_through_sales_manager",
+                  "customer_stops_processing_offer",
+                  "customer_immediately_contacts_provider_to_cancel_application"
+                ]
+              }
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(4). Approved policy becomes effective upon review and clicking agree. If the customer did not apply through the sales manager, it must stop processing the pushed policy and immediately contact the provider to cancel the application. Provider records the acceptance click and may display the record.",
+        "condition_explanation": "The two alternatives apply respectively to an authorized application and an unrequested pushed policy.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "If no application was made through the sales manager, stop processing the pushed credit policy and immediately contact Baidu Smart Cloud to cancel the application.",
+            "actor": "customer/licensee",
+            "object": "Unrequested credit-policy application pushed to customer system account",
+            "trigger": "A policy is pushed to the account and the customer did not apply through its sales manager."
+          }
+        ]
+      },
+      {
+        "start_line": 594,
+        "end_line": 594,
+        "clause_label": "credit_policy_designated_services_only",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_credit_policy_to_pay_for_service",
+          "requires": "service_is_expressly_designated_by_provider_as_credit_policy_eligible"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(5). Credit-policy settlement is limited to products and services expressly designated by Baidu Smart Cloud.",
+        "condition_explanation": "The excerpt provides no list of designated services.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 595,
+        "end_line": 595,
+        "clause_label": "credit_policy_account_specificity",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_has_multiple_accounts",
+          "requires": "policy_is_used_only_for_applied_for_account_unless_separate_application_is_made"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(6). Each account requires a separate application; a policy applies only to the account for which it was applied.",
+        "condition_explanation": "An application for one account does not grant a policy for another account.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not treat a policy applied for one account as applicable to another account without a separate application.",
+            "actor": "customer/licensee",
+            "object": "Credit policy and customer accounts",
+            "trigger": "Customer seeks to use the policy for an account other than the account for which it was applied."
+          }
+        ]
+      },
+      {
+        "start_line": 596,
+        "end_line": 596,
+        "clause_label": "credit_policy_effectiveness",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_confirms_policy_and_provider_grants_it_and_completes_online_configuration",
+          "requires": "policy_is_within_displayed_validity_period"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(7). Policy takes effect upon customer confirmation, provider approval, and online configuration; expiry is governed by §6(12).",
+        "condition_explanation": "The three effectiveness prerequisites are cumulative. Expiry paths appear in lines 601–607.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 597,
+        "end_line": 597,
+        "clause_label": "credit_policy_settlement_schedule",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_grants_credit_policy_with_settlement_cycle",
+          "requires": "pay_service_fees_on_time_at_end_of_granted_natural_month_quarter_or_half_year_cycle"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(8). Monthly fees are due monthly; quarterly fees after each natural quarter; half-year fees after each natural half-year.",
+        "condition_explanation": "Natural quarters are Jan–Mar, Apr–Jun, Jul–Sep, and Oct–Dec. Natural half-years are Jan–Jun and Jul–Dec.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay service fees on time at the end of the settlement cycle granted under the credit policy.",
+            "actor": "customer/licensee",
+            "object": "Service fees under the credit policy",
+            "trigger": "A granted credit policy has a settlement cycle; payment is due monthly, after each natural quarter, or after each natural half-year, as applicable."
+          }
+        ]
+      },
+      {
+        "start_line": 598,
+        "end_line": 598,
+        "clause_label": "credit_sufficiency_and_refund_bar",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_or_seeks_to_order_services_under_credit_policy",
+          "requires": {
+            "all": [
+              "pay_on_time_or_maintain_sufficient_available_credit",
+              "if_refund_requested_all_service_fees_are_paid"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(9). Insufficient credit or late payment may prevent orders or interrupt service, with consequences borne by the customer. No refund application is allowed while fees remain unpaid.",
+        "condition_explanation": "Timely payment or sufficient credit are alternatives. The refund restriction applies while any service fees remain unpaid.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay on time or ensure sufficient available credit.",
+            "actor": "customer/licensee",
+            "object": "Account credit and service fees",
+            "trigger": "Customer uses or seeks to order services under the credit policy."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not apply for a refund until all service fees have been paid in full.",
+            "actor": "customer/licensee",
+            "object": "Refund application",
+            "trigger": "Any service fees remain unpaid."
+          }
+        ]
+      },
+      {
+        "start_line": 599,
+        "end_line": 599,
+        "clause_label": "credit_payment_deadline_and_remedies",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_services_paid_under_credit_policy",
+          "requires": "pay_due_fees_within_agreed_payment_period"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(10). Late payment is a breach; the provider may terminate related services and pursue unpaid amounts, late charges, and resulting losses.",
+        "condition_explanation": "The payment period is the period agreed for the applicable fees; no universal duration is stated.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay fees within the agreed payment period.",
+            "actor": "customer/licensee",
+            "object": "Fees payable under the credit policy",
+            "trigger": "Fees become payable under the agreed payment period."
+          }
+        ]
+      },
+      {
+        "start_line": 600,
+        "end_line": 600,
+        "clause_label": "credit_policy_adjustment_or_early_repayment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_credit_status_or_other_objective_circumstance_changes_and_provider_considers_adjustment_necessary",
+          "requires": "comply_with_notified_policy_adjustment_or_early_repayment_requirement"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(11). Provider may unilaterally adjust term, limit, or settlement cycle, or require early repayment, and notify the customer appropriately.",
+        "condition_explanation": "The trigger includes a change in credit status or other objective circumstances such as industry risk, together with the provider's determination that adjustment is necessary.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Comply with a notified credit-policy adjustment or early-repayment requirement made under this clause.",
+            "actor": "customer/licensee",
+            "object": "Credit policy and repayment due under it",
+            "trigger": "The specified circumstances change, provider considers adjustment necessary, and provider notifies customer."
+          }
+        ]
+      },
+      {
+        "start_line": 601,
+        "end_line": 601,
+        "clause_label": "credit_policy_expiry_paths_intro",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "credit_policy_remains_effective_under_applicable_expiry_paths",
+          "requires": true
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(12) introduces alternative expiry events detailed in lines 603, 605, and 607.",
+        "condition_explanation": "The listed expiry events are alternatives, not cumulative requirements.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 603,
+        "end_line": 603,
+        "clause_label": "credit_policy_expiry_unextended",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "agreed_termination_date_arrives_without_extension",
+          "requires": "stop_using_expired_credit_policy"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(12.1). The policy automatically expires on its agreed termination date if not extended; provider gives notice through a listed method.",
+        "condition_explanation": "Both arrival of the agreed date and absence of extension are required for this expiry path.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not continue using the policy after its agreed termination date unless extended.",
+            "actor": "customer/licensee",
+            "object": "Credit policy",
+            "trigger": "The agreed termination date arrives and the policy has not been extended."
+          }
+        ]
+      },
+      {
+        "start_line": 605,
+        "end_line": 605,
+        "clause_label": "customer_requested_policy_cancellation",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_submits_cancellation_request_through_sales_manager_and_provider_approves",
+          "requires": "stop_using_policy_from_provider_approval_date"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(12.2). Cancellation takes effect only when the provider approves the customer's request submitted through the sales manager.",
+        "condition_explanation": "Submission alone does not cancel the policy; the effective date is the provider's approval date.",
+        "obligation_items": [
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not use the policy from the date the provider agrees to cancel it.",
+            "actor": "customer/licensee",
+            "object": "Credit policy",
+            "trigger": "Customer requests cancellation through the sales manager and provider approves."
+          }
+        ]
+      },
+      {
+        "start_line": 607,
+        "end_line": 607,
+        "clause_label": "credit_review_and_zero_limit",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "provider_discovers_credit_status_change_or_exercises_review_rights",
+          "requires": {
+            "all": [
+              "provide_requested_updated_or_supplemental_materials",
+              "do_not_order_or_use_products_if_system_shows_zero_credit_limit"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(12.3). Provider may request updated materials and adjust or terminate the policy. A zero displayed limit prevents new orders or product use. Repayments refresh available credit while the policy remains effective; provider sends repayment reminders by listed methods.",
+        "condition_explanation": "The material duty arises when requested. The zero-limit restriction applies while the system displays zero; refreshed credit may be used within the available limit while the policy remains effective.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Provide updated or supplemental materials requested under the credit-policy review process.",
+            "actor": "customer/licensee",
+            "object": "Credit-policy application or supporting materials",
+            "trigger": "Provider discovers a change and requests updated or supplemental materials through the sales manager."
+          },
+          {
+            "duty_type": "REFRAIN",
+            "content": "Do not place new orders or use products when the system displays a zero credit limit.",
+            "actor": "customer/licensee",
+            "object": "New product orders or product use under the credit policy",
+            "trigger": "The system displays a zero credit limit."
+          }
+        ]
+      },
+      {
+        "start_line": 609,
+        "end_line": 609,
+        "clause_label": "online_policy_precedence",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "online_accepted_policy_conflicts_with_signed_offline_agreement",
+          "requires": "follow_policy_configured_in_system_and_displayed_in_customer_console"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §6(13). The system-configured and console-displayed policy controls where online and signed offline terms conflict.",
+        "condition_explanation": "The precedence rule applies only when the policies conflict.",
+        "obligation_items": []
+      },
+      {
+        "start_line": 615,
+        "end_line": 615,
+        "clause_label": "prepaid_payment_and_order_expiry",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_purchases_prepaid_service",
+          "requires": {
+            "all": [
+              "pay_full_service_fee_before_service_provided",
+              "if_unpaid_order_expires_7_days_after_order",
+              "if_customer_wants_service_after_expiry_pay_renewal_in_advance"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §7(1). Provider supplies prepaid service after full payment; an unpaid order expires seven days after ordering. Advance renewal payment is required to continue after expiry.",
+        "condition_explanation": "The seven-day period runs from the order date; renewal payment is required only if customer wants to continue after expiry.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the full service fee before receiving prepaid service.",
+            "actor": "customer/licensee",
+            "object": "Prepaid service fees",
+            "trigger": "Customer purchases a service payable before use."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay the renewal fee in advance to continue after order expiry.",
+            "actor": "customer/licensee",
+            "object": "Renewal fee",
+            "trigger": "Order expires after nonpayment and customer wants to continue."
+          }
+        ]
+      },
+      {
+        "start_line": 617,
+        "end_line": 617,
+        "clause_label": "prepaid_account_balance",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_purchases_product_or_service_under_prepaid_settlement",
+          "requires": "precharge_account_and_maintain_sufficient_balance_for_fee"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §7(1). Provider deducts fees at purchase and reserves the right to refuse service if the account balance is insufficient.",
+        "condition_explanation": "The balance must cover the service fee charged.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Precharge the account and ensure sufficient balance to cover the service fee.",
+            "actor": "customer/licensee",
+            "object": "Customer account balance and service fee",
+            "trigger": "Before purchase under prepaid settlement."
+          }
+        ]
+      },
+      {
+        "start_line": 621,
+        "end_line": 621,
+        "clause_label": "postpaid_usage_billing_and_default",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_purchases_usage_based_or_per_use_service",
+          "requires": "pay_fees_calculated_for_applicable_billing_cycles_and_if_provider_requires_pay_late_charges_after_failed_deduction"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §7(2). Usage is calculated for the preceding cycle, which may be hourly, daily, weekly, or monthly as specified on the product page or order, and deducted from the account. On insufficient balance, provider may require late-payment penalties and/or interest and may terminate the service at any time.",
+        "condition_explanation": "The applicable cycle and billing items depend on product-page and order terms not included here. Penalties or interest are provider options after insufficient balance.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay service fees calculated for the preceding billing cycle.",
+            "actor": "customer/licensee",
+            "object": "Usage-based or per-use service fees",
+            "trigger": "A billing cycle ends for the purchased service."
+          },
+          {
+            "duty_type": "PERFORM",
+            "content": "Pay late-payment penalties and/or interest if required after a failed deduction caused by insufficient balance.",
+            "actor": "customer/licensee",
+            "object": "Overdue service fees and applicable penalties or interest",
+            "trigger": "Balance is insufficient for deduction and provider requires the stated amounts."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "External orders, the User Service Agreement, product-service rules, product pages, and other incorporated documents may supply additional terms or precise billing details not present in this chunk.",
+      "Section 6 terms apply where a credit policy is granted; credit settlement is restricted to provider-designated services. No designated-service list is supplied.",
+      "No operational facts are provided; extraction does not determine fulfillment or breach."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0252",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_dns_update_after_migration_notice"
+        ],
+        "reason": "Models the DNS update duty triggered by migration notice."
+      },
+      {
+        "unit_id": "P0253",
+        "status": "MODELED",
+        "clause_labels": [
+          "pricing_change_and_nonrenewal"
+        ],
+        "reason": "Models 30-day notice, scope of new pricing, and nonacceptance consequences."
+      },
+      {
+        "unit_id": "P0254",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_promotional_use_of_customer_identifiers"
+        ],
+        "reason": "Models limited promotional permission and confidentiality and purpose boundaries."
+      },
+      {
+        "unit_id": "P0255",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section 6 heading identifying credit policy; it creates no independent rule."
+      },
+      {
+        "unit_id": "P0256",
+        "status": "MODELED",
+        "clause_labels": [
+          "credit_policy_section_scope"
+        ],
+        "reason": "Models the introductory applicability condition for the credit-policy section."
+      },
+      {
+        "unit_id": "P0257",
+        "status": "MODELED",
+        "clause_labels": [
+          "credit_application_and_application_materials"
+        ],
+        "reason": "Models application submission, provider's ability to request and retain materials, and customer accuracy duties."
+      },
+      {
+        "unit_id": "P0258",
+        "status": "MODELED",
+        "clause_labels": [
+          "provider_credit_policy_discretion",
+          "credit_policy_acceptance_or_unrequested_offer",
+          "credit_policy_designated_services_only",
+          "credit_policy_account_specificity",
+          "credit_policy_effectiveness",
+          "credit_policy_settlement_schedule",
+          "credit_sufficiency_and_refund_bar",
+          "credit_payment_deadline_and_remedies",
+          "credit_policy_adjustment_or_early_repayment",
+          "credit_policy_expiry_paths_intro"
+        ],
+        "reason": "Covers provider grant/adjustment discretion, acceptance and unsolicited offer paths, service and account limits, effectiveness, settlement, payment and refund limits, remedies, adjustment, and expiry introduction."
+      },
+      {
+        "unit_id": "P0259",
+        "status": "MODELED",
+        "clause_labels": [
+          "credit_policy_expiry_unextended"
+        ],
+        "reason": "Models expiry at the unextended agreed termination date and provider notice."
+      },
+      {
+        "unit_id": "P0260",
+        "status": "MODELED",
+        "clause_labels": [
+          "customer_requested_policy_cancellation"
+        ],
+        "reason": "Models requested cancellation and provider-approval condition."
+      },
+      {
+        "unit_id": "P0261",
+        "status": "MODELED",
+        "clause_labels": [
+          "credit_review_and_zero_limit"
+        ],
+        "reason": "Models review requests, provider adjustment rights, zero-limit restriction, repayment reminders, and refreshed credit."
+      },
+      {
+        "unit_id": "P0262",
+        "status": "MODELED",
+        "clause_labels": [
+          "online_policy_precedence"
+        ],
+        "reason": "Models the rule for conflicting online and offline credit-policy terms."
+      },
+      {
+        "unit_id": "P0263",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Section 7 heading; no independent settlement rule."
+      },
+      {
+        "unit_id": "P0264",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Prepaid-settlement subsection heading; operative terms follow."
+      },
+      {
+        "unit_id": "P0265",
+        "status": "MODELED",
+        "clause_labels": [
+          "prepaid_payment_and_order_expiry"
+        ],
+        "reason": "Models full prepayment, seven-day order expiry, and advance renewal payment."
+      },
+      {
+        "unit_id": "P0266",
+        "status": "MODELED",
+        "clause_labels": [
+          "prepaid_account_balance"
+        ],
+        "reason": "Models precharging and sufficient balance requirement."
+      },
+      {
+        "unit_id": "P0267",
+        "status": "CONTEXT",
+        "clause_labels": [],
+        "reason": "Postpaid-settlement subsection heading; operative term follows."
+      },
+      {
+        "unit_id": "P0268",
+        "status": "MODELED",
+        "clause_labels": [
+          "postpaid_usage_billing_and_default"
+        ],
+        "reason": "Models usage-based billing cycles, deduction, potential late charges, and service termination right."
+      }
+    ]
+  },
+  "attempt": 2
+}

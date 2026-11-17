@@ -1,0 +1,105 @@
+{
+  "request_sha256": "b5058e0a4625e269f2f184576e664fad1333db1f0a9f3178b050fa3a8763ec44",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 623,
+        "end_line": 623,
+        "clause_label": "gap/balance_review_and_replenishment",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "when": "customer_uses_postpaid_service",
+          "requires": "timely_check_account_balance_and_replenish_according_to_operating_plan"
+        },
+        "actor_role": "licensee",
+        "scope_note": "Online-order agreement §7(3): customer remains responsible for monitoring its account balance and replenishing it according to its operating plan. The referenced website reminder-service details are not supplied.",
+        "condition_explanation": "The duty applies to the customer as account user and manager; it is not displaced by the provider's balance-insufficient reminder service.",
+        "obligation_items": [
+          {
+            "duty_type": "PERFORM",
+            "content": "Timely check the account balance and replenish it according to the customer’s operating plan.",
+            "actor": "customer/licensee",
+            "object": "Customer’s Baidu Smart Cloud account balance",
+            "trigger": "While using the service and managing the account balance."
+          }
+        ]
+      }
+    ],
+    "coverage_notes": [
+      "The referenced website terms for balance reminders, payment methods, invoice applications, and product-specific rules are not supplied; no contents are inferred.",
+      "Payment of provider fees, invoice applications, contractual remedies, contract termination, and general continued-performance duties do not map faithfully to the allowed activities. No Charge clause is used to represent customer payment."
+    ],
+    "paragraph_audit": [
+      {
+        "unit_id": "P0236",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 4(15) is a company sanctions-status representation at signing, not a permission or prohibition concerning an available activity; no activity rule is created."
+      },
+      {
+        "unit_id": "P0240",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 4(19) grants Baidu a conditional right to terminate the contract if an export-control policy change makes performance impossible. Contract termination is not an available activity."
+      },
+      {
+        "unit_id": "P0269",
+        "status": "MODELED",
+        "clause_labels": [
+          "gap/balance_review_and_replenishment"
+        ],
+        "reason": "Section 7(3) requires the account user and manager to timely check the balance and replenish it according to the operating plan. The referenced reminder-service details are external and not inferred; the provider-payment action itself is not represented."
+      },
+      {
+        "unit_id": "P0272",
+        "status": "EXTERNAL_REFERENCE_EXCLUDED",
+        "clause_labels": [],
+        "reason": "Section 7(6) describes customer recharge and lists payment channels, while referring to website rules not supplied. Payment to the provider and recharge are not represented by an allowed activity; no external payment rules are inferred."
+      },
+      {
+        "unit_id": "P0273",
+        "status": "EXTERNAL_REFERENCE_EXCLUDED",
+        "clause_labels": [],
+        "reason": "Section 7(7) describes an optional customer invoice application and refers to website requirements and procedures not supplied. Applying for or issuing an invoice is outside the available activities; no external requirements are inferred."
+      },
+      {
+        "unit_id": "P0274",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 7(8) describes an optional automatic-renewal setting and automatic fee deduction at the then-current price. Setting automatic renewal and paying the provider are not available activities; Charge would misstate the customer’s payment as third-party charging."
+      },
+      {
+        "unit_id": "P0288",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 10(1) establishes a breach-and-cure procedure: after a cure notice, failure to effectively cure within 10 days, or an incurable breach that harms the other party or prevents continued cooperation, triggers damages liability. Cure and contract-remedy actions do not fit the available activities."
+      },
+      {
+        "unit_id": "P0290",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 10(3) states reciprocal delay-compensation and late-payment remedies, including 0.5‰ per day, a 30-day threshold, a 10% amount, continued payment for delivered project results, and an exception for customer-caused delay. Payment of the provider and damages remedies do not fit the available activities."
+      },
+      {
+        "unit_id": "P0298",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 11(3) requires both parties to continue performing after force majeure or an accidental event ends, when both can perform and continuation is necessary. It does not identify a specific available activity and object to which the general duty can faithfully attach."
+      },
+      {
+        "unit_id": "P0302",
+        "status": "OUTSIDE_ACTIVITY_SCOPE",
+        "clause_labels": [],
+        "reason": "Section 12(1)(2) grants Baidu a right to terminate service for the customer’s serious breach, including serious payment, legal, or promise breaches. Termination is not an available activity."
+      }
+    ],
+    "anchor_review": []
+  },
+  "attempt": 3
+}

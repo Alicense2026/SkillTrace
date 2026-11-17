@@ -1,0 +1,213 @@
+{
+  "request_sha256": "f3b8a3fb3c46a9bc8ce5d80bc5917318dffbc9dbe21cc060ce8cf03d5ca0a240",
+  "data": {
+    "clauses": [
+      {
+        "start_line": 48,
+        "end_line": 51,
+        "clause_label": "Grant of Rights—use",
+        "activities": [
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "natural_person_uses_for_personal_kingdom_operation"
+        },
+        "actor_role": "Natural Person",
+        "scope_note": "The Software may be used to operate one or more Kingdoms for personal use; the grant is limited to Natural Persons.",
+        "condition_explanation": "The user must be a Natural Person and the use must be operation of one or more Kingdoms for personal use."
+      },
+      {
+        "start_line": 48,
+        "end_line": 53,
+        "clause_label": "Grant of Rights—copy and adapt",
+        "activities": [
+          "Copy",
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "copy_or_adaptation_for_use_within_own_kingdom_by_natural_person"
+        },
+        "actor_role": "Natural Person",
+        "scope_note": "Copying and adapting The Software is authorized for use within the Natural Person's own Kingdom.",
+        "condition_explanation": "The copying or adaptation must be for use within the Natural Person's own Kingdom."
+      },
+      {
+        "start_line": 48,
+        "end_line": 58,
+        "clause_label": "Grant of Rights—distribution",
+        "activities": [
+          "Distribute"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "recipient_is_natural_person",
+              "license_notice_included",
+              "distribution_not_part_of_managed_service"
+            ]
+          }
+        },
+        "actor_role": "Natural Person",
+        "scope_note": "Unmodified or adapted copies of The Software may be distributed to other Natural Persons, subject to the stated notice and Managed Service limits.",
+        "condition_explanation": "All listed conditions apply: the recipient must be a Natural Person, the license notice must be included, and the distribution must not be part of a Managed Service."
+      },
+      {
+        "start_line": 48,
+        "end_line": 62,
+        "clause_label": "Grant of Rights—incorporation into Kingdom Framework works",
+        "activities": [
+          "Combine"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "CombinedProduct"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": "kingdom_framework_terms_satisfied"
+        },
+        "actor_role": "Natural Person",
+        "scope_note": "Portions of The Software may be incorporated into works licensed under the Kingdom Framework (AGPL-3.0); the incorporated work is subject to the Kingdom Framework's terms as well as this license.",
+        "condition_explanation": "The incorporation must be into a work licensed under the Kingdom Framework, and that framework's terms must also be satisfied."
+      },
+      {
+        "start_line": 70,
+        "end_line": 72,
+        "clause_label": "Restrictions—operate a Managed Service",
+        "activities": [
+          "ProvideNetworkService",
+          "RemoteInteraction",
+          "CommercialUse",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "offering_managed_service_without_separate_written_commercial_license_from_copyright_holder"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The Software or any substantial portion may not be used to offer a Managed Service without a separate written commercial license from the copyright holder. A Managed Service is defined at lines 37–39 as a hosted or embedded offering to third parties whose primary value derives from the software's functionality.",
+        "condition_explanation": "The prohibition applies when the licensee offers a Managed Service using The Software or a substantial portion without the separate written commercial license. The text does not state the terms of any separately negotiated license."
+      },
+      {
+        "start_line": 74,
+        "end_line": 81,
+        "clause_label": "Restrictions—deploy on behalf of organizations",
+        "activities": [
+          "Use",
+          "ProvideNetworkService"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": {
+            "all": [
+              "deployment_primarily_for_organization_benefit",
+              "not_for_licensee_personal_sovereignty"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Deployment or operation primarily for an organization's benefit rather than the licensee's personal sovereignty is prohibited. Exception: a Natural Person may use the software as an employee or contractor if their Kingdom remains under their own personal cryptographic control and the organization cannot administratively override their Sovereign Operator status.",
+        "condition_explanation": "The prohibition applies when both stated predicates hold. The employee/contractor exception permits use only if both personal cryptographic control and protection from organizational administrative override are maintained."
+      },
+      {
+        "start_line": 83,
+        "end_line": 85,
+        "clause_label": "Restrictions—remove or falsify identity",
+        "activities": [
+          "Modify"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "PROHIBITED"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The licensee may not strip, replace, or falsify cryptographic identity artifacts—keys, trust bonds, or signed commitments—that identify a Kingdom's Sovereign Operator.",
+        "condition_explanation": "No additional condition is stated."
+      },
+      {
+        "start_line": 87,
+        "end_line": 89,
+        "clause_label": "Restrictions—trademark claims",
+        "activities": [
+          "CommercialUse",
+          "Distribute"
+        ],
+        "objects": [
+          "ModifiedArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PROHIBITED",
+          "requires": "use_of_listed_names_or_associated_terminology_to_endorse_or_market_derivative_work_without_written_permission"
+        },
+        "actor_role": "licensee",
+        "scope_note": "The names “kingdom,” “koad:io,” and associated terminology may not be used to endorse or market derivative works without written permission.",
+        "condition_explanation": "The prohibition applies to endorsement or marketing of derivative works using the listed names or associated terminology when written permission has not been obtained."
+      },
+      {
+        "start_line": 109,
+        "end_line": 120,
+        "clause_label": "Derivative Kingdoms (Forks)",
+        "activities": [
+          "Copy",
+          "CreateDerivative",
+          "Modify",
+          "Use"
+        ],
+        "objects": [
+          "OriginalArtifact",
+          "DerivativeWork"
+        ],
+        "C": {
+          "kind": "CONDITIONALLY_PERMITTED",
+          "requires": {
+            "all": [
+              "derivative_kingdom_operated_under_same_or_compatible_license_preserving_natural_person_and_managed_service_restrictions",
+              "documentation_identifies_derivation_from_koad_io_and_preserves_kingdom_framework_section_3_1_attribution",
+              "fork_not_used_to_create_managed_service"
+            ]
+          }
+        },
+        "actor_role": "licensee",
+        "scope_note": "Forking The Software and creating derivative kingdoms is permitted only subject to all three stated conditions. The text says commercial licensing is available for forks unable to comply, but does not provide those license terms.",
+        "condition_explanation": "All three predicates are required: the derivative kingdom's license must preserve the stated restrictions, its documentation must identify the koad:io derivation and preserve the specified attribution, and the fork must not be used to create a Managed Service."
+      }
+    ],
+    "coverage_notes": [
+      "The supplied text identifies The Software as files, directories, or artifacts covered by the license; it does not establish which specific repository materials are covered.",
+      "Lines 129–134 state that components explicitly marked SPDX-License-Identifier: 0BSD are released under the named Zero-Clause BSD License and are not subject to Kingdom License restrictions. The full terms of that external license are not supplied, so no additional grant or conditions are reconstructed.",
+      "The trust-bond section discusses consent and sovereign status but does not set out specific operative trust-bond obligations in the supplied text.",
+      "Commercial licensing is mentioned as available in certain circumstances, but no separately negotiated license terms are supplied.",
+      "The Kingdom Framework is identified as AGPL-3.0 at an external URL; its terms and the referenced section 3.1 attribution are not reproduced here.",
+      "The grant's royalty-free language is not a payment obligation imposed on licensees; no operative fees, output or training rights, or general charging permission are stated.",
+      "Warranty, liability, and license-drafting acknowledgments are omitted as unrelated to the requested activities."
+    ]
+  }
+}

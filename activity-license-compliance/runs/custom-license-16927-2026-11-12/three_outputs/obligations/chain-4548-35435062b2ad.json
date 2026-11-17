@@ -1,0 +1,65 @@
+{
+  "case_id": "chain-4548-35435062b2ad",
+  "output": [
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-4548-35435062b2ad:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "Include the upstream software copyright notice and permission notice in copies or substantial portions, as applicable.",
+      "trigger": "activity:Use",
+      "applicability": true,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "include_copyright_and_permission_notice"
+      ],
+      "source_refs": [
+        "license-text:upstream:8affa9a8a6e78b68"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-4548-35435062b2ad:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "During use, remain below the stated revenue/funding limit and do not use the software to create, distribute, or host a substantially similar competing product or service.",
+      "trigger": "activity:Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "licensee_gross_annual_revenue_or_equivalent_funding_is_less_than_1000000_usd_at_all_times_during_use",
+        "licensee_does_not_use_software_to_create_distribute_or_host_a_product_or_service_substantially_similar_to_software_offered_to_third_parties_in_competition_with_licensor"
+      ],
+      "source_refs": [
+        "license-text:downstream:915485e9cb318a93"
+      ]
+    },
+    {
+      "activity": "Use",
+      "subject": {
+        "artifact": "chain-4548-35435062b2ad:downstream",
+        "kind": "OriginalArtifact"
+      },
+      "requirement": "If the licensee exceeds the stated annual gross revenue or funding limit and uses the software, purchase a Commercial License from the licensor.",
+      "trigger": {
+        "all": [
+          "activity:Use",
+          "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd"
+        ]
+      },
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "unresolved_predicates": [
+        "activity:Use",
+        "licensee_is_an_entity_or_individual_with_annual_gross_revenue_or_funding_exceeding_1000000_usd",
+        "purchase_commercial_license_from_licensor"
+      ],
+      "source_refs": [
+        "license-text:downstream:915485e9cb318a93"
+      ]
+    }
+  ]
+}

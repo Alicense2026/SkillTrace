@@ -1,0 +1,154 @@
+{
+  "case_id": "chain-0089-3bc3253f047f",
+  "status": "SUCCESS",
+  "request_sha256": "1145cff028932e4324dea7f6564c8b2180c403f54f156cab18584aeaadcd41d6",
+  "analysis": {
+    "case_id": "chain-0089-3bc3253f047f",
+    "overall_status": "OBLIGATIONS_OPEN",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:6db8138a3a411a7e"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "PROHIBITED",
+            "when": "activity:Use"
+          },
+          "S": {
+            "artifact": "chain-0089-3bc3253f047f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0089-3bc3253f047f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "不得使用 Gemini API 服务开发与 Gemini API 或 Google AI Studio 竞争的模型；不得尝试对服务进行逆向工程、提取或复制其组件（包括底层数据或模型参数权重）。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "develops_competing_model",
+          "attempts_reverse_engineering_or_extraction_or_replication"
+        ],
+        "source_refs": [
+          "license-text:upstream:6db8138a3a411a7e"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0089-3bc3253f047f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅为使用 Google AI Studio 或 Gemini API 构建专业或商业用途的服务；不得用于消费者用途。",
+        "trigger": "activity:Use",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "consumer_use"
+        ],
+        "source_refs": [
+          "license-text:upstream:6db8138a3a411a7e"
+        ]
+      },
+      {
+        "activity": "Use",
+        "subject": {
+          "artifact": "chain-0089-3bc3253f047f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "requirement": "仅在服务可用地区访问；若向欧洲经济区、瑞士或英国的用户提供 API Client，则须仅使用 Paid Services。",
+        "trigger": "activity:Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "unresolved_predicates": [
+          "access_region",
+          "api_client_available_to_users_in_eea_switzerland_or_uk",
+          "paid_service_status"
+        ],
+        "source_refs": [
+          "license-text:upstream:6db8138a3a411a7e"
+        ]
+      }
+    ],
+    "limitations": [
+      "本地 Gemini Additional Terms 文本标示生效日为 2026-03-23；任务未给出调用发生时间及该版本是否适用，相关条款按条件义务处理。",
+      "对象图确认的是远程 API 调用及链接，不证明模型权重转移、代码纳入、修改、分发或商业用途；未据此推定这些活动。",
+      "竞争模型限制的适用边界取决于条款上下文；当前事实未显示开发竞争模型、逆向工程、提取或复制行为，因此不构成已证实违规。"
+    ],
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 30572,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1033,
+    "output_tokens_details": {
+      "reasoning_tokens": 211
+    },
+    "total_tokens": 31605,
+    "attribution": {
+      "items": {
+        "msg_09b81549faa8490c016af2eb4995b087d284947b6d75b57426": {
+          "input_tokens": 28624,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 28624,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_09b81549faa8490c016af2eb4ee8f087d2b0b01dae1bc6809b": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 822,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 822
+            }
+          ]
+        },
+        "rs_09b81549faa8490c016af2eb4ecd6887d2a09be211a12e04df": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 211
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 1946,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 25.835,
+  "auto_applied": false
+}

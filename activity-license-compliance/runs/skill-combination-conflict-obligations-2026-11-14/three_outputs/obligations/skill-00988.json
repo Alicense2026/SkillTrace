@@ -1,0 +1,348 @@
+{
+  "case_id": "skill-00988",
+  "csv_row": 989,
+  "source_excel_row": "1375",
+  "raw_response": "activity-license-compliance/runs/skill-combination-conflict-obligations-2026-11-14/responses/skill-00988-1794598065526763000-3.json",
+  "output": [
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游 Apache Work 时，仅在相关专利权利要求由贡献者授予许可且因其贡献单独或与提交作品结合而必然受侵犯的范围内依赖该专利许可。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00988:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "patent_claim_necessarily_infringed_by_contributor_contribution_alone_or_with_submitted_work"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游 Apache Work 时，不得将许可人的商品名、商标、服务标记或产品名用于合理且惯常地说明作品来源或复现 NOTICE 内容以外的目的。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00988:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": true,
+      "unresolved_predicates": [
+        "use_is_reasonable_and_customary_for_describing_work_origin_or_reproducing_notice_content",
+        "whether_licensor_marks_are_used"
+      ]
+    },
+    {
+      "activity": "Use",
+      "applicability": null,
+      "fulfillment_status": "UNKNOWN",
+      "requirement": "使用上游 Apache Work 时，如许可人因相关专利诉讼而终止该作品的专利许可，不得依赖已终止的该项专利许可。",
+      "source_refs": [
+        "license:a8cb04406cee234ed6edb0b26c82aa5cdc6dd851e3f8e74db0cb49dd2e7b7870"
+      ],
+      "subject": {
+        "artifact": "skill-00988:upstream",
+        "kind": "OriginalArtifact"
+      },
+      "trigger": {
+        "all": [
+          "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+          "patent_license_for_that_work_has_terminated"
+        ]
+      },
+      "unresolved_predicates": [
+        "licensee_institutes_patent_litigation_alleging_work_or_incorporated_contribution_direct_or_contributory_patent_infringement",
+        "patent_license_for_that_work_has_terminated"
+      ]
+    }
+  ],
+  "limitations": [
+    "已检查与已知上游远程调用/使用相关的本地 Apache-2.0 与 CC-BY-NC-4.0 条款。对象图仅确认下游链接及远程调用；未确认分发、复制、修改、合并、再许可或下游对象的使用，因此不据此触发分发归属、通知、许可副本或非商业义务。",
+    "许可证摘录及结构化规则未规定适用于本次普通 API 远程调用的独立网络服务义务。外部引用材料按政策排除；未据此推断规则或违规。"
+  ],
+  "rule_obligation_audit": [
+    {
+      "rule_ref": "U001",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅为复制许可；未确认复制。"
+    },
+    {
+      "rule_ref": "U002",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅为制作衍生作品许可；未确认制作衍生作品。"
+    },
+    {
+      "rule_ref": "U003",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅为再许可许可；未确认再许可。"
+    },
+    {
+      "rule_ref": "U004",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分发许可及其条件；未确认分发。"
+    },
+    {
+      "rule_ref": "U005",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        0
+      ],
+      "reason": "已知使用上游作品；专利许可范围条件未知，保留条件义务。"
+    },
+    {
+      "rule_ref": "U006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅涉及出售复制件的专利许可；未确认出售。"
+    },
+    {
+      "rule_ref": "U007",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        2
+      ],
+      "reason": "专利诉讼导致该作品专利许可终止时，不得依赖已终止许可；触发条件未知，已保留条件义务。"
+    },
+    {
+      "rule_ref": "U008",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "复制及修改文件通知条件；未确认复制或分发。"
+    },
+    {
+      "rule_ref": "U009",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分发时的许可副本、修改通知及相关保留条件；未确认分发。"
+    },
+    {
+      "rule_ref": "U010",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "约束上游修改对象；未确认修改。"
+    },
+    {
+      "rule_ref": "U011",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "约束上游衍生作品；未确认制作或使用该对象。"
+    },
+    {
+      "rule_ref": "U012",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "该条规定商标使用许可例外，不单独产生义务；商标限制由 U013 保留。"
+    },
+    {
+      "rule_ref": "U013",
+      "status": "INCLUDED",
+      "obligation_indices": [
+        1
+      ],
+      "reason": "使用上游作品时适用商标限制；是否使用许可人标识未知，条件义务已保留。"
+    },
+    {
+      "rule_ref": "U014",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅在分发时收费提供额外责任承诺适用；未确认分发或该行为。"
+    },
+    {
+      "rule_ref": "U015",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "衍生作品分发许可；未确认该活动。"
+    },
+    {
+      "rule_ref": "U016",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分发修改文件时的通知义务；未确认分发修改文件。"
+    },
+    {
+      "rule_ref": "U017",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "以源码形式分发衍生作品时适用；未确认该活动。"
+    },
+    {
+      "rule_ref": "U018",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "包含 NOTICE 文件且分发衍生作品时适用；未确认触发事实。"
+    },
+    {
+      "rule_ref": "U019",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "约束上游修改对象；未确认修改。"
+    },
+    {
+      "rule_ref": "D001",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "CC许可副本的对象是下游原始材料；已知使用对象为上游模型。"
+    },
+    {
+      "rule_ref": "D002",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "下游许可材料分发及非商业条件；未确认分发该对象。"
+    },
+    {
+      "rule_ref": "D003",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "下游许可材料衍生及非商业条件；未确认制作该对象。"
+    },
+    {
+      "rule_ref": "D004",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "下游衍生材料复制；未确认复制该对象。"
+    },
+    {
+      "rule_ref": "D005",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "下游衍生材料分发；未确认分发该对象。"
+    },
+    {
+      "rule_ref": "D006",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "禁止再许可 CC 授予的权利；未确认再许可下游材料权利。"
+    },
+    {
+      "rule_ref": "D007",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "适用例外时许可证不适用；未确认对下游材料的该项使用。"
+    },
+    {
+      "rule_ref": "D008",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "仅允许必要技术修改；未确认修改 CC 许可材料。"
+    },
+    {
+      "rule_ref": "D009",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "限制接受方行使权利时禁止附加限制；未确认分发或施加限制。"
+    },
+    {
+      "rule_ref": "D010",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "禁止虚称认可或关联；未确认相关使用行为。"
+    },
+    {
+      "rule_ref": "D011",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分享时的归属、许可标识等义务；未确认分享 CC 许可材料。"
+    },
+    {
+      "rule_ref": "D012",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分享且许可人要求移除信息时适用；未确认触发事实。"
+    },
+    {
+      "rule_ref": "D013",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "分享自制改编材料时适用；未确认该活动。"
+    },
+    {
+      "rule_ref": "D014",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "适用数据库权利及相关数据库活动；未确认该对象或活动。"
+    },
+    {
+      "rule_ref": "D015",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "数据库改编材料分类规则；未确认相关数据库活动。"
+    },
+    {
+      "rule_ref": "D016",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "分享大量数据库内容时适用；未确认相关对象或活动。"
+    },
+    {
+      "rule_ref": "D017",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "关于下游许可材料许可期内合规使用的规则；本次已知使用对象为上游材料。"
+    },
+    {
+      "rule_ref": "D018",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "权利终止后的及时补救恢复机制，不构成本案已触发义务。"
+    },
+    {
+      "rule_ref": "D019",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "权利终止后的明示恢复机制，不构成本案已触发义务。"
+    },
+    {
+      "rule_ref": "D020",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "终止后条款存续规则，不是当前活动的独立义务。"
+    },
+    {
+      "rule_ref": "D021",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "规定额外条款未经许可人明示同意不约束许可人；未确认相关沟通。"
+    },
+    {
+      "rule_ref": "D022",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "规定独立协议的效力，不产生本案已触发义务。"
+    },
+    {
+      "rule_ref": "D023",
+      "status": "OUT_OF_SCOPE",
+      "obligation_indices": [],
+      "reason": "保留无需许可即可合法实施的使用；未确认针对下游材料的相关使用。"
+    },
+    {
+      "rule_ref": "D024",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "不可执行条款的解释规则；未见相关触发事实。"
+    },
+    {
+      "rule_ref": "D025",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "涉及弃权或同意不合规的明示同意规则；未确认相关主张。"
+    },
+    {
+      "rule_ref": "D026",
+      "status": "NO_OBLIGATION",
+      "obligation_indices": [],
+      "reason": "保留特权与豁免，不构成本案独立行为义务。"
+    }
+  ]
+}

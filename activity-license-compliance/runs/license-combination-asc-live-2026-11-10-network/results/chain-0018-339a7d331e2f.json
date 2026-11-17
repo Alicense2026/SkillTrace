@@ -1,0 +1,123 @@
+{
+  "case_id": "chain-0018-339a7d331e2f",
+  "status": "SUCCESS",
+  "request_sha256": "c4d57ef0d98c33446ac10908316e613baa89c0bb2beae0180abc8d615625c5ef",
+  "analysis": {
+    "case_id": "chain-0018-339a7d331e2f",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "triple": {
+          "A": "Use",
+          "C": {
+            "kind": "CONDITIONALLY_PROHIBITED",
+            "requires": "conduct_matches_prohibition_in_excerpt"
+          },
+          "S": {
+            "artifact": "chain-0018-339a7d331e2f:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "obligations": [
+      {
+        "activity": "Use",
+        "applicability": null,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "若本次调用属于摘录所述模型体验功能并生成内容，则仅为体验模型效果使用生成内容；不得用于其他目的或商业化，也不得向第三方提供或在第三方平台使用、传播或分发。",
+        "source_refs": [
+          "license-text:upstream:e0a6023d95b56568"
+        ],
+        "subject": {
+          "artifact": "chain-0018-339a7d331e2f:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": {
+          "all": [
+            "activity:Use",
+            "model_experience_scope_applies"
+          ]
+        },
+        "unresolved_predicates": [
+          "model_experience_scope_applies",
+          "use_matches_prohibited_conduct"
+        ]
+      }
+    ],
+    "limitations": [
+      "上游原文摘录涉及模型体验功能；可信事实确认了阿里云百炼远程调用和Use，但没有说明调用是否属于该功能，也未说明生成内容的用途或是否向第三方提供，因此不能认定违反。",
+      "下游MIT条款针对下游软件及其复制、分发等行为；当前仅确认API调用/链接，未确认使用或分发下游软件，也未确认该软件与上游材料处于共同许可范围，故不据此提出冲突或义务。"
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 21037,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 899,
+    "output_tokens_details": {
+      "reasoning_tokens": 374
+    },
+    "total_tokens": 21936,
+    "attribution": {
+      "items": {
+        "msg_0683742a033d96b9016af2f7488ab487d1a0bbf9c246c68145": {
+          "input_tokens": 19005,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 19005,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0683742a033d96b9016af2f74fe78487d18b4d64ce502e3d60": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 525,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 525
+            }
+          ]
+        },
+        "rs_0683742a033d96b9016af2f74fcbe087d1ab8081a5dd0380b8": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 374
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "response_id": "REDACTED",
+  "reported_model": "gpt-6-luna",
+  "elapsed_seconds": 19.25,
+  "auto_applied": false,
+  "aggregate_count": 183
+}

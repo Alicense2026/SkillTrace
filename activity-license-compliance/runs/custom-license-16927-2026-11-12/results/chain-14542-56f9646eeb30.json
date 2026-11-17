@@ -1,0 +1,188 @@
+{
+  "case_id": "chain-14542-56f9646eeb30",
+  "source_csv_line": 14543,
+  "row": {
+    "github_repo": "agentic-pkm-mvp",
+    "github_url": "https://github.com/RasmusTho/agentic-pkm-mvp",
+    "github_license": "LicenseRef-Custom",
+    "artifact_name": "DEEPSEEK_BASE",
+    "artifact_url": "https://api-docs.deepseek.com/quick_start/pricing",
+    "artifact_license": "proprietary",
+    "integration": "远程服务调用",
+    "modified": "\\",
+    "evidence": "调用位置: app/llm/adapter.py:87 ｜ 调用原文: url = os.getenv(\"DEEPSEEK_BASE\", \"\").strip() ｜ 证据等级: 待复核（中） ｜ 解析: provider-catalog → provider-catalog ｜ 许可证来源: provider-terms ｜ 集成判定: 仓库里没有该资产的源码（未发现 vendor 目录或子模块），按远程服务调用处理 ｜ 判定理由: app/llm/adapter.py 中 DeepSeek 模型服务的 base URL 配置，属真实模型接入",
+    "batch": "7001-8000",
+    "artifact_kind": "unspecified",
+    "_raw_modified": "\\"
+  },
+  "custom_mapping": {
+    "repository": "rasmustho/agentic-pkm-mvp",
+    "license_label": "LicenseRef-Custom",
+    "sha256": "e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f",
+    "filename": "_licenseref_full/texts/e11e59a0de8ef14511e056877811e4cf1ed674d4d750124f4df330a662d6317f.txt",
+    "evidence_file": "LICENSE.md",
+    "acquisition": "zip:mirror:agentic-pkm-mvp-HEAD/LICENSE.md",
+    "status": "AVAILABLE"
+  },
+  "status": "SUCCESS",
+  "analysis": {
+    "case_id": "chain-14542-56f9646eeb30",
+    "asc_rules": [
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8370d50e3cca18e3"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "CONDITIONALLY_PERMITTED",
+            "requires": "comply_with_service_terms",
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14542-56f9646eeb30:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      },
+      {
+        "side": "upstream",
+        "source_refs": [
+          "license-text:upstream:8370d50e3cca18e3"
+        ],
+        "triple": {
+          "A": "RemoteInteraction",
+          "C": {
+            "kind": "OBLIGATORY",
+            "requires": true,
+            "when": true
+          },
+          "S": {
+            "artifact": "chain-14542-56f9646eeb30:upstream",
+            "kind": "OriginalArtifact"
+          }
+        }
+      }
+    ],
+    "license_behavior_findings": [],
+    "license_license_findings": [],
+    "limitations": [
+      "已检查的 DeepSeek 原文摘录适用于 Open Platform API 服务，而非模型权重再分发。下游 LicenseRef-Custom 条款针对仓库内容；现有事实仅确认 API 链接和远程调用，没有证明这些下游内容被复制、修改、分发或作为远程交互对象，故未认定许可范围重叠或许可冲突。",
+      "DeepSeek 输出披露条款的摘录要求向终端用户披露 AI 生成内容及其可能错误或遗漏；未提供披露履行证据，因此记为未知，而非已违反。"
+    ],
+    "obligations": [
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "使用 DeepSeek Open Platform API 服务时遵守适用服务条款。",
+        "source_refs": [
+          "license-text:upstream:8370d50e3cca18e3"
+        ],
+        "subject": {
+          "artifact": "chain-14542-56f9646eeb30:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "service_terms_compliance"
+        ]
+      },
+      {
+        "activity": "RemoteInteraction",
+        "applicability": true,
+        "fulfillment_status": "UNKNOWN",
+        "requirement": "向终端用户清楚披露服务输出由 AI 生成，可能包含错误或遗漏，并仅供参考。",
+        "source_refs": [
+          "license-text:upstream:8370d50e3cca18e3"
+        ],
+        "subject": {
+          "artifact": "chain-14542-56f9646eeb30:upstream",
+          "kind": "OriginalArtifact"
+        },
+        "trigger": true,
+        "unresolved_predicates": [
+          "end_user_disclosure_fulfilled"
+        ]
+      }
+    ],
+    "overall_status": "OBLIGATIONS_OPEN",
+    "review_items": []
+  },
+  "usage": {
+    "input_tokens": 20900,
+    "input_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0
+    },
+    "output_tokens": 1169,
+    "output_tokens_details": {
+      "reasoning_tokens": 427
+    },
+    "total_tokens": 22069,
+    "attribution": {
+      "items": {
+        "msg_0f0729af03b6de9f016af53dfa914487d182f54a41d3a623f0": {
+          "input_tokens": 18830,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 18830,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0f0729af03b6de9f016af53dfa914487d1b28cef38e7751bb0": {
+          "input_tokens": 38,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0,
+          "content": [
+            {
+              "input_tokens": 38,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 0
+            }
+          ]
+        },
+        "msg_0f0729af03b6de9f016af53e02bd0887d1bcd26a8624939593": {
+          "input_tokens": 0,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 742,
+          "content": [
+            {
+              "input_tokens": 0,
+              "cached_tokens": 0,
+              "cache_write_tokens": 0,
+              "output_tokens": 742
+            }
+          ]
+        },
+        "rs_0f0729af03b6de9f016af53e02a61487d1b36e2eefb21cbae9": {
+          "input_tokens": 2,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 427
+        }
+      },
+      "request_fields": {
+        "instructions": {
+          "input_tokens": 2030,
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "output_tokens": 0
+        }
+      }
+    }
+  },
+  "reported_model": "gpt-6-luna",
+  "request_sha256": "57539f3337b20f3c96e2728f8c001ec2110d6126040199b8866a68713ba074b8",
+  "elapsed_seconds": 26.99
+}
