@@ -1,35 +1,35 @@
-# MCP 与 PTM 许可证数据集
+# MCP and PTM License Dataset
 
-本仓库包含 MCP 项目与预训练模型（PTM）许可证元数据研究的采集代码、处理后数据集、统计结果和
-许可证证据。数据快照覆盖 Hugging Face 和 GitHub，采集日期分别为 2026 年 10 月 20 日和
-2026 年 10 月 22 日。
+This repository contains scraping scripts, post‑processed datasets, statistical outputs and license‑evidence files for research on MCP project and Pre‑Trained Model (PTM) license metadata.
+Snapshots cover Hugging Face and GitHub, collected **2026‑10‑20** and **2026‑10‑22** respectively.
 
-仓库以可复现为目标。最终表格和原始 API 元数据保留在主目录中；体积较大的 GitHub 许可证原文
-证据则集中保存为一个 ZIP 文件。
+Reproducibility is a core design goal. Final tables and raw API metadata reside in top‑level directories. Large‑volume GitHub license‑text evidence is packaged within one ZIP archive.
 
-## 数据组成
+## Dataset Composition
 
-| 平台 | 类别 | 去重记录数 | 过滤前原始记录数 |
-|---|---|---:|---:|
-| Hugging Face | PTM | 6,132 | 19,917 条 Hugging Face 原始记录 |
-| Hugging Face | MCP | 262 | 包含在上方统计中 |
-| GitHub | PTM | 6,518 | 21,000 条 GitHub 原始记录 |
-| GitHub | MCP | 9,778 | 包含在上方统计中 |
-| **合计** |  | **22,690** | **40,917** |
 
-类别根据 `search_topic` 字段划分：
 
-- MCP 主题：`mcp`、`mcp-server`、`mcp-client`、`model-context-protocol`。
-- PTM 主题：`pretrained`、`pretraining`、`pretrain`、`from-scratch`、`foundation-model`。
+| Platform     | Category | Deduplicated Records | Pre‑filter Raw Record Count     |
+| ------------ | -------- | -------------------- | ------------------------------- |
+| Hugging Face | PTM      | 6 132                | 19 917 raw Hugging‑Face records |
+| Hugging Face | MCP      | 262                  | Included in statistics above    |
+| GitHub       | PTM      | 6 518                | 21 000 raw GitHub records       |
+| GitHub       | MCP      | 9 778                | Included in statistics above    |
+| **Total**    |          | **22 690**           | **40 917**                      |
 
-## 仓库结构
+Categories are assigned by the `search_topic` field:
 
-```text
+- MCP topics: `mcp`, `mcp‑server`, `mcp‑client`, `model‑context‑protocol`.
+- PTM topics: `pretrained`, `pretraining`, `pretrain`, `from‑scratch`, `foundation‑model`.
+
+## Repository Layout
+
+```
 .
 ├── README.md
 ├── requirements.txt
 ├── Makefile
-├── LICENSE-NOTE.md
+├── LICENSE‑NOTE.md
 ├── NOTICE.md
 ├── SECURITY.md
 ├── SHA256SUMS
@@ -66,190 +66,184 @@
     └── data_dictionary.md
 ```
 
-## 主要结果文件
+## Key Output Files
 
 `data/hf/hf_dataset.csv`
 
-- 6,394 条去重后的 Hugging Face 模型。
-- 包含模型元数据、搜索来源、API 许可证、许可证文件证据、交叉核验状态、README 描述，以及
-  特殊许可证原文的存档路径。
+- 6 394 deduplicated Hugging‑Face model entries.
+- Includes model metadata, search provenance, API‑reported licenses, license‑file evidence, cross‑check status, README excerpts and archive paths for special license texts.
 
 `data/github/github_dataset.csv`
 
-- 16,296 条去重后的 GitHub 仓库。
-- 包含仓库元数据、API 许可证、仓库文件许可证证据、SPDX 一致性结果和搜索来源。
+- 16 296 deduplicated GitHub repository entries.
+- Contains repository metadata, API‑declared licenses, license‑file evidence from repository contents, SPDX compliance results and search provenance.
 
 `data/*/license_crosscheck.csv`
 
-- 专门汇总仅有 API、仅有文件、双来源和无证据等许可证证据状态的表。
+- Summary table classifying evidence states: API‑only, file‑only, dual‑source evidence, no evidence.
 
 `data/*/all_*.json`
 
-- 完整的处理后 JSON 记录，可通过 `--from-json` 重建 CSV。
+- Full post‑processing JSON records; CSV artifacts can be regenerated using `--from‑json`.
 
 `data/*/stats.json`
 
-- 采集日期、查询数量、过滤总量、API 使用量、交叉核验分布和部分示例。
+- Collection timestamps, query volumes, filter statistics, API consumption metrics, cross‑check distributions and sample entries.
 
 `data/github/license_evidence.zip`
 
-- 从 GitHub 收集的 10,613 份仓库许可证文件。
-- 压缩包内包含 `license_files_v2/` 和 `license_other_raw/`。
-- 使用 `license_file_path` 或 `license_raw_path` 中的路径前，先将压缩包解压到
-  `data/github/`。
+- 10 613 repository license documents scraped from GitHub.
+- Inside archive: `license_files_v2/` and `license_other_raw/`.
+- Before accessing paths stored under `license_file_path` or `license_raw_path`, extract this ZIP into `data/github/`.
 
 `data/manifest.json`
 
-- 所有公开数据文件的 SHA-256 和字节大小。
+- SHA‑256 checksums and byte‑size for every public data file.
 
 `data/summary.json`
 
-- 记录数、唯一标识数、主题数、类别总量和交叉核验总量。
+- Record counts, unique identifiers, topic counts, category totals and cross‑check aggregates.
 
-## 环境配置
+## Environment Setup
 
-建议使用 Python 3.10 或更高版本。
+Python 3.10 or newer is recommended.
 
-```bash
+```
 python -m venv .venv
 ```
 
-Windows：
+Windows:
 
-```powershell
+```
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 ```
 
-Linux/macOS：
+Linux / macOS:
 
-```bash
+```
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-采集脚本优先使用 `curl_cffi`，未安装时回退到 `requests`。
+Scrapers prefer `curl_cffi`; they fall back to `requests` if it is unavailable.
 
-## 验证数据集
+## Validate Datasets
 
-```bash
+```
 python scripts/validate_dataset.py
 ```
 
-预期输出：
+Expected output:
 
-```text
+```
 PASS
 HF: 6394 records (MCP 262, PTM 6132)
 GitHub: 16296 records (MCP 9778, PTM 6518)
 ```
 
-验证脚本会检查记录标识、行数、类别总量、文件清单哈希、ZIP 完整性，以及是否存在意外凭据。
+The validator checks record identifiers, row counts, category totals, file hashes, ZIP archive integrity and accidental credential leakage.
+Absolute local filesystem paths present in original metadata are replaced with relative paths pointing to `data/hf/` and `data/github/`; this transformation is implemented in `scripts/sanitize_local_paths.py`.
 
-公开版本已将原始元数据中的本机绝对路径替换为 `data/hf/` 和 `data/github/` 相对路径。
-相关处理脚本位于 `scripts/sanitize_local_paths.py`。
+Regenerate repository‑level checksums after every official dataset update:
 
-每次正式更新数据后，重新生成仓库级校验和：
-
-```bash
+```
 python scripts/generate_checksums.py
 ```
 
-## 重建摘要和数据清单
+## Rebuild Summaries & File Manifests
 
-有意替换或新增数据集文件后运行：
+Run after replacing or adding dataset files:
 
-```bash
+```
 python scripts/build_manifest.py
 python scripts/validate_dataset.py
 ```
 
-## 采集 Hugging Face 数据
+## Scrape Hugging‑Face Data
 
-如需更高请求配额，先设置令牌：
+Set your token for higher request quotas:
 
-```powershell
-$env:HF_TOKEN = "<your-token>"
+```
+$env:HF_TOKEN = "<your‑token>"
 python scripts/collect_hf.py --dry-run
 python scripts/collect_hf.py --group all --max-requests 4000
 ```
 
-Bash：
+Bash:
 
-```bash
-export HF_TOKEN="<your-token>"
+```
+export HF_TOKEN="<your‑token>"
 python scripts/collect_hf.py --dry-run
 python scripts/collect_hf.py --group all --max-requests 4000
 ```
 
-不设置令牌时，脚本会以匿名模式运行，并自动增加请求间隔。结果写入 `data/hf/`。
+Without a token, scripts run anonymously with automatically extended request delays. Outputs are written to `data/hf/`.
 
-常用参数：
+Common arguments:
 
 - `--group mcp|ptm|all`
 - `--total N`
 - `--pages N`
-- `--max-requests N`
-- `--no-detail`、`--no-readme`、`--no-license-body`
+- `--max‑requests N`
+- `--no‑detail`, `--no‑readme`, `--no‑license‑body`
 - `--resume`
-- `--from-json`
+- `--from‑json`
 - `--shard N/M`
 
-## 采集 GitHub 数据
+## Scrape GitHub Data
 
-完整采集需要 `GITHUB_TOKEN`，因为脚本会通过核心 API 扫描仓库许可证文件：
+Full collection requires `GITHUB_TOKEN`, because scripts scan repository license files via core GitHub APIs:
 
-```powershell
-$env:GITHUB_TOKEN = "<your-token>"
+```
+$env:GITHUB_TOKEN = "<your‑token>"
 python scripts/collect_github.py --dry-run
 python scripts/collect_github.py
 ```
 
-Bash：
+Bash:
 
-```bash
-export GITHUB_TOKEN="<your-token>"
+```
+export GITHUB_TOKEN="<your‑token>"
 python scripts/collect_github.py --dry-run
 python scripts/collect_github.py
 ```
 
-结果写入 `data/github/`。不要把令牌写入源码、Notebook、提交到 Git 的配置文件或 Shell 历史。
+Results are saved under `data/github/`. **Never write tokens into source code, notebooks, git‑tracked configs or shell history.**
 
-常用参数：
+Common arguments:
 
 - `--total N`
 - `--pages N`
 - `--topics "mcp in:name,description,..."`
-- `--license-scan auto|contents|tree|off`
-- `--no-license-content`
-- `--no-license-text`
-- `--from-json`
+- `--license‑scan auto|contents|tree|off`
+- `--no‑license‑content`
+- `--no‑license‑text`
+- `--from‑json`
 
-## 许可证证据流程
+## License‑Evidence Workflow
 
-两个采集器在适用时都会组合以下两类证据：
+Both scrapers combine two evidence classes when applicable:
 
-1. 平台 API 元数据，例如 Hugging Face tags/card data 和 GitHub 的 `license` 字段。
-2. 仓库或模型内容中发现的许可证文件。
+1. Platform API metadata (e.g. Hugging Face tags / card metadata, GitHub `license` field).
+2. License files found within repository or model contents.
 
-数据集保留来源之间的不一致，不会静默消除冲突。`license_cross_check` 区分仅文件、仅 API、
-双来源和双缺失；`license_spdx_agree` 区分匹配、不匹配、缺失、未知和不适用。
+The dataset preserves inconsistencies across sources and does not silently resolve conflicts. `license_cross_check` categorizes evidence status: file‑only, API‑only, dual‑source, no‑evidence. `license_spdx_agree` classifies pairwise outcomes: match, mismatch, missing, unknown, not‑applicable.
 
-详细说明见 `docs/collection_method.md` 和 `docs/data_dictionary.md`。
+Full definitions in `docs/collection_method.md` and `docs/data_dictionary.md`.
 
-## 安全说明
+## Security Notes
 
-公开版 `collect_github.py` 只从 `GITHUB_TOKEN` 环境变量读取令牌，不再包含硬编码凭据。
-发布分支或重新采集前请阅读 `SECURITY.md`。
+Public release of `collect_github.py` reads tokens **only** from the `GITHUB_TOKEN` environment variable; hard‑coded secrets have been removed.
+Read `SECURITY.md` before cutting release branches or rerunning collection jobs.
+Hard‑coded tokens present in old scraper versions must be considered compromised; revoke and regenerate them within your GitHub account settings immediately.
 
-原始采集脚本曾包含硬编码令牌。该令牌应被视为已泄露，必须立即在 GitHub 设置中撤销并重新生成。
+## Licensing
 
-## 许可证
+No top‑level license has yet been selected for scraping code or derived datasets. Before public release add:
 
-采集代码和派生数据集尚未选择项目级许可证。公开发布前应补充：
+1. A `LICENSE` file applying to source code;
+2. Attribution terms governing dataset redistribution;
+3. Attribution and redistribution clauses compatible with upstream platform terms.
 
-1. 代码所使用的 `LICENSE`；
-2. 数据集的授权声明；
-3. 与上游平台条款兼容的署名和再分发说明。
-
-收集的仓库和许可证原文仍受各自原始条款约束。署名和再分发条件请参阅 `NOTICE.md` 及上游仓库。
+Scraped repositories and license texts remain bound under their original respective licenses. See `NOTICE.md` and upstream repositories for attribution and redistribution requirements.
